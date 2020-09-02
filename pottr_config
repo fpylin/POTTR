@@ -1,0 +1,271 @@
+##############################################################################
+#
+# pottr_config - precision oncology trial and therapy recommender
+# 
+# Example configuration file.
+#
+# This file is part of Oncology Treatment and Trials Recommender (OTTR) and 
+# Precision OTTR (POTTR).
+#
+# Copyright 2019-2020, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+#                      Garvan Institute of Medical Research, Sydney
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#     http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 
+##############################################################################
+
+[Directories]
+data_dir  =  data
+cache_dir =  data
+
+[Ontologies]
+
+##############################################################################
+# DISEASE ONTOLOGY [REQUIRED] - 
+# Disease ontology file in OBO format. 
+# - The latest version can be obtained from https://disease-ontology.org/. 
+# - Please follow the licesing requirements for details.
+# - Note future versions will use a dedicated precision oncology disesase 
+#   ontology to more closely align with clinical practice.
+##############################################################################
+
+disease-ontology-file = doid.obo
+
+##############################################################################
+# VARIANT FEATURE FILE [OPTIONAL] - a database for annotating gene features 
+# that are clinically relevant to decision making
+# 
+# File format: tab-separated values (TSV) without header comprising entries:
+#   gene     - (string) HGNC gene symbol
+#   feature  - (string) gene feature, e.g., exon or specific protein domains.
+#   start_aa - (integer) starting aa number.
+#   stop_aa  - (integer) stopping aa number.
+#   comments - (string) user-specified comments. not processed 
+# 
+# Example entry:
+#    ABL1    exon_7  382     443
+#    
+###############################################################################
+
+variant-feature-file = feature_lookup.txt
+
+###############################################################################
+# ONCOGENICITY INFERENCE/ASSERTION FILE [OPTIONAL]
+# 
+# This optional database contains rules used for optional variant interpretation. 
+# This step is not essential for decision making if pathogenicity of a variant 
+# has been determined.
+# 
+# The following is an example pathogenicity database. See 
+# attached file for format. For example:
+# EGFR:L858R => EGFR:oncogenic_mutation [CERTAIN:oncogenicity]
+# EGFR:L858R => EGFR:gain-of-function_mutation [CERTAIN:mutation_effect]
+###############################################################################
+
+oncogenicity-rules-file = example_variant_annotation_rules.txt 
+
+
+###############################################################################
+# BIOMARKER EVIDENCE FILE [REQIURED] - Core evidence database.
+# 
+# Multiple sections of evidence files are allowed.
+# 
+# FORMAT: tab-separated values (TSV) 
+# 
+# Fields:
+#   Date        - (String) Date of the particular entry, used for versioning.
+#   Tier        - (Requied) The tier of a particular evidence entry (See below)
+#   Biomarker   - Mame of the biomarker, such genes (e.g., EGFR), protein (e.g., 
+#                 CD274) or special biomarkers (e.g., Microsatellite instability).
+#                 Multiple alterations are allowed and separated by "+" (WITHOUT 
+#                 whitespace)
+#   Alteration  - (String) gene mutation (using HGVS nomenclature, p. notation by 
+#                 default if not specified), alteration of protein expression (e.g., 
+#                 ERBB2 overexpression), fusion (e.g., BCR-ABL1 fusion), etc. Multi-
+#                 ple alterations are allowed and separated by comma or semicolon. 
+#                 Co-alteration (of the same biomarker/gene) are joint by " and ".
+#                 Co-alteration (of the different biomarker/gene) are also joint 
+#                 by " and ", but will preceed with. Negation operators such as 
+#                 "except" or "not" are also allowed (e.g., "BRAF:alteration and 
+#                 NOT BRAF:V600")
+#   Tumour Type - (Also allowed: Cancer type). Specification of cancer type 
+#                 matching evidence Multiple tumour types allowed, separated by ";"
+#   Drugs       - List of therapies separated buy ";". Drug combinations should be
+#                 separated by " + "
+#   Comments    - (string) Not processed
+#   Evidence    - (string) List of evidence separated by ", ". Suggested using PMID 
+#                 and DOI (for publications) or NCT number (for early phase trials)
+################################################################################
+
+
+[Evidence:TOPOGRAPH]
+therapy-evidence-database-name = TOPOGRAPH
+therapy-evidence-database-file = example_KB.tsv
+
+################################################################################
+# Multiple evidence databaess are allowed. However, the tiering system must be 
+# identical in all databases. Evidence from all knowledge bases will be 
+# assimilated and assessed.
+#
+# For example, uncomment the following code importing OncoKB as evidence knowledge 
+# base (Note licensing requirements from OncoKB before using).
+################################################################################
+
+# [Evidence:OncoKB]
+# therapy-evidence-database-name    = OncoKB
+# therapy-evidence-database-file    = allActionableVariants.txt
+
+
+################################################################################
+# EVIDENCE GRADING SECTION: 
+# Defining tiers for ranking treatment and clinical trial 
+# The following section defines an example of configuration using OncoKB-like 
+# tiering system (i.e., 1 2 3 4 R1 R2).
+################################################################################
+
+[Evidence:tiering]
+
+# Specification/list of tiers: 
+set tiers-list:1 1R 1B 1BR 2 2R 3 3R 3B 3BR 4 4R 4B 4BR R1 R2 R2B
+
+# Specification/list of drug resistance tiers: 
+set tiers-list-resistance:R1 R2 R2B 
+
+# Custom specification of different tier ranking methods: 
+set tier-ranking-mode:pedantic        => tier-rank-order:R1 R2 R2B 1 1R 1B 1BR 2 2R 3 3R 3B 3BR 4 4R 4B 4BR
+set tier-ranking-mode:conservative    => tier-rank-order:R1 1 R2 R2B 1R 1B 1BR 2 2R 3 3R 3B 3BR 4 4R 4B 4BR
+set tier-ranking-mode:balanced        => tier-rank-order:R1 1 1R 1B 1BR 2 2R R2 R2B 3 3R 3B 3BR 4 4R 4B 4BR
+set tier-ranking-mode:liberal         => tier-rank-order:R1 1 1R 1B 1BR 2 2R 3 R2 R2B 3R 3B 3BR 4 4R 4B 4BR
+set tier-ranking-mode:unrestricted    => tier-rank-order:R1 1 1R 1B 1BR 2 2R 3 3R 3B 3BR 4 4R 4B 4BR R2 R2B
+
+# Setting (force) a default tiering mode:
+# set tier-ranking-mode:balanced
+
+
+[Therapy]
+################################################################################
+# THERAPY DATABASE [REQUIRED] - a TSV file with two fields:
+#   drug        - (string) preferred drug name, followed by synonyms, separated by '|'
+#   drug_class  - (string) a string showing the immediate (primary) drug class name. 
+#                 Multiple drug classes are allowed, separated by '; '
+#    
+# Example: 
+# Afatinib|BIBW 2992|BIBW2992	EGFR_inhibitor,second_generation
+# Alectinib|Alecensa|AF-802|AF802|CH5424802|RG7853|RO5424802	ALK_inhibitor,second_generation
+# Savolitinib|AZD 6094|AZD6094|HMPL-504|Volitinib	MET_inhibitor,type_1
+# Entrectinib|RXDX 101|RXDX-101|RXDX101|Rozlytrek ALK_inhibitor,third_generation; TRK_inhibitor,first_generation; ROS1_inhibitor
+################################################################################
+
+therapy-database-file             = drug_database.txt                   # Main drug database
+
+
+
+
+################################################################################
+# THERAPY HIERARCHY DATABASE [REQUIRED] - a simple, line-based, tab-separated 
+# database showing of taxonomic hierarchy of therapy classes (is-a relationship). Required for both therapy 
+# and trial search/matching
+# 
+# E.g., 
+# immune_checkpoint_blockade      immune_checkpoint_blockade,CTLA-4_targeting     anti-CTLA-4_monoclonal_antibody
+# immune_checkpoint_blockade      immune_checkpoint_blockade,PD-1_targeting       anti-PD-1_monoclonal_antibody
+# 
+# indicating two relationships: 
+#   * anti-PD-1_monoclonal_antibody IS-A immune_checkpoint_blockade,PD-1_targeting 
+#   * immune_checkpoint_blockade,PD-1_targeting IS-A immune_checkpoint_blockade      
+################################################################################
+
+drug-class-hierarchy-file         = drug_class_hierarchy.txt            # a simple deconstructed cancer drug ontology
+
+
+
+[ClinicalTrials]
+################################################################################
+# CLINCAL TRIALS DATABASE [OPTIONAL] - If trial matching is required
+# 
+# TSV file (with title) with the following fields:
+#   trial_id                     -  (string) Unique Clinical trial ID
+#   trialacronym                 -  (Optional) clinical trial acronym
+#   phase                        -  (string) Phase of clinical trial
+#   studytitle                   -  (string) Title of the study
+#   drug_list                    -  (strings) List of study drugs for matching, 
+#                                   separated by semicolon. Drug combinations 
+#                                   are allowed, separated by ' + ' (NB: spaces 
+#                                   before and after '+' sign are mandatory)
+#   drug_classes                 -  (strings) List of drug classes (of the study 
+#                                   drugs), separated by semicolon. Drug classes 
+#                                   are defined in therapy database. Drug class 
+#                                   combinations are allowed.
+#   healthcondition (aka catype) -  (strings) List of study drugs for matching, 
+#                                   separated by semicolon. 
+#   recruitmentstatus            -  (string) Recruitment status
+#   postcode                     -  (string) Location/ZIP/Postcode. 
+#   ext_weblink                  -  (string:URL) Link to external website (e.g., 
+#                                   clinicaltrials.gov or ANZCTR web page)
+################################################################################
+
+clinical-trial-database-file      = example_trial_DB_1.tsv  # ANZCTR clinical trial database
+clinical-trial-database-file      = example_trial_DB_2.tsv  # Expanded access program database
+
+
+################################################################################
+# TRIAL ELIGIBITIY FILTERING FILE - (OPTIONAL) TSV file specifying criteria 
+#   trial_id               - (string) Unique Clinical trial ID
+#   eligibility_criteria   - trial filtering using POTTR rules
+# 
+# E.g., 
+#  trial_id	eligibility_criteria
+#  NCT02857270	NRAS:alteration; catype:Melanoma
+#  NCT02857270	catype:Non-small cell lung cancer; (BRAF:alteration OR KRAS:alteration OR NRAS:alteration)
+#  NCT02857270	catype:colorectal cancer; BRAF:V600E
+################################################################################
+
+clinical-trial-eligibility-file   = example_trial_eligibility.tsv       # Trial-specific criteria
+
+################################################################################
+# THERAPY MATURITY FILE - (OPTIONAL) Databases used to assess the maturity of 
+# therapy/therapy classes with respect to the stage of development.
+# 
+# The databases here use TSV format (without title) containing the following 
+# fields in order:
+#   trial_id  - unique trial identified or e.g., NCT0XXXXXXX or ACTRNXXXXXXXXX
+#   phase     - Phase of the trial (e.g., Phase 1, Phase 2, Phase 3, Phase 4)
+#   attribute - one of the following
+#               "drug" - drug listed in the trial
+#               "drug_class" - drug classes of the drug listed in the trial
+#               "combo" - combination of drugs used in the trial
+#               "combo_class" - classes of combination of drugs used in the trial
+#   therapy   - for drug (or drug class) combinations, separate each ingredient by 
+#               either " + " or "|"
+# Example:
+# NCT02151981     Phase 3 drug    Osimertinib
+# NCT02151981     Phase 3 drug    Pemetrexed
+# NCT02151981     Phase 3 drug_class      EGFR_inhibitor,third_generation
+# NCT02151981     Phase 3 drug_class      antimetabolite
+# NCT02151981     Phase 3 drug_class      platinum-based_antineoplastic_agent
+# NCT02151981     Phase 3 combo   Carboplatin|Cisplatin|Pemetrexed
+# NCT02151981     Phase 3 combo   Osimertinib
+# NCT02151981     Phase 3 combo_class     antimetabolite|platinum-based_antineoplastic_agent
+# NCT02151981     Phase 3 combo_class     EGFR_inhibitor,third_generation
+################################################################################
+
+
+therapy-maturity-database-file    = example_trial_drug_phases.tsv
+
+
+################################################################################
+
+
+################################################################################
+
+
