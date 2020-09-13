@@ -99,6 +99,8 @@ name: GastroEsophageal Cancer
 def: "GastroEsophageal Cancer"
 subset: DO_cancer_slim
 synonym: "Gastrooesophageal Cancer" EXACT[]
+synonym: "Esophagogastric Cancer" EXACT[]
+synonym: "Esophagogastric Cancers" EXACT[]
 synonym: "Gastroesophageal junction adenocarcinoma" EXACT[]
 synonym: "Gastroesophageal junction cancer" EXACT[]
 synonym: "Gastroesophageal junction carcinoma" EXACT[]

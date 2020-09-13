@@ -3,7 +3,7 @@
 #
 # pottr.pl: Precision Oncology Therapy and Trial Recommender -
 # 
-# Clinical decision support system for guiding molecularly targeted cancer therapies
+# A decision support system for guiding molecularly targeted cancer therapies
 # 
 # This file is part of Oncology Treatment and Trials Recommender (OTTR) and 
 # Precision OTTR (POTTR).
@@ -33,10 +33,11 @@
 #   Version 0.9  - 20 May 2020
 #   Version 0.91 - 27 May 2020
 #   Version 0.92 - 13 Jun 2020
+#   Version 0.93 - 14 Sep 2020
 #
 ##############################################################################
 
-our $POTTR_version = '0.92';
+our $POTTR_version = '0.93';
 our $POTTR_title = qq|Precision Oncology Treatment and Trial Recommender (Version $POTTR_version)|;
 
 our $POTTR_subtitle = qq|
@@ -64,7 +65,7 @@ use warnings;
 use lib '/home/frank/lib';
 use Common;
 
-use Getopt::Long qw(:config auto_help bundling);
+use Getopt::Long qw(:config bundling);
 use Pod::Usage;
 
 use File::Basename;
@@ -98,14 +99,20 @@ my $f_list_evidence = undef;
 my $f_list_therapies = undef;
 my $f_list_therapy_summaries = undef;
 my $f_clinical_report = undef;
+my $f_help = undef;
+my $f_man = undef;
+my $f_version = undef;
 
 GetOptions (
+	"help|h|?"                => \$f_help,
+	"man|manual|docs|m"       => \$f_man,
 	"web-output|w"            => \$f_from_web,
 	"webpage"                 => \$f_webpage,
 	"title=s"                 => \$f_title,
 	"modules=s"               => \$pottr_modules,
 	"quiet|q"                 => \$f_quiet,
 	"config-file|c=s"         => \$f_config,
+	"version"                 => \$f_version,
 	"verbose|debug|d|v"       => \$f_verbose,
 	"print-rules|r"           => \$f_print_rules,
 	"clinical-report|p"       => \$f_clinical_report,
@@ -117,6 +124,14 @@ GetOptions (
 	"list-therapy-summary|S"  => \$f_list_therapy_summaries,
 	"list-trials|T"           => \$f_list_trials,
 );
+
+pod2usage(-verbose=>1) if $f_help;
+pod2usage(-verbose=>99) if $f_man;
+if ($f_version) {
+	print "Precision Oncology Treatment and Trial Recommender $POTTR_version\n";
+	exit(0);
+}
+
 
 if ( ! ($f_interp_catype || $f_interp_variants || $f_list_evidence || $f_list_trials || $f_list_therapy_summaries|| $f_list_therapies) ) {
 	$f_interp_catype = $f_interp_variants = $f_list_evidence = $f_list_therapy_summaries = $f_list_trials = $f_list_therapies = 1;
@@ -295,6 +310,9 @@ sub extract_drug_sensitivity {
 		my @tags = split /\s*;\s*/, $1 if defined $1 ;
 		my @biomarkers = sort ( uniq( map { s/referred_from://; split /\s*\+\s*/, $_} grep { /referred_from:/ } @tags ) );
 		my $biomarkers = join ", ", @biomarkers;
+		my @lom = sort map { my $a = $_; $a =~ s/^LOM:\s*(\d+).*/$1/; $a } grep { /^LOM:/ } @tags; 
+		my $lom = join(", ", @lom);
+
 		my @alterations;
 		
 		for my $bm (@biomarkers) {
@@ -314,6 +332,7 @@ sub extract_drug_sensitivity {
 		$row{'biomarker'} = $biomarkers ;
 		$row{'therapy'} = $therapy ;
 		$row{'tier'} = $tier ;
+		$row{'lom'} = $lom ;
 		
 		if ( $f_clinical_report ) {
 			next if $tier eq 'R2B';
@@ -494,13 +513,13 @@ sub gen_drug_sens_terminal {
 		my @lines ;
 		push @title_rep, $title;
 		push @lines, "___$#title_rep\n";
-		push @lines, join("\t", "Therapy/Class", 'Tier', 'Biomarker(s)', 'Alteration(s)')."\n";
+		push @lines, join("\t", "Therapy/Class", 'Tier', 'Biomarker(s)', 'LOM', 'Alteration(s)')."\n";
 		for my $row ( extract_drug_sensitivity(@results_to_filter) ) {
 			my $f_hl = 0;
 			$f_hl = 37 if $$row{'tier'} =~ /^1|^2/;
 			$f_hl = 30 if $$row{'tier'} =~ /^3B|^4|U|^R2B/;
 			$f_hl = 31 if $$row{'tier'} =~ /^R1/;
-			push @lines, join("\t", ($f_hl ? hl($f_hl, $$row{'therapy'}) : $$row{'therapy'}) , thl( $$row{'tier'} ), $$row{'biomarker'}, $$row{'alterations'})."\n";
+			push @lines, join("\t", ($f_hl ? hl($f_hl, $$row{'therapy'}) : $$row{'therapy'}) , thl( $$row{'tier'} ), $$row{'biomarker'}, $$row{'lom'}, $$row{'alterations'})."\n";
 		}
 		return @lines ;
 	}
@@ -524,10 +543,10 @@ sub gen_drug_sens_report {
 		my @results_to_filter = @_;
 		my $output = '';
 		$output .= "$title\n".
-			join("\t", 'Therapy or class', 'Tier', 'Biomarker(s)', 'Alteration(s)')."\n";
+			join("\t", 'Therapy or class', 'Tier', 'Biomarker(s)', 'LOM', 'Alteration(s)')."\n";
 		
 		for my $row ( extract_drug_sensitivity(@results_to_filter) ) {
-			$output .= join("\t", $$row{'therapy'}, $$row{'tier'}, $$row{'biomarker'}, $$row{'alterations'})."\n";
+			$output .= join("\t", $$row{'therapy'}, $$row{'tier'}, $$row{'biomarker'}, $$row{'lom'}, $$row{'alterations'})."\n";
 		}
 		return $output ;
 	}
@@ -550,7 +569,7 @@ sub gen_HTML_drug_sens_report {
 		my $output = '';
 		$output .= "<h3>$title</h3>";
 		$output .= "<table style='border-collapse:collapse' id=trial_list>\n";
-		$output .= "<tr>".join("", ( map { "<th>$_</th>" } ('Therapy or class', 'Tier', 'Biomarker(s)', 'Alteration(s)') ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
+		$output .= "<tr>".join("", ( map { "<th>$_</th>" } ('Therapy or class', 'Tier', 'Biomarker(s)', 'LOM', 'Alteration(s)') ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
 		my $cnt = 0;
 		
 		for my $row ( extract_drug_sensitivity(@results_to_filter) ) {
@@ -566,7 +585,7 @@ sub gen_HTML_drug_sens_report {
 			$bgcolor = '#ff9999' if $$row{'tier'}=~ /^R1/;
 			$bgcolor = '#ffcc99' if $$row{'tier'}=~ /^R2/;
 			
-			$output .= "<tr class=$oe style='background:$bgcolor'>".join("", (map {"<td style='border:1px solid #888888'>$_</td>"} ( "<b>$$row{'therapy'}</b>", $$row{'tier'}, $$row{'biomarker'}, clean_HTML($$row{'alterations'}) ) ) )."</tr>\n";
+			$output .= "<tr class=$oe style='background:$bgcolor'>".join("", (map {"<td style='border:1px solid #888888'>$_</td>"} ( "<b>$$row{'therapy'}</b>", $$row{'tier'}, $$row{'biomarker'}, $$row{'lom'}, clean_HTML($$row{'alterations'}) ) ) )."</tr>\n";
 			++$cnt ;
 		}
 		$output .= "</table>"; # ."</td>\n";
@@ -691,7 +710,7 @@ sub extract_therapy_summaries {
 		
 		my @evidence = map { my $a = $_; $a =~ s/^evidence:\s*//; my @a = split /\s*[,;]\s*/, $a; @a } grep { /^evidence:/ } @tags; 
 		my @referred_from = sort map { my $a = $_; $a =~ s/^referred_from:\s*//; my @a = split /\s*[,;]\s*/, $a; @a } grep { /^referred_from:/ } @tags; 
-		
+		my @lom = sort map { my $a = $_; $a =~ s/^LOM:\s*(\d+).*/$1/; $a } grep { /^LOM:/ } @tags; 
 
 		my %row = (
 			'therapy'         => $therapy,
@@ -699,7 +718,8 @@ sub extract_therapy_summaries {
 			'tier_drug_class' => $tags{'therapy_recommendation_tier_drug_class'},
 			'rec_score'       => $tags{'therapy_recommendation_score'},
 			'referred_from'   => join(", ", @referred_from),
-			'evidence'        => join(", ", @evidence)
+			'evidence'        => join(", ", @evidence),
+			'lom'             => join(", ", @lom)
 		);
 		
 		push @retval, \%row;
@@ -709,11 +729,11 @@ sub extract_therapy_summaries {
 
 
 sub gen_therapy_summary_report {
-	my $output = join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "Evidence")."\n";
+	my $output = join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "LOM", "Evidence")."\n";
 	my @lines;
 
 	for my $row ( sort { $$a{'rec_score'} <=> $$b{'rec_score'} } extract_therapy_summaries(@results_therapy_recommendations) ) {
-		push @lines, join("\t", $$row{'therapy'}, $$row{'tier'}, $$row{'tier_drug_class'}, $$row{'referred_from'}, $$row{'evidence'});
+		push @lines, join("\t", $$row{'therapy'}, $$row{'tier'}, $$row{'tier_drug_class'}, $$row{'referred_from'}, $$row{'lom'}, $$row{'evidence'});
 	}
 
 	$output .= join("\n", @lines)."\n";
@@ -725,7 +745,7 @@ sub gen_therapy_summary_terminal {
 	
 	my @lines;
 	
-	push @lines, join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "Evidence")."\n";
+	push @lines, join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "LOM", "Evidence")."\n";
 	
 	for my $row ( sort { $$a{'rec_score'} <=> $$b{'rec_score'} } extract_therapy_summaries(@results_therapy_recommendations) ) {
 		my $f_hl;
@@ -733,7 +753,7 @@ sub gen_therapy_summary_terminal {
 		$f_hl = 30 if $$row{'tier'} =~ /^3B|^4|^R2B/;
 		$f_hl = 31 if $$row{'tier'} =~ /^R1/;
 # 		push @lines, join( "\t", ( map { $$row{$_} }  qw(therapy tier tier_drug_class evidence) ) )."\n";
-		push @lines, join("\t", ($f_hl ? hl($f_hl, $$row{'therapy'}) : $$row{'therapy'}) , thl( $$row{'tier'} ), thl( $$row{'tier_drug_class'} ), $$row{'referred_from'}, $$row{'evidence'})."\n";
+		push @lines, join("\t", ($f_hl ? hl($f_hl, $$row{'therapy'}) : $$row{'therapy'}) , thl( $$row{'tier'} ), thl( $$row{'tier_drug_class'} ), $$row{'referred_from'}, $$row{'lom'}, $$row{'evidence'})."\n";
 	}
 	
 	@lines = column(@lines) ;
@@ -746,7 +766,7 @@ sub gen_HTML_therapy_summary_report {
 
 	my $title = shift;
 	$output .= "<table style='border-collapse:collapse' class=trial_list>\n";
-	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Therapy", "Tier", "Tier (drug class)", "Biomarker", "Evidence") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
+	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Therapy", "Tier", "Tier (drug class)", "Biomarker", "LOM", "Evidence") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
 	my $cnt = 0;
 	
 	for my $row ( sort { $$a{'rec_score'} <=> $$b{'rec_score'} } extract_therapy_summaries(@results_therapy_recommendations) ) {
@@ -771,6 +791,7 @@ sub gen_HTML_therapy_summary_report {
 			$$row{'tier'}, 
 			$$row{'tier_drug_class'}, 
 			$$row{'referred_from'}, 
+			$$row{'lom'}, 
 			join(", ", @evidence) ) )
 			)."</tr>\n";
 		++$cnt ;
@@ -1046,22 +1067,23 @@ For example:
 
 =head1 DESCRIPTION
 
-Precision Oncology Treatment and Trial Recommender (POTTR) is a clinical decision support system (CDSS) for recommending cancer treatment based on tumour molecular profiling results.
-POTTR produces evidence-linked interpretation to the results of molecular alterions from a patient's next generation sequencing (NGS) panel assays.
+Precision Oncology Treatment and Trial Recommender (POTTR) is an open-source, Perl-based clinical decision support system (CDSS) for recommending treatment for patients with advanced cancers, based on the results of tumour molecular profiling. It is intended to produce outputs that can be used by oncology physicians to aggregate available evidence about potential treatment options.
 
-POTTR (1) ranks potential therapies based on a selected evidence tiering (level of evidence) system, 
-(2) predicts drug sensitivity/resistance, taking into account all available evidence and variant interactions, and 
-(3) preferentially selecting and ranks clinical trials based on biomarker-matched evidence for a given tiering system.
+POTTR integrates patient's genomic testing results to produce evidence-based recommendations. Based on molecular alterations, this tool:
+(1) Ranks potential therapies based on a selected evidence tiering (level of evidence) system;
+(2) Predicts drug sensitivity/resistance, taking into account all available evidence and variant interactions, and;
+(3) Preferentially selects and ranks therapies and selects clinical trials based on biomarker-matched evidence for a given tiering system.
 
 As an expert system, POTTR requires a number of ontologies and knowledge bases to operate. 
-Prior to use, POTTR should be configured (see CONFIGURATION section).
+Before use, POTTR needs to be properly be configured (see CONFIGURATION section).
 
-By default, POTTR does not implement a bioinformatics module for determining pathogenicity of variants.
-For genomic biomarkers, the oncogenicity of variants should be first determined prior to this clinical interpretation step.
-In addition, POTTR is yet capable of handling clinical variables apart from limited histology type determination (full clinical interpretation will be implemented gradually in future versions).
+Note, POTTR does not implement a bioinformatics module to determine pathogenicity of individual variants by default. 
+The oncogenicity of each variant should be determined separately before calling POTTR. 
+In addition, POTTR is yet capable of handling complex clinical variables, apart from limited histology type determination. 
+Full interpretation of clinical data is planned in future versions.
 
-Internally, POTTR is built upon a customised expert system shell to handle precision oncology encoded by production rules.
-The core reasoning mechanisms include a inference tracking system, which form the basis of evidence grading assesments.
+Internally, POTTR is built on a purpose-built expert-system shell, using production rules to make inference on genomic alteration, clinical characteristics, and clinical evidence. 
+The core reasoning mechanism behind POTTR is an inference tracking engine that forms the basis of evidence assessment.
 
 
 =head1 OPTIONS
@@ -1248,7 +1270,7 @@ File format: tab-separated values (TSV) without header comprising entries:
  
 Synopsis: 
   
-  oncogenicity-rules-file = AnnotatedVariants.txt 
+  oncogenicity-rules-file = variant_annotation_rules.txt 
 
 This optional database contains rules used for optional variant interpretation. This 
 step is not essential for decision making if pathogenicity of a variant has been determined 
@@ -1501,7 +1523,7 @@ For debugging, use ``-v'' switch to examine the rules activated and facts at eac
 
 Specialist knowledge in oncology is constantly evolving. Making treatment recommendations  
 for cancer patients requires  careful evaluation  of clinical situations in its entirety.  
-Results produced by POTTR is  STRICTLY FOR RESEARCH USE ONLY  and  CANNNOT SUBSITUTE  for 
+Results produced by POTTR are STRICTLY FOR RESEARCH USE ONLY  and  CANNNOT SUBSITUTE  for 
 professional oncology advice. Using POTTR is WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND. 
 Inappropriate use of this software may lead to harm.
 

@@ -1,6 +1,7 @@
 trial_id	eligibility_criteria
 ACTRN12619000844145	ALK:fusion
 NCT02323126	(MET:alteration)
+NCT02408861	HIV_POSITIVE
 NCT02568267	(NTRK1:oncogenic_mutation OR NTRK2:oncogenic_mutation OR NTRK3:oncogenic_mutation OR ROS1:oncogenic_mutation OR ALK:oncogenic_mutation)
 NCT02609776	MET:oncogenic_mutation
 NCT02857270	BRAF:alteration; catype:Melanoma
@@ -12,9 +13,31 @@ NCT02857270	NRAS:alteration; catype:Melanoma
 NCT02857270	catype:Non-small cell lung cancer; (BRAF:alteration OR KRAS:alteration OR NRAS:alteration)
 NCT02857270	catype:colorectal cancer; BRAF:V600E
 NCT03052608	ALK:fusion
+NCT03454451	catype:Bladder Cancer
+NCT03454451	catype:Cervical Cancer
+NCT03454451	catype:Colorectal Cancer
+NCT03454451	catype:Endometrial Cancer
+NCT03454451	catype:Non-Small Cell Lung Cancer
+NCT03454451	catype:Non-hodgkin Lymphoma
+NCT03454451	catype:Ovarian Cancer
+NCT03454451	catype:Pancreatic Cancer
+NCT03454451	catype:Prostate Cancer
+NCT03454451	catype:Renal Cell Cancer
+NCT03454451	catype:Sarcoma
+NCT03454451	catype:Squamous Cell Carcinoma of the Head and Neck
+NCT03454451	catype:Triple-Negative Breast Cancer
+NCT03473925	NOT_RECRUITING
+NCT03629756	NOT_RECRUITING
+NCT03639714	catype:Colorectal Cancer
+NCT03639714	catype:Gastroesophageal Adenocarcinoma
+NCT03639714	catype:Non-Small Cell Lung Cancer
+NCT03639714	catype:Urothelial Carcinoma
+NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03994393	EGFR:oncogenic_mutation
 NCT04035486	EGFR:oncogenic_mutation
+NCT04129502	(ERBB2:exon_20_insertion OR EGFR:exon_20_insertion)
 NCT04139317	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04165031	KRAS:G12C
 NCT04194944	RET:fusion
 NCT04294810	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
+NCT04300244	catype:Mesothelioma

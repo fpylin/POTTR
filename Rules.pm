@@ -541,7 +541,7 @@ sub run { # Rules::run - the main inference engine.
 				if ( $self->match_rule_lhs($facts, $rule) ) {
 					my $n_lhs = scalar @{ $$rule{'lhs'} };
 					my $n_new_rule = $self->fire_rule($facts, $rule);
-					$self->debug_print(33, "   ".join("\t", $n_lhs, rule_to_string($rule)) ) if $n_new_rule ;
+					$self->debug_print( ($n_new_rule ? 33 : 34) , "   ".join("\t", $n_lhs, rule_to_string($rule)) ) ;
 					$n_new += $n_new_rule ;
 				}
 			}

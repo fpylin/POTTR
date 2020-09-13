@@ -366,12 +366,10 @@ MEDI7247|MEDI 7247	anti-ASCT2_antibody-drug_conjugate
 MGD009|B7-H3 x CD3 DART Protein|MGD 009|MGD-009	humanized_B7-H3_x_CD3_dual-affinity_re-targeting_protein
 MGD013	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
 MI-773|SAR405838	p53-HDM2_interaction_inhibitor
-MK-1308A	anti-CTLA-4_monoclonal_antibody
-MK-1308|MK 1308|MK1308	anti-CTLA-4_monoclonal_antibody
+MK-1308|MK 1308|MK-1308A|MK1308	anti-CTLA-4_monoclonal_antibody
 MK-4166	anti-GITR_monoclonal_antibody
 MK-4280|MK 4280|MK4280	anti-LAG3_monoclonal_antibody
-MK-7684A	anti-TIGIT_monoclonal_antibody
-MK-7684|MK 7684|MK7684	anti-TIGIT_monoclonal_antibody
+Vibostolimab|MK-7684|MK 7684|MK7684|MK-7684A	anti-TIGIT_monoclonal_antibody
 MK-8033|MK8033	MET_inhibitor
 MK-8353|SCH 900353	ERK_inhibitor
 MRK003	gamma_secretase_inhibitor
@@ -536,7 +534,7 @@ Streptozotocin	alkylating_agent
 Sunitinib|SU011248|SU11248|Sutent	KIT_inhibitor,first_generation; PDGFR_inhibitor; VEGFR_inhibitor
 Sym021	anti-PD-1_monoclonal_antibody
 Systemic Immune Checkpoint Inhibition	immune_checkpoint_blockade
-TAK-788|AP 32788|AP-32788|AP32788|TAK 788|TAK788	EGFR_inhibitor,exon_20_selective
+Mobocertinib|TAK-788|AP 32788|AP-32788|AP32788|TAK 788|TAK788	EGFR_inhibitor,exon_20_selective
 TAS6417|CLN 081|CLN-081|CLN081|TAS 6417|TAS-6417	EGFR_inhibitor,exon_20_selective
 TG-1501|TG 1501|TG1501	anti-PD-L1_monoclonal_antibody
 THOR-707|THOR 707|THOR707	IL-2_variant
@@ -674,3 +672,5 @@ Ustekinumab	anti-IL-23_monoclonal_antibody; anti-IL-12_monoclonal_antibody
 Tildrakizumab	anti-IL-23_monoclonal_antibody
 Trilaciclib	CDK4/6_inhibitor
 Naxitamab	anti-GD2_monoclonal_antibody
+BGB-10188	PI3K_delta_inhibitor
+MG010	CRAF_inhibitor

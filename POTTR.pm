@@ -389,11 +389,23 @@ sub gen_rules_drug_db {
 	
 	for ( Therapy::get_all_drug_class_pairs() ) {
 		my ($d, $dc) = split /\t/, $_;
+		my $processed_lock = "therapy_sens_predicted:$d";
+		
 		push @drug_db, mkrule(
-			["resistant_to_drug_class:$dc"], [ Facts::mk_fact_str("resistant_to:$d", "INFERRED:treatment_drug") ], ['prio:-1']
+			["resistant_to_drug_class:$dc", "NOT $processed_lock", "resistant_to:$d"], 
+			[ $processed_lock, Facts::mk_fact_str("resistant_to:$d", "CERTAIN:treatment_drug") ], ['prio:-3']
+		);
+		push @drug_db, mkrule(
+			["resistant_to_drug_class:$dc", "NOT $processed_lock", "NOT resistant_to:$d"], 
+			[ $processed_lock, Facts::mk_fact_str("resistant_to:$d", "INFERRED:treatment_drug") ], ['prio:-2']
 		);
 		push @drug_db, mkrule( 
-			["sensitive_to_drug_class:$dc", "NOT resistant_to_drug_class:$dc", "NOT resistant_to:$d"],  [ Facts::mk_fact_str("sensitive_to:$d", "INFERRED:treatment_drug") ]
+			["sensitive_to_drug_class:$dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$dc", "NOT resistant_to:$d", "sensitive_to:$d"], 
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$d", "CERTAIN:treatment_drug") ], ['prio:-1']
+		);
+		push @drug_db, mkrule( 
+			["sensitive_to_drug_class:$dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$dc", "NOT resistant_to:$d", "NOT sensitive_to:$d"],  
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$d", "INFERRED:treatment_drug") ], ['prio:0']
 		);
 	}
 
@@ -409,12 +421,23 @@ sub gen_rules_drug_db {
 
 	for my $combo ( Therapy::get_all_known_combinations() ) {
 		my $combo_dc = Therapy::get_treatment_class( $combo );
+		my $processed_lock = "therapy_sens_predicted:$combo";
 # 		print "C $combo, $combo_dc\n";
 		push @drug_db, mkrule(
-			["resistant_to_drug_class:$combo_dc"], [ Facts::mk_fact_str("resistant_to:$combo", "INFERRED:treatment_drug") ], ['prio:-1']
+			["resistant_to_drug_class:$combo_dc", "NOT $processed_lock", "resistant_to:$combo"], 
+			[ $processed_lock, Facts::mk_fact_str("resistant_to:$combo", "CERTAIN:treatment_drug") ], ['prio:-3']
+		);
+		push @drug_db, mkrule(
+			["resistant_to_drug_class:$combo_dc", "NOT $processed_lock", "NOT resistant_to:$combo"], 
+			[ $processed_lock, Facts::mk_fact_str("resistant_to:$combo", "INFERRED:treatment_drug") ], ['prio:-2']
 		);
 		push @drug_db, mkrule( 
-			["sensitive_to_drug_class:$combo_dc", "NOT resistant_to_drug_class:$combo_dc", "NOT resistant_to:$combo"],  [ Facts::mk_fact_str("sensitive_to:$combo", "INFERRED:treatment_drug") ]
+			["sensitive_to_drug_class:$combo_dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$combo_dc", "NOT resistant_to:$combo", "sensitive_to:$combo"],  
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$combo", "CERTAIN:treatment_drug") ], ['prio:-1']
+		);
+		push @drug_db, mkrule( 
+			["sensitive_to_drug_class:$combo_dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$combo_dc", "NOT resistant_to:$combo", "NOT sensitive_to:$combo"],  
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$combo", "INFERRED:treatment_drug") ], ['prio:0']
 		);
 	}
 	
