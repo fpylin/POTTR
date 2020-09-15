@@ -1,4 +1,3 @@
-
 ALK:A1099T => ALK:A1099T [CERTAIN:mutation_effect]
 ALK:codon_1062_missense_variant => ALK:codon_1062_missense_variant [CERTAIN:mutation_effect]
 ALK:codon_1062_missense_variant => ALK:codon_1062_missense_variant [CERTAIN:oncogenicity]
