@@ -674,3 +674,9 @@ Trilaciclib	CDK4/6_inhibitor
 Naxitamab	anti-GD2_monoclonal_antibody
 BGB-10188	PI3K_delta_inhibitor
 MG010	CRAF_inhibitor
+RMC-4630|SAR442720	SHP2_inhibitor
+SHP099	SHP2_inhibitor
+BGB659	RAF_inhibitor,type_2
+LY300912	RAF_inhibitor,type_2
+MK2206	AKT_inhibitor
+TAK632	RAF_inhibitor,type_2

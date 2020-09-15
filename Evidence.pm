@@ -179,7 +179,15 @@ sub encode_alteration {
 		push @retval, ($f_neg?'NOT ':'').encode_alteration_proper($x).($f_germline ? ',germline' : '');
 	}
 	
-	return join("; ", ( map { ( ($biomarker =~ /\+/) ? '' : "$biomarker:"). $_ } @retval ) );
+	return join("; ", ( map { 
+			( /^((?i:not ))(.*)/ ? 
+			  ( "$1 $biomarker:$2" ) 
+			  :
+			  ( ( ($biomarker =~ /\+/) ? '' : "$biomarker:"). $_ ) 
+			)
+			} @retval 
+		) 
+	);
 }
 
 sub expand_alterations {

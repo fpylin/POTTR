@@ -250,6 +250,7 @@ sub load_module_variant_feature_mapping {
 		
 		my @alterations = Biomarker::interp_variants( v_safe($entity), v_safe($etype), v_safe($espec) ); 
 		my $entity_line = "has_biomarker:".v_safe($entity);
+# 		push @tags, "INFERRED:oncogenicity";
 		push @retval, ( map { Facts::mk_fact_str($_, @tags) } ($entity_line, @alterations) );
 		
 		return @retval ;

@@ -2,7 +2,7 @@ trial_id	eligibility_criteria
 ACTRN12619000844145	ALK:fusion
 NCT02323126	(MET:alteration)
 NCT02408861	HIV_POSITIVE
-NCT02568267	(NTRK1:oncogenic_mutation OR NTRK2:oncogenic_mutation OR NTRK3:oncogenic_mutation OR ROS1:oncogenic_mutation OR ALK:oncogenic_mutation)
+NCT02568267	COMPLETED; (NTRK1:oncogenic_mutation OR NTRK2:oncogenic_mutation OR NTRK3:oncogenic_mutation OR ROS1:oncogenic_mutation OR ALK:oncogenic_mutation)
 NCT02609776	MET:oncogenic_mutation
 NCT02857270	BRAF:alteration; catype:Melanoma
 NCT02857270	BRAF:alteration; catype:Non-small cell lung cancer
@@ -41,3 +41,7 @@ NCT04165031	KRAS:G12C
 NCT04194944	RET:fusion
 NCT04294810	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04300244	catype:Mesothelioma
+NCT03157128	RET:fusion
+NCT03157128	RET:oncogenic_mutation; NOT RET:amplification
+NCT03906331	RET:fusion
+NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
