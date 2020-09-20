@@ -39,6 +39,8 @@ use TSV;
 use DOID;
 use Rules;
 
+use POTTRConfig;
+
 our @EXPORT;
 our @EXPORT_OK;
 
@@ -265,13 +267,32 @@ sub gen_rule_knowledge_base {
 			}
 		}
 	}
+
+	# Load repurposing rules:
+	my %repurposing_retier_cancer_type ;
+	my %repurposing_retier_related_mutation ;
 	
+	my ($repurposing_retier_cancer_type_str) = POTTRConfig::get('repurposing-retier:cancer-type');
+	if ( defined $repurposing_retier_cancer_type_str ) {
+		push @debug_msg, "repurposing-retier:cancer-type = $repurposing_retier_cancer_type_str\n";
+		%repurposing_retier_cancer_type = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*,\s*/, $repurposing_retier_cancer_type_str;
+	}
+
+	my ($repurposing_retier_related_mutation_str) = POTTRConfig::get('repurposing-retier:related-mutation');
+	if ( defined $repurposing_retier_related_mutation_str ) {
+		push @debug_msg, "repurposing-retier:related-mutation = $repurposing_retier_related_mutation_str\n";
+		%repurposing_retier_related_mutation = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*,\s*/, $repurposing_retier_related_mutation_str;
+	}
+
 	# Then, check if there are rules already cached and uptodate. If so, use it.
 	if ( defined($outf) and ( -f $outf ) and ( mtime($srcf) < mtime($outf) ) and ( mtime(__FILE__) < mtime($outf) ) ) { 
 		return file($outf);
 	}
 	
 	# Otherwise generate new rules.
+	
+	
+	my %rules_treatment_by_catype_mutation_position;
 	
 	my $line = 1;
 	for my $row ( @{ $TSV_master->{'data'} } ) {
@@ -289,7 +310,11 @@ sub gen_rule_knowledge_base {
 		
 		my $version_str = ($date =~ m|(\d+)/(\d+)/(\d+)| ? "KBver:$3$2$1" : '');
 		
-		my $tier_partial_match = ( ( $tier =~ /^R/) ? 'R2B' : ( ($tier =~ /^[123]/) ? '3B' : '4B' ) );
+		my $tier_partial_match_catype = $repurposing_retier_cancer_type{$tier} // 'U';
+		
+		push @debug_msg, "\e[1;41;37mUntranslated tier $tier\e[0m\n" if $tier_partial_match_catype eq 'U' ;
+		
+# 		( ( $tier =~ /^R/) ? 'R2B' : ( ($tier =~ /^[123]/) ? '3B' : '4B' ) );
 
 		$tumour_type = process_tumour_type($tumour_type);
 		
@@ -315,14 +340,16 @@ sub gen_rule_knowledge_base {
 		my $lhs_catype = ( (scalar(@lhs_catypes) > 1) ? "(".join(" OR ", @lhs_catypes).")" : $lhs_catypes[0] );
 		
 		my $alterations_neg = '';
+		my $alterations_sep = ',;';
 		
-		if ( $alterations =~ /\s*(?:except|but not)\s*/i ) {
+# 		$alterations_sep = ';';  # if exception is specified, the entire list after exception is interpreted as negative
+		if ( $alterations =~ /\s*(?:except|(?:but) not)\s*/i ) {
 			($alterations, $alterations_neg) = ($`, $');
 		}
 		
-		my @alterations = grep { length($_) } map { s/^\s*|\s*$//; $_ } split /\s*[,;]\s*/, $alterations ;
+		my @alterations = grep { length($_) } map { s/^\s*|\s*$//; $_ } split /\s*[$alterations_sep]\s*/, $alterations ;
 		
-		my @alterations_neg = grep { length($_) } map { s/^\s*|\s*$//; $_ } ( split /\s*[,;]\s*/, $alterations_neg );
+		my @alterations_neg = grep { length($_) } map { s/^\s*|\s*$//; $_ } ( split /\s*[$alterations_sep]\s*/, $alterations_neg );
 		
 		@alterations = map {
 				join( "; ", encode_alteration($biomarker, $_), ( map { "NOT ".encode_alteration($biomarker, $_) } map { expand_alterations($_) } @alterations_neg ) )
@@ -333,8 +360,14 @@ sub gen_rule_knowledge_base {
 		
 		for my $alt (@alterations) {
 			my $lhs_alteration = $alt;
-
-			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)$/ and do { $lhs_alteration = $1."codon_".$2."_missense_variant"; };
+			my $lhs_alteration_pos ;
+			
+			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)$/ and do { $lhs_alteration = $lhs_alteration_pos = $1."codon_".$2."_missense_variant"; };
+			
+			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)[A-Z]$/ and do { 
+				$lhs_alteration_pos = $1."codon_".$2."_missense_variant"; 
+				$lhs_alteration_pos = undef if $lhs_alteration_pos eq $lhs_alteration ;
+			};
 			
 			$lhs_alteration .= '; NOT no_negative_predictive_biomarkers' if scalar(@alterations) == scalar(grep { /^NOT / } @alterations);
 		
@@ -364,19 +397,43 @@ sub gen_rule_knowledge_base {
 					if ( $drug_class_regimen ) {
 						my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";
 						
+						my $ppalt = $alt; 
+						$ppalt =~ s/;/ and /g;
+						
 						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) {
 							my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";
 							
 							push @rules, mkrule( [$lhs_alteration], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
 							
+							if ( defined $lhs_alteration_pos ) {
+								my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt)";
+								
+								push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
+									mkrule( [$lhs_alteration_pos], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
+							}
+							
 						} else {
 							my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier)";
 							
-							my $rhs_treatment_class_str_type_specific = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier_partial_match, referred from $rhs_catype)";
+							my $rhs_treatment_class_str_type_specific = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier_partial_match_catype, inferred from $rhs_catype)";
 
 							push @rules, mkrule( [$lhs_alteration, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
 							
 							push @rules, mkrule( [$lhs_alteration, "NOT ".$lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_class_str_type_specific, "INFERRED:treatment_class", @tags ) ] );
+							
+							if ( defined $lhs_alteration_pos ) {
+								my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt)";
+								
+								my $rhs_treatment_class_str_type_specific = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $repurposing_retier_related_mutation{$tier_partial_match_catype}, inferred from $rhs_catype and $ppalt)";
+								
+								push @error_msg, "\e[1;31mUndefined tier $tier_partial_match_catype\e[0m\n" if ! exists $repurposing_retier_related_mutation{$tier_partial_match_catype};
+							
+								push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
+									mkrule( [$lhs_alteration_pos, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
+							
+								push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
+									mkrule( [$lhs_alteration_pos, "NOT ".$lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_class_str_type_specific, "INFERRED:treatment_class", @tags ) ] );
+							}
 						}
 						
 						# AUDIT:
@@ -387,23 +444,47 @@ sub gen_rule_knowledge_base {
 							$data_c{lc($rhs_catype)}{$biomarker}{$alt}{$drug_class_regimen}{$tier}++; #  = $z;
 						}
 					}
-					
+
+
 					if ( ! $f_no_specific_drug ) {  # Making rules 
-						
 						my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $tier, histotype agnostic)";
+						
+						my $ppalt = $alt; 
+						$ppalt =~ s/;/ and /g;
+							
 						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) {
 							my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $tier, histotype agnostic)";
+						
 							
 							push @rules, mkrule( [$lhs_alteration], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
+							
+							if ( defined $lhs_alteration_pos ) {
+								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, histotype agnostic and from $ppalt )";
+								
+								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
+									mkrule( [$lhs_alteration_pos], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
+							}
 							
 						} else {
 							my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $tier)";
 							
-							my $rhs_treatment_str_type_specific = "$biomarker:treatment:$rx ($srckb LOE: $tier_partial_match, referred from $rhs_catype)";
+							my $rhs_treatment_str_type_specific = "$biomarker:treatment:$rx ($srckb LOE: $tier_partial_match_catype, inferred from $rhs_catype)";
 
 							push @rules, mkrule( [$lhs_alteration, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
 							
 							push @rules, mkrule( [$lhs_alteration, "NOT ".$lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_str_type_specific, "INFERRED:treatment", @tags ) ] );
+							
+							if ( defined $lhs_alteration_pos ) {
+								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt )";
+								
+								my $rhs_treatment_str_type_specific = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier_partial_match_catype}, inferred from $rhs_catype and $ppalt)";
+								
+								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
+									mkrule( [$lhs_alteration_pos, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
+							
+								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
+									mkrule( [$lhs_alteration_pos, "NOT ".$lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_str_type_specific, "INFERRED:treatment", @tags ) ] );
+							}
 						}
 						# AUDIT:
 						for my $alt (@alterations) {
@@ -418,6 +499,24 @@ sub gen_rule_knowledge_base {
 			}
 		}
 		push @debug_msg, "\n";
+	}
+	
+	for my $rx ( sort keys %rules_treatment_by_catype_mutation_position) {
+		for my $lhs_alteration_pos ( sort keys %{ $rules_treatment_by_catype_mutation_position{$rx} } ) {
+			my $n_alterations = scalar keys %{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos} };
+			next if $n_alterations <= 1;
+			
+			for my $lhs_alteration ( sort keys %{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos} } ) {
+				push @debug_msg, "$n_alterations alterations: \t$lhs_alteration_pos\t$lhs_alteration\n";
+				my @rules = @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} };
+				@rules = uniq @rules ;
+				@rules = sort @rules ;
+				push @all_rules_treatments, @rules ;
+				for my $rule ( @rules ) {
+					push @debug_msg, "$rule\n";
+				}
+			}
+		}
 	}
 	
 	write_array_uniq($outf, @all_rules_treatments) if defined $outf;

@@ -308,7 +308,7 @@ sub load_module_variant_evidence_grading {
 		my @max_tier_tags ;
 		my $tier_list_regex = $self->{'tier_list_regex'} // '[[:alnum:]]+';
 
-		my @matched_facts = grep { /:$type:.*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|, referred from|, histotype agnostic)/ } ( $facts->get_facts_list() ); # R?[1234S][ABR]?
+		my @matched_facts = grep { /:$type:.*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|, (?i:inferred|referred) from|, histotype agnostic)/ } ( $facts->get_facts_list() ); # R?[1234S][ABR]?
 		
 		my $tier_order_ref = $self->{'tier_order'} ;
 		

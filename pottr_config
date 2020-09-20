@@ -152,6 +152,17 @@ set tier-ranking-mode:unrestricted    => tier-rank-order:R1 1 1R 1B 1BR 2 2R 3 3
 # set tier-ranking-mode:balanced
 
 
+# Drug repurposing - reassignment ot tiers (from tier:to tier):
+
+# Describes how a therapy should be retiered when using a drug for different cancer types
+# The following 3B tier designation in line with OncoKB definition
+repurposing-retier:cancer-type = 1:3B, 1B:3B, 1R:3B, 1BR:3BR, 2:3B, 2R:3BR, 3:3B, 3R:3BR, 4:4B, 4R:4BR, R1:R2B, R2:R2B
+
+# Describes how a therapy should be retiered when drug sensitivity is inferred based on related mutation
+# The following example re-tiers renders to hypothetical level e.g., V600E -> V600X
+repurposing-retier:related-mutation = 1:4, 1B:4, 1R:4, 1BR:4, 2:4, 2R:4, 3:4, 3R:4, 3B:4, 4:4, 4R:4R, 4B:4B, 4BR:4BR, R1:R2, R2:R2, R2B:R2B
+
+
 [Therapy]
 ################################################################################
 # THERAPY DATABASE [REQUIRED] - a TSV file with two fields:
