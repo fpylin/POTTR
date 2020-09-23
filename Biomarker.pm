@@ -87,12 +87,16 @@ sub interp_variants {
 		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion'); last; }; # 'truncating_mutation'
 		/F/ and do { 
 			push @alterations, ('fusion'); 
-			push @alterations, "$1-$2 Fusion" if $biomarker_spec =~ /[LR]:(.+?)--?(.+)/ ;
-			last; 
+			if ( ($biomarker_spec =~ /[LR]:([A-Z0-9]+?)--?([A-Z0-9]+)/ ) or #
+				 ($biomarker_spec =~ /([A-Z0-9]+?)--?([A-Z0-9]+)[_\s]*(?i:fusions?)/ ) ) {
+				push @alterations, "$1-$2 Fusion" ;
+				push @alterations, "$1-$2"."_fusion" ;  # alternative normalised representation with an underscore
 			};
-		/T/ and do {
+			last; 
+		};
+		/T/ and do { # Tumour-wide complex biomarker;
 			for ( $biomarker_name ) {
-				/(TMB|MMR|MSI|LOH|HRD)/ and do {
+				/(TMB|MMR|MSI|LOH|HRD)/ and do { # FIXME - to replace with a separate dictionary.
 					$biomarker_spec =~ s/$1-//;
 					last;
 				};

@@ -118,6 +118,18 @@ name: Acute lymphoblastic leukaemia
 def: "Acute Lymphoblastic Leukaemia"
 subset: DO_cancer_slim
 synonym: "Acute lymphoblastic leukemia" EXACT[]
+|, q|
+id: POTTR:1005
+name: Colon cancer
+def: "Colon Cancer"
+subset: DO_cancer_slim
+is_a: DOID:0080199 ! Colorectal carcinoma
+|, q|
+id: POTTR:1006
+name: Rectal cancer
+def: "Rectal Cancer"
+subset: DO_cancer_slim
+is_a: DOID:0080199 ! Colorectal carcinoma
 |
 );
 

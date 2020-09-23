@@ -6,6 +6,7 @@ ALK	ligand_binding_domain	391	401
 ALK	mam1_domain	262	427
 ALK	ldl_domain	437	473
 ALK	mam2_domain	478	636
+EGFR	kinase_domain	672	998
 ERBB2	kinase_domain	731	906	10.1371/journal.pcbi.1002661
 FLT3	extracellular_domain	22	541	30332834
 FLT3	transmembrane_domain	542	563	30332834

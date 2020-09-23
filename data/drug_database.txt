@@ -680,3 +680,4 @@ BGB659	RAF_inhibitor,type_2
 LY300912	RAF_inhibitor,type_2
 MK2206	AKT_inhibitor
 TAK632	RAF_inhibitor,type_2
+Surufatinib|HMPL-012	VEGFR_inhibitor; FGFR1_inhibitor; CSF1R_inhibitor
