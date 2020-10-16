@@ -46,3 +46,29 @@ NCT03157128	RET:oncogenic_mutation; NOT RET:amplification
 NCT03906331	RET:fusion
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
 NCT04282018	(catype:liquid cancer OR catype:Non-small cell lung cancer OR catype:small cell lung cancer OR catype:head and neck squamous cell cancer OR catype:hepatocellular carcinoma OR catype:gastric cancer OR catype:gastroesophageal junction carcinoma OR catype:nasopharyngeal carcinoma OR catype:renal cell carcinoma OR catype:cervical cancer OR catype:triple-negative breast cancer OR catype:ovarian cancer OR catype:endometrial carcinoma OR: catype:esophageal cancer OR catype:melanoma OR catype:urothelial carcinoma OR microsatellite_instability:High OR mismatch_repair:deficient)
+NCT03212404	catype:Non-small cell lung cancer
+NCT03212404	catype:Colorectal cancer; microsatellite_instability:high
+NCT03212404	catype:Colorectal cancer; mismatch_repair:deficient
+NCT03212404	catype:Cutaneous squamous cell carcinoma
+NCT03212404	catype:Small-cell lung cancer
+NCT03212404	catype:Mesothelioma
+NCT03212404	catype:Head and neck squamous cell carcinoma
+NCT03212404	catype:Melanoma
+NCT03212404	catype:Merkel cell carcinoma
+NCT03212404	catype:Renal cell carcinoma
+NCT03212404	catype:Urothelial carcinoma
+NCT03212404	catype:Hodgkin's lymphoma
+NCT03212404	catype:Non-Hodgkin's lymphoma
+NCT03454451	catype:Non-small cell lung cancer
+NCT03454451	catype:Renal cell carcinoma
+NCT03454451	catype:Triple-negative breast cancer
+NCT03454451	catype:Colorectal cancer; microsatellite_instability:high
+NCT03454451	catype:Urothelial carcinoma
+NCT03454451	catype:Cervical cancer
+NCT03454451	catype:Endometrial cancer
+NCT03454451	catype:Sarcoma
+NCT03454451	catype:Endometrial cancer
+NCT03454451	catype:Prostate cancer
+NCT04434482	NOT catype:central nervous system cancer
+NCT03497767	EGFR:oncogenic_mutation
+NCT03175224	(MET:oncogenic_mutation OR MET:alteration)

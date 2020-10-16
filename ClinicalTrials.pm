@@ -441,6 +441,11 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 	my @uniq_trials = sort keys %trial_db_by_trial_id;
 	my @trials_rules;
 
+	my $doid_catype_neoplasm = DOID::DO_match_catype_whole_word("Neoplasm")  ;
+	my $doid_catype_cancer = DOID::DO_match_catype_whole_word("Cancer")  ;
+	my $doid_catype_solid_tumour = DOID::DO_match_catype_whole_word("Solid tumour")  ;
+	my $doid_catype_liquid_cancer = DOID::DO_match_catype_whole_word("Liquid cancer")  ;
+	
 	for my $trial_id (@uniq_trials) {
 		my $matched_drug_names   = $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
 		my $matched_drug_classes = $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
@@ -470,7 +475,6 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 			@healthconditioncodes = @matched_codes;
 		}
 		
-		
 		my @eligibility_criteria_strs = exists $Eligibility_by_trial_id{$trial_id} ? @{ $Eligibility_by_trial_id{$trial_id} } : ();
 		s!(catype:)(.+?)(\s+OR|\s*\)|\s*;|\s*=>|\s*$)!$1.((DO_match_catype($2))[0]//$2).$3!ge for @eligibility_criteria_strs ;
 		push @eligibility_criteria_strs, undef if ! scalar @eligibility_criteria_strs;
@@ -490,9 +494,13 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 		push @trial_info, "ext_weblink:".        ( $trial_db_by_trial_id{$trial_id}{'ext_weblink'}         // '' )  ;
 		
 		my $rhs_str = "preferential_trial_id:$trial_id";
+		
+		my $n_preferential_rules = 0; # number of preferential trials listed
+		
 		for my $d ( map { Therapy::get_preferred_drug_name($_) } split /\s*;\s*/, $matched_drug_names )  {
+			next if ! defined $d;
 			my @tags = @trial_info ;
-			push @tags, "INFERRED:treatment_drug:$d";
+			push @tags, "INFERRED:treatment_drug:$d", "trial_match_criteria:drug_sensitivity";
 			
 			if ( scalar(@healthconditioncodes) ) {
 				for my $hcc (grep { length } @healthconditioncodes) {
@@ -500,7 +508,8 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 						push @trials_rules, mkrule( 
 							[ "sensitive_to:$d", "catype:$hcc",  $eligibility_criteria_str], 
 							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ]  # 
-						) if defined $d;
+						) ;
+						++ $n_preferential_rules;
 					}
 				}
 			} else {
@@ -508,7 +517,8 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 					push @trials_rules, mkrule( 
 						[ "sensitive_to:$d", $eligibility_criteria_str ],
 						[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ] # acronym:$trial_acronym; 
-					) if defined $d;
+					) ;
+					++ $n_preferential_rules;
 				}
 			}
 		}
@@ -516,7 +526,7 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 		for my $dc ( split /\s*;\s*/, $matched_drug_classes )  {
 			for my $dcpart ( split /\s*;\s*/, $dc ) {
 				my @tags = @trial_info ;
-				push @tags, "INFERRED:treatment_drug_class:$dcpart";
+				push @tags, "INFERRED:treatment_drug_class:$dcpart", "trial_match_criteria:drug_class_sensitivity";
 				if ( scalar(@healthconditioncodes) ) {
 					for my $hcc (grep { length } @healthconditioncodes) {
 						for my $eligibility_criteria_str (@eligibility_criteria_strs) {
@@ -524,6 +534,7 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 								[ "sensitive_to_drug_class:$dcpart", "catype:$hcc", $eligibility_criteria_str ],
 								[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ] # acronym:$trial_acronym; 
 							);
+						++ $n_preferential_rules;
 						}
 					}
 				} else {
@@ -532,11 +543,29 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 							[ "sensitive_to_drug_class:$dcpart", $eligibility_criteria_str ],
 							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ] # acronym:$trial_acronym; 
 						) ;
+					++ $n_preferential_rules;
 					}
 				}
 			}
 		}
+		
+# 		print "$n_preferential_rules\t$matched_drug_names\n";
+		
+		if ( scalar(@healthconditioncodes) ) {
+			my @tags = @trial_info ;
+			push @tags, "trial_match_criteria:cancer_type";
+			for my $hcc (grep { length and ! /(?:$doid_catype_solid_tumour|$doid_catype_liquid_cancer|$doid_catype_cancer|$doid_catype_neoplasm)/ } @healthconditioncodes) {
+				for my $eligibility_criteria_str (@eligibility_criteria_strs) {
+					push @trials_rules, mkrule( 
+						[ "catype:$hcc",  $eligibility_criteria_str ], 
+						[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ]  # 
+					) ;
+					++ $n_preferential_rules;
+				}
+			}
+		}
 	}
+	
 	
 	@trials_rules = sort( uniq(@trials_rules) );
 	

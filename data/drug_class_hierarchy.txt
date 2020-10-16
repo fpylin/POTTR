@@ -34,10 +34,11 @@ CAR_T_cell CD19-directed_CAR_T_cell
 CD40L-Fc_fusion_protein 
 CD73_inhibitor
 CDH6-targeting_DM4-based_antibody-drug_conjugate
-CDK1/CDK2/CDK5/CDK9_inhibitor
+CDK2_inhibitor	CDK1/2/5/9_inhibitor
 CDK12/CDK13‎_inhibitor
 CDK4/6_inhibitor
-CDK4/6_inhibitor	CDK2/4/6/FLT3_inhibitor
+CDK2_inhibitor	CDK2/4/6_inhibitor	CDK2/4/6/FLT3_inhibitor
+FLT3_inhibitor	CDK2/4/6/FLT3_inhibitor
 CHEK1_inhibitor	ATR/CHEK1_inhibitor
 CXCR2_antagonist
 CYP17A1_inhibitor

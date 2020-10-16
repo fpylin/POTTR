@@ -109,14 +109,68 @@ YWHAE
 ZBTB16 ZCCHC8 ZEB1 ZFHX3 ZMYM2 ZMYM3 ZNF331 ZNF384 ZNF429 ZNF479 ZNF521 ZNRF3 ZRSR2
 );
 
+my @oncogene_list = qw(
+A1CF ABL1 ABL2 ACKR3 ACVR1 AFDN AFF3 AFF4 AKT1 AKT2 AKT3 ALK APOBEC3B AR ARAF ARHGAP5 ARNT ATF1 ATP1A1 
+BCL11A BCL11B BCL2 BCL2L12 BCL3 BCL6 BCL9 BCL9L BCORL1 BIRC3 BIRC6 BMPR1A BRAF BRD3 BRD4 BTK 
+CACNA1D CALR CARD11 CBL CBLC CCND1 CCND2 CCND3 CCNE1 CCR4 CCR7 CD28 CD74 CD79A CD79B CDH17 CDK4 CDK6 CDKN1A CHD4 CHST11 CIC CREB1 CREB3L2 CREBBP CRLF2 CRTC1 CSF1R CSF3R CTNNA2 CTNNB1 CTNND2 CUX1 CXCR4 CYSLTR2 
+DAXX DDB2 DDIT3 DDR2 DDX5 DDX6 DEK DGCR8 
+EGFR ELF4 ELK4 EPAS1 ERBB2 ERBB3 ERBB4 ERG ESR1 ETV1 ETV4 ETV5 EWSR1 EZH2 
+FCGR2B FCRL4 FES FEV FGFR1 FGFR2 FGFR3 FGFR4 FLI1 FLT3 FLT4 FOXA1 FOXL2 FOXO1 FOXO3 FOXO4 FOXP1 FOXR1 FSTL3 FUBP1 
+GATA1 GATA2 GATA3 GLI1 GNA11 GNAQ GNAS GPC3 GRM3 
+H3F3A H3F3B HEY1 HIF1A HIP1 HIST1H3B HLF HMGA1 HMGA2 HNRNPA2B1 HOXA11 HOXA13 HOXA9 HOXC11 HOXC13 HOXD11 HOXD13 HRAS 
+IDH1 IDH2 IKBKB IL6ST IL7R IRF4 IRS4 
+JAK1 JAK2 JAK3 JUN 
+KAT6A KAT7 KCNJ5 KDM5A KDM6A KDR KIT KLF4 KMT2A KMT2D KNSTRN KRAS 
+LCK LEF1 LMO1 LMO2 LPP LYL1 
+MACC1 MAF MAFB MALAT1 MALT1 MAML2 MAP2K1 MAP2K2 MAP2K4 MAP3K1 MAP3K13 MAPK1 MDM2 MDM4 MECOM MET MITF MLLT10 MN1 MPL MRTFA MSI2 MTCP1 MTOR MUC16 MUC4 MYB MYC MYCL MYCN MYD88 MYOD1 NCOA2 
+NFATC2 NFE2L2 NFKB2 NKX2-1 NOTCH1 NOTCH2 NPM1 NR4A3 NRAS NSD2 NSD3 NT5C2 NTRK1 NTRK3 NUP98 NUTM1 
+OLIG2 
+P2RY8 PABPC1 PAX3 PAX5 PBX1 PDCD1LG2 PDGFB PDGFRA PDGFRB PIK3CA PIK3CB PIM1 PLAG1 PLCG1 POLQ POU2AF1 POU5F1 PPM1D PRDM16 PREX2 PRKACA PRKAR1A PSIP1 PTK6 PTPN11 
+QKI 
+RAC1 RAD21 RAF1 RAP1GDS1 RARA RECQL4 REL RET RHOA ROS1 RSPO3 RUNX1 RUNX1T1 
+SALL4 SET SETBP1 SETDB1 SF3B1 SGK1 SH3GL1 SIX1 SIX2 SKI SMO SND1 SOX2 SRC SRSF2 SRSF3 SSX1 SSX2 SSX4 STAT3 STAT5B STAT6 STIL SUZ12 SYK 
+TAF15 TAL1 TAL2 TBL1XR1 TBX3 TCF3 TCF7L2 TCL1A TEC TERT TET1 TFE3 TFEB TLX1 TLX3 TNC TNFRSF17 TP63 TRIM24 TRIM27 TRRAP TSHR 
+U2AF1 UBR5 USP6 USP8 
+WAS WT1 WWTR1 
+XPO1 
+ZEB1 ZNF521
+);
+
+my @TSG_list = qw(
+ABI1 ACVR2A AMER1 APC APOBEC3B ARHGAP26 ARHGEF10 ARHGEF10L ARHGEF12 ARID1A ARID1B ARID2 ARNT ASXL1 ASXL2 ATM ATP1A1 ATP2B3 ATR ATRX AXIN1 AXIN2 
+B2M BAP1 BARD1 BAX BAZ1A BCL10 BCL11B BCL9L BCOR BCORL1 BIRC3 BLM BMPR1A BRCA1 BRCA2 BRIP1 BTG1 BTK BUB1B 
+CAMTA1 CARS CASP3 CASP8 CASP9 CBFA2T3 CBFB CBL CBLB CBLC CCDC6 CCNB1IP1 CCNC CD274 CDC73 CDH1 CDH10 CDH11 CDK12 CDKN1A CDKN1B CDKN2A CDKN2C CDX2 CEBPA CHD2 CHEK2 CIC CIITA CLTC CLTCL1 CNBP CNOT3 CNTNAP2 CPEB3 CREB3L1 CREBBP CSMD3 CTCF CUL3 CUX1 CYLD 
+DAXX DDB2 DDX10 DDX3X DICER1 DNM2 DNMT3A DROSHA 
+EBF1 EED EIF3E ELF3 ELF4 ELL EP300 EPAS1 EPS15 ERBB4 ERCC2 ERCC3 ERCC4 ERCC5 ESR1 ETNK1 ETV6 EXT1 EXT2 EZH2 
+FANCA FANCC FANCD2 FANCE FANCF FANCG FAS FAT1 FAT4 FBLN2 FBXO11 FBXW7 FEN1 FES FH FHIT FLCN FOXL2 FOXO1 FOXO3 FOXO4 FUS 
+GATA1 GATA3 GPC3 GPC5 GRIN2A 
+HNF1A HOXA11 HOXA9 
+ID3 IGF2BP2 IKZF1 IRF4 IRS4 JAK1 
+KAT6B KDM5C KDM6A KEAP1 KLF4 KLF6 KMT2C KMT2D KNL1 
+LARP4B LATS1 LATS2 LEF1 LEPROTL1 LRIG3 LRP1B LZTR1 
+MALAT1 MAP2K4 MAP3K1 MAP3K13 MAX MED12 MEN1 MGMT MLF1 MLH1 MRTFA MSH2 MSH6 MUTYH MYH9 
+N4BP2 NAB2 NBN NCOA4 NCOR1 NCOR2 NDRG1 NF1 NF2 NFE2L2 NFKB2 NFKBIE NKX2-1 NOTCH1 NOTCH2 NRG1 NTHL1 NTRK1 
+PABPC1 PALB2 PATZ1 PAX5 PBRM1 PER1 PHF6 PHOX2B PIK3R1 PML PMS2 POLD1 POLE POLG POLQ POT1 PPARG PPP2R1A PPP6C PRDM1 PRDM2 PRF1 PRKAR1A PTCH1 PTEN PTK6 PTPN13 PTPN6 PTPRB PTPRC PTPRD PTPRK PTPRT 
+QKI 
+RAD17 RAD21 RAD51B RANBP2 RB1 RBM10 RECQL4 RFWD3 RHOA RHOH RMI2 RNF43 ROBO2 RPL10 RPL22 RPL5 RSPO2 RUNX1 RUNX1T1 
+SBDS SDHA SDHAF2 SDHB SDHC SDHD SETD1B SETD2 SFPQ SFRP4 SH2B3 SIRPA SLC34A2 SMAD2 SMAD3 SMAD4 SMARCA4 SMARCB1 SMARCD1 SMARCE1 SMC1A SOCS1 SOX21 SPEN SPOP STAG1 STAG2 STAT5B STK11 SUFU SUZ12 
+TBL1XR1 TBX3 TCF3 TENT5C TERT TET1 TET2 TGFBR2 TMEM127 TNFAIP3 TNFRSF14 TP53 TP63 TPM3 TRAF7 TRIM24 TRIM33 TSC1 TSC2 
+USP44 
+VHL 
+WIF1 WNK2 WRN WT1 
+XPA XPC 
+YWHAE 
+ZBTB16 ZFHX3 ZMYM3 ZNF331 ZNRF3 ZRSR2
+);
+
 my %cancer_gene_census = map { $_ => 1 } @cancer_gene_census;
 
 my %other_biomarkers = (
-	'AURKA'  => 'TSG',
-	'BCL2L1'  => 'oncogene',    'BCL2L11'=> 'TSG',      'BRD2'   => 'TSG',      'BRDT'   => 'TSG', 
-	'CD20'    => 'Other',       'CHEK1'  => 'TSG',      'CEACAM5' => 'Other',   'CD33'   => 'Other',  'CD38' => 'Other',  'CD123' => 'Other',  'CD19' => 'Other', 'CD30' => 'Other',  'CXCL13' => 'Other',
+	'AURKA'   => 'TSG',
+	'BCL2L1'  => 'oncogene',    'BCL2L11'=> 'TSG',      'BRD2'   => 'TSG',       'BRDT'   => 'TSG', 
+	'CD20'    => 'Other',       'CHEK1'  => 'TSG',      'CEACAM5' => 'Other',    'CD33'   => 'Other',  'CD38' => 'Other',  'CD123' => 'Other',  'CD19' => 'Other', 'CD30' => 'Other',  'CXCL13' => 'Other',
 	'ERCC1'   => 'TSG', 
-	'FANCI'   => 'TSG',         'FANCM'   => 'TSG',           'FGF19'   => 'oncogene',    'FOLR' => 'Other', 
+	'FANCI'   => 'TSG',         'FANCM'   => 'TSG',     'FGF19'   => 'oncogene', 'FOLR' => 'Other', 'FRS2' => 'oncogene',
 	'GLI2'    => 'TSG',
 	'HGF'     => 'oncogene',    
 	'MCL1'    => 'oncogene',   'MSLN'    => 'protein',  'MTAP'   => 'TSG',  
@@ -126,6 +180,14 @@ my %other_biomarkers = (
 	'SMARCA1' => 'TSG',        'SLAMF7' => 'Other',     'SSTR2'  => 'Other',    'SMARCA2' => 'TSG',     'SLC1A5' => 'Other',
 	'TACSTD2' => 'Other',
 );
+
+our %cancer_gene_type ;
+
+$cancer_gene_type{$_} = 'TSG' for @TSG_list;
+$cancer_gene_type{$_} = 'oncogene' for @oncogene_list;
+$cancer_gene_type{ $other_biomarkers{$_} } = $other_biomarkers{$_} for keys %other_biomarkers;
+
+
 
 sub deutf { my $x = shift; $x =~ s/\xc2\xa0//g; return $x ; }
 sub hl { my ($col, $x) = @_; return "\e[1;${col}m$x\e[0m"; }
@@ -329,6 +391,14 @@ sub gen_rule_knowledge_base {
 			$biomarker =~ s/\s+/_/g ;
 		}
 		
+		
+		my @lhs_catypes_neg ;
+		if ( $tumour_type =~ /(?:,?\s*)?except\s+/i ) {
+			$tumour_type = $`;
+# 			print "[[$tumour_type]]\n";
+			@lhs_catypes_neg = split /\s*[,;]\s*/, $';
+		}
+		
 		my @lhs_catypes = split /\s*[;]\s*/, $tumour_type;
 		my @lhs_catypes_ancestors; # determining cancer type "ancestors" to avoid inference across boundaries
 		
@@ -343,14 +413,30 @@ sub gen_rule_knowledge_base {
 				my @lhs_ancestors ;
 				for my $a (@ancerstors) {
 					push @lhs_ancestors , ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
+# 					print "[$a]\t$DO_name{$a}\n";
 				}
 				push @lhs_catypes_ancestors, @lhs_ancestors ;
 			}
 		}
 		
+		if ( scalar @lhs_catypes_ancestors ) { # FIXME: temporary fix for unrooted cancer type classes, until a cancer ontology is upgraded
+			my ($a) = DO_match_catype('Solid tumour');
+			($a) = DO_match_catype('Liquid cancer') if ( grep { /hematologic/i } @lhs_catypes_ancestors );
+			die $a if ! defined $DO_name{$a};
+			push @lhs_catypes_ancestors, ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
+		}
+		
 		my $lhs_catype = ( (scalar(@lhs_catypes) > 1) ? "(".join(" OR ", @lhs_catypes).")" : $lhs_catypes[0] );
 		my $lhs_catype_ancestors = ( (scalar(@lhs_catypes_ancestors) > 1) ? "(".join(" OR ", @lhs_catypes_ancestors).")" : $lhs_catypes_ancestors[0] );
-# 		my $lhs_catype_neg
+		my $lhs_catype_neg ;
+		
+		if ( scalar @lhs_catypes_neg ) {
+			for my $c (@lhs_catypes_neg) {
+				my ($catype_match) = DO_match_catype($c);
+				my $cstr = defined $catype_match ? join('; ', ( map { "NOT $_" } ( "catype:".$catype_match, "catype:".$DO_name{$catype_match}, "catype_name:$DO_name{$catype_match}" ) ) )  : "NOT catype:$catype_match";
+				$lhs_catype_neg = defined $lhs_catype_neg ? join("; ", $lhs_catype_neg, $cstr) : $cstr ;
+			}
+		}
 
 		
 		my $alterations_neg = '';
@@ -385,7 +471,9 @@ sub gen_rule_knowledge_base {
 				$lhs_alteration_pos = undef if $lhs_alteration_pos eq $lhs_alteration ;
 			};
 			
-			$lhs_alteration .= '; NOT no_negative_predictive_biomarkers' if scalar(@alterations) == scalar(grep { /^NOT / } @alterations);
+			my $f_lhs_alteration_is_neg = ( scalar(@alterations) == scalar(grep { /^NOT / } @alterations) );
+			
+			$lhs_alteration .= '; NOT no_negative_predictive_biomarkers' if $f_lhs_alteration_is_neg  ; 
 		
 	# 		my $rhs_catype = $tumour_type; # "catype:".$tumour_type;
 			
@@ -419,13 +507,13 @@ sub gen_rule_knowledge_base {
 						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) {
 							my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";
 							
-							push @rules, mkrule( [$lhs_alteration], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
+							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
 							
 							if ( defined $lhs_alteration_pos ) {
 								my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt)";
 								
 								push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
+									mkrule( [$lhs_alteration_pos, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
 							}
 							
 						} else {
@@ -433,9 +521,11 @@ sub gen_rule_knowledge_base {
 							
 							my $rhs_treatment_class_str_type_specific = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier_partial_match_catype, inferred from $rhs_catype)";
 
-							push @rules, mkrule( [$lhs_alteration, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
+							push @rules, mkrule( [$lhs_alteration, $lhs_catype, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
 							
-							push @rules, mkrule( [$lhs_alteration, "NOT ".$lhs_catype, $lhs_catype_ancestors], [ Facts::mk_fact_str( $rhs_treatment_class_str_type_specific, "INFERRED:treatment_class", @tags ) ] );
+							if ( ! $f_lhs_alteration_is_neg ) {
+								push @rules, mkrule( [$lhs_alteration, "NOT ".$lhs_catype, $lhs_catype_ancestors, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str_type_specific, "INFERRED:treatment_class", @tags ) ] );
+							}
 							
 							if ( defined $lhs_alteration_pos ) {
 								my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt)";
@@ -445,10 +535,12 @@ sub gen_rule_knowledge_base {
 								push @error_msg, "\e[1;31mUndefined tier $tier_partial_match_catype\e[0m\n" if ! exists $repurposing_retier_related_mutation{$tier_partial_match_catype};
 							
 								push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
+									mkrule( [$lhs_alteration_pos, $lhs_catype, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
 							
-								push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos, "NOT ".$lhs_catype, $lhs_catype_ancestors], [ Facts::mk_fact_str( $rhs_treatment_class_str_type_specific, "INFERRED:treatment_class", @tags ) ] );
+								if ( ! $f_lhs_alteration_is_neg ) {
+									push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
+										mkrule( [$lhs_alteration_pos, "NOT ".$lhs_catype, $lhs_catype_ancestors, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str_type_specific, "INFERRED:treatment_class", @tags ) ] );
+								}
 							}
 						}
 						
@@ -472,13 +564,13 @@ sub gen_rule_knowledge_base {
 							my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $tier, histotype agnostic)";
 						
 							
-							push @rules, mkrule( [$lhs_alteration], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
+							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
 							
 							if ( defined $lhs_alteration_pos ) {
 								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, histotype agnostic and from $ppalt )";
 								
 								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
+									mkrule( [$lhs_alteration_pos, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
 							}
 							
 						} else {
@@ -486,9 +578,11 @@ sub gen_rule_knowledge_base {
 							
 							my $rhs_treatment_str_type_specific = "$biomarker:treatment:$rx ($srckb LOE: $tier_partial_match_catype, inferred from $rhs_catype)";
 
-							push @rules, mkrule( [$lhs_alteration, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
+							push @rules, mkrule( [$lhs_alteration, $lhs_catype, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
 							
-							push @rules, mkrule( [$lhs_alteration, "NOT ".$lhs_catype, $lhs_catype_ancestors], [ Facts::mk_fact_str( $rhs_treatment_str_type_specific, "INFERRED:treatment", @tags ) ] );
+							if ( ! $f_lhs_alteration_is_neg ) {
+								push @rules, mkrule( [$lhs_alteration, "NOT ".$lhs_catype, $lhs_catype_ancestors, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str_type_specific, "INFERRED:treatment", @tags ) ] );
+							}
 							
 							if ( defined $lhs_alteration_pos ) {
 								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt )";
@@ -496,10 +590,12 @@ sub gen_rule_knowledge_base {
 								my $rhs_treatment_str_type_specific = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier_partial_match_catype}, inferred from $rhs_catype and $ppalt)";
 								
 								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos, $lhs_catype], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
-							
-								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos, "NOT ".$lhs_catype, $lhs_catype_ancestors], [ Facts::mk_fact_str( $rhs_treatment_str_type_specific, "INFERRED:treatment", @tags ) ] );
+									mkrule( [$lhs_alteration_pos, $lhs_catype, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
+									
+								if ( ! $f_lhs_alteration_is_neg ) {
+									push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
+										mkrule( [$lhs_alteration_pos, "NOT ".$lhs_catype, $lhs_catype_ancestors, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str_type_specific, "INFERRED:treatment", @tags ) ] );
+								}
 							}
 						}
 						# AUDIT:

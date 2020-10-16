@@ -67,6 +67,7 @@ id: POTTR:0001
 name: solid tumour
 def: "solid tumours"
 subset: DO_cancer_slim
+synonym: "Solid tumour"
 synonym: "advanced cancer" EXACT []
 synonym: "advanced solid tumour" EXACT []
 synonym: "pan cancer" EXACT []
@@ -79,21 +80,21 @@ def: "cancer of unknown primary"
 subset: DO_cancer_slim
 synonym: "carcinoma of unknown primary" EXACT []
 is_a: DOID:162 ! Neoplasm
-|, q|
+|, q|[Term]
 id: POTTR:1000
 name: Diffuse Intrinsic Pontine Glioma
 def: "Diffuse Intrinsic Pontine Glioma"
 subset: DO_cancer_slim
 synonym: "DIPG" EXACT []
 is_a: DOID:162 ! Neoplasm
-|, q|
+|, q|[Term]
 id: POTTR:1001
 name: triple-negative breast cancer
 def: "Triple-negative breast cancer"
 subset: DO_cancer_slim
 synonym: "TNBC" EXACT []
 is_a: DOID:1612 ! Breast cancer
-|, q|
+|, q|[Term]
 id: POTTR:1002
 name: GastroEsophageal Cancer
 def: "GastroEsophageal Cancer"
@@ -104,7 +105,7 @@ synonym: "Esophagogastric Cancers" EXACT[]
 synonym: "Gastroesophageal junction adenocarcinoma" EXACT[]
 synonym: "Gastroesophageal junction cancer" EXACT[]
 synonym: "Gastroesophageal junction carcinoma" EXACT[]
-|, q|
+|, q|[Term]
 id: POTTR:1003
 name: Chronic myelogenous leukaemia
 def: "Chronic Myelogenous Leukaemia"
@@ -112,24 +113,32 @@ subset: DO_cancer_slim
 synonym: "Chronic Myelogenous Leukaemia" EXACT[]
 synonym: "Chronic Myelogenous Leukemia" EXACT[]
 synonym: "CML" EXACT[]
-|, q|
+is_a: POTTR:1007 ! Liquid cancer
+|, q|[Term]
 id: POTTR:1004
 name: Acute lymphoblastic leukaemia
 def: "Acute Lymphoblastic Leukaemia"
 subset: DO_cancer_slim
 synonym: "Acute lymphoblastic leukemia" EXACT[]
-|, q|
+|, q|[Term]
 id: POTTR:1005
 name: Colon cancer
 def: "Colon Cancer"
 subset: DO_cancer_slim
 is_a: DOID:0080199 ! Colorectal carcinoma
-|, q|
+|, q|[Term]
 id: POTTR:1006
 name: Rectal cancer
 def: "Rectal Cancer"
 subset: DO_cancer_slim
 is_a: DOID:0080199 ! Colorectal carcinoma
+|, q|[Term]
+id: POTTR:1007
+name: Liquid cancer
+def: "Liquid cancer"
+synonym: "Liquid cancers"
+subset: DO_cancer_slim
+is_a: DOID:162 ! Neoplasm
 |
 );
 

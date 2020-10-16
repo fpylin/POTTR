@@ -389,6 +389,10 @@ sub extract_preferential_trials {
 # 		@matched_drug_classes    = map { exists $referred_drug_classes{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_classes ;
 		my @healthconditions   = split /;\s*/, ( Facts::unescape( $tags{'healthcondition'} // '' ) ); 
 		my @postcodes          = sort map { s/^\s*-\s*//; $_} split(/;\s*/, ( Facts::unescape( $tags{'postcode'} // '' ) )); 
+		
+		my %trial_match_criteria = map { $_ => 1 } ( $tags =~ /trial_match_criteria:(.+?)[;\]]/g );
+		my @trial_match_criteria = sort map { s/_/ /g; $_ } keys %trial_match_criteria ;
+		
 		my %row = (
 			'trial_id' => $trial_id,
 			'full_title' => $full_title,
@@ -405,6 +409,7 @@ sub extract_preferential_trials {
 			'matched_trial_drug_class_maturity' => $matched_trial_drug_class_maturity,
 			'matched_trial_combo_maturity' => $matched_trial_combo_maturity,
 			'matched_trial_combo_class_maturity' => $matched_trial_combo_class_maturity,
+			'trial_match_criteria' => \@trial_match_criteria,
 			'healthcondition' => \@healthconditions,
 			'postcodes' => \@postcodes,
 		);
@@ -808,7 +813,7 @@ sub gen_preferential_trial_report {
 
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", 
-		"Trial ID", "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", 
+		"Trial ID", "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria",
 		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode"
 		)."\n";
 
@@ -823,8 +828,9 @@ sub gen_preferential_trial_report {
 		@matched_drug_classes    = @matched_drug_classes ;
 		my $matched_drug_classes = join("; ", @matched_drug_classes);
 		
-		my $healthcondition   = join("; ", @{ $$row{'healthcondition'} } ); 
-		my $postcodes         = join("; ", @{ $$row{'postcodes'} });
+		my $healthcondition       = join("; ", @{ $$row{'healthcondition'} } ); 
+		my $postcodes             = join("; ", @{ $$row{'postcodes'} });
+		my $trial_match_criteria  = join("; ", @{ $$row{'trial_match_criteria'} });
 
 		$output .= join("\t", (
 				$cnt, 
@@ -835,6 +841,7 @@ sub gen_preferential_trial_report {
 				$$row{'matched_trial_drug_class_maturity'},
 				$$row{'matched_trial_combo_maturity'},
 				$$row{'matched_trial_combo_class_maturity'},
+				$trial_match_criteria,
 				$matched_drug_names,
 				$matched_drug_classes,
 				$healthcondition,
@@ -867,8 +874,9 @@ sub gen_preferential_trial_terminal {
 		@matched_drug_classes    = @matched_drug_classes ;
 		my $matched_drug_classes = join("; ", @matched_drug_classes);
 		
-		my $healthcondition   = join("; ", @{ $$row{'healthcondition'} } ); 
-		my $postcodes         = join("; ", @{ $$row{'postcodes'} });
+		my $healthcondition      = join("; ", @{ $$row{'healthcondition'} } ); 
+		my $postcodes            = join("; ", @{ $$row{'postcodes'} });
+		my $trial_match_criteria = join("; ", @{ $$row{'trial_match_criteria'} });
 
 		push @lines, join("\t", 'Rank',                       $cnt)."\n";
 		push @lines, join("\t", 'Trial ID',                   hl(37, $$row{'trial_id'}) )."\n";
@@ -881,6 +889,7 @@ sub gen_preferential_trial_terminal {
 		push @lines, join("\t", "Drug class maturity tier",   thl( $$row{'matched_trial_drug_class_maturity'} ) )."\n";
 		push @lines, join("\t", "Combo maturity tier",        thl( $$row{'matched_trial_combo_maturity'} ) )."\n";
 		push @lines, join("\t", "Combo class maturity tier",  thl( $$row{'matched_trial_combo_class_maturity'} ) )."\n";
+		push @lines, join("\t", "Trial match criteria",       $trial_match_criteria )."\n";
 		push @lines, join("\t", "Health conditions",          $healthcondition )."\n";
 		push @lines, join("\t", "Postcodes",                  $postcodes )."\n";
 		push @lines, join("\t", " " )."\n";
@@ -912,7 +921,8 @@ sub gen_HTML_preferential_trial_report {
 
 	my $output = "<h2>List of biomarker matched clinial trials registered in ANZCTR:</h2>\n";
 	$output .= "<table id=trial_list>\n";
-	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Trial ID",  "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
+	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Trial ID",  "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria",
+		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
 
 	my $cnt = 0;
 
@@ -925,8 +935,9 @@ sub gen_HTML_preferential_trial_report {
 		@matched_drug_classes    = map { exists $$row{'referred_drug_classes'}{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_classes ;
 		my $matched_drug_classes    = join("<br/>", @matched_drug_classes);
 		
-		my $healthcondition   = join(",<br/>", @{ $$row{'healthcondition'} } ); 
-		my $postcodes         = "<div style='column-count:2'>".join("<br/>\n", @{ $$row{'postcodes'} })."</div>\n";
+		my $healthcondition      = join(",<br/>", @{ $$row{'healthcondition'} } ); 
+		my $postcodes            = "<div style='column-count:2'>".join("<br/>\n", @{ $$row{'postcodes'} })."</div>\n";
+		my $trial_match_criteria = join("; ", @{ $$row{'trial_match_criteria'} });
 
 		my $oe = (($cnt % 2) ? 'e': 'o');
 		$output .= "<tr class=$oe>".join("", ( map {"<td>$_</td>"} (
@@ -938,6 +949,7 @@ sub gen_HTML_preferential_trial_report {
 				$$row{'matched_trial_drug_class_maturity'},
 				$$row{'matched_trial_combo_maturity'},
 				$$row{'matched_trial_combo_class_maturity'},
+				$trial_match_criteria ,
 				$matched_drug_names,
 				$matched_drug_classes,
 				$healthcondition,

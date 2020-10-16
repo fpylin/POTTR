@@ -1,6 +1,6 @@
 drug	drug_class
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
-Satoreotide Tetraxetan|177Lu-OPS201	177Lu-DOTA-radioconjugate
+Satoreotide Tetraxetan|177Lu-OPS201|177Lu-IPN01072	177Lu-DOTA-radioconjugate
 177Lu-PSMA	177Lu-PSMA-radioconjugate
 177Lu-edotreotide	177Lu-DOTA-radioconjugate
 2X-121|E-7449|E7449	PARP_inhibitor; TNKS_inhibitor
@@ -25,6 +25,7 @@ AL-2846|AL 2846|AL2846	MET_inhibitor
 ALPN-202	CD28_agonist; dual_PD-L1/CTLA-4_inhibitor
 ALRN-6924	MDM2_inhibitor
 AMG 160|AMG-160|AMG160	PSMA_bispecific_T-cell_engager
+AMG 256|AMG-256		anti-PD-1_x_IL21_mutein
 AMG 337|AMG337	MET_inhibitor
 AMG 404|AMG-404|AMG404	anti-PD-1_monoclonal_antibody
 AMG 509|AMG-509|AMG509	bispecific_STEAP1/CD3_antibody
@@ -198,7 +199,7 @@ Depatuxizumab|ABT-806|mAb-806	anti-EGFR_monoclonal_antibody
 Derazantinib|ARQ 087|ARQ-087	FGFR_inhibitor
 Dexamethasone|Cortisumman|Decadron|Dectancyl|Dekacort|Deltafluorene|Deronil|Desamethasone|Desameton|Dexa-Scheroson|Dexameth|Dexone|Dinormon|Fortecortin|Gammacorten|Hexadrol|Millicorten|Visumetazone|1-Dehydro-16alpha-methyl-9alpha-fluorohydrocortisone|16Alpha-methyl-9alpha-fluoro-delta1-hydrocortisone|16Alpha-methyl-9alpha-fluoroprednisolone|9Alpha-fluoro-16alpha-methylprednisolone|9alpha-Fluoro-16alpha- methylprednisolone|Aacidexam|Aknichthol Dexa|Alba-Dex|Alin|Amplidermis|Anemul mono|Auricularum|Auxiloson|Baycadron|Baycuten|Cortidexason|Decacort|Decadrol|Decalix|Decameth|Decasone R.p.|Dexa-Mamallet|Dexa-Rhinosan|Dexa-sine|Dexacortal|Dexacortin|Dexafarma|Dexafluorene|Dexalocal|Dexamecortin|Dexamonozon|Dexapos|Dexinoral|Fluoro-9alpha Methyl-16alpha Prednisolone|Fluorodelta|Lokalison-F|Loverine|Methylfluorprednisolone|Mymethasone|Orgadrone|Spersadex|TaperDex|ZoDex	glucocorticoid
 Dexrazoxane|ICRF-187|ADR-529	iron_chelator
-Dinaciclib|MK-7965|SCH 727965	CDK1_inhibitor; CDK2_inhibitor; CDK5_inhibitor; CDK9_inhibitor
+Dinaciclib|MK-7965|SCH 727965	CDK1/2/5/9_inhibitor
 Dinutuximab|Ch14.18|Ch 14.18UTC|Unituxin	anti-GD2_monoclonal_antibody
 Diphencyprone|DPCP|Diphenylcyclopropenone	topical_immune_response_modifier
 Docetaxel|Taxotere|Docecad|RP56976	taxane
@@ -239,7 +240,7 @@ FLX475|FLX 475|FLX-475	CCR4_inhibitor
 FN-1501|FN 1501|FN1501	CDK2/4/6/FLT3_inhibitor
 FOLFIRI	fluorouracil + irinotecan
 FOLFIRINOX	fluorouracil + oxaliplatin + irinotecan
-FOLFOX6	fluorouracil + oxaliplatin
+FOLFOX|FOLFOX6	fluorouracil + oxaliplatin
 FPT155|FPT 155|FPT-155	soluble_CD80_fusion_protein
 Fianlimab|REGN 3767|REGN3767|WHO 11182	anti-LAG3_monoclonal_antibody
 Filgrastim|G-CSF|Neupogen|Recombinant Methionyl Human Granulocyte Colony Stimulating Factor|Tevagrastim	granulocyte_colony_stimulating_factor
@@ -597,7 +598,7 @@ Vismodegib|GDC-0449|Erivedge	SMO_inhibitor,first_generation
 Vonlerolizumab|MOXR0916|Pogalizumab|RG 7888|RG-7888|RG7888|RO7021608	anti-OX40_agnostic_monoclonal_antibody
 Vorasidenib|AG 881|AG-881|AG881	IDH1/IDH2_mutant_selective_inhibitor
 Vorinostat|SAHA|Suberanilohydroxamic Acid|Zolinza|L-001079038|MSK-390|Suberoylanilide Hydroxamic Acid	HDAC_inhibitor
-XELOX	capecitabine; oxaliplatin
+CAPOX|XELOX	capecitabine + oxaliplatin
 XNW7201	PORCN_inhibitor
 Xentuzumab|BI 836845	anti-IGF_ligand_antibody
 XmAb24306|RO 7310729|RO-7310729|RO7310729|XmAb 24306|XmAb-24306	IL15/IL15R_Fc-fusion_protein
@@ -677,7 +678,13 @@ MG010	CRAF_inhibitor
 RMC-4630|SAR442720	SHP2_inhibitor
 SHP099	SHP2_inhibitor
 BGB659	RAF_inhibitor,type_2
-LY300912	RAF_inhibitor,type_2
+LY3009120	RAF_inhibitor,type_2
 MK2206	AKT_inhibitor
 TAK632	RAF_inhibitor,type_2
 Surufatinib|HMPL-012	VEGFR_inhibitor; FGFR1_inhibitor; CSF1R_inhibitor
+LY3405105	CDK7_inhibitor
+SNS-032	CDK2_inhibitor
+Apatinib	VEGF2_inhibitor
+Necitumumab	anti-EGFR_monoclonal_antibody
+PF-06804103	anti-ERBB2_antibody-drug_conjugate
+SBT6050	anti-ERBB2_antibody-drug_conjugate
