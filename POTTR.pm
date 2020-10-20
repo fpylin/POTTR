@@ -647,10 +647,11 @@ sub load_module_preferential_trial_prioritisation {
 		my $transitive_efficacy_tier = $transitive_efficacy_tiers[0];
 		my $transitive_class_efficacy_tier = $transitive_class_efficacy_tiers[0];
 		
-		my $trial_match_criteria_score = 
+		my $trial_match_criteria_score = 8 - (
 			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 4 : 0 ) +
 			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
-			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 1 : 0 ) ;
+			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 1 : 0 ) 
+			);
 		
 		push @new_tags, # Annotate the trial
 			"transitive_class_efficacy_tier:". ( $a{'transitive_class_efficacy'}  = $transitive_class_efficacy_tier ) ,

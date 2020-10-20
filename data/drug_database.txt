@@ -475,7 +475,7 @@ Quizartinib|AC-220|AC010220|AC220	FLT3_inhibitor; KIT_inhibitor
 REGN-4659|REGN 4659|REGN4659	anti-CTLA-4_monoclonal_antibody
 RO5045337|RG7112	MDM2_inhibitor
 RO-5045337|R7112|RO5045337	MDM2_inhibitor
-RO-6874281|RG 7461|RG-7461|RG7461|RO 6874281|RO6874281	IL-2_variant
+RO-6874281|RG 7461|RG-7461|RG7461|RO 6874281|RO6874281	anti-FAP/interleukin-2_fusion_protein
 RO6839921	MDM2_inhibitor
 RO6870810|RG 6146|RG6146|RO-6870810|TEN 010|TEN-010	BET_inhibitor
 RO7121661|RO 7121661|RO-7121661	bispecific_PD-1/TIM-3_antibody
@@ -688,3 +688,4 @@ Apatinib	VEGF2_inhibitor
 Necitumumab	anti-EGFR_monoclonal_antibody
 PF-06804103	anti-ERBB2_antibody-drug_conjugate
 SBT6050	anti-ERBB2_antibody-drug_conjugate
+mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeted_vaccine

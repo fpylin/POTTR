@@ -441,10 +441,8 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 	my @uniq_trials = sort keys %trial_db_by_trial_id;
 	my @trials_rules;
 
-	my $doid_catype_neoplasm = DOID::DO_match_catype_whole_word("Neoplasm")  ;
-	my $doid_catype_cancer = DOID::DO_match_catype_whole_word("Cancer")  ;
-	my $doid_catype_solid_tumour = DOID::DO_match_catype_whole_word("Solid tumour")  ;
-	my $doid_catype_liquid_cancer = DOID::DO_match_catype_whole_word("Liquid cancer")  ;
+	my @doid_catype_general = map { DOID::DO_match_catype_whole_word($_) } ("Neoplasms", "Cancer", "Adenocarcinoma", "Solid tumour", "Liquid cancer") ;
+	my $doid_catype_general = join( "|", @doid_catype_general );
 	
 	for my $trial_id (@uniq_trials) {
 		my $matched_drug_names   = $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
@@ -554,7 +552,7 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 		if ( scalar(@healthconditioncodes) ) {
 			my @tags = @trial_info ;
 			push @tags, "trial_match_criteria:cancer_type";
-			for my $hcc (grep { length and ! /(?:$doid_catype_solid_tumour|$doid_catype_liquid_cancer|$doid_catype_cancer|$doid_catype_neoplasm)/ } @healthconditioncodes) {
+			for my $hcc (grep { length and ! /(?:$doid_catype_general)/ } @healthconditioncodes) {
 				for my $eligibility_criteria_str (@eligibility_criteria_strs) {
 					push @trials_rules, mkrule( 
 						[ "catype:$hcc",  $eligibility_criteria_str ], 
