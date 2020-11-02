@@ -101,6 +101,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB2	Overexpression, amplification	Non-Small Cell Lung Cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01, no data available yet. Hypothesis generating	10.1200/JCO.2020.38.15_suppl.9504
 4	ERBB4	Oncogenic mutations	Non-small cell lung cancer; Melanoma	Lapatinib + Afatinib		29902295
 4	EZH2	Oncogenic mutation, A677G, Y641N, Y641C, Y641H, Y641S, Y641F, Y646, A687V	Non-Hodgkin Lymphoma	Tazemetostat		24563539
+4	FANCD2	Loss-of-function mutation, Oncogenic mutations	Non-Small Cell Lung Cancer	Veliparib	Cell line study only using FANCD2 knockout	25566506
 4	KRAS	Oncogenic mutation	Non-Small Cell Lung Cancer	SHP2 inhibitor		29808006
 4	KRAS	Oncogenic mutation	Non-Small Cell Lung Cancer	Trametinib	Phase II, ORR 12% but worse PFS than docetaxel	10.1200/jco.2013.31.15_suppl.8029
 4	KRAS	Oncogenic mutation	Non-Small Cell Lung Cancer	Trametinib + Ponatinib	Intrinsic MEK resistance by FGFR1 activation	27338794, NCT03704688

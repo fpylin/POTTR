@@ -56,6 +56,7 @@ sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <
 
 my $f_initiailised ;
 our %gene_feature_table;
+our %biomarker_synonyms;  
 
 #######################################################################
 sub interp_variants {
@@ -69,6 +70,8 @@ sub interp_variants {
 	if ( $biomarker_name =~ /\s/ ) {
 		$biomarker_name =~ s/\s+/_/g;
 		$biomarker_name = lc($biomarker_name);
+	} elsif ( exists $biomarker_synonyms{ uc($biomarker_name) } and ( $biomarker_synonyms{uc($biomarker_name)} ne uc($biomarker_name) ) ) {
+		$biomarker_name = $biomarker_synonyms{ uc($biomarker_name) } ;
 	}
 	
 	if ( $biomarker_spec =~ /^(?:high|low|proficient|deficient)$/i ) {
@@ -288,6 +291,21 @@ sub load_gene_feature_table {
 # 			$gene_feature_table{$gene}{$feature}{'end'} = $end;
 		}
 	}
+	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-synonym-file') ) {
+	}
+}
+
+#######################################################################
+sub load_biomarker_synonym_file {
+	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-synonym-file') ) {
+		for ( file($srcfile) ) { 
+			chomp ;
+			my ($a, @b) = split /\t/, $_; 
+			for my $m ($a, @b) { 
+				$biomarker_synonyms{ uc($m) } = $a;
+			}
+		}
+	}
 }
 
 #######################################################################
@@ -295,6 +313,7 @@ sub ON_DEMAND_INIT {
 	return if $f_initiailised ;
 	$f_initiailised = 1;
 	load_gene_feature_table;
+	load_biomarker_synonym_file ;
 }
 
 1;

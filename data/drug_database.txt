@@ -17,6 +17,7 @@ ABT-767	PARP_inhibitor
 ACT001	NFKB_inhibitor
 ADU-1604|ADU 1604|ADU1604	anti-CTLA-4_monoclonal_antibody
 ADU-S100|MIW815	STING_agonist
+ADG116	anti-CTLA-4_monoclonal_antibody
 AGEN-1181|AGEN 1181|AGEN1181	anti-CTLA-4_monoclonal_antibody
 AK104|AK 104|AK-104	bispecific_PD-1/CTLA-4_antibody
 AK105|AK 105|AK-105	anti-PD-1_monoclonal_antibody
@@ -196,7 +197,7 @@ Decitabine|Dacogen|5-Aza-2-deoxycytidine|5-Azadeoxycytidine|Deoxyazacytidine|Dez
 Denosumab|AMG 162|AMG-162|Prolia|TK-006|Xgeva	anti-RANK_L_monoclonal_antibody
 Depatuxizumab Mafodotin|ABT-414	anti-EGFR/PBD_antibody-drug_conjugate
 Depatuxizumab|ABT-806|mAb-806	anti-EGFR_monoclonal_antibody
-Derazantinib|ARQ 087|ARQ-087	FGFR_inhibitor
+Derazantinib|ARQ 087|ARQ-087	FGFR1/2/3_inhibitor
 Dexamethasone|Cortisumman|Decadron|Dectancyl|Dekacort|Deltafluorene|Deronil|Desamethasone|Desameton|Dexa-Scheroson|Dexameth|Dexone|Dinormon|Fortecortin|Gammacorten|Hexadrol|Millicorten|Visumetazone|1-Dehydro-16alpha-methyl-9alpha-fluorohydrocortisone|16Alpha-methyl-9alpha-fluoro-delta1-hydrocortisone|16Alpha-methyl-9alpha-fluoroprednisolone|9Alpha-fluoro-16alpha-methylprednisolone|9alpha-Fluoro-16alpha- methylprednisolone|Aacidexam|Aknichthol Dexa|Alba-Dex|Alin|Amplidermis|Anemul mono|Auricularum|Auxiloson|Baycadron|Baycuten|Cortidexason|Decacort|Decadrol|Decalix|Decameth|Decasone R.p.|Dexa-Mamallet|Dexa-Rhinosan|Dexa-sine|Dexacortal|Dexacortin|Dexafarma|Dexafluorene|Dexalocal|Dexamecortin|Dexamonozon|Dexapos|Dexinoral|Fluoro-9alpha Methyl-16alpha Prednisolone|Fluorodelta|Lokalison-F|Loverine|Methylfluorprednisolone|Mymethasone|Orgadrone|Spersadex|TaperDex|ZoDex	glucocorticoid
 Dexrazoxane|ICRF-187|ADR-529	iron_chelator
 Dinaciclib|MK-7965|SCH 727965	CDK1/2/5/9_inhibitor
@@ -689,3 +690,4 @@ Necitumumab	anti-EGFR_monoclonal_antibody
 PF-06804103	anti-ERBB2_antibody-drug_conjugate
 SBT6050	anti-ERBB2_antibody-drug_conjugate
 mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeted_vaccine
+GS493	SHP2_inhibitor

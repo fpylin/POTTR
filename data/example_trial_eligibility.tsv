@@ -71,7 +71,6 @@ NCT03639714	catype:Non-Small Cell Lung Cancer
 NCT03639714	catype:Urothelial Carcinoma
 NCT03906331	RET:fusion
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
-NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C)
 NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03994393	EGFR:oncogenic_mutation
 NCT03994393	EGFR:oncogenic_mutation
@@ -86,3 +85,43 @@ NCT04294810	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04300244	catype:Mesothelioma
 NCT04434482	NOT catype:central nervous system cancer
 NCT04449874	KRAS:G12C
+NCT03454451	catype:Non-small cell lung cancer
+NCT03454451	catype:Renal cell carcinoma
+NCT03454451	catype:Triple-negative breast cancer
+NCT03454451	catype:Colorectal cancer; microsatellite_instability:high
+NCT03454451	catype:Urothelial carcinoma
+NCT03454451	catype:Cervical cancer
+NCT03454451	catype:Uterine cancer
+NCT03454451	catype:Sarcoma
+NCT03454451	catype:Endometrial cancer
+NCT03454451	catype:Prostate cancer
+NCT03639714	catype:Non-small cell lung cancer; NOT EGFR:alteration; NOT ALK:alteration; NOT ROS1:alteration; NOT RET:alteration; NOT NTRK1:alteration; NOT NTRK2:alteration; NOT NTRK3:alteration
+NCT03639714	catype:Colorectal cancer; NOT microsatellite_instability:high; NOT BRAF:V600E
+NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Colorectal cancer; NOT microsatellite_instability:high
+NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Non-small cell lung cancer
+NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Pancreatic cancer
+NCT03549000	catype:Non-small Cell Lung Cancer
+NCT03549000	catype:Triple-Negative Breast Cancer
+NCT03549000	catype:Pancreatic Cancer
+NCT03549000	catype:Colorectal Cancer; NOT microsatellite_instability:high
+NCT03549000	catype:Ovarian Cancer
+NCT03549000	catype:Renal Cell Carcinoma
+NCT03549000	catype:Prostate Cancer
+NCT03549000	catype:Non-small Cell Lung Carcinoma
+NCT03549000	catype:Head and Neck Squamous Cell Carcinoma
+NCT03549000	catype:Oesophageal cancer; catype:Squamous Cell Carcinoma
+NCT03549000	catype:Gastrointestinal Stromal Tumors
+NCT03549000	catype:Colorectal Cancer
+NCT03212404	catype:Non-Small-Cell Lung Cancer
+NCT03212404	catype:Small-Cell Lung Cancer
+NCT03212404	catype:Mesothelioma
+NCT03212404	catype:Head and Neck Cancer
+NCT03212404	catype:Melanoma
+NCT03212404	catype:Merkel Cell Carcinoma
+NCT03212404	catype:Renal Cell Carcinoma
+NCT03212404	catype:Urothelial Carcinoma
+NCT03212404	catype:Classical Hodgkin Lymphoma
+NCT03212404	catype:Cutaneous Squamous Cell Carcinoma
+NCT03212404	catype:Non Hodgkin Lymphoma
+NCT03212404	catype:Endometrial Cancer
+NCT03212404	catype:Colorectal Cancer; (microsatellite_instability:high OR mismatch_repair:deficient)

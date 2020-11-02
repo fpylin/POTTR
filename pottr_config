@@ -41,6 +41,17 @@ cache_dir =  data
 
 disease-ontology-file = doid.obo
 
+[Biomarker]
+
+##############################################################################
+# Biomarker synonyms  [OPTIONAL] - 
+# File format
+# - biomarker_preferred_term <TAB> preferred_term_1 <TAB> preferred_term_2 ...
+##############################################################################
+
+biomarker-synonym-file = biomarker_synonyms.txt
+
+
 ##############################################################################
 # VARIANT FEATURE FILE [OPTIONAL] - a database for annotating gene features 
 # that are clinically relevant to decision making
