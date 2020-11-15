@@ -34,7 +34,7 @@ AMG 596|AMG-596|AMG596	anti-EGFRvIII/CD3_BiTE_antibody
 AMG 757|AMG-757|AMG757	bispecific_T_cell_engager_targeting_DLL3
 AMG 820	anti-CSF1_monoclonal_antibody
 AMG-228|AMG 228|AMG228	anti-GITR_monoclonal_antibody
-AMG-510|AMG 510|AMG510	KRAS_G12C_inhibitor
+Sotorasib|AMG-510|AMG 510|AMG510	KRAS_G12C_inhibitor
 APG-115|APG 115	p53-HDM2_interaction_inhibitor
 APG-1252|APG 1252|APG1252	BCL2_inhibitor
 APG-1387|APG 1387|APG1387|SM-1387	IAP_inhibitor; SMAC_mimetic
@@ -691,3 +691,9 @@ PF-06804103	anti-ERBB2_antibody-drug_conjugate
 SBT6050	anti-ERBB2_antibody-drug_conjugate
 mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeted_vaccine
 GS493	SHP2_inhibitor
+TPX0022|TPX-0022	MET/SRC/CSF1R_inhibitor
+MRTX849|Adagrasib	KRAS_G12C_inhibitor
+Fadraciclib|CYC065	CDK2/CDK9_inhibitor
+Seribantumab|MM-121	anti-ERBB3_monoclonal_antibody
+CH5126766|VS-6766|RO5126766	RAF/MEK_inhibitor
+tavokinogene telseplasmid	DNA_plasmid_encoding_IL-12

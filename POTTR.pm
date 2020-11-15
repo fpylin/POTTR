@@ -329,6 +329,7 @@ sub load_module_variant_evidence_grading {
 		my %tier_retval = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
 		my %tier_TSG = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
 		my %tier_TSG_by_gene = ();
+		my %tier_drug_class = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
 
 		sub comp_max_tier_and_setvar(\%$$$) {
 			my $var = $_[0];
@@ -372,9 +373,12 @@ sub load_module_variant_evidence_grading {
 					# Reverse resistance/sensitivity ranking when encountering a true tumour suppressor gene, arranged by each gene
 # 					print STDERR  "A R $type, $biomarker, $therapy, $tier, $fact\n";
 					comp_max_tier_and_setvar(%{ $tier_TSG_by_gene{$biomarker} }, $tier, $score, $biomarker) ;
+# 					comp_max_tier_and_setvar(%{ $tier_TSG_by_gene{$biomarker} }, $tier, $score + ( ( ($type =~ /class/ ) && $is_resistance_tier) ? 1000 : 0 ), $biomarker) ;
 				} else { 
 # 					print STDERR  "A S $type, $biomarker, $therapy, $tier, $fact\n";
 					comp_max_tier_and_setvar(%tier_retval, $tier, $score, $biomarker) ;
+					# If there are a drug class with different sensitivity/resistance profile, sensitivity > resistance;
+# 					comp_max_tier_and_setvar(%tier_retval, $tier, $score + ( ( ($type =~ /class/ ) && $is_resistance_tier) ? 1000 : 0 ) , $biomarker) ; 
 				}
 			}
 		}

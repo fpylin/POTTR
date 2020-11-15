@@ -343,3 +343,5 @@ virus-based_therapy	oncolytic_Coxsackie_virus,ICAM_overexpressing
 virus-based_therapy	oncolytic_HSV_virus
 virus-based_therapy	replication-competent_oncolytic_adenovirus
 virus-based_therapy	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
+RAF_inhibitor	RAF/MEK_inhibitor
+MEK_inhibitor	RAF/MEK_inhibitor
