@@ -169,7 +169,7 @@ my %other_biomarkers = (
 	'AURKA'   => 'TSG',
 	'BCL2L1'  => 'oncogene',    'BCL2L11'=> 'TSG',      'BRD2'   => 'TSG',       'BRDT'   => 'TSG', 
 	'CD20'    => 'Other',       'CHEK1'  => 'TSG',      'CEACAM5' => 'Other',    'CD33'   => 'Other',  'CD38' => 'Other',  'CD123' => 'Other',  'CD19' => 'Other', 'CD30' => 'Other',  'CXCL13' => 'Other',
-	'ERCC1'   => 'TSG', 
+	'EMSY'    => 'oncogene',    'ERRFI1'  => 'TSG',     'ERCC1'   => 'TSG', 
 	'FANCI'   => 'TSG',         'FANCM'   => 'TSG',     'FGF19'   => 'oncogene', 'FOLR' => 'Other', 'FRS2' => 'oncogene',
 	'GLI2'    => 'TSG',
 	'HGF'     => 'oncogene',    

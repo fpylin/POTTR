@@ -37,26 +37,18 @@ NCT03358875	NOT_RECRUITING
 NCT03430063	NOT_RECRUITING
 NCT03454451	catype:Bladder Cancer
 NCT03454451	catype:Cervical Cancer
-NCT03454451	catype:Cervical cancer
-NCT03454451	catype:Colorectal Cancer
 NCT03454451	catype:Colorectal cancer; microsatellite_instability:high
-NCT03454451	catype:Endometrial Cancer
-NCT03454451	catype:Endometrial cancer
 NCT03454451	catype:Endometrial cancer
 NCT03454451	catype:Non-Small Cell Lung Cancer
 NCT03454451	catype:Non-hodgkin Lymphoma
-NCT03454451	catype:Non-small cell lung cancer
 NCT03454451	catype:Ovarian Cancer
 NCT03454451	catype:Pancreatic Cancer
 NCT03454451	catype:Prostate Cancer
-NCT03454451	catype:Prostate cancer
 NCT03454451	catype:Renal Cell Cancer
 NCT03454451	catype:Renal cell carcinoma
 NCT03454451	catype:Sarcoma
-NCT03454451	catype:Sarcoma
 NCT03454451	catype:Squamous Cell Carcinoma of the Head and Neck
 NCT03454451	catype:Triple-Negative Breast Cancer
-NCT03454451	catype:Triple-negative breast cancer
 NCT03454451	catype:Urothelial carcinoma
 NCT03473925	NOT_RECRUITING
 NCT03497767	EGFR:oncogenic_mutation
@@ -65,10 +57,10 @@ NCT03539536	MET:alteration; EGFR:oncogenic_mutation; catype:Non-small cell lung 
 NCT03629756	NOT_RECRUITING
 NCT03631199	NOT_RECRUITING
 NCT03631784	NOT_RECRUITING
-NCT03639714	catype:Colorectal Cancer
-NCT03639714	catype:Gastroesophageal Adenocarcinoma
-NCT03639714	catype:Non-Small Cell Lung Cancer
-NCT03639714	catype:Urothelial Carcinoma
+NCT03639714	NOT_RECRUITING; catype:Colorectal Cancer
+NCT03639714	NOT_RECRUITING; catype:Gastroesophageal Adenocarcinoma
+NCT03639714	NOT_RECRUITING; catype:Non-Small Cell Lung Cancer
+NCT03639714	NOT_RECRUITING; catype:Urothelial Carcinoma
 NCT03906331	RET:fusion
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
 NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
@@ -77,7 +69,7 @@ NCT03994393	EGFR:oncogenic_mutation
 NCT04035486	EGFR:oncogenic_mutation
 NCT04129502	(ERBB2:exon_20_insertion OR EGFR:exon_20_insertion)
 NCT04139317	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
-NCT04165031	KRAS:G12C
+NCT04165031	NOT_RECRUITING; KRAS:G12C
 NCT04194944	RET:fusion
 NCT04248829	EGFR:oncogenic_mutation
 NCT04282018	(catype:liquid cancer OR catype:Non-small cell lung cancer OR catype:small cell lung cancer OR catype:head and neck squamous cell cancer OR catype:hepatocellular carcinoma OR catype:gastric cancer OR catype:gastroesophageal junction carcinoma OR catype:nasopharyngeal carcinoma OR catype:renal cell carcinoma OR catype:cervical cancer OR catype:triple-negative breast cancer OR catype:ovarian cancer OR catype:endometrial carcinoma OR: catype:esophageal cancer OR catype:melanoma OR catype:urothelial carcinoma OR microsatellite_instability:High OR mismatch_repair:deficient)
@@ -100,18 +92,18 @@ NCT03639714	catype:Colorectal cancer; NOT microsatellite_instability:high; NOT B
 NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Colorectal cancer; NOT microsatellite_instability:high
 NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Non-small cell lung cancer
 NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Pancreatic cancer
-NCT03549000	catype:Non-small Cell Lung Cancer
-NCT03549000	catype:Triple-Negative Breast Cancer
-NCT03549000	catype:Pancreatic Cancer
-NCT03549000	catype:Colorectal Cancer; NOT microsatellite_instability:high
-NCT03549000	catype:Ovarian Cancer
-NCT03549000	catype:Renal Cell Carcinoma
-NCT03549000	catype:Prostate Cancer
-NCT03549000	catype:Non-small Cell Lung Carcinoma
-NCT03549000	catype:Head and Neck Squamous Cell Carcinoma
-NCT03549000	catype:Oesophageal cancer; catype:Squamous Cell Carcinoma
-NCT03549000	catype:Gastrointestinal Stromal Tumors
-NCT03549000	catype:Colorectal Cancer
+NCT03549000	NOT_RECRUITING; catype:Non-small Cell Lung Cancer
+NCT03549000	NOT_RECRUITING; catype:Triple-Negative Breast Cancer
+NCT03549000	NOT_RECRUITING; catype:Pancreatic Cancer
+NCT03549000	NOT_RECRUITING; catype:Colorectal Cancer; NOT microsatellite_instability:high
+NCT03549000	NOT_RECRUITING; catype:Ovarian Cancer
+NCT03549000	NOT_RECRUITING; catype:Renal Cell Carcinoma
+NCT03549000	NOT_RECRUITING; catype:Prostate Cancer
+NCT03549000	NOT_RECRUITING; catype:Non-small Cell Lung Carcinoma
+NCT03549000	NOT_RECRUITING; catype:Head and Neck Squamous Cell Carcinoma
+NCT03549000	NOT_RECRUITING; catype:Oesophageal cancer; catype:Squamous Cell Carcinoma
+NCT03549000	NOT_RECRUITING; catype:Gastrointestinal Stromal Tumors
+NCT03549000	NOT_RECRUITING; catype:Colorectal Cancer
 NCT03212404	catype:Non-Small-Cell Lung Cancer
 NCT03212404	catype:Small-Cell Lung Cancer
 NCT03212404	catype:Mesothelioma

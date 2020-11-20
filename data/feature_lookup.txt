@@ -23,6 +23,14 @@ KIT	c_helix	631	647	10.1371/journal.pcbi.1002661
 KIT	activation_loop	810	835	10.1371/journal.pcbi.1002661
 MET	exon_14_splicing	c.3028	c.3028+2
 MET	exon_14_splicing	c.2888-30	c.2888
+RET	cadherin_like_domain_1	28	156	32083997
+RET	cadherin_like_domain_2	166	271	32083997
+RET	cadherin_like_domain_3	272	387	32083997
+RET	cadherin_like_domain_4	401	515	32083997
+RET	cysteine-rich_domain	516	635	32083997
+RET	transmembrane_domain	636	656	32083997
+RET	juxtamembrane_domain	657	723	32083997
+RET	kinase_domain	724	1016	32083997
 TP53	dna_binding_domain	94	292	PMC3176915
 ABL1	exon_1	1	46
 ABL1	exon_2	47	104

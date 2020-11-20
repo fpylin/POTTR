@@ -181,3 +181,8 @@ R2	ROS1	L1951R, L2026M, G2032R, D2033N	Non-Small Cell Lung Cancer	Brigatinib		26
 R2	ROS1	L2026M, G2032R	Non-Small Cell Lung Cancer	AZD3463		26372962, 31395437
 R2	ROS1	L2026M, G2032R, D2033N	Non-Small Cell Lung Cancer	Entrectinib		26372962, 31395437
 R2	STK11+KRAS	STK11:Oncogenic mutations AND KRAS:Oncogenic mutations	Non-Small Cell Lung Cancer	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Pre-clinical study	29773717
+3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	LURET. Single-arm phase 2. ORR 47%. PFS 4.7mo	27825636
+3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	Single-arm phase 2. ORR 18%. PFS 4.5mo	27803005
+3	RET	Fusions	Non-Small Cell Lung Cancer	Lenvatinib	Single-arm phase 2. ORR 16%. PFS 7.3mo	31710864
+R2	RET	KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
+4	RET	RET fusions and NOT KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864

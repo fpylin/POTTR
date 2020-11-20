@@ -5,7 +5,7 @@ Satoreotide Tetraxetan|177Lu-OPS201|177Lu-IPN01072	177Lu-DOTA-radioconjugate
 177Lu-edotreotide	177Lu-DOTA-radioconjugate
 2X-121|E-7449|E7449	PARP_inhibitor; TNKS_inhibitor
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
-AB122|AB 122|AB-122|GLS 010|GLS-010|GLS010	anti-PD-1_monoclonal_antibody
+Zimberelimab|AB122|AB 122|AB-122|GLS 010|GLS-010|GLS010	anti-PD-1_monoclonal_antibody
 AB154|AB 154|AB-154	anti-TIGIT_monoclonal_antibody
 AB928|AB 928|AB-928	adenosine_A2aR_and_A2bR_antagonist
 ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibody
@@ -63,7 +63,7 @@ Afatinib|BIBW 2992|BIBW2992	EGFR_inhibitor,second_generation
 Aldesleukin|Proleukin|125-L-Serine-2-133-interleukin 2|Recombinant Human IL-2|Recombinant Human Interleukin-2|r-serHuIL-2	IL-2_variant
 Alectinib|Alecensa|AF-802|AF802|CH5424802|RG7853|RO5424802	ALK_inhibitor,second_generation
 Alemtuzumab|Anti-CD52 Monoclonal Antibody|Campath|LDP-03|Lemtrada	anti-CD52_monoclonal_antibody
-Alpelisib|BYL719|Piqray	PI3K_inhibitor
+Alpelisib|BYL719|Piqray	PI3K_inhibitor; PI3K_alpha_inhibitor
 Amsacrine|Amsidine|AMSA|Acridinyl Anisidide|Amekrin|Amsidyl|CI-880|Lamasine|SN 11841|SN-11841|SN-21429	alkylating_agent
 Anakinumab	anti-IL-1beta_antibody
 Anamorelin|RC-1291	Growth_hormone_secretagogue_receptor_agonist
@@ -128,7 +128,7 @@ Bozitinib|APL-101|APL101|CBI-3103|CBT-101|PLB-1001|PLB1001	MET_inhibitor
 Brentuximab Vedotin|Adcetris|SGN-35|cAC10-vcMMAE	anti-CD30_antibody-drug_conjugate
 Brigatinib|AP 26113|AP-26113|AP26113|Alunbrig	ROS1_inhibitor; ALK_inhibitor,second_generation
 Budigalimab|ABBV 181|ABBV-181|ABBV181	anti-PD-1_monoclonal_antibody
-Buparlisib|BKM120	PI3K_alpha_inhibitor
+Buparlisib|BKM120	pan-PI3K_inhibitor; PI3K_alpha_inhibitor
 Busulfan|Misulban|Myeloleukon|Myelosan|Mylecytan|Myleran|1,4-Bitanediol Dimethanesulfonate Esters|1,4-Butanediol Dimethylsulfonate|BUS|CB 2041|CB-2041|GT 41|GT-41|Glyzophrol|Joacamine|Methanesulfonic Acid Tetramethylene Ester|Methanesulfonic acid, tetramethylene ester|Mielucin|Misulfan|Mitosan|Myeleukon|Sulfabutin|WR-19508	alkylating_agent
 Bzacitidine	DNA_methyltransferase_inhibitor; antimetabolite
 CAVATAK	virus-based_therapy
@@ -173,7 +173,7 @@ Cisplatin|Platiblastin|Platinol|Abiplatin|Blastolem|Briplatin|Cis-platinous Diam
 Cladribine|2-Chloro-2-Deoxyadenosine|2-Chlorodeoxyadenosine|CdA|Cladribina|Leustat|RWJ-26251	antimetabolite
 Cobimetinib|Cotellic|GDC-0973|XL518	MEK_inhibitor
 Complete Freund’s Adjuvant	immunopotentiator
-Copanlisib|BAY 80-6946	PI3K_alpha/PI3K_delta_inhibitor
+Copanlisib|BAY 80-6946	pan-PI3K_inhibitor; PI3K_alpha/PI3K_delta_inhibitor
 Cosibelimab|CK 301|CK-301	anti-PD-L1_monoclonal_antibody
 Coxsackievirus A21|CVA21	oncolytic_Coxsackie_virus,ICAM_overexpressing
 Crenolanib|CP-868,596|CP-868596	FLT3_inhibitor; PDGFRA_inhibitor; PDGFRB_inhibitor
@@ -638,6 +638,7 @@ CN1	unknown_drug_class
 QBS10072S	unknown_drug_class,BBB-permeable_chemotherapy
 IMU-201	B_cell_immunotherapy
 Vistusertib|AZD2014	MTORC1/MTORC2_inhibitor
+AZD8055	MTORC1/MTORC2_inhibitor
 Amatuximab	anti-MSLN_monoclonal_antibody
 Blinatumomab	anti-CD19/CD3_BiTE_antibody
 Fedratinib	JAK2-selective_inhibitor
@@ -697,3 +698,16 @@ Fadraciclib|CYC065	CDK2/CDK9_inhibitor
 Seribantumab|MM-121	anti-ERBB3_monoclonal_antibody
 CH5126766|VS-6766|RO5126766	RAF/MEK_inhibitor
 tavokinogene telseplasmid	DNA_plasmid_encoding_IL-12
+ALKS 4230|ALKS4230	IL-2_fusion_protein
+Gedatolisib	pan-PI3K/MTORC1/MTORC2_inhibitor
+ASN003	PI3K_alpha_inhibitor
+IPI-549	PI3K_gamma_inhibitor
+Idelalisib	PI3K_delta_inhibitor
+Duvelisib	PI3K_delta_inhibitor
+AMG319	PI3K_delta_inhibitor
+TPX0046|TPX-0046	RET/SRC_inhibitor; RET_inhibitor
+Agerafenib|RXDX-105|RXDX105	BRAF_inhibitor; BRAF_V600E_inhibitor; RET_inhibitor
+Pictilisib	pan-PI3K_inhibitor
+RMC-4550	SHP2_inhibitor
+eFT508	MNK_inhibitor
+II-B08	PTP_inhibitor
