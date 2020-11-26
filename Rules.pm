@@ -85,7 +85,6 @@
 use strict;
 use warnings;
 
-
 { # class / package for managing facts
 package Facts;
 
@@ -337,7 +336,6 @@ sub debug_print {
 	$self->{'debug_output'} .= $debug_output ;
 }
 
-
 sub index_rules { # Rules::index_rules - index the rules by lhs patterns
 	my $self = shift;
 	for my $i ( 0 .. $#{ $self->{'rules'} } ) {
@@ -346,7 +344,6 @@ sub index_rules { # Rules::index_rules - index the rules by lhs patterns
 			my $lhse = $self->{'rules'}[$i]{'lhs'}[$j];
 			next if $lhse_neg != 0 ;
 			$self->{'rule_index'}{$lhse}{$i} = 1;
-			
 # 			print "\@ $lhse <= [$i] ".&rule_to_string( $self->{'rules'}[$i] )." \n";
 		}
 	}
@@ -474,17 +471,31 @@ sub match_rule_lhs {
 	my $rule = shift;
 	my @lhs = @{ $$rule{'lhs'} };
 	my @lhs_neg = @{ $$rule{'lhs_neg'} };
-	my @lhs_matched = map { 
-			my $f = $lhs[$_];
-			my $f_has_fact = $facts->has_fact($f);
-			( ($lhs_neg[$_] != 0) ? # XOR problem: 
-				( $f_has_fact ? 0 : 1 ) :
-				( $f_has_fact ? 1 : 0 ) )
-		} (0..$#lhs);
+	my @matched_cons; # matched constraints
+	my @unmatched_cons; # unmatched constraints
+	my @lhs_matched ;
+	for my $i (0..$#lhs){ 
+		my $lhs_cons = $lhs[$i]; # LHS constraint
+		my $f_has_fact = $facts->has_fact($lhs_cons) ;
+		my $tf = ( ($lhs_neg[$i] != 0) ? # Handling negation: treating it as an XOR problem.
+			( $f_has_fact ? 0 : 1 ) :
+			( $f_has_fact ? 1 : 0 ) );
+		$lhs_matched[$i] = $tf;
+		if ($tf) {
+			push @matched_cons, $lhs_cons 
+		} else {
+			push @unmatched_cons, $lhs_cons 
+		}
+	}
+	my %constraints = (
+		'matched' => \@matched_cons,
+		'unmatched' => \@unmatched_cons
+	);
+	
 	my $n_lhs_matched = () = grep { $_ } @lhs_matched ;
 	my $n_lhs = scalar(@lhs);
 	my $f_matched = ( $n_lhs == $n_lhs_matched );
-	return $f_matched; # ($n_lhs_matched, $n_lhs);
+	return $f_matched, \%constraints ; # ($n_lhs_matched, $n_lhs);
 }
 
 
@@ -503,6 +514,8 @@ sub run { # Rules::run - the main inference engine.
 	
 	my %dyn_rule_facts_matched;
 	my @dyn_ruleset = keys %{ $self->{'dyn_rules'} }; # dynamic rule sets;
+		
+	my %visited_rules;
 		
 	do	{
 		++$iter;
@@ -533,16 +546,27 @@ sub run { # Rules::run - the main inference engine.
 		}
 		goto TO_NEXT_CYCLE if $n_new > 0;
 
-		### Now run the static rule sets by rule priority
+		### Now run the static rules clustered by the rule priorities
 		my %static_ruleset_by_prio = $self->retrieve_rules_by_prio( $facts->get_facts_list() );
 		
 		for my $prio ( sort {$a <=> $b} keys %static_ruleset_by_prio ) {
 			for my $rule ( @{ $static_ruleset_by_prio{$prio} } ) { 
-				if ( $self->match_rule_lhs($facts, $rule) ) {
-					my $n_lhs = scalar @{ $$rule{'lhs'} };
-					my $n_new_rule = $self->fire_rule($facts, $rule);
-					$self->debug_print( ($n_new_rule ? 33 : 34) , "   ".join("\t", $n_lhs, rule_to_string($rule)) ) ;
-					$n_new += $n_new_rule ;
+				my ( $f_match, $constraints ) = $self->match_rule_lhs($facts, $rule);
+				
+				if ( $f_match ) {
+					my $match_id = join( "|", $rule->{'order'}, @{ $$constraints{'matched'} } );
+# 					$self->debug_print(35, "   visited = ".($visited_rules{$match_id}//0)." mid = ".$match_id )  ;
+
+					if (! exists $visited_rules{$match_id} ) {
+						my $n_lhs = scalar @{ $$rule{'lhs'} };
+						my $n_new_rule = $self->fire_rule($facts, $rule);
+						$self->debug_print( ($n_new_rule ? 33 : 34) , "   ".join("\t", $n_lhs, rule_to_string($rule)) ) ;
+						$n_new += $n_new_rule ;
+						$visited_rules{$match_id} = 1;
+					}
+				} else {
+# 					$self->debug_print( 30, "   ".join("\t", join("/", scalar( @{ $$constraints{'matched'} } ), scalar( @{ $$constraints{'unmatched'} } )), rule_to_string($rule)) ) 
+# 						if scalar( @{ $$constraints{'unmatched'} } ) == 1;
 				}
 			}
 			last if $n_new > 0;
@@ -625,7 +649,7 @@ sub load { # Load if-then rules
 			$self->{'rules_str'}{$rule_str}++;
 		}
 	}
-
+	
 	my $n_rules = scalar @rules_spec;
 	$self->debug_print(37, "Added $n_rules rules.");
 	push @{ $self->{'rules'} }, @rules_spec;

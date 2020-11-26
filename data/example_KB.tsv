@@ -61,6 +61,9 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	RET	Fusions	Non-Small Cell Lung Cancer	Cabozantinib	Not TGA approved. Single-arm phase 2. ORR 28%	27825636
 3	RET	Fusions	Non-Small Cell Lung Cancer	Pralsetinib	Not TGA approved. ARROW	10.1200/JCO.2019.37.15_suppl.9008
 3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	Not TGA approved. ORR 18%. OncoKB LOE 2	27803005
+3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	LURET. Single-arm phase 2. ORR 47%. PFS 4.7mo	27825636
+3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	Single-arm phase 2. ORR 18%. PFS 4.5mo	27803005
+3	RET	Fusions	Non-Small Cell Lung Cancer	Lenvatinib	Single-arm phase 2. ORR 16%. PFS 7.3mo	31710864
 3	ROS1	Fusion, G2032R	Non-Small Cell Lung Cancer	Repotrectinib	Exceptional Phase 1 activities (ORR 90%)	10.1200/JCO.2019.37.15_suppl.9011
 3	ROS1	Fusions	Non-Small Cell Lung Cancer	Ceritinib	Positive phase 2 trial.	28520527
 3	Tumour Mutational Burden	High	Non-small cell lung cancer	Durvalumab + Tremelimumab	MYSTIC trial	32271377
@@ -114,6 +117,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MET+EGFR	MET:Alteration and EGFR:Oncogenic mutations	Non-Small Cell Lung Cancer	Amivantamab		10.1200/JCO.2019.37.15_suppl.9009
 4	NOTCH3	Overexpression	Non-small cell lung cancer	Gamma secretase inhibitor	Pre-clinical evidence	17804716
 4	RET	Fusions	Non-Small Cell Lung Cancer	Cabozantinib	Not TGA approved. Case reports only	23533264, 30653139
+4	RET	RET fusions and NOT KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
 4	ROS1	Fusions	Non-Small Cell Lung Cancer	AZD3463		26372962
 4	ROS1	Fusions	Non-Small Cell Lung Cancer	Brigatinib	Not TGA approved	10.1200/PO.18.00267, 10.1158/1538-7445.AM2013-5655
 4	ROS1	Fusions	Non-Small Cell Lung Cancer	Cabozantinib		32103985, NCT01639508
@@ -172,6 +176,7 @@ R2	MET	L1195V, Y1230, D1228N, D1228, D1246, Y1248, G1163	Non-Small Cell Lung Can
 R2	NRG1	Overexpression	Non-Small Cell Lung Cancer	Seribantumab + Docetaxel	No PFS improvement in EGFR wt NSCLC	10.1200/JCO.2019.37.15_suppl.9036
 R2	PIK3CA	Oncogenic mutation	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	RET	Fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
+R2	RET	KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
 R2	ROS1	E1395G, L1947R, G1971E, S1986Y, S1986F, L2026M, G2032R, D2033N, S2060G, V2098U, L2155S	Non-Small Cell Lung Cancer	Crizotinib		26372962, 31395437
 R2	ROS1	F2004C, F2075V, D2113G	Non-Small Cell Lung Cancer	Cabozantinib		26372962, 31395437, 25351743
 R2	ROS1	G2032R	Non-Small Cell Lung Cancer	Lorlatinib		26372962, 31395437
@@ -181,8 +186,3 @@ R2	ROS1	L1951R, L2026M, G2032R, D2033N	Non-Small Cell Lung Cancer	Brigatinib		26
 R2	ROS1	L2026M, G2032R	Non-Small Cell Lung Cancer	AZD3463		26372962, 31395437
 R2	ROS1	L2026M, G2032R, D2033N	Non-Small Cell Lung Cancer	Entrectinib		26372962, 31395437
 R2	STK11+KRAS	STK11:Oncogenic mutations AND KRAS:Oncogenic mutations	Non-Small Cell Lung Cancer	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Pre-clinical study	29773717
-3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	LURET. Single-arm phase 2. ORR 47%. PFS 4.7mo	27825636
-3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	Single-arm phase 2. ORR 18%. PFS 4.5mo	27803005
-3	RET	Fusions	Non-Small Cell Lung Cancer	Lenvatinib	Single-arm phase 2. ORR 16%. PFS 7.3mo	31710864
-R2	RET	KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
-4	RET	RET fusions and NOT KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
