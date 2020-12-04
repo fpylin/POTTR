@@ -393,20 +393,21 @@ sub load_module_variant_evidence_grading {
 		max_max_tier(%tier_retval, %tier_TSG) ;
 		
 		my @retval ;
-
+		
 		my ($max_tier, $ref_biomarker) = ( $tier_retval{max_tier}, $tier_retval{ref_biomarker} );
 		
 		$max_tier .= "R" if $has_R_tier and $max_tier !~ /R/; # minor resistance class
-
+		
 		if ( defined $max_tier ) {
 			my $stem = "recommendation_tier";
 			$stem .= '_drug_class' if  $type =~ /class/;
 			my $pref_score = score_tier($max_tier, $tier_order_ref);
 			my %a = map { $_ => 1 } ( split /\s*,\s*/, $ref_biomarker );
 			$ref_biomarker = join(', ', sort keys %a );
-			push @retval, Facts::mk_fact_str("$stem:$therapy:$max_tier", "__untrack__", "referred_from:$ref_biomarker", "pref_score:$pref_score", @max_tier_tags) ;
+			# Added "__untrack__" to the tag to clean up historical reviews
+			push @retval, Facts::mk_fact_str("$stem:$therapy:$max_tier", "__untrack__" , "referred_from:$ref_biomarker", "pref_score:$pref_score", @max_tier_tags) ;
 		}
-
+		
 		return @retval;
 		}
 	);
@@ -651,11 +652,13 @@ sub load_module_preferential_trial_prioritisation {
 		my $transitive_efficacy_tier = $transitive_efficacy_tiers[0];
 		my $transitive_class_efficacy_tier = $transitive_class_efficacy_tiers[0];
 		
-		my $trial_match_criteria_score = 8 - (
-			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 4 : 0 ) +
-			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
+		my $trial_match_criteria_score = (
+			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 1 : 0 ) +
+			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 1 : 0 ) +
 			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 1 : 0 ) 
 			);
+		
+		my $referred_drug_classes_score = scalar(@inf_drug_classes) ;
 		
 		push @new_tags, # Annotate the trial
 			"transitive_class_efficacy_tier:". ( $a{'transitive_class_efficacy'}  = $transitive_class_efficacy_tier ) ,
@@ -664,14 +667,16 @@ sub load_module_preferential_trial_prioritisation {
 			"drug_class_maturity_tier:".       ( $a{'drug_class_maturity'}        = ClinicalTrials::get_drug_class_maturity_tier_by_trial_id( $trial_id, @inf_drug_classes ) ) ,
 			"combo_maturity_tier:".            ( $a{'combo_maturity'}             = ClinicalTrials::get_drug_combination_maturity_tier_by_trial_id( $trial_id, @inf_drugs ) ) ,
 			"combo_class_maturity_tier:".      ( $a{'combo_class_maturity'}       = ClinicalTrials::get_drug_class_combination_maturity_tier_by_trial_id( $trial_id, @inf_drug_classes ) ),
-			"trial_match_criteria_score:".     $trial_match_criteria_score
+			"trial_match_criteria_score:".     $trial_match_criteria_score ,
+			"referred_drug_classes_score:".    $referred_drug_classes_score
 		;
 		
 		
 		my $score = # Score the trial
-			( pow(20,6) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,5) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,4) * ( $trial_match_criteria_score ) ) + 
+			( pow(20,7) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,6) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,5) * ( (19 - $referred_drug_classes_score) ) ) +
+			( pow(20,4) * ( 8 - $trial_match_criteria_score ) ) + 
 			( pow(20,3) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,2) * ( score_tier( $a{'drug_class_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,1) * ( score_tier( $a{'combo_maturity'}, $tier_order_ref ) ) ) + 

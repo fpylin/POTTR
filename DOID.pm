@@ -67,9 +67,11 @@ id: POTTR:0001
 name: solid tumour
 def: "solid tumours"
 subset: DO_cancer_slim
-synonym: "Solid tumour"
+synonym: "Solid tumour" EXACT []
+synonym: "tumors" EXACT []
 synonym: "advanced cancer" EXACT []
 synonym: "advanced solid tumour" EXACT []
+synonym: "Advanced Tumors" EXACT []
 synonym: "pan cancer" EXACT []
 synonym: "other tumor types" EXACT []
 is_a: DOID:162 ! Neoplasm

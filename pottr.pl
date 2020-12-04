@@ -103,6 +103,8 @@ my $f_help = undef;
 my $f_man = undef;
 my $f_version = undef;
 
+my $f_list_trials_terse = undef; # print less information about trials ;
+
 GetOptions (
 	"help|h|?"                => \$f_help,
 	"man|manual|docs|m"       => \$f_man,
@@ -123,6 +125,7 @@ GetOptions (
 	"list-therapies|R"        => \$f_list_therapies,
 	"list-therapy-summary|S"  => \$f_list_therapy_summaries,
 	"list-trials|T"           => \$f_list_trials,
+	"trials-terse"            => \$f_list_trials_terse,
 );
 
 pod2usage(-verbose=>1) if $f_help;
@@ -379,6 +382,8 @@ sub extract_preferential_trials {
 		my $matched_trial_drug_class_maturity  =  $tags{'drug_class_maturity_tier'}; 
 		my $matched_trial_combo_maturity       =  $tags{'combo_maturity_tier'};   
 		my $matched_trial_combo_class_maturity =  $tags{'combo_class_maturity_tier'};
+		my $matched_trial_match_criteria_score =  $tags{'trial_match_criteria_score'};
+		my $matched_trial_referred_drug_classes_score =  $tags{'referred_drug_classes_score'};
 		
 		my @matched_drug_names   = split /\s*;\s*/, $matched_drug_names ;
 		@matched_drug_names = uniq( map { Therapy::get_preferred_drug_name($_) } @matched_drug_names );
@@ -409,6 +414,8 @@ sub extract_preferential_trials {
 			'matched_trial_drug_class_maturity' => $matched_trial_drug_class_maturity,
 			'matched_trial_combo_maturity' => $matched_trial_combo_maturity,
 			'matched_trial_combo_class_maturity' => $matched_trial_combo_class_maturity,
+			'matched_trial_match_criteria_score' => $matched_trial_match_criteria_score,
+			'matched_trial_referred_drug_classes_score' => $matched_trial_referred_drug_classes_score,
 			'trial_match_criteria' => \@trial_match_criteria,
 			'healthcondition' => \@healthconditions,
 			'postcodes' => \@postcodes,
@@ -881,14 +888,18 @@ sub gen_preferential_trial_terminal {
 		push @lines, join("\t", 'Rank',                       $cnt)."\n";
 		push @lines, join("\t", 'Trial ID',                   hl(37, $$row{'trial_id'}) )."\n";
 		push @lines, join("\t", "Full title",                 (length( $$row{'$trialacronym'} ) ? "$$row{'$trialacronym'} - " : "").$$row{'full_title'} )."\n";
-		push @lines, join("\t", "Drugs",                      $matched_drug_names )."\n";
-		push @lines, join("\t", "Drug classes",               $matched_drug_classes )."\n";
-		push @lines, join("\t", "Transitive class efficacy tier",  thl( $$row{'matched_trial_class_tier'} ) )."\n";
-		push @lines, join("\t", "Transitive efficacy tier",   thl( $$row{'matched_trial_tier'} ) )."\n";
-		push @lines, join("\t", "Drug maturity tier",         thl( $$row{'matched_trial_drug_maturity'} ) )."\n";
-		push @lines, join("\t", "Drug class maturity tier",   thl( $$row{'matched_trial_drug_class_maturity'} ) )."\n";
-		push @lines, join("\t", "Combo maturity tier",        thl( $$row{'matched_trial_combo_maturity'} ) )."\n";
-		push @lines, join("\t", "Combo class maturity tier",  thl( $$row{'matched_trial_combo_class_maturity'} ) )."\n";
+		if (! $f_list_trials_terse ) {
+			push @lines, join("\t", "Drugs",                      $matched_drug_names )."\n";
+			push @lines, join("\t", "Drug classes",               $matched_drug_classes )."\n";
+			push @lines, join("\t", "Transitive class efficacy tier",  thl( $$row{'matched_trial_class_tier'} ) )."\n";
+			push @lines, join("\t", "Transitive efficacy tier",   thl( $$row{'matched_trial_tier'} ) )."\n";
+			push @lines, join("\t", "Drug maturity tier",         thl( $$row{'matched_trial_drug_maturity'} ) )."\n";
+			push @lines, join("\t", "Drug class maturity tier",   thl( $$row{'matched_trial_drug_class_maturity'} ) )."\n";
+			push @lines, join("\t", "Combo maturity tier",        thl( $$row{'matched_trial_combo_maturity'} ) )."\n";
+			push @lines, join("\t", "Combo class maturity tier",  thl( $$row{'matched_trial_combo_class_maturity'} ) )."\n";
+			push @lines, join("\t", "Referred drug classes score", $$row{'matched_trial_referred_drug_classes_score'} )."\n";
+			push @lines, join("\t", "Trial match criteria score", $$row{'matched_trial_match_criteria_score'} )."\n";
+		}
 		push @lines, join("\t", "Trial match criteria",       $trial_match_criteria )."\n";
 		push @lines, join("\t", "Health conditions",          $healthcondition )."\n";
 		push @lines, join("\t", "Postcodes",                  $postcodes )."\n";

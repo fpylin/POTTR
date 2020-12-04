@@ -476,7 +476,7 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 		
 		my @eligibility_criteria_strs = exists $Eligibility_by_trial_id{$trial_id} ? @{ $Eligibility_by_trial_id{$trial_id} } : ();
 		s!(catype:)(.+?)(\s+OR|\s*\)|\s*;|\s*=>|\s*$)!$1.((DO_match_catype($2))[0]//$2).$3!ge for @eligibility_criteria_strs ;
-		push @eligibility_criteria_strs, undef if ! scalar @eligibility_criteria_strs;
+		push @eligibility_criteria_strs, undef if ! scalar @eligibility_criteria_strs;  # add an undefined value if empty eligibility string
 		
 		my @trial_info ;
 		push @trial_info, "acronym:".            $trial_acronym ;
@@ -496,58 +496,82 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 		
 		my $n_preferential_rules = 0; # number of preferential trials listed
 		
-		for my $d ( map { Therapy::get_preferred_drug_name($_) } split /\s*;\s*/, $matched_drug_names )  {
-			next if ! defined $d;
-			my @tags = @trial_info ;
-			push @tags, "INFERRED:treatment_drug:$d", "trial_match_criteria:drug_sensitivity";
+		my $healthconditioncodes_str = ( scalar(@healthconditioncodes) ? join(' OR ', ( map { "catype:$_" } @healthconditioncodes )) : undef ) ;
+		$healthconditioncodes_str = "($healthconditioncodes_str)" if $healthconditioncodes_str =~ / OR /;
+		
+		
+		my @tags = @trial_info ;
+		
+		for my $eligibility_criteria_str (@eligibility_criteria_strs) { # for each manually defined eligibility criteria (undef if none)
+		
+			my $f_eligibility_criteria_str_has_sensitivity = ( (defined $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)sensitive_to(?:_drug_class)?:/ ) );
+			my $f_eligibility_criteria_str_has_catype      = ( (defined $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)catype:/ ) );
 			
-			if ( scalar(@healthconditioncodes) ) {
-				for my $hcc (grep { length } @healthconditioncodes) {
-					for my $eligibility_criteria_str (@eligibility_criteria_strs) {
-						push @trials_rules, mkrule( 
-							[ "sensitive_to:$d", "catype:$hcc",  $eligibility_criteria_str], 
-							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ]  # 
-						) ;
-						++ $n_preferential_rules;
-					}
-				}
-			} else {
-				for my $eligibility_criteria_str (@eligibility_criteria_strs) {
+# 			print "|| $f_eligibility_criteria_str_has_sensitivity\t$eligibility_criteria_str\n";
+			
+			for my $d ( map { Therapy::get_preferred_drug_name($_) } split /\s*;\s*/, $matched_drug_names )  {
+				next if ! defined $d;
+				my $trial_match_criteria_str = "trial_match_criteria:drug_sensitivity";
+				my $drug_sensitivity_str = "sensitive_to:$d";
+				my $drug_sensitivity_tag = "INFERRED:treatment_drug:$d";
+
+				my $f_eligibility_criteria_str_has_drug_sensitivity = ( $f_eligibility_criteria_str_has_sensitivity and ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)$drug_sensitivity_str(?:\d*$|\b)/ ) );
+				my $f_assert_drug_sensitivity_tag = ( (! $f_eligibility_criteria_str_has_sensitivity) or $f_eligibility_criteria_str_has_drug_sensitivity) ;
+				
+# 				if ( $f_eligibility_criteria_str_has_sensitivity ) {
+# 					next if ( ! $f_eligibility_criteria_str_has_drug_sensitivity ); # does not match drug class
+# 					$drug_sensitivity_str = undef;
+# 					$drug_sensitivity_tag = undef;
+# 				}
+				
+# 				print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_sensitivity_str\t|\t$eligibility_criteria_str\n";
+				
+				push @trials_rules, mkrule( 
+					[ ( $f_eligibility_criteria_str_has_sensitivity ? undef : $drug_sensitivity_str) , 
+					  ( $f_eligibility_criteria_str_has_catype ? undef : $healthconditioncodes_str) ,
+# 					  '(initial-fact)' ,
+					  $eligibility_criteria_str 
+					], 
+					[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @trial_info, $trial_match_criteria_str, ($f_assert_drug_sensitivity_tag ? $drug_sensitivity_tag: undef) ) ]  # 
+				) ;
+
+# 				print "|||>  $trials_rules[$#trials_rules]\n";
+				
+				++ $n_preferential_rules;
+			}
+			
+			for my $dc ( split /\s*;\s*/, $matched_drug_classes )  {
+				for my $dcpart ( split /\s*;\s*/, $dc ) {
+					my @tags = @trial_info ;
+					my $trial_match_criteria_str = "trial_match_criteria:drug_class_sensitivity";
+					
+					my $drug_class_sensitivity_str = "sensitive_to_drug_class:$dcpart";
+					my $drug_class_sensitivity_tag = "INFERRED:treatment_drug_class:$dcpart";
+					
+					my $f_eligibility_criteria_str_has_drug_class_sensitivity = ( $f_eligibility_criteria_str_has_sensitivity and ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)$drug_class_sensitivity_str(?:\d*$|\b)/ ) );
+					my $f_assert_drug_class_sensitivity_tag = ( (! $f_eligibility_criteria_str_has_sensitivity) or $f_eligibility_criteria_str_has_drug_class_sensitivity) ;
+						
+# 						next if ( $f_eligibility_criteria_str_has_sensitivity ) ;
+# 							next if ! $f_eligibility_criteria_str_has_drug_class_sensitivity ;
+# 							$drug_class_sensitivity_str = undef;
+# 							$drug_class_sensitivity_tag = undef;
+# 						}
+						
+# 					print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_class_sensitivity_str\t|\t$eligibility_criteria_str\n";
+					
 					push @trials_rules, mkrule( 
-						[ "sensitive_to:$d", $eligibility_criteria_str ],
-						[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ] # acronym:$trial_acronym; 
-					) ;
+						[ ( $f_eligibility_criteria_str_has_sensitivity ? undef : $drug_class_sensitivity_str), 
+							( $f_eligibility_criteria_str_has_catype ? undef : $healthconditioncodes_str), 
+							$eligibility_criteria_str 
+						],
+						[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @trial_info, $trial_match_criteria_str, ($f_assert_drug_class_sensitivity_tag ? $drug_class_sensitivity_tag : undef) ) ] # acronym:$trial_acronym; 
+					);
 					++ $n_preferential_rules;
 				}
 			}
 		}
 
-		for my $dc ( split /\s*;\s*/, $matched_drug_classes )  {
-			for my $dcpart ( split /\s*;\s*/, $dc ) {
-				my @tags = @trial_info ;
-				push @tags, "INFERRED:treatment_drug_class:$dcpart", "trial_match_criteria:drug_class_sensitivity";
-				if ( scalar(@healthconditioncodes) ) {
-					for my $hcc (grep { length } @healthconditioncodes) {
-						for my $eligibility_criteria_str (@eligibility_criteria_strs) {
-							push @trials_rules, mkrule( 
-								[ "sensitive_to_drug_class:$dcpart", "catype:$hcc", $eligibility_criteria_str ],
-								[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ] # acronym:$trial_acronym; 
-							);
-						++ $n_preferential_rules;
-						}
-					}
-				} else {
-					for my $eligibility_criteria_str (@eligibility_criteria_strs) {
-						push @trials_rules, mkrule( 
-							[ "sensitive_to_drug_class:$dcpart", $eligibility_criteria_str ],
-							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ] # acronym:$trial_acronym; 
-						) ;
-					++ $n_preferential_rules;
-					}
-				}
-			}
-		}
-		
+
 # 		print "$n_preferential_rules\t$matched_drug_names\n";
 		
 		if ( scalar(@healthconditioncodes) ) {

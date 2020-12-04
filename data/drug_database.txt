@@ -19,6 +19,7 @@ ADU-1604|ADU 1604|ADU1604	anti-CTLA-4_monoclonal_antibody
 ADU-S100|MIW815	STING_agonist
 ADG116	anti-CTLA-4_monoclonal_antibody
 AGEN-1181|AGEN 1181|AGEN1181	anti-CTLA-4_monoclonal_antibody
+AG-270|AG270	MAT2A_inhibitor
 AK104|AK 104|AK-104	bispecific_PD-1/CTLA-4_antibody
 AK105|AK 105|AK-105	anti-PD-1_monoclonal_antibody
 AK112|AK 112|AK-112	bispecific_PD-1_VEGF_monoclonal_antibody
@@ -26,7 +27,8 @@ AL-2846|AL 2846|AL2846	MET_inhibitor
 ALPN-202	CD28_agonist; dual_PD-L1/CTLA-4_inhibitor
 ALRN-6924	MDM2_inhibitor
 AMG 160|AMG-160|AMG160	PSMA_bispecific_T-cell_engager
-AMG 256|AMG-256		anti-PD-1_x_IL21_mutein
+AMG 212|BAY2010112	PSMA_bispecific_T-cell_engager
+AMG 256|AMG-256	anti-PD-1_x_IL21_mutein
 AMG 337|AMG337	MET_inhibitor
 AMG 404|AMG-404|AMG404	anti-PD-1_monoclonal_antibody
 AMG 509|AMG-509|AMG509	bispecific_STEAP1/CD3_antibody
@@ -181,6 +183,7 @@ Crizotinib|PF-02341066|PF-2341066|Xalkori	ALK_inhibitor,first_generation; MET_in
 Cyclophosphamide|CTX|Clafen|Claphene|Cyclophosphan|Cyclostin|Cytophosphan|Genoxal|Mitoxan|Neosar|CP monohydrate|CYCLO-cell|Carloxan|Ciclofosfamida|Ciclofosfamide|Cicloxal|Cycloblastin|Cyclophospham|Cytoxan|Fosfaseron|Genuxal|Ledoxina|Revimmune|Syklofosfamid|WR- 138719	alkylating_agent
 Cyproterone|SH-881	antiandrogen,steroidal
 Cytarabine|Arabinofuranosylcytosine|Arabinosylcytosine|Aracytidine|Cytosar|U 19920|Alexan|Ara-C|Arabine|Aracytin|CHX-3311|Cytarabinum|Cytarbel|Cytosine Arabinoside|Cytosine-.beta.-arabinoside|Cytosine-beta-arabinoside|Erpalfa|Starasid|U-19920|Udicil|WR-28453	antimetabolite
+DCC-3014	CSF1R_inhibitor
 DS-1001|DS 1001	IDH1_R132_inhibitor
 DS-6051b	ROS1_inhibitor; TRK_inhibitor,second_generation
 DZD9008|DZD 9008|DZD-9008	EGFR_inhibitor,exon_20_selective; ERBB2_inhibitor,exon_20_selective
@@ -635,7 +638,7 @@ GQ1001	anti-ERBB2_antibody-drug_conjugate
 Bacillus Calmette-Guérin|BCG	BCG_vaccine
 AK117	anti-CD47_monoclonal_antibody
 CN1	unknown_drug_class
-QBS10072S	unknown_drug_class,BBB-permeable_chemotherapy
+QBS10072S	amino_acid_analogue,LAT1_targeting
 IMU-201	B_cell_immunotherapy
 Vistusertib|AZD2014	MTORC1/MTORC2_inhibitor
 AZD8055	MTORC1/MTORC2_inhibitor
@@ -668,7 +671,7 @@ Glembatumumab Vedotin	anti-GPNMB_antibody-drug_conjugate
 Onvansertib	PLK1_inhibitor
 BLYG8824A	unknown_drug_class
 GDC-6036	KRAS_G12C_inhibitor
-AMG 650		unknown_drug_class
+AMG 650	unknown_drug_class
 Pevonedistat	NEDD8_inhibitor
 ZN-C5	selective_estrogen_receptor_degrader
 Ustekinumab	anti-IL-23_monoclonal_antibody; anti-IL-12_monoclonal_antibody
@@ -711,3 +714,8 @@ Pictilisib	pan-PI3K_inhibitor
 RMC-4550	SHP2_inhibitor
 eFT508	MNK_inhibitor
 II-B08	PTP_inhibitor
+FPI-1175	IGF1R-radionucleotide_conjugate
+FPI-1547	IGF1R-radionucleotide_conjugate
+SHR-A1811	anti-ERBB2_antibody-drug_conjugate
+Darolutamide	antiandrogen,nonsteroidal,second_generation
+AZD4573	CDK9_inhibitor
