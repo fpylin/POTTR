@@ -719,3 +719,4 @@ FPI-1547	IGF1R-radionucleotide_conjugate
 SHR-A1811	anti-ERBB2_antibody-drug_conjugate
 Darolutamide	antiandrogen,nonsteroidal,second_generation
 AZD4573	CDK9_inhibitor
+Mirdametinib|PD0325901|PD 901|PD-901	MEK_inhibitor

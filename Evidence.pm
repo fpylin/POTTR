@@ -195,8 +195,14 @@ sub hl { my ($col, $x) = @_; return "\e[1;${col}m$x\e[0m"; }
 sub encode_alteration_proper {
 	my $x = shift;
 	my $bm = '';
-	$bm = $1 if ( $x =~ s/^([A-Z0-9]+:)// );
+	$bm = $1 if ( $x =~ s/^([A-Z\-a-z0-9 ]+:)// );
 # 	print "\e[1;42;35m".$bm.'|'.$x."\e[0m\n";
+
+	if ( $bm =~ /^((?:Microsatellite.Instability|Tumour.Mutation(?:al)?.Burden|(?:Loss-of-heterozygosity|Homologous Recombination Deficiency)|Homologous.Recombination.Deficiency|Mismatch.repair):)$/i ) { 
+		$bm = lc($1);
+		$bm =~ s/ /_/g;
+	}
+
 
 	$x =~ s/mut$//;
 	$x =~ s/^\s+|\s+$//g;
@@ -227,7 +233,12 @@ sub encode_alteration {
 	my @retval;
 	
 	for my $x (@parts) {
-		$x = lc($x) if  $biomarker =~ /Microsatellite.Instability|Tumour.Mutation(?:al)?.Burden|(?:Loss-of-heterozygosity|Homologous Recombination Deficiency)|Homologous.Recombination.Deficiency|Mismatch.repair/i ;
+		while ( $biomarker =~ /(Microsatellite.Instability|Tumour.Mutation(?:al)?.Burden|(?:Loss-of-heterozygosity|Homologous Recombination Deficiency)|Homologous.Recombination.Deficiency|Mismatch.repair)/ig ) {
+			my $m = $1;
+			if ( $x =~ /$m:/i ) {
+				$x = lc($x);
+			}
+		}
 
 		my $f_neg = 0;
 		my $f_germline = 0;
@@ -243,11 +254,13 @@ sub encode_alteration {
 		push @retval, ($f_neg?'NOT ':'').encode_alteration_proper($x).($f_germline ? ',germline' : '');
 	}
 	
+	my $f_biomarker_has_plus = ( $biomarker =~ /\+/ );
+	
 	return join("; ", ( map { 
-			( /^((?i:not ))(.*)/ ? 
-			  ( "$1 $biomarker:$2" ) 
+			( /^((?i:not)) +(?<bm>.*)/ ? 
+			  ( "$1 ".($f_biomarker_has_plus  ? "" : "$biomarker:").$+{bm} ) 
 			  :
-			  ( ( ($biomarker =~ /\+/) ? '' : "$biomarker:"). $_ ) 
+			  ( ( $f_biomarker_has_plus ? "" : "$biomarker:"). $_ ) 
 			)
 			} @retval 
 		) 

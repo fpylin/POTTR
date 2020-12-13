@@ -115,6 +115,7 @@ subset: DO_cancer_slim
 synonym: "Chronic Myelogenous Leukaemia" EXACT[]
 synonym: "Chronic Myelogenous Leukemia" EXACT[]
 synonym: "CML" EXACT[]
+synonym: "chronic myeloid leukaemia" EXACT[]
 is_a: POTTR:1007 ! Liquid cancer
 |, q|[Term]
 id: POTTR:1004
