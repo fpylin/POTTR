@@ -206,7 +206,7 @@ sub encode_alteration_proper {
 
 	$x =~ s/mut$//;
 	$x =~ s/^\s+|\s+$//g;
-	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function mutation|.*variant|alteration)s?$/i ) { 
+	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function mutation|.*variant|alteration|high|deficient)s?$/i ) { 
 		$x = lc($1) ;
 	} elsif ( $x =~ /^((?:DNA binding|kinase) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
 		$x = lc($1);
@@ -499,7 +499,7 @@ sub gen_rule_knowledge_base {
 					my $drug_class_regimen = Therapy::get_treatment_class($rx, $biomarker);
 					
 					push @debug_msg, join("\t", 
-							hl(31, $tier), hl(33, $alt), hl(35, $rx), hl(32, $drug_class_regimen), hl(36, (my $normalised_class = Therapy::get_normalised_treatment_class_name($rx)) )
+							hl(31, $tier), hl(33, $alt), hl(35, $rx), hl(32, $drug_class_regimen), hl(34,$rhs_catype), hl(36, (my $normalised_class = Therapy::get_normalised_treatment_class_name($rx)) )
 						)."\n\n"; 
 					
 					my $f_no_specific_drug = ( $drug_class_regimen =~ /UNDEF(?:\s+\+\s+UNDEF)*/ );

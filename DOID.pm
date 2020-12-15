@@ -164,7 +164,7 @@ our %synonym_map = (
 	'glioblastoma multiforme' => 'glioblastoma',
 	'glioblastoma' => 'glioblastoma multiforme|astrocytoma WHO grade IV|high-grade glioma|high grade glioma',
 	'glioma' => 'glioblastoma',
-	'lung small cell carcinoma' => 'small cell lung carcinoma|Carcinoma, Small Cell',
+	'lung small cell carcinoma' => 'small-cell lung carcinoma|small-cell lung cancer|Carcinoma, Small Cell',
 	'lung non-small cell carcinoma' => 'non small cell lung cancer|Carcinoma, Non-Small-Cell Lung|non-small-cell lung cancer|non-small cell lung cancer|Non-Small-Cell Lung',
 	'hematologic' => 'hematologic|haematologic|hematological|haematological',
 	'malignant mesothelioma' => 'mesothelioma',
@@ -228,7 +228,8 @@ sub expand_synonyms {
 			}
 		}
 		@synonyms_new = uniq(@synonyms_new);
-		push @expanded_doid_lines, $p;
+		
+		push @expanded_doid_lines, $p."\n";
 		push @expanded_doid_lines, map { "synonym: \"$_\" EXACT\n" } @synonyms_new;
 		push @expanded_doid_lines, "\n\n";
     }
