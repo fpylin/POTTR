@@ -406,7 +406,7 @@ sub gen_rule_knowledge_base {
 		
 		
 		my @lhs_catypes_neg ;
-		if ( $tumour_type =~ /(?:,?\s*)?except\s+/i ) {
+		if ( $tumour_type =~ /(?:\s*,?\s+)?except\s+/i ) {
 			$tumour_type = $`;
 # 			print "[[$tumour_type]]\n";
 			@lhs_catypes_neg = split /\s*[,;]\s*/, $';

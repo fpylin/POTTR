@@ -238,11 +238,11 @@ sub load_module_variant_feature_mapping {
 		} else {
 			for ($f) {
 				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|\(initial-fact\))/; # FIXME - need a list of biomarkers
+				/^([^:]+):(.*(?:splice|skipping).*)$/i   and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };
 				/^([^:]+):(?:deletion|homozygous_deletion)$/i  and do { ($entity, $etype, $espec) = ($1, 'D', ''); last; };
 				/^([^:]+):(.*fusion.*)$/i   and do { ($entity, $etype, $espec) = ($1, 'F', $2); last; };
 				/^([^:]+):(.*express.*)$/i  and do { ($entity, $etype, $espec) = ($1, 'E', $2); last; };
-				/^([^:]+):(.*splice.*)$/i   and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(.+)$/i           and do { ($entity, $etype, $espec) = ($1, 'V', $2); last; };
 				return @retval;
 			}

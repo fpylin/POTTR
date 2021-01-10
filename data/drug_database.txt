@@ -153,7 +153,7 @@ CS3006|CS 3006|CS-3006	MEK_inhibitor
 CTX110|CTX 110|CTX-110|CTX101	CD19-directed_CAR_T_cell
 CX-5461|CX5461	RNA_polymerase_I_transcription_inhibitor
 Cabazitaxel|Jevtana|RPR-116258A|Taxoid XRP6258|XRP-6258	taxane
-Cabozantinib	AXL_inhibitor; MET_inhibitor,type_2; RET_inhibitor; VEGFR2_inhibitor; ROS1_inhibitor
+Cabozantinib	AXL_inhibitor; MET_inhibitor,type_2; RET_inhibitor; VEGFR2_inhibitor; ROS1_inhibitor; KIT_inhibitor
 Camrelizumab|HR-301210|SHR-1210|SHR1210	anti-PD-1_monoclonal_antibody
 Cantrixil|TRX E 002 1|TRX-E-002-1|TRXE0021	benzopyran
 Capecitabine|Xeloda|Ro 09-1978/000	antimetabolite
@@ -720,3 +720,4 @@ SHR-A1811	anti-ERBB2_antibody-drug_conjugate
 Darolutamide	antiandrogen,nonsteroidal,second_generation
 AZD4573	CDK9_inhibitor
 Mirdametinib|PD0325901|PD 901|PD-901	MEK_inhibitor
+ERAS-601	SHP2_inhibitor

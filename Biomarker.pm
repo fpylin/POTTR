@@ -84,7 +84,18 @@ sub interp_variants {
 			push @alterations, 'alteration' ;
 		};
 
-		/S/ and do { push @alterations, $biomarker_spec; last; };
+		/S/ and do { 
+			push @alterations, $biomarker_spec; 
+			push @alterations, "splice_mutation"; 
+			if ( ($biomarker_spec =~ /exon[[:space:][:punct:]]+(\d+)(?:[[:space:][:punct:]]+(?:skipping|splice))+[[:space:][:punct:]]+(?:variant|mutation)/ ) ) {
+				push @alterations, "exon_$1"."_skipping_mutation"; 
+				push @alterations, "exon_$1"."_splice_mutation"; 
+				push @alterations, "exon_$1"."_deletion"; 
+				push @alterations, "exon_$1"."_mutation"; 
+			}
+			last; 
+		};
+		
 		/E/ and do { push @alterations, $biomarker_spec; last; };
 		/A/ and do { push @alterations, ('amplification'); last; };
 		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion'); last; }; # 'truncating_mutation'

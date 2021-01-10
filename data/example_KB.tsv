@@ -3,7 +3,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 1	ALK	EML4-ALK Fusion, Fusions	Non-Small Cell Lung Cancer	Ceritinib	PBS reimbursed if FISH positive	24670165
 1	ALK	EML4-ALK Fusion, Fusions	Non-Small Cell Lung Cancer	Crizotinib	PBS reimbursed if FISH positive	20979469
 1	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Lorlatinib	PBS reimbursed. Ph3 CROWN vs crizotinib: OS 12 months 78% vs 39%	30413378, 33207094, 10.1016/j.annonc.2020.08.2282
-1	CD20	Protein expression	Non-Hodgkin’s Lymphoma; Chronic lymphocytic leukaemia; Acute lymphoblastic leukaemia; Hodgkin’s Lymphoma	Rituximab	PBS reimbursed. Reference non-exhaustive	11807147, 20888994
+1	CD20	Protein expression	Non-Hodgkin’s Lymphoma; Chronic lymphocytic leukaemia; Acute lymphoblastic leukaemia; Hodgkin’s Lymphoma	Rituximab	PBS reimbursed. References non-exhaustive	11807147, 20888994
 1	EGFR	Exon 19 deletion, L858R, Exon 21 mutation	Non-Small Cell Lung Cancer	Afatinib	PBS reimbursed, LUX-Lung 6, LUX-Lung 7	23816960, 24439929, 27083334
 1	EGFR	Exon 19 deletion, L858R, Exon 21 mutation	Non-Small Cell Lung Cancer	Erlotinib	PBS reimbursed, OPTIMAL	16014882, 16014883
 1	EGFR	Exon 19 deletion, L858R, Exon 21 mutation	Non-Small Cell Lung Cancer	Gefitinib	PBS reimbursed	15118125, 19692680, 20573926
@@ -12,19 +12,20 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 1	EGFR	T790M	Non-Small Cell Lung Cancer	Osimertinib	PBS reimbursed. AURA3	27959700
 1	ROS1	Fusions	Non-Small Cell Lung Cancer	Crizotinib	PBS reimbursed. Gene rearrangement &gt;15% positive cells by FISH	25264305
 1	ROS1	Fusions	Non-Small Cell Lung Cancer	Entrectinib	TGA approved; Not PBS Reimbursed	28183697, 10.1200/jco.2015.33.15_suppl.2517
-1B	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Brigatinib	TGA approved. Not PBS reimbursed; FDA approved	30280657
+1B	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Brigatinib	TGA approved. Not PBS reimbursed; FDA approved	30280657, 32780660
 1B	BRAF	V600E	Non-Small Cell Lung Cancer	Dabrafenib + Trametinib	TGA approved. Not PBS reimbursed	29072975
 1B	CD20	Protein expression	Non-Hodgkin’s Lymphoma	Ibrutinib	1+ prior therapy with an anti-CD20 antibody-containing regimen	28167659
 1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Atezolizumab	TGA approved; IMPower110; 1L treatment. PD-L1 positive. Median OS: 20 vs 13 months (chemotherapy)	32997907, 10.1093/annonc/mdz293
+1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Nivolumab + Ipilimumab	TGA approved; FDA approved; Checkmate 227	31562796
 1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Pembrolizumab	First line monotherapy	27718847
 2	CD274	Protein expression	Non-Small Cell Lung Cancer	Cemiplimab	EMPOWER-Lung 1. CPS &gt;= 50	10.1016/j.annonc.2020.08.2285
-2	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Nivolumab + Ipilimumab	Not TGA approved; FDA approved; Checkmate 227	31562796
 2	EGFR	A763_Y764insFQEA	Non-Small Cell Lung Cancer	Afatinib; Gefitinib; Erlotinib	Not explicitly TGA listed.	27413714, 10.1200/JCO.2019.37.15_suppl.e20593
 2	EGFR	Exon 19 deletion, L858R	Non-Small Cell Lung Cancer	Apatinib + Gefitinib 	Apatinib not TGA or FDA approved. ACTIVE Phase 3 trial.	10.1016/j.annonc.2020.08.2283
 2	EGFR	Exon 19 deletion, L858R	Non-Small Cell Lung Cancer	Dacomitinib	Not TGA approved. ARCHER 1009/1050	28958502, 25439691
 2	EGFR	G719, L861Q, S768I	Non-Small Cell Lung Cancer	Erlotinib; Gefitinib	Intermediate response to 1G TKI with resistance data	27413714, 28184913
-2	MET	Amplification, D1010, Exon 14 Deletion, Exon 14 splicing mutation, Y1003	Non-Small Cell Lung Cancer	Crizotinib	Not TGA approved; FDA orphan drug indication	26729443, 10.1200/jco.2014.32.15_suppl.8001
+2	MET	Amplification, D1010, Exon 14 Deletion, Exon 14 splicing mutation, Y1003	Non-Small Cell Lung Cancer	Crizotinib	Not TGA or FDA approved; NCCN Category 2A. NB No conclusive data from large trials to date.	26729443, 10.1200/jco.2014.32.15_suppl.8001
 2	MET	Amplification, Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-Small Cell Lung Cancer	Capmatinib	Not TGA approved; FDA approved; GEOMETRY mono-1 	32877583, 10.1200/JCO.2019.37.15_suppl.9004
+2	RET	Fusions	Non-Small Cell Lung Cancer	Pralsetinib	Not TGA approved. FDA approved. ARROW. ORR 65%. DCR 93%	10.1200/JCO.2019.37.15_suppl.9008; 10.1200/JCO.2020.38.15_suppl.9515
 2	RET	Fusions	Non-Small Cell Lung Cancer	Selpercatinib	Not TGA approved. LIBRETTO-001. 1L ORR 85%	32846061, 10.1200/JCO.2020.38.15_suppl.3584
 2	ROS1	Fusions	Non-Small Cell Lung Cancer	Lorlatinib	TGA approved; Not PBS Reimbursed	29074098
 2	Tumour Mutational Burden	High	Non-Small Cell Lung Cancer	Nivolumab + Ipilimumab	Not TGA approved. Phase 3 CHECKMATE 227. Prespecified, prospective TMB cutoff of 10mut/MB in 57% of cohort. Median PFS: 7.2 vs 5.5 months. Not correlated with TMB. 	29658845
@@ -50,8 +51,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ERBB2	Kinase domain mutation	Non-Small Cell Lung Cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01	10.1200/JCO.2020.38.15_suppl.9504
 3	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-Small Cell Lung Cancer	Pyrotinib		30596880
 3	ERBB2	Oncogenic mutations, V659E, A775_G776insYVMA, G778_P780dup, G778insCPG, G776delinsVC, exon 20 insertion	Non-Small Cell Lung Cancer	Ado-Trastuzumab Emtansine	Not TGA approved. OncoKB LOE 2. 	30206164, 29989854
-3	KRAS	G12C	Non-Small Cell Lung Cancer	Sotorasib	CODEBREAK 100 ORR 32.2%	32955176, 10.1016/j.jtho.2019.09.020
 3	KRAS	G12C	Non-Small Cell Lung Cancer; Colorectal Cancer; Solid tumours	Adagrasib	KRYSTAL-1. Combined Phase 1&amp;2. ORR 45% (NSCLC), 17% (CRC)	10.1016/S0959-8049(20)31076-5
+3	KRAS	G12C	Non-Small Cell Lung Cancer	Sotorasib	CODEBREAK 100 ORR 32.2%	32955176, 10.1016/j.jtho.2019.09.020
 3	KRAS	Oncogenic mutations	Non-Small Cell Lung Cancer	Selumetinib + Docetaxel	Ph2 ORR 37%. Negative Ph 3 SELECT-1	23200175, 28492898
 3	MET	Amplification	Non-Small Cell Lung Cancer	Capmatinib	GEOMETRY mono-1 study	10.1200/JCO.2020.38.15_suppl.9509
 3	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-Small Cell Lung Cancer	Crizotinib		31932802
@@ -61,7 +62,6 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	MET+EGFR	MET:amplification and EGFR:exon 19 deletion, MET:amplification and EGFR:L858R	Non-Small Cell Lung Cancer	Tepotinib + Gefitinib	INSIGHT	32479794
 3	RET	Fusions	Non-Small Cell Lung Cancer	Cabozantinib	Not TGA approved. Single-arm phase 2. ORR 28%	27825636
 3	RET	Fusions	Non-Small Cell Lung Cancer	Lenvatinib	Single-arm phase 2. ORR 16%. PFS 7.3mo	31710864
-3	RET	Fusions	Non-Small Cell Lung Cancer	Pralsetinib	Not TGA approved. ARROW	10.1200/JCO.2019.37.15_suppl.9008
 3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	Not TGA approved. ORR 18%. OncoKB LOE 2	27803005
 3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	LURET. Single-arm phase 2. ORR 47%. PFS 4.7mo	27825636
 3	RET	Fusions	Non-Small Cell Lung Cancer	Vandetanib	Single-arm phase 2. ORR 18%. PFS 4.5mo	27803005
@@ -113,8 +113,12 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	KRAS+ERBB3	KRAS:Oncogenic mutations and ERBB3:Overexpression	Non-Small Cell Lung Cancer; Colorectal Cancer	Afatinib + Selumetinib	By ERBB3 overexpression	24685132
 4	MAP2K1	Oncogenic mutations	Non-Small Cell Lung Cancer	Cobimetinib; Trametinib	OncoKB LOE 3	31715422
 4	MET	Amplification	Non-Small Cell Lung Cancer	Tepotinib		NCT02864992
+4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation	Non-Small Cell Lung Cancer	Crizotinib	Case reports	26845194, 27022036
+4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation	Non-Small Cell Lung Cancer	Crizotinib; Cabozantinib	Case series.	26896094
 4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation, Y1003, D1010, amplifications, D1228, G1163	Non-Small Cell Lung Cancer	Cabozantinib	Cabozantinib has activities; Note MET IHC not a biomarker	30762593, 27825638, 27693535
 4	MET	Fusions	Non-Small Cell Lung Cancer; Glioblastoma	Crizotinib	Case reports	29527595, 30339198, 27748748
+4	MET	Y1003S	Non-Small Cell Lung Cancer	Crizotinib	Case report showing significant response and DOR	30885356
+4	MET	Y1021H	Non-Small Cell Lung Cancer	Crizotinib	Case report, sensitive to Crizotinib	31809977
 4	MET+EGFR	MET:Alteration and EGFR:Oncogenic mutations	Non-Small Cell Lung Cancer	Amivantamab		10.1200/JCO.2019.37.15_suppl.9009
 4	NF1	Oncogenic mutations	Non-small Cell Lung Cancer	Trametinib		NCT03232892
 4	NOTCH3	Overexpression	Non-small cell lung cancer	MRK003	Pre-clinical evidence	17804716
@@ -142,6 +146,7 @@ R2	BCL2L11	Deletion	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib		22426421
 R2	BRAF	Oncogenic mutation, fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	BRAF+EGFR	EGFR:oncogenic mutations and BRAF:fusion	Non-Small Cell Lung Cancer	EGFR inhibitor            	Off-target mechanism	30831205
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Capmatinib; Crizotinib	Off-target resistance	32034073
+R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Crizotinib	Case series. EGFR Amplification in three cases	31548343
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Osimertinib		32385709, 28625643
 R2	EGFR	C797S, C797G	Non-Small Cell Lung Cancer	Afatinib		32206559
 R2	EGFR	C797S, C797G	Non-Small Cell Lung Cancer	Osimertinib		25964297; 30073261
@@ -159,7 +164,7 @@ R2	EGFR	T790M, C797S	Non-Small Cell Lung Cancer	Poziotinib		32412152, 10.1016/j.
 R2	EGFR	T790M, C797S, C797G	Non-Small Cell Lung Cancer	Dacomitinib		29410323, 32206559
 R2	EGFR	V843I	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib		25057940
 R2	EGFR+ALK	EGFR:oncogenic mutation and ALK:fusion	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Osimertinib		30957057
-R2	EGFR+EGFR	EGFR:T790M and EGFR:C797S and EGFR:T790M-C797S cis-allelic conformation	Non-small cell lung cancer	Osimertinib	On-target resistance	31075545
+R2	EGFR+EGFR	EGFR:T790M and EGFR:C797S and EGFR:T790M-C797S cis-allelic conformation	Non-Small Cell Lung Cancer	Osimertinib	On-target resistance	31075545
 R2	EGFR+RB1	EGFR:oncogenic mutation and RB1:oncogenic mutation	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Osimertinib	Small-cell transformation	25758528, 30550363
 R2	EGFR+RET	EGFR:oncogenic mutation and RET:fusion	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Osimertinib		30257958, 30957057
 R2	EGFR+ROS1	EGFR:oncogenic mutation and ROS1:fusion	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Osimertinib		29935846
@@ -170,13 +175,23 @@ R2	ERBB2	Exon 20 insertion except G778ins, S779ins, P780ins	Solid tumours; Non-S
 R2	ERBB3	Amplification	Non-Small Cell Lung Cancer	Capmatinib	Off-target resistance	32034073
 R2	FBXW7	Deletion	Non-Small Cell Lung Cancer	Gefitinib		29633504
 R2	FGFR3	Fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
+R2	KRAS	Amplification	Non-Small Cell Lung Cancer	Crizotinib	Case series.	31548343
 R2	KRAS	Amplification, G12D	Non-Small Cell Lung Cancer	Crizotinib	Off-target resistance	32034073
 R2	KRAS	Oncogenic mutations	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	KRAS+MET	MET:exon 14 skipping mutation and KRAS:Oncogenic mutations	Non-Small Cell Lung Cancer	Crizotinib		30352902
 R2	MET	Amplification	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib; Osimertinib		30676858
+R2	MET	D1228N	Non-Small Cell Lung Cancer	Crizotinib		27343442
 R2	MET	D1228N, D1228	Non-Small Cell Lung Cancer	Capmatinib; Tepotinib; Savolitinib		32034073
+R2	MET	D1246N	Non-Small Cell Lung Cancer	Crizotinib	Case report. Emergent variant post exposure to Crizotinib. Possible Acquired resistance	31809977
+R2	MET	F1007fs	Non-Small Cell Lung Cancer	Crizotinib	Case report. Primary resistance to crizotinib	29935852
+R2	MET	G1163R, D1228H, D1228A, Y1230H	Non-Small Cell Lung Cancer	Crizotinib	Case report. Emergent mutations detected on ctDNA at the time progression after treatment with crizotinib.	29110851
 R2	MET	H1094Y, L1195V	Non-Small Cell Lung Cancer	Glesatinib		32034073
 R2	MET	L1195V, Y1230, D1228N, D1228, D1246, Y1248, G1163	Non-Small Cell Lung Cancer	Crizotinib	Strong evidence for Crizotinib. Capmatinib inferred	28522754, 27987579, 32306194, 32034073
+R2	MET	Y1230C	Non-Small Cell Lung Cancer	Crizotinib	Case report. Pre-treatment D1010H sensitizing to crizotinib.	27666659
+R2	MET	Y1230H	Non-Small Cell Lung Cancer	Crizotinib	Case report. Acquired resistance	28629543
+R2	MET	Y1230S, Y1230H, D1228N, D1228H, F1200I, L1195V, S244fs	Non-Small Cell Lung Cancer	Crizotinib	Case series.	31548343
+R2	MET+TP53	MET:Exon 14 skipping mutation and TP53:oncogenic mutation	Non-Small Cell Lung Cancer	Crizotinib	Case series. TP53 mutation shown in post-exposure to crizotinib 7 of 12 cases.	31548343
+R2	NF1	Oncogenic mutation	Non-Small Cell Lung Cancer	Crizotinib	Case series.	31548343
 R2	NRG1	Overexpression	Non-Small Cell Lung Cancer	Seribantumab + Docetaxel	No PFS improvement in EGFR wt NSCLC	10.1200/JCO.2019.37.15_suppl.9036
 R2	PIK3CA	Oncogenic mutation	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	RET	Fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
