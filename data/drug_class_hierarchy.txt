@@ -302,7 +302,7 @@ miR-16_miRNA_mimic
 microtubule_stabilizing_agent
 nanoparticle_Stat3/NF-kB/poly-TKI
 orotate_phosphoribosyltransferase_inhibitor
-p53-HDM2_interaction_inhibitor
+MDM2_inhibitor	p53-HDM2_interaction_inhibitor
 pegylated_IL-10
 peptide_receptor_radionuclide_therapy
 peptide_receptor_radionuclide_therapy	177Lu-DOTA-radioconjugate

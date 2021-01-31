@@ -196,6 +196,11 @@ sub extract_LOE {
 	return  0 ;
 }
 
+sub extract_LOM {
+	return $1 if $_[0] =~ /LOM:([123])/;
+	return 9;
+}
+
 sub extract_pref_score {
 	if ( $_[0] =~ /(?:^recommendation_tier\S*?:.*?:).*\bpref_score:(\d+(?:\.\d+)?)/ ) {
 # 		print "$_[0]\t$1\n";
@@ -205,6 +210,8 @@ sub extract_pref_score {
 }
 
 sub score_tier { return POTTR::score_tier(extract_LOE($_[0])); }
+
+sub score_LOM { return extract_LOM($_[0]); }
 
 sub hl { my ($col, $x) = @_; return "\e[1;${col}m$x\e[0m"; }
 
@@ -300,7 +307,7 @@ sub extract_drug_sensitivity {
 
 	my @results_to_filter = @_;
 	
-	@results_to_filter = sort { ( extract_pref_score($a) <=> extract_pref_score($b) ) || ($a cmp $b) } @results_to_filter;
+	@results_to_filter = sort { ( extract_pref_score($a) <=> extract_pref_score($b) ) || score_LOM($a) <=> score_LOM($b) || ($a cmp $b) } @results_to_filter;
 	
 	my @retval;
 	for my $result_line ( @results_to_filter ) {
@@ -384,6 +391,8 @@ sub extract_preferential_trials {
 		my $matched_trial_combo_class_maturity =  $tags{'combo_class_maturity_tier'};
 		my $matched_trial_match_criteria_score =  $tags{'trial_match_criteria_score'};
 		my $matched_trial_referred_drug_classes_score =  $tags{'referred_drug_classes_score'};
+		my $matched_trial_LOM_score            =  $tags{'LOM'} // 'Not assessed';
+		my $ext_weblink                        =  $tags{'ext_weblink'};
 		
 		my @matched_drug_names   = split /\s*;\s*/, $matched_drug_names ;
 		@matched_drug_names = uniq( map { Therapy::get_preferred_drug_name($_) } @matched_drug_names );
@@ -419,6 +428,8 @@ sub extract_preferential_trials {
 			'trial_match_criteria' => \@trial_match_criteria,
 			'healthcondition' => \@healthconditions,
 			'postcodes' => \@postcodes,
+			'LOM' => $matched_trial_LOM_score,
+			'ext_weblink' => $ext_weblink
 		);
 		push @retval, \%row;
 	}
@@ -633,11 +644,16 @@ sub mkhref_evidence {
 	return $x;
 }
 
+sub sort_results_treatment {
+	# Sort by curated tier first, then sort by level of matching, then alphabetically
+	@results_treatment = sort { ( score_tier($a) <=> score_tier($b) ) || ( score_LOM($a) <=> score_LOM($b) ) || ($a cmp $b) } @results_treatment;
+}
+
 sub gen_HTML_biomarker_evidence_report {
 	my $output = "<h2>Evidence of matched target therapies:</h2>\n<table id=trial_list>\n";
 	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Biomarker", "Drug", "Level of Evidence", "Reference") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
 
-	@results_treatment = sort { ( score_tier($a) <=> score_tier($b) )  || ($a cmp $b) } @results_treatment;
+	sort_results_treatment();
 
 	my $cnt = 0;
 	for my $treatment_line (@results_treatment) {
@@ -668,7 +684,7 @@ sub gen_biomarker_evidence_report {
 	my $output ; # = "Evidence of matched target therapies:\n";
 	$output .= join("\t", "Biomarker", "Drug", "Level of Evidence", "Reference")."\n"; # "Status", "Relevance", "Hospital", 
 
-	@results_treatment = sort { ( score_tier($a) <=> score_tier($b) ) || ($a cmp $b) } @results_treatment;
+	sort_results_treatment();
 
 	my $cnt = 0;
 	for my $treatment_line (@results_treatment) {
@@ -690,7 +706,7 @@ sub gen_biomarker_evidence_terminal {
 	my @lines ;
 	push @lines, join("\t", "Biomarker", "Drug", "KB Name", "Level of Evidence", "Reference")."\n"; # "Status", "Relevance", "Hospital", 
 
-	@results_treatment = sort { ( score_tier($a) <=> score_tier($b) ) || ($a cmp $b) } @results_treatment;
+	sort_results_treatment();
 
 	my $cnt = 0;
 	for my $treatment_line (@results_treatment) {
@@ -820,8 +836,8 @@ sub gen_preferential_trial_report {
 
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", 
-		"Trial ID", "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria",
-		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode"
+		"Trial ID", "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria", "Level of matching",
+		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode", "External weblink"
 		)."\n";
 
 	my $cnt = 1;
@@ -849,11 +865,13 @@ sub gen_preferential_trial_report {
 				$$row{'matched_trial_combo_maturity'},
 				$$row{'matched_trial_combo_class_maturity'},
 				$trial_match_criteria,
+				$$row{'LOM'},
 				$matched_drug_names,
 				$matched_drug_classes,
 				$healthcondition,
 				(length( $$row{'$trialacronym'} ) ? "$$row{'$trialacronym'} - " : "").$$row{'full_title'},
 				$postcodes,
+				$$row{'ext_weblink'},
 				)
 			)."\n";
 		++$cnt ;
@@ -901,8 +919,10 @@ sub gen_preferential_trial_terminal {
 			push @lines, join("\t", "Trial match criteria score", $$row{'matched_trial_match_criteria_score'} )."\n";
 		}
 		push @lines, join("\t", "Trial match criteria",       $trial_match_criteria )."\n";
+		push @lines, join("\t", "Level of matching",          $$row{'LOM'} )."\n";
 		push @lines, join("\t", "Health conditions",          $healthcondition )."\n";
 		push @lines, join("\t", "Postcodes",                  $postcodes )."\n";
+		push @lines, join("\t", "External weblink",           $$row{'ext_weblink'} )."\n";
 		push @lines, join("\t", " " )."\n";
 		++$cnt ;
 	}

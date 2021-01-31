@@ -156,7 +156,7 @@ set tiers-list-resistance:R1 R2 R2B
 set tier-ranking-mode:pedantic        => tier-rank-order:R1 R2 R2B 1 1R 1B 1BR 2 2R 3 3R 3B 3BR 4 4R 4B 4BR
 set tier-ranking-mode:conservative    => tier-rank-order:R1 1 R2 R2B 1R 1B 1BR 2 2R 3 3R 3B 3BR 4 4R 4B 4BR
 set tier-ranking-mode:balanced        => tier-rank-order:R1 1 1R 1B 1BR 2 2R R2 R2B 3 3R 3B 3BR 4 4R 4B 4BR
-set tier-ranking-mode:liberal         => tier-rank-order:R1 1 1R 1B 1BR 2 2R 3 R2 R2B 3R 3B 3BR 4 4R 4B 4BR
+set tier-ranking-mode:liberal         => tier-rank-order:R1 1 1R 1B 1BR 2 2R 3 3R 3B 3BR R2 R2B 4 4R 4B 4BR
 set tier-ranking-mode:unrestricted    => tier-rank-order:R1 1 1R 1B 1BR 2 2R 3 3R 3B 3BR 4 4R 4B 4BR R2 R2B
 
 # Setting (force) a default tiering mode:

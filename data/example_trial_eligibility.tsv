@@ -122,3 +122,4 @@ NCT02974725	KRAS:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT02974725	BRAF:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT02974725	NRAS:oncogenic_mutation; catype:Melanoma
 NCT04538664	EGFR:exon_20_insertion
+NCT04585815	BRAF:V600E
