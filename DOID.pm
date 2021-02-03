@@ -317,6 +317,7 @@ sub ngram { return scalar( split /\s+/, $_[0] ) }
 sub DO_match_catype_whole_word {
 	&ON_DEMAND_INIT;
 	my $x = shift;
+	
 	return $DO_cache{$x}[0] if ( exists $DO_cache{$x} ) ;
 	
 	my $matched_DOID ;

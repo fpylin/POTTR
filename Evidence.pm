@@ -432,9 +432,11 @@ sub gen_rule_knowledge_base {
 			}
 		}
 		
-		if ( scalar @lhs_catypes_ancestors ) { # FIXME: temporary fix for unrooted cancer type classes, until a cancer ontology is upgraded
+		if ( scalar @lhs_catypes_ancestors ) { # FIXME: temporary fix for unrooted cancer type classes, until a cancer type ontology is implemented
 			my ($a) = DO_match_catype('Solid tumour');
-			($a) = DO_match_catype('Liquid cancer') if ( grep { /hematologic/i } @lhs_catypes_ancestors );
+			($a) = DO_match_catype('Liquid cancer') if ( grep { /ha?ematologic|myelodysplas|macroglobulina?emia|leuka?emia|myeloma/i } @lhs_catypes_ancestors );
+# 			print map {"|| $_\n"} @lhs_catypes_ancestors ;
+# 			print "\n";
 			die $a if ! defined $DO_name{$a};
 			push @lhs_catypes_ancestors, ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
 		}

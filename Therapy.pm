@@ -159,6 +159,7 @@ sub is_drug_eviQ_listed {
 
 sub get_all_parents { # drug
 	&ON_DEMAND_INIT;
+	
 	my $x = mk_signature($_[0]);
 	my $visited = $_[1];
 	my %visited_stack;
@@ -177,6 +178,16 @@ sub get_all_parents { # drug
 			get_all_parents($z, $visited);
 		}
 	}
+	
+# 	print ">> $_[0]\t$drug_class_name{$_[0]}\n" if exists $drug_class_name{$_[0]};
+
+	if ( exists $drug_class_name{$_[0]} and $drug_class_name{$_[0]}  =~ / \+ / ) { # if the treatment is a combination therapy, then also traverse individual drug's parents
+		for my $z ( split / +\+ +/m, $drug_class_name{$_[0]} ) {
+			next if exists $$visited{$z};
+			get_all_parents($z, $visited);
+		}
+	}
+	
 	return map { ( $drug_preferred_name{$_} // $drug_class_name{$_} ) } keys %visited_stack;
 }
 

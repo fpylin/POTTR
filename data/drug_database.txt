@@ -767,3 +767,4 @@ EMB-02	bispecific_PD-1/LAG3_antibody
 YH002	anti-OX40_agnostic_monoclonal_antibody
 XMT-1536	anti-NaPi2b_antibody-drug_conjugate
 BI 894999|BI-894999	BET_inhibitor
+Eprenetapopt|APR-246	mutant_p53_reactivator

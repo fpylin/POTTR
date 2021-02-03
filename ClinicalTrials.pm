@@ -459,8 +459,14 @@ sub gen_rules_clinical_trials { # Generating clinical trial rules
 		my @healthconditions ;
 		if ( defined $healthconditions ) {
 			my @healthconditions = split /\s*;\s*/, $healthconditions ;
-			s/(?:metastatic|advanced)\s+//i for @healthconditions; # remove useless words
-			my @matched_codes = map { DOID::DO_match_catype_whole_word($_) } @healthconditions ;
+
+			for (@healthconditions) {
+				s/(?:metastatic|advanced)\s+//i ;
+				s/, adult$//gi;
+				s/tumor/tumour/gi;
+			}
+			
+			my @matched_codes = map { DOID::DO_match_catype_whole_word($_) } @healthconditions;
 			@matched_codes = uniq(@matched_codes);
 			
 # 			print join("\t", $_, DOID::DO_match_catype_whole_word($_) )."\n" for @healthconditions ;
