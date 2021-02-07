@@ -411,32 +411,65 @@ sub load_drug_trial_phase_database {
 
 
 ###########################################################################################################
-sub gen_rules_clinical_trials { # Generating clinical trial rules
+
+
+
+sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 	&ON_DEMAND_INIT ;
-	my $srcf = shift;
-	my $srcf_eligibility = shift; # eligibility file
-	my $outf = shift;             # pre-computed cache file
+	my $srcf = $_[0];
+	my @srcf_eligibility = @{ $_[1] } ; # eligibility files
+	my $outf = $_[2];                   # pre-computed cache file for the rules
 	my $trial_db = TSV->new( $srcf );
 	my %trial_db_by_trial_id = $trial_db->index_by('trial_id');
 	
-	if ( defined($outf) and ( -f $outf ) and ( mtime($srcf) < mtime($outf) ) and 
-		( ( defined($srcf_eligibility) and ( mtime($srcf_eligibility) < mtime($outf) ) ) or ! defined($srcf_eligibility) )
-		) { 
-		return file($outf);
+	if ( defined($outf) and ( -f $outf ) and ( mtime($srcf) < mtime($outf) ) ) { 
+		my $cache_is_recent = 1;
+		for my $srcf_eligibility ( @srcf_eligibility ) {
+			next if ! defined($srcf_eligibility) ;
+			next if ! -f $srcf_eligibility;
+			next if mtime($srcf_eligibility) < mtime($outf) ;
+			$cache_is_recent = 0;
+			last;
+		}
+		return file($outf) if $cache_is_recent ;
 	}
 	
-	my $Eligibility ;
+	
 	my %Eligibility_by_trial_id ;
-
-	if ( defined $srcf_eligibility ) {  # has eligibility file
-		$Eligibility = TSV->new( $srcf_eligibility );
-		for my $row ( @{ $Eligibility->{'data'} } ) {
+	
+	# The final eligibility of a trial is populated in conjunction of rule sets defined in each file (whereas 
+	# within each rule set, the rules are populated disjunction). Specifically: 
+	#   eligibility_list_1 x eligibility_list_2 x ... x eligibility_list_n =
+	#   { e11 & e21, e11 & e22, ... e12 & e21, e212 &e22 ...  }
+	# where eligibility_list_1 = { e11, e12, ... e1k }, eligibility_list_2 = { e21, e22, ... e2m } 
+	
+	for my $srcf_eligibility ( @srcf_eligibility ) {
+		my $Eligibility_this_file = ( ($srcf_eligibility =~ /.tsv/) ? 
+			TSV->new( $srcf_eligibility ) : # if defined as a TSV, then load as is, 
+			TSV->new( $srcf_eligibility, ['trial_id', 'eligibility_criteria'] ) # otherwise assume default order of fields of trial_id, ec
+		);
+			
+		my %Eligibility_by_trial_id_this_file ;
+		for my $row ( @{ $Eligibility_this_file->{'data'} } ) {
 			my $trial_id = $$row{'trial_id'};
 			my $ec = $$row{'eligibility_criteria'};
-			push @{ $Eligibility_by_trial_id{$trial_id} }, $ec;
+			push @{ $Eligibility_by_trial_id_this_file{$trial_id} }, $ec; # rules are populated in disjunction
 		}
-# 		%Eligibility_by_trial_id = $Eligibility->index_by('trial_id');
-	} 
+		
+		for my $trial_id ( keys %Eligibility_by_trial_id_this_file ) {
+			if ( exists $Eligibility_by_trial_id{$trial_id} ) { # if old rule set already exists, concatenate the new rules behind each of the old rules
+				for my $ec_old ( @{ $Eligibility_by_trial_id{$trial_id} } ) {
+					for my $ec_new ( @{ $Eligibility_by_trial_id_this_file{$trial_id} } ) {
+						$ec_old = join('; ', $ec_old, $ec_new);
+					}
+				}
+			} else { # populate all rules in disjunction.
+				push @{ $Eligibility_by_trial_id{$trial_id} }, @{ $Eligibility_by_trial_id_this_file{$trial_id} }; 
+			}
+		}
+		
+		# %Eligibility_by_trial_id = $Eligibility->index_by('trial_id'); # OLD CODE - TODELETE
+	}
 
 	my @uniq_trials = sort keys %trial_db_by_trial_id;
 	my @trials_rules;

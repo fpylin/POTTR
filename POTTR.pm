@@ -278,7 +278,7 @@ sub load_module_clinical_data_module {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('01C - Clinical data module');
 	
-# 	$rs->load( $self->gen_rules_drug_db_prior_therapy() ); # Not currently active.
+	$rs->load( $self->gen_rules_drug_db_prior_therapy() ); 
 }
 
 #######################################################################
@@ -431,23 +431,25 @@ sub load_module_drug_sensitivity_prediction {
 }
 
 
-# #######################################################################
-# sub gen_rules_drug_db_prior_therapy {
-# 	my $self = shift;
-# 	my @drug_db;
-# 	
-# 	for ( Therapy::get_all_drug_class_pairs() ) {
-# 		my ($d, $dc) = split /\t/, $_;
-# 		push @drug_db, mkrule( ["prior_therapy:$d"],  [ Facts::mk_fact_str("prior_therapy:$dc") ] );
-# 	}
-# 
-# 	for ( Therapy::get_all_drug_class_hierarchy() ) {
-# 		my ($a, $b) = split /\t/, $_;
-# 		push @drug_db, mkrule( ["prior_therapy:$b"], [ Facts::mk_fact_str("prior_therapy:$a") ] );
-# 	}
-# 
-# 	return $self->gen_rule_ret_msg( "Prior Therapy:", \@drug_db );
-# }
+########################################################################
+sub gen_rules_drug_db_prior_therapy {
+	my $self = shift;
+	my @drug_db;
+	
+	for ( Therapy::get_all_drug_class_pairs() ) {
+		my ($d, $dc) = split /\t/, $_;
+		my @all_parents = Therapy::get_all_parents($d);
+		push @all_parents, "systemic_therapy";
+		push @drug_db, mkrule( ["prior_therapy:$d"],  [ ( map { Facts::mk_fact_str("prior_therapy:$_") } @all_parents ) ] );
+	}
+
+	for ( Therapy::get_all_drug_class_hierarchy() ) {
+		my ($a, $b) = split /\t/, $_;
+		push @drug_db, mkrule( ["prior_therapy:$b"], [ Facts::mk_fact_str("prior_therapy:$a") ] );
+	}
+
+	return $self->gen_rule_ret_msg( "Prior Therapy:", \@drug_db );
+}
 
 #######################################################################
 sub gen_rules_drug_db {
@@ -594,14 +596,15 @@ sub load_module_preferential_trial_matching {
 	
 	my @trial_database_files = POTTRConfig::get_paths('data', 'clinical-trial-database-file'); 
 
-	my $trial_eligibility_file = POTTRConfig::get_first_path('data', 'clinical-trial-eligibility-file'); 
+	# multiple rule files are allowed to filter search results trials based on clinical eligibility
+	my @trial_eligibility_file = POTTRConfig::get_paths('data', 'clinical-trial-eligibility-file'); 
 	
 	for my $trial_database_file (@trial_database_files) {
 		$rs->load( $self->gen_rule_ret_msg(
 				$trial_database_file, [
 				 ClinicalTrials::gen_rules_clinical_trials(
 					$trial_database_file,
-					$trial_eligibility_file, 
+					@trial_eligibility_file, 
 					$trial_database_file.".rulescache.txt"
 				) ]
 			)

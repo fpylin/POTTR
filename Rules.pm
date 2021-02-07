@@ -33,10 +33,11 @@
 # Two types of rules:
 # 
 # 1. STATIC RULES are described using the following format:
-#   A => B          # if A then B
-#   A; B => C       # if A AND B then C
-#   A; NOT B => C   # if A AND NOT B then C
-#   A => B [TAG1]   # if A then B, with B now tagged with TAG1
+#   A => B              # if A then B
+#   A; B => C           # if A AND B then C
+#   A; NOT B => C       # if A AND NOT B then C
+#   A => B [TAG1]       # if A then B, with B now tagged with TAG1
+#   A; TRACK TAG1 => B  # same as above, allows inference tracking
 # 
 # 2. DYNAMIC RULES are evaluated by calling a perl subroutine, such that:
 #
@@ -154,7 +155,7 @@ sub string_to_tags_hashed($) {
 	my ($tags) = ( $input =~ /^.+\s*\[\s*(.+)\s*\]\s*$/ );
 	my @tags ;
 	@tags = split /\s*;\s*/, $tags if defined $tags ; # map { unescape($_) }
-	my %tags = map { my ($h, $v) = split /:/, $_, 2; $h => unescape($v // '') } @tags ;
+	my %tags = map { my ($h, $v) = split /:/, $_, 2; my $vv = unescape($v // ''); $h => $vv } @tags ;
 	return %tags;
 }
 
@@ -396,7 +397,7 @@ sub rule_to_string {
 	my $rule = $_[0];
 	my $output = 
 		($rule->{'prio'} ? "[prio:$rule->{'prio'}] " : '').
-		join("; ", map { ($rule->{'lhs_neg'}[$_]?'NOT ':'').$rule->{'lhs'}[$_] } (0 .. $#{$rule->{'lhs'}} ) ).
+		join("; ", map { ($rule->{'lhs_assert'}[$_]?'*':'').($rule->{'lhs_neg'}[$_]?'NOT ':'').$rule->{'lhs'}[$_] } (0 .. $#{$rule->{'lhs'}} ) ).
 		" => ".
 		join("; ", @{ $rule->{'rhs'} })
 		;
@@ -432,6 +433,7 @@ sub fire_rule {
 	my $self = shift; 
 	my $facts = shift;
 	my $rule = shift; 
+	my $constraints = shift; # optional refernce to additional tracking tags ;
 	my $n_new = 0;
 	my @rhs = @{ $$rule{'rhs'} };
 	return 0 if ! scalar (@rhs);
@@ -460,6 +462,14 @@ sub fire_rule {
 			}
 		}
 		
+		if ( defined $constraints and defined $constraints->{'tags'} )  { # and scalar( @{ $constraints->{'tags'} } )
+			my @new_tags = @{ $constraints->{'tags'} } ;
+# 			print "! ".scalar( @{ $constraints->{'tags'} } )."\n";
+# 			die if scalar( @{ $constraints->{'tags'} } );
+# 			print "<>$_<>\n" for @new_tags ;
+			push @tags, @new_tags ;
+		}
+		
 		$facts->assert_tags($e, @lhs_tags, @tags);
 	}
 	return $n_new;
@@ -471,25 +481,42 @@ sub match_rule_lhs {
 	my $rule = shift;
 	my @lhs = @{ $$rule{'lhs'} };
 	my @lhs_neg = @{ $$rule{'lhs_neg'} };
+	my @lhs_assert = @{ $$rule{'lhs_assert'} };
 	my @matched_cons; # matched constraints
 	my @unmatched_cons; # unmatched constraints
+	my @tracking_tags;
 	my @lhs_matched ;
 	for my $i (0..$#lhs){ 
 		my $lhs_cons = $lhs[$i]; # LHS constraint
-		my $f_has_fact = $facts->has_fact($lhs_cons) ;
+		my $f_has_fact ;
+		if ( $lhs_cons =~ /^TRACK +(.+)/ ) {
+			$f_has_fact = 1;
+			push @tracking_tags, $1;
+		} else {
+			$f_has_fact = $facts->has_fact($lhs_cons) ;
+		}
 		my $tf = ( ($lhs_neg[$i] != 0) ? # Handling negation: treating it as an XOR problem.
 			( $f_has_fact ? 0 : 1 ) :
 			( $f_has_fact ? 1 : 0 ) );
 		$lhs_matched[$i] = $tf;
-		if ($tf) {
-			push @matched_cons, $lhs_cons 
-		} else {
-			push @unmatched_cons, $lhs_cons 
+		if ($tf) { # constraint i satisfied
+			push @matched_cons, $lhs_cons ;
+		} else { # constraint i not satisfied
+			if ( $lhs_assert[$i] ) { # falsely assert a fact to satisfy a constraint, but track this fact to allow debugging
+				push @matched_cons, $lhs_cons ;
+				my $ttag = "*".($lhs_neg[$i] ? "NOT ": "").$lhs_cons ;
+				push @tracking_tags, $ttag ;
+				$lhs_matched[$i] = 1;
+			} else { # normal behaviour
+				push @unmatched_cons, $lhs_cons ;
+			}
 		}
 	}
+
 	my %constraints = (
 		'matched' => \@matched_cons,
-		'unmatched' => \@unmatched_cons
+		'unmatched' => \@unmatched_cons,
+		'tags' => \@tracking_tags
 	);
 	
 	my $n_lhs_matched = () = grep { $_ } @lhs_matched ;
@@ -534,8 +561,9 @@ sub run { # Rules::run - the main inference engine.
 				my @dyn_rule_rhs_to_fire = ( $self->{'dyn_rules'}{$dyn_rule}{'code'}->( $fact, $facts ) );
 				my @dyn_rule_lhs = ($fact);
 				my @fake_lhs = ($fact);
+				my @fake_lhs_assert = (0);
 				my @fake_lhs_neg = (0);
-				my %a = ('lhs' => \@fake_lhs, 'lhs_neg' => \@fake_lhs_neg, 'rhs' => \@dyn_rule_rhs_to_fire);
+				my %a = ('lhs' => \@fake_lhs, 'lhs_neg' => \@fake_lhs_neg, 'lhs_assert' => \@fake_lhs_assert, 'rhs' => \@dyn_rule_rhs_to_fire);
 				if (scalar @dyn_rule_rhs_to_fire) {
 					my $rule = \%a;
 				    $self->debug_print(31, "   ".join("  ", $self->{'dyn_rules'}{$dyn_rule}{'name'}, $fact, '=>', join('; ', @dyn_rule_rhs_to_fire)))  ;
@@ -552,6 +580,7 @@ sub run { # Rules::run - the main inference engine.
 		for my $prio ( sort {$a <=> $b} keys %static_ruleset_by_prio ) {
 			for my $rule ( @{ $static_ruleset_by_prio{$prio} } ) { 
 				my ( $f_match, $constraints ) = $self->match_rule_lhs($facts, $rule);
+# 				print "<$f_match> $_ <>\n" for @{ $constraints->{tags} } ;
 				
 				if ( $f_match ) {
 					my $match_id = join( "|", $rule->{'order'}, @{ $$constraints{'matched'} } );
@@ -559,7 +588,8 @@ sub run { # Rules::run - the main inference engine.
 
 					if (! exists $visited_rules{$match_id} ) {
 						my $n_lhs = scalar @{ $$rule{'lhs'} };
-						my $n_new_rule = $self->fire_rule($facts, $rule);
+						
+						my $n_new_rule = $self->fire_rule($facts, $rule, $constraints);
 						$self->debug_print( ($n_new_rule ? 33 : 34) , "   ".join("\t", $n_lhs, rule_to_string($rule)) ) ;
 						$n_new += $n_new_rule ;
 						$visited_rules{$match_id} = 1;
@@ -612,6 +642,8 @@ sub load { # Load if-then rules
 		
 # 		my @rhs = map { s/^\s*|\s*$//g; $_ } split /\s*;\s*/, $rhs;
 		my @lhs_neg ;
+		my @lhs_assert ; # false assertion for conditional constraint satisfication. Syntax "*LHS1"
+		for (@lhs) { push @lhs_assert, ( ( s/^\s*\*\s*// ) ? 1 : 0); } 
 		for (@lhs) { push @lhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); }
 		
 		if ( defined $prefix ) {
@@ -619,7 +651,7 @@ sub load { # Load if-then rules
 			$prio = $attrib{'prio'} if exists $attrib{'prio'} ;
 		}
 		
-		my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'rhs' => \@rhs);
+		my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs);
 		++$order ;
 		push @rules_spec, \%a;
 		$self->{'rules_str'}{$rule_str}++;
@@ -639,11 +671,13 @@ sub load { # Load if-then rules
 			my $rule_str = "$disj_lhs => $disj_rhs_orig";
 			next if exists $self->{'rules_str'}{$rule_str};
 			my @lhs = ($disj_lhs);
+			my @lhs_assert ;
 			my @lhs_neg ;
 			for (@lhs) {
+				push @lhs_assert, ( ( s/^\s*\*\s*// ) ? 1 : 0); 
 				push @lhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); 
 			}
-			my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'rhs' => \@rhs);
+			my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs);
 			++$order ;
 			push @rules_spec, \%a;
 			$self->{'rules_str'}{$rule_str}++;

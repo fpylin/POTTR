@@ -157,13 +157,58 @@ sub is_drug_eviQ_listed {
 	return is_a($_[0], 'eviQ_listed') ; 
 } 
 
+
+################################################################################
+{package CombinationCounter;
+        
+sub new {
+	my ($class, $groups_ref) = @_;
+	my @a = map { 0 } ( 0 .. $#{ $groups_ref } );
+	my $self = { 'groups' => $groups_ref, 'value' => \@a };
+	bless($self, $class);
+	return $self;
+	}
+
+sub incr {
+	my $self = shift;
+	my @a = @{ $self->{'value'} } ;
+	my @g = @{ $self->{'groups'} } ;
+	$a[0] ++;
+	for (my $d=0; $d <=$#a; ++$d) {
+		if ( ($d < scalar(@g)) and ($a[$d] >= scalar @{ $g[$d] }) ) {
+			$a[$d] = 0;
+			$a[$d+1] = 0 if $d >= scalar(@a);
+			$a[$d+1] ++;
+		}
+	}
+	$self->{'value'} = \@a;
+}
+
+sub overflow {
+	my $self = shift;
+	my @a = @{ $self->{'value'} } ;
+	my @g = @{ $self->{'groups'} } ;
+	return ( (scalar(@g)<scalar(@a)) and ($a[scalar(@g)] > 0) )
+}
+
+sub get {
+	my $self = shift;
+	my @a = @{ $self->{'value'} } ;
+	my @g = @{ $self->{'groups'} } ;
+	my @v = map { $g[$_][ $a[$_] ] } (0..$#g);
+	return @v;
+}
+
+1;
+}
+
 sub get_all_parents { # drug
 	&ON_DEMAND_INIT;
 	
 	my $x = mk_signature($_[0]);
 	my $visited = $_[1];
 	my %visited_stack;
-	
+# 	print STDERR "\e[1;31m$_[0]\e[0m\n";
 	$visited = \%visited_stack if ! defined $visited ;
 	${$visited}{$x} = 1;
 	
@@ -179,16 +224,29 @@ sub get_all_parents { # drug
 		}
 	}
 	
-# 	print ">> $_[0]\t$drug_class_name{$_[0]}\n" if exists $drug_class_name{$_[0]};
+# 	print ">> $_[0]\t$drug_class_name{$x}\n" if exists $drug_class_name{$x};
 
-	if ( exists $drug_class_name{$_[0]} and $drug_class_name{$_[0]}  =~ / \+ / ) { # if the treatment is a combination therapy, then also traverse individual drug's parents
-		for my $z ( split / +\+ +/m, $drug_class_name{$_[0]} ) {
+	if ( exists $drug_class_name{$x} and $drug_class_name{$x}  =~ / \+ / ) { # if the treatment is a combination therapy, then also traverse individual drug's parents
+		my @components =  split / +\+ +/m, $drug_class_name{$x};
+		my @components_r;
+		for my $z ( @components ) {
 			next if exists $$visited{$z};
-			get_all_parents($z, $visited);
+			get_all_parents( $z, $visited);
+			push @components_r, [ get_all_parents($z) ];
+# 			print map {">>>> $_ @components_r\n"} get_drug_classes($z); 
+		}
+		
+		for ( my $combo = CombinationCounter->new(\@components_r); ! $combo->overflow(); $combo->incr() ) {
+			my @combo = $combo->get();
+# 			print map { "[[$_]]\n" } @combo;
+			my $z = join(" + ", ( sort map { get_normalised_treatment_class_name($_) } @combo) );
+			my $zsig = mk_signature($z);
+			$drug_class_name{$zsig} = $z;
+			$$visited{$zsig} = 1;
 		}
 	}
 	
-	return map { ( $drug_preferred_name{$_} // $drug_class_name{$_} ) } keys %visited_stack;
+	return sort map { ( $drug_preferred_name{$_} // $drug_class_name{$_} ) } keys %visited_stack;
 }
 
 
@@ -301,49 +359,7 @@ sub get_drug_classes {
 
 
 
-################################################################################
-{package CombinationCounter;
-        
-sub new {
-	my ($class, $groups_ref) = @_;
-	my @a = map { 0 } ( 0 .. $#{ $groups_ref } );
-	my $self = { 'groups' => $groups_ref, 'value' => \@a };
-	bless($self, $class);
-	return $self;
-	}
 
-sub incr {
-	my $self = shift;
-	my @a = @{ $self->{'value'} } ;
-	my @g = @{ $self->{'groups'} } ;
-	$a[0] ++;
-	for (my $d=0; $d <=$#a; ++$d) {
-		if ( ($d < scalar(@g)) and ($a[$d] >= scalar @{ $g[$d] }) ) {
-			$a[$d] = 0;
-			$a[$d+1] = 0 if $d >= scalar(@a);
-			$a[$d+1] ++;
-		}
-	}
-	$self->{'value'} = \@a;
-}
-
-sub overflow {
-	my $self = shift;
-	my @a = @{ $self->{'value'} } ;
-	my @g = @{ $self->{'groups'} } ;
-	return ( (scalar(@g)<scalar(@a)) and ($a[scalar(@g)] > 0) )
-}
-
-sub get {
-	my $self = shift;
-	my @a = @{ $self->{'value'} } ;
-	my @g = @{ $self->{'groups'} } ;
-	my @v = map { $g[$_][ $a[$_] ] } (0..$#g);
-	return @v;
-}
-
-1;
-}
 #################################################################################
 
 sub get_combo_classes { # from drugs

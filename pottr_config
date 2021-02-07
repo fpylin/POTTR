@@ -250,9 +250,12 @@ clinical-trial-database-file      = example_trial_DB_2.tsv  # Expanded access pr
 #  NCT02857270	NRAS:alteration; catype:Melanoma
 #  NCT02857270	catype:Non-small cell lung cancer; (BRAF:alteration OR KRAS:alteration OR NRAS:alteration)
 #  NCT02857270	catype:colorectal cancer; BRAF:V600E
+#  
+#  Multiple files are allowed. 
 ################################################################################
 
-clinical-trial-eligibility-file   = example_trial_eligibility.tsv       # Trial-specific criteria
+clinical-trial-eligibility-file   = example_trial_eligibility.tsv                    # Trial-specific criteria, manually entered
+clinical-trial-eligibility-file   = example_trial_eligibility-annotations.txt        # Trial-specific criteria
 
 ################################################################################
 # THERAPY MATURITY FILE - (OPTIONAL) Databases used to assess the maturity of 

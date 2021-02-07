@@ -374,6 +374,7 @@ sub extract_preferential_trials {
 	for my $line ( @results_preferential_trials ) {
 		my ($trial_id, $tags) = ( $line =~ /^preferential_trial_id:(\S+)\s*\[(.+)\]\s*$/ );
 		my %tags = Facts::string_to_tags_hashed($line);
+		my ($fact, @tags) = Facts::string_to_fact_and_tags($line);
 		
 		my %referred_genes = map { $_ => 1 } ( $tags =~ /referred_from:(.+?)[;\]]/g );
 		my %referred_drugs = map { $_ => 1 } ( $tags =~ /INFERRED:treatment_drug:(.+?)[;\]]/g );
@@ -393,6 +394,7 @@ sub extract_preferential_trials {
 		my $matched_trial_referred_drug_classes_score =  $tags{'referred_drug_classes_score'};
 		my $matched_trial_LOM_score            =  $tags{'LOM'} // 'Not assessed';
 		my $ext_weblink                        =  $tags{'ext_weblink'};
+		my $notes                              =  join("; ", grep { /^\*/ } @tags);
 		
 		my @matched_drug_names   = split /\s*;\s*/, $matched_drug_names ;
 		@matched_drug_names = uniq( map { Therapy::get_preferred_drug_name($_) } @matched_drug_names );
@@ -429,7 +431,8 @@ sub extract_preferential_trials {
 			'healthcondition' => \@healthconditions,
 			'postcodes' => \@postcodes,
 			'LOM' => $matched_trial_LOM_score,
-			'ext_weblink' => $ext_weblink
+			'ext_weblink' => $ext_weblink,
+			'notes' => $notes
 		);
 		push @retval, \%row;
 	}
@@ -837,7 +840,7 @@ sub gen_preferential_trial_report {
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", 
 		"Trial ID", "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria", "Level of matching",
-		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode", "External weblink"
+		"Drugs", "Drug classes", "Cancer types", "Full title", "Postcode", "External weblink", "Notes"
 		)."\n";
 
 	my $cnt = 1;
@@ -923,6 +926,7 @@ sub gen_preferential_trial_terminal {
 		push @lines, join("\t", "Health conditions",          $healthcondition )."\n";
 		push @lines, join("\t", "Postcodes",                  $postcodes )."\n";
 		push @lines, join("\t", "External weblink",           $$row{'ext_weblink'} )."\n";
+		push @lines, join("\t", "Notes",                      $$row{'notes'} )."\n" if length $$row{'notes'} ;
 		push @lines, join("\t", " " )."\n";
 		++$cnt ;
 	}
@@ -953,7 +957,7 @@ sub gen_HTML_preferential_trial_report {
 	my $output = "<h2>List of biomarker matched clinial trials registered in ANZCTR:</h2>\n";
 	$output .= "<table id=trial_list>\n";
 	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Trial ID",  "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria",
-		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
+		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode", "Notes") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
 
 	my $cnt = 0;
 
@@ -969,6 +973,7 @@ sub gen_HTML_preferential_trial_report {
 		my $healthcondition      = join(",<br/>", @{ $$row{'healthcondition'} } ); 
 		my $postcodes            = "<div style='column-count:2'>".join("<br/>\n", @{ $$row{'postcodes'} })."</div>\n";
 		my $trial_match_criteria = join("; ", @{ $$row{'trial_match_criteria'} });
+		my $notes                = $$row{'notes'} ;
 
 		my $oe = (($cnt % 2) ? 'e': 'o');
 		$output .= "<tr class=$oe>".join("", ( map {"<td>$_</td>"} (
@@ -986,6 +991,7 @@ sub gen_HTML_preferential_trial_report {
 				$healthcondition,
 				(length( $$row{'$trialacronym'} ) ? "<b>[$$row{'$trialacronym'}]</b> " : "").$$row{'full_title'},
 				$postcodes,
+				$notes
 				)
 			)
 		)."</tr>\n";

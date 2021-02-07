@@ -3,7 +3,7 @@ drug	drug_class
 Satoreotide Tetraxetan|177Lu-OPS201|177Lu-IPN01072	177Lu-DOTA-radioconjugate
 177Lu-PSMA	177Lu-PSMA-radioconjugate
 177Lu-edotreotide	177Lu-DOTA-radioconjugate
-2X-121|E-7449|E7449	PARP_inhibitor; TNKS_inhibitor
+2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
 Zimberelimab|AB122|AB 122|AB-122|GLS 010|GLS-010|GLS010	anti-PD-1_monoclonal_antibody
 AB154|AB 154|AB-154	anti-TIGIT_monoclonal_antibody
@@ -243,8 +243,10 @@ FF-10850|FF 10850|FF10850	topoisomerase_inhibitor
 FLX475|FLX 475|FLX-475	CCR4_inhibitor
 FN-1501|FN 1501|FN1501	CDK2/4/6/FLT3_inhibitor
 FOLFIRI	fluorouracil + irinotecan
-FOLFIRINOX	fluorouracil + oxaliplatin + irinotecan
-FOLFOX|FOLFOX6	fluorouracil + oxaliplatin
+FOLFIRINOX|mFOLFIRINOX	fluorouracil + oxaliplatin + irinotecan
+FOLFOXIRI	fluorouracil + oxaliplatin + irinotecan
+FLOT	fluorouracil + oxaliplatin + docetaxel
+FOLFOX|FOLFOX6|FOLFOX4|mFOLFOX|mFOLFOX6	fluorouracil + oxaliplatin
 FPT155|FPT 155|FPT-155	soluble_CD80_fusion_protein
 Fianlimab|REGN 3767|REGN3767|WHO 11182	anti-LAG3_monoclonal_antibody
 Filgrastim|G-CSF|Neupogen|Recombinant Methionyl Human Granulocyte Colony Stimulating Factor|Tevagrastim	granulocyte_colony_stimulating_factor
@@ -581,7 +583,7 @@ Toripalimab|JS001|TAB 001|TAB-001	anti-PD-1_monoclonal_antibody
 Trametinib|GSK1120212|JTP-74057|Mekinist	MEK_inhibitor
 Trastuzumab Deruxtecan|Fam-trastuzumab deruxtecan-nxki|DS-8201|Enhertu|WHO 10516	anti-ERBB2_antibody-drug_conjugate
 Trastuzumab Emtansine|Ado-Trastuzumab Emtansine|Kadcyla|PRO132365|RO5304020|T-DM1|Trastuzumab-DM1|Trastuzumab-MCC-DM1	anti-ERBB2_antibody-drug_conjugate
-Trastuzumab|Herceptin|ABP 980|ALT02|Anti-ERB-2|Anti-HER2/c-erbB2 Monoclonal Antibody|Anti-c-ERB-2|Anti-c-erbB2 Monoclonal Antibody|Anti-erbB-2|Anti-erbB2 Monoclonal Antibody|Anti-p185-HER2|HER2 Monoclonal Antibody|Herzuma|MoAb HER2|Monoclonal Antibody HER2|Monoclonal Antibody c-erb-2|Ogivri|Ontruzant|PF-05280014|RO0452317|SB3|Trazimera|c-erb-2 Monoclonal Antibody|rhuMAb HER2	anti-ERBB2_monoclonal_antibody
+Trastuzumab|Herceptin|ABP 980|ALT02|Anti-p185-HER2|Herzuma|Ogivri|Ontruzant|PF-05280014|RO0452317|SB3|Trazimera|rhuMAb HER2	anti-ERBB2_monoclonal_antibody
 Tremelimumab|CP-675|Ticilimumab	anti-CTLA-4_monoclonal_antibody
 Trifluridine/Tipiracil|Lonsurf|TAS 102|TAS-102|Tipiracil Hydrochloride Mixture with Trifluridine|Trifluridine and Tipiracil Hydrochloride	antimetabolite; thymidine_phosphorylase_inhibitor
 Triptorelin|6-D-Tryptophan-LH-RH|6-D-Tryptophanluteinizing Hormone-releasing Factor|AY-25650|CL-118,532|Detryptoreline	LHRH_agonist
@@ -612,8 +614,6 @@ Zolbetuximab|Claudiximab|IMAB 362|IMAB-362|IMAB362	anti-Claudin_18.2_antibody
 Zoledronic Acid|Zometa|CGP 42446|CGP42446A|NDC-Zoledronate|Reclast|ZOL 446	bisphosphonate
 bacTRL-IL-12|Bifidobacterium longum Encoding IL-12|Genetically Modified IL-12 Transgene-encoding Bifidobacterium longum|Genetically Modified Interleukin-12 Transgene-encoding Bifidobacterium longum	bifidobacterium-delivered_IL-12
 canakinumab	anti-IL-1beta_antibody
-mFOLFOX	fluorouracil + oxaliplatin
-mFOLFOX6	fluorouracil + oxaliplatin
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 radiotherapy	radiotherapy
 MK-1697	unknown_drug_class

@@ -17,28 +17,30 @@ AXL_inhibitor	AXL/FLT3_inhibitor
 AXL_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
 BCL2_inhibitor
 BCR-ABL1_inhibitor
-BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,first_generation
-BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,second_generation
-BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,third_generation
 BCR-ABL1_inhibitor	BCR-ABL1/KIT/PDGFR_inhibitor
 BCR-ABL1_inhibitor	BCR-ABL1/PDGFR/KIT/SRC_inhibitor
 BCR-ABL1_inhibitor	BCR-ABL1/SRC_inhibitor
 BCR-ABL1_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
+BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,first_generation
+BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,second_generation
+BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,third_generation
 BET_inhibitor
 BRAF_inhibitor	BRAF_V600_inhibitor
 BRAF_inhibitor	RAF_dimer_inhibitor
 BTK_inhibitor
+CAR_T_cell_therapy	LeY_CAR_T_cell
+CAR_T_cell_therapy	autologous_GD2_CAR_T_cells
+CAR_T_cell_therapy	CD19-directed_CAR_T_cell
 CCR2/CCR5_antagonist
 CCR4_inhibitor
-CAR_T_cell CD19-directed_CAR_T_cell
 CD40L-Fc_fusion_protein 
 CD73_inhibitor
 CDH6-targeting_DM4-based_antibody-drug_conjugate
-CDK2_inhibitor	CDK1/2/5/9_inhibitor
 CDK12/CDK13‎_inhibitor
-CDK4/6_inhibitor
+CDK2_inhibitor	CDK1/2/5/9_inhibitor
 CDK2_inhibitor	CDK2/4/6_inhibitor	CDK2/4/6/FLT3_inhibitor
-FLT3_inhibitor	CDK2/4/6/FLT3_inhibitor
+CDK4/6_inhibitor
+CDK4/6_inhibitor	CDK2/4/6_inhibitor	CDK2/4/6/FLT3_inhibitor
 CHEK1_inhibitor	ATR/CHEK1_inhibitor
 CXCR2_antagonist
 CYP17A1_inhibitor
@@ -61,18 +63,16 @@ ERK_inhibitor	AKT/ERK_inhibitor
 EWS-FLI1_inhibitor
 EZH2_inhibitor
 FGFR_inhibitor
+FGFR_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
 FGFR_inhibitor	FGFR1/2/3_inhibitor
+FGFR_inhibitor	FGFR4_inhibitor
 FGFR_inhibitor	FGFR_inhibitor,type_2
 FGFR_inhibitor	pan-FGFR_inhibitor
-FGFR_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
-FGFR_inhibitor	FGFR4_inhibitor
 FLT3_inhibitor	AXL/FLT3_inhibitor
 FLT3_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
+FLT3_inhibitor	CDK2/4/6/FLT3_inhibitor
 FLT3_inhibitor	FLT3/KIT_inhibitor
 FLT3_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
-GnRH_agonist
-GnRH_agonist	GnRH_analogue
-GnRH_antagonist
 Granulocyte-Macrophage_Colony_Stimulating_Factor
 Growth_hormone_secretagogue_receptor_agonist
 HDAC_inhibitor
@@ -100,10 +100,11 @@ KIT_inhibitor	KIT_inhibitor,first_generation
 KIT_inhibitor	KIT_inhibitor,switch_control_kinase_inhibitor
 KRAS_inhibitor	KRAS_G12C_inhibitor
 LHRH_agonist
-CAR_T_cell	LeY_CAR_T_cell
 MCL1_inhibitor
 MDM2_inhibitor
+MDM2_inhibitor	p53-HDM2_interaction_inhibitor
 MEK_inhibitor
+MEK_inhibitor	RAF/MEK_inhibitor
 MET_inhibitor
 MET_inhibitor	ALK/ROS1/MET_inhibitor
 MET_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
@@ -114,7 +115,7 @@ MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
 NFKB_inhibitor
 NOTCH_inhibitor
 PARP_inhibitor
-PARP_inhibitor	PARP/TNKS Inhibitor
+PARP_inhibitor	PARP/TNKS_inhibitor
 PDGFRA_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
 PDGFRA_inhibitor	KIT_D816V/PDGFRA_inhibitor
 PDGFRB_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
@@ -123,9 +124,10 @@ PDGFR_inhibitor	BCR-ABL1/PDGFR/KIT/SRC_inhibitor
 PDGFR_inhibitor	KIT/PDGFR_inhibitor
 PI3K-gamma_inhibitor
 PI3K/mTOR_inhibitor
-PI3K_alpha/PI3K_delta_inhibitor
-PI3K_alpha_inhibitor
+PI3K_alpha_inhibitor	PI3K_alpha/PI3K_delta_inhibitor
 PI3K_beta_inhibitor
+PI3K_delta_inhibitor	PI3K_alpha/PI3K_delta_inhibitor
+PI3K_alpha_inhibitor
 PI3K_inhibitor
 PKC/VEGFR2/KIT/PDGFR/FLT3_inhibitor
 PKC_inhibitor
@@ -134,6 +136,7 @@ PORCN_inhibitor
 PRIMA-1_analog
 PRMT_inhibitor,type_1
 PSMA_bispecific_T-cell_engager
+RAF_inhibitor	RAF/MEK_inhibitor
 RET_inhibitor
 RET_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
 RNA_polymerase_I_transcription_inhibitor
@@ -191,7 +194,7 @@ anti-ERBB3_monoclonal_antibody
 anti-EphA3_antibody
 anti-FGFR2_monoclonal_antibody
 anti-GARP_monoclonal_antibody
-anti-GD2_antibody
+anti-GD2_monoclonal_antibody
 anti-GITR_monoclonal_antibody
 anti-ICOS_agonist_antibody
 anti-IGF_ligand_antibody
@@ -225,10 +228,8 @@ antiandrogen	antiandrogen,steroidal
 antifolate
 antihistamine
 arginine_deiminase-polyethylene_glycol_conjugate
-aromatase_inhibitor
 arsenic
 asparaginase
-CAR_T_cell	autologous_GD2_CAR_T_cells
 azole_antifungal
 benzodiazepam
 benzopyran
@@ -244,11 +245,11 @@ cell_penetrating_peptide
 cytotoxic_chemotherapy	alkylating_agent
 cytotoxic_chemotherapy	alkylating_agent	DNA_minor_groove-binding_agent
 cytotoxic_chemotherapy	anthracycline
+cytotoxic_chemotherapy	anthracycline	doxorubicin
 cytotoxic_chemotherapy	antimetabolite
 cytotoxic_chemotherapy	antimetabolite	capecitabine
 cytotoxic_chemotherapy	antimetabolite	fluorouracil
 cytotoxic_chemotherapy	antineoplastic_antibiotic
-cytotoxic_chemotherapy	anthracycline	doxorubicin
 cytotoxic_chemotherapy	platinum-based_antineoplastic_agent
 cytotoxic_chemotherapy	taxane
 cytotoxic_chemotherapy	topoisomerase_inhibitor
@@ -257,6 +258,12 @@ dectin_receptor_agonist
 dipeptidyl_peptidase-4_inhibitor
 docetaxel-P-glycoprotein_inhibitor
 docetaxel-loaded_nanopharmaceutical
+endocrine_therapy	GnRH_agonist
+endocrine_therapy	GnRH_agonist	GnRH_analogue
+endocrine_therapy	GnRH_antagonist
+endocrine_therapy	aromatase_inhibitor
+endocrine_therapy	selective_estrogen_receptor_degrader
+endocrine_therapy	selective_estrogen_receptor_modulator
 farnesyltransferase_inhibitor
 folinic_acid
 gamma_secretase_inhibitor
@@ -280,14 +287,14 @@ immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1_VEGF_monoclonal_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	PD-L1/TGF-beta_fusion_protein
+immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	PD-L1_inhibitor,oral
+immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	anti-PD-1_x_IL21_mutein
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	anti-PD-L1_and_TGF-β_monoclonal_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	anti-PD-L1_monoclonal_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	bispecific_PD-1/PD-L1_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	bispecific_PD-L1/CTLA-4_antibody
-immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	protease-activated_anti-PD-L1_monoclonal_antibody
-immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	PD-L1_inhibitor,oral
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	dual_PD-L1/CTLA-4_inhibitor
-immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	anti-PD-1_x_IL21_mutein
+immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	protease-activated_anti-PD-L1_monoclonal_antibody
 immunopotentiator
 intravenous_immunoglobulin
 iron_chelator
@@ -300,7 +307,6 @@ miR-16_miRNA_mimic
 microtubule_stabilizing_agent
 nanoparticle_Stat3/NF-kB/poly-TKI
 orotate_phosphoribosyltransferase_inhibitor
-MDM2_inhibitor	p53-HDM2_interaction_inhibitor
 pegylated_IL-10
 peptide_receptor_radionuclide_therapy
 peptide_receptor_radionuclide_therapy	177Lu-DOTA-radioconjugate
@@ -318,8 +324,6 @@ recombinant_human_TRAIL_trimer_fusion_protein
 recombinant_human_hyaluronidase
 reduced_folate-based_biomodulator
 rose_bengal_disodium
-selective_estrogen_receptor_degrader
-selective_estrogen_receptor_modulator
 sodium-potassium_ATPase_inhibitor
 sodium_arsenite
 soluble_CD80_fusion_protein
@@ -341,5 +345,3 @@ virus-based_therapy	oncolytic_Coxsackie_virus,ICAM_overexpressing
 virus-based_therapy	oncolytic_HSV_virus
 virus-based_therapy	replication-competent_oncolytic_adenovirus
 virus-based_therapy	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
-RAF_inhibitor	RAF/MEK_inhibitor
-MEK_inhibitor	RAF/MEK_inhibitor
