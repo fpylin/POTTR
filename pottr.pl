@@ -926,7 +926,7 @@ sub gen_preferential_trial_terminal {
 		push @lines, join("\t", "Health conditions",          $healthcondition )."\n";
 		push @lines, join("\t", "Postcodes",                  $postcodes )."\n";
 		push @lines, join("\t", "External weblink",           $$row{'ext_weblink'} )."\n";
-		push @lines, join("\t", "Notes",                      $$row{'notes'} )."\n" if length $$row{'notes'} ;
+		push @lines, join("\t", "Notes",                      hl(31, $$row{'notes'}) )."\n" if length $$row{'notes'} ;
 		push @lines, join("\t", " " )."\n";
 		++$cnt ;
 	}
@@ -945,7 +945,7 @@ sub gen_preferential_trial_terminal {
 sub mk_trial_href {
 	my $x = shift;
 	
-	$x =~ s!\b((?:NCT|ACTRN)\d+)\b!'<a href="'.ClinicalTrials::get_trial_href($1).'" target=_blank>'.$1.'</a>'!ge ;
+	$x =~ s!\b((?:NCT|ACTRN)\d+[Pp]?)\b!'<a href="'.ClinicalTrials::get_trial_href($1).'" target=_blank>'.$1.'</a>'!ge ;
 	
 	return $x;
 }

@@ -276,7 +276,7 @@ sub get_normalised_treatment_class_name {
 
 sub get_drug_synonyms {
 	&ON_DEMAND_INIT;
-	return sort keys %{ $drug_synonyms{ mk_signature($_[0]) } };
+	return sort keys %{ $drug_synonyms{ mk_signature( get_normalised_treatment_name($_[0]) ) } };
 }
 
 sub get_drug_regex {

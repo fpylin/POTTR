@@ -558,7 +558,7 @@ sub run { # Rules::run - the main inference engine.
 		for my $fact (@dyn_rule_unmatched_facts) {
 			$dyn_rule_facts_matched{$fact}++;
 			for my $dyn_rule (@dyn_ruleset) {
-				my @dyn_rule_rhs_to_fire = ( $self->{'dyn_rules'}{$dyn_rule}{'code'}->( $fact, $facts ) );
+				my @dyn_rule_rhs_to_fire = ( $self->{'dyn_rules'}{$dyn_rule}{'code'}->( $fact, $facts, \%{ $self->{'cache'} } ) );
 				my @dyn_rule_lhs = ($fact);
 				my @fake_lhs = ($fact);
 				my @fake_lhs_assert = (0);
@@ -804,6 +804,8 @@ sub print {
 sub run {
 	my ($self, @facts) = @_;
 
+	$self->{'cache'} = (); # clear the runtime cache, used for storing dynamic runtime private facts
+	
 	my $debug_output ;
 	for my $ruleset_name (sort keys %{ $self->{'modules'} }) {
 		$self->{'modules'}{$ruleset_name}->debug_print(37, "Running module: $ruleset_name");

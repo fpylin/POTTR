@@ -42,11 +42,12 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	EGFR	C797S, C797G	Non-Small Cell Lung Cancer	Erlotinib; Gefitinib		32206559
 3	EGFR	Exon 19 deletion, L858R	Non-Small Cell Lung Cancer	Amivantamab + Lazertinib	ORR 36% 15PR 1CR in osimertinib resistance cohort. ORR 100% treatment naive	10.1016/j.annonc.2020.08.1572
 3	EGFR	Exon 19 insertion	Non-Small Cell Lung Cancer	Erlotinib; Gefitinib		28089594
-3	EGFR	Exon 20 insertion	Non-Small Cell Lung Cancer	Poziotinib	ZENITH20. ORR point not met but overall tumor reduction seen. AACR:2020 CT081	NCT03318939
+3	EGFR	Exon 20 insertion	Non-Small Cell Lung Cancer	Poziotinib	ZENITH20. ORR 35% (combined EGFR and ERBB2 groups). PFS 5.5 months	10.1016/j.annonc.2020.08.2293
 3	EGFR	Exon 20 insertion	Non-Small Cell Lung Cancer	TAK-788	AACR 2020	NCT02716116
 3	EGFR	S768I, A767_V769dup, P772dupDNP, S768_D770dup, D770insG, D770insY, H773Y, N771insH, D770delinsGY	Non-Small Cell Lung Cancer	Poziotinib		29686424
 3	EGFR+MET	EGFR:oncogenic mutation and MET:amplification	Non-Small Cell Lung Cancer	Osimertinib + Savolitinib	Phase 1B TATTON. Significant ORR	32027846, 10.1158/1538-7445.AM2019-CT032
 3	ERBB2	A775_G776insYVMA, G776ins, G776R, G776C, P780_Y781insGSP, V777L	Non-Small Cell Lung Cancer	Pyrotinib	NCT02834936	32614698
+3	ERBB2	Exon 20 insertion	Non-Small Cell Lung Cancer	Poziotinib	ZENITH20. ORR 35% (combined EGFR and ERBB2 groups). PFS 5.5 months	10.1016/j.annonc.2020.08.2293
 3	ERBB2	G778_P780dup	Non-Small Cell Lung Cancer	Afatinib; Dacomitinib; Pyrotinib; Poziotinib		32036069
 3	ERBB2	Kinase domain mutation	Non-Small Cell Lung Cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01	10.1200/JCO.2020.38.15_suppl.9504
 3	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-Small Cell Lung Cancer	Pyrotinib		30596880
@@ -89,6 +90,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR	L747P, L747S	Non-Small Cell Lung Cancer	Afatinib	Retrospective sample	31200815
 4	EGFR	L747S, D761Y, T854A	Non-Small Cell Lung Cancer	Afatinib; Osimertinib	Cell line study	28424065
 4	EGFR	L833V	Non-Small Cell Lung Cancer	Gefitinib	Case report	21422421
+4	EGFR	Oncogenic mutation	Non-Small Cell Lung Cancer	Patritumab Deruxtecan	Treatment-refractory EGFR mutant NSCLC. ORR 25% seen in multiple mechanisms of EGFR TKI resistance.	10.1016/j.annonc.2020.08.2295
 4	EGFR	Overexpression	Non-Small Cell Lung Cancer; Head and Neck Squamous Cell Carcinoma	Serclutamab Talirine		10.1200/JCO.2020.38.15_suppl.TPS3649
 4	EGFR	T790M and C797S and T790M-C797S trans-allelic conformation	Non-small cell lung cancer	Erlotinib + Osimertinib		31075545
 4	EGFR+ALK	EGFR:oncogenic mutation and ALK:fusion	Non-Small Cell Lung Cancer	Osimertinib + Crizotinib; Osimertinib + Alectinib	Two case reports	30957057

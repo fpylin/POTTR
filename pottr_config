@@ -51,6 +51,14 @@ disease-ontology-file = doid.obo
 
 biomarker-synonym-file = biomarker_synonyms.txt
 
+##############################################################################
+# Variant synonyms  [OPTIONAL] - 
+# File format
+# - variant_preferred_term <TAB> preferred_term_1 <TAB> preferred_term_2 ...
+##############################################################################
+
+variant-synonym-file = variant_synonyms.txt
+
 
 ##############################################################################
 # VARIANT FEATURE FILE [OPTIONAL] - a database for annotating gene features 
@@ -255,7 +263,7 @@ clinical-trial-database-file      = example_trial_DB_2.tsv  # Expanded access pr
 ################################################################################
 
 clinical-trial-eligibility-file   = example_trial_eligibility.tsv                    # Trial-specific criteria, manually entered
-clinical-trial-eligibility-file   = example_trial_eligibility-annotations.txt        # Trial-specific criteria
+clinical-trial-eligibility-file   = example_trial_eligibility_annotations.txt        # Trial-specific criteria
 
 ################################################################################
 # THERAPY MATURITY FILE - (OPTIONAL) Databases used to assess the maturity of 

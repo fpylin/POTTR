@@ -237,7 +237,7 @@ sub load_module_variant_feature_mapping {
 			($entity, $etype, $espec) = ($1, $2, '');
 		} else {
 			for ($f) {
-				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|\(initial-fact\))/; # FIXME - need a list of biomarkers
+				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|info|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
 				/^([^:]+):(.*(?:splice|skipping).*)$/i   and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };
 				/^([^:]+):(?:deletion|homozygous_deletion)$/i  and do { ($entity, $etype, $espec) = ($1, 'D', ''); last; };
@@ -292,19 +292,30 @@ sub load_module_variant_evidence_grading {
 		$evidence_base_label //= "KB$cnt";
 		$evidence_base_label =~ s|.*/||;
 		$evidence_base_label =~ s|\W.*||;
-# 		my ($evidence_base_label) = ( $evidence_base_file =~ /^(?:.+\/)?(\w+)/ ); # "GIMRKB";
 		$rs->load( Evidence::gen_rule_knowledge_base( $evidence_base_label, $evidence_base_file, $evidence_base_file.".rulescache.txt" ) );
 		++ $cnt ;
 	}
 
-	
 	$rs = $self->{'modules'}->add_module('02B - Evidence Grade Summary');
-	$rs->define_dyn_rule( 'summary_grade',  sub { my $f = shift; my $facts = $_[0];
+
+	$rs->define_dyn_rule( 'summary_grade',  sub { my $f = shift; my $facts = $_[0]; # my $cache = $_[1];
 		return () if $f !~ /^(\S+):(treatment(?:_class)?):(.+?)\s*\(/ ;
 		my ($biomarker, $type, $therapy) = ($1, $2, $3);
+		my $btt = join(":", $biomarker, $type, $therapy);
+# 		return () if exists $$cache{'summary_grade'}{'visited'}{$btt};
+# 		$$cache{'summary_grade'}{'visited'}{$btt} = 1;
+# 		$cntf{$btt}++; print STDERR "$cache\t$cntf{$btt}\t$btt\n";
+		
 		my $tier_list_regex = $self->{'tier_list_regex'} // '[[:alnum:]]+';
 
-		my @matched_facts = grep { /:$type:.*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|, (?i:inferred|referred) from|, histotype agnostic)/ } ( $facts->get_facts_list() ); # R?[1234S][ABR]?
+		my @matched_facts ;
+
+# 		if ( exists $$cache{'summary_grade'}{'matched_facts'} ) { # Computationally redundant and expensive search. Using cache
+# 			@matched_facts = @{ $$cache{'summary_grade'}{'matched_facts'} } ;
+# 		} else {
+			@matched_facts = grep { /:$type:.*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|, (?i:inferred|referred) from|, histotype agnostic)/ } ( $facts->get_facts_list() ); # R?[1234S][ABR]?
+# 			$$cache{'summary_grade'}{'matched_facts'} = \@matched_facts;
+# 		}
 		
 		my $tier_order_ref = $self->{'tier_order'} ;
 		
@@ -318,7 +329,7 @@ sub load_module_variant_evidence_grading {
 		# 
 		# TSG = tumour supressor gene
 		# A heuristic function for final tiering is:
-		#   RS = (TSG1 + TSG2 + TSG3 + ... ) * ( Oncogene1 * Oncogene2 *Oncogene3 )
+		#   RS = (TSG1 + TSG2 + TSG3 + ... ) * ( Oncogene1 * Oncogene2 * Oncogene3 )
 		# 
 		# where 0 = resistant, 1 = sensitising;
 
@@ -359,6 +370,7 @@ sub load_module_variant_evidence_grading {
 			comp_max_tier_and_setvar(%{$var1}, $var2->{'max_tier'}, $var2->{'max_tier_score'}, $var2->{'ref_biomarker'}) if defined $var2->{'max_tier'};
 		}
 		
+# 		++ $cntf; print STDERR "! $cntf ! $f\n";
 		
 		for my $fact (@matched_facts) {
 			if ( $fact =~ /^(.+?):$type:\Q$therapy\E\s*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|,)/ ) { # R?[1234S][ABUR]?
@@ -392,6 +404,7 @@ sub load_module_variant_evidence_grading {
 		
 		max_max_tier(%tier_retval, %tier_TSG) ;
 		
+		#########################
 		my @retval ;
 		
 		my ($max_tier, $ref_biomarker) = ( $tier_retval{max_tier}, $tier_retval{ref_biomarker} );
@@ -661,7 +674,7 @@ sub load_module_preferential_trial_prioritisation {
 			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 1 : 0 ) 
 			);
 		
-		my $referred_drug_classes_score = scalar(@inf_drug_classes) ;
+		my $num_referred_drug_classes_score = scalar(@inf_drug_classes) ;
 		
 		push @new_tags, # Annotate the trial
 			"transitive_class_efficacy_tier:". ( $a{'transitive_class_efficacy'}  = $transitive_class_efficacy_tier ) ,
@@ -671,15 +684,15 @@ sub load_module_preferential_trial_prioritisation {
 			"combo_maturity_tier:".            ( $a{'combo_maturity'}             = ClinicalTrials::get_drug_combination_maturity_tier_by_trial_id( $trial_id, @inf_drugs ) ) ,
 			"combo_class_maturity_tier:".      ( $a{'combo_class_maturity'}       = ClinicalTrials::get_drug_class_combination_maturity_tier_by_trial_id( $trial_id, @inf_drug_classes ) ),
 			"trial_match_criteria_score:".     $trial_match_criteria_score ,
-			"referred_drug_classes_score:".    $referred_drug_classes_score
+			"referred_drug_classes_score:".    $num_referred_drug_classes_score
 		;
 		
 		
 		my $score = # Score the trial
-			( pow(20,7) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,6) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,5) * ( (19 - $referred_drug_classes_score) ) ) +
-			( pow(20,4) * ( 8 - $trial_match_criteria_score ) ) + 
+			( pow(20,7) * ( 8 - $trial_match_criteria_score ) ) + 
+			( pow(20,6) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,5) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,4) * ( (19 - $num_referred_drug_classes_score) ) ) +
 			( pow(20,3) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,2) * ( score_tier( $a{'drug_class_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,1) * ( score_tier( $a{'combo_maturity'}, $tier_order_ref ) ) ) + 

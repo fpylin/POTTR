@@ -96,7 +96,7 @@ PRPF40B PRRX1 PSIP1 PTCH1 PTEN PTK6 PTPN11 PTPN13 PTPN6 PTPRB PTPRC PTPRD PTPRK 
 QKI
 RABEP1 RAC1 RAD17 RAD21 RAD50 RAD51B RAF1 RALGDS RANBP2 RAP1GDS1 RARA RB1 RBM10 RBM15 RECQL4 REL RET RFWD3 RGPD3 RGS7 RHOA RHOH RMI2 RNF213 RNF43 
 ROBO2 ROS1 RPL10 RPL22 RPL5 RPN1 RSPO2 RSPO3 RUNX1 RUNX1T1
-S100A7 SALL4 SBDS SDC4 SDHA SDHAF2 SDHB SDHC SDHD SEPT5 SEPT6 SEPT9 SET SETBP1 SETD1B SETD2 SETDB1 SF3B1 SFPQ SFRP4 SGK1 SH2B3 SH3GL1 SHTN1 SIRPA SIX1 SIX2 SKI SLC34A2 SLC45A3
+S100A7 SALL4 SBDS SDC4 SDHA SDHAF2 SDHB SDHC SDHD SEPT5 SEPT6 SEPT9 SET SETBP1 SETD1B SETD2 SETDB1 SF3B1 SFPQ SFRP4 SGK1 SH2B3 SH3GL1 SHTN1 SIRPA SIX1 SIX2 SKI SLC34A2 SLC45A3 SLX4
 SMAD2 SMAD3 SMAD4 SMARCA4 SMARCB1 SMARCD1 SMARCE1 SMC1A SMO SND1 SNX29 SOCS1 SOX2 SOX21 SPECC1 SPEN SPOP SRC SRGAP3 SRSF2 SRSF3
 SS18 SS18L1 SSX1 SSX2 SSX4 STAG1 STAG2 STAT3 STAT5B STAT6 STIL STK11 STRN SUFU SUZ12 SYK
 TAF15 TAL1 TAL2 TBL1XR1 TBX3 TCEA1 TCF12 TCF3 TCF7L2 TCL1A TEC TENT5C TERT TET1 TET2 TFE3 TFEB TFG TFPT TFRC TGFBR2 THRAP3 TLX1 TLX3 TMEM127 TMPRSS2 
@@ -153,7 +153,7 @@ N4BP2 NAB2 NBN NCOA4 NCOR1 NCOR2 NDRG1 NF1 NF2 NFE2L2 NFKB2 NFKBIE NKX2-1 NOTCH1
 PABPC1 PALB2 PATZ1 PAX5 PBRM1 PER1 PHF6 PHOX2B PIK3R1 PML PMS2 POLD1 POLE POLG POLQ POT1 PPARG PPP2R1A PPP6C PRDM1 PRDM2 PRF1 PRKAR1A PTCH1 PTEN PTK6 PTPN13 PTPN6 PTPRB PTPRC PTPRD PTPRK PTPRT 
 QKI 
 RAD17 RAD21 RAD50 RAD51B RANBP2 RB1 RBM10 RECQL4 RFWD3 RHOA RHOH RMI2 RNF43 ROBO2 RPL10 RPL22 RPL5 RSPO2 RUNX1 RUNX1T1 
-SBDS SDHA SDHAF2 SDHB SDHC SDHD SETD1B SETD2 SFPQ SFRP4 SH2B3 SIRPA SLC34A2 SMAD2 SMAD3 SMAD4 SMARCA4 SMARCB1 SMARCD1 SMARCE1 SMC1A SOCS1 SOX21 SPEN SPOP STAG1 STAG2 STAT5B STK11 SUFU SUZ12 
+SBDS SDHA SDHAF2 SDHB SDHC SDHD SETD1B SETD2 SFPQ SFRP4 SH2B3 SIRPA SLC34A2 SMAD2 SMAD3 SMAD4 SMARCA4 SMARCB1 SMARCD1 SMARCE1 SMC1A SOCS1 SOX21 SPEN SPOP STAG1 STAG2 STAT5B STK11 SUFU SUZ12 SLX4
 TBL1XR1 TBX3 TCF3 TENT5C TERT TET1 TET2 TGFBR2 TMEM127 TNFAIP3 TNFRSF14 TP53 TP63 TPM3 TRAF7 TRIM24 TRIM33 TSC1 TSC2 
 USP44 
 VHL 
@@ -479,12 +479,14 @@ sub gen_rule_knowledge_base {
 			my $lhs_alteration = $alt;
 			my $lhs_alteration_pos ;
 			
-			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)$/ and do { $lhs_alteration = $lhs_alteration_pos = $1."codon_".$2."_missense_variant"; };
-			
-			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)[A-Z]$/ and do { 
+			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)[A-Z]?$/ and do { 
 				$lhs_alteration_pos = $1."codon_".$2."_missense_variant"; 
-				$lhs_alteration_pos = undef if $lhs_alteration_pos eq $lhs_alteration ;
 			};
+# 			print join("\t", $lhs_alteration, $lhs_alteration_pos //'')."\n" if $lhs_alteration =~ /NRAS/;
+			
+# 			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)[A-Z]$/ and do { 
+# 				$lhs_alteration_pos = $1."codon_".$2."_missense_variant"; 
+# 			};
 			
 			my $f_lhs_alteration_is_neg = ( scalar(@alterations) == scalar(grep { /^NOT / } @alterations) );
 			
@@ -523,7 +525,6 @@ sub gen_rule_knowledge_base {
 							my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";
 							
 							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
-							
 							if ( defined $lhs_alteration_pos ) {
 								my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt)";
 								
@@ -582,7 +583,7 @@ sub gen_rule_knowledge_base {
 							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
 							
 							if ( defined $lhs_alteration_pos ) {
-								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, histotype agnostic and from $ppalt )";
+								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, histotype agnostic and from $ppalt)";
 								
 								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
 									mkrule( [$lhs_alteration_pos, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
@@ -600,7 +601,9 @@ sub gen_rule_knowledge_base {
 							}
 							
 							if ( defined $lhs_alteration_pos ) {
-								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt )";
+								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt)";
+								
+# 								print "!\t$lhs_alteration_pos\t$rhs_treatment_str\n" if $lhs_alteration_pos eq 'NRAS:codon_61_missense_variant';
 								
 								my $rhs_treatment_str_type_specific = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier_partial_match_catype}, inferred from $rhs_catype and $ppalt)";
 								
@@ -631,7 +634,7 @@ sub gen_rule_knowledge_base {
 	for my $rx ( sort keys %rules_treatment_by_catype_mutation_position) {
 		for my $lhs_alteration_pos ( sort keys %{ $rules_treatment_by_catype_mutation_position{$rx} } ) {
 			my $n_alterations = scalar keys %{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos} };
-			next if $n_alterations <= 1;
+# 			next if $n_alterations <= 1;
 			
 			for my $lhs_alteration ( sort keys %{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos} } ) {
 				push @debug_msg, "$n_alterations alterations: \t$lhs_alteration_pos\t$lhs_alteration\n";

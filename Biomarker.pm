@@ -57,6 +57,7 @@ sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <
 my $f_initiailised ;
 our %gene_feature_table;
 our %biomarker_synonyms;  
+our %variant_synonyms;  
 
 #######################################################################
 sub interp_variants {
@@ -82,6 +83,7 @@ sub interp_variants {
 		/[VSADEF]/ and do { 
 # 			$$facttable{'biomarker'} = $biomarker_name ; 
 			push @alterations, 'alteration' ;
+			push @alterations, ( $variant_synonyms{ "$biomarker_name:$biomarker_spec" } =~ s/^$biomarker_name://r ) if exists $variant_synonyms{ "$biomarker_name:$biomarker_spec" } ; # if synonym exists
 		};
 
 		/S/ and do { 
@@ -302,8 +304,8 @@ sub load_gene_feature_table {
 # 			$gene_feature_table{$gene}{$feature}{'end'} = $end;
 		}
 	}
-	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-synonym-file') ) {
-	}
+# 	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-synonym-file') ) {
+# 	}
 }
 
 #######################################################################
@@ -317,6 +319,16 @@ sub load_biomarker_synonym_file {
 			}
 		}
 	}
+	
+	for my $srcfile ( POTTRConfig::get_paths('data', 'variant-synonym-file') ) {
+		for ( file($srcfile) ) { 
+			chomp ;
+			my ($a, @b) = split /\t/, $_; 
+			for my $m ($a, @b) { 
+				$variant_synonyms{ $m } = $a;
+			}
+		}
+	}	
 }
 
 #######################################################################

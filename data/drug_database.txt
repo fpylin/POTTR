@@ -768,3 +768,7 @@ YH002	anti-OX40_agnostic_monoclonal_antibody
 XMT-1536	anti-NaPi2b_antibody-drug_conjugate
 BI 894999|BI-894999	BET_inhibitor
 Eprenetapopt|APR-246	mutant_p53_reactivator
+YBL-006	anti-PD-1_monoclonal_antibody
+Patritumab Deruxtecan|HER3-DXd|U3-1402	anti-HER3_antibody-drug_conjugate
+Pacritinib	JAK2_inhibitor
+CYH33	PI3K_alpha_inhibitor

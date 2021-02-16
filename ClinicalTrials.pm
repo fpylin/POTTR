@@ -75,7 +75,7 @@ sub get_trial_href($) {
 	my $x = shift;
 	for ($x) {
 		m|^(NCT\d+)$| and do { return "https://clinicaltrials.gov/ct2/show/$1" };
-		m|^(ACTRN\d+)$| and do { return "https://www.anzctr.org.au/TrialSearch.aspx#&&searchTxt=$1" } ;
+		m|^(ACTRN\d+[Pp]?)$| and do { return "https://www.anzctr.org.au/TrialSearch.aspx#&&searchTxt=$1" } ;
 	}
 	return "javascript:void(0)";
 }
