@@ -96,7 +96,7 @@ sub score_tier {
 
 sub max_tier {
 	my @tiers = @_;
-	my ($max_tier) = sort { score_tier($a) <=> score_tier($b) } @tiers ;
+	my ($max_tier) = sort { score_tier($a) <=> score_tier($b) } grep { defined } @tiers ;
 	return $max_tier;
 }
 
@@ -340,23 +340,39 @@ sub load_module_variant_evidence_grading {
 		my %tier_retval = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
 		my %tier_TSG = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
 		my %tier_TSG_by_gene = ();
-		my %tier_drug_class = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
+		my %tier_treatment_class = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
+		my %tier_treatment_class_by_gene = ();
+# 		my %tier_drug_class = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
 
 		sub comp_max_tier_and_setvar(\%$$$) {
 			my $var = $_[0];
 			my $t   = $_[1];
 			my $sc  = $_[2];
 			my $bm  = $_[3];
-			if ( ( ( ! defined $var->{'max_tier'} ) or ( $sc < $var->{'max_tier_score'} ) ) ) { 
+			if ( ! defined $var->{'max_tier'} ) { 
 				$var->{'max_tier'} = $t;
 				$var->{'max_tier_score'} = $sc;
-				$var->{'ref_biomarker'} = $bm ;
-			} elsif ( $sc == $var->{'max_tier_score'} ) { 
-				$var->{'ref_biomarker'} .= ", $bm" if $var->{'ref_biomarker'} !~ /$bm/;
-# 				print "$var->{'ref_biomarker'}  | $bm\n";
+				$var->{'ref_biomarker_tier'}{$bm} = $t;
+			} else { 
+				if ( $sc < $var->{'max_tier_score'} ) { 
+					$var->{'max_tier'} = $t;
+					$var->{'max_tier_score'} = $sc;
+				}
+				$var->{'ref_biomarker_tier'}{$bm} = max_tier( $var->{'ref_biomarker_tier'}{$bm}, $t );
 			}
-		}
 
+		# ref_biomarker is the output variable
+		my @ref_biomarkers = uniq ( ( keys %{ $var->{'ref_biomarker_tier'} } ) );
+		
+		@ref_biomarkers  = sort { ( score_tier($var->{'ref_biomarker_tier'}{$a}) <=> score_tier($var->{'ref_biomarker_tier'}{$b}) ) || ( $a cmp $b ) }  @ref_biomarkers  ;
+		
+		my @ref_biomarkers1 = grep { ! ( ( $var->{'ref_biomarker_tier'}{$_} =~ /^R/ ) xor ( $var->{'max_tier'} =~ /^R/ ) ) } @ref_biomarkers;  # FIXME - need to formally define resistance tiers
+		@ref_biomarkers = @ref_biomarkers1  if scalar @ref_biomarkers1  ;
+		
+		$var->{'ref_biomarker'} = join (", ", @ref_biomarkers );
+# 		print join("\t", $type, $var, $t, $sc, $bm, $var->{'max_tier'}, $var->{'max_tier_score'}, $var->{'ref_biomarker'})."\n";
+		}
+		
 		sub max_max_tier(\%\%) {
 			my $var1 = $_[0];
 			my $var2 = $_[1];
@@ -374,14 +390,17 @@ sub load_module_variant_evidence_grading {
 		
 		for my $fact (@matched_facts) {
 			if ( $fact =~ /^(.+?):$type:\Q$therapy\E\s*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|,)/ ) { # R?[1234S][ABUR]?
-				my $biomarker = $1;
+				my $biomarker = $1; # Get any biomarkers matched to the therapy / therapy class
 				my $tier = $2;
 				my $is_resistance_tier = $self->is_resistance_tier($tier);
 				$has_R_tier = 1 if $is_resistance_tier ; 
 				@max_tier_tags = (@max_tier_tags, ( $facts->get_tags($fact) ));
 				
 				my $score = score_tier($tier, $tier_order_ref) ;
-				if ( exists $Evidence::cancer_gene_type{$biomarker} and $Evidence::cancer_gene_type{$biomarker} eq 'TSG' ) {  
+				if ($type eq 'treatment_class') {
+# 					# Treat the "treatment_class" as non-dominant 
+					comp_max_tier_and_setvar(%{ $tier_treatment_class_by_gene{$biomarker} }, $tier, $score, $biomarker) ;
+				} elsif ( exists $Evidence::cancer_gene_type{$biomarker} and $Evidence::cancer_gene_type{$biomarker} eq 'TSG' ) {  
 					# Reverse resistance/sensitivity ranking when encountering a true tumour suppressor gene, arranged by each gene
 # 					print STDERR  "A R $type, $biomarker, $therapy, $tier, $fact\n";
 					comp_max_tier_and_setvar(%{ $tier_TSG_by_gene{$biomarker} }, $tier, $score, $biomarker) ;
@@ -395,6 +414,7 @@ sub load_module_variant_evidence_grading {
 			}
 		}
 		
+
 		for my $bm (keys %tier_TSG_by_gene) {
 			my $is_resistance_tier = $self->is_resistance_tier( $tier_TSG_by_gene{$bm}{max_tier} );
 			my $mt = $tier_TSG_by_gene{$bm}{max_tier};
@@ -402,7 +422,19 @@ sub load_module_variant_evidence_grading {
 			comp_max_tier_and_setvar(%tier_TSG, $mt, $score, $bm) ;
 		}
 		
-		max_max_tier(%tier_retval, %tier_TSG) ;
+		for my $bm (keys %tier_treatment_class_by_gene) {
+			my $is_resistance_tier = $self->is_resistance_tier( $tier_treatment_class_by_gene{$bm}{max_tier} );
+			my $mt = $tier_treatment_class_by_gene{$bm}{max_tier};
+			my $score = score_tier( $mt, $tier_order_ref) + ( $is_resistance_tier ? 1000 : 0 );
+			comp_max_tier_and_setvar(%tier_treatment_class, $mt, $score, $bm) ;
+		}
+		
+		if ($type eq 'treatment_class') {
+			max_max_tier(%tier_retval, %tier_treatment_class) ;
+		} else {
+			max_max_tier(%tier_retval, %tier_TSG) ;
+		}
+		
 		
 		#########################
 		my @retval ;

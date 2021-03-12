@@ -69,11 +69,15 @@ def: "solid tumours"
 subset: DO_cancer_slim
 synonym: "Solid tumour" EXACT []
 synonym: "tumors" EXACT []
+synonym: "Tumors" EXACT []
+synonym: "Tumor" EXACT []
 synonym: "advanced cancer" EXACT []
 synonym: "advanced solid tumour" EXACT []
 synonym: "Advanced Tumors" EXACT []
 synonym: "pan cancer" EXACT []
 synonym: "other tumor types" EXACT []
+synonym: "Neoplasm" EXACT []
+synonym: "Neoplasms" EXACT []
 is_a: DOID:162 ! Neoplasm
 |, q|[Term]
 id: POTTR:0002
@@ -241,6 +245,18 @@ sub expand_synonyms {
 }
 
 
+sub cmp_doid {
+	my ($x, $y) = @_;
+	print "\e[1;33m".join("\t", $x, $y)."\e[0m\n" if $x =~ /POTTR/ and $y =~ /DOID/;
+	return 1  if $x =~ /POTTR/ and $y =~ /DOID/;
+	return -1 if $x =~ /DOID/ and $y =~ /POTTR/;
+# 	my ($xn) = ( $x =~ /:(\d+)/ );
+# 	my ($yn) = ( $y =~ /:(\d+)/ );
+# 	print "\e[1;33m".join("\t", $x, $y)."\e[0m\n" if $yn < $xn;
+	return 0;
+# 	return $xn <=> $yn;
+}
+
 sub load_DO {
 	my $srcfile = POTTRConfig::get_first_path("data", "disease-ontology-file") // 'data/doid.obo'; # default to disease ontology source: data/doid.obo
     my $expanded_doid_file = "$srcfile.expanded.obo";
@@ -268,7 +284,14 @@ sub load_DO {
 	$DO_id{lc($name)} = $id;
 	for my $n ($name, @synonyms) {
 # 		$n =~ s///;
-		$DO_id{lc($n)} = $id if ! exists $DO_id{lc($n)};
+		if ( exists $DO_id{lc($n)} ) {
+# 			print "\e[1;32m".join("\t", lc($n))."\e[0m\n" ;
+		
+			my $old_id = $DO_id{lc($n)};
+			$DO_id{lc($n)} = $id if ( cmp_doid($id, $old_id) > 0 ) ;
+		} else {
+			$DO_id{lc($n)} = $id 
+		}
 	}
 	
 	$DO_name{$id} = $name;

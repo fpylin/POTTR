@@ -255,7 +255,7 @@ Fludarabine|2-Fluoro-9-beta-arabinofuranosyladenine|2-Fluorovidarabine|9-Beta-D-
 Fluorouracil|5-FU|Fluracil|Fluril|2,4-Dioxo-5-fluoropyrimidine|5 FU|5FU|AccuSite|Adrucil|Carac|Fluoro Uracil|Fluouracil|Flurablastin|Fluracedyl|Fluroblastin|Ribofluor|Ro 2-9757|Ro-2-9757	antimetabolite
 Flutamide|Apimid|Cebatrol|Chimax|Cytomid|Drogenil|Euflex|Eulexin|FLUT|Flucinom|Flugerel|Fluken|Flulem|Fugerel|Grisetin|Niftolide|Oncosal|Profamid|Prostacur|Prostadirex|Prostica|Prostogenat|SCH 13521|Tafenil|Testotard	antiandrogen,nonsteroidal,first_generation
 Fluzoparib|SHR-3162|SHR3162	PARP_inhibitor
-Foretinib|XL880|GSK1363089	MET_inhibitor,type_2
+Foretinib|XL880|GSK1363089	MET_inhibitor,type_2; ROS1_inhibitor
 Fosgemcitabine Palabenamide|Acelarin|Gemictabine ProTide|NUC 1031|NUC-1031	gemcitabine-phosphoramidate
 Fulvestrant|Faslodex|ICI 182,780|ICI 182780|ZD9238	selective_estrogen_receptor_degrader
 Futibatinib|TAS-120	pan-FGFR_inhibitor,irreversible
@@ -365,7 +365,7 @@ Lorlatinib|Lorbrena|PF-06463922	ALK_inhibitor,third_generation; ROS1_inhibitor
 Lurbinectedin|PM01183	DNA_minor_groove-binding_agent
 Luspatercept|ACE-536|Reblozyl	recombinant_human_ActRIIb_fusion_protein
 MAX-10181	PD-L1_inhibitor,oral
-MCLA-128|MCLA 128|MCLA128	bispecific_ERBB2/ERBB3_monoclonal_antibody
+MCLA-128|MCLA 128|MCLA128|Zenocutuzumab	bispecific_ERBB2/ERBB3_monoclonal_antibody
 MEDI0680|AMP-514	anti-PD-1_monoclonal_antibody
 MEDI5083|MEDI 5083|MEDI-5083	CD40L-Fc_fusion_protein; anti-CD40_agonist_antibody
 MEDI5752	bispecific_PD-L1/CTLA-4_antibody
@@ -657,7 +657,7 @@ Polatuzumab vedotin|Polatuzumab vedotin-piiq	anti-CD79b_antibody-drug_conjugate
 Tafasitamab	anti-CD19_monoclonal_antibody
 Tagraxofusp|Tagraxofusp-erzs	IL-3_diphtheria_toxin_fusion_protein
 VE-821	ATR_inhibitor
-ABBV-075	BET_inhibitor
+Mivebresib|ABBV-075	BET_inhibitor
 JQ1	BET_inhibitor
 GSK126	EZH2_inhibitor
 PF-477736	CHEK1_inhibitor
@@ -772,3 +772,9 @@ YBL-006	anti-PD-1_monoclonal_antibody
 Patritumab Deruxtecan|HER3-DXd|U3-1402	anti-HER3_antibody-drug_conjugate
 Pacritinib	JAK2_inhibitor
 CYH33	PI3K_alpha_inhibitor
+LY3410738	IDH1_R132_inhibitor; IDH1_R132_inhibitor,covalent
+Cerdulatinib	SYK_inhibitor
+Loncastuximab Tesirine	anti-CD19_antibody-drug_conjugate
+CX-5461	RNA_polymerase_I_inhibitor
+Halofuginone	glutamyl-prolyl_tRNA_synthetase_inhibitor
+Anlotinib	FGFR/KIT/PDGFR/VEGFR_inhibitor

@@ -35,3 +35,6 @@ NCT04585815	BRAF:V600E
 NCT02477826	*NOT prior_therapy:systemic_therapy
 NCT03829332	*NOT prior_therapy:systemic_therapy
 NCT03178552	*NOT prior_therapy:systemic_therapy
+NCT04487080	EGFR:oncogenic_mutation
+NCT03829319	NOT_RECRUITING
+NCT03976323	*NOT sensitive_to_drug_class:EGFR_inhibitor,third_generation; *NOT sensitive_to_drug_class:ALK_inhibitor; *NOT sensitive_to_drug_class:ROS1_inhibitor

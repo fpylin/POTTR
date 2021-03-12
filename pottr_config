@@ -91,7 +91,7 @@ variant-feature-file = feature_lookup.txt
 # EGFR:L858R => EGFR:gain-of-function_mutation [CERTAIN:mutation_effect]
 ###############################################################################
 
-oncogenicity-rules-file = example_variant_annotation_rules.txt 
+# oncogenicity-rules-file = example_variant_annotation_rules.txt 
 
 
 ###############################################################################

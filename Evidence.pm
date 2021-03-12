@@ -206,16 +206,16 @@ sub encode_alteration_proper {
 
 	$x =~ s/mut$//;
 	$x =~ s/^\s+|\s+$//g;
-	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function mutation|.*variant|alteration|high|deficient)s?$/i ) { 
+	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient)s?$/i ) { 
 		$x = lc($1) ;
 	} elsif ( $x =~ /^((?:DNA binding|kinase) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
 		$x = lc($1);
-	} elsif ( $x =~ /^(Exon \d+ (?i:deletion|(?:splic\w+ |skipping )?mutation|insertion|insertions\/deletions|indel))s?$/i ) { 
+	} elsif ( $x =~ /^(Exon \d+ (?i:deletion|(?:splic\w+ |skipping )?mutation|insertion|insertions?\/deletion|indel))s?$/i ) { 
 		$x = lc($1);
 		$x =~ s/insertions\/deletions/indel/i;
 	} elsif ( $x =~ /^((?:protein )?(?:over)?expression)s?$/i ) { 
 		$x = lc($1);
-	} elsif ( $x =~ /^(.*) (fusion)$/i ) { 
+	} elsif ( $x =~ /^(.*) (fusions?)$/i ) { 
 		$x = $1."_".lc($2);
 	} elsif ( $x =~ /^[A-Z](\d+)ins$/i ) { 
 		$x = lc("codon_$1_inframe_insertion");
@@ -381,7 +381,10 @@ sub gen_rule_knowledge_base {
 		my $treatment   = deutf( $$row{$fname_drugs} );
 		my $evidence    = deutf( $$row{$fname_evidence} // '' );        $evidence =~ s/;/,/g;
 		my $comments    = deutf( $$row{'Comments'} // '' );
-		my $treatment_class = Therapy::get_treatment_class( $$row{$fname_drugs}, $biomarker );
+		my ($biomarker_drug_class_focus) = ( $comments =~ /(\w+) inhibitors?/i ) ; # FIXME
+		push @debug_msg, "\e[1;36mBiomarker focus in the comments: $biomarker_drug_class_focus\e[0m\n" if defined $biomarker_drug_class_focus;
+		my $treatment_class = Therapy::get_treatment_class( $$row{$fname_drugs}, $biomarker, $biomarker_drug_class_focus );
+# 		print "\e[1;33;41m$biomarker_drug_class_focus\e[0m\n" 
 		
 		my $version_str = ($date =~ m|(\d+)/(\d+)/(\d+)| ? "KBver:$3$2$1" : '');
 		
@@ -479,7 +482,7 @@ sub gen_rule_knowledge_base {
 			my $lhs_alteration = $alt;
 			my $lhs_alteration_pos ;
 			
-			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)[A-Z]?$/ and do { 
+			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)$/ and do {  # [A-Z]?
 				$lhs_alteration_pos = $1."codon_".$2."_missense_variant"; 
 			};
 # 			print join("\t", $lhs_alteration, $lhs_alteration_pos //'')."\n" if $lhs_alteration =~ /NRAS/;
@@ -500,7 +503,7 @@ sub gen_rule_knowledge_base {
 			for my $rhs_catype (@rhs_catypes) {
 				for my $rx (@treatments) {
 					my $rx = Therapy::get_normalised_treatment_name( $rx );
-					my $drug_class_regimen = Therapy::get_treatment_class($rx, $biomarker);
+					my $drug_class_regimen = Therapy::get_treatment_class($rx, $biomarker, $biomarker_drug_class_focus); # 
 					
 					push @debug_msg, join("\t", 
 							hl(31, $tier), hl(33, $alt), hl(35, $rx), hl(32, $drug_class_regimen), hl(34,$rhs_catype), hl(36, (my $normalised_class = Therapy::get_normalised_treatment_class_name($rx)) )
@@ -514,6 +517,7 @@ sub gen_rule_knowledge_base {
 					
 					my @tags = ( $version_str );
 					push @tags, "evidence:$evidence" if length $evidence;
+					push @tags, "biomarker_focus:$biomarker_drug_class_focus" if defined $biomarker_drug_class_focus;
 					
 					if ( $drug_class_regimen ) {
 						my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";

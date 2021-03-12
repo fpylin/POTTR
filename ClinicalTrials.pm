@@ -502,14 +502,14 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 			my @matched_codes = map { DOID::DO_match_catype_whole_word($_) } @healthconditions;
 			@matched_codes = uniq(@matched_codes);
 			
-# 			print join("\t", $_, DOID::DO_match_catype_whole_word($_) )."\n" for @healthconditions ;
+# 			print join("\t", "T", $trial_id, $_, DOID::DO_match_catype_whole_word($_) )."\n" for @healthconditions ;
 # 			my $s1 = join("\t", sort @matched_codes );
 # 			my $s2 = join("\t", sort @healthconditioncodes);
 # 			my $clb = ( $s1 eq $s2 ) ? "\e[1;32m" : "\e[1;31m" ;
 # 			my $cle = "\e[0m";
 # 			
-# 			print "HC:  $clb$s1$cle\n";
-# 			print "HCD: $clb$s2$cle\n";
+# 			print "\tHC:  $clb$s1$cle\n";
+# 			print "\tHCD: $clb$s2$cle\n";
 			@healthconditioncodes = @matched_codes;
 		}
 		

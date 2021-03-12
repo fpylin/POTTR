@@ -64,6 +64,7 @@ EWS-FLI1_inhibitor
 EZH2_inhibitor
 FGFR_inhibitor
 FGFR_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
+FGFR_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
 FGFR_inhibitor	FGFR1/2/3_inhibitor
 FGFR_inhibitor	FGFR4_inhibitor
 FGFR_inhibitor	FGFR_inhibitor,type_2
@@ -93,6 +94,7 @@ JAK2_inhibitor	JAK1/JAK2_inhibitor
 JAK2_inhibitor	JAK2-selective_inhibitor
 KIT_inhibitor	BCR-ABL1/KIT/PDGFR_inhibitor
 KIT_inhibitor	BCR-ABL1/PDGFR/KIT/SRC_inhibitor
+KIT_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
 KIT_inhibitor	FLT3/KIT_inhibitor
 KIT_inhibitor	KIT/PDGFR_inhibitor
 KIT_inhibitor	KIT_inhibitor,ATP-competitive	KIT_D816V_inhibitor	KIT_D816V/PDGFRA_inhibitor
@@ -116,7 +118,7 @@ NFKB_inhibitor
 NOTCH_inhibitor
 PARP_inhibitor
 PARP_inhibitor	PARP/TNKS_inhibitor
-PDGFRA_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
+PDGFRA_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
 PDGFRA_inhibitor	KIT_D816V/PDGFRA_inhibitor
 PDGFRB_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
 PDGFR_inhibitor	BCR-ABL1/KIT/PDGFR_inhibitor

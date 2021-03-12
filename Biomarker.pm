@@ -170,7 +170,8 @@ sub interp_variants {
 				};
 				
 				my $muttype ;
-				( ($aa_org, $aa_pos, $aa_org2, $aa_pos2, $muttype, $delins_spec) = /^(?:p\.)?([A-Z])(\d+)_?([A-Z])?(\d+)?((?:ins|dup|del(?:ins)?))(.*)$/ ) and do {
+				( ($aa_org, $aa_pos, $aa_org2, $aa_pos2, $muttype, $delins_spec) = /^(?:p\.)?([A-Z])(\d+)_?([A-Z])?(\d+)?((?:ins|dup|del(?:ins)?|>))(.*)$/ ) and do {
+					$muttype = 'delins' if $muttype eq '>';
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'inframe_insertion' if ($muttype eq 'ins') or ($muttype eq 'dup') ;
 					push @conseq_t, 'inframe_deletion'  if ($muttype eq 'del') ;

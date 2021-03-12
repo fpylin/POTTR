@@ -51,6 +51,7 @@ BEGIN {
 
 ## Utility functions #################################
 sub min { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ < $v) ; } return $v; }
+sub max { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ > $v) ; } return $v; }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 sub trim { my $s = shift; $s =~ s/^\s*|\s*$//g if (defined $s) ; return $s; }
 sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
@@ -437,7 +438,7 @@ sub load_drug_database {
 	for my $line ( @lines ) {
 		chomp $line;
 		$line =~ s/#.*// ; # remove comments;
-		next if $line =~ /drug_class/ ;  # get rid of header
+		next if $line =~ /drug_class|^\s*$/ ;  # get rid of header
 		my ($drug_str, $drug_classes) = split /\t/, $line;
 		my @drug_parts = map { trim($_) } split /\|/, $drug_str;
 		my $primary_drug_name = $drug_parts[0]; 
@@ -532,19 +533,30 @@ sub get_normalised_treatment_name {
 sub get_treatment_class {
 	&ON_DEMAND_INIT;
 	my $treatment = shift;
-	my $focus = shift; # focus on a particular class a drug has mutliple targets
+	my @focus = grep { defined } @_; # a list of strings of biomarker names on a particular class a drug has mutliple targets
 	warn join("\t", caller)."\n" if ! defined $treatment;
 	my @combo_parts = map { trim($_) } split /\s*\+\s*/, $treatment;
 	my @combo_parts_class ;
 	for my $part (@combo_parts) {
 		my @dcs = get_drug_classes($part); 
 
-		if ( defined $focus ) {
-			@dcs = sort { 
-				length( lcss( $b, $focus ) ) <=> length ( lcss( $a, $focus ) ) ||
-				length $b <=> length $a
-				} @dcs ;
-			
+		my %dcs_min;
+		for my $dc (@dcs) {
+			for my $focus (@focus) {
+				my $lcssl = length( lcss( $dc, $focus ) );
+# 				printf "$dc\t$focus\t$lcssl\n";
+				if ( ! exists $dcs_min{$dc} ) {
+					$dcs_min{$dc} = $lcssl ;
+				} else {
+					$dcs_min{$dc} = max( $dcs_min{$dc}, $lcssl ) ;
+				}
+			}
+		}
+# 				@dcs = sort { 
+# 				length( lcss( $b, $focus ) ) <=> length ( lcss( $a, $focus ) ) ||
+# 				length $b <=> length $a
+# 				} @dcs ;
+				
 # 			if ( grep { /$focus/ } @dcs ) {
 # # 				@dcs = sort { dc_lev( $a, $focus ) <=> dc_lev( $b, $focus ) } grep { /$focus/ } @dcs ;
 # 				@dcs = sort { length( lcss( $b, $focus ) ) <=> length ( lcss( $a, $focus ) ) } grep { /$focus/ } @dcs ;
@@ -553,7 +565,11 @@ sub get_treatment_class {
 # # 				@dcs = sort { length $b <=> length $a } @dcs ;
 # 			}
 #			@dcs = map { dc_lev($_, $focus)." $_" } sort { dc_lev( $a, $focus ) <=> dc_lev( $b, $focus ) } @dcs ;
+		
+		if ( scalar %dcs_min ) {
+			@dcs = sort { ($dcs_min{$b} <=> $dcs_min{$a}) || (length($a) - length($b) )} keys %dcs_min ;
 		}
+		
 		push @combo_parts_class, ( scalar(@dcs) ? $dcs[0] : 'UNDEF' ); # $dcs[0]
 	}
 	return join(" + ", ( sort map { get_normalised_treatment_class_name($_) } @combo_parts_class) );
