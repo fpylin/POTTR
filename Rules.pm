@@ -528,7 +528,7 @@ sub match_rule_lhs {
 
 sub run { # Rules::run - the main inference engine. 
 	my ($self, @facts) = @_;
-# 	$self->{'debug_output'} = '';
+	$self->{'debug_output'} = '';
 	
 	push @facts, '(initial-fact)';
 	
@@ -805,6 +805,7 @@ sub run {
 	my ($self, @facts) = @_;
 
 	$self->{'cache'} = (); # clear the runtime cache, used for storing dynamic runtime private facts
+	$self->{'debug_output'} = '';
 	
 	my $debug_output ;
 	for my $ruleset_name (sort keys %{ $self->{'modules'} }) {

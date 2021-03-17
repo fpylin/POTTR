@@ -38,3 +38,4 @@ NCT03178552	*NOT prior_therapy:systemic_therapy
 NCT04487080	EGFR:oncogenic_mutation
 NCT03829319	NOT_RECRUITING
 NCT03976323	*NOT sensitive_to_drug_class:EGFR_inhibitor,third_generation; *NOT sensitive_to_drug_class:ALK_inhibitor; *NOT sensitive_to_drug_class:ROS1_inhibitor
+NCT04222972	catype:Non-small cell lung cancer; RET:fusion

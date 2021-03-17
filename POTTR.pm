@@ -81,7 +81,7 @@ sub score_tier {
 		return scalar(@a);
 	}
 	
-	# If a tier ranking not defined, use OncoKB tiering system.
+	# default using a system similar to OncoKB/TOPOGRAPH
 	my ($n) = ( $x =~ /([0-9]+)/ );
 	$n  = 5    if ( $x =~ /S/   );
 	$n  = 6    if ( $x =~ /U/   );
@@ -90,9 +90,20 @@ sub score_tier {
 	$n  = 2.2  if ( $x =~ /^\(?R2/ );
 	$n += 0.4  if ( $x =~ /B/   );
 	$n += 0.5  if ( $x =~ /R$/  );
+	$n  = 5.2  if ( $x =~ /R2B/   );
 	$n += 1;
 	return $n;
 }
+
+##################################################################################
+sub is_highest_tier {
+	my $x = shift;
+	my $sref = shift;
+	return 1 if ! defined($sref) and uc($x) eq 'R1' ; # default using a system similar to OncoKB/TOPOGRAPH - R1 is the highest
+	return 1 if defined($sref) and lc($$sref[0]) eq lc($x) ; # sref indicates the rank order of the tiers
+	return 0;
+}
+
 
 sub max_tier {
 	my @tiers = @_;
@@ -264,9 +275,12 @@ sub load_module_variant_feature_mapping {
 	$rs->define_dyn_rule( 'infer_mutation_calls',  sub { my $f = shift; my $facts = $_[0];
 		return () if $f !~ /^(\S+?):(?:alteration)(,[_\s]*germline)?\s*$/ ;
 		my $germline_suffix = $2 // '';
+		my $bm = $1;
+		my @tags = $facts->get_tags($f);
+		return () if ! grep { ! /^INFERRED:|^\Q$bm\E:(?:oncogenic_mutation|alteration|amplification)(?:,[_\s]*germline)?/ } @tags;
 # 		return () if $f !~ /^(\S+?):(?:oncogenic_mutation)\s*$/ ;
 # 		return ( Facts::mk_fact_str($f, ($facts->get_tags($f)), 'INFERRED:oncogenicity') );
-		my $f_inferred_oncogenicity = "$1:oncogenic_mutation".$germline_suffix ;
+		my $f_inferred_oncogenicity = "$bm:oncogenic_mutation".$germline_suffix ;
 		return ( Facts::mk_fact_str( $f_inferred_oncogenicity, 'INFERRED:oncogenicity') ); # ($facts->get_tags($f)), 
 		}
 	);
@@ -399,6 +413,9 @@ sub load_module_variant_evidence_grading {
 				my $score = score_tier($tier, $tier_order_ref) ;
 				if ($type eq 'treatment_class') {
 # 					# Treat the "treatment_class" as non-dominant 
+					if ( is_highest_tier($tier, $tier_order_ref ) ) { 
+						comp_max_tier_and_setvar( %tier_treatment_class, $tier, $score, $biomarker ) ;
+					}
 					comp_max_tier_and_setvar(%{ $tier_treatment_class_by_gene{$biomarker} }, $tier, $score, $biomarker) ;
 				} elsif ( exists $Evidence::cancer_gene_type{$biomarker} and $Evidence::cancer_gene_type{$biomarker} eq 'TSG' ) {  
 					# Reverse resistance/sensitivity ranking when encountering a true tumour suppressor gene, arranged by each gene

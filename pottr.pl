@@ -174,6 +174,11 @@ my @lines = scalar @ARGV ? @ARGV : <STDIN>;
 my @input = @lines ;
 s/^\s+|\s+$//g for @lines ;
 @lines = grep { length $_ } @lines;
+Biomarker::load_biomarker_synonym_file;
+for (@lines) {
+	next if /:/;
+	$_ = "$1:$2" if ( /^(\S+)?\s+(.+)/ and ( exists $Biomarker::biomarker_synonyms{uc($1)} or $1 eq 'catype') );
+}
 # unshift @lines, "catype:Solid tumour" if ! grep {/catype:/} @lines;
 my @treatment_match_result = $Pottr->reason(@lines);
 

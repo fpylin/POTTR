@@ -208,7 +208,7 @@ sub encode_alteration_proper {
 	$x =~ s/^\s+|\s+$//g;
 	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient)s?$/i ) { 
 		$x = lc($1) ;
-	} elsif ( $x =~ /^((?:DNA binding|kinase) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
+	} elsif ( $x =~ /^((?:DNA binding|kinase|transmembrane|extracellular) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
 		$x = lc($1);
 	} elsif ( $x =~ /^(Exon \d+ (?i:deletion|(?:splic\w+ |skipping )?mutation|insertion|insertions?\/deletion|indel))s?$/i ) { 
 		$x = lc($1);
@@ -219,6 +219,8 @@ sub encode_alteration_proper {
 		$x = $1."_".lc($2);
 	} elsif ( $x =~ /^[A-Z](\d+)ins$/i ) { 
 		$x = lc("codon_$1_inframe_insertion");
+	} elsif ( $x =~ /^[A-Z](\d+)$/i ) { 
+		$x = lc("codon_$1_missense_variant");
 	} else {
 		return ($bm // '').$x;
 	}
@@ -369,7 +371,7 @@ sub gen_rule_knowledge_base {
 	
 	my %rules_treatment_by_catype_mutation_position;
 	
-	my $line = 1;
+	my $line = 0;
 	for my $row ( @{ $TSV_master->{'data'} } ) {
 		$line ++;
 		my $source      = $$row{'Source'} // '';   $source  =~ s/-.*//;
@@ -386,7 +388,7 @@ sub gen_rule_knowledge_base {
 		my $treatment_class = Therapy::get_treatment_class( $$row{$fname_drugs}, $biomarker, $biomarker_drug_class_focus );
 # 		print "\e[1;33;41m$biomarker_drug_class_focus\e[0m\n" 
 		
-		my $version_str = ($date =~ m|(\d+)/(\d+)/(\d+)| ? "KBver:$3$2$1" : '');
+		my $version_str = ($date =~ m|(\d+)/(\d+)/(\d+)| ? "KBver:$3$2$1; KBLine: $line" : "KBLine: $line");
 		
 		my $tier_partial_match_catype = $repurposing_retier_cancer_type{$tier} // 'U';
 		

@@ -4,8 +4,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 1	ALK	EML4-ALK Fusion, Fusions	Non-Small Cell Lung Cancer	Crizotinib	PBS reimbursed. Requires fluorescence in situ hybridisation (FISH) testing for ALK gene rearrangement, defined as 15% (or greater) positive cells. PROFILE1014 trial – in the first-line setting, Crizotinib had a superior PFS 10.9 vs chemotherapy 7.0 months. In the second-line setting, Crizotinib had longer PFS 7.7 vs docetaxel 3.0 months. No OS difference shown in either trials due to crossover of subgroups.	20979469, 25470694
 1	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Lorlatinib	PBS reimbursed after progression on ALK inhibitor other than Crizotinib.  Requires fluorescence in situ hybridisation (FISH) testing for ALK gene rearrangement, defined as 15% (or greater) positive cells. In Phase 3 trial vs crizotinib (CROWN): OS was superior at12 months 78% vs 39%	30413378, 33207094, 10.1016/j.annonc.2020.08.2282
 1	CD20	Protein expression	Non-Hodgkin’s Lymphoma; Chronic lymphocytic leukaemia; Acute lymphoblastic leukaemia; Hodgkin’s Lymphoma	Rituximab	PBS reimbursed. References non-exhaustive	11807147, 20888994
-1	CD274	Protein expression	Non-Small Cell Lung Cancer	Pembrolizumab	PBS reimbursed. TGA approved as monotherapy for the first-line treatment of patients with NSCLC expressing PD-L1. Defined as tumour proportion score (TPS) greater than or equal to 1%. KEYNOTE 042 and KEYNOTE-024. 	27718847, 30955977
-1	CD274	Protein expression	Non-Small Cell Lung Cancer	Pembrolizumab	PBS reimbursed. TGA approved as monotherapy for the subsequent-line treatment of patients with NSCLC expressing PD-L1 (defined as tumour proportion score (TPS) greater than or equal to 1%). KEYNOTE-010	26712084
+1	CD274	Protein expression	Non-Small Cell Lung Cancer	Pembrolizumab	PBS reimbursed. TGA approved as monotherapy for the first-line treatment of patients with NSCLC expressing PD-L1, and EGFR and ALK negative. Defined as tumour proportion score (TPS) greater than or equal to 1%. KEYNOTE 042 and KEYNOTE-024. 	27718847, 30955977
+1	CD274	Protein expression	Non-Small Cell Lung Cancer	Pembrolizumab	PBS reimbursed. TGA approved as monotherapy for the subsequent-line treatment of patients with NSCLC expressing PD-L1 (defined as tumour proportion score (TPS) greater than or equal to 1%), and EGFR and ALK negative. KEYNOTE-010	26712084
 1	EGFR	Exon 19 deletion, L858R, Exon 21 mutation	Non-Small Cell Lung Cancer	Afatinib	PBS reimbursed, In the first-line setting, median PFS was 11.0 vs 5.6 months for chemotherapy (LUX-Lung 6, Asian patients), 11.1 vs 6.9 months (chemotherapy, LUX-Lung 3) and afatinib has significant TTF and PFS improvement over gefitinib. LUX-Lung 7). ORR was 61% in the second-line setting  (LUX-Lung 2).	22452895, 23816960, 24439929, 27083334
 1	EGFR	Exon 19 deletion, L858R, Exon 21 mutation	Non-Small Cell Lung Cancer	Erlotinib	PBS reimbursed, OPTIMAL	16014882, 16014883
 1	EGFR	Exon 19 deletion, L858R, Exon 21 mutation	Non-Small Cell Lung Cancer	Gefitinib	PBS reimbursed	15118125, 19692680, 20573926
@@ -17,9 +17,9 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 1B	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Brigatinib	TGA approved. Not PBS reimbursed; FDA approved	30280657, 32780660
 1B	BRAF	V600E	Non-Small Cell Lung Cancer	Dabrafenib + Trametinib	TGA approved. Not PBS reimbursed	29072975
 1B	CD20	Protein expression	Non-Hodgkin’s Lymphoma	Ibrutinib	TGA approved for 1+ prior therapy with an anti-CD20 antibody-containing regimen.	28167659
-1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Atezolizumab	TGA approved; IMPower110: First-line treatment in PD-L1 positive population (defined as positive stain on &gt;=least 1% of tumour cells or tumor-infiltrating immune cells &gt;= 1% of the tumor area). Median OS: 20 vs 13 months (chemotherapy)	32997907, 10.1093/annonc/mdz293
-1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Nivolumab + Ipilimumab	TGA approved; FDA approved; Checkmate 227. PD-L1 positivity defined as &gt;= 1% of tumour cells using Dako 28-8 pharmDx assay.	31562796
-2	CD274	Protein expression	Non-Small Cell Lung Cancer	Cemiplimab	Not TGA approved. FDA Approved. EMPOWER-Lung 1: As first-line treatment, cemiplimab resulted in median PFS of 8.2 (vs 5.7 mo chemotherapy, HR 0.54) in patients with PD-L1 expression (Tumour proportion score) &gt;= 50% as determined by the 22C3 PharmDx assay. Duration and depth of response correlate to PD-L1 TPS.	33581821, 10.1016/j.annonc.2020.08.2285
+1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Atezolizumab	TGA approved; IMPower110: First-line treatment in PD-L1 positive population (defined as positive stain on &gt;=least 1% of tumour cells or tumor-infiltrating immune cells &gt;= 1% of the tumor area), EGFR and ALK negative. Median OS: 20 vs 13 months (chemotherapy)	32997907, 10.1093/annonc/mdz293
+1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Nivolumab + Ipilimumab	TGA approved; FDA approved; Checkmate 227. PD-L1 positivity defined as &gt;= 1% of tumour cells using Dako 28-8 pharmDx assay. EGFR and ALK negative	31562796
+2	CD274	Protein expression	Non-Small Cell Lung Cancer	Cemiplimab	Not TGA approved. FDA Approved. EMPOWER-Lung 1: As first-line treatment, cemiplimab resulted in median PFS of 8.2 (vs 5.7 mo chemotherapy, HR 0.54) in patients with PD-L1 expression (Tumour proportion score) &gt;= 50% as determined by the 22C3 PharmDx assay. EGFR, ALK, and ROS1 negative population. Duration and depth of response correlate to PD-L1 TPS.	33581821, 10.1016/j.annonc.2020.08.2285
 2	EGFR	A763_Y764insFQEA	Non-Small Cell Lung Cancer	Afatinib; Gefitinib; Erlotinib	Not explicitly TGA listed.	27413714, 10.1200/JCO.2019.37.15_suppl.e20593
 2	EGFR	Exon 19 deletion, L858R	Non-Small Cell Lung Cancer	Apatinib + Gefitinib 	Apatinib not TGA or FDA approved. ACTIVE Phase 3 trial.	10.1016/j.annonc.2020.08.2283
 2	EGFR	Exon 19 deletion, L858R	Non-Small Cell Lung Cancer	Dacomitinib	Not TGA approved. ARCHER 1009/1050	28958502, 25439691
@@ -76,7 +76,6 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ALK	T1151, C1156Y, F1174C, F1174L, F1174V, G1269A, L1196M, S1206R	Non-Small Cell Lung Cancer	Ensartinib		31857951
 4	ARAF	S214C	Non-Small Cell Lung Cancer	Sorafenib	Single case report. OncoKB LOE 3	24569458
 4	ATM	Protein expression	Non-Small Cell Lung Cancer	AZD1390 + Radiotherapy		29938225
-4	BCL2	Amplification	Non-Small Cell Lung Cancer	Venetoclax	Downgraded; Preclinical data only	29118061
 4	CDKN2A	Loss of protein expression	Non-Small Cell Lung Cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
 4	CDKN2A	Oncogenic mutations	Non-Small Cell Lung Cancer	Palbociclib	TAPUR. N=28. 1 PR. 6 SD	10.1200/JCO.2019.37.15_suppl.9041
 4	CEACAM5	Overexpression	Non-Small Cell Lung Cancer	SAR408701		10.1200/JCO.2020.38.15_suppl.9505
@@ -143,6 +142,8 @@ R1	EGFR	Exon 20 insertion except A763_Y764insFQEA	Non-Small Cell Lung Cancer	Gef
 R1	EGFR	T790M	Non-Small Cell Lung Cancer	Gefitinib; Neratinib; Afatinib; Erlotinib; Dacomitinib		18227510
 R2	ALK	Amplification	Non-Small Cell Lung Cancer	Crizotinib		22323827, 22277784
 R2	ALK	Fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
+R2	ALK	Fusion	Non-Small Cell Lung Cancer	Pembrolizumab; Atezolizumab; Nivolumab; Anti-PD1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	IMMUNOTARGET registry	31125062
+R2	ALK	G1128A, E1129V, L1122V, C1156Y, D1160H, F1174, R1192P, L1196M, L1198F, G1202R, G1269A	Non-Small Cell Lung Cancer	Crizotinib	Resistance listed for groups EXP2/EXP3A (crizotinib) only. For EXP(3B-5), exposure to individual drugs was not detailed in the publication.	30892989
 R2	ALK	G1202R, G1202del	Non-Small Cell Lung Cancer	Ensartinib		31857951
 R2	ALK	G1202R, G1202del	Non-Small Cell Lung Cancer	Entrectinib		28122866
 R2	ALK	G1202R, G1202del, D1203N, E1210K, E1210K and S1206C, E1210K and D1203N	Non-Small Cell Lung Cancer	Brigatinib		28122866, 28435288, 29935304
@@ -156,6 +157,7 @@ R2	BRAF+EGFR	EGFR:oncogenic mutations and BRAF:fusion	Non-Small Cell Lung Cancer
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Capmatinib; Crizotinib	Off-target resistance	32034073
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Crizotinib	Case series. EGFR Amplification in three cases	31548343
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Osimertinib		32385709, 28625643
+R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Osimertinib	Cell line data. Wild type EGFR	28202511
 R2	EGFR	C797S, C797G	Non-Small Cell Lung Cancer	Afatinib		32206559
 R2	EGFR	C797S, C797G	Non-Small Cell Lung Cancer	Osimertinib		25964297; 30073261
 R2	EGFR	D761Y	Non-Small Cell Lung Cancer	Gefitinib	Acquired resistance	17085664, 18981003
@@ -164,6 +166,7 @@ R2	EGFR	L718V, L718Q, G719	Non-Small Cell Lung Cancer	Osimertinib	OncoKB R2 (con
 R2	EGFR	L747P	Non-Small Cell Lung Cancer	Osimertinib	Case report	29673089
 R2	EGFR	L747P, L747S	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib		31200815
 R2	EGFR	L792H	Non-Small Cell Lung Cancer	Afatinib		32206559
+R2	EGFR	Oncogenic mutation	Non-Small Cell Lung Cancer	Pembrolizumab; Atezolizumab; Nivolumab; Anti-PD1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Meta-analysis of five clinical trials suggest that immune check point blockades confers no survival benefit as second-line therapy.	29270615
 R2	EGFR	R451C, G465R, S464L, I491M, ectodomain mutation	Non-Small Cell Lung Cancer	Panitumumab	Ectodomain mutations	25623215
 R2	EGFR	S492R, K467T, G465R, S464L, I491M, ectodomain mutation	Non-Small Cell Lung Cancer	Cetuximab	Ectodomain mutations	22270724, 27929064, 25623215
 R2	EGFR	S768_D770dup	Non-Small Cell Lung Cancer	Afatinib		32412152
@@ -187,9 +190,12 @@ R2	FBXW7	Deletion	Non-Small Cell Lung Cancer	Gefitinib		29633504
 R2	FGFR3	Fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	KRAS	Amplification	Non-Small Cell Lung Cancer	Crizotinib	Case series.	31548343
 R2	KRAS	Amplification, G12D	Non-Small Cell Lung Cancer	Crizotinib	Off-target resistance	32034073
+R2	KRAS	G12S	Non-Small Cell Lung Cancer	Osimertinib	Secondary resistance post Osimertinib	27252416
+R2	KRAS	G13D	Non-Small Cell Lung Cancer	Osimertinib	Cell line data. Off-target resistance	28202511
 R2	KRAS	Oncogenic mutations	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	KRAS+MET	MET:exon 14 skipping mutation and KRAS:Oncogenic mutations	Non-Small Cell Lung Cancer	Crizotinib		30352902
 R2	MET	Amplification	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib; Osimertinib		30676858
+R2	MET	Amplification	Non-Small Cell Lung Cancer	Osimertinib	Secondary resistance post Osimertinib. Amplification determined by FISH.	27252416
 R2	MET	D1228N	Non-Small Cell Lung Cancer	Crizotinib		27343442
 R2	MET	D1228N, D1228	Non-Small Cell Lung Cancer	Capmatinib; Tepotinib; Savolitinib		32034073
 R2	MET	D1246N	Non-Small Cell Lung Cancer	Crizotinib	Case report. Emergent variant post exposure to Crizotinib. Possible Acquired resistance	31809977
@@ -203,6 +209,7 @@ R2	MET	Y1230S, Y1230H, D1228N, D1228H, F1200I, L1195V, S244fs	Non-Small Cell Lun
 R2	MET+TP53	MET:Exon 14 skipping mutation and TP53:oncogenic mutation	Non-Small Cell Lung Cancer	Crizotinib	Case series. TP53 mutation shown in post-exposure to crizotinib 7 of 12 cases.	31548343
 R2	NF1	Oncogenic mutation	Non-Small Cell Lung Cancer	Crizotinib	Case series.	31548343
 R2	NRG1	Overexpression	Non-Small Cell Lung Cancer	Seribantumab + Docetaxel	No PFS improvement in EGFR wt NSCLC	10.1200/JCO.2019.37.15_suppl.9036
+R2	PIK3CA	G118D	Non-Small Cell Lung Cancer	Osimertinib	Cell line data. Off-target resistance	28202511
 R2	PIK3CA	Oncogenic mutation	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	RET	Fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	RET	KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
@@ -216,8 +223,3 @@ R2	ROS1	L2026M, G2032R	Non-Small Cell Lung Cancer	AZD3463		26372962, 31395437
 R2	ROS1	L2026M, G2032R, D2033N	Non-Small Cell Lung Cancer	Entrectinib		26372962, 31395437
 R2	ROS1+MET	ROS1:fusion AND MET:D1228N	Non-Small Cell Lung Cancer	Crizotinib	Case report	33000474
 R2	STK11+KRAS	STK11:Oncogenic mutations AND KRAS:Oncogenic mutations	Non-Small Cell Lung Cancer	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Pre-clinical study	29773717
-R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Osimertinib	Cell line data. Wild type EGFR	28202511
-R2	KRAS	G13D	Non-Small Cell Lung Cancer	Osimertinib	Cell line data. Off-target resistance	28202511
-R2	KRAS	G12S	Non-Small Cell Lung Cancer	Osimertinib	Secondary resistance post Osimertinib	27252416
-R2	MET	Amplification	Non-Small Cell Lung Cancer	Osimertinib	Secondary resistance post Osimertinib. Amplification determined by FISH.	27252416
-R2	PIK3CA	G118D	Non-Small Cell Lung Cancer	Osimertinib	Cell line data. Off-target resistance	28202511

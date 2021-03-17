@@ -208,7 +208,7 @@ Dinutuximab|Ch14.18|Ch 14.18UTC|Unituxin	anti-GD2_monoclonal_antibody
 Diphencyprone|DPCP|Diphenylcyclopropenone	topical_immune_response_modifier
 Docetaxel|Taxotere|Docecad|RP56976	taxane
 Dostarlimab|ANB011|TSR 042|TSR-042|TSR042	anti-PD-1_monoclonal_antibody
-Dovitinib	PDGFRB_inhibitor; VEGFR_inhibitor; pan-FGFR_inhibitor
+Dovitinib	PDGFRB_inhibitor; VEGFR_inhibitor; FGFR1/2/3_inhibitor
 Doxorubicin|Adriablastin|Hydroxydaunomycin|Hydroxyl Daunorubicin|Hydroxyldaunorubicin	anthracycline
 Durvalumab|Imfinzi|MEDI-4736|MEDI4736	anti-PD-L1_monoclonal_antibody
 E7016	PARP_inhibitor
@@ -228,7 +228,7 @@ Entrectinib|RXDX 101|RXDX-101|RXDX101|Rozlytrek	ALK_inhibitor,third_generation; 
 Envafolimab|KN 035|KN035	anti-PD-L1_monoclonal_antibody
 Enzalutamide|ASP9785|MDV3100|Xtandi	antiandrogen,nonsteroidal,second_generation
 Epirubicin	anthracycline
-Erdafitinib|Balversa|JNJ-42756493	pan-FGFR_inhibitor
+Erdafitinib|Balversa|JNJ-42756493|JNJ42756493	pan-FGFR_inhibitor
 Eribulin|ER-086526	macrocyclic_ketone_analogue
 Erlotinib	EGFR_inhibitor,first_generation
 Etigilimab|OMP 313M32|OMP-313M32|WHO 10742	anti-TIGIT_monoclonal_antibody
@@ -778,3 +778,8 @@ Loncastuximab Tesirine	anti-CD19_antibody-drug_conjugate
 CX-5461	RNA_polymerase_I_inhibitor
 Halofuginone	glutamyl-prolyl_tRNA_synthetase_inhibitor
 Anlotinib	FGFR/KIT/PDGFR/VEGFR_inhibitor
+D-1553	KRAS_G12C_inhibitor
+VT3989	YAP_inhibitor
+ENB-003	ETBR_inhibitor
+ZN-C3	WEE1_inhibitor
+LY3410738	IDH1_R132_inhibitor; IDH1_R132_inhibitor,covalent
