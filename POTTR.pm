@@ -276,8 +276,8 @@ sub load_module_variant_feature_mapping {
 		return () if $f !~ /^(\S+?):(?:alteration)(,[_\s]*germline)?\s*$/ ;
 		my $germline_suffix = $2 // '';
 		my $bm = $1;
-		my @tags = $facts->get_tags($f);
-		return () if ! grep { ! /^INFERRED:|^\Q$bm\E:(?:oncogenic_mutation|alteration|amplification)(?:,[_\s]*germline)?/ } @tags;
+		my @tags = grep { /^\Q$bm\E:/ } ( $facts->get_tags($f) );
+		return () if ! grep { ! /^INFERRED:|^\Q$bm\E:(?:oncogenic_mutation|alteration|.*fusion|amplification|.*expression)(?:,[_\s]*germline)?/ } @tags;
 # 		return () if $f !~ /^(\S+?):(?:oncogenic_mutation)\s*$/ ;
 # 		return ( Facts::mk_fact_str($f, ($facts->get_tags($f)), 'INFERRED:oncogenicity') );
 		my $f_inferred_oncogenicity = "$bm:oncogenic_mutation".$germline_suffix ;

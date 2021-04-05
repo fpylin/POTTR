@@ -89,6 +89,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR	Exon 20 mutation	Non-Small Cell Lung Cancer	EGFR inhibitor,exon 20 selective   	Review article	30854234
 4	EGFR	Kinase Domain Duplication	Non-Small Cell Lung Cancer	Afatinib; Erlotinib; Gefitinib	OncoKB LOE 3	30255937, 19915609, 26286086
 4	EGFR	L718V	Non-Small Cell Lung Cancer	Afatinib	Case report. Concomitant L858 and loss of T790M	29571986
+4	EGFR	L747_A750delinsP	Non-Small Cell Lung Cancer	Afatinib	Cell line and in silico structural study demonstrating increased sensitivity to afatinib over erlotinib and osimertinib.	31182434
 4	EGFR	L747P, L747S	Non-Small Cell Lung Cancer	Afatinib	Retrospective sample	31200815
 4	EGFR	L747S, D761Y, T854A	Non-Small Cell Lung Cancer	Afatinib; Osimertinib	Cell line study	28424065
 4	EGFR	L833V	Non-Small Cell Lung Cancer	Gefitinib	Case report	21422421
@@ -129,6 +130,10 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MET+EGFR	MET:Alteration and EGFR:Oncogenic mutations	Non-Small Cell Lung Cancer	Amivantamab		10.1200/JCO.2019.37.15_suppl.9009
 4	NF1	Oncogenic mutations	Non-small Cell Lung Cancer	Trametinib		NCT03232892
 4	NOTCH3	Overexpression	Non-small cell lung cancer	MRK003	Pre-clinical evidence	17804716
+4	NRG1	Fusion; CD74-NRG1 fusion; POMK-NRG1 fusion; APP-NRG1 fusion	Non-Small Cell Lung Cancer; Solid tumours	Afatinib	Case series. Partial response seen in patients with fusion in two NSCLC, one colorectal cancer, and one pancreatic cancer treated with afatinib. Two NSCLC patients treated with afatinib were seen with prolonged responses.	10.1200/JGO.2019.5.suppl.110
+4	NRG1	Fusion; CD74-NRG1 fusion; SLC3A2-NRG1 fusion	Non-small cell lung cancer	Afatinib	Case reports. Partial response seen in patients with fusion in two NSCLC with responses of 6 and 10 months respectively.	28502724
+4	NRG1	Fusion; SDC4-NRG1 fusion; ATP1B1-NRG1 fusion	Non-small cell lung cancer; Cholangiocarcinoma	Afatinib	Case reports. Partial response seen in patients with fusion in two NSCLC.	28950338
+4	NRG1	Fusion; SLC3A2-NRG1 fusion	Non-small cell lung cancer	Lumretuzumab + Erlotinib	Case report of  invasive mucinous adenocarcinoma of lung. NRG fusion	30268483
 4	RET	Fusions	Non-Small Cell Lung Cancer	Cabozantinib	Not TGA approved. Case reports only	23533264, 30653139
 4	RET	RET fusions and NOT KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
 4	ROS1	Fusions	Non-Small Cell Lung Cancer	AZD3463		26372962
@@ -163,6 +168,7 @@ R2	EGFR	C797S, C797G	Non-Small Cell Lung Cancer	Osimertinib		25964297; 30073261
 R2	EGFR	D761Y	Non-Small Cell Lung Cancer	Gefitinib	Acquired resistance	17085664, 18981003
 R2	EGFR	Exon 20 mutation	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib	On-target resistance	24353160
 R2	EGFR	L718V, L718Q, G719	Non-Small Cell Lung Cancer	Osimertinib	OncoKB R2 (concordant)	29506987, 31301016
+R2	EGFR	L747_A750delinsP	Non-Small Cell Lung Cancer	Erlotinib; Osimertinib	Cell line and in silico structural study demonstrating increased sensitivity to afatinib over erlotinib and osimertinib.	31182434
 R2	EGFR	L747P	Non-Small Cell Lung Cancer	Osimertinib	Case report	29673089
 R2	EGFR	L747P, L747S	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib		31200815
 R2	EGFR	L792H	Non-Small Cell Lung Cancer	Afatinib		32206559

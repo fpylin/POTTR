@@ -252,7 +252,7 @@ Fianlimab|REGN 3767|REGN3767|WHO 11182	anti-LAG3_monoclonal_antibody
 Filgrastim|G-CSF|Neupogen|Recombinant Methionyl Human Granulocyte Colony Stimulating Factor|Tevagrastim	granulocyte_colony_stimulating_factor
 Fisogatinib|BLU 554|BLU-554|BLU554|CS 3008|CS-3008|CS3008	FGFR4_inhibitor
 Fludarabine|2-Fluoro-9-beta-arabinofuranosyladenine|2-Fluorovidarabine|9-Beta-D-arabinofuranosyl-2-fluoro-9H-purin-6-amine|9-Beta-D-arabinofuranosyl-2-fluoroadenine|Fluradosa	antimetabolite
-Fluorouracil|5-FU|Fluracil|Fluril|2,4-Dioxo-5-fluoropyrimidine|5 FU|5FU|AccuSite|Adrucil|Carac|Fluoro Uracil|Fluouracil|Flurablastin|Fluracedyl|Fluroblastin|Ribofluor|Ro 2-9757|Ro-2-9757	antimetabolite
+Fluorouracil|5-FU|5-Fluorouracil|5 Fluorouracil|Fluracil|Fluril|2,4-Dioxo-5-fluoropyrimidine|5 FU|5FU|AccuSite|Adrucil|Carac|Fluoro Uracil|Fluouracil|Flurablastin|Fluracedyl|Fluroblastin|Ribofluor|Ro 2-9757|Ro-2-9757	antimetabolite
 Flutamide|Apimid|Cebatrol|Chimax|Cytomid|Drogenil|Euflex|Eulexin|FLUT|Flucinom|Flugerel|Fluken|Flulem|Fugerel|Grisetin|Niftolide|Oncosal|Profamid|Prostacur|Prostadirex|Prostica|Prostogenat|SCH 13521|Tafenil|Testotard	antiandrogen,nonsteroidal,first_generation
 Fluzoparib|SHR-3162|SHR3162	PARP_inhibitor
 Foretinib|XL880|GSK1363089	MET_inhibitor,type_2; ROS1_inhibitor
@@ -650,7 +650,7 @@ Gemtuzumab Ozogamicin	anti-CD33_antibody-drug_conjugate
 Hyaluronidase-fihj	hyaluronidase
 Isatuximab|Isatuximab-irfc	anti-CD38_monoclonal_antibody
 KU-55933	ATM_inhibitor
-MK-6482	HIF2a_inhibitor
+Belzutifan|MK-6482	HIF2a_inhibitor
 Medroxyprogesterone Acetate	progestogen_analogue
 Nirogacestat|PF-03084014	gamma_secretase_inhibitor
 Polatuzumab vedotin|Polatuzumab vedotin-piiq	anti-CD79b_antibody-drug_conjugate
@@ -693,7 +693,7 @@ Apatinib	VEGF2_inhibitor
 Necitumumab	anti-EGFR_monoclonal_antibody
 PF-06804103	anti-ERBB2_antibody-drug_conjugate
 SBT6050	anti-ERBB2_antibody-drug_conjugate
-mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeted_vaccine
+mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 GS493	SHP2_inhibitor
 TPX0022|TPX-0022	MET/SRC/CSF1R_inhibitor
 MRTX849|Adagrasib	KRAS_G12C_inhibitor
@@ -783,3 +783,4 @@ VT3989	YAP_inhibitor
 ENB-003	ETBR_inhibitor
 ZN-C3	WEE1_inhibitor
 LY3410738	IDH1_R132_inhibitor; IDH1_R132_inhibitor,covalent
+Lumretuzumab	anti-ERBB3_monoclonal_antibody

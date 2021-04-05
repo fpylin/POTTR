@@ -198,7 +198,7 @@ sub encode_alteration_proper {
 	$bm = $1 if ( $x =~ s/^([A-Z\-a-z0-9 ]+:)// );
 # 	print "\e[1;42;35m".$bm.'|'.$x."\e[0m\n";
 
-	if ( $bm =~ /^((?:Microsatellite.Instability|Tumour.Mutation(?:al)?.Burden|(?:Loss-of-heterozygosity|Homologous Recombination Deficiency)|Homologous.Recombination.Deficiency|Mismatch.repair):)$/i ) { 
+	if ( $bm =~ /^((?:Microsatellite.Instability|Tumour.Mutation(?:al)?.Burden|(?:Loss-of-heterozygosity|Homologous Recombination Deficiency)|Homologous.Recombination.Deficiency|Mismatch.repair|Consensus molecular subtype|Intrinsic subtype):)$/i ) { 
 		$bm = lc($1);
 		$bm =~ s/ /_/g;
 	}
