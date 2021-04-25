@@ -400,6 +400,7 @@ sub extract_preferential_trials {
 		my $matched_trial_LOM_score            =  $tags{'LOM'} // 'Not assessed';
 		my $ext_weblink                        =  $tags{'ext_weblink'};
 		my $notes                              =  join("; ", grep { /^\*/ } @tags);
+		my $preferential_trial_score           =  $tags{'pref_trial_score'}  // '';
 		
 		my @matched_drug_names   = split /\s*;\s*/, $matched_drug_names ;
 		@matched_drug_names = uniq( map { Therapy::get_preferred_drug_name($_) } @matched_drug_names );
@@ -437,7 +438,8 @@ sub extract_preferential_trials {
 			'postcodes' => \@postcodes,
 			'LOM' => $matched_trial_LOM_score,
 			'ext_weblink' => $ext_weblink,
-			'notes' => $notes
+			'notes' => $notes,
+			'pref_trial_score' => $preferential_trial_score
 		);
 		push @retval, \%row;
 	}
@@ -843,8 +845,8 @@ sub gen_preferential_trial_report {
 	@results_preferential_trials = sort { cmp_preferential_trials($a, $b) } @results_preferential_trials ;
 
 	my $output ; # = "List of biomarker matched clinial trials:\n";
-	$output .= join("\t", "Rank", 
-		"Trial ID", "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria", "Level of matching",
+	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score",
+		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria", "Level of matching",
 		"Drugs", "Drug classes", "Cancer types", "Full title", "Postcode", "External weblink", "Notes"
 		)."\n";
 
@@ -866,6 +868,7 @@ sub gen_preferential_trial_report {
 		$output .= join("\t", (
 				$cnt, 
 				$$row{'trial_id'}, 
+				$$row{'pref_trial_score'},
 				$$row{'matched_trial_class_tier'},
 				$$row{'matched_trial_tier'},
 				$$row{'matched_trial_drug_maturity'},
@@ -880,6 +883,7 @@ sub gen_preferential_trial_report {
 				(length( $$row{'$trialacronym'} ) ? "$$row{'$trialacronym'} - " : "").$$row{'full_title'},
 				$postcodes,
 				$$row{'ext_weblink'},
+				$$row{'notes'}
 				)
 			)."\n";
 		++$cnt ;

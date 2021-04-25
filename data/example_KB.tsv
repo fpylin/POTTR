@@ -2,6 +2,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 1	ALK	EML4-ALK Fusion, Fusions	Non-Small Cell Lung Cancer	Alectinib	PBS reimbursed. Requires fluorescence in situ hybridisation (FISH) testing for ALK gene rearrangement, defined as 15% (or greater) positive cells. In first-line setting, alectinib had a superior 12 months EFS of 68% vs crizotinib 49% (ALEX trial). In J-ALEX trial, the median PFS was NR (alectinib) vs 10.2 months (crizotinib).	28586279, 28501140
 1	ALK	EML4-ALK Fusion, Fusions	Non-Small Cell Lung Cancer	Ceritinib	PBS reimbursed. Requires fluorescence in situ hybridisation (FISH) testing for ALK gene rearrangement, defined as 15% (or greater) positive cells. ASCEND-5 – In post-crizotinib and chemotherapy setting, Ceritinib had superior median PFS than 5.4 v docetaxel 1.6 months. ASCEND-4 – In first-line setting, Ceritinib has superior PFS 16.6 vs platinum chemotherapy 8.1 months.	24670165, 28126333, 28602779
 1	ALK	EML4-ALK Fusion, Fusions	Non-Small Cell Lung Cancer	Crizotinib	PBS reimbursed. Requires fluorescence in situ hybridisation (FISH) testing for ALK gene rearrangement, defined as 15% (or greater) positive cells. PROFILE1014 trial – in the first-line setting, Crizotinib had a superior PFS 10.9 vs chemotherapy 7.0 months. In the second-line setting, Crizotinib had longer PFS 7.7 vs docetaxel 3.0 months. No OS difference shown in either trials due to crossover of subgroups.	20979469, 25470694
+1	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Brigatinib	TGA approved. PBS reimbursed; FDA approved	30280657, 32780660
 1	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Lorlatinib	PBS reimbursed after progression on ALK inhibitor other than Crizotinib.  Requires fluorescence in situ hybridisation (FISH) testing for ALK gene rearrangement, defined as 15% (or greater) positive cells. In Phase 3 trial vs crizotinib (CROWN): OS was superior at12 months 78% vs 39%	30413378, 33207094, 10.1016/j.annonc.2020.08.2282
 1	CD20	Protein expression	Non-Hodgkin’s Lymphoma; Chronic lymphocytic leukaemia; Acute lymphoblastic leukaemia; Hodgkin’s Lymphoma	Rituximab	PBS reimbursed. References non-exhaustive	11807147, 20888994
 1	CD274	Protein expression	Non-Small Cell Lung Cancer	Pembrolizumab	PBS reimbursed. TGA approved as monotherapy for the first-line treatment of patients with NSCLC expressing PD-L1, and EGFR and ALK negative. Defined as tumour proportion score (TPS) greater than or equal to 1%. KEYNOTE 042 and KEYNOTE-024. 	27718847, 30955977
@@ -14,7 +15,6 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 1	EGFR	G719, L861Q, S768I	Non-Small Cell Lung Cancer	Afatinib	PBS reimbursed. LUX-Lung 6	24439929
 1	ROS1	Fusions	Non-Small Cell Lung Cancer	Crizotinib	PBS reimbursed. ROS1-positivity is defined as gene rearrangement &gt;15% positive cells by FISH	25264305
 1	ROS1	Fusions	Non-Small Cell Lung Cancer	Entrectinib	PBS reimbursed. ROS1-positivity is defined as gene rearrangement &gt;15% positive cells by FISH	28183697, 10.1200/jco.2015.33.15_suppl.2517
-1B	ALK	EML4-ALK Fusion, Fusions 	Non-Small Cell Lung Cancer	Brigatinib	TGA approved. Not PBS reimbursed; FDA approved	30280657, 32780660
 1B	BRAF	V600E	Non-Small Cell Lung Cancer	Dabrafenib + Trametinib	TGA approved. Not PBS reimbursed	29072975
 1B	CD20	Protein expression	Non-Hodgkin’s Lymphoma	Ibrutinib	TGA approved for 1+ prior therapy with an anti-CD20 antibody-containing regimen.	28167659
 1B	CD274+EGFR+ALK	CD274:Protein expression and NOT EGFR:oncogenic mutation and NOT ALK:fusion	Non-small cell lung cancer	Atezolizumab	TGA approved; IMPower110: First-line treatment in PD-L1 positive population (defined as positive stain on &gt;=least 1% of tumour cells or tumor-infiltrating immune cells &gt;= 1% of the tumor area), EGFR and ALK negative. Median OS: 20 vs 13 months (chemotherapy)	32997907, 10.1093/annonc/mdz293
@@ -72,8 +72,10 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ROS1	Fusion, G2032R	Non-Small Cell Lung Cancer	Repotrectinib	Exceptional Phase 1 activities (ORR 90%)	10.1200/JCO.2019.37.15_suppl.9011
 3	ROS1	Fusions	Non-Small Cell Lung Cancer	Ceritinib	Positive phase 2 trial.	28520527
 3	Tumour Mutational Burden	High	Non-small cell lung cancer	Durvalumab + Tremelimumab	MYSTIC trial	32271377
+3	Tumour Mutational Burden	High	Non-Small Cell Lung Cancer	Ipilimumab + Nivolumab + Carboplatin + Pemetrexed; Ipilimumab + Nivolumab + Cisplatin + Pemetrexed; Ipilimumab + Nivolumab + Carboplatin + Paclitaxel	Checkmakte 9LA: In non-EGFR/ALK-altered NSCLC, the prespecified subgroup analysis showed that high tumour TMB (at cut off of 10 mut/MB) is associated with high ORR in the chemo + IO group (46 v 28%), also mPFS (8.9 vs 4.7mo) and OS (15.0 vs 10.8 mo). Similar benefit was was also observed in bTMB at the 16 and 20 mut/MB thresholds.	10.1016/S1556-0864(21)01940-7
 4	ALK	Amplification, protein expression	Non-Small Cell Lung Cancer	Ensartinib		31628085, 25724526
 4	ALK	T1151, C1156Y, F1174C, F1174L, F1174V, G1269A, L1196M, S1206R	Non-Small Cell Lung Cancer	Ensartinib		31857951
+4	ALK	Fusion, T1151M, T1151_L1152insT, L1152R, L1152P, C1156Y, I1171N, F1174L, F1174S, F1174C, V1180L, L1196M and L1198F, L1198F and C1156Y, L1198F, G1202R and L1198F, G1202R, G1202del, D1203N, D1203N and E1210K, S1206R, E1210K and S1206C, E1210K, L1196M, F1245C, G1269A, S1269S, R1275Q	Non-Small Cell Lung Cancer	TPX-0131	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 4	ARAF	S214C	Non-Small Cell Lung Cancer	Sorafenib	Single case report. OncoKB LOE 3	24569458
 4	ATM	Protein expression	Non-Small Cell Lung Cancer	AZD1390 + Radiotherapy		29938225
 4	CDKN2A	Loss of protein expression	Non-Small Cell Lung Cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
@@ -115,10 +117,13 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB4	Oncogenic mutations	Non-small cell lung cancer; Melanoma	Lapatinib + Afatinib		29902295
 4	EZH2	Oncogenic mutation, A677G, Y641N, Y641C, Y641H, Y641S, Y641F, Y646, A687V	Non-Hodgkin Lymphoma	Tazemetostat		24563539
 4	FANCD2	Loss-of-function mutation, Oncogenic mutations	Non-Small Cell Lung Cancer	Veliparib	Cell line study only using FANCD2 knockout	25566506
+4	FGFR2	FGFR2-BICC1 fusion	Non-Small Cell Lung Cancer	Erdafitinib	Case report showing partial response to erdafitinib	10.1200/PO.20.00110
 4	KRAS	Oncogenic mutation	Non-Small Cell Lung Cancer	SHP2 inhibitor		29808006
 4	KRAS	Oncogenic mutation	Non-Small Cell Lung Cancer	Trametinib	Phase II, ORR 12% but worse PFS than docetaxel	10.1200/jco.2013.31.15_suppl.8029
 4	KRAS	Oncogenic mutation	Non-Small Cell Lung Cancer	Trametinib + Ponatinib	Intrinsic MEK resistance by FGFR1 activation	27338794, NCT03704688
 4	KRAS+ERBB3	KRAS:Oncogenic mutations and ERBB3:Overexpression	Non-Small Cell Lung Cancer; Colorectal Cancer	Afatinib + Selumetinib	By ERBB3 overexpression	24685132
+4	KRAS+STK11	KRAS:G12C and STK11:Oncogenic mutations	Non-Small Cell Lung Cancer	Adagrasib	KRYSTAL-1. Higher ORR was seen in 64% (9/14) with STK11 mutations	10.1016/S1556-0864(21)01941-9
+4	MAP2K1	K57N, Q56P	Non-Small Cell Lung Cancer	Selumetinib	Cell line study showing NSCLC cells sensitive to AZD6244	18632602
 4	MAP2K1	Oncogenic mutations	Non-Small Cell Lung Cancer	Cobimetinib; Trametinib	OncoKB LOE 3	31715422
 4	MET	Amplification	Non-Small Cell Lung Cancer	Tepotinib		NCT02864992
 4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation	Non-Small Cell Lung Cancer	Crizotinib	Case reports	26845194, 27022036
@@ -142,6 +147,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ROS1	Fusions	Non-Small Cell Lung Cancer	Ensartinib	In Phase 2 trial	NCT03608007
 4	ROS1	Fusions; G2032R	Non-Small Cell Lung Cancer	DS-6051b		31399568
 4	ROS1	G2032R	Non-Small Cell Lung Cancer	Cabozantinib	Cell-line evidence only	31395437, 25351743
+4	SMARCA4	Loss-of-function mutation	Non-Small Cell Lung Cancer	Palbociclib	SMARCA4 loss is synthetic lethal with palbociclib in NSCLC cell line.	30718506
 4	Tumour Mutational Burden	High	Non-Small Cell Lung Cancer	Nivolumab	Exploratory analysis from Checkmate 026. High TMB was defined as highest third of mutations in the study cohort.	28636851
 R1	EGFR	Exon 20 insertion except A763_Y764insFQEA	Non-Small Cell Lung Cancer	Gefitinib; Neratinib; Afatinib; Erlotinib; Dacomitinib		21764376
 R1	EGFR	T790M	Non-Small Cell Lung Cancer	Gefitinib; Neratinib; Afatinib; Erlotinib; Dacomitinib		18227510
@@ -152,13 +158,22 @@ R2	ALK	G1128A, E1129V, L1122V, C1156Y, D1160H, F1174, R1192P, L1196M, L1198F, G1
 R2	ALK	G1202R, G1202del	Non-Small Cell Lung Cancer	Ensartinib		31857951
 R2	ALK	G1202R, G1202del	Non-Small Cell Lung Cancer	Entrectinib		28122866
 R2	ALK	G1202R, G1202del, D1203N, E1210K, E1210K and S1206C, E1210K and D1203N	Non-Small Cell Lung Cancer	Brigatinib		28122866, 28435288, 29935304
+R2	ALK	G1269S	Non-Small Cell Lung Cancer	Crizotinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	ALK	I1151ins, L1152R, C1156Y, F1174L, F1174V, L1198F, L1196M, L1198P, G1202R, G1202del, S1206Y, G1269A, D1203N	Non-Small Cell Lung Cancer	Crizotinib		21030459, 28050598, 26698910, 28122866, 26568289, 22277784
 R2	ALK	I1151ins, L1152R, L1152P, C1156Y, C1156T, F1174C, F1174L, F1174V, G1202R, G1202del	Non-Small Cell Lung Cancer	Ceritinib		28050598; 28122866;  26568289
+R2	ALK	I1171N, G1202R, G1202del	Non-Small Cell Lung Cancer	Alectinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	ALK	I1171T, I1171ins, I1171N, I1171S, V1180L, G1202R, G1202del	Non-Small Cell Lung Cancer	Alectinib		28050598; 28122866; 25228534; 26568289; 29935304
+R2	ALK	L1196M and L1198F, C1156Y and G1202R, L1196M and G1202R, L1198F and G1202R, G1202R and G1269A	Non-Small Cell Lung Cancer	Crizotinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
+R2	ALK	L1196M and L1198F, L1198F and C1156Y, C1156Y and G1202R, L1196M and G1202R, L1198F and G1202R, G1202R and G1269A	Non-Small Cell Lung Cancer	Alectinib, Brigatinib, Ceritinib, Lolartinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	ALK	L1198F and C1156Y	Non-Small Cell Lung Cancer	Lorlatinib		28122866
+R2	ALK	L1198F, G1202R	Non-Small Cell Lung Cancer	Ceritinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	BCL2L11	Deletion	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib		22426421
 R2	BRAF	Oncogenic mutation, fusion	Non-Small Cell Lung Cancer	Osimertinib	Off-target mechanism	23470965
 R2	BRAF+EGFR	EGFR:oncogenic mutations and BRAF:fusion	Non-Small Cell Lung Cancer	EGFR inhibitor            	Off-target mechanism	30831205
+R2	BRAF+KRAS	BRAF:V600E AND KRAS:Q61R	Non-Small Cell Lung Cancer	Dabrafenib + Trametinib		32388065
+R2	BRAF+MAP2K1	BRAF:V600E AND MAP2K1:K57N	Non-Small Cell Lung Cancer	Dabrafenib + Trametinib		32388065
+R2	BRAF+NRAS	BRAF:V600E AND NRAS:Q61R	Non-Small Cell Lung Cancer	Dabrafenib + Trametinib		32388065
+R2	BRAF+PTEN	BRAF:V600E AND PTEN:Oncogenic mutation	Non-Small Cell Lung Cancer	Dabrafenib + Trametinib		32388065
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Capmatinib; Crizotinib	Off-target resistance	32034073
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Crizotinib	Case series. EGFR Amplification in three cases	31548343
 R2	EGFR	Amplification	Non-Small Cell Lung Cancer	Osimertinib		32385709, 28625643

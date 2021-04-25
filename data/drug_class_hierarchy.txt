@@ -11,6 +11,7 @@ ALK_inhibitor	ALK/ROS1_inhibitor
 ALK_inhibitor	ALK_inhibitor,first_generation
 ALK_inhibitor	ALK_inhibitor,second_generation
 ALK_inhibitor	ALK_inhibitor,third_generation
+ALK_inhibitor	ALK_inhibitor,fourth_generation
 ASCT2_antibody-drug_conjugate
 ATR_inhibitor	ATR/CHEK1_inhibitor
 AXL_inhibitor	AXL/FLT3_inhibitor

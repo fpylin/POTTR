@@ -1,42 +1,34 @@
 trial_id	eligibility_criteria
 ACTRN12619000844145	ALK:fusion
-NCT02323126	NOT_RECRUITING; MET:alteration
+NCT02323126	MET:alteration
+NCT02477826	*NOT prior_therapy:systemic_therapy
 NCT02609776	MET:oncogenic_mutation
-NCT02775435	NOT_RECRUITING
+NCT02974725	BRAF:oncogenic_mutation; catype:Non-small cell lung cancer
+NCT02974725	KRAS:oncogenic_mutation; catype:Non-small cell lung cancer
+NCT02974725	NRAS:oncogenic_mutation; catype:Melanoma
 NCT03052608	ALK:fusion
-NCT03088540	NOT_RECRUITING
 NCT03175224	(MET:oncogenic_mutation OR MET:alteration)
-NCT03215706	NOT_RECRUITING
-NCT03358875	NOT_RECRUITING
-NCT03430063	NOT_RECRUITING
+NCT03178552	*NOT prior_therapy:systemic_therapy
 NCT03497767	EGFR:oncogenic_mutation
-NCT03515837	NOT_RECRUITING
 NCT03539536	MET:alteration; EGFR:oncogenic_mutation; catype:Non-small cell lung cancer
-NCT03631199	NOT_RECRUITING
-NCT03631784	NOT_RECRUITING
+NCT03829332	*NOT prior_therapy:systemic_therapy
+NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Colorectal cancer; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
+NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Non-small cell lung cancer
+NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Pancreatic cancer
 NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
+NCT03976323	*NOT sensitive_to_drug_class:EGFR_inhibitor,third_generation; *NOT sensitive_to_drug_class:ALK_inhibitor; *NOT sensitive_to_drug_class:ROS1_inhibitor
 NCT03994393	EGFR:oncogenic_mutation
 NCT03994393	EGFR:oncogenic_mutation
 NCT04035486	EGFR:oncogenic_mutation
 NCT04129502	(ERBB2:exon_20_insertion OR EGFR:exon_20_insertion)
 NCT04139317	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04194944	RET:fusion
+NCT04222972	catype:Non-small cell lung cancer; RET:fusion
 NCT04248829	EGFR:oncogenic_mutation
+NCT04262856	*NOT prior_therapy:systemic_therapy
 NCT04294810	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04434482	NOT catype:central nervous system cancer
-NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Colorectal cancer; NOT microsatellite_instability:high
-NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Non-small cell lung cancer
-NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Pancreatic cancer
-NCT02974725	KRAS:oncogenic_mutation; catype:Non-small cell lung cancer
-NCT02974725	BRAF:oncogenic_mutation; catype:Non-small cell lung cancer
-NCT02974725	NRAS:oncogenic_mutation; catype:Melanoma
+NCT04447118	ERBB2:exon_20_mutation
+NCT04487080	EGFR:oncogenic_mutation
 NCT04538664	EGFR:exon_20_insertion
 NCT04585815	BRAF:V600E
-NCT02477826	*NOT prior_therapy:systemic_therapy
-NCT03829332	*NOT prior_therapy:systemic_therapy
-NCT03178552	*NOT prior_therapy:systemic_therapy
-NCT04487080	EGFR:oncogenic_mutation
-NCT03829319	NOT_RECRUITING
-NCT03976323	*NOT sensitive_to_drug_class:EGFR_inhibitor,third_generation; *NOT sensitive_to_drug_class:ALK_inhibitor; *NOT sensitive_to_drug_class:ROS1_inhibitor
-NCT04222972	catype:Non-small cell lung cancer; RET:fusion
-NCT04262856	*NOT prior_therapy:systemic_therapy

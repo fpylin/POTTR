@@ -683,8 +683,8 @@ sub load_module_preferential_trial_prioritisation {
 		my @annotations;
 		my ($trial_id, $tags) = ($1, $2); 
 		my @tags = $facts->get_tags($f);
-		my @inf_drugs        = map { s/INFERRED:treatment_drug://; $_ }       grep { /INFERRED:treatment_drug:/ }       @tags ;
-		my @inf_drug_classes = map { s/INFERRED:treatment_drug_class://; $_ } grep { /INFERRED:treatment_drug_class:/ } @tags ;
+		my @inf_drugs        = map { s/(?:CERTAIN|INFERRED):treatment_drug://; $_ }       grep { /(?:CERTAIN|INFERRED):treatment_drug:/ }       @tags ;
+		my @inf_drug_classes = map { s/(?:CERTAIN|INFERRED):treatment_drug_class://; $_ } grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
 		my @trial_match_criteria = map { s/trial_match_criteria://; $_ } grep { /^trial_match_criteria:/} @tags;
 		my @rec_drugs_tier;
 		
@@ -776,24 +776,25 @@ sub load_module_deinit {
 	$rs = $self->{'modules'}->add_module('07B - Calculate LOM');
 	$rs->define_dyn_rule( 'calculate_LOM',  sub { my $f=shift; my $facts = $_[0];
 		my @tags = $facts->get_tags($f);
-		my @certain;
-		my @inferred;
+		my %certain;
+#		my %inferred;
 		
 		for (@tags) {
-			/^(?:CERTAIN):(.*)/  and do { push @certain,  $1; next ; };
-			/^(?:INFERRED):(.*)/ and do { push @inferred, $1; next ; };
+			/^(?:CERTAIN):([^:]*)/  and do { my $c = $1; $c =~ s/_drug//; $certain{$c} += 1; next ; };
+			/^(?:INFERRED):([^:]*)/ and do { my $c = $1; $c =~ s/_drug//; $certain{$c} += 0; next ; }; # $c =~ s/_class$//; 
 		}
 		
 		my %LOM_string = ( 1 => 'Complete match', 2 => 'Partial match', 3 => 'Completely inferred' );
 		my $LOM = 0;
 		
-		if ( scalar(@inferred) + scalar(@certain) ) {
-			$LOM += ( scalar(@inferred) > 0 ) ? 2 : 1;
-			$LOM += ( scalar(@certain) == 0 ) ? 1 : 0;
+		if ( scalar(keys %certain) ) {
+			$LOM += ( scalar(grep { $certain{$_} == 0 } (keys %certain)) > 0 ) ? 2 : 1;
+			$LOM += ( scalar(grep { $certain{$_} > 0 } (keys %certain)) == 0 ) ? 1 : 0;
 		}
-		
+ 		
 		if ($LOM) {
 			my $LOM_string = "LOM:$LOM - $LOM_string{$LOM}";
+			$LOM_string.= join("/", " - LOMreason", (map { "$certain{$_}-$_" } keys %certain) )."\n";
 			return Facts::mk_fact_str($f, $LOM_string);
 		} 
 		return ();

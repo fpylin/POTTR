@@ -18,6 +18,7 @@ ACT001	NFKB_inhibitor
 ADU-1604|ADU 1604|ADU1604	anti-CTLA-4_monoclonal_antibody
 ADU-S100|MIW815	STING_agonist
 ADG116	anti-CTLA-4_monoclonal_antibody
+ADG126	anti-CTLA-4_monoclonal_antibody
 AGEN-1181|AGEN 1181|AGEN1181	anti-CTLA-4_monoclonal_antibody
 AG-270|AG270	MAT2A_inhibitor
 AK104|AK 104|AK-104	bispecific_PD-1/CTLA-4_antibody
@@ -55,6 +56,7 @@ AZD2461	PARP_inhibitor
 AZD3463	ALK_inhibitor; IGF1R_inhibitor; ROS1_inhibitor
 AZD4205|AZD 4205|AZD-4205	JAK1-selective_inhibitor
 AZD4547	FGFR1/2/3_inhibitor
+AZD5305	PARP_inhibitor
 AZD8186|AZD-8186	PI3K_beta_inhibitor
 Abemaciclib|LY-2835219|LY2835219|Verzenio	CDK4/6_inhibitor
 Abiraterone Acetate|CB7630|Yonsa|Zytiga	CYP17A1_inhibitor
@@ -784,3 +786,7 @@ ENB-003	ETBR_inhibitor
 ZN-C3	WEE1_inhibitor
 LY3410738	IDH1_R132_inhibitor; IDH1_R132_inhibitor,covalent
 Lumretuzumab	anti-ERBB3_monoclonal_antibody
+GDC-0084|Paxalisib	dual_PI3K/mTOR_inhibitor
+MVC-101	bispecific_T_cell_engager_targeting_EGFR
+Dostarlimab|TSR-042	anti-PD-1_monoclonal_antibody
+TPX-0131	ALK_inhibitor,fourth_generation
