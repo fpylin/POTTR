@@ -686,6 +686,7 @@ sub load_module_preferential_trial_prioritisation {
 		my @inf_drugs        = map { s/(?:CERTAIN|INFERRED):treatment_drug://; $_ }       grep { /(?:CERTAIN|INFERRED):treatment_drug:/ }       @tags ;
 		my @inf_drug_classes = map { s/(?:CERTAIN|INFERRED):treatment_drug_class://; $_ } grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
 		my @trial_match_criteria = map { s/trial_match_criteria://; $_ } grep { /^trial_match_criteria:/} @tags;
+		my ($trial_phase)    = map { s/^phase://; $_ } grep { /^phase:/} @tags;
 		my @rec_drugs_tier;
 		
 		my @facts_list = $facts->get_facts_list();
@@ -724,7 +725,7 @@ sub load_module_preferential_trial_prioritisation {
 			);
 		
 		my $num_referred_drug_classes_score = scalar(@inf_drug_classes) ;
-		
+# 		
 		push @new_tags, # Annotate the trial
 			"transitive_class_efficacy_tier:". ( $a{'transitive_class_efficacy'}  = $transitive_class_efficacy_tier ) ,
 			"transitive_efficacy_tier:".       ( $a{'transitive_efficacy'}        = $transitive_efficacy_tier ) ,
@@ -732,17 +733,19 @@ sub load_module_preferential_trial_prioritisation {
 			"drug_class_maturity_tier:".       ( $a{'drug_class_maturity'}        = ClinicalTrials::get_drug_class_maturity_tier_by_trial_id( $trial_id, @inf_drug_classes ) ) ,
 			"combo_maturity_tier:".            ( $a{'combo_maturity'}             = ClinicalTrials::get_drug_combination_maturity_tier_by_trial_id( $trial_id, @inf_drugs ) ) ,
 			"combo_class_maturity_tier:".      ( $a{'combo_class_maturity'}       = ClinicalTrials::get_drug_class_combination_maturity_tier_by_trial_id( $trial_id, @inf_drug_classes ) ),
+			"trial_phase_tier:".               ( $a{'trial_phase_tier'}           = ClinicalTrials::get_tier_by_phases_of_trials( $trial_id, $trial_phase ) ),
 			"trial_match_criteria_score:".     $trial_match_criteria_score ,
 			"referred_drug_classes_score:".    $num_referred_drug_classes_score
 		;
 		
 		
 		my $score = # Score the trial
-			( pow(20,7) * ( 8 - $trial_match_criteria_score ) ) + 
-			( pow(20,6) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,5) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,4) * ( (19 - $num_referred_drug_classes_score) ) ) +
-			( pow(20,3) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) + 
+			( pow(20,8) * ( 8 - $trial_match_criteria_score ) ) + 
+			( pow(20,7) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,6) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,5) * ( (19 - $num_referred_drug_classes_score) ) ) +
+			( pow(20,4) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) + 
+			( pow(20,3) * ( score_tier( $a{'trial_phase_tier'}, $tier_order_ref ) ) ) + 
 			( pow(20,2) * ( score_tier( $a{'drug_class_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,1) * ( score_tier( $a{'combo_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,0) * ( score_tier( $a{'combo_class_maturity'}, $tier_order_ref ) ) ) +
@@ -794,7 +797,7 @@ sub load_module_deinit {
  		
 		if ($LOM) {
 			my $LOM_string = "LOM:$LOM - $LOM_string{$LOM}";
-			$LOM_string.= join("/", " - LOMreason", (map { "$certain{$_}-$_" } keys %certain) )."\n";
+			$LOM_string.= join("/", " - LOMreason", (map { "$certain{$_}-$_" } keys %certain) ); #."\n";
 			return Facts::mk_fact_str($f, $LOM_string);
 		} 
 		return ();

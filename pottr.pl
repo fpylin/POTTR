@@ -387,6 +387,7 @@ sub extract_preferential_trials {
 		
 		my $full_title         = Facts::unescape( $tags{'studytitle'}        // '' );
 		my $trialacronym       = Facts::unescape( $tags{'trialacronym'}      // '' );
+		my $trialphase         = Facts::unescape( $tags{'phase'}      // '' );
 		my $recruitmentstatus  = Facts::unescape( $tags{'recruitmentstatus'} // '' );
 		my $matched_drug_names = Facts::unescape( $tags{'drug_list'}         // '' );
 		my $matched_trial_tier                 =  $tags{'transitive_efficacy_tier'};
@@ -395,6 +396,7 @@ sub extract_preferential_trials {
 		my $matched_trial_drug_class_maturity  =  $tags{'drug_class_maturity_tier'}; 
 		my $matched_trial_combo_maturity       =  $tags{'combo_maturity_tier'};   
 		my $matched_trial_combo_class_maturity =  $tags{'combo_class_maturity_tier'};
+		my $matched_trial_phase_tier           =  $tags{'trial_phase_tier'};
 		my $matched_trial_match_criteria_score =  $tags{'trial_match_criteria_score'};
 		my $matched_trial_referred_drug_classes_score =  $tags{'referred_drug_classes_score'};
 		my $matched_trial_LOM_score            =  $tags{'LOM'} // 'Not assessed';
@@ -419,6 +421,7 @@ sub extract_preferential_trials {
 			'trial_id' => $trial_id,
 			'full_title' => $full_title,
 			'trialacronym' => $trialacronym,
+			'trialphase' => $trialphase,
 			'recruitmentstatus' => $recruitmentstatus,
 			'referred_genes' => \%referred_genes,
 			'referred_drugs' => \%referred_drugs,
@@ -433,6 +436,7 @@ sub extract_preferential_trials {
 			'matched_trial_combo_class_maturity' => $matched_trial_combo_class_maturity,
 			'matched_trial_match_criteria_score' => $matched_trial_match_criteria_score,
 			'matched_trial_referred_drug_classes_score' => $matched_trial_referred_drug_classes_score,
+			'matched_trial_phase_tier_score' => $matched_trial_phase_tier,
 			'trial_match_criteria' => \@trial_match_criteria,
 			'healthcondition' => \@healthconditions,
 			'postcodes' => \@postcodes,
@@ -845,9 +849,9 @@ sub gen_preferential_trial_report {
 	@results_preferential_trials = sort { cmp_preferential_trials($a, $b) } @results_preferential_trials ;
 
 	my $output ; # = "List of biomarker matched clinial trials:\n";
-	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score",
-		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria", "Level of matching",
-		"Drugs", "Drug classes", "Cancer types", "Full title", "Postcode", "External weblink", "Notes"
+	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score", 
+		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial phase tier score", "Trial match criteria", "Level of matching",
+		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", "External weblink", "Notes"
 		)."\n";
 
 	my $cnt = 1;
@@ -875,11 +879,13 @@ sub gen_preferential_trial_report {
 				$$row{'matched_trial_drug_class_maturity'},
 				$$row{'matched_trial_combo_maturity'},
 				$$row{'matched_trial_combo_class_maturity'},
+				$$row{'matched_trial_phase_tier_score'},
 				$trial_match_criteria,
 				$$row{'LOM'},
 				$matched_drug_names,
 				$matched_drug_classes,
 				$healthcondition,
+				$$row{'trialphase'},				
 				(length( $$row{'$trialacronym'} ) ? "$$row{'$trialacronym'} - " : "").$$row{'full_title'},
 				$postcodes,
 				$$row{'ext_weblink'},
@@ -919,10 +925,12 @@ sub gen_preferential_trial_terminal {
 		push @lines, join("\t", 'Trial ID',                   hl(37, $$row{'trial_id'}) )."\n";
 		push @lines, join("\t", "Full title",                 (length( $$row{'$trialacronym'} ) ? "$$row{'$trialacronym'} - " : "").$$row{'full_title'} )."\n";
 		if (! $f_list_trials_terse ) {
+			push @lines, join("\t", "Trial phase", $$row{'trialphase'} )."\n";
 			push @lines, join("\t", "Drugs",                      $matched_drug_names )."\n";
 			push @lines, join("\t", "Drug classes",               $matched_drug_classes )."\n";
 			push @lines, join("\t", "Transitive class efficacy tier",  thl( $$row{'matched_trial_class_tier'} ) )."\n";
 			push @lines, join("\t", "Transitive efficacy tier",   thl( $$row{'matched_trial_tier'} ) )."\n";
+			push @lines, join("\t", "Trial phase tier",           thl( $$row{'matched_trial_phase_tier_score'} ) )."\n";
 			push @lines, join("\t", "Drug maturity tier",         thl( $$row{'matched_trial_drug_maturity'} ) )."\n";
 			push @lines, join("\t", "Drug class maturity tier",   thl( $$row{'matched_trial_drug_class_maturity'} ) )."\n";
 			push @lines, join("\t", "Combo maturity tier",        thl( $$row{'matched_trial_combo_maturity'} ) )."\n";

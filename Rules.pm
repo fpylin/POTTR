@@ -155,7 +155,16 @@ sub string_to_tags_hashed($) {
 	my ($tags) = ( $input =~ /^.+\s*\[\s*(.+)\s*\]\s*$/ );
 	my @tags ;
 	@tags = split /\s*;\s*/, $tags if defined $tags ; # map { unescape($_) }
-	my %tags = map { my ($h, $v) = split /:/, $_, 2; my $vv = unescape($v // ''); $h => $vv } @tags ;
+	my %tags ;
+	for my $t (@tags) { 
+		my ($h, $v) = split /:/, $t, 2; 
+		my $vv = unescape($v // ''); 
+		if ( ! exists $tags{$h} ) {
+			$tags{$h} = $vv ;
+		} else {
+			$tags{$h} .= "; $vv" ;
+		}
+	} 
 	return %tags;
 }
 
@@ -433,7 +442,7 @@ sub fire_rule {
 	my $self = shift; 
 	my $facts = shift;
 	my $rule = shift; 
-	my $constraints = shift; # optional refernce to additional tracking tags ;
+	my $constraints = shift; # optional reference to additional tracking tags ;
 	my $n_new = 0;
 	my @rhs = @{ $$rule{'rhs'} };
 	return 0 if ! scalar (@rhs);

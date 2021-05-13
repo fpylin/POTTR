@@ -74,8 +74,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	Tumour Mutational Burden	High	Non-small cell lung cancer	Durvalumab + Tremelimumab	MYSTIC trial	32271377
 3	Tumour Mutational Burden	High	Non-Small Cell Lung Cancer	Ipilimumab + Nivolumab + Carboplatin + Pemetrexed; Ipilimumab + Nivolumab + Cisplatin + Pemetrexed; Ipilimumab + Nivolumab + Carboplatin + Paclitaxel	Checkmakte 9LA: In non-EGFR/ALK-altered NSCLC, the prespecified subgroup analysis showed that high tumour TMB (at cut off of 10 mut/MB) is associated with high ORR in the chemo + IO group (46 v 28%), also mPFS (8.9 vs 4.7mo) and OS (15.0 vs 10.8 mo). Similar benefit was was also observed in bTMB at the 16 and 20 mut/MB thresholds.	10.1016/S1556-0864(21)01940-7
 4	ALK	Amplification, protein expression	Non-Small Cell Lung Cancer	Ensartinib		31628085, 25724526
-4	ALK	T1151, C1156Y, F1174C, F1174L, F1174V, G1269A, L1196M, S1206R	Non-Small Cell Lung Cancer	Ensartinib		31857951
 4	ALK	Fusion, T1151M, T1151_L1152insT, L1152R, L1152P, C1156Y, I1171N, F1174L, F1174S, F1174C, V1180L, L1196M and L1198F, L1198F and C1156Y, L1198F, G1202R and L1198F, G1202R, G1202del, D1203N, D1203N and E1210K, S1206R, E1210K and S1206C, E1210K, L1196M, F1245C, G1269A, S1269S, R1275Q	Non-Small Cell Lung Cancer	TPX-0131	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
+4	ALK	T1151, C1156Y, F1174C, F1174L, F1174V, G1269A, L1196M, S1206R	Non-Small Cell Lung Cancer	Ensartinib		31857951
 4	ARAF	S214C	Non-Small Cell Lung Cancer	Sorafenib	Single case report. OncoKB LOE 3	24569458
 4	ATM	Protein expression	Non-Small Cell Lung Cancer	AZD1390 + Radiotherapy		29938225
 4	CDKN2A	Loss of protein expression	Non-Small Cell Lung Cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
@@ -139,6 +139,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	NRG1	Fusion; CD74-NRG1 fusion; SLC3A2-NRG1 fusion	Non-small cell lung cancer	Afatinib	Case reports. Partial response seen in patients with fusion in two NSCLC with responses of 6 and 10 months respectively.	28502724
 4	NRG1	Fusion; SDC4-NRG1 fusion; ATP1B1-NRG1 fusion	Non-small cell lung cancer; Cholangiocarcinoma	Afatinib	Case reports. Partial response seen in patients with fusion in two NSCLC.	28950338
 4	NRG1	Fusion; SLC3A2-NRG1 fusion	Non-small cell lung cancer	Lumretuzumab + Erlotinib	Case report of  invasive mucinous adenocarcinoma of lung. NRG fusion	30268483
+4	RASA1	Loss-of-function mutation; Oncogenic mutation	Non-Small Cell Lung Cancer	Trametinib		29127119
 4	RET	Fusions	Non-Small Cell Lung Cancer	Cabozantinib	Not TGA approved. Case reports only	23533264, 30653139
 4	RET	RET fusions and NOT KIF5B-RET fusion	Non-Small Cell Lung Cancer	Agerafenib		31710864
 4	ROS1	Fusions	Non-Small Cell Lung Cancer	AZD3463		26372962
@@ -164,7 +165,7 @@ R2	ALK	I1151ins, L1152R, L1152P, C1156Y, C1156T, F1174C, F1174L, F1174V, G1202R,
 R2	ALK	I1171N, G1202R, G1202del	Non-Small Cell Lung Cancer	Alectinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	ALK	I1171T, I1171ins, I1171N, I1171S, V1180L, G1202R, G1202del	Non-Small Cell Lung Cancer	Alectinib		28050598; 28122866; 25228534; 26568289; 29935304
 R2	ALK	L1196M and L1198F, C1156Y and G1202R, L1196M and G1202R, L1198F and G1202R, G1202R and G1269A	Non-Small Cell Lung Cancer	Crizotinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
-R2	ALK	L1196M and L1198F, L1198F and C1156Y, C1156Y and G1202R, L1196M and G1202R, L1198F and G1202R, G1202R and G1269A	Non-Small Cell Lung Cancer	Alectinib, Brigatinib, Ceritinib, Lolartinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
+R2	ALK	L1196M and L1198F, L1198F and C1156Y, C1156Y and G1202R, L1196M and G1202R, L1198F and G1202R, G1202R and G1269A	Non-Small Cell Lung Cancer	Alectinib, Brigatinib, Ceritinib, Lorlatinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	ALK	L1198F and C1156Y	Non-Small Cell Lung Cancer	Lorlatinib		28122866
 R2	ALK	L1198F, G1202R	Non-Small Cell Lung Cancer	Ceritinib	Cell line assays comparing TPX-0131 against Approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	BCL2L11	Deletion	Non-Small Cell Lung Cancer	Gefitinib; Erlotinib		22426421

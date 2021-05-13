@@ -25,6 +25,7 @@ NCT04139317	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04194944	RET:fusion
 NCT04222972	catype:Non-small cell lung cancer; RET:fusion
 NCT04248829	EGFR:oncogenic_mutation
+NCT04256421	catype:Non-small-cell lung carcinoma
 NCT04262856	*NOT prior_therapy:systemic_therapy
 NCT04294810	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04434482	NOT catype:central nervous system cancer
@@ -32,3 +33,4 @@ NCT04447118	ERBB2:exon_20_mutation
 NCT04487080	EGFR:oncogenic_mutation
 NCT04538664	EGFR:exon_20_insertion
 NCT04585815	BRAF:V600E
+NCT04644237	ERBB2:oncogenic_mutation; NOT EGFR:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion

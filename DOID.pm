@@ -78,29 +78,29 @@ synonym: "pan cancer" EXACT []
 synonym: "other tumor types" EXACT []
 synonym: "Neoplasm" EXACT []
 synonym: "Neoplasms" EXACT []
-is_a: DOID:162 ! Neoplasm
-|, q|[Term]
+is_a: DOID:162 ! Neoplasm|, 
+q|[Term]
 id: POTTR:0002
 name: cancer of unknown primary
 def: "cancer of unknown primary"
 subset: DO_cancer_slim
 synonym: "carcinoma of unknown primary" EXACT []
-is_a: DOID:162 ! Neoplasm
-|, q|[Term]
+is_a: DOID:162 ! Neoplasm|, 
+q|[Term]
 id: POTTR:1000
 name: Diffuse Intrinsic Pontine Glioma
 def: "Diffuse Intrinsic Pontine Glioma"
 subset: DO_cancer_slim
 synonym: "DIPG" EXACT []
-is_a: DOID:162 ! Neoplasm
-|, q|[Term]
+is_a: DOID:162 ! Neoplasm|, 
+q|[Term]
 id: POTTR:1001
 name: triple-negative breast cancer
 def: "Triple-negative breast cancer"
 subset: DO_cancer_slim
 synonym: "TNBC" EXACT []
-is_a: DOID:1612 ! Breast cancer
-|, q|[Term]
+is_a: DOID:1612 ! Breast cancer|, 
+q|[Term]
 id: POTTR:1002
 name: GastroEsophageal Cancer
 def: "GastroEsophageal Cancer"
@@ -110,8 +110,8 @@ synonym: "Esophagogastric Cancer" EXACT[]
 synonym: "Esophagogastric Cancers" EXACT[]
 synonym: "Gastroesophageal junction adenocarcinoma" EXACT[]
 synonym: "Gastroesophageal junction cancer" EXACT[]
-synonym: "Gastroesophageal junction carcinoma" EXACT[]
-|, q|[Term]
+synonym: "Gastroesophageal junction carcinoma" EXACT[]|, 
+q|[Term]
 id: POTTR:1003
 name: Chronic myelogenous leukaemia
 def: "Chronic Myelogenous Leukaemia"
@@ -120,33 +120,39 @@ synonym: "Chronic Myelogenous Leukaemia" EXACT[]
 synonym: "Chronic Myelogenous Leukemia" EXACT[]
 synonym: "CML" EXACT[]
 synonym: "chronic myeloid leukaemia" EXACT[]
-is_a: POTTR:1007 ! Liquid cancer
-|, q|[Term]
+is_a: POTTR:1007 ! Liquid cancer|, 
+q|[Term]
 id: POTTR:1004
 name: Acute lymphoblastic leukaemia
 def: "Acute Lymphoblastic Leukaemia"
 subset: DO_cancer_slim
-synonym: "Acute lymphoblastic leukemia" EXACT[]
-|, q|[Term]
+synonym: "Acute lymphoblastic leukemia" EXACT[]|, 
+q|[Term]
 id: POTTR:1005
 name: Colon cancer
 def: "Colon Cancer"
 subset: DO_cancer_slim
-is_a: DOID:0080199 ! Colorectal carcinoma
-|, q|[Term]
+is_a: DOID:0080199 ! Colorectal carcinoma|,
+q|[Term]
 id: POTTR:1006
 name: Rectal cancer
 def: "Rectal Cancer"
 subset: DO_cancer_slim
-is_a: DOID:0080199 ! Colorectal carcinoma
-|, q|[Term]
+is_a: DOID:0080199 ! Colorectal carcinoma|,
+q|[Term]
 id: POTTR:1007
 name: Liquid cancer
 def: "Liquid cancer"
 synonym: "Liquid cancers"
 subset: DO_cancer_slim
-is_a: DOID:162 ! Neoplasm
-|
+is_a: DOID:162 ! Neoplasm|, 
+q|[Term]
+id: POTTR:1008
+name: Glioma
+def: "Glioma"
+synonym: "Gliomas"
+subset: DO_cancer_slim
+is_a: POTTR:0001 ! Solid tumour|
 );
 
 our @synonym_cancer = ('cancer', 'tumor', 'tumour', 'carcinoma', 'adenocarcinoma', 'squamous cell carcinoma', 'neoplasm', 'malignancy', 'malignancies');
@@ -167,7 +173,6 @@ our %synonym_map = (
 	'urothelial cell' => 'urothelial',
 	'glioblastoma multiforme' => 'glioblastoma',
 	'glioblastoma' => 'glioblastoma multiforme|astrocytoma WHO grade IV|high-grade glioma|high grade glioma',
-	'glioma' => 'glioblastoma',
 	'lung small cell carcinoma' => 'small-cell lung carcinoma|small-cell lung cancer|Carcinoma, Small Cell',
 	'lung non-small cell carcinoma' => 'non small cell lung cancer|Carcinoma, Non-Small-Cell Lung|non-small-cell lung cancer|non-small cell lung cancer|Non-Small-Cell Lung',
 	'hematologic' => 'hematologic|haematologic|hematological|haematological',
