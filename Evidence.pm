@@ -386,7 +386,6 @@ sub gen_rule_knowledge_base {
 		my ($biomarker_drug_class_focus) = ( $comments =~ /(\w+) inhibitors?/i ) ; # FIXME
 		push @debug_msg, "\e[1;36mBiomarker focus in the comments: $biomarker_drug_class_focus\e[0m\n" if defined $biomarker_drug_class_focus;
 		my $treatment_class = Therapy::get_treatment_class( $$row{$fname_drugs}, $biomarker, $biomarker_drug_class_focus );
-# 		print "\e[1;33;41m$biomarker_drug_class_focus\e[0m\n" 
 		
 		my $version_str = ($date =~ m|(\d+)/(\d+)/(\d+)| ? "KBver:$3$2$1; KBLine: $line" : "KBLine: $line");
 		
@@ -394,8 +393,6 @@ sub gen_rule_knowledge_base {
 		
 		push @debug_msg, "\e[1;41;37mUntranslated tier $tier\e[0m\n" if $tier_partial_match_catype eq 'U' ;
 		
-# 		( ( $tier =~ /^R/) ? 'R2B' : ( ($tier =~ /^[123]/) ? '3B' : '4B' ) );
-
 		$tumour_type = process_tumour_type($tumour_type);
 		
 		check_biomarker($biomarker);
@@ -419,6 +416,7 @@ sub gen_rule_knowledge_base {
 		
 		my @lhs_catypes = split /\s*[;]\s*/, $tumour_type;
 		my @lhs_catypes_ancestors; # determining cancer type "ancestors" to avoid inference across boundaries
+		my $lhs_catypes_ancestors_base ; # determining cancer type "ancestors" to avoid inference across boundaries
 		
 		for my $c (@lhs_catypes) {
 			my ($catype_match) = DO_match_catype($c);
@@ -444,12 +442,15 @@ sub gen_rule_knowledge_base {
 # 			print map {"|| $_\n"} @lhs_catypes_ancestors ;
 # 			print "\n";
 			die $a if ! defined $DO_name{$a};
-			push @lhs_catypes_ancestors, ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
+# 			push @lhs_catypes_ancestors, ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
+			$lhs_catypes_ancestors_base = "(".join(" OR ", "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}").")" ;
 		}
 		
+		my $lhs_catype_neg ;
 		my $lhs_catype = ( (scalar(@lhs_catypes) > 1) ? "(".join(" OR ", @lhs_catypes).")" : $lhs_catypes[0] );
 		my $lhs_catype_ancestors = ( (scalar(@lhs_catypes_ancestors) > 1) ? "(".join(" OR ", @lhs_catypes_ancestors).")" : $lhs_catypes_ancestors[0] );
-		my $lhs_catype_neg ;
+		
+		$lhs_catype_ancestors = join("; ", $lhs_catype_ancestors, $lhs_catypes_ancestors_base) if defined $lhs_catypes_ancestors_base;
 		
 		if ( scalar @lhs_catypes_neg ) {
 			for my $c (@lhs_catypes_neg) {
@@ -458,7 +459,8 @@ sub gen_rule_knowledge_base {
 				$lhs_catype_neg = defined $lhs_catype_neg ? join("; ", $lhs_catype_neg, $cstr) : $cstr ;
 			}
 		}
-
+		
+# 		print join("\t", $lhs_catype, $lhs_catype_ancestors)."\n";
 		
 		my $alterations_neg = '';
 		my $alterations_sep = ',;';

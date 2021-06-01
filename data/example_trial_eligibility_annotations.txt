@@ -42,7 +42,7 @@ NCT04256421	*NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therap
 NCT04294810	*NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:systemic_therapy
 NCT04432207	*NOT prior_therapy:BRAF_inhibitor
 NCT04434482	*NOT prior_therapy:PARP_inhibitor
-NCT04447118	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:platinum-based_antineoplastic_agent
+NCT04447118	*NOT prior_therapy:Docetaxel
 NCT04471428	*NOT prior_therapy:Cabozantinib; *NOT prior_therapy:Docetaxel; *NOT prior_therapy:VEGF_inhibitor; *NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT04475939	*NOT prior_therapy:PARP_inhibitor; *NOT prior_therapy:systemic_therapy
 NCT04487080	*NOT prior_therapy:systemic_therapy

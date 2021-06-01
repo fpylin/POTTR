@@ -171,6 +171,7 @@ our %synonym_map = (
 	'biliary tract' => 'biliary',
 	'organ' => 'tract|system',
 	'urothelial cell' => 'urothelial',
+	'leukemia' => 'leukaemia',
 	'glioblastoma multiforme' => 'glioblastoma',
 	'glioblastoma' => 'glioblastoma multiforme|astrocytoma WHO grade IV|high-grade glioma|high grade glioma',
 	'lung small cell carcinoma' => 'small-cell lung carcinoma|small-cell lung cancer|Carcinoma, Small Cell',

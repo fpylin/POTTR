@@ -1,5 +1,7 @@
 trial_id	eligibility_criteria
 ACTRN12619000844145	ALK:fusion
+ACTRN12620000861954	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
+ACTRN12620000861954p	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
 NCT02323126	MET:alteration
 NCT02477826	*NOT prior_therapy:systemic_therapy
 NCT02609776	MET:oncogenic_mutation
@@ -34,3 +36,5 @@ NCT04487080	EGFR:oncogenic_mutation
 NCT04538664	EGFR:exon_20_insertion
 NCT04585815	BRAF:V600E
 NCT04644237	ERBB2:oncogenic_mutation; NOT EGFR:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion
+NCT03516981	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ERBB2:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:V600E
+NCT04624204	catype:Small-cell lung carcinoma

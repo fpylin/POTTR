@@ -1,7 +1,7 @@
 drug	drug_class
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
-177Lu-PSMA	177Lu-PSMA-radioconjugate
-177Lu-edotreotide	177Lu-DOTA-radioconjugate
+177Lu-PSMA|Lutetium PSMA|Lu-PSMA617	177Lu-PSMA-radioconjugate
+177Lu-edotreotide|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
 AB154|AB 154|AB-154	anti-TIGIT_monoclonal_antibody
@@ -56,6 +56,7 @@ APR-246|PRIMA-1MET	PRIMA-1_analog
 ARQ 751|ARQ751	pan-AKT_inhibitor
 ARX788	anti-ERBB2_antibody-drug_conjugate
 ASG-22ME	anti-Nectin-4_antibody
+Gusacitinib|ASN002|ASN-002	SYK/JAK_inhibitor
 ASN003	PI3K_alpha_inhibitor
 ASP5878	FGFR_inhibitor
 ASTX295|ASTX 295|ASTX-295	MDM2_inhibitor
@@ -72,12 +73,13 @@ AZD5305	PARP_inhibitor
 AZD8055	MTORC1/MTORC2_inhibitor
 AZD8186|AZD-8186	PI3K_beta_inhibitor
 Abemaciclib|LY-2835219|LY2835219|Verzenio	CDK4/6_inhibitor
-Abiraterone Acetate|CB7630|Yonsa|Zytiga	CYP17A1_inhibitor
+Abiraterone Acetate|CB7630|Zytiga	CYP17A1_inhibitor
 Abiraterone|CB 7598	CYP17A1_inhibitor
 Acalabrutinib	BTK_inhibitor
 Acetazolamide|Diacarb|Diluran	carbonic_anhydrase_inhibitor
 Adavosertib|AZD-1775|AZD1775|MK-1775|MK1775	WEE1_inhibitor
 Afatinib|BIBW 2992|BIBW2992	EGFR_inhibitor,second_generation
+Aflibercept|ziv-aflibercept|Eylea|Zaltrap	VEGF_inhibitor
 Agerafenib|RXDX-105|RXDX105	BRAF_inhibitor; BRAF_V600E_inhibitor; RET_inhibitor
 Aldesleukin|Proleukin|125-L-Serine-2-133-interleukin 2|Recombinant Human IL-2|Recombinant Human Interleukin-2|r-serHuIL-2	IL-2_variant
 Alectinib|Alecensa|AF-802|AF802|CH5424802|RG7853|RO5424802	ALK_inhibitor,second_generation
@@ -85,7 +87,7 @@ Alemtuzumab|Anti-CD52 Monoclonal Antibody|Campath|LDP-03|Lemtrada	anti-CD52_mono
 Almirall|ASLAN003	DHODH_inhibitor
 Alpelisib|BYL719|Piqray	PI3K_inhibitor; PI3K_alpha_inhibitor
 Amatuximab	anti-MSLN_monoclonal_antibody
-Amivantamab|JNJ-61186372	bispecific_c-Met_EGFR_monoclonal_antibody
+Amivantamab|Amivantamab-vmjw|JNJ-61186372|Rybrevant	bispecific_c-Met_EGFR_monoclonal_antibody
 Amsacrine|Amsidine|AMSA|Acridinyl Anisidide|Amekrin|Amsidyl|CI-880|Lamasine|SN 11841|SN-11841|SN-21429	alkylating_agent
 Anakinumab	anti-IL-1beta_antibody
 Anamorelin|RC-1291	Growth_hormone_secretagogue_receptor_agonist
@@ -152,7 +154,7 @@ Bendamustine|SDX-105	alkylating_agent
 Berzosertib|M 6620|M6620|VE-822|VX 970|VX-970|VX970	ATR_inhibitor
 Bevacizumab|Avastin|Anti-VEGF|BP102|HD204|SCT501|rhuMab-VEGF	anti-VEGF_monoclonal_antibody
 Bicalutamide|Casodex|Cosudex|ICI 176,334|ICI 176334	antiandrogen,nonsteroidal,first_generation
-Binimetinib|ARRY-162|ARRY-438162|MEK162|Mektovi	MEK_inhibitor
+Binimetinib|ARRY-162|ARRY-438162|MEK162|MEK 162|Mektovi	MEK_inhibitor
 Bintrafusp Alfa|M7824|MSB0011359C	anti-PD-L1_and_TGF-beta_monoclonal_antibody
 Bleomycin	antineoplastic_antibiotic
 Blinatumomab	anti-CD19/CD3_BiTE_antibody
@@ -194,24 +196,24 @@ CX-5461	RNA_polymerase_I_inhibitor
 CX-5461|CX5461	RNA_polymerase_I_transcription_inhibitor
 CYH33	PI3K_alpha_inhibitor
 Cabazitaxel|Jevtana|RPR-116258A|Taxoid XRP6258|XRP-6258	taxane
-Cabozantinib	AXL_inhibitor; MET_inhibitor,type_2; RET_inhibitor; VEGFR2_inhibitor; ROS1_inhibitor; KIT_inhibitor
+Cabozantinib|Cabometyx	AXL_inhibitor; MET_inhibitor,type_2; RET_inhibitor; VEGFR2_inhibitor; ROS1_inhibitor; KIT_inhibitor
 Carboxyamidotriazole Orotate	calcium_channel_blockade
 Camrelizumab|HR-301210|SHR-1210|SHR1210	anti-PD-1_monoclonal_antibody
 Cantrixil|TRX E 002 1|TRX-E-002-1|TRXE0021	benzopyran
 Capecitabine|Xeloda|Ro 09-1978/000	antimetabolite
 Capivasertib|AZD5363	pan-AKT_inhibitor
-Capmatinib|INC-280|INC280|INCB 28060|INCB028060|INCB28060	MET_inhibitor,type_1
+Capmatinib|INC-280|INC280|INCB 28060|INCB028060|INCB28060|TABRECTA	MET_inhibitor,type_1
 Carboplatin|CBDCA|1,1-cyclobutanedicarboxylic acid platinum complex|Blastocarb|Carboplat|Carbosin|Carbosol|Carbotec|Displata|Ercar|JM-8|Nealorin|Novoplatinum|Paraplat|Platinwas|Ribocarbo	platinum-based_antineoplastic_agent
 Carfilzomib|Kyprolis|PR-171	proteasome_inhibitor
 Carmustine|BCNU|Carmubris|Nitrumon|Becenum|Becenun|BiCNU|Bis-Chloronitrosourea|Carmustin|FDA 0345|Nitrourean|SK 27702|SRI 1720|WR-139021	alkylating_agent
 Cediranib|AZD2171	VEGF_inhibitor
-Cemiplimab|Libtayo|REGN2810	anti-PD-1_monoclonal_antibody
+Cemiplimab|cemiplimab-rwlc|Libtayo|REGN2810	anti-PD-1_monoclonal_antibody
 Ceralasertib|AZD6738	ATR_inhibitor
 Cerdulatinib	SYK_inhibitor
 Ceritinib|LDK 378|LDK378|Zykadia	ROS1_inhibitor; ALK_inhibitor,second_generation
 Cetrelimab|JNJ 63723283|JNJ-63723283|JNJ63723283|WHO 10757	anti-PD-1_monoclonal_antibody
 Cetuximab|Erbitux|Chimeric Anti-EGFR Monoclonal Antibody|Chimeric MoAb C225|Chimeric Monoclonal Antibody C225|IMC-C225	anti-EGFR_monoclonal_antibody
-Chlorambucil|Amboclorin|Ecloril|Elcoril|Leukeran|Leukersan|Leukoran|Linfolizin|CB 1348|CB-1348|CHL|Linfolysin|Lympholysin|Phenylbutyric acid nitrogen mustard|WR-139013	alkylating_agent
+Chlorambucil|Amboclorin|Ecloril|Elcoril|Leukeran|Leukersan|Leukoran|Linfolizin|CB 1348|CB-1348|Linfolysin|Lympholysin|Phenylbutyric acid nitrogen mustard|WR-139013	alkylating_agent
 Cibisatamab|RG-7802|RG7802|RO-6958688|RO6958688|WHO 10636	anti-CEA/CD3_bispecific_antibody
 Ciforadenant|CPI-444|V81444	adenosine_A2aR_and_A2bR_antagonist
 Cisplatin|Platiblastin|Platinol|Abiplatin|Blastolem|Briplatin|Cis-platinous Diamine Dichloride|Cismaplat|Cisplatyl|Citoplatino|Citosin|Cysplatyna|DDP|Lederplatin|Metaplatin|Neoplatin|Placis|Plastistil|Platamine|Platinex|Platinoxan|Platinum|Platiran|Platistin|Platosin	platinum-based_antineoplastic_agent
@@ -236,7 +238,7 @@ DZD9008|DZD 9008|DZD-9008	EGFR_inhibitor,exon_20_selective; ERBB2_inhibitor,exon
 Dabrafenib|GSK-2118436|GSK2118436	BRAF_V600_inhibitor
 Dacarbazine|DTIC|Deticene|Asercit|Biocarbazine|Dacarbazina|Dacatic|Dakarbazin|Detimedac|Dimethyl Triazeno Imidazol Carboxamide|Dimethyl-triazeno-imidazole-carboximide|Fauldetic|Imidazole Carboxamide|WR-139007	alkylating_agent
 Dacomitinib|PF-00299804|PF-299804|Vizimpro	EGFR_inhibitor,second_generation
-Dactinomycin|Actinomycin IV|Actinomycin X 1|Cosmegen|Meractinomycin|ACTINOMYCIN D|Actinomycin A IV|Actinomycin C1|Actinomycin I1|DACT	antineoplastic_antibiotic
+Dactinomycin|Actinomycin IV|Actinomycin X 1|Cosmegen|Meractinomycin|ACTINOMYCIN D|Actinomycin|Actinomycin A IV|Actinomycin C1|ACTD|Actinomycin I1|DACT	antineoplastic_antibiotic
 Dactolisib|BEZ235	PI3K/mTOR_inhibitor
 Daratumumab|Anti-CD38 Monoclonal Antibody|Darzalex|HuMax-CD38|JNJ-54767414	anti-CD38_monoclonal_antibody
 Darolutamide	antiandrogen,nonsteroidal,second_generation
@@ -245,8 +247,9 @@ Daunorubicin|DAUNOMYCIN|DNR|Daunorrubicina|Leukaemomycin C|RUBOMYCIN C|Rubidomyc
 Debio1347|CH5183284|Debiopharm 1347|FF284|debio 1347	FGFR1/2/3_inhibitor
 Decitabine|Dacogen|5-Aza-2-deoxycytidine|5-Azadeoxycytidine|Deoxyazacytidine|Dezocitidine	DNA_methyltransferase_inhibitor
 Deflexifol	Fluorouracil + Leucovorin
+Demcizumab|OMP-21M18	anti-DLL4_monoclonal_antibody
 Denosumab|AMG 162|AMG-162|Prolia|TK-006|Xgeva	anti-RANK_L_monoclonal_antibody
-Depatuxizumab Mafodotin|ABT-414	anti-EGFR/PBD_antibody-drug_conjugate
+Depatuxizumab Mafodotin|ABT414|ABT-414	anti-EGFR/PBD_antibody-drug_conjugate
 Depatuxizumab|ABT-806|mAb-806	anti-EGFR_monoclonal_antibody
 Derazantinib|ARQ 087|ARQ-087	FGFR1/2/3_inhibitor
 Devimistat|CPI-613	lipoate_analog
@@ -256,10 +259,9 @@ Dinaciclib|MK-7965|SCH 727965	CDK1/2/5/9_inhibitor
 Dinutuximab|Ch14.18|Ch 14.18UTC|Unituxin	anti-GD2_monoclonal_antibody
 Diphencyprone|DPCP|Diphenylcyclopropenone	topical_immune_response_modifier
 Docetaxel|Taxotere|Docecad|RP56976	taxane
-Dostarlimab|ANB011|TSR 042|TSR-042|TSR042	anti-PD-1_monoclonal_antibody
-Dostarlimab|TSR-042	anti-PD-1_monoclonal_antibody
+Dostarlimab|dostarlimab-gxly|ANB011|TSR 042|TSR-042|TSR042	anti-PD-1_monoclonal_antibody
 Dovitinib	PDGFRB_inhibitor; VEGFR_inhibitor; FGFR1/2/3_inhibitor
-Doxorubicin|Adriablastin|Hydroxydaunomycin|Hydroxyl Daunorubicin|Hydroxyldaunorubicin	anthracycline
+Doxorubicin|Adriamycin|Adriablastin|Hydroxydaunomycin|Hydroxyl Daunorubicin|Hydroxyldaunorubicin	anthracycline
 Durvalumab|Imfinzi|MEDI-4736|MEDI4736	anti-PD-L1_monoclonal_antibody
 Duvelisib|IPI-145	PI3K_delta_inhibitor
 E7016	PARP_inhibitor
@@ -275,6 +277,7 @@ ERAS-601	SHP2_inhibitor
 ES414	bispecific_PSMA/CD3_antibody
 Efizonerimod|MEDI6383	anti-OX40_agnostic_monoclonal_antibody
 Eftilagimod Alpha|EFTILAGIMOD ALFA|IMP321|Immufact	T-cell_immunostimulatory_factor
+Ektomun	anti-GD2_monoclonal_antibody
 Elacestrant|ER-306323|RAD1901	selective_estrogen_receptor_degrader
 Elotuzumab|HuLuc63|BMS-901608|Empliciti|HuLuc-63|PDL-063|PDL063	anti-CS1_monoclonal_antibody
 Enasidenib|AG-221|CC-90007 Free Base	IDH2_inhibitor
@@ -287,8 +290,8 @@ Enzalutamide|ASP9785|MDV3100|Xtandi	antiandrogen,nonsteroidal,second_generation
 Epirubicin	anthracycline
 Eprenetapopt|APR-246	mutant_p53_reactivator
 Erdafitinib|Balversa|JNJ-42756493|JNJ42756493	pan-FGFR_inhibitor
-Eribulin|ER-086526	macrocyclic_ketone_analogue
-Erlotinib	EGFR_inhibitor,first_generation
+Eribulin|ER-086526|Halaven	macrocyclic_ketone_analogue
+Erlotinib|Tarceva	EGFR_inhibitor,first_generation
 Etigilimab|OMP 313M32|OMP-313M32|WHO 10742	anti-TIGIT_monoclonal_antibody
 Etirinotecan Pegol|NKTR 102|NKTR-102|Onzeald|PEG-Irinotecan	topoisomerase_inhibitor
 Etoposide|Vepesid|VP-16|Demethyl Epipodophyllotoxin Ethylidine Glucoside|EPEG|Lastet|Toposar|VP 16|VP16	topoisomerase_inhibitor
@@ -297,8 +300,9 @@ Exatecan	topoisomerase_inhibitor
 Exemestane|Aromasin|FCE-24304	aromatase_inhibitor
 F520|F 520|HX 008	anti-PD-1_monoclonal_antibody
 FAZ-053|FAZ 053|FAZ053	anti-PD-L1_monoclonal_antibody
+FEC	Fluorouracil + Epirubicin + Cyclophosphamide
 FF-10850|FF 10850|FF10850	topoisomerase_inhibitor
-FLOT	fluorouracil + oxaliplatin + docetaxel
+FLOT	Fluorouracil + Oxaliplatin + Docetaxel
 FLX475|FLX 475|FLX-475	CCR4_inhibitor
 FN-1501|FN 1501|FN1501	CDK2/4/6/FLT3_inhibitor
 FOLFIRI	fluorouracil + irinotecan
@@ -315,6 +319,7 @@ Filgrastim|G-CSF|Neupogen|Recombinant Methionyl Human Granulocyte Colony Stimula
 Fisogatinib|BLU 554|BLU-554|BLU554|CS 3008|CS-3008|CS3008	FGFR4_inhibitor
 Fludarabine|2-Fluoro-9-beta-arabinofuranosyladenine|2-Fluorovidarabine|9-Beta-D-arabinofuranosyl-2-fluoro-9H-purin-6-amine|9-Beta-D-arabinofuranosyl-2-fluoroadenine|Fluradosa	antimetabolite
 Fluorouracil|5-FU|5-Fluorouracil|5 Fluorouracil|Fluracil|Fluril|2,4-Dioxo-5-fluoropyrimidine|5 FU|5FU|AccuSite|Adrucil|Carac|Fluoro Uracil|Fluouracil|Flurablastin|Fluracedyl|Fluroblastin|Ribofluor|Ro 2-9757|Ro-2-9757	antimetabolite
+de Gramont 5-FU|de Gramont	Fluorouracil
 Flutamide|Apimid|Cebatrol|Chimax|Cytomid|Drogenil|Euflex|Eulexin|FLUT|Flucinom|Flugerel|Fluken|Flulem|Fugerel|Grisetin|Niftolide|Oncosal|Profamid|Prostacur|Prostadirex|Prostica|Prostogenat|SCH 13521|Tafenil|Testotard	antiandrogen,nonsteroidal,first_generation
 Fluzoparib|SHR-3162|SHR3162	PARP_inhibitor
 Foretinib|XL880|GSK1363089	MET_inhibitor,type_2; ROS1_inhibitor
@@ -342,8 +347,8 @@ GSK3745417|GSK 3745417|GSK-3745417	STING_agonist
 GWN 323|GWN323	anti-GITR_monoclonal_antibody
 Gedatolisib	pan-PI3K/MTORC1/MTORC2_inhibitor
 Gefitinib|Iressa|ZD 1839|ZD1839	EGFR_inhibitor,first_generation
-Gemcitabine|Difluorodeoxycytidine|dFdC	antimetabolite
-Gemtuzumab Ozogamicin	anti-CD33_antibody-drug_conjugate
+Gemcitabine|Difluorodeoxycytidine|Gemzar|dFdC	antimetabolite
+Gemtuzumab Ozogamicin|MYLOTARG	anti-CD33_antibody-drug_conjugate
 Genolimzumab|CBT 501|CBT-501|CBT501|GB-226	anti-PD-1_monoclonal_antibody
 Gevokizumab|XOMA 052	anti-IL-1beta_antibody
 Gilteritinib|ASP-2215|ASP2215|Xospata	AXL/FLT3_inhibitor
@@ -351,7 +356,7 @@ Glasdegib	SMO_inhibitor
 Glembatumumab Vedotin	anti-GPNMB_antibody-drug_conjugate
 Glesatinib|MG90265|MGCD265	MET_inhibitor,type_2
 Glumetinib|SCC 244|SCC-244|SCC244	MET_inhibitor
-Goserelin|ICI-118630	GnRH_agonist; GnRH_analogue
+Goserelin|ICI-118630|Zoladex	GnRH_agonist; GnRH_analogue
 H3B-8800|H3B 8800	SF3B1_inhibitor
 HBM4003	anti-CTLA-4_monoclonal_antibody
 HH30134	AXL/FLT3/NTRK_inhibitor
@@ -391,14 +396,15 @@ Ieramilimab|IMP-701|LAG 525|LAG525	anti-LAG3_monoclonal_antibody
 Ifabotuzumab|Fibatuzumab|KB 004|KB-004|KB004	anti-EphA3_antibody
 Ifosfamide|Cyfos|Ifex|Iphosphamid|Isoendoxan|Isophosphamide|Mitoxana|Naxamide|Holoxan|IFO|IFX|Iso-Endoxan|MJF 9325|MJF-9325|Seromida|Tronoxal|Z 4942|Z-4942	alkylating_agent
 Ifosphamide	alkylating_agent
-Imatinib|Imatinib Mesylate	BCR-ABL1_inhibitor,first_generation; KIT_inhibitor; PDGFRA_inhibitor
+Imatinib|Imatinib Mesylate|Gleevec|Glivec	BCR-ABL1_inhibitor,first_generation; KIT_inhibitor; PDGFRA_inhibitor
 Imiquimod|Aldara|R 837|S 26308|Zyclara	topical_immune_response_modifier
 Immune Therapeutic Agent	immune_checkpoint_blockade
 Infigratinib|BGJ-398|BGJ398	FGFR1/2/3_inhibitor
+Infliximab|Remicade	anti-TNFalpha_monoclonal_antibody
 Inotuzumab ozogamicin	anti-CD22_antibody-drug_conjugate
 Intensity Modulated Radiotherapy	radiotherapy
 Intravenous_immunoglobulin	intravenous_immunoglobulin
-Iodine I 131-6-Beta-Iodomethyl-19-Norcholesterol|I-131 NP-59|Radioiodine-Labeled Norcholesterol	radioiodine_conjugate
+Iodine I 131-6-Beta-Iodomethyl-19-Norcholesterol|I-131 NP-59|I-131|Radioiodine-Labeled Norcholesterol	radioiodine_conjugate
 Ipatasertib|GDC-0068|RG-7440	pan-AKT_inhibitor
 Ipilimumab|MDX-010|Anti-Cytotoxic T-Lymphocyte-Associated Antigen-4 Monoclonal Antibody|BMS-734016|MDX-CTLA4|Yervoy	anti-CTLA-4_monoclonal_antibody
 Irinotecan	topoisomerase_inhibitor
@@ -449,17 +455,16 @@ Lenalidomide|CC-5013|Revlimid|CC5013|CDC 501	thalidomide_and_derivative
 Lenvatinib|E7080|ER-203492-00	VEGF_inhibitor
 Letrozole|Femara|CGS 20267	aromatase_inhibitor
 Leucovorin|Wellcovorin|folinic acid|5-Formyl Tetrahydrofolate|5-Formyltetrahydrofolate|Adinepar|Calcifolin|Calcium Folinate|Calfolex|Calinat|Cehafolin|Citofolin|Citrec|Citrovorum Factor|Cromatonbic Folinico|Dalisol|Disintox|Divical|Ecofol|Emovis|FOLI-cell|Factor, Citrovorum|Flynoken A|Folaren|Folaxin|Foliben|Folidan|Folidar|Folinac|Folinate Calcium|Folinoral|Folinvit|Foliplus|Folix|Imo|Lederfolat|Lederfolin|Leucosar|Rescufolin|Rescuvolin|Tonofolin	folinic_acid
-Leuprolide Acetate|Lupron|Viadur|A-43818|Abbott 43818|Abbott-43818|Carcinil|Eligard|Enanton|Ginecrin|LEUP|Lucrin|Lutrate|Procren|Procrin|Prostap|TAP-144	synthetic_gonadotropin-releasing_hormone
-Leuprolide|Leuprorelin	GnRH_analogue
+Leuprolide Acetate|Leuprorelin|Leuprolide|Leuprorelin|Leuprorelin acetate|Lupron|Viadur|A-43818|Abbott 43818|Abbott-43818|Carcinil|Eligard|Enanton|Ginecrin|LEUP|Lucrin|Lutrate|Procren|Procrin|Prostap|TAP-144	synthetic_gonadotropin-releasing_hormone; GnRH_analogue
 Linagliptin|BI 1356 BS|BI-1356|Tradjenta	dipeptidyl_peptidase-4_inhibitor
 Linrodostat|BMS 986205|BMS-986205|BMS986205|ONO-7701	IDO1_inhibitor
 Lodapolimab|LY3300054|WHO 11185	anti-PD-L1_monoclonal_antibody
 Lomustine|CCNU|Cecenu|CeeNU|Chloroethylcyclohexylnitrosourea|Belustin|Chloroethylcyclo- hexylnitrosourea|Citostal|Gleostine|Lomeblastin|Lomustinum|Lucostin|Prava|RB-1509|WR-139017	alkylating_agent
-Loncastuximab Tesirine	anti-CD19_antibody-drug_conjugate
+Loncastuximab Tesirine|loncastuximab tesirine-lpyl|Zynlonta	anti-CD19_antibody-drug_conjugate
 Lorlatinib|Lorbrena|PF-06463922	ALK_inhibitor,third_generation; ROS1_inhibitor
 Luminespib|AUY922	HSP90_inhibitor
 Lumretuzumab	anti-ERBB3_monoclonal_antibody
-Lurbinectedin|PM01183	DNA_minor_groove-binding_agent
+Lurbinectedin|PM01183|ZEPZELCA	DNA_minor_groove-binding_agent
 Luspatercept|ACE-536|Reblozyl	recombinant_human_ActRIIb_fusion_protein
 MAX-10181	PD-L1_inhibitor,oral
 MAX-40279	FLT3_inhibitor; FGFR3_inhibitor
@@ -486,11 +491,13 @@ MK2206	AKT_inhibitor
 MRK003	gamma_secretase_inhibitor
 MRTX849|Adagrasib	KRAS_G12C_inhibitor
 MSC2156119J	MET_inhibitor
+MVAC	Methotrexate + Vinblastine + Doxorubicin + Cisplatin
 MVC-101	bispecific_T_cell_engager_targeting_EGFR
 MVR-T3011|T3011	oncolytic_HSV_virus
 Manelimab|BCD 135|BCD-135|BCD135	anti-PD-L1_monoclonal_antibody
 Margetuximab|MGAH-22|MGAH22	anti-ERBB2_monoclonal_antibody
-Medroxyprogesterone Acetate	progestogen_analogue
+Medroxyprogesterone Acetate|Medroxyprogesterone	progestogen_analogue
+Megestrol acetate|Megace	progestogen_analogue
 Melatonin	melatonin
 Melphalan|Sarkolysin|Alanine Nitrogen Mustard|CB-3025|L-PAM|L-Sarcolysin|Phenylalanine Mustard|Sarcoclorin|WR-19813	alkylating_agent
 Merestinib|LY-2801653|LY2801653	MET_inhibitor,type_2
@@ -504,7 +511,7 @@ Milademetan|DS-3032	MDM2_inhibitor
 Mirdametinib|PD0325901|PD 901|PD-901	MEK_inhibitor
 Mirvetuximab Soravtansine|IMGN853|M9346A-sulfo-SPDB-DM4	anti-FR-alpha_antibody-drug_conjugate
 Mitazalimab|ADC 1013|ADC-1013|ADC1013|JNJ 7107|JNJ-64457107	anti-CD40_agonist_antibody
-Mitomycin	antineoplastic_antibiotic
+Mitomycin|Mitomycin C	antineoplastic_antibiotic
 Mitotane|Chloditan|Chlodithane|Lysodren|CB 313|CB-313|DDD|Khloditan|Lisodren|Mytotan|WR-13045	steroidogenesis_inhibitor
 Mitoxantrone|Mitoxantrone Hydrochloride|Dihydroxyanthracenedione|Mitozantrone	antineoplastic_antibiotic
 Mivebresib|ABBV-075	BET_inhibitor
@@ -529,7 +536,8 @@ Necitumumab	anti-EGFR_monoclonal_antibody
 Neratinib|HKI 272|HKI-272|PB 272|PB-272	EGFR_inhibitor,second_generation; ERBB2_inhibitor; ERBB3_inhibitor
 Nilotinib|AMN 107 Base Form	BCR-ABL1_inhibitor,second_generation; KIT_inhibitor; PDGFR_inhibitor
 Nilutamide|Anandron|Nilandron|RU-23908	antiandrogen,nonsteroidal,first_generation
-Niraparib|MK-4827|MK4827	PARP_inhibitor
+Nintedanib|Vargatef|Ofev	PDGFRA/VEGFR/FGFR_inhibitor
+Niraparib|MK-4827|MK4827|ZEJULA	PARP_inhibitor
 Nirogacestat|PF-03084014	gamma_secretase_inhibitor
 Nivolumab|BMS-936558|MDX-1106|NIVO|ONO-4538|Opdivo	anti-PD-1_monoclonal_antibody
 Nurulimab|BCD 145|BCD-145|BCD145	anti-CTLA-4_monoclonal_antibody
@@ -577,14 +585,14 @@ Panobinostat	pan-HDAC_inhibitor
 Pasireotide|Pasireotide LAR|SOM230	somatostatin_analog
 Pasireotide|SOM230	somatostatin_analog
 Patritumab Deruxtecan|HER3-DXd|U3-1402	anti-HER3_antibody-drug_conjugate
-Pazopanib|GW786034	KIT_inhibitor,ATP-competitive; PDGFR_inhibitor; VEGFR_inhibitor
+Pazopanib|Votrient|GW786034	KIT_inhibitor,ATP-competitive; PDGFR_inhibitor; VEGFR_inhibitor
 Pegargiminase|ADI-PEG 20|pegylated arginine deiminase	arginine_deiminase-polyethylene_glycol_conjugate
 Pegilodecakin|AM-0010|AM0010	pegylated_IL-10
 Pegylated G-CSF	granulocyte_colony_stimulating_factor
-Pegylated Liposomal Irinotecan|IHL-305	topoisomerase_inhibitor
-Pegylated liposomal doxorubicin	anthracycline
+Pegylated Liposomal Irinotecan|Liposomal Irinotecan|ONIVYDE|IHL-305	topoisomerase_inhibitor
+Pegylated liposomal doxorubicin|Liposomal Doxorubicin|Caelyx	anthracycline
 Pembrolizumab|Keytruda|Lambrolizumab|MK-3475|SCH 900475	anti-PD-1_monoclonal_antibody
-Pemetrexed|MTA|Multitargeted Antifolate	antimetabolite
+Pemetrexed|Alimta|MTA|Multitargeted Antifolate	antimetabolite
 Pemigatinib|INCB054828|Pemazyre	FGFR1/2/3_inhibitor
 Perflenapent Emulsion|DDFP LIquid Emulsion|Dodecafluoropentane Emulsion|NVX-108	perflenapent_emulsion
 Perindopril	ACE_inhibitor
@@ -597,7 +605,7 @@ Pictilisib	pan-PI3K_inhibitor
 Pixatimod|PG545	angiogenesis_inhibitor
 Placebo	placebo
 Plinabulin|NPI-2358	tubulin_polymerization_inhibitor
-Polatuzumab vedotin|Polatuzumab vedotin-piiq	anti-CD79b_antibody-drug_conjugate
+Polatuzumab vedotin|Polatuzumab|Polatuzumab vedotin-piiq	anti-CD79b_antibody-drug_conjugate
 Pomalidomide|CC-4047|4-Aminothalidomide|Actimid|Imnovid|Pomalyst	thalidomide_and_derivative
 Ponatinib|AP-24534|AP24534	BCR-ABL1_inhibitor,third_generation; FGFR_inhibitor,type_2; FLT3_inhibitor; TIE2_inhibitor; VEGFR_inhibitor
 Posaconazole|Noxafil|SCH 56592	azole_antifungal
@@ -634,13 +642,13 @@ Ramucirumab|IMC-1121B|Cyramza|LY3009806|Monoclonal Antibody HGS-ETR2	anti-VEGFR2
 Ravoxertinib|GDC-0994	ERK_inhibitor
 Regorafenib|BAY 73-4506|Stivarga	KIT_inhibitor,first_generation; PDGFR_inhibitor; RET_inhibitor; VEGFR_inhibitor; pan-FGFR_inhibitor
 Relatlimab|BMS-986016|BMS986016	anti-LAG3_monoclonal_antibody
-Relugolix|TAK 385|TAK-385	GnRH_antagonist
+Relugolix|TAK 385|TAK-385|ORGOVYX	GnRH_antagonist
 ReoCure	oncolytic_virus
 Repotrectinib|TPX-0005	ALK_inhibitor,third_generation; ROS1_inhibitor; TRK_inhibitor,second_generation
 Retifanlimab|INCMGA 0012|INCMGA-0012|INCMGA00012|INCMGA0012|MGA 012|MGA-012|MGA012	anti-PD-1_monoclonal_antibody
 Ribociclib|Kisqali|LEE-011|LEE011	CDK4/6_inhibitor
 Rigosertib|ON-01910	PLK1_inhibitor
-Ripretinib|DCC-2618|DCC2618	KIT_inhibitor,switch_control_kinase_inhibitor; PDGFRA_inhibitor
+Ripretinib|DCC-2618|DCC2618|QINLOCK	KIT_inhibitor,switch_control_kinase_inhibitor; PDGFRA_inhibitor
 Rituximab|Rituxan|ABP 798|BI 695500|C2B8 Monoclonal Antibody|CT-P10|Chimeric Anti-CD20 Antibody|IDEC-102|IDEC-C2B8|MabThera|PF-05280586|RTXM83|Truxima	anti-CD20_monoclonal_antibody
 Rogaratinib|BAY-1163877|BAY1163877	pan-FGFR_inhibitor
 Rolinsatamab Talirine|ABBV 176|ABBV-176|ABBV176	anti-PRLR_antibody-drug_conjugate
@@ -677,8 +685,8 @@ Satoreotide Tetraxetan|177Lu-OPS201|177Lu-IPN01072	177Lu-DOTA-radioconjugate
 Savolitinib|AZD 6094|AZD6094|HMPL-504|Volitinib	MET_inhibitor,type_1
 Selicrelumab|RO7009789	anti-CD40_agonist_antibody
 Selitrectinib|BAY 2731954|LOXO 195|LOXO-195|LOXO195	TRK_inhibitor,second_generation
-Selpercatinib|LOXO-292	RET_inhibitor
-Selumetinib|AZD6244|ARRY-142886	MEK_inhibitor
+Selpercatinib|LOXO-292|RETEVMO	RET_inhibitor
+Selumetinib|AZD6244|ARRY-142886|KOSELUGO	MEK_inhibitor
 Serabelisib|INK1117|MLN-1117|MLN1117|TAK 117|TAK-117	PI3K_alpha_inhibitor
 Serclutamab Talirine|ABBV 321|ABBV-321|ABBV321	anti-EGFR/PBD_antibody-drug_conjugate
 Serdemetan|JNJ 26854165|JNJ-26854165	MDM2_inhibitor
@@ -696,7 +704,7 @@ Sorafenib|BAY 43-9006|Nexavar|BA4 43 9006|BAY 54-9085|Bay-439006	CRAF_inhibitor;
 Sotorasib|AMG-510|AMG 510|AMG510	KRAS_G12C_inhibitor
 Spartalizumab|PDR-001|PDR001	anti-PD-1_monoclonal_antibody
 Streptozotocin	alkylating_agent
-Sunitinib|SU011248|SU11248|Sutent	KIT_inhibitor,first_generation; PDGFR_inhibitor; VEGFR_inhibitor
+Sunitinib|SU011248|SU11248|sunitinib malate|Sutent	KIT_inhibitor,first_generation; PDGFR_inhibitor; VEGFR_inhibitor
 Surufatinib|HMPL-012	VEGFR_inhibitor; FGFR1_inhibitor; CSF1R_inhibitor
 Sym021	anti-PD-1_monoclonal_antibody
 Systemic Immune Checkpoint Inhibition	immune_checkpoint_blockade
@@ -722,7 +730,7 @@ Tarextumab|OMP 59R5|OMP-59R5	anti-notch_receptor_monoclonal_antibody
 TargomiRs|Nanocell-encapsulated miR-16-based microRNA Mimic	miR-16_miRNA_mimic
 Taselisib|GDC-0032|RO5537381	PI3K_alpha_inhibitor
 Tavolimab|MEDI-0562|MEDI0562|TAVOLIXIZUMAB	anti-OX40_agnostic_monoclonal_antibody
-Tazemetostat|E7438|EPZ-6438|EPZ6438	EZH2_inhibitor
+Tazemetostat|E7438|EPZ-6438|EPZ6438|TAZVERIK	EZH2_inhibitor
 Tebentafusp	anti-CD3_scFv_fusion_protein
 Tegafur-gimeracil-oteracil Potassium|S-1|BMS 247616|BMS-247616|Tegafur, mixture with Gimeracil and Potassium Oxonate|Teysuno	DPD_inhibitor; antimetabolite; orotate_phosphoribosyltransferase_inhibitor
 Telaglenastat|CB-839|WHO 10815	glutaminase_inhibitor
@@ -730,7 +738,7 @@ Telisotuzumab Vedotin|ABBV 399|ABBV-399|ABT 399|ABT-399|ABT-700-VCMMAE	anti-c-Me
 Temazepam	benzodiazepam
 Temozolomide|Methazolastone|Temodar|CCRG-81045|M & B 39831|M and B 39831|RP-46161|SCH 52365|TMZ|Temcad|Temodal|Temomedac	alkylating_agent
 Temsirolimus|CCI-779|Torisel|Cell Cycle Inhibitor 779|Rapamycin Analog	MTORC1_inhibitor
-Tepotinib|EMD 1214063|EMD-1214063|EMD1214063	MET_inhibitor,type_1
+Tepotinib|EMD 1214063|EMD-1214063|EMD1214063|Tepmetko	MET_inhibitor,type_1
 Tesetaxel|DJ-927	taxane
 Testosterone Enanthate|Androtardyl|Everone|Testate|Testinon|Andro LA|Delatestryl|Primosteston|Testo-Enant	testosterone
 TetMYB	MYB-targeting_vaccine
@@ -748,13 +756,14 @@ Tislelizumab|BGB-A317	anti-PD-1_monoclonal_antibody
 Tivantinib|ARQ 197|ARQ-197	MET_inhibitor
 Tocilizumab|MRA|R-1569	anti-IL-6_monoclonal_antibody
 Topotecan|Hycamptamine	topoisomerase_inhibitor
+Toradol	non-steroidal_anti-inflammatory_drug
 Toripalimab|JS001|TAB 001|TAB-001	anti-PD-1_monoclonal_antibody
 Trametinib|GSK1120212|JTP-74057|Mekinist	MEK_inhibitor
 Trastuzumab Deruxtecan|Fam-trastuzumab deruxtecan-nxki|DS-8201|Enhertu|WHO 10516	anti-ERBB2_antibody-drug_conjugate
 Trastuzumab Emtansine|Ado-Trastuzumab Emtansine|Kadcyla|PRO132365|RO5304020|T-DM1|Trastuzumab-DM1|Trastuzumab-MCC-DM1	anti-ERBB2_antibody-drug_conjugate
 Trastuzumab|Herceptin|ABP 980|ALT02|Anti-p185-HER2|Herzuma|Ogivri|Ontruzant|PF-05280014|RO0452317|SB3|Trazimera|rhuMAb HER2	anti-ERBB2_monoclonal_antibody
 Tremelimumab|CP-675|Ticilimumab	anti-CTLA-4_monoclonal_antibody
-Trifluridine/Tipiracil|Lonsurf|TAS 102|TAS-102|Tipiracil Hydrochloride Mixture with Trifluridine|Trifluridine and Tipiracil Hydrochloride	antimetabolite; thymidine_phosphorylase_inhibitor
+Trifluridine/Tipiracil|Lonsurf|TAS 102|TAS-102|Tipiracil Hydrochloride Mixture with Trifluridine|Trifluridine and Tipiracil Hydrochloride	antimetabolite; thymidine_phosphorylase_inhibitor; Tipiracil Hydrochloride; Trifluridine
 Trilaciclib	CDK4/6_inhibitor
 Triptorelin|6-D-Tryptophan-LH-RH|6-D-Tryptophanluteinizing Hormone-releasing Factor|AY-25650|CL-118,532|Detryptoreline	LHRH_agonist
 Tucatinib|ARRY-380|Irbinitinib|ONT-380|Tukysa	ERBB2_inhibitor,third_generation
@@ -779,7 +788,7 @@ Vibostolimab|MK-7684|MK 7684|MK7684|MK-7684A	anti-TIGIT_monoclonal_antibody
 Vinblastine|VLB|Vincaleucoblastine	vinca_alkaloid
 Vincristine|22-Oxovincaleukoblastine|LEUROCRISTINE|VCR|Vincrystine	vinca_alkaloid
 Vinflunine	vinca_alkaloid
-Vinorelbine|Dihydroxydeoxynorvinkaleukoblastine	vinca_alkaloid
+Vinorelbine|Dihydroxydeoxynorvinkaleukoblastine|Navelbine	vinca_alkaloid
 Vismodegib|GDC-0449|Erivedge	SMO_inhibitor,first_generation
 Vistusertib|AZD2014	MTORC1/MTORC2_inhibitor
 Vonlerolizumab|MOXR0916|Pogalizumab|RG 7888|RG-7888|RG7888|RO7021608	anti-OX40_agnostic_monoclonal_antibody
@@ -814,3 +823,29 @@ WM-S1-030	mutant_receptor_tyrosine_kinase_inhibitor
 OP-1250	complete_estrogen_receptor_antagonist
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
 Fruquintinib	VEGFR1/2/3_inhibitor
+A-337|SP51616	bispecific_CD3/EpCAM_antibody
+Mesna	sodium_mercaptoethanesulfonate
+Trabectedin|Yondelis	alkylating_agent
+Bermekimab|Xilonix	anti-IL1A_monoclonal_antibody
+Degarelix|Firmagon	GnRH_antagonist
+Andecaliximab|GS-5745|GS5745	anti-MMP9_monoclonal_antibody
+INCSHR1210|SHR1210	anti-PD-1_monoclonal_antibody
+Fotemustine|Mustophoran	 alkylating_agent
+Raltitrexed	antimetabolite
+Aldoxorubicin	doxorubicin_conjugate
+EOX	Epirubicin + Oxaliplatin + Capecitabine
+ECX	Epirubicin + Cisplatin + Capecitabine
+XELIRI	Capecitabine + Irinotecan
+MK-7123	CXCR1/2_antagonist
+OCA|CAV	Cyclophosphamide + Doxorubicin + Vincristine
+Stupp regimen|Stupp protocol	Temozolomide + Radiotherapy
+Hydroxyurea	antimetabolite
+VIDE	Vincristine + Ifosfamide + Doxorubicin + Etoposide
+VDC-IE	Cyclophosphamide + Doxorubicin + Etoposide + Ifosfamide + Vincristine
+BEP	Bleomycin + Etoposide + Cisplatin
+R-GemOx	Rituximab + Gemcitabine + Oxaliplatin
+POMB-ACE	Cisplatin + Vincristine + Methotrexate + Bleomycin + Actinomycin D + Cyclophosphamide + Etoposide
+Telotristat|Telotristat ethyl	tryptophan_hydroxylase_inhibitor
+Interferon alfa 2a	IFN-2alpha
+lisocabtagene maraleucel|Breyanzi	CD19-directed_CAR_T_cell
+PCUR-101	synthetic_plumbagin

@@ -538,7 +538,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		
 		if ( $trial_db_by_trial_id{$trial_id}{'recruitmentstatus'} !~ /^(?:Recruiting|Available)$/i ) { # adding information about recruitment status or available - consistent with CT.gov term
 			if ( scalar(@eligibility_criteria_strs) ) {
-				$_ .= "; *recruitment_status:".$trial_db_by_trial_id{$trial_id}{'recruitmentstatus'} for @eligibility_criteria_strs;
+ 				$_ .= ( length $_ ? "; " : "" )."*recruitment_status:".$trial_db_by_trial_id{$trial_id}{'recruitmentstatus'} for @eligibility_criteria_strs;
 				; 
 			} else {
 				push @eligibility_criteria_strs, "*recruitment_status:".$trial_db_by_trial_id{$trial_id}{'recruitmentstatus'}; 
