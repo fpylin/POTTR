@@ -8,7 +8,7 @@
 # This file is part of Oncology Treatment and Trials Recommender (OTTR) and 
 # Precision OTTR (POTTR).
 #
-# Copyright 2019-2020, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+# Copyright 2019-2021, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                      Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -283,8 +283,10 @@ sub get_drug_synonyms {
 sub get_drug_regex {
 	&ON_DEMAND_INIT;
 	my @elems ;
+	
 	for my $arg (@_) {
-		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/i; $_ } grep { ! /\d+,\d+-|'|[\[\]]|^\.|, / } keys %{ $drug_synonyms{ mk_signature($arg) } };
+		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/i; $_ } grep { ! /\d+,\d+-|'|[\[\]]|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
+# 		print "<[$arg]\t".join("|", (keys %{ $drug_synonyms{ $drug_preferred_name{ mk_signature( get_preferred_drug_name($arg) ) } } } ) )."\n";
 	}
 	my %by_signature;
 	for my $e (@elems) {
@@ -297,6 +299,7 @@ sub get_drug_regex {
 		my @m = @a;
 		if (scalar @a >= 2 ) {
 			my ($s) = sort { length $b <=> length $a } grep { /[\- ]/ } @a;
+# 			warn $s;
 			if ( defined $s ) {
 				$s =~ s/[ \-]/[[:space:]\\-]?/g;
 				my $d = grep { /^$s$/i } @a ;
@@ -307,8 +310,11 @@ sub get_drug_regex {
 		}
 		push @elems, @m;
 	}
-	
-	return join("|", sort { length $b <=> length $a } @elems);
+# 	print join("\n", map { "A $_" } sort { length $b <=> length $a } @elems);
+	my $regex = join("|", sort { length $b <=> length $a } @elems );
+# 	print ( $regex =~ s/\|/\nB /gr );
+# 	print "\n".length($regex)."\n";
+	return $regex ;
 }
 
 
@@ -317,7 +323,7 @@ sub get_drug_regex_M {
 	&ON_DEMAND_INIT;
 	my @elems ;
 	for my $arg (@_) {
-		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/i; $_ } grep { ! /\d+,\d+-|'|[\[\]]|^\.|, / } keys %{ $drug_synonyms{ mk_signature($arg) } };
+		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/i; $_ } grep { ! /\d+,\d+-|'|[\[\]]|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
 	}
 	my %by_signature;
 	for my $e (@elems) {

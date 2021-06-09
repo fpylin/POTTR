@@ -83,7 +83,7 @@ sub interp_variants {
 		/[VSADEF]/ and do { 
 # 			$$facttable{'biomarker'} = $biomarker_name ; 
 			push @alterations, 'alteration' ;
-			push @alterations, ( $variant_synonyms{ "$biomarker_name:$biomarker_spec" } =~ s/^$biomarker_name://r ) if exists $variant_synonyms{ "$biomarker_name:$biomarker_spec" } ; # if synonym exists
+			push @alterations, ( $variant_synonyms{ "$biomarker_name:$biomarker_spec" } =~ s/^$biomarker_name://r ) if exists $variant_synonyms{ "$biomarker_name:$biomarker_spec" } ; # if synonyms exist
 		};
 
 		/S/ and do { 

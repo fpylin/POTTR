@@ -268,7 +268,7 @@ sub extract_results_biomarkers {
 # 		print "[$_]\n" for @matched;
 		for my $fact_str (@matched) {
 			my ($fact, @tags) = Facts::string_to_fact_and_tags( $fact_str );
-			if ( $fact =~ /^\s*(?:alteration|mutation|deletion|amplification|fusion)\s*$/i ) { 
+			if ( $fact =~ /^\s*(?:alteration|mutation|deletion|amplification|.*expression|high|low|fusion)\s*$/i ) { 
 				push @aberration, $fact; 
 				next ; 
 			};

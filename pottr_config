@@ -302,3 +302,12 @@ therapy-maturity-database-file    = example_trial_drug_phases.tsv
 ################################################################################
 
 
+
+
+################################################################################
+# Additional rules
+################################################################################
+
+# Example - HER2 amplification is highly concordant with protein overexpression
+set ERBB2:amplification => ERBB2:overexpression 
+

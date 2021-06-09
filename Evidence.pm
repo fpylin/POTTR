@@ -167,18 +167,19 @@ my %cancer_gene_census = map { $_ => 1 } @cancer_gene_census;
 
 my %other_biomarkers = (
 	'AURKA'   => 'TSG',
-	'BCL2L1'  => 'oncogene',    'BCL2L11'=> 'TSG',      'BRD2'   => 'TSG',       'BRDT'   => 'TSG', 
+	'BCL2L1'  => 'oncogene',    'BCL2L11'=> 'TSG',      'BRD2'   => 'TSG',       'BRD7'   => 'Other',  'BRDT'   => 'TSG',    
 	'CD20'    => 'Other',       'CHEK1'  => 'TSG',      'CEACAM5' => 'Other',    'CD33'   => 'Other',  'CD38' => 'Other',  'CD123' => 'Other',  'CD19' => 'Other', 'CD30' => 'Other',  'CXCL13' => 'Other',
 	'EMSY'    => 'oncogene',    'ERRFI1'  => 'TSG',     'ERCC1'   => 'TSG', 
-	'FANCI'   => 'TSG',         'FANCM'   => 'TSG',     'FGF19'   => 'oncogene', 'FOLR' => 'Other', 'FRS2' => 'oncogene',
+	'FAM175A' => 'TSG',         'FANCI'   => 'TSG',         'FANCM'   => 'TSG',     'FGF19'   => 'oncogene', 'FOLR' => 'Other', 'FRS2' => 'oncogene', 
 	'GLI2'    => 'TSG',
 	'HGF'     => 'oncogene',    
-	'MCL1'    => 'oncogene',   'MSLN'    => 'protein',  'MTAP'   => 'TSG',  
+	'MCL1'    => 'oncogene',   'MRE11A'  => 'TSG',      'MSLN'    => 'protein',  'MTAP'   => 'TSG',  
 	'NECTIN4' => 'Other',      'NOTCH3'  => 'oncogene', 'NTRK2'  => 'oncogene', 'NTRK3'  => 'oncogene',
 	'PDGFB'   => 'oncogene',   'PPP2R2A' => 'TSG',      'PRKCA'  => 'oncogene', 'PRKC'   => 'oncogene', 'PRMT1'  => 'TSG',      'PSMA'    => 'protein', 'PGR' => 'oncogene', 
-	'RAD51C'  => 'TSG',        'RAD51D'  => 'TSG',      'RAD54L' => 'TSG',      'RICTOR' => 'oncogene',
+	'RAD51C'  => 'TSG',        'RAD51D'  => 'TSG',      'RAD54L' => 'TSG',      'RASA1'  => 'TSG',      'RICTOR' => 'oncogene',
 	'SMARCA1' => 'TSG',        'SLAMF7' => 'Other',     'SSTR2'  => 'Other',    'SMARCA2' => 'TSG',     'SLC1A5' => 'Other',
 	'TACSTD2' => 'Other',
+	'XRCC2'   => 'TSG',
 );
 
 our %cancer_gene_type ;
@@ -448,7 +449,7 @@ sub gen_rule_knowledge_base {
 		
 		my $lhs_catype_neg ;
 		my $lhs_catype = ( (scalar(@lhs_catypes) > 1) ? "(".join(" OR ", @lhs_catypes).")" : $lhs_catypes[0] );
-		my $lhs_catype_ancestors = ( (scalar(@lhs_catypes_ancestors) > 1) ? "(".join(" OR ", @lhs_catypes_ancestors).")" : $lhs_catypes_ancestors[0] );
+		my $lhs_catype_ancestors = ( (scalar(@lhs_catypes_ancestors) > 1) ? "(".join(" OR ", @lhs_catypes_ancestors, $lhs_catypes_ancestors_base).")" : $lhs_catypes_ancestors[0] );
 		
 		$lhs_catype_ancestors = join("; ", $lhs_catype_ancestors, $lhs_catypes_ancestors_base) if defined $lhs_catypes_ancestors_base;
 		

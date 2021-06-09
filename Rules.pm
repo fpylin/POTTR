@@ -66,8 +66,8 @@
 # Revision 0.91  - 04 May 2019
 # Revision 0.92  - 13 Jun 2019
 # 
-# Copyright 2019, Frank Lin & Kinghorn Centre for Clinical Genomics, 
-#                 Garvan Institute of Medical Research, Sydney
+# Copyright 2019-2021, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+#                      Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -511,7 +511,7 @@ sub match_rule_lhs {
 		if ($tf) { # constraint i satisfied
 			push @matched_cons, $lhs_cons ;
 		} else { # constraint i not satisfied
-			if ( $lhs_assert[$i] ) { # falsely assert a fact to satisfy a constraint, but track this fact to allow debugging
+			if ( $lhs_assert[$i] ) { # contingency reasoning by falsely asserting a fact to satisfy a constraint. This fact is tracked to allow retrospective inference
 				push @matched_cons, $lhs_cons ;
 				my $ttag = "*".($lhs_neg[$i] ? "NOT ": "").$lhs_cons ;
 				push @tracking_tags, $ttag ;
@@ -665,7 +665,7 @@ sub load { # Load if-then rules
 		push @rules_spec, \%a;
 		$self->{'rules_str'}{$rule_str}++;
 		
-		$disjunctive_lhs{$_} = \%a, for grep { /^\(.*?\s+OR\s+.*\)$/ } @lhs ; # Now can handle simple simple disjunctions (one level only) FIXME
+		$disjunctive_lhs{$_} = \%a, for grep { /^\(.*?\s+OR\s+.*\)$/ } @lhs ; # Now can handle simple disjunctions (one level only) FIXME
 	}
 
 	for my $disj_lhs (sort { $disjunctive_lhs{$a}{'order'} <=> $disjunctive_lhs{$b}{'order'} } keys %disjunctive_lhs) {
