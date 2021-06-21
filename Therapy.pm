@@ -280,13 +280,62 @@ sub get_drug_synonyms {
 	return sort keys %{ $drug_synonyms{ mk_signature( get_normalised_treatment_name($_[0]) ) } };
 }
 
+
+# print "<[$arg]\t".join("|", (keys %{ $drug_synonyms{ $drug_preferred_name{ mk_signature( get_preferred_drug_name($arg) ) } } } ) )."\n";
+# 
+our $sep_regex = "[[:space:]\\-]?";
+# our $sep_regex_qe = "\\\\Q$sep_regex\\\E";
+# 
+# sub mk_regex_search_tree(\@;$\%) {
+# 	my @x = @{ $_[0] };
+# 	my $func = $_[1];
+# 	my $previndexref = $_[2];
+# 	my $regex; 
+# 	my %index;
+# 	
+# 	if (defined $previndexref) {
+# 		for my $k (keys %{ $previndexref }) {
+# 			next if ! length $k;
+# 			my ($a,$b) = ( $k =~ /^(.)(.*)/ );
+# 			print STDERR "$k -- $a-$b ".$$previndexref{$k}."\n";
+# 			die if ! defined $a;
+# 			$index{$a}{$b} = $$previndexref{$k};
+# 		}
+# 	} else {
+# 		for (@x) {
+# 			my ($a,$b) = /^($sep_regex_qe|.)(.*)/;
+# 			$index{$a}{$b} = $_;
+# 		}
+# 	}
+# 	
+# 	my @elems;
+# 	
+# 	for my $first (keys %index) {
+# 		my @k = sort { length $b <=> length $a } ( keys %{ $index{$first} } ) ;
+# 		my $z = '';
+# # 		print join("-", @k)."\n";
+# 		if ( (scalar(@k) > 2) and (length($k[0]) > 5) ) {
+# 			my $zero_length = undef;
+# 			if ( grep { ! length } @k ) {
+# 				$zero_length = ( $func ? $func->('', $index{$first}{''}) : $index{$first}{''} );
+# 				@k = grep { length } @k ;
+# 			}
+# 			$z = "(?:$first(?:".&mk_regex_search_tree(\@x, undef, \%{ $index{$first} } ).(defined $zero_length ? "|$zero_length" : '')."))";
+# 		} else {
+# 			$z = "(?:$first(?:". join('|', ( map { $func ? $func->($_, $index{$first}{$_}) : $_ } @k ) ) ."))";
+# 		}
+# 		push @elems, $z;
+# 	}
+# 	
+# 	return  join("|", @elems);
+# }
+
 sub get_drug_regex {
 	&ON_DEMAND_INIT;
 	my @elems ;
 	
 	for my $arg (@_) {
 		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/i; $_ } grep { ! /\d+,\d+-|'|[\[\]]|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
-# 		print "<[$arg]\t".join("|", (keys %{ $drug_synonyms{ $drug_preferred_name{ mk_signature( get_preferred_drug_name($arg) ) } } } ) )."\n";
 	}
 	my %by_signature;
 	for my $e (@elems) {
@@ -301,7 +350,7 @@ sub get_drug_regex {
 			my ($s) = sort { length $b <=> length $a } grep { /[\- ]/ } @a;
 # 			warn $s;
 			if ( defined $s ) {
-				$s =~ s/[ \-]/[[:space:]\\-]?/g;
+				$s =~ s/[ \-]/$sep_regex/g;
 				my $d = grep { /^$s$/i } @a ;
 				if ( $d == scalar(@a) ) {
 					@m = ($s);
@@ -310,10 +359,11 @@ sub get_drug_regex {
 		}
 		push @elems, @m;
 	}
-# 	print join("\n", map { "A $_" } sort { length $b <=> length $a } @elems);
+
+# 	my $regex = mk_regex_search_tree(@elems);
+	
 	my $regex = join("|", sort { length $b <=> length $a } @elems );
-# 	print ( $regex =~ s/\|/\nB /gr );
-# 	print "\n".length($regex)."\n";
+
 	return $regex ;
 }
 
@@ -339,7 +389,7 @@ sub get_drug_regex_M {
 		if (scalar @a >= 2 ) {
 			my ($s) = sort { length $b <=> length $a } grep { /[\- ]/ } @a;
 			if ( defined ($s) ) {
-				$s =~ s/[ \-]/[[:space:]\\-]?/g;
+				$s =~ s/[ \-]/$sep_regex/g;
 				my $d = grep { /^$s$/i } @a ;
 				if ( $d == scalar(@a) ) {
 					@m = ($s);
@@ -349,8 +399,12 @@ sub get_drug_regex_M {
 		} 
 		push @elems, @m;
 	}
+
+# 	my $regex = mk_regex_search_tree(@elems, sub { my $x = $_[0]; my $y = $_[1]; return "$x(?{push \@M,'".$pref_name{$y}."'})" } );
+
+	my $regex = join("|", map { "$_(?{push \@M,'".$pref_name{$_}."'})" } sort { length $b <=> length $a } @elems);
 	
-	return join("|", map { "$_(?{push \@M,'".$pref_name{$_}."'})" } sort { length $b <=> length $a } @elems);
+	return $regex ;
 }
 
 
