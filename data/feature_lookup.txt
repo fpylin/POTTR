@@ -7,8 +7,13 @@ ALK	mam1_domain	262	427
 ALK	ldl_domain	437	473
 ALK	mam2_domain	478	636
 EGFR	kinase_domain	672	998
+EIF1AX	n-terminal_tail	1	31
+EIF1AX	rna_binding_domain	32	93
+EIF1AX	helical_domain	94	112
+EIF1AX	c-terminal_tail	113	144
 ERBB2	extracellular_domain	22	653
 ERBB2	transmembrane_domain	654	720
+ERBB2	juxtamembrane_domain	675	714
 ERBB2	kinase_domain	731	906	10.1371/journal.pcbi.1002661
 FLT3	extracellular_domain	22	541	30332834
 FLT3	transmembrane_domain	542	563	30332834

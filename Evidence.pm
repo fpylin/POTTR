@@ -86,7 +86,7 @@ JAK1 JAK2 JAK3 JAZF1 JUN
 KAT6A KAT6B KAT7 KCNJ5 KDM5A KDM5C KDM6A KDR KDSR KEAP1 KIAA1549 KIF5B KIT KLF4 KLF6 KLK2 KMT2A KMT2C KMT2D KNL1 KNSTRN KRAS KTN1
 LARP4B LASP1 LATS1 LATS2 LCK LCP1 LEF1 LEPROTL1 LHFPL6 LIFR LMNA LMO1 LMO2 LPP LRIG3 LRP1B LSM14A LYL1 LZTR1
 MACC1 MAF MAFB MALAT1 MALT1 MAML2 MAP2K1 MAP2K2 MAP2K4 MAP3K1 MAP3K13 MAPK1 MAPK3 MAX MB21D2 MDM2 MDM4 MDS2 MECOM MED12 MEN1 MET MGMT MITF MLF1 MLH1
-MLLT1 MLLT10 MLLT11 MLLT3 MLLT6 MN1 MNX1 MPL MRTFA MSH2 MSH6 MSI2 MSN MTCP1 MTOR MUC1 MUC16 MUC4 MUTYH MYB MYC MYCL MYCN MYD88 MYH11 MYH9 MYO5A MYOD1
+MLLT1 MLLT10 MLLT11 MLLT3 MLLT6 MN1 MNX1 MPL MRTFA MSH2 MSH6 MSI2 MSN MTCP1 MTOR MTORC1 MUC1 MUC16 MUC4 MUTYH MYB MYC MYCL MYCN MYD88 MYH11 MYH9 MYO5A MYOD1
 N4BP2 NAB2 NACA NBEA NBN NCKIPSD NCOA1 NCOA2 NCOA4 NCOR1 NCOR2 NDRG1 NF1 NF2 NFATC2 NFE2L2 NFIB NFKB2 NFKBIE NIN
 NKX2-1 NONO NOTCH1 NOTCH2 NPM1 NR4A3 NRAS NRG1 NSD1 NSD2 NSD3 NT5C2 NTHL1 NTRK1 NTRK3 NUMA1 NUP214 NUP98 NUTM1 NUTM2B NUTM2D
 OLIG2 OMD P2RY8
@@ -122,7 +122,7 @@ IDH1 IDH2 IKBKB IL6ST IL7R IRF4 IRS4
 JAK1 JAK2 JAK3 JUN 
 KAT6A KAT7 KCNJ5 KDM5A KDM6A KDR KIT KLF4 KMT2A KMT2D KNSTRN KRAS 
 LCK LEF1 LMO1 LMO2 LPP LYL1 
-MACC1 MAF MAFB MALAT1 MALT1 MAML2 MAP2K1 MAP2K2 MAP2K4 MAP3K1 MAP3K13 MAPK1 MAPK3 MDM2 MDM4 MECOM MET MITF MLLT10 MN1 MPL MRTFA MSI2 MTCP1 MTOR MUC16 MUC4 MYB MYC MYCL MYCN MYD88 MYOD1 NCOA2 
+MACC1 MAF MAFB MALAT1 MALT1 MAML2 MAP2K1 MAP2K2 MAP2K4 MAP3K1 MAP3K13 MAPK1 MAPK3 MDM2 MDM4 MECOM MET MITF MLLT10 MN1 MPL MRTFA MSI2 MTCP1 MTOR MTORC1 MUC16 MUC4 MYB MYC MYCL MYCN MYD88 MYOD1 NCOA2 
 NFATC2 NFE2L2 NFKB2 NKX2-1 NOTCH1 NOTCH2 NPM1 NR4A3 NRAS NSD2 NSD3 NT5C2 NTRK1 NTRK3 NUP98 NUTM1 
 OLIG2 
 P2RY8 PABPC1 PAX3 PAX5 PBX1 PDCD1LG2 PDGFB PDGFRA PDGFRB PIK3CA PIK3CB PIM1 PLAG1 PLCG1 POLQ POU2AF1 POU5F1 PPM1D PRDM16 PREX2 PRKACA PRKAR1A PSIP1 PTK6 PTPN11 
@@ -199,7 +199,7 @@ sub encode_alteration_proper {
 	$bm = $1 if ( $x =~ s/^([A-Z\-a-z0-9 ]+:)// );
 # 	print "\e[1;42;35m".$bm.'|'.$x."\e[0m\n";
 
-	if ( $bm =~ /^((?:Microsatellite.Instability|Tumour.Mutation(?:al)?.Burden|(?:Loss-of-heterozygosity|Homologous Recombination Deficiency)|Homologous.Recombination.Deficiency|Mismatch.repair|Consensus molecular subtype|Intrinsic subtype):)$/i ) { 
+	if ( $bm =~ /^((?:Microsatellite.Instability|Tumour.Mutation(?:al)?.Burden|(?:Loss-of-heterozygosity|Homologous Recombination Deficiency)|Homologous.Recombination.Deficiency|Mismatch.repair|Consensus molecular subtype|Intrinsic subtype|Tumou?r microenvironment|HPV genotype):)$/i ) { 
 		$bm = lc($1);
 		$bm =~ s/ /_/g;
 	}
@@ -207,7 +207,7 @@ sub encode_alteration_proper {
 
 	$x =~ s/mut$//;
 	$x =~ s/^\s+|\s+$//g;
-	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient)s?$/i ) { 
+	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient|.*terminal tail.*)s?$/i ) { 
 		$x = lc($1) ;
 	} elsif ( $x =~ /^((?:DNA binding|kinase|transmembrane|extracellular) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
 		$x = lc($1);
