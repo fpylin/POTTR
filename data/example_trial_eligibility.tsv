@@ -38,3 +38,4 @@ NCT04585815	BRAF:V600E
 NCT04644237	ERBB2:oncogenic_mutation; NOT EGFR:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion
 NCT03516981	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ERBB2:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT04624204	catype:Small-cell lung carcinoma
+NCT03319940	catype:Small-cell lung carcinoma

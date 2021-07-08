@@ -1,6 +1,7 @@
 drug	drug_class
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
 177Lu-edotreotide|lutetium-177-DOTATATE|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
+177Lu-DOTA-rosopatamab|177Lu-DOTA-TLX591-CHO|TLX591	177Lu-PSMA-radioconjugate
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
@@ -845,7 +846,7 @@ Vonlerolizumab|MOXR0916|Pogalizumab|RG 7888|RG-7888|RG7888|RO7021608	anti-OX40_a
 Vorasidenib|AG 881|AG-881|AG881	IDH1/IDH2_mutant_selective_inhibitor
 Vorinostat|SAHA|Suberanilohydroxamic Acid|Zolinza|L-001079038|MSK-390|Suberoylanilide Hydroxamic Acid	HDAC_inhibitor
 WM-S1-030	mutant_receptor_tyrosine_kinase_inhibitor
-WVT078	unknown_drug_class
+WVT078	bispecific_BCMA/CD3_antibody
 XELIRI	Capecitabine + Irinotecan
 XMT-1536	anti-NaPi2b_antibody-drug_conjugate
 XNW7201	PORCN_inhibitor
@@ -875,3 +876,7 @@ tavokinogene telseplasmid	DNA_plasmid_encoding_IL-12
 HB-201	HPV-cancer_vaccine,E6/E7_targeting
 HB-202	HPV-cancer_vaccine,E6/E7_targeting
 CB-103	CSL-NICD_transcription_factor_complex_inhibitor
+AZD0466	dual_Bcl2/xL_inhibitor
+Mogamulizumab|Poteligeo	anti-CCR4_monoclonal_antibody
+RC118	antibody-drug_conjutate,unknown_drug_class
+KER-050	modified_ActRIIA_ligand_trap_protein

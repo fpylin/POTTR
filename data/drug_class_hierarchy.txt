@@ -17,6 +17,7 @@ ATR_inhibitor	ATR/CHEK1_inhibitor
 AXL_inhibitor	AXL/FLT3_inhibitor
 AXL_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
 BCL2_inhibitor
+BCL2_inhibitor	dual_Bcl2/xL_inhibitor
 BCR-ABL1_inhibitor
 BCR-ABL1_inhibitor	BCR-ABL1/KIT/PDGFR_inhibitor
 BCR-ABL1_inhibitor	BCR-ABL1/PDGFR/KIT/SRC_inhibitor
