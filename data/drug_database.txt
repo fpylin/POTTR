@@ -11,7 +11,7 @@ ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibod
 ABBV-428|ABBV 428	anti-CD40_agonist_antibody
 ABBV-467	MCL1_inhibitor
 ABBV-927	anti-CD40_agonist_antibody
-ABN401|ABN 401|ABN-401	MET_inhibitor
+ABN401|ABN 401|ABN-401	MET_inhibitor,type_1
 ABT-767	PARP_inhibitor
 ACT001	NFKB_inhibitor
 ADG116	anti-CTLA-4_monoclonal_antibody
@@ -164,7 +164,7 @@ Bleomycin	antineoplastic_antibiotic
 Blinatumomab	anti-CD19/CD3_BiTE_antibody
 Bortezomib|PS-341|LDP 341|MLN341|PS341|Velcade	proteasome_inhibitor
 Bosutinib|SKI-606|4-Anilino-3-quinolinecarbonitrile|Bosulif|SKI 606	BCR-ABL1_inhibitor,second_generation; SRC_inhibitor
-Bozitinib|APL-101|APL101|CBI-3103|CBT-101|PLB-1001|PLB1001	MET_inhibitor
+Bozitinib|APL-101|APL101|CBI-3103|CBT-101|PLB-1001|PLB1001	MET_inhibitor,type_1
 Brentuximab Vedotin|Adcetris|SGN-35|cAC10-vcMMAE	anti-CD30_antibody-drug_conjugate
 Brigatinib|AP 26113|AP-26113|AP26113|Alunbrig	ROS1_inhibitor; ALK_inhibitor,second_generation
 Budigalimab|ABBV 181|ABBV-181|ABBV181	anti-PD-1_monoclonal_antibody
@@ -315,7 +315,7 @@ Exemestane|Aromasin|FCE-24304	aromatase_inhibitor
 Ezabenlimab|BI 754091	anti-PD-1_monoclonal_antibody
 F520|F 520|HX 008	anti-PD-1_monoclonal_antibody
 FAZ-053|FAZ 053|FAZ053	anti-PD-L1_monoclonal_antibody
-FEC	Fluorouracil + Epirubicin + Cyclophosphamide
+FEC regimen	Fluorouracil + Epirubicin + Cyclophosphamide
 FF-10850|FF 10850|FF10850	topoisomerase_inhibitor
 FLOT	Fluorouracil + Oxaliplatin + Docetaxel
 FLX475|FLX 475|FLX-475	CCR4_inhibitor
@@ -850,6 +850,9 @@ WVT078	bispecific_BCMA/CD3_antibody
 XELIRI	Capecitabine + Irinotecan
 XMT-1536	anti-NaPi2b_antibody-drug_conjugate
 XNW7201	PORCN_inhibitor
+IWP-1	PORCN_inhibitor
+IWP-2	PORCN_inhibitor
+Wnt-C59	PORCN_inhibitor
 Xentuzumab|BI 836845	anti-IGF_ligand_antibody
 XmAb24306|RO 7310729|RO-7310729|RO7310729|XmAb 24306|XmAb-24306	IL15/IL15R_Fc-fusion_protein
 YBL-006	anti-PD-1_monoclonal_antibody
