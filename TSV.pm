@@ -20,6 +20,8 @@
 ##############################################################################
 
 package TSV;
+# use Devel::StackTrace;
+# my $trace = Devel::StackTrace->new;
 
 use strict;
 use warnings;
@@ -39,14 +41,14 @@ BEGIN {
 sub v_safe { my $x = shift; return ( defined $x ? $x : "" ); }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
-sub shuffle(\@) {
+sub shuffle(\@) { # Fisher–Yates shuffle Algorithm
 	my $l = shift;
 	my $n = scalar(@$l) ;
-	for(my $z1=0; $z1<$n; ++$z1) {
-		my $z2 = int(rand( scalar(@$l) ));
-		my $s = ${$l}[$z1];
-		${$l}[$z1] = ${$l}[$z2];
-		${$l}[$z2] = $s;
+	for(my $i =$n-1; $i >=1; --$i ) {
+		my $j = int( rand( $i ) );
+		my $s = ${$l}[$i];
+		${$l}[$i] = ${$l}[$j];
+		${$l}[$j] = $s;
 	}
 	return @$l;
 }
@@ -76,6 +78,19 @@ sub new {
     return $self;
 }
 
+###############################################################################
+sub new_from_data {
+    my ($class, @lines) = @_;
+    
+    my $self = { 'filename' => '' };
+    
+    bless($self, $class);
+    
+    $self->import_data( @lines );
+    
+    return $self;
+}
+
 
 ###############################################################################
 sub load {
@@ -83,7 +98,7 @@ sub load {
     my $filename = shift;
     my $field_ref = shift;
     
-#     print STDERR "$filename: ";
+#    print STDERR "$filename: ";
     
     my @lines = file($filename);
     
@@ -108,7 +123,7 @@ sub import_data {
     my $header = shift @lines ;
     my @body = @lines ;
     
-    print STDERR join(", ", caller()) if ! defined $header;
+#    print STDERR join(", ", caller()) if ! defined $header;
     
     my @fields = split /\t/, $header;
     my %fields ;
@@ -139,7 +154,7 @@ sub import_data {
         push @{ $self->{'data'} }, \%a;
     }
     
-#     print STDERR $self->n_fields()." col x ".$self->n_rows()." rows imported.\n";
+#    print STDERR $self->n_fields()." col x ".$self->n_rows()." rows imported.\n";
     
     return scalar(@body);
 }
@@ -179,7 +194,7 @@ sub import_column {
 	push @{ $self->{'fields'} }, $field;
 	my $N = undef;
 	
-#  	print STDERR "TSV::import_column - ".scalar(@data)."\n";
+ 	print STDERR "TSV::import_column - ".scalar(@data)."\n";
 # 	print STDERR join("\n", map { "$_\t$data[$_]" } ( 0..$#data ) )."\n";
 	
 	if ( ! defined $self->{'data'} ) {
@@ -213,7 +228,7 @@ sub save_as {
     }
     close FOUT;
     
-    print STDERR "Writting ".$self->n_fields()." col x ".$self->n_rows()." rows to file $filename\n";
+    print STDERR "Writing ".$self->n_fields()." col x ".$self->n_rows()." rows to file $filename\n";
 }
 
 ###############################################################################
@@ -234,7 +249,7 @@ sub save_R_table {
     }
     close FOUT;
     
-    print STDERR "Writting ".$self->n_fields()." col x ".$self->n_rows()." rows to file $filename.\n";
+    print STDERR "Writing ".$self->n_fields()." col x ".$self->n_rows()." rows to file $filename.\n";
 }
 
 ###############################################################################
@@ -302,6 +317,16 @@ sub levels {
 }
 
 ###############################################################################
+sub foreach_row {
+	my $self = shift;
+	my $sub = shift;
+	my @args = @_;
+	for my $row ( @{ $self->{'data'} } ) {
+		$sub->($row, @args);
+	}
+}
+
+###############################################################################
 sub enumerate_feature_levels {
     my $self = shift;
     my $field = shift;
@@ -312,7 +337,7 @@ sub enumerate_feature_levels {
 	my @levels = keys %histogram ;
 	my @non_na_levels = grep { ! /^(?:NA|\?)$/ } @levels ;
 	my @non_numeric_levels = grep { ! /^(?:[\+\-]?[0-9]+(?:\.?[0-9]+)?(?:[Ee][\+\-]?[0-9]+)?)$/ } @non_na_levels ;
-		
+	
 	if ( scalar(@non_numeric_levels) == 0 ) { # is numeric
 		$feature_level_str = 'NUMERIC';
 	} else {
@@ -343,8 +368,11 @@ sub histogram {
     my %cnt ;
     for my $row ( @{ $self->{'data'} } ) {
         my $v = ${$row}{$field};
-        warn "Value for field ''$field'' not defined" if ! defined $v;
-		$cnt{ $v }++;
+        if ( ! defined $v ) {
+# 			warn "Value for field ''$field'' not defined" 
+		} else {
+			$cnt{ $v }++;
+		}
     }
     return %cnt;
 }

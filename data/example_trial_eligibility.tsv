@@ -22,7 +22,7 @@ NCT03976323	*NOT sensitive_to_drug_class:EGFR_inhibitor,third_generation; *NOT s
 NCT03994393	EGFR:oncogenic_mutation
 NCT03994393	EGFR:oncogenic_mutation
 NCT04035486	EGFR:oncogenic_mutation
-NCT04129502	(ERBB2:exon_20_insertion OR EGFR:exon_20_insertion)
+NCT04129502	EGFR:exon_20_insertion
 NCT04139317	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04194944	RET:fusion; *NOT prior_therapy:systemic_therapy
 NCT04222972	catype:Non-small cell lung cancer; RET:fusion

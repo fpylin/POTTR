@@ -23,7 +23,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 2	EGFR	C797S, Exon 20 insertion	Non-small cell lung cancer	Amivantamab		10.1200/JCO.2019.37.15_suppl.9009, 10.1200/JCO.2020.38.15_suppl.9512 
 2	EGFR	Exon 19 deletion, L858R	Non-small cell lung cancer	Apatinib + Gefitinib 	Apatinib not TGA or FDA approved. ACTIVE Phase 3 trial.	10.1016/j.annonc.2020.08.2283
 2	EGFR	Exon 19 deletion, L858R	Non-small cell lung cancer	Dacomitinib	Not TGA approved. ARCHER 1009/1050	28958502, 25439691
-2	EGFR	Exon 20 insertion	Non-small cell lung cancer	Amivantamab	Not TGA approved. FDA accelerated approval 21/05/2021. CHRYSALIS. ORR 36%	32414908, 10.1200/JCO.2020.38.15_suppl.9512
+2	EGFR	Exon 20 insertion	Non-small cell lung cancer	Amivantamab	Not TGA approved. FDA accelerated approval 21/05/2021. Phase 1 CHRYSALIS trial. ORR 40%, including 3 CR. Median DOR 11.1 months. Median PFS 8.3 months.	34339292, 32414908, 10.1200/JCO.2020.38.15_suppl.9512
 2	EGFR	G719, L861Q, S768I	Non-small cell lung cancer	Erlotinib; Gefitinib	Intermediate response to 1G TKI with resistance data	27413714, 28184913
 2	KRAS	G12C	Non-small cell lung cancer	Sotorasib	Not TGA approved. FDA approved for second-line and beyond. Phase 2 CODEBREAK100. Previously treated patients. ORR 37%. PFS 6.8mo. OS 12.5mo.	32955176, 34096690, 10.1016/j.jtho.2019.09.020, 10.1200/JCO.2021.39.15_suppl.9003
 2	MET	Amplification, D1010, Exon 14 Deletion, Exon 14 splicing mutation, Y1003	Non-small cell lung cancer	Crizotinib	Not TGA or FDA approved; NCCN Category 2A. Note: no conclusive data from large trials to date.	26729443, 10.1200/jco.2014.32.15_suppl.8001
@@ -157,8 +157,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	NRG1	Fusion; SLC3A2-NRG1 fusion	Non-small cell lung cancer	Lumretuzumab + Erlotinib	Case report of  invasive mucinous adenocarcinoma of lung. NRG fusion	30268483
 4	NRG1	Fusions	Non-small cell lung cancer	Afatinib	Retrospective registry-based study. Afatinib ORR 25%. CD74-NRG1 and non-CD74-NRG1 have similar ORR (22% and 27% respectively).	34077268
 4	RASA1	Loss-of-function mutations; Oncogenic mutations	Non-small cell lung cancer	Trametinib		29127119
-4	RET	Fusions, TRIM33-RET fusion, KIF5B-RET fusion	Non-small cell lung cancer	Cabozantinib	Case series from a Phase 2 study of XL-184 in RET-positive NSCLC. Two responders. DOR not reported.	23533264
 4	RET	Fusions, KIF5B-RET fusion	Non-small cell lung cancer	Cabozantinib	Case report. Best response is SD for 9 months.	30653139
+4	RET	Fusions, TRIM33-RET fusion, KIF5B-RET fusion	Non-small cell lung cancer	Cabozantinib	Case series from a Phase 2 study of XL-184 in RET-positive NSCLC. Two responders. DOR not reported.	23533264
 4	RET	RET fusions and NOT KIF5B-RET fusion	Non-small cell lung cancer	Agerafenib		31710864
 4	ROS1	Fusions	Non-small cell lung cancer	AZD3463		26372962
 4	ROS1	Fusions	Non-small cell lung cancer	Brigatinib	Not TGA approved	10.1200/PO.18.00267, 10.1158/1538-7445.AM2013-5655

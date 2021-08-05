@@ -100,7 +100,7 @@ sub interp_variants {
 		
 		/E/ and do { push @alterations, $biomarker_spec; last; };
 		/A/ and do { push @alterations, ('amplification'); last; };
-		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion'); last; }; # 'truncating_mutation'
+		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion', 'loss-of-function_mutation'); last; }; # 'truncating_mutation'
 		/F/ and do { 
 			push @alterations, ('fusion'); 
 			if ( ($biomarker_spec =~ /[LR]:([A-Z0-9]+?)--?([A-Z0-9]+)/ ) or #

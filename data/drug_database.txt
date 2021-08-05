@@ -12,6 +12,7 @@ ABBV-428|ABBV 428	anti-CD40_agonist_antibody
 ABBV-467	MCL1_inhibitor
 ABBV-927	anti-CD40_agonist_antibody
 ABN401|ABN 401|ABN-401	MET_inhibitor,type_1
+ABSK043	PD-L1_inhibitor,oral
 ABT-767	PARP_inhibitor
 ACT001	NFKB_inhibitor
 ADG116	anti-CTLA-4_monoclonal_antibody
@@ -883,3 +884,5 @@ AZD0466	dual_Bcl2/xL_inhibitor
 Mogamulizumab|Poteligeo	anti-CCR4_monoclonal_antibody
 RC118	antibody-drug_conjutate,unknown_drug_class
 KER-050	modified_ActRIIA_ligand_trap_protein
+ETC-159	PORCN_inhibitor
+H3Mab-17	anti-ERBB3_monoclonal_antibody

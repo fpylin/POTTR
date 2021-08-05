@@ -678,7 +678,8 @@ sub gen_HTML_biomarker_evidence_report {
 		$treatment_line =~ s/(?:\(\w+|\[LOM).*//;
 		my ($gene_trigger, $dummy, $treatment)  =  split /:/, $treatment_line ;
 		my $oe = (($cnt % 2) ? 'e': 'o');
-		next if $kb_loe =~ /, in/;
+		$kb_loe .= " [repurposed]" if $kb_loe =~ /, in/;
+# 		next if $kb_loe =~ /, in/;
 		
 		$output .= "<tr class=$oe>".join("", (map {"<td>$_</td>"} (
 			$gene_trigger, 
@@ -707,7 +708,8 @@ sub gen_biomarker_evidence_report {
 		my @evidence = ( exists $tags{'evidence'} ? ( split /\s*[;,]\s*/, $tags{'evidence'}) : () );
 		$treatment_line =~ s/(?:\(\w+|\[LOM).*//;
 		my ($gene_trigger, $dummy, $treatment)  =  split /:/, $treatment_line ;
-		next if $kb_loe =~ /, in/;
+# 		next if $kb_loe =~ /, in/;
+		$kb_loe .= " [repurposed]" if $kb_loe =~ /, in/;
 		
 		$output .= join("\t", $gene_trigger,  $treatment,  $kb_loe, join(', ', @evidence) )."\n";
 	}
@@ -729,7 +731,8 @@ sub gen_biomarker_evidence_terminal {
 		my @evidence = ( exists $tags{'evidence'} ? ( split /\s*[;,]\s*/, $tags{'evidence'}) : () );
 		$treatment_line =~ s/(?:\(\w+|\[LOM).*//;
 		my ($gene_trigger, $dummy, $treatment)  =  split /:/, $treatment_line ;
-		next if $kb_loe =~ /, in/;
+# 		next if $kb_loe =~ /, in/;
+		$kb_loe .= " [repurposed]" if $kb_loe =~ /, in/;
 		
 		push @lines, join("\t", $gene_trigger,  $treatment,  $kb_name, thl( $kb_loe ), join(', ', @evidence) )."\n";
 	}
