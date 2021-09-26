@@ -176,11 +176,15 @@ s/^\s+|\s+$//g for @lines ;
 @lines = grep { length $_ } @lines;
 Biomarker::load_biomarker_synonym_file;
 for (@lines) {
+	chomp;
 	next if /:/;
 	$_ = "$1:$2" if ( /^(\S+)?\s+(.+)/ and ( exists $Biomarker::biomarker_synonyms{uc($1)} or $1 eq 'catype') );
 }
 # unshift @lines, "catype:Solid tumour" if ! grep {/catype:/} @lines;
-my @treatment_match_result = $Pottr->reason(@lines);
+my @facts = grep { length } @lines;
+my %facts = map { $_ => 1 } @facts;
+
+my @treatment_match_result = $Pottr->reason(@facts);
 
 # exit 0  if (! $f_from_web and ! $export_trial_list_filename );
 
@@ -233,6 +237,18 @@ sub thl {
 	return hl($col, $tier);
 }
 
+sub thl_AMP {
+	my $tier = shift;
+	my $col  = 37;
+	$col = 32 if $tier =~ /^1A/;
+	$col = 36 if $tier =~ /^1B/;
+	$col = 35 if $tier =~ /^2C/;
+	$col = 34 if $tier =~ /^2D/;
+	$col = 30 if $tier =~ /^[34]/;
+	$col = 30 if $tier =~ /(?:^|,|\b)(?:\(|--)/;
+	return hl($col, $tier);
+}
+
 #######################################################################################################################################
 sub extract_results_catypes {
 	my @treatment_match_result = @_;
@@ -243,7 +259,18 @@ sub extract_results_catypes {
 		push @retval, $fact;
 	}
 	return @retval;
-	
+}
+
+#######################################################################################################################################
+sub extract_results_prior_therapies {
+	my @treatment_match_result = @_;
+	my @results_prior_therapiess = grep { /^prior_therapy:/ } @treatment_match_result ;
+	my @retval;
+	for my $prior_therapies_line (sort @results_prior_therapiess ) {
+		my ($fact, @tags) = Facts::string_to_fact_and_tags( $prior_therapies_line );
+		push @retval, $fact;
+	}
+	return @retval;
 }
 
 #######################################################################################################################################
@@ -252,6 +279,8 @@ sub extract_results_biomarkers {
 	my @results_biomarker = grep { /^has_biomarker:/ } @treatment_match_result ;
 	s/\s*\[.*// for @results_biomarker ;
 	my @retval;
+	my %AMP_LOE;
+	my %is_original_fact;
 	for my $biomarker_line (sort @results_biomarker) {
 		my $biomarker = $biomarker_line;
 		$biomarker =~ s/has_biomarker://;
@@ -268,22 +297,25 @@ sub extract_results_biomarkers {
 # 		print "[$_]\n" for @matched;
 		for my $fact_str (@matched) {
 			my ($fact, @tags) = Facts::string_to_fact_and_tags( $fact_str );
-			if ( $fact =~ /^\s*(?:alteration|mutation|deletion|amplification|.*expression|high|low|fusion)\s*$/i ) { 
+			$is_original_fact{$fact} = ( exists $facts{"$biomarker:$fact"} ? 1 : 0 ) ;
+			if ( $fact =~ /^\s*(?:alteration|mutation|deletion|amplification|.*expression|high|low|fusion|methylation|.*type|.*duplication)\s*$/i ) { 
 				push @aberration, $fact; 
-				next ; 
-			};
-			if ( my @a = grep { /:oncogenicity/ } @tags ) {
+			} elsif ( my @a = grep { /:oncogenicity/ } @tags ) {
 				push @oncogenicity, @a;
-				next;
-			}
-			if ( $fact_str =~ /-of-function_mutation|oncogenic_mutation/ ) {
+			} elsif ( $fact_str =~ /-of-function_mutation|oncogenic_mutation/ ) {
 				push @consequence, $fact_str;
-				next;
+			} else {
+				push @specifics, $fact;
 			}
-			push @specifics, $fact;
+			my @amp_loe = grep { /^AMP\.LOE:/ } @tags;
+			if ( scalar(@amp_loe) and $amp_loe[0] =~ /^AMP\.LOE:(.+)/ ) {
+				$AMP_LOE{$fact} = $1; 
+			} else {
+				$AMP_LOE{$fact} = undef;
+			}
 		}
 		
-		@aberration = sort @aberration ;
+		@aberration = sort { ( $is_original_fact{$b} <=> $is_original_fact{$a} ) || ( ($AMP_LOE{$a} // 3) cmp ($AMP_LOE{$b} // 3) ) || ($a cmp $b ) } @aberration ;
 		s/\s*\[.+?\]\s*$//   for @matched ;
 		s/:oncogenicity//    for @oncogenicity ;
 		s/\s*\[.+?\]\s*$//   for @oncogenicity ;
@@ -291,14 +323,18 @@ sub extract_results_biomarkers {
 		s/\s*\[.+?\]\s*$//   for @consequence ;
 		@matched = grep { !/_to:/ } @matched ;
 		@consequence = sort @consequence ;
-		@specifics = sort( uniq(@specifics) );
+		@specifics = uniq(@specifics) ;
+		@specifics = sort { ( $is_original_fact{$b} <=> $is_original_fact{$a} ) || ( ($AMP_LOE{$a} // 3) cmp ($AMP_LOE{$b} // 3) ) || ($a cmp $b ) }  @specifics ;
 		s/_/ /g for @matched;
+		
 		my %row = (
 			'biomarker'    => $biomarker ,
 			'aberration'   => \@aberration,
 			'specifics'    => \@specifics,
 			'consequence'  => \@consequence,
 			'oncogenicity' => \@oncogenicity,
+			'AMP.LOE'          => \%AMP_LOE,
+			'is_original_fact' => \%is_original_fact,
 		);
 		push @retval, \%row;
 	}	
@@ -469,6 +505,37 @@ sub gen_catypes_HTML {
 	return $output;
 }
 
+#######################################################################################################################################
+sub gen_prior_therapies_terminal {
+	my $output = hl(37, "PRIOR THERAPIES MATCHED")."\n";
+	for my $row ( extract_results_prior_therapies(@treatment_match_result) ) {
+		$row =~ s/prior_therap.+?://;
+		$output .= "$row\n";
+	}
+	return $output;
+}
+
+sub gen_prior_therapies_HTML {
+	my $output = "<h2>PRIOR THERAPIES MATCHED</h2>\n";
+	for my $row ( extract_results_prior_therapies(@treatment_match_result) ) {
+		$row =~ s/prior_therap.+?://;
+		$output .= "$row<br>\n";
+	}
+	return $output;
+}
+
+
+#######################################################################################################################################
+
+sub gen_biomarker_terminal_append_AMP_LOE {
+	my $x = shift;
+	my $bm_hashref = shift;
+	return undef if ! defined $x;
+	my $retval = ( exists $$bm_hashref{'is_original_fact'}{$x} and defined $$bm_hashref{'is_original_fact'}{$x} and length $$bm_hashref{'is_original_fact'}{$x} and $$bm_hashref{'is_original_fact'}{$x} ) ? 
+		hl(37, $x) : $x;
+	$retval .= " [AMP:".thl_AMP($$bm_hashref{'AMP.LOE'}{$x})."]" if ( exists $$bm_hashref{'AMP.LOE'}{$x} and defined $$bm_hashref{'AMP.LOE'}{$x} and length $$bm_hashref{'AMP.LOE'}{$x} );
+	return $retval;
+}
 
 sub gen_biomarker_terminal {
 	my $output = hl(37, "BIOMARKER ALTERATIONS")."\n";
@@ -479,10 +546,10 @@ sub gen_biomarker_terminal {
 		for my $i (0 .. 20) {
 			my $line  = '';
 			$line .= ( ($i == 0) ? $$row{'biomarker'} : '' )."\t";
-			$line .= ( @{ $$row{'aberration'} }[$i]   // '' )."\t";
-			$line .= ( @{ $$row{'specifics'} }[$i]    // '' )."\t";
-			$line .= ( @{ $$row{'consequence'} }[$i]  // '' )."\t";
-			$line .= ( @{ $$row{'oncogenicity'} }[$i] // '' );
+			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'aberration'} }[$i]    , $row)  // '' )."\t";
+			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'specifics'} }[$i]     , $row)  // '' )."\t";
+			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'consequence'} }[$i]   , $row)  // '' )."\t";
+			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'oncogenicity'} }[$i]  , $row)  // '' );
 			$line .= "\n";
 			last if $line =~ /^\s*$/;
 			push @lines, $line ;
@@ -905,7 +972,7 @@ sub gen_preferential_trial_report {
 sub gen_preferential_trial_terminal {
 	@results_preferential_trials = sort { cmp_preferential_trials($a, $b) } @results_preferential_trials ;
 
-	my $output = "\n\n\e[1;37mBIOMARKER-MATCHED CLINICAL TRIALS\e[0m\n";
+	my $output = "\n\n\e[1;37mBIOMARKER-MATCHED, RATIONALLY PRIORITISED CLINICAL TRIALS\e[0m\n";
 	
 	my @lines ;
 
@@ -940,6 +1007,9 @@ sub gen_preferential_trial_terminal {
 			push @lines, join("\t", "Combo class maturity tier",  thl( $$row{'matched_trial_combo_class_maturity'} ) )."\n";
 			push @lines, join("\t", "Referred drug classes score", $$row{'matched_trial_referred_drug_classes_score'} )."\n";
 			push @lines, join("\t", "Trial match criteria score", $$row{'matched_trial_match_criteria_score'} )."\n";
+			push @lines, join("\t", "Referring biomarker",        join("; ", sort( uniq( keys %{ $$row{'referred_genes'} } ) ) ) )."\n";
+			push @lines, join("\t", "Referring drugs",            join("; ", sort( uniq( keys %{ $$row{'referred_drugs'} } ) ) ) )."\n";
+			push @lines, join("\t", "Referring drug classes",     join("; ", sort( uniq( keys %{ $$row{'referred_drug_classes'} } ) ) ) )."\n";
 		}
 		push @lines, join("\t", "Trial match criteria",       $trial_match_criteria )."\n";
 		push @lines, join("\t", "Level of matching",          $$row{'LOM'} )."\n";
@@ -1096,6 +1166,7 @@ HTMLTAIL
 	}
 	
 	print gen_catypes_terminal()."\n" if $f_interp_catype ;
+	print gen_prior_therapies_terminal()."\n" if $f_interp_catype ;
 	print gen_biomarker_terminal()."\n" if $f_interp_variants ; 
 	print gen_drug_sens_terminal()."\n" if $f_list_therapies;
 	print gen_biomarker_evidence_terminal()."\n" if $f_list_evidence ; 

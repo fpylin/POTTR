@@ -622,8 +622,10 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		if ( scalar(@catypecodes) ) {
 			my @tags = @trial_info ;
 			push @tags, "trial_match_criteria:cancer_type";
-			for my $hcc (grep { length and ! /(?:$doid_catype_general)/ } @catypecodes) {
-				for my $eligibility_criteria_str (@eligibility_criteria_strs) {
+			for my $eligibility_criteria_str (@eligibility_criteria_strs) {
+				my $f_eligibility_criteria_str_has_catype      = ( (defined $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)catype:/ ) );
+				
+				for my $hcc (grep { length and ( $f_eligibility_criteria_str_has_catype || ! /(?:$doid_catype_general)/ ) } @catypecodes) {
 					push @trials_rules, mkrule( 
 						[ "catype:$hcc",  $eligibility_criteria_str ], 
 						[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags) ]  # 

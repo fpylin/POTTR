@@ -2,6 +2,7 @@ trial_id	eligibility_criteria
 ACTRN12619000844145	ALK:fusion
 ACTRN12620000861954	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
 ACTRN12620000861954p	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
+ACTRN12621000811808	(MET:exon_14_skipping_mutation OR MET:exon_14_deletion)
 NCT02323126	MET:alteration
 NCT02477826	*NOT prior_therapy:systemic_therapy
 NCT02609776	MET:oncogenic_mutation
@@ -19,14 +20,13 @@ NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Non-small
 NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Pancreatic cancer
 NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03976323	*NOT sensitive_to_drug_class:EGFR_inhibitor,third_generation; *NOT sensitive_to_drug_class:ALK_inhibitor; *NOT sensitive_to_drug_class:ROS1_inhibitor
-NCT03994393	EGFR:oncogenic_mutation
-NCT03994393	EGFR:oncogenic_mutation
+NCT03994393	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04035486	EGFR:oncogenic_mutation
 NCT04129502	EGFR:exon_20_insertion
 NCT04139317	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04194944	RET:fusion; *NOT prior_therapy:systemic_therapy
 NCT04222972	catype:Non-small cell lung cancer; RET:fusion
-NCT04248829	EGFR:oncogenic_mutation
+NCT04248829	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04256421	catype:Non-small-cell lung carcinoma
 NCT04262856	*NOT prior_therapy:systemic_therapy
 NCT04294810	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
@@ -36,8 +36,11 @@ NCT04487080	EGFR:oncogenic_mutation
 NCT04538664	EGFR:exon_20_insertion
 NCT04585815	BRAF:V600E
 NCT04644237	ERBB2:oncogenic_mutation; NOT EGFR:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion
+NCT04746924	NOT ALK:fusion; NOT EGFR:oncogenic_mutation
+NCT04655976	NOT ALK:fusion; NOT EGFR:oncogenic_mutation; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT03516981	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ERBB2:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT04624204	catype:Small-cell lung carcinoma
 NCT03319940	catype:Small-cell lung carcinoma
 NCT03976362	catype:Lung squamous cell carcinoma
 NCT04471428	NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:V600E; NOT RET:fusion
+NCT04619004	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)

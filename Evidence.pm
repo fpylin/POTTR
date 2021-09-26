@@ -209,7 +209,9 @@ sub encode_alteration_proper {
 	$x =~ s/^\s+|\s+$//g;
 	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient|.*terminal tail.*)s?$/i ) { 
 		$x = lc($1) ;
-	} elsif ( $x =~ /^((?:DNA binding|kinase|transmembrane|extracellular) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
+	} elsif ( $x =~ /^((?:high)?) *(mRNA) (expression)s?$/i ) { 
+		$x = join( " ", ( grep { length } ( lc($1 // ''), $2, lc($3) ) ) );
+	} elsif ( $x =~ /^((?:DNA binding|kinase|\S+membrane|extracellular) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
 		$x = lc($1);
 	} elsif ( $x =~ /^(Exon \d+ (?i:deletion|(?:splic\w+ |skipping )?mutation|insertion|insertions?\/deletion|indel))s?$/i ) { 
 		$x = lc($1);
@@ -308,9 +310,32 @@ sub check_biomarker {
 	}
 }
 
+sub translate_AMP_tier {
+	my @x = @_;
+	for (@x) {
+		/R1/   and do { $_ = '1A'; next; }; 
+		/R2/   and do { $_ = '2D'; next; }; 
+		/1/    and do { $_ = '1A'; next; }; 
+		/2/    and do { $_ = '1A'; next; }; 
+		/3/    and do { $_ = '1B'; next; }; 
+		/4/    and do { $_ = '2D'; next; }; 
+	}
+	return @x;
+}
+sub tmin($$) { return ( $_[0] lt $_[1] ) ? $_[0] : $_[1]  }
+sub tmax($$) { return ( $_[0] gt $_[1] ) ? $_[0] : $_[1]  }
+sub get_max_tier(@) {
+	my @tier_list = @_;
+	my @tier_list_tr = translate_AMP_tier(@tier_list);
+	my @tier_list_sorted = sort (@tier_list_tr);
+	my $max_T = $tier_list_sorted[0] // 'U';
+	return $max_T ;
+}
+
+
 our %data_d;
 our %data_c;
-
+our %data_v;
 sub mtime { my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($_[0]); return $mtime; }
 
 sub gen_rule_knowledge_base {
@@ -325,6 +350,7 @@ sub gen_rule_knowledge_base {
 	
 	%data_d = ();
 	%data_c = ();
+	%data_v = ();
 
 	my @fields = @{ $TSV_master->{'fields'} };
 
@@ -472,8 +498,6 @@ sub gen_rule_knowledge_base {
 			($alterations, $alterations_neg) = ($`, $');
 		}
 		
-		
-		
 		my @alterations = grep { length($_) } map { s/^\s*|\s*$//; $_ } split /\s*[$alterations_sep]\s*/, $alterations ;
 		
 		my @alterations_neg = grep { length($_) } map { s/^\s*|\s*$//; $_ } ( split /\s*[$alterations_sep]\s*/, $alterations_neg );
@@ -508,6 +532,9 @@ sub gen_rule_knowledge_base {
 			my @rhs_catypes = split /\s*(?:[;]|,)\s+/, $tumour_type;
 			
 			for my $rhs_catype (@rhs_catypes) {
+			
+				$data_v{$biomarker}{$alt}{$rhs_catype}{$tier} ++;
+			
 				for my $rx (@treatments) {
 					my $rx = Therapy::get_normalised_treatment_name( $rx );
 					my $drug_class_regimen = Therapy::get_treatment_class($rx, $biomarker, $biomarker_drug_class_focus); # 
@@ -659,6 +686,47 @@ sub gen_rule_knowledge_base {
 			}
 		}
 	}
+
+	# Generating rules for translating AMP LOE.
+	for my $b (sort keys %data_v) {
+		next if $b =~ /type|Burden|Microsatellite|micro|Mismatch|score|\+/i;
+		for my $a (sort keys %{$data_v{$b}} ) {
+			next if $a =~ / and /i;
+	# 		next if $a =~ /expression|type|methyla/i;
+
+			my @tier_list_ha = map { keys %{$data_v{$b}{$a}{$_}} }  keys %{$data_v{$b}{$a}};
+			my $max_ha = get_max_tier( @tier_list_ha );
+			
+			my $max_rep_st = ( exists $data_v{$b}{$a}{'Solid tumours'} ) ? get_max_tier( (keys %{$data_v{$b}{$a}{'Solid tumours'}}) ) : 'U';
+			
+			for my $c (sort keys %{$data_v{$b}{$a}} ) {
+				my @tier_list = keys %{$data_v{$b}{$a}{$c}};
+				my $max = get_max_tier( @tier_list );
+				
+	# 			my $has_RT = ( has_S_tier(@tier_list, @tier_list_ha) ? 'S' : '' ).( has_R_tier(@tier_list, @tier_list_ha) ? 'R' : '' );
+				
+				my $max_rep = tmin( tmax($max_ha, '2C'), $max_rep_st );
+				
+				my ($catype_match) = DO_match_catype($c);
+				my $cx = "catype:".(defined $catype_match ? $catype_match : $c) ;
+
+				push @debug_msg, join("\t", "AMP", $max, 
+	# 				( ($max_ha eq $max ) ? $max_ha : "\e[1;33m$max_ha\e[0m" ), 
+					( ($max_rep eq $max ) ? $max_rep : "\e[1;34m$max_rep\e[0m" ), 
+	# 				$has_RT, 
+					$b, "$a", $cx, 
+	# 				$max_R , $max_T , join(",",@max_R0), join(",",@max_T0), 
+					)."\n";
+					
+# 				my @tags = ();
+				my $rule1 = mkrule( [$a,        $cx], [ Facts::mk_fact_str( $a, 'AMP.LOE:'.$max) ] );
+				my $rule2 = mkrule( [$a, "NOT ".$cx], [ Facts::mk_fact_str( $a, 'AMP.LOE:'.$max_rep) ] );
+				push @all_rules_treatments, $rule1, $rule2;
+				push @debug_msg, "\e[1;34m$rule1\e[0m\n";
+				push @debug_msg, "\e[1;34m$rule2\e[0m\n";
+			}
+		}
+	}	
 	
 	write_array_uniq($outf, @all_rules_treatments) if defined $outf;
 	

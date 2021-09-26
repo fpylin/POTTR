@@ -473,6 +473,36 @@ sub load_module_variant_evidence_grading {
 		return @retval;
 		}
 	);
+
+
+	$rs = $self->{'modules'}->add_module('02C - Backpropagating AMP LOE');
+	$rs->define_dyn_rule( 'backprop_amp_loe',  sub { my $f = shift; my $facts = $_[0]; # my $cache = $_[1];
+		my ($bm, $alt) = split /:/, $f, 2;
+		return () if ! defined $alt or index($alt, ':') != -1;
+		my @tags = $facts->get_tags($f);
+		my @tags_amp_loe = grep { /AMP.LOE/ } @tags ;
+		return if ! scalar @tags_amp_loe ;
+		my @tags_amp_non_loe = grep { ! /AMP.LOE/ and ( index($_, $bm.":") == 0 ) } @tags ;
+# 		print ">> $f [".join(" ", @tags_amp_loe, '|', @tags_amp_non_loe )."]\n";
+		for my $ancestor (@tags_amp_non_loe) {
+			$facts->assert_tags($ancestor, @tags_amp_loe) if $facts->has_fact($ancestor);
+		}
+		return ();
+		}
+	);
+
+	$rs = $self->{'modules'}->add_module('02D - Consolidate AMP LOE');
+	$rs->define_dyn_rule( 'consolidate_amp_loe',  sub { my $f = shift; my $facts = $_[0]; # my $cache = $_[1];
+		my @tags = $facts->get_tags($f);
+		my @tags_amp_loe = grep { /AMP.LOE/ } @tags ;
+		return if scalar @tags_amp_loe <= 1;
+		@tags_amp_loe = sort @tags_amp_loe ;
+		shift @tags_amp_loe ;
+		$facts->untag($f, @tags_amp_loe) ;
+		return ();
+		}
+	);
+
 }
 
 
@@ -680,17 +710,20 @@ sub load_module_preferential_trial_prioritisation {
 	my $rs = $self->{'modules'}->add_module('06 - Preferential trial prioritisation');
 	$rs->define_dyn_rule( 'clinical_trial_grading',  sub { my $f=shift; my $facts = $_[0];
 		return () if $f !~ /^(?:preferential_trial_id:)(\S+)/;
-		my @annotations;
-		my ($trial_id, $tags) = ($1, $2); 
+		my $trial_id = $1; 
 		my @tags = $facts->get_tags($f);
-		my @inf_drugs        = map { s/(?:CERTAIN|INFERRED):treatment_drug://; $_ }       grep { /(?:CERTAIN|INFERRED):treatment_drug:/ }       @tags ;
-		my @inf_drug_classes = map { s/(?:CERTAIN|INFERRED):treatment_drug_class://; $_ } grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
+		my @inf_drugs        = map { my $a = $_; $a =~ s/(?:CERTAIN|INFERRED):treatment_drug://; $a }       grep { /(?:CERTAIN|INFERRED):treatment_drug:/ }       @tags ;
+		my @inf_drug_classes = map { my $a = $_; $a =~ s/(?:CERTAIN|INFERRED):treatment_drug_class://; $a } grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
 		my @trial_match_criteria = map { s/trial_match_criteria://; $_ } grep { /^trial_match_criteria:/} @tags;
 		my ($trial_phase)    = map { s/^phase://; $_ } grep { /^phase:/} @tags;
 		my @rec_drugs_tier;
 		
 		my @facts_list = $facts->get_facts_list();
 		my @new_tags;
+# 		print "TTT $trial_id\t$_\n" for sort @tags;
+# 		print "!!! $trial_id\t$_\n" for @inf_drug_classes;
+# 		print "!!? $trial_id\t$_\n" for grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
+# 		push @new_tags, ( grep { /(?:CERTAIN|INFERRED):treatment_drug/ } @tags );
 		
 		my $tier_order_ref = $self->{'tier_order'} ;
 
@@ -753,7 +786,7 @@ sub load_module_preferential_trial_prioritisation {
 			
 		push @new_tags, "pref_trial_score:$score";
 		
-		return ( ( Facts::mk_fact_str("preferential_trial_id:$trial_id", @new_tags) ), @annotations );
+		return ( Facts::mk_fact_str("preferential_trial_id:$trial_id", @new_tags) ) ;
 	} );
 }
 

@@ -231,10 +231,10 @@ sub get_tags {
 sub untag {
 	my $self = shift;
 	my $f = shift;
-	my $tag = shift;
+	my @tags_to_remove = @_;
 	if ( exists $self->{'facts'}{$f} ) {
-		if ( exists $self->{'facts'}{$f}{$tag} ) {
-			delete $self->{'facts'}{$f}{$tag};
+		for my $t (@tags_to_remove) {
+			delete $self->{'facts'}{$f}{$t} if exists $self->{'facts'}{$f}{$t};
 		}
 	}
 }
@@ -261,7 +261,7 @@ sub to_strings {
 	return sort keys %{ $self->{'facts'} } ;
 }
 
-sub clean_tags {
+sub clean_tags { # SUBROUTINE TO DELETE
 	my $self = shift;
 	my @facts = $self->get_facts_list();
 	
@@ -615,7 +615,7 @@ sub run { # Rules::run - the main inference engine.
 		$self->debug_print(36, $facts->get_fact_tag_strings() ) ;
 	} while ($n_new != 0);
 	
-	$facts->clean_tags();
+# 	$facts->clean_tags();
 	
 	return $facts->get_fact_tag_hash();
 }
@@ -821,6 +821,7 @@ sub run {
 		$self->{'modules'}{$ruleset_name}->debug_print(37, "Running module: $ruleset_name");
 		my %retval = $self->{'modules'}{$ruleset_name}->run(@facts);
 		@facts = map { $_.(length($retval{$_}) ? " [$retval{$_}]" : "") } keys %retval;
+# 		print map { "> $_\n" } sort @facts; 
 		$debug_output .= $self->{'modules'}{$ruleset_name}{'debug_output'};
 	}
 # 	print STDERR "!! $_\n" for @retval;

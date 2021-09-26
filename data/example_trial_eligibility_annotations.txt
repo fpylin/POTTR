@@ -1,6 +1,6 @@
 ACTRN12618001121257	*NOT prior_therapy:Denosumab; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade
 ACTRN12619000769189	*NOT prior_therapy:platinum-based_antineoplastic_agent
-ACTRN12619000844145	*NOT prior_therapy:Crizotinib; *NOT prior_therapy:Lorlatinib
+ACTRN12619000844145	*NOT prior_therapy:Lorlatinib
 ACTRN12620000861954	*NOT prior_therapy:BRAF_inhibitor
 ACTRN12621000811808	*NOT prior_therapy:MET_inhibitor
 NCT02323126	*NOT prior_therapy:Afatinib; *NOT prior_therapy:MET_inhibitor
@@ -16,7 +16,7 @@ NCT03175224	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:BRAF_inhibitor
 NCT03215706	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:systemic_therapy
 NCT03358875	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:Docetaxel; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody
 NCT03430063	*NOT prior_therapy:ALK_inhibitor
-NCT03468426	*NOT prior_therapy:Bevacizumab; *NOT prior_therapy:Lenvatinib; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:Sorafenib; *NOT prior_therapy:Sunitinib; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody
+NCT03468426	*NOT prior_therapy:Bevacizumab; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:Sorafenib; *NOT prior_therapy:Sunitinib; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody
 NCT03497767	*NOT prior_therapy:immune_checkpoint_blockade
 NCT03515837	*NOT prior_therapy:Afatinib; *NOT prior_therapy:Cisplatin; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-OX-40_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody
 NCT03516981	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:Lenvatinib; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:VEGF_inhibitor; *NOT prior_therapy:anti-OX-40_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody
@@ -46,7 +46,7 @@ NCT04256421	*NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therap
 NCT04262856	*NOT prior_therapy:ALK_inhibitor
 NCT04294810	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:systemic_therapy
 NCT04432207	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:immune_checkpoint_blockade
-NCT04434482	*NOT prior_therapy:PARP_inhibitor
+NCT04434482	*NOT prior_therapy:PARP_inhibitor; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:endocrine_therapy; *NOT prior_therapy:platinum-based_antineoplastic_agent
 NCT04447118	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade
 NCT04471428	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:BRAF_inhibitor; *NOT prior_therapy:Cabozantinib; *NOT prior_therapy:Docetaxel; *NOT prior_therapy:VEGF_inhibitor; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:platinum-based_antineoplastic_agent
 NCT04475939	*NOT prior_therapy:PARP_inhibitor; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:platinum-based_antineoplastic_agent; *NOT prior_therapy:systemic_therapy
@@ -62,6 +62,7 @@ NCT04655976	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:BRAF_inhibitor;
 NCT04656652	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:BRAF_inhibitor; *NOT prior_therapy:Docetaxel
 NCT04702880	*NOT prior_therapy:systemic_therapy
 NCT04725188	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:Docetaxel; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:platinum-based_antineoplastic_agent
+NCT04745689	*NOT prior_therapy:Durvalumab; *NOT prior_therapy:platinum-based_antineoplastic_agent; *NOT prior_therapy:systemic_therapy
 NCT04746924	*NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:systemic_therapy
 NCT04914897	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:platinum-based_antineoplastic_agent
 NCT04921358	*NOT prior_therapy:ALK_inhibitor; *NOT prior_therapy:BRAF_inhibitor; *NOT prior_therapy:Docetaxel; *NOT prior_therapy:anti-PD-1_monoclonal_antibody
