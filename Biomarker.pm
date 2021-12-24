@@ -79,11 +79,15 @@ sub interp_variants {
 		$biomarker_spec = lc($biomarker_spec);
 	}
 	
+	if ( exists $variant_synonyms{ "$biomarker_name:$biomarker_spec" } ) { ; # if synonyms exist
+# 		print STDERR "SYNONYM:\t"."$biomarker_name:$biomarker_spec"."\t".$variant_synonyms{ "$biomarker_name:$biomarker_spec" }."\n";
+		push @alterations, ( $variant_synonyms{ "$biomarker_name:$biomarker_spec" } =~ s/^$biomarker_name://r ) 
+	}
+	
 	for ( $biomarker_code ) {
 		/[VSADEF]/ and do { 
 # 			$$facttable{'biomarker'} = $biomarker_name ; 
 			push @alterations, 'alteration' ;
-			push @alterations, ( $variant_synonyms{ "$biomarker_name:$biomarker_spec" } =~ s/^$biomarker_name://r ) if exists $variant_synonyms{ "$biomarker_name:$biomarker_spec" } ; # if synonyms exist
 		};
 
 		/S/ and do { 
@@ -325,9 +329,16 @@ sub load_biomarker_synonym_file {
 	for my $srcfile ( POTTRConfig::get_paths('data', 'variant-synonym-file') ) {
 		for ( file($srcfile) ) { 
 			chomp ;
-			my ($a, @b) = split /\t/, $_; 
-			for my $m ($a, @b) { 
-				$variant_synonyms{ $m } = $a;
+# 			my ($a, @b) = split /\t/, $_; 
+# 			for my $m ($a, @b) { 
+# 				$variant_synonyms{ $m } = $a;
+# 			}
+			my (@variants) = split /\t/, $_; 
+			for my $x (@variants) { 
+				for my $y (@variants) { 
+					next if $x eq $y;
+					$variant_synonyms{ $x } = $y;
+				}
 			}
 		}
 	}

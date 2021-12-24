@@ -12,6 +12,7 @@ BRAF	class_2	464	464
 BRAF	class_3	466	466
 BRAF	class_3	467	467
 BRAF	class_2	469	469
+BRAF	class_3	483	483
 BRAF	class_2	485	485
 BRAF	class_3	524	524
 BRAF	class_2	525	525

@@ -38,7 +38,7 @@ use POSIX;
 BEGIN {
 	use Exporter   ();
 	our ($VERSION, @ISA, @EXPORT, @EXPORT_OK, %EXPORT_TAGS);
-	$VERSION     = sprintf "%d.%03d", q$Revision: 0.9 $ =~ /(\d+)/g;
+	$VERSION     = sprintf "%d.%03d", q$Revision: 0.95 $ =~ /(\d+)/g;
 	@ISA         = qw(Exporter);
 	@EXPORT      = qw();
 	@EXPORT_OK   = qw(&score_tier);
@@ -47,7 +47,7 @@ BEGIN {
 
 use lib '.';
 use TSV;
-use DOID;       # qw( DO_match_catype DO_name);
+use CancerTypes;       
 use Rules;
 use Biomarker;
 use Therapy;
@@ -198,18 +198,14 @@ sub load_module_cancer_type_mapping {
 	my $rs = $self->{'modules'}->add_module('01A - Cancer type mapping');
 	
 	$rs->define_dyn_rule( 'translate_catype',  sub { $_=shift; 
-		return () if ! /^catype:(.+)/ ;
-		my ($match) = DOID::DO_match_catype($1);
-# 		print "C\t$1\t$match\n";
-# 		print join("\n", map { "$_\t$DO_name{$_}" } DOID::get_ancestors($match))."\n" if defined $match;
-		my @retval = ( "(catype-processed)" );
-		if ( defined($match) and exists($DO_name{$match}) ) {
-			my @ancerstors = DOID::get_ancestors( $match );
-			for my $a (@ancerstors) {
-				push @retval, ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
+			return () if ! /^catype:(.+)/ ;
+			my $match = CancerTypes::match_catype_whole_word($1);
+			my @retval = ( "(catype-processed)" );
+			if ( defined $match ) {
+				my @ancerstors = CancerTypes::get_ancestors( $match );
+				push @retval, "catype:$_" for (@ancerstors);
+				return @retval ;
 			}
-			return @retval ;
-		}
 
 		return @retval ;
 		}
@@ -217,8 +213,8 @@ sub load_module_cancer_type_mapping {
 	
 # 	$rs = $self->{'modules'}->add_module('01C - Define solid tumours');
 	$rs->load(
-		mkrule( ["(catype-processed)", "NOT catype:leukemia", "NOT catype:lymphoma"], ["catype:Solid Tumour"] ),
-		mkrule( ["(catype-processed)", "catype:leukemia"], ["catype:Liquid Cancer"] )
+		mkrule( ["(catype-processed)", "NOT catype:leukemia", "NOT catype:lymphoma"], ["catype:Solid tumour"] ),
+		mkrule( ["(catype-processed)", "catype:leukemia"], ["catype:Liquid cancer"] )
 	);
 }
 
@@ -793,7 +789,7 @@ sub load_module_preferential_trial_prioritisation {
 #######################################################################
 sub load_module_deinit {
 	my $self = shift;
-	my $rs = $self->{'modules'}->add_module('07 - Tidying up results');
+	my $rs = $self->{'modules'}->add_module('07A - Tidying up results');
 	$rs->define_dyn_rule( 'tidy_inference_tracking',  sub { my $f=shift; my $facts = $_[0];
 		my @tags = $facts->get_tags($f);
 		my %type;
@@ -808,8 +804,17 @@ sub load_module_deinit {
 		return ();
 	} );
 
+	$rs = $self->{'modules'}->add_module('07B - Remove non-dominant contingency cancer type assertion');
+	$rs->define_dyn_rule( 'remove_contingency_catype_assertions',  sub { my $f=shift; my $facts = $_[0];
+		my @tags = $facts->get_tags($f);
+		if ( grep { /preferential_trial_catype_complete_match/ } @tags ) {
+			my @tags_to_remove = grep { /preferential_trial_catype_complete_match|^\*catype:/ } @tags;
+			$facts->untag($f, @tags_to_remove);
+		}
+		return ();
+	} ) ;
 
-	$rs = $self->{'modules'}->add_module('07B - Calculate LOM');
+	$rs = $self->{'modules'}->add_module('07C - Calculate LOM');
 	$rs->define_dyn_rule( 'calculate_LOM',  sub { my $f=shift; my $facts = $_[0];
 		my @tags = $facts->get_tags($f);
 		my %certain;

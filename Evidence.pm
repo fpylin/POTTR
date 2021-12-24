@@ -36,7 +36,7 @@ use lib '.';
 use Therapy;
 use TSV;
 
-use DOID;
+use CancerTypes;
 use Rules;
 
 use POTTRConfig;
@@ -338,6 +338,8 @@ our %data_c;
 our %data_v;
 sub mtime { my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($_[0]); return $mtime; }
 
+our %reference_catypes; # cancer types defined in the KB
+
 sub gen_rule_knowledge_base {
 	&ON_DEMAND_INIT;
 	my $srckb = shift; # input file name
@@ -356,7 +358,7 @@ sub gen_rule_knowledge_base {
 
 	my ($fname_biomarker)   = grep { /Biomarker|Hugo\s+Symbol/x } @fields ;
 	my ($fname_alteration)  = grep { /Alteration|Alteration/x } @fields ;
-	my ($fname_cancer_type) = grep { /Tumour\s+Type|Cancer\s+Type/x } @fields ;
+	my ($fname_cancer_type) = grep { /Tumour\s+Types?|Cancer\s+Types?/x } @fields ;
 	my ($fname_evidence)    = grep { /Evidence|PMIDs\s+for\s+drug/x } @fields ;
 	my ($fname_drugs)       = grep { /Drugs|Drug\(s\)/x } @fields ;
 	my ($fname_tier)        = grep { /Tier|Level/x } @fields ;
@@ -373,6 +375,18 @@ sub gen_rule_knowledge_base {
 		}
 	}
 
+	# Second, register all the know cancer types defined in the KB
+	for my $row ( @{ $TSV_master->{'data'} } ) {
+		my $catypes = deutf( $$row{$fname_cancer_type} );
+		$catypes =~ s/ except.*//;
+		my @catypes = split /\s*(?:[;]|,)\s+/, $catypes;
+		for my $ct (@catypes) {
+			my $nct = CancerTypes::match_catype_whole_word( $ct );
+			$reference_catypes{$nct} = 1;
+		}
+	}
+	
+	
 	# Load repurposing rules:
 	my %repurposing_retier_cancer_type ;
 	my %repurposing_retier_related_mutation ;
@@ -447,31 +461,28 @@ sub gen_rule_knowledge_base {
 		my $lhs_catypes_ancestors_base ; # determining cancer type "ancestors" to avoid inference across boundaries
 		
 		for my $c (@lhs_catypes) {
-			my ($catype_match) = DO_match_catype($c);
+			my ($catype_match) = CancerTypes::match_catype_whole_word($c);
 # 			push @debug_msg, ">>\t$tumour_type\t$c\t$catype_match\n";
 # 			print ">>\t$tumour_type\t$c\t$catype_match\n";
 			my $x = "catype:".(defined $catype_match ? $catype_match : $c) ;
 			$c = $x ;
 			
 			if ( defined $catype_match ) {
-				my @ancerstors = DOID::get_ancestors( $catype_match );
+				my @ancerstors = CancerTypes::get_ancestors( $catype_match );
 				my @lhs_ancestors ;
 				for my $a (@ancerstors) {
-					push @lhs_ancestors , ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
-# 					print "[$a]\t$DO_name{$a}\n";
+					push @lhs_ancestors , ( "catype:".$a ) ;
 				}
 				push @lhs_catypes_ancestors, @lhs_ancestors ;
 			}
 		}
 		
 		if ( scalar @lhs_catypes_ancestors ) { # FIXME: temporary fix for unrooted cancer type classes, until a cancer type ontology is implemented
-			my ($a) = DO_match_catype('Solid tumour');
-			($a) = DO_match_catype('Liquid cancer') if ( grep { /ha?ematologic|myelodysplas|macroglobulina?emia|leuka?emia|myeloma/i } @lhs_catypes_ancestors );
+			my ($a) = CancerTypes::match_catype_whole_word('Solid tumour');
+			($a) = CancerTypes::match_catype_whole_word('Liquid cancer') if ( grep { /ha?ematologic|myelodysplas|macroglobulina?emia|leuka?emia|myeloma/i } @lhs_catypes_ancestors );
 # 			print map {"|| $_\n"} @lhs_catypes_ancestors ;
 # 			print "\n";
-			die $a if ! defined $DO_name{$a};
-# 			push @lhs_catypes_ancestors, ( "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}" ) ;
-			$lhs_catypes_ancestors_base = "(".join(" OR ", "catype:".$a, "catype:".$DO_name{$a}, "catype_name:$DO_name{$a}").")" ;
+			$lhs_catypes_ancestors_base = "catype:".$a ;
 		}
 		
 		my $lhs_catype_neg ;
@@ -482,8 +493,8 @@ sub gen_rule_knowledge_base {
 		
 		if ( scalar @lhs_catypes_neg ) {
 			for my $c (@lhs_catypes_neg) {
-				my ($catype_match) = DO_match_catype($c);
-				my $cstr = defined $catype_match ? join('; ', ( map { "NOT $_" } ( "catype:".$catype_match, "catype:".$DO_name{$catype_match}, "catype_name:$DO_name{$catype_match}" ) ) )  : "NOT catype:$catype_match";
+				my ($catype_match) = CancerTypes::match_catype_whole_word($c);
+				my $cstr = "NOT catype:$catype_match";
 				$lhs_catype_neg = defined $lhs_catype_neg ? join("; ", $lhs_catype_neg, $cstr) : $cstr ;
 			}
 		}
@@ -707,7 +718,7 @@ sub gen_rule_knowledge_base {
 				
 				my $max_rep = tmin( tmax($max_ha, '2C'), $max_rep_st );
 				
-				my ($catype_match) = DO_match_catype($c);
+				my ($catype_match) = CancerTypes::match_catype_whole_word($c);
 				my $cx = "catype:".(defined $catype_match ? $catype_match : $c) ;
 
 				push @debug_msg, join("\t", "AMP", $max, 

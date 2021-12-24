@@ -152,7 +152,25 @@ name: Glioma
 def: "Glioma"
 synonym: "Gliomas"
 subset: DO_cancer_slim
-is_a: POTTR:0001 ! Solid tumour|
+is_a: POTTR:0001 ! Solid tumour|,
+q|[Term]
+id: POTTR:1009
+name: Inflammatory myofibroblastic tumour
+def: "Inflammatory myofibroblastic tumour"
+synonym: "Inflammatory myofibroblastic tumor"
+synonym: "Inflammatory myofibroblastic tumour"
+synonym: "Inflammatory myofibroblastic tumors"
+synonym: "Inflammatory myofibroblastic tumours"
+subset: DO_cancer_slim
+is_a: POTTR:0001 ! Solid tumour|,
+q|[Term]
+id: POTTR:1010
+name: Aggressive fibromatosis
+def: "Aggressive fibromatosis"
+synonym: "Desmoid"
+synonym: "Desmoid, NOS"
+subset: DO_cancer_slim
+is_a: POTTR:0001 ! Solid tumour|,
 );
 
 our @synonym_cancer = ('cancer', 'tumor', 'tumour', 'carcinoma', 'adenocarcinoma', 'squamous cell carcinoma', 'neoplasm', 'malignancy', 'malignancies');

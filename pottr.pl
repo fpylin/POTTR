@@ -34,10 +34,11 @@
 #   Version 0.91 - 27 May 2020
 #   Version 0.92 - 13 Jun 2020
 #   Version 0.93 - 14 Sep 2020
+#   Version 0.95 - 24 Dec 2021
 #
 ##############################################################################
 
-our $POTTR_version = '0.93';
+our $POTTR_version = '0.95';
 our $POTTR_title = qq|Precision Oncology Treatment and Trial Recommender (Version $POTTR_version)|;
 
 our $POTTR_subtitle = qq|
@@ -77,7 +78,7 @@ use TSV;
 use Rules;
 use POTTR;
 use POSIX;
-use DOID;
+
 
 #######################################################################
 my $f_from_web = ( (exists $ENV{'HOME'}) ) ? 0 : 1 ;
@@ -182,7 +183,7 @@ for (@lines) {
 }
 # unshift @lines, "catype:Solid tumour" if ! grep {/catype:/} @lines;
 my @facts = grep { length } @lines;
-my %facts = map { $_ => 1 } @facts;
+my %facts = map { s/\s*\[.*//r => 1 } @facts;
 
 my @treatment_match_result = $Pottr->reason(@facts);
 
@@ -252,7 +253,7 @@ sub thl_AMP {
 #######################################################################################################################################
 sub extract_results_catypes {
 	my @treatment_match_result = @_;
-	my @results_catypes = grep { /^catype_name:/ } @treatment_match_result ;
+	my @results_catypes = grep { /^catype:/ } @treatment_match_result ;
 	my @retval;
 	for my $catype_line (sort @results_catypes ) {
 		my ($fact, @tags) = Facts::string_to_fact_and_tags( $catype_line );
@@ -294,19 +295,19 @@ sub extract_results_biomarkers {
 		my @oncogenicity ;
 		my @consequence ;
 		my @specifics ;
-# 		print "[$_]\n" for @matched;
 		for my $fact_str (@matched) {
 			my ($fact, @tags) = Facts::string_to_fact_and_tags( $fact_str );
 			$is_original_fact{$fact} = ( exists $facts{"$biomarker:$fact"} ? 1 : 0 ) ;
 			if ( $fact =~ /^\s*(?:alteration|mutation|deletion|amplification|.*expression|high|low|fusion|methylation|.*type|.*duplication)\s*$/i ) { 
 				push @aberration, $fact; 
-			} elsif ( my @a = grep { /:oncogenicity/ } @tags ) {
-				push @oncogenicity, @a;
 			} elsif ( $fact_str =~ /-of-function_mutation|oncogenic_mutation/ ) {
 				push @consequence, $fact_str;
 			} else {
 				push @specifics, $fact;
 			}
+			if ( my @a = grep { /:oncogenicity/ } @tags ) {
+				push @oncogenicity, @a;
+			} 			
 			my @amp_loe = grep { /^AMP\.LOE:/ } @tags;
 			if ( scalar(@amp_loe) and $amp_loe[0] =~ /^AMP\.LOE:(.+)/ ) {
 				$AMP_LOE{$fact} = $1; 
@@ -324,6 +325,7 @@ sub extract_results_biomarkers {
 		@matched = grep { !/_to:/ } @matched ;
 		@consequence = sort @consequence ;
 		@specifics = uniq(@specifics) ;
+		@oncogenicity = uniq(@oncogenicity);
 		@specifics = sort { ( $is_original_fact{$b} <=> $is_original_fact{$a} ) || ( ($AMP_LOE{$a} // 3) cmp ($AMP_LOE{$b} // 3) ) || ($a cmp $b ) }  @specifics ;
 		s/_/ /g for @matched;
 		
@@ -490,7 +492,7 @@ sub extract_preferential_trials {
 sub gen_catypes_terminal {
 	my $output = hl(37, "CANCER TYPES MATCHED")."\n";
 	for my $row ( extract_results_catypes(@treatment_match_result) ) {
-		$row =~ s/catype.+?://;
+		$row =~ s/catype.*?://;
 		$output .= "$row\n";
 	}
 	return $output;
@@ -499,7 +501,7 @@ sub gen_catypes_terminal {
 sub gen_catypes_HTML {
 	my $output = "<h2>CANCER TYPES MATCHED</h2>\n";
 	for my $row ( extract_results_catypes(@treatment_match_result) ) {
-		$row =~ s/catype.+?://;
+		$row =~ s/catype.*?://;
 		$output .= "$row<br>\n";
 	}
 	return $output;

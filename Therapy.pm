@@ -468,6 +468,7 @@ sub get_all_known_drugs_for_class { # drug class
 	}
 	if ( exists $drug_class_is_a{$dc_sig} ) {
 		for my $dc ( keys %{ $drug_class_is_a{$dc_sig} } ) {
+# 			print STDERR "$dc_sig\t$dc\n";
 			my @retval_subclass = get_all_known_drugs_for_class($dc);
 			$retval{$_} = 1 for @retval_subclass ;
 		}

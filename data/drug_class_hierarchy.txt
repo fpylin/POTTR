@@ -354,3 +354,8 @@ virus-based_therapy	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing
 AXL_inhibitor	AXL/FLT3/NTRK_inhibitor
 FLT3_inhibitor	AXL/FLT3/NTRK_inhibitor
 TRK_inhibitor	AXL/FLT3/NTRK_inhibitor
+VEGFR_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
+PDGFR_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
+FGFR1/2/3_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
+RAF_dimer_inhibitor	EGFR/RAF_dimer_inhibitor
+EGFR_inhibitor	EGFR/RAF_dimer_inhibitor

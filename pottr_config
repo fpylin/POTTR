@@ -39,7 +39,9 @@ cache_dir =  data
 #   ontology to more closely align with clinical practice.
 ##############################################################################
 
-disease-ontology-file = doid.obo
+# disease-ontology-file = doid.obo - TO DELETE 
+
+cancer-types-ontology-file = cancer_types.txt
 
 [Biomarker]
 
