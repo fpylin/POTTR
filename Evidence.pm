@@ -8,7 +8,7 @@
 # This file is part of Oncology Treatment and Trials Recommender (OTTR) and 
 # Precision OTTR (POTTR).
 #
-# Copyright 2019-2020, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+# Copyright 2019-2022, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                      Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -471,6 +471,7 @@ sub gen_rule_knowledge_base {
 				my @ancerstors = CancerTypes::get_ancestors( $catype_match );
 				my @lhs_ancestors ;
 				for my $a (@ancerstors) {
+					next if ! defined $a;
 					push @lhs_ancestors , ( "catype:".$a ) ;
 				}
 				push @lhs_catypes_ancestors, @lhs_ancestors ;

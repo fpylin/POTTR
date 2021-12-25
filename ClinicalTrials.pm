@@ -8,7 +8,7 @@
 # This file is part of Oncology Treatment and Trials Recommender (OTTR) and 
 # Precision OTTR (POTTR).
 #
-# Copyright 2019-2020, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+# Copyright 2019-2022, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                      Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");

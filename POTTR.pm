@@ -9,7 +9,7 @@
 # Precision OTTR (POTTR).
 # 
 #
-# Copyright 2019-2020, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+# Copyright 2019-2022, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                      Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -577,9 +577,35 @@ sub gen_rules_drug_db {
 	}
 
 	for my $combo ( Therapy::get_all_known_combinations() ) {
+	
+		my $combo_dc_orig = Therapy::get_treatment_class( $combo );
+		
+# 		print "C\t$combo, $combo_dc_orig\n";
+		for my $combo_dc ( Therapy::get_all_matched_offspring_treatment_classes( $combo_dc_orig ) ) {
+			next if $combo_dc eq $combo_dc_orig;
+			my $processed_lock = "therapy_sens_predicted:$combo_dc";
+# 			print "C1\t$combo, $combo_dc\n";
+			push @drug_db, mkrule(
+				["resistant_to_drug_class:$combo_dc_orig", "NOT $processed_lock", "resistant_to:$combo"], 
+				[ $processed_lock, Facts::mk_fact_str("resistant_to_drug_class:$combo_dc", "CERTAIN:treatment_drug_class") ], ['prio:-3']
+			);
+			push @drug_db, mkrule(
+				["resistant_to_drug_class:$combo_dc_orig", "NOT $processed_lock", "NOT resistant_to:$combo"], 
+				[ $processed_lock, Facts::mk_fact_str("resistant_to_drug_class:$combo_dc", "INFERRED:treatment_drug_class") ], ['prio:-2']
+			);
+			push @drug_db, mkrule( 
+				["sensitive_to_drug_class:$combo_dc_orig", "NOT $processed_lock", "NOT resistant_to_drug_class:$combo_dc"],  
+				[ $processed_lock, Facts::mk_fact_str("sensitive_to_drug_class:$combo_dc", "INFERRED:treatment_drug_class") ], ['prio:0']
+			);
+		}
+	}
+	
+	for my $combo ( Therapy::get_all_known_combinations() ) {
+	
 		my $combo_dc = Therapy::get_treatment_class( $combo );
+		
 		my $processed_lock = "therapy_sens_predicted:$combo";
-# 		print "C $combo, $combo_dc\n";
+# 		print "D\t$combo, $combo_dc\n";
 		push @drug_db, mkrule(
 			["resistant_to_drug_class:$combo_dc", "NOT $processed_lock", "resistant_to:$combo"], 
 			[ $processed_lock, Facts::mk_fact_str("resistant_to:$combo", "CERTAIN:treatment_drug") ], ['prio:-3']

@@ -8,7 +8,7 @@
 # This file is part of Oncology Treatment and Trials Recommender (OTTR) and 
 # Precision OTTR (POTTR).
 #
-# Copyright 2021, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+# Copyright 2022, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                 Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,13 +31,13 @@ use strict;
 use warnings;
 
 use POSIX;
-use Storable;
 
 use lib '.';
 use TSV;
 
 use re 'eval';
 use POTTRConfig;
+use Storable;
 
 our @EXPORT;
 our @EXPORT_OK;
@@ -318,7 +318,7 @@ sub get_catype_regex_M {
 		push @elems, @m;
 	}
 
-	my $regex = join("|", map { get_catype_regex_M_expand_regex($_)."(?{\$MMM='".catype_regex_escape($pref_name{$_})."'})" } sort { length $b <=> length $a } @elems);
+	my $regex = join("|", map { get_catype_regex_M_expand_regex($_)."(?{\$MMM='".catype_regex_escape($pref_name{$_})."'})" } sort { length $b <=> length $a } grep { length } @elems);
 	
 # 	print STDERR "".($regex  =~ s/\)\|/\)\n\t|/gr)."\n";
 	
@@ -342,6 +342,7 @@ sub match_catype_whole_word {
 	my $string = $_[0];
 	my $strict = $_[1]; # if strict flag is set, return undef.
 	
+# 	print STDERR "CancerTypes::match_catype_whole_word: $string\n";
 # 	$catype_regex = get_catype_regex( get_all_catypes() )  if ! defined $catype_regex ;
 # 	return get_preferred_catype_term($x) ; # if $string =~ /^\s*($catype_regex)\s*$/i ;
 	return $match_catype_whole_word_cache{$string} if exists $match_catype_whole_word_cache{$string};
@@ -349,13 +350,16 @@ sub match_catype_whole_word {
 	$catype_regex_M = get_catype_regex_M( get_all_catypes() )  if ! defined $catype_regex_M ;
 
 	if ( -f $match_catype_whole_word_cache_fn ) {
-		%match_catype_whole_word_cache = %{ ( retrieve( $match_catype_whole_word_cache_fn ) ) };
+		%match_catype_whole_word_cache = map { chomp; my ($a, $b) = split /\t/, $_; $a => $b } file($match_catype_whole_word_cache_fn); 
 	}
 
-	my $MMM = '';
+	our $MMM = '';
 	if ( $string =~ /^[[:punct:][:space:]]*(${catype_regex_M})[[:punct:][:space:]]*\s*$/ig ) {
 		my $m = $match_catype_whole_word_cache{$string} = get_preferred_catype_term($MMM);
-		store \%match_catype_whole_word_cache, $match_catype_whole_word_cache_fn;
+# 		print STDERR "\tCancerTypes::match_catype_whole_word: $string: new: $1: $MMM => $m\n";
+		open FOUT_CACHE, ">$match_catype_whole_word_cache_fn";
+		print FOUT_CACHE map { "$_\t$match_catype_whole_word_cache{$_}\n" } (sort keys %match_catype_whole_word_cache );
+		close FOUT_CACHE;
 		return ($m);
 	}
 	
@@ -373,7 +377,7 @@ sub match_catype {
 	return %{ $match_catype_cache{$string} } if exists $match_catype_cache{$string};
 
 	if ( -f $match_catype_cache_fn ) {
-		%match_catype_cache = %{ ( retrieve( $match_catype_cache_fn ) ) };
+		%match_catype_cache = %{ retrieve $match_catype_cache_fn };
 	}
 	
 	$catype_regex_M = get_catype_regex_M( get_all_catypes() )  if ! defined $catype_regex_M ;
@@ -391,7 +395,7 @@ sub match_catype {
 	$match_catype_cache{$string} = \%wc;
 
 	store \%match_catype_cache, $match_catype_cache_fn;
-
+	
 	return %x;
 }
 

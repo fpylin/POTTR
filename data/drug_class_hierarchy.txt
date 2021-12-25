@@ -59,7 +59,6 @@ ERBB2_inhibitor	ERBB2_inhibitor,exon_20_selective
 ERBB2_inhibitor	ERBB2_inhibitor,first_generation
 ERBB2_inhibitor	ERBB2_inhibitor,second_generation
 ERBB2_inhibitor	ERBB2_inhibitor,third_generation
-ERBB3_inhibitor	ERBB3_inhibitor
 ERK_inhibitor
 ERK_inhibitor	AKT/ERK_inhibitor
 EWS-FLI1_inhibitor
@@ -249,10 +248,8 @@ cell_penetrating_peptide
 cytotoxic_chemotherapy	alkylating_agent
 cytotoxic_chemotherapy	alkylating_agent	DNA_minor_groove-binding_agent
 cytotoxic_chemotherapy	anthracycline
-cytotoxic_chemotherapy	anthracycline	doxorubicin
+cytotoxic_chemotherapy	anthracycline
 cytotoxic_chemotherapy	antimetabolite
-cytotoxic_chemotherapy	antimetabolite	capecitabine
-cytotoxic_chemotherapy	antimetabolite	fluorouracil
 cytotoxic_chemotherapy	antineoplastic_antibiotic
 cytotoxic_chemotherapy	platinum-based_antineoplastic_agent
 cytotoxic_chemotherapy	taxane

@@ -8,7 +8,7 @@
 # This file is part of Oncology Treatment and Trials Recommender (OTTR) and 
 # Precision OTTR (POTTR).
 #
-# Copyright 2019-2021, Frank Lin & Kinghorn Centre for Clinical Genomics, 
+# Copyright 2019-2022, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                      Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,6 +93,7 @@ our %drug_class_has_parent = (); # ''drug_signature''  is-a  ''drug_signature''
 our %drug_name = ();             # drug_name -> primary/preferred_drug_name
 our %drug_preferred_name = () ;  # drug_signature -> drug_name
 our %drug_synonyms = () ;        # drug_signature -> drug_name
+our %drug_combo_regimens = () ;
 
 our $drug_regex = undef;
 our %drug_signature_cache = ();
@@ -445,6 +446,16 @@ sub get_combo_classes { # from drugs
 }
 
 
+sub is_a_treatment_class {
+	&ON_DEMAND_INIT;
+	my @combo_parts = split /\s*(?:\+|\|)\s*/, $_[0];
+	return 0 if ! scalar @combo_parts ;
+	for my $c (@combo_parts) {
+		return 0 if ! is_a_drug_class($c);
+	}
+	return 1;
+}
+
 
 sub get_all_drugs { 
 	&ON_DEMAND_INIT;
@@ -502,7 +513,12 @@ sub load_drug_database {
 		next if $line =~ /drug_class|^\s*$/ ;  # get rid of header
 		my ($drug_str, $drug_classes) = split /\t/, $line;
 		my @drug_parts = map { trim($_) } split /\|/, $drug_str;
-		my $primary_drug_name = $drug_parts[0]; 
+		my $primary_drug_name = $drug_parts[0];
+		
+		if ( $drug_classes =~ / \+ / ) { # this is a drug combination regimen
+			$drug_combo_regimens{$primary_drug_name} = trim($drug_classes);
+			next;
+		}
 		
 		for my $drug (@drug_parts) {
 			if ( ! exists $drug_preferred_name{ mk_signature($drug) } ) {
@@ -547,6 +563,8 @@ sub load_drug_class_hirerchy {
 		}
 		for my $i (0 .. $#parts) {
 			last if $i+1 > $#parts;
+# 			print STDERR " mk_signature($parts[$i]) =>  mk_signature($parts[$i+1]) \n";
+			print STDERR "\e[1;31mTherapy.pm: Error in drug class hierarchy: $parts[$i] == $parts[$i+1]\e[0m" if $parts[$i] eq $parts[$i+1];
 			$drug_class_is_a{ mk_signature($parts[$i]) }{ mk_signature($parts[$i+1]) } = 1;
 			$drug_class_has_parent{ mk_signature($parts[$i+1]) }{ mk_signature($parts[$i]) } = 1;
 			push @hierarchy_pairs, join("\t", $parts[$i], $parts[$i+1]);
@@ -586,6 +604,7 @@ sub get_normalised_treatment_name {
 	my $treatment = shift;
 	return $normalised_treatment_name_cache{$treatment}  if exists $normalised_treatment_name_cache{$treatment} ;
 	&ON_DEMAND_INIT;
+	$treatment = $drug_combo_regimens{$treatment} if exists $drug_combo_regimens{$treatment};
 	my @combo_parts = map { trim($_) } split /\s*(?:\||\+)\s*/, $treatment;
 	@combo_parts = sort map { get_preferred_drug_name($_) } @combo_parts ;
 	return ( $normalised_treatment_name_cache{$treatment} = join(" + ", @combo_parts ) );
@@ -593,10 +612,21 @@ sub get_normalised_treatment_name {
 
 sub get_treatment_class {
 	&ON_DEMAND_INIT;
+	
 	my $treatment = shift;
+	
+	if ( is_a_treatment_class($treatment) ) {
+# 		print STDERR "\e[0;31mTherapy.pm: $treatment is already a treatment class.\e[0m\n";
+		return get_normalised_treatment_class_name($treatment);
+	}
+	
 	my @focus = grep { defined } @_; # a list of strings of biomarker names on a particular class a drug has mutliple targets
 	warn join("\t", caller)."\n" if ! defined $treatment;
+	
 	my @combo_parts = map { trim($_) } split /\s*\+\s*/, $treatment;
+	
+	@combo_parts = map { exists $drug_combo_regimens{$_} ? ( split /\s+\+\s*/, $drug_combo_regimens{$_} ) : $_ } @combo_parts ;
+
 	my @combo_parts_class ;
 	for my $part (@combo_parts) {
 		my @dcs = get_drug_classes($part); 
@@ -672,6 +702,58 @@ sub treatment_contains_drug {
 	return 0;
 }
 
+sub get_all_drug_class_offspring($;$) {
+	my $dc = shift;
+	my $visited = shift;
+	
+	my %visited;
+	$visited = \%visited if ! defined $visited;
+	
+	my $dcsig = mk_signature($dc) ;
+	
+	return if exists $visited{$dcsig};
+	$visited{$dcsig} = 1;
+	
+	my @retval;
+	push @retval, $drug_class_name{$dcsig};
+	
+# 	print $dcsig."\t".$drug_class_name{$dcsig}."\n";
+	if ( exists $drug_class_is_a{$dcsig} ) {
+		my @children = sort keys %{ $drug_class_is_a{ $dcsig } };
+		for my $c (@children) {
+			push @retval, &get_all_drug_class_offspring($c, $visited);
+		}
+	}
+	
+	return @retval;
+}
+
+
+sub get_all_matched_offspring_treatment_classes($) {
+	&ON_DEMAND_INIT;
+	my $treatment_class = $_[0];
+# 	my @dc_combo_parts = map { exists $drug_combo_regimens{ mk_signature($_)} ? ( split /\s*(?:\+|\|)\s*/, $drug_combo_regimens{ mk_signature($_) } ) : trim($_) } split /\s*(?:\+|\|)\s*/, $treatment_class;
+	my @dc_combo_parts = map { trim($_) } split /\s*(?:\+|\|)\s*/, $treatment_class;
+	my @dc_combo_parts_expanded;
+	for my $dc ( @dc_combo_parts ) {
+		my @offsprings = get_all_drug_class_offspring($dc);
+		push @dc_combo_parts_expanded, \@offsprings;
+# 		print "$dc: ".(join("; ", @offsprings))."\n";
+	}
+	
+	my $combo = CombinationCounter->new(\@dc_combo_parts_expanded);
+	my @retval;
+	while ( ! $combo->overflow() ) {
+		my @combo = $combo->get();
+# 		print join(" ++ ", map { defined ? $_ : "\e[1;36mUNDEFINED\e[0m" } @combo)."\n";
+		push @retval, join(" + ", ( sort map { get_normalised_treatment_class_name($_) } @combo) );
+		$combo->incr();
+	}
+	return sort @retval;
+	
+}
+
+
 sub ON_DEMAND_INIT {
 # 	print "!";
 	return if $f_initiailised ;
@@ -684,7 +766,6 @@ sub ON_DEMAND_INIT {
 	for my $srcfile ( POTTRConfig::get_paths('data', 'drug-class-hierarchy-file') ) {
 		load_drug_class_hirerchy $srcfile ;
 	}
-	
 }
 
 
