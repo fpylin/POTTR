@@ -542,11 +542,19 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 	my @trials_rules;
 
 	for my $trial_id (@uniq_trials) {
-		my $matched_drug_names   = $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
-		my $matched_drug_classes = $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
-		my $trial_acronym        = $trial_db_by_trial_id{$trial_id}{'trialacronym'} // '';
-	
-		push @trials_rules, mkrule( ['(initial-fact)'],  ["warning:trial $trial_id has no matching drugs."] ) if ! length $matched_drug_names ; 
+		my $trial_acronym = $trial_db_by_trial_id{$trial_id}{'trialacronym'} // '';
+		
+		my $matched_drug_names    = $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
+		my $matched_drug_classes  = $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
+		my $matched_combos        = $trial_db_by_trial_id{$trial_id}{'combo_list'}  // $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
+		my $matched_combo_classes = $trial_db_by_trial_id{$trial_id}{'combo_classes'} // $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
+		
+		my @matched_drug_names = map { Therapy::get_normalised_treatment_name($_) } ( grep { length } split /\s*;\s*/, $matched_drug_names ) ;
+		my @matched_drug_classes = split /\s*;\s*/, $matched_drug_classes ;
+		my @matched_combos = map { Therapy::get_normalised_treatment_name($_) } ( grep { length } split /\s*;\s*/, $matched_combos ) ;
+		my @matched_combo_classes = split /\s*;\s*/, $matched_combo_classes ;
+		
+# 		push @trials_rules, mkrule( ['(initial-fact)'],  ["warning:trial $trial_id has no matching drugs."] ) if ! scalar @matched_drug_names; 
 
 		my @catypecodes ;
 
@@ -598,6 +606,8 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		push @trial_info, "acronym:".            $trial_acronym ;
 		push @trial_info, "drug_list:".          $matched_drug_names ;
 		push @trial_info, "drug_classes:".       $matched_drug_classes ;
+		push @trial_info, "combo_list:".         $matched_combos ;
+		push @trial_info, "combo_classes:".      $matched_combo_classes ;
 		push @trial_info, "phase:".              ( $trial_db_by_trial_id{$trial_id}{'phase'}               // '' )  ;
 		push @trial_info, "recruitmentstatus:".  ( $trial_db_by_trial_id{$trial_id}{'recruitmentstatus'}   // '' )  ;
 		push @trial_info, "approvaldate:".       ( $trial_db_by_trial_id{$trial_id}{'approvaldate'}        // '' )  ;
@@ -637,56 +647,76 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 			
 # 			print "|| $f_eligibility_criteria_str_has_sensitivity\t$eligibility_criteria_str\n";
 			
-			for my $d ( map { Therapy::get_preferred_drug_name($_) } split /\s*;\s*/, $matched_drug_names )  {
-				next if ! defined $d;
+			for my $d ( @matched_drug_names )  {
 				my $trial_match_criteria_str = "trial_match_criteria:drug_sensitivity";
-				my $drug_sensitivity_str = "sensitive_to:$d";
-				my $drug_sensitivity_tag = "INFERRED:treatment_drug:$d";
+				for my $c ( @matched_combos )  {
+# 					print "|| $d\t$c\n";
+					my $drug_sensitivity_str = "sensitive_to:$d";
+					my $drug_sensitivity_tag = "INFERRED:treatment_drug:$d";
+					my $f_preferential_trial_combo_complete_match = undef;
+					if ( $c eq $d ) {
+						$f_preferential_trial_combo_complete_match = 'preferential_trial_complete_match:sensitive_to';
+					} elsif ( $c =~ /(?:^|\b)\Q$d\E(?:$|\b)/ ) {
+						$drug_sensitivity_str .= "; *sensitive_to:$c";
+					} else {
+						next;
+					}
 
-				my $f_eligibility_criteria_str_has_drug_sensitivity = ( $f_eligibility_criteria_str_has_sensitivity and ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)$drug_sensitivity_str(?:\d*$|\b)/ ) );
-				my $f_assert_drug_sensitivity_tag = ( (! $f_eligibility_criteria_str_has_sensitivity) or $f_eligibility_criteria_str_has_drug_sensitivity) ;
+					my $f_eligibility_criteria_str_has_drug_sensitivity = ( $f_eligibility_criteria_str_has_sensitivity and ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)$drug_sensitivity_str(?:\d*$|\b)/ ) );
+					my $f_assert_drug_sensitivity_tag = ( (! $f_eligibility_criteria_str_has_sensitivity) or $f_eligibility_criteria_str_has_drug_sensitivity) ;
 				
-# 				print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_sensitivity_str\t|\t$eligibility_criteria_str\n";
+# 					print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_sensitivity_str\t|\t$eligibility_criteria_str\n";
 
-				for my $extra_catype_strs ('', @extra_catype_strs) {
-					next if $extra_catype_strs eq $catypecodes_str;
-					
-					
-					push @trials_rules, mkrule( 
-						[ ( $f_eligibility_criteria_str_has_sensitivity ? undef : $drug_sensitivity_str) , 
-						( $f_eligibility_criteria_str_has_catype ? undef : ( ( $extra_catype_strs =~ /\*$catypecodes_str(?:;|$)/) ? undef : $catypecodes_str )  ) ,
-	# 					  '(initial-fact)' ,
-						$extra_catype_strs,
-						$eligibility_criteria_str 
-						], 
-						[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @trial_info, $trial_match_criteria_str, 
-							($f_assert_drug_sensitivity_tag ? $drug_sensitivity_tag: undef),
-							( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_catype_complete_match' : undef) 
-							),
-						]  # 
-					) ;
+					for my $extra_catype_strs ('', @extra_catype_strs) {
+						next if $extra_catype_strs eq $catypecodes_str;
+						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
+						push @trials_rules, mkrule( 
+							[ ( $f_eligibility_criteria_str_has_sensitivity ? undef : $drug_sensitivity_str) , 
+								( $f_eligibility_criteria_str_has_catype ? undef : ( ( $extra_catype_strs =~ /\*$catypecodes_str(?:;|$)/) ? undef : $catypecodes_str )  ) ,
+								$extra_catype_strs,
+								$eligibility_criteria_str 
+							], 
+							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @trial_info, $trial_match_criteria_str, 
+								($f_assert_drug_sensitivity_tag ? $drug_sensitivity_tag: undef),
+								$f_preferential_trial_catype_complete_match,
+								$f_preferential_trial_combo_complete_match 
+								),
+							]  # 
+						) ;
+					}
+
+# 					print "|||>  $trials_rules[$#trials_rules]\n";
+					++ $n_preferential_rules;
 				}
-
-# 				print "|||>  $trials_rules[$#trials_rules]\n";
-				
-				++ $n_preferential_rules;
 			}
 			
-			for my $dc ( split /\s*;\s*/, $matched_drug_classes )  {
-				for my $dcpart ( split /\s*;\s*/, $dc ) {
-					my @tags = @trial_info ;
+			for my $dc ( @matched_drug_classes )  {
+				my @tags = @trial_info ;
+				for my $cc ( @matched_combo_classes )  {
 					my $trial_match_criteria_str = "trial_match_criteria:drug_class_sensitivity";
+						
+					my $drug_class_sensitivity_str = "sensitive_to_drug_class:$dc";
+					my $drug_class_sensitivity_tag = "INFERRED:treatment_drug_class:$dc";
+
+					my $f_preferential_trial_combo_class_complete_match = undef;
+					if ( $cc eq $dc ) {
+						$f_preferential_trial_combo_class_complete_match = 'preferential_trial_complete_match:sensitive_to_drug_class';
+					} elsif ( $cc =~ /(?:^|\b)\Q$dc\E(?:$|\b)/ ) {
+						$drug_class_sensitivity_str .= "; *sensitive_to_drug_class:$cc";
+					} else {
+						next;
+					}
 					
-					my $drug_class_sensitivity_str = "sensitive_to_drug_class:$dcpart";
-					my $drug_class_sensitivity_tag = "INFERRED:treatment_drug_class:$dcpart";
 					
 					my $f_eligibility_criteria_str_has_drug_class_sensitivity = ( $f_eligibility_criteria_str_has_sensitivity and ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)$drug_class_sensitivity_str(?:\d*$|\b)/ ) );
 					my $f_assert_drug_class_sensitivity_tag = ( (! $f_eligibility_criteria_str_has_sensitivity) or $f_eligibility_criteria_str_has_drug_class_sensitivity) ;
-						
-# 					print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_class_sensitivity_str\t|\t$eligibility_criteria_str\n";
+							
+	# 				print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_class_sensitivity_str\t|\t$eligibility_criteria_str\n";
 
 					for my $extra_catype_strs ('', @extra_catype_strs) {
 						next if $extra_catype_strs  eq $catypecodes_str;
+						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
+						
 						push @trials_rules, mkrule( 
 							[ ( $f_eligibility_criteria_str_has_sensitivity ? undef : $drug_class_sensitivity_str), 
 								( $f_eligibility_criteria_str_has_catype ? undef : ( ( $extra_catype_strs =~ /\*$catypecodes_str(?:;|$)/) ? undef : $catypecodes_str ) ), 
@@ -695,7 +725,8 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 							],
 							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @trial_info, $trial_match_criteria_str, 
 								($f_assert_drug_class_sensitivity_tag ? $drug_class_sensitivity_tag : undef),
-								( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_catype_complete_match' : undef)
+								$f_preferential_trial_catype_complete_match,
+								$f_preferential_trial_combo_class_complete_match
 								)
 							] # acronym:$trial_acronym; 
 						);

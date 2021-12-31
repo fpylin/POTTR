@@ -78,6 +78,7 @@ FLT3_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
 Granulocyte-Macrophage_Colony_Stimulating_Factor
 Growth_hormone_secretagogue_receptor_agonist
 HDAC_inhibitor
+HDAC_inhibitor	HDAC_inhibitor,class_I_selective
 HDM2_inhibitor
 IDH1_inhibitor	IDH1_mutant_selective_inhibitor	IDH1_R132_inhibitor
 IDH1_inhibitor	IDH1_mutant_selective_inhibitor	IDH1_R132_inhibitor	IDH1/IDH2_mutant_selective_inhibitor
@@ -193,6 +194,7 @@ anti-EGFR_monoclonal_antibody
 anti-EGFRvIII/CD3_BiTE_antibody
 anti-ERBB2_antibody-drug_conjugate
 anti-ERBB2_monoclonal_antibody
+anti-ERBB2_monoclonal_antibody	anti-ERBB2_monoclonal_antibody,dimerization_inhibitor
 anti-ERBB3_monoclonal_antibody
 anti-EphA3_antibody
 anti-FGFR2_monoclonal_antibody

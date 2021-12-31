@@ -830,13 +830,17 @@ sub load_module_deinit {
 		return ();
 	} );
 
-	$rs = $self->{'modules'}->add_module('07B - Remove non-dominant contingency cancer type assertion');
-	$rs->define_dyn_rule( 'remove_contingency_catype_assertions',  sub { my $f=shift; my $facts = $_[0];
+	$rs = $self->{'modules'}->add_module('07B - Remove non-dominant contingency assertions');
+	$rs->define_dyn_rule( 'remove_contingency_assertions',  sub { my $f=shift; my $facts = $_[0];
 		my @tags = $facts->get_tags($f);
-		if ( grep { /preferential_trial_catype_complete_match/ } @tags ) {
-			my @tags_to_remove = grep { /preferential_trial_catype_complete_match|^\*catype:/ } @tags;
+		my @completely_matched_items = grep { /preferential_trial_complete_match:(.+)/ } @tags ;
+		return () if ! scalar @completely_matched_items ;
+		
+		for my $item (@completely_matched_items) {
+			my @tags_to_remove = grep { /^\*$item:/ } @tags;
 			$facts->untag($f, @tags_to_remove);
 		}
+		$facts->assert_tags($f, "*contingency overridden");
 		return ();
 	} ) ;
 

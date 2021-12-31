@@ -63,8 +63,6 @@ This is a beta software.  For bug fixes, please contact: Dr. Frank Lin, MBChB, P
 use strict;
 use warnings;
 
-use lib '/home/frank/lib';
-use Common;
 
 use Getopt::Long qw(:config bundling);
 use Pod::Usage;
@@ -78,6 +76,116 @@ use TSV;
 use Rules;
 use POTTR;
 use POSIX;
+
+#######################################################################
+sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
+sub max { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ > $v) ; } return $v; }
+sub column {
+	my @lines = @_;
+	my @levels;
+	my @width;
+	
+	my $retval;
+	for (@lines) {
+		chomp;
+		my @parts = split /\t/, $_;
+		$levels[$_]{ $parts[$_] }++ for (0 .. $#parts);
+		}
+		
+	sub deansi { my $x = shift; $x =~ s/(\e\[[0-9;]+m)//g ; return $x;}
+	
+	for my $i (0 .. $#levels) {
+# 		$width[$i] = max( map { my $a = $_; $a =~ s/\e\[[0-9;]+m//g; length($a) } keys %{ $levels[$i] } );
+		$width[$i] = max( map { my $a = $_; length(deansi($a)) } keys %{ $levels[$i] } );
+# 		$width[$i] = max( map { my $a = $_; length($a) } keys %{ $levels[$i] } );
+		}
+	
+
+	sub normANSIcc {
+		my $x = shift;
+		my $max_width = shift;
+		my $append = '';
+		my $cc_length = 0;
+		
+		while ( $x =~ /(\e\[[0-9;]+m)/g ) {
+			my $ctrl_code = $1;
+			$cc_length += length($ctrl_code);
+			}
+			
+			my $deansied_x = deansi($x); 
+			if ( (length($deansied_x) + $cc_length) > $max_width ) {
+				$cc_length  = $max_width - length($deansied_x);
+				}
+		
+			$append .= " " x $cc_length if $cc_length > 0;
+			return $x.$append;
+	}
+
+	sub adj {
+		my $width = shift;
+		my $str = shift;
+		$str = normANSIcc($str, $width);
+		$str .= " " x max($width - length(deansi($str)), 0);
+		return $str;
+		}
+	
+	for (@lines) {
+		my @parts = split /\t/, $_;
+		my @output = map { adj($width[$_], $parts[$_]) } (0..$#parts);
+		my $line = join("   ", @output);
+		$retval .= $line."\n";
+		}
+	return $retval;
+	}
+
+
+sub print_column {
+	my $x = shift;
+	our @buffer;
+	if ( ! defined $x ) {
+		print for column @buffer;
+		@buffer=();
+	} else {
+		push @buffer, $x;
+	}
+}
+	
+
+sub column_wrap_text($@) {
+	my $width = shift;
+	my $width_minus_5 = $width - 5;
+	my @lines = @_;
+	
+	@lines = map { # Wrapping function
+		chomp;
+		my @in = split /\t/, $_;
+		my @out;
+		my $r = 0;
+		for my $c ( 0 .. $#in ) {
+			my $skip = 0;
+			my $x = $in[$c];
+			$x =~ s/\s*$//;
+	#      		print ">>[$x]\n";
+			while ( length($x) >= $width ) {
+				my ($a, $b) = ( $x =~ /^(.{$width_minus_5,}?[^[:space:];]+[\s;]*)(.*)/ );
+	# 				print "$x -> [$a] [$b]\n";
+				if ( $b =~ /^\s*$/ ) { $x = $a; last; }
+				$x = $b;
+				next if $a =~ /^\s*$/;
+				$out[$r+$skip][$c] = $a;
+	# 				last if $b =~ /^\s*$/;
+				++$skip;
+			} 
+	# 			print "  [$x]\n";
+			$out[$r+$skip][$c] = $x ; # if $x !~ /^\s*$/;
+			$r += $skip ; # + 1;
+		}
+		( map { join("\t", ( map { ($_ // '') } @{$_} ) ) } @out );
+		} @lines ;
+	return @lines;
+}
+#######################################################################
+
 
 
 #######################################################################
@@ -923,7 +1031,7 @@ sub gen_preferential_trial_report {
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score", 
 		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial phase tier score", "Trial match criteria", "Level of matching",
-		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", "External weblink", "Notes"
+		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", "External weblink", "Assumptions"
 		)."\n";
 
 	my $cnt = 1;
@@ -1018,7 +1126,14 @@ sub gen_preferential_trial_terminal {
 		push @lines, join("\t", "Health conditions",          $healthcondition )."\n";
 		push @lines, join("\t", "Postcodes",                  $postcodes )."\n";
 		push @lines, join("\t", "External weblink",           $$row{'ext_weblink'} )."\n";
-		push @lines, join("\t", "Notes",                      hl(31, $$row{'notes'}) )."\n" if length $$row{'notes'} ;
+		if ( length $$row{'notes'} ) {
+			my $assumptions_cnt = 0;
+			my @assumptions = split /\s*;\s*/, $$row{'notes'};
+			for my $assumption (@assumptions) {
+				push @lines, join("\t", ($assumptions_cnt ? "" : "Assumptions"), hl(31, $assumption) )."\n" ;
+				++$assumptions_cnt ;
+			}
+		}
 		push @lines, join("\t", " " )."\n";
 		++$cnt ;
 	}
@@ -1559,16 +1674,24 @@ The database (in TSV format) with title consists of the following fields:
 =item * studytitle                   -  (string) Title of the study
 
 =item * drug_list                    -  (strings) List of study drugs for matching, 
-                                   separated by semicolon. Drug combinations 
+                                   separated by semicolons. Drug combinations 
                                    are allowed, separated by ' + ' (NB: spaces 
-                                   before and after '+' sign are mandatory)
+                                   before and after '+' sign are required)
 
 =item * drug_classes                 -  (strings) List of drug classes (of the study 
                                    drugs), separated by semicolon. Drug classes 
                                    are defined in therapy database. Drug class 
                                    combinations are allowed.
-=item * healthcondition (aka catype) -  (strings) List of study drugs for matching, 
-                                   separated by semicolon. 
+=item * combo_list                   -  (strings) List of study drug combinations 
+                                   specified in the trial for matching, separated 
+                                   by semicolons. Drug combinations are separated by 
+                                   ' + ' (NB: spaces before and after '+' sign are required)
+                                   
+=item * combo_classes                -  (strings) List of drug classes (of the study 
+                                   drug combinations), separated by semicolon. The specific 
+                                   drug classes must be defined in the therapy database. 
+=item * healthcondition (aka catype) -  (strings) List of cancer types for matching, 
+                                   separated by semicolons. 
 
 =item * recruitmentstatus -  (string) Recruitment status
 

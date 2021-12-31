@@ -439,7 +439,7 @@ sub get_combo_classes { # from drugs
 	my $combo = CombinationCounter->new(\@drug_classes);
 	while ( ! $combo->overflow() ) {
 		my @combo = $combo->get();
-		push @retval, join(" + ", ( sort map { get_normalised_treatment_class_name($_) } @combo) );
+		push @retval, join(" + ", ( sort ( uniq( map { get_normalised_treatment_class_name($_) } @combo) ) ) );
 		$combo->incr();
 	}
 	return @retval;
