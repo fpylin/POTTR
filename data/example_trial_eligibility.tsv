@@ -122,7 +122,24 @@ NCT04194944	RET:fusion; *NOT prior_therapy:systemic_therapy
 NCT04222972	catype:Non-small cell lung cancer; RET:fusion
 NCT04248829	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04262856	*NOT prior_therapy:systemic_therapy
-NCT04282018	(catype:liquid cancer OR catype:Non-small cell lung cancer OR catype:small cell lung cancer OR catype:head and neck squamous cell cancer OR catype:hepatocellular carcinoma OR catype:gastric cancer OR catype:gastroesophageal junction carcinoma OR catype:nasopharyngeal carcinoma OR catype:renal cell carcinoma OR catype:cervical cancer OR catype:triple-negative breast cancer OR catype:ovarian cancer OR catype:endometrial carcinoma OR catype:oesophageal cancer OR catype:melanoma OR catype:urothelial carcinoma OR microsatellite_instability:High OR mismatch_repair:deficient)
+NCT04282018	catype:Haematologic cancer
+NCT04282018	catype:Non-small cell lung cancer
+NCT04282018	catype:Small cell lung cancer
+NCT04282018	catype:Head and neck squamous cell carcinoma
+NCT04282018	catype:Hepatocellular carcinoma
+NCT04282018	catype:Gastric cancer
+NCT04282018	catype:Gastroesophageal junction carcinoma
+NCT04282018	catype:Nasopharyngeal carcinoma
+NCT04282018	catype:Renal cell carcinoma
+NCT04282018	catype:Cervical cancer
+NCT04282018	catype:Triple-negative breast cancer
+NCT04282018	catype:Ovarian cancer
+NCT04282018	catype:Endometrial carcinoma
+NCT04282018	catype:Oesophageal cancer
+NCT04282018	catype:Melanoma
+NCT04282018	catype:Urothelial carcinoma
+NCT04282018	microsatellite_instability:High
+NCT04282018	mismatch_repair:deficient
 NCT04294810	NOT EGFR:oncogenic_mutation; NOT ALK:fusion
 NCT04300244	catype:Mesothelioma
 NCT04383210	NRG1:fusion

@@ -9,12 +9,14 @@ ALK_inhibitor	ALK/IGF1R_inhibitor
 ALK_inhibitor	ALK/ROS1/MET_inhibitor
 ALK_inhibitor	ALK/ROS1_inhibitor
 ALK_inhibitor	ALK_inhibitor,first_generation
+ALK_inhibitor	ALK_inhibitor,fourth_generation
 ALK_inhibitor	ALK_inhibitor,second_generation
 ALK_inhibitor	ALK_inhibitor,third_generation
-ALK_inhibitor	ALK_inhibitor,fourth_generation
 ASCT2_antibody-drug_conjugate
 ATR_inhibitor	ATR/CHEK1_inhibitor
+AXL_inhibitor	AXL/FLT3/NTRK_inhibitor
 AXL_inhibitor	AXL/FLT3_inhibitor
+AXL_inhibitor	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor
 AXL_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
 BCL2_inhibitor
 BCL2_inhibitor	dual_Bcl2/xL_inhibitor
@@ -30,9 +32,9 @@ BET_inhibitor
 BRAF_inhibitor	BRAF_V600_inhibitor
 BRAF_inhibitor	RAF_dimer_inhibitor
 BTK_inhibitor
+CAR_T_cell_therapy	CD19-directed_CAR_T_cell
 CAR_T_cell_therapy	LeY_CAR_T_cell
 CAR_T_cell_therapy	autologous_GD2_CAR_T_cells
-CAR_T_cell_therapy	CD19-directed_CAR_T_cell
 CCR2/CCR5_antagonist
 CCR4_inhibitor
 CD40L-Fc_fusion_protein 
@@ -44,12 +46,13 @@ CDK2_inhibitor	CDK2/4/6_inhibitor	CDK2/4/6/FLT3_inhibitor
 CDK4/6_inhibitor
 CDK4/6_inhibitor	CDK2/4/6_inhibitor	CDK2/4/6/FLT3_inhibitor
 CHEK1_inhibitor	ATR/CHEK1_inhibitor
+CRAF_inhibitor	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor
 CXCR2_antagonist
-CYP17A1_inhibitor
 DHFR_inhibitor
 DNA_methyltransferase_inhibitor
 DNA_plasmid_encoding_IL-12
 DPD_inhibitor
+EGFR_inhibitor	EGFR/RAF_dimer_inhibitor
 EGFR_inhibitor	EGFR_inhibitor,exon_20_selective
 EGFR_inhibitor	EGFR_inhibitor,first_generation
 EGFR_inhibitor	EGFR_inhibitor,second_generation
@@ -63,6 +66,7 @@ ERK_inhibitor
 ERK_inhibitor	AKT/ERK_inhibitor
 EWS-FLI1_inhibitor
 EZH2_inhibitor
+FGFR1/2/3_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
 FGFR_inhibitor
 FGFR_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
 FGFR_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
@@ -70,9 +74,11 @@ FGFR_inhibitor	FGFR1/2/3_inhibitor
 FGFR_inhibitor	FGFR4_inhibitor
 FGFR_inhibitor	FGFR_inhibitor,type_2
 FGFR_inhibitor	pan-FGFR_inhibitor
+FLT3_inhibitor	AXL/FLT3/NTRK_inhibitor
 FLT3_inhibitor	AXL/FLT3_inhibitor
 FLT3_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
 FLT3_inhibitor	CDK2/4/6/FLT3_inhibitor
+FLT3_inhibitor	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor 
 FLT3_inhibitor	FLT3/KIT_inhibitor
 FLT3_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
 Granulocyte-Macrophage_Colony_Stimulating_Factor
@@ -94,10 +100,13 @@ JAK1_inhibitor	JAK1-selective_inhibitor
 JAK1_inhibitor	JAK1/JAK2_inhibitor
 JAK2_inhibitor	JAK1/JAK2_inhibitor
 JAK2_inhibitor	JAK2-selective_inhibitor
+KIT_inhibitor	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor
 KIT_inhibitor	BCR-ABL1/KIT/PDGFR_inhibitor
 KIT_inhibitor	BCR-ABL1/PDGFR/KIT/SRC_inhibitor
+KIT_inhibitor	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor
 KIT_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
 KIT_inhibitor	FLT3/KIT_inhibitor
+KIT_inhibitor	KIT/PDGFR/RET/VEGFR_inhibitor
 KIT_inhibitor	KIT/PDGFR_inhibitor
 KIT_inhibitor	KIT_inhibitor,ATP-competitive	KIT_D816V_inhibitor	KIT_D816V/PDGFRA_inhibitor
 KIT_inhibitor	KIT_inhibitor,first_generation
@@ -111,6 +120,7 @@ MEK_inhibitor
 MEK_inhibitor	RAF/MEK_inhibitor
 MET_inhibitor
 MET_inhibitor	ALK/ROS1/MET_inhibitor
+MET_inhibitor	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor
 MET_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
 MET_inhibitor	MET_inhibitor,type_1
 MET_inhibitor	MET_inhibitor,type_2
@@ -125,13 +135,16 @@ PDGFRA_inhibitor	KIT_D816V/PDGFRA_inhibitor
 PDGFRB_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
 PDGFR_inhibitor	BCR-ABL1/KIT/PDGFR_inhibitor
 PDGFR_inhibitor	BCR-ABL1/PDGFR/KIT/SRC_inhibitor
+PDGFR_inhibitor	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor
+PDGFR_inhibitor	KIT/PDGFR/RET/VEGFR_inhibitor
 PDGFR_inhibitor	KIT/PDGFR_inhibitor
+PDGFR_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
 PI3K-gamma_inhibitor
 PI3K/mTOR_inhibitor
+PI3K_alpha_inhibitor
 PI3K_alpha_inhibitor	PI3K_alpha/PI3K_delta_inhibitor
 PI3K_beta_inhibitor
 PI3K_delta_inhibitor	PI3K_alpha/PI3K_delta_inhibitor
-PI3K_alpha_inhibitor
 PI3K_inhibitor
 PKC/VEGFR2/KIT/PDGFR/FLT3_inhibitor
 PKC_inhibitor
@@ -140,12 +153,16 @@ PORCN_inhibitor
 PRIMA-1_analog
 PRMT_inhibitor,type_1
 PSMA_bispecific_T-cell_engager
+RAF_dimer_inhibitor	EGFR/RAF_dimer_inhibitor
 RAF_inhibitor	RAF/MEK_inhibitor
 RET_inhibitor
+RET_inhibitor	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor
+RET_inhibitor	KIT/PDGFR/RET/VEGFR_inhibitor
 RET_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
 RNA_polymerase_I_transcription_inhibitor
 ROS1_inhibitor
 ROS1_inhibitor	ALK/ROS1/MET_inhibitor
+ROS1_inhibitor	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor
 SF3B1_inhibitor
 SHP2_inhibitor
 SMO_inhibitor
@@ -160,6 +177,7 @@ TGF_beta_RI_inhibitor
 TIE2_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
 TLR9_agonist
 TNF_inhibitor
+TRK_inhibitor	AXL/FLT3/NTRK_inhibitor
 TRK_inhibitor	TRK_inhibitor,first_generation
 TRK_inhibitor	TRK_inhibitor,second_generation
 Treg_cell_depleting_antibody
@@ -170,13 +188,21 @@ VEGFR/PDGFR/FLT3/CRAF_inhibitor
 VEGFR/PDGFR_inhibitor
 VEGFR/RET/PDGFR/KIT_inhibitor
 VEGFR2/EGFR/RET_inhibitor
+VEGFR2_inhibitor	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor
 VEGFR2_inhibitor	MET/VEGFR2/AXL/RET_inhibitor
 VEGFR_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
+VEGFR_inhibitor	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor
+VEGFR_inhibitor	KIT/PDGFR/RET/VEGFR_inhibitor
+VEGFR_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
 VEGF_inhibitor
 WEE1_inhibitor
 adenosine_A2A/A2B_receptor_antagonist
 adenosine_A2A_receptor_antagonist
-androgen_receptor_antagonist
+androgen_receptor_pathway_inhibitor	CYP17A1_inhibitor
+androgen_receptor_pathway_inhibitor	androgen_receptor_antagonist
+androgen_receptor_pathway_inhibitor	antiandrogen	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,first_generation
+androgen_receptor_pathway_inhibitor	antiandrogen	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,second_generation
+androgen_receptor_pathway_inhibitor	antiandrogen	antiandrogen,steroidal
 angiogenesis_inhibitor
 anti-4-1BB_monoclonal_antibody
 anti-CD20_monoclonal_antibody
@@ -227,9 +253,6 @@ anti-c-Met_antibody-drug_conjugate
 anti-malarial_agent
 anti-mesothelin_antibody-drug_conjugate
 anti-notch_receptor_monoclonal_antibody
-antiandrogen	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,first_generation
-antiandrogen	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,second_generation
-antiandrogen	antiandrogen,steroidal
 antifolate
 antihistamine
 arginine_deiminase-polyethylene_glycol_conjugate
@@ -286,9 +309,9 @@ immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA-4_targeting	dual_PD-L
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	anti-PD-1_monoclonal_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/CD47_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/CTLA-4_antibody
+immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/LAG3_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/PD-L1_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/TIM-3_antibody
-immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/LAG3_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1_VEGF_monoclonal_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	PD-L1/TGF-beta_fusion_protein
@@ -310,6 +333,7 @@ macrocyclic_ketone_analogue
 mesothelin-targeting_antibody-drug_conjugate
 miR-16_miRNA_mimic
 microtubule_stabilizing_agent
+mutant_p53_reactivator	mutant_p53_reactivator,Y220C-selective
 nanoparticle_Stat3/NF-kB/poly-TKI
 orotate_phosphoribosyltransferase_inhibitor
 pegylated_IL-10
@@ -350,11 +374,3 @@ virus-based_therapy	oncolytic_Coxsackie_virus,ICAM_overexpressing
 virus-based_therapy	oncolytic_HSV_virus
 virus-based_therapy	replication-competent_oncolytic_adenovirus
 virus-based_therapy	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
-AXL_inhibitor	AXL/FLT3/NTRK_inhibitor
-FLT3_inhibitor	AXL/FLT3/NTRK_inhibitor
-TRK_inhibitor	AXL/FLT3/NTRK_inhibitor
-VEGFR_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
-PDGFR_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
-FGFR1/2/3_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
-RAF_dimer_inhibitor	EGFR/RAF_dimer_inhibitor
-EGFR_inhibitor	EGFR/RAF_dimer_inhibitor

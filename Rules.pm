@@ -65,6 +65,7 @@
 # Revision 0.9   - 18 Dec 2019
 # Revision 0.91  - 04 May 2019
 # Revision 0.92  - 13 Jun 2019
+# Revision 0.95  -  2 Jan 2022
 # 
 # Copyright 2019-2021, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                      Garvan Institute of Medical Research, Sydney
@@ -665,7 +666,7 @@ sub load { # Load if-then rules
 		push @rules_spec, \%a;
 		$self->{'rules_str'}{$rule_str}++;
 		
-		$disjunctive_lhs{$_} = \%a, for grep { /^\(.*?\s+OR\s+.*\)$/ } @lhs ; # Now can handle simple disjunctions (one level only) FIXME
+		$disjunctive_lhs{$_} = \%a for grep { /^\(.*?\s+OR\s+.*\)$/ } @lhs ; # Now can handle simple disjunctions (one level only) FIXME
 	}
 
 	for my $disj_lhs (sort { $disjunctive_lhs{$a}{'order'} <=> $disjunctive_lhs{$b}{'order'} } keys %disjunctive_lhs) {
@@ -674,7 +675,7 @@ sub load { # Load if-then rules
 		my @disj_lhs = split /\s+OR\s+/, $disj_rhs ;
 		my @rhs = ($disj_rhs_orig) ;
 		
-		my $prio = $disjunctive_lhs{$disj_lhs}{'prio'};
+		my $prio = ( $disjunctive_lhs{$disj_lhs}{'prio'} - 1 ); # Handling of rules should take precedence before the actual rules.
 		
 		for my $disj_lhs (@disj_lhs) { 
 			my $rule_str = "$disj_lhs => $disj_rhs_orig";

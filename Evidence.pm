@@ -528,7 +528,7 @@ sub gen_rule_knowledge_base {
 			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)$/ and do {  # [A-Z]?
 				$lhs_alteration_pos = $1."codon_".$2."_missense_variant"; 
 			};
-# 			print join("\t", $lhs_alteration, $lhs_alteration_pos //'')."\n" if $lhs_alteration =~ /NRAS/;
+# 			print join("\t", $lhs_alteration, $lhs_alteration_pos //'')."\n" ; # if $lhs_alteration =~ /NRAS/;
 			
 # 			$lhs_alteration =~ /^(.+?:)[A-Z]([0-9]+)[A-Z]$/ and do { 
 # 				$lhs_alteration_pos = $1."codon_".$2."_missense_variant"; 
@@ -571,7 +571,7 @@ sub gen_rule_knowledge_base {
 						my $ppalt = $alt; 
 						$ppalt =~ s/;/ and /g;
 						
-						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) {
+						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs|Ha?ematologic cancers?/i ) {
 							my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";
 							
 							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );

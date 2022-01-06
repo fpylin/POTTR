@@ -65,6 +65,7 @@ our %catype_preferred_term;
 our %catype_synonyms;
 our %catype_signature_cache;
 our %catype_is_a;
+our %catype_has_child;
 our %catype_not_found;
 our %preferred_catype_term_cache;
 
@@ -156,6 +157,7 @@ sub load_catype_database($) {
 			}
 			if ( defined $prev_catype ) {
 				$catype_is_a{ mk_signature($term) }{ mk_signature($prev_catype) } = 1 ;
+				$catype_has_child{ mk_signature($prev_catype) }{ mk_signature($term) } = 1 ;
 			}
 			$prev_catype = $term;
 		}
@@ -188,7 +190,7 @@ sub is_a { # catype is-a catype
 }
 
 
-sub get_ancestors { # drug
+sub get_ancestors { 
 	&ON_DEMAND_INIT;
 	
 	my $x = mk_signature($_[0]);
@@ -208,6 +210,28 @@ sub get_ancestors { # drug
 		}
 	}
 # 	print "\e[1;31m".join(" | ", ( map { "$_ (". $catype_preferred_term{$_}. ")" } keys %visited_stack ) )."\e[0m\n";
+	my @a = map { $catype_preferred_term{$_} } @visited_stack ;
+	return @a;
+}
+
+
+
+sub get_offsprings { 
+	&ON_DEMAND_INIT;
+	
+	my $x = mk_signature($_[0]);
+	my $visited = $_[1];
+	my @visited_stack;
+	$visited = \@visited_stack if ! defined $visited ;
+	push @{ $visited }, $x;
+	
+	if ( exists $catype_has_child{$x} ) {
+		for my $z ( keys %{ $catype_has_child{$x} } ) {
+			next if ! defined $z;
+			next if grep { $z eq $_ } @{$visited};
+			get_offsprings($z, $visited );
+		}
+	}
 	my @a = map { $catype_preferred_term{$_} } @visited_stack ;
 	return @a;
 }
@@ -382,7 +406,7 @@ sub match_catype {
 	
 	$catype_regex_M = get_catype_regex_M( get_all_catypes() )  if ! defined $catype_regex_M ;
 	
-	my $MMM = '';
+	our $MMM = '';
 	while ( $string =~ /(${catype_regex_M})/ig ) {
 		my $start = length($`);
 		my %match = (start => $start, end => $start + length($1), text => $1 );

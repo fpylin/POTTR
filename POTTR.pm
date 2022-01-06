@@ -214,7 +214,7 @@ sub load_module_cancer_type_mapping {
 # 	$rs = $self->{'modules'}->add_module('01C - Define solid tumours');
 	$rs->load(
 		mkrule( ["(catype-processed)", "NOT catype:leukemia", "NOT catype:lymphoma"], ["catype:Solid tumour"] ),
-		mkrule( ["(catype-processed)", "catype:leukemia"], ["catype:Liquid cancer"] )
+		mkrule( ["(catype-processed)", "catype:leukemia"], ["catype:Haematologic cancer"] )
 	);
 }
 
@@ -268,12 +268,16 @@ sub load_module_variant_feature_mapping {
 		$rs->load( file( $srcfile ) );
 	}
 	
+	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-rules-file') ) {
+		$rs->load( file( $srcfile ) );
+	}
+	
 	$rs->define_dyn_rule( 'infer_mutation_calls',  sub { my $f = shift; my $facts = $_[0];
 		return () if $f !~ /^(\S+?):(?:alteration)(,[_\s]*germline)?\s*$/ ;
 		my $germline_suffix = $2 // '';
 		my $bm = $1;
 		my @tags = grep { /^\Q$bm\E:/ } ( $facts->get_tags($f) );
-		return () if ! grep { ! /^INFERRED:|^\Q$bm\E:(?:oncogenic_mutation|alteration|.*fusion|amplification|.*expression)(?:,[_\s]*germline)?/ } @tags;
+		return () if ! grep { ! /^INFERRED:|^\Q$bm\E:(?i:oncogenic_mutation|alteration|.*fusion|amplification|.*expression)(?:,[_\s]*germline)?/ } @tags;
 # 		return () if $f !~ /^(\S+?):(?:oncogenic_mutation)\s*$/ ;
 # 		return ( Facts::mk_fact_str($f, ($facts->get_tags($f)), 'INFERRED:oncogenicity') );
 		my $f_inferred_oncogenicity = "$bm:oncogenic_mutation".$germline_suffix ;
@@ -774,9 +778,9 @@ sub load_module_preferential_trial_prioritisation {
 		my $transitive_class_efficacy_tier = $transitive_class_efficacy_tiers[0];
 		
 		my $trial_match_criteria_score = (
-			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 1 : 0 ) +
-			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 1 : 0 ) +
-			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 1 : 0 ) 
+			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
+			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
+			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 2 : 0 ) 
 			);
 		
 		my $num_referred_drug_classes_score = scalar(@inf_drug_classes) ;
@@ -833,14 +837,16 @@ sub load_module_deinit {
 	$rs = $self->{'modules'}->add_module('07B - Remove non-dominant contingency assertions');
 	$rs->define_dyn_rule( 'remove_contingency_assertions',  sub { my $f=shift; my $facts = $_[0];
 		my @tags = $facts->get_tags($f);
-		my @completely_matched_items = grep { /preferential_trial_complete_match:(.+)/ } @tags ;
+		my @completely_matched_items = grep { defined } map { /preferential_trial_complete_match:(.+)/ ? $1 : undef } @tags ;
 		return () if ! scalar @completely_matched_items ;
 		
 		for my $item (@completely_matched_items) {
-			my @tags_to_remove = grep { /^\*$item:/ } @tags;
+			my @tags_to_remove = grep { /^\s*\*$item:/ } @tags;
+			my %tags_to_remove = map { $_ => 1 } @tags_to_remove ;
+			next if ! scalar @tags_to_remove;
 			$facts->untag($f, @tags_to_remove);
+			# $facts->assert_tags($f, "*Contingency constraint satisified by one path");
 		}
-		$facts->assert_tags($f, "*contingency overridden");
 		return ();
 	} ) ;
 

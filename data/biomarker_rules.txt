@@ -1,0 +1,23 @@
+ER:positive; catype:Breast cancer => ESR1:protein_expression
+PR:positive; catype:Breast cancer => PGR:protein_expression
+HER2:positive; catype:Breast cancer => catype:HER2-positive breast cancer
+HER2:negative => ERBB2:negative
+ERBB2:overexpression => HER2:positive [CERTAIN:biomarker]
+ERBB2:amplification => HER2:positive [CERTAIN:biomarker]
+HER2:positive; *ERBB2:amplification => HER2:positive
+HER2:positive; *ERBB2:overexpression => HER2:positive
+
+catype:Triple-negative breast cancer => ER:negative; PR:negative; HER2:negative
+PMS2:loss-of-protein_expression => mismatch_repair:deficient
+MLH1:loss-of-protein_expression => mismatch_repair:deficient
+MSH2:loss-of-protein_expression => mismatch_repair:deficient
+MSH6:loss-of-protein_expression => mismatch_repair:deficient
+
+TP53:R175H => TP53:gain-of-function_mutation
+TP53:G245S => TP53:gain-of-function_mutation
+TP53:R248Q => TP53:gain-of-function_mutation
+TP53:R248W => TP53:gain-of-function_mutation
+TP53:R249S => TP53:gain-of-function_mutation
+TP53:R273H => TP53:gain-of-function_mutation
+TP53:R273L => TP53:gain-of-function_mutation
+TP53:R282W => TP53:gain-of-function_mutation

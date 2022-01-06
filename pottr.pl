@@ -388,9 +388,9 @@ sub extract_results_biomarkers {
 	my @results_biomarker = grep { /^has_biomarker:/ } @treatment_match_result ;
 	s/\s*\[.*// for @results_biomarker ;
 	my @retval;
-	my %AMP_LOE;
-	my %is_original_fact;
 	for my $biomarker_line (sort @results_biomarker) {
+		my %AMP_LOE;
+		my %is_original_fact;
 		my $biomarker = $biomarker_line;
 		$biomarker =~ s/has_biomarker://;
 		my %a;
@@ -416,7 +416,7 @@ sub extract_results_biomarkers {
 			if ( my @a = grep { /:oncogenicity/ } @tags ) {
 				push @oncogenicity, @a;
 			} 			
-			my @amp_loe = grep { /^AMP\.LOE:/ } @tags;
+			my @amp_loe = sort grep { /^AMP\.LOE:/ } @tags;
 			if ( scalar(@amp_loe) and $amp_loe[0] =~ /^AMP\.LOE:(.+)/ ) {
 				$AMP_LOE{$fact} = $1; 
 			} else {
@@ -643,6 +643,7 @@ sub gen_biomarker_terminal_append_AMP_LOE {
 	return undef if ! defined $x;
 	my $retval = ( exists $$bm_hashref{'is_original_fact'}{$x} and defined $$bm_hashref{'is_original_fact'}{$x} and length $$bm_hashref{'is_original_fact'}{$x} and $$bm_hashref{'is_original_fact'}{$x} ) ? 
 		hl(37, $x) : $x;
+# 	print ">>>> $x\t$$bm_hashref{'AMP.LOE'}{$x}\n";
 	$retval .= " [AMP:".thl_AMP($$bm_hashref{'AMP.LOE'}{$x})."]" if ( exists $$bm_hashref{'AMP.LOE'}{$x} and defined $$bm_hashref{'AMP.LOE'}{$x} and length $$bm_hashref{'AMP.LOE'}{$x} );
 	return $retval;
 }

@@ -109,7 +109,7 @@ sub interp_variants {
 			push @alterations, ('fusion'); 
 			if ( ($biomarker_spec =~ /[LR]:([A-Z0-9]+?)--?([A-Z0-9]+)/ ) or #
 				 ($biomarker_spec =~ /([A-Z0-9]+?)--?([A-Z0-9]+)[_\s]*(?i:fusions?)/ ) ) {
-				push @alterations, "$1-$2 Fusion" ;
+# 				push @alterations, "$1-$2 fusion" ;
 				push @alterations, "$1-$2"."_fusion" ;  # alternative normalised representation with an underscore
 			};
 			last; 

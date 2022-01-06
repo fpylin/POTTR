@@ -97,6 +97,22 @@ variant-feature-file = feature_lookup.txt
 
 
 ###############################################################################
+# BIOMARKER INFERENCE/ASSERTION FILE [OPTIONAL]
+# 
+# This optional file contains additional rules for aiding variant interpretation. 
+# This step is not essential for decision making if pathogenicity of a variant 
+# has been determined.
+# 
+# The following is an example pathogenicity database. See 
+# attached file for format. For example:
+# EGFR:L858R => EGFR:oncogenic_mutation [CERTAIN:oncogenicity]
+# EGFR:L858R => EGFR:gain-of-function_mutation [CERTAIN:mutation_effect]
+###############################################################################
+
+biomarker-rules-file = biomarker_rules.txt
+
+
+###############################################################################
 # BIOMARKER EVIDENCE FILE [REQIURED] - Core evidence database.
 # 
 # Multiple sections of evidence files are allowed.

@@ -165,6 +165,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB2	Exon 16 skipping mutation	Non-small cell lung cancer	Afatinib		31557536
 4	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-small cell lung cancer	Neratinib	Single responders in lung ca.	29420467
 4	ERBB2	Overexpression, amplification	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01, no data available yet. Hypothesis generating	10.1200/JCO.2020.38.15_suppl.9504
+4	ERBB2	S335C	Non-small cell lung cancer	Pyrotinib	Case report. Partial response to pyrotinib in the non-tyrosine kinase domain mutation S335C.	33655632
 4	ERBB4	Oncogenic mutations	Non-small cell lung cancer; Melanoma	Lapatinib + Afatinib		29902295
 4	EZH2	Oncogenic mutations, A677G, Y641N, Y641C, Y641H, Y641S, Y641F, Y646, A687V	Non-Hodgkin’s lymphoma	Tazemetostat		24563539
 4	FANCD2	Loss-of-function mutations, Oncogenic mutations	Non-small cell lung cancer	Veliparib	Cell line study only using FANCD2 knockout	25566506
