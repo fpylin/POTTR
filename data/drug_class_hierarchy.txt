@@ -84,6 +84,9 @@ FLT3_inhibitor	CDK2/4/6/FLT3_inhibitor
 FLT3_inhibitor	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor 
 FLT3_inhibitor	FLT3/KIT_inhibitor
 FLT3_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor
+FLT3_inhibitor	MET/VEGFR2/FLT3_inhibitor
+MET_inhibitor	MET/VEGFR2/FLT3_inhibitor
+VEGFR_inhibitor	MET/VEGFR2/FLT3_inhibitor
 Granulocyte-Macrophage_Colony_Stimulating_Factor
 Growth_hormone_secretagogue_receptor_agonist
 HDAC_inhibitor

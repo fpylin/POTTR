@@ -28,6 +28,7 @@ AG-270|AG270	MAT2A_inhibitor
 AGEN-1181|AGEN 1181|AGEN1181	anti-CTLA-4_monoclonal_antibody
 AK104|AK 104|AK-104	bispecific_PD-1/CTLA-4_antibody
 AK112|AK 112|AK-112	bispecific_PD-1_VEGF_monoclonal_antibody
+AK114|AK 114|AK-114	anti-IL-1beta_monoclonal_antibody
 AK117	anti-CD47_monoclonal_antibody
 AK127	anti-TIGIT_monoclonal_antibody
 AL-2846|AL 2846|AL2846	MET_inhibitor
@@ -823,6 +824,7 @@ Romidepsin|FR901228|Antibiotic FR 901228|Depsipeptide|FK228|Istodax	HDAC_inhibit
 Rovalpituzumab Tesirine|Rova-T|SC0002|SC16LD6.5	anti-DLL3_antibody-drug_conjugate
 Rucaparib|Rucaparib Phosphate|Rucaparib Camsylate|AG014699|C0-338|PF-01367338|Rubraca	PARP_inhibitor
 Ruxolitinib|INCB-18424|INCB18424|Jakafi	JAK1/JAK2_inhibitor
+RO7428731	anti-EGFRvIII_monoclonal_antibody
 S63845	MCL1_inhibitor
 S65487	BCL2_inhibitor
 SAR125844	MET_inhibitor
@@ -1025,3 +1027,7 @@ eFT508	MNK_inhibitor
 mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 nab-Sirolimus|ABI-009	mTOR_inhibitor
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+BAT7104|BAT-7104	bispecific_PD-L1/CD47_antibody
+LM-108|LM108	anti-CCR8_monoclonal_antibody
+HLX301|HLX-301	bispecific-PD-L1/TIGIT_antibody
+LM-061	MET/VEGFR2/FLT3_inhibitor
