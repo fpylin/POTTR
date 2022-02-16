@@ -2,3 +2,4 @@ ERBB2:A775_G776insYVMA	ERBB2:E770-A771insAYVM	ERBB2:E770_A771insAYVM	ERBB2:Y772_
 ERBB2:P780_Y781insGSP	ERBB2:G778_P780dup
 MET:exon_14_splicing_mutation	MET:exon_14_skipping_mutation
 ALK:rearrangement	ALK:fusion
+BRAF:class_2_mutation	BRAF:class_II_mutation

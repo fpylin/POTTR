@@ -57,11 +57,13 @@ EGFR_inhibitor	EGFR_inhibitor,exon_20_selective
 EGFR_inhibitor	EGFR_inhibitor,first_generation
 EGFR_inhibitor	EGFR_inhibitor,second_generation
 EGFR_inhibitor	EGFR_inhibitor,third_generation
+EGFR_inhibitor	EGFR/ERBB2_inhibitor
 ERBB2_inhibitor
 ERBB2_inhibitor	ERBB2_inhibitor,exon_20_selective
 ERBB2_inhibitor	ERBB2_inhibitor,first_generation
 ERBB2_inhibitor	ERBB2_inhibitor,second_generation
 ERBB2_inhibitor	ERBB2_inhibitor,third_generation
+ERBB2_inhibitor	EGFR/ERBB2_inhibitor
 ERK_inhibitor
 ERK_inhibitor	AKT/ERK_inhibitor
 EWS-FLI1_inhibitor
@@ -73,7 +75,8 @@ FGFR_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
 FGFR_inhibitor	FGFR1/2/3_inhibitor
 FGFR_inhibitor	FGFR4_inhibitor
 FGFR_inhibitor	FGFR_inhibitor,type_2
-FGFR_inhibitor	pan-FGFR_inhibitor
+FGFR_inhibitor	FGFR1/2/3_inhibitor	pan-FGFR_inhibitor
+FGFR_inhibitor	FGFR4_inhibitor	pan-FGFR_inhibitor
 FLT3_inhibitor	AXL/FLT3/NTRK_inhibitor
 FLT3_inhibitor	AXL/FLT3_inhibitor
 FLT3_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
@@ -290,6 +293,7 @@ endocrine_therapy	GnRH_antagonist
 endocrine_therapy	aromatase_inhibitor
 endocrine_therapy	selective_estrogen_receptor_degrader
 endocrine_therapy	selective_estrogen_receptor_modulator
+endocrine_therapy	selective_estrogen_receptor_modulator	selective_estrogen_receptor_modulator,third_generation
 farnesyltransferase_inhibitor
 folinic_acid
 gamma_secretase_inhibitor

@@ -48,7 +48,14 @@ KIT	juxtamembrane_domain	544	581	10.1371/journal.pcbi.1002661
 KIT	glycine_rich_loop	596	601	10.1371/journal.pcbi.1002661
 KIT	c_helix	631	647	10.1371/journal.pcbi.1002661
 KIT	activation_loop	810	835	10.1371/journal.pcbi.1002661
-MET	exon_14_splicing	c.3028	c.3028+2
+MET	exon_14_splicing	c.3082	c.3082+3
+MET	exon_14_splicing	c.3082	c.3082+2
+MET	exon_14_splicing	c.3082	c.3082+1
+MET	exon_14_splicing	c.3082	c.3082
+MET	exon_14_splicing	c.2941	c.2941-1
+MET	exon_14_splicing	c.2941	c.2941-28
+MET	exon_14_splicing	c.2941	c.2941-33
+MET	exon_14_splicing	c.2941	c.2941-30
 MET	exon_14_splicing	c.2888-30	c.2888
 RET	cadherin_like_domain_1	28	156	32083997
 RET	cadherin_like_domain_2	166	271	32083997

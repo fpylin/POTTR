@@ -24,7 +24,8 @@
 # 
 # $ruleset ->load(@rules);
 #
-# my %facts_with_tags = $ruleset ->run( @facts );
+# my $facts = Facts -> new(@facts);
+# my %facts_with_tags = $ruleset ->run( $facts ) -> get_fact_tag_hash();
 # 
 # $ruleset ->debug_print(); # prints debug messages to STDIN;
 # $ruleset ->to_string();
@@ -49,7 +50,9 @@
 #   # ... 
 # 	return ('New Fact 1');
 # }
-#
+# 
+# 3. The Facts class may contain variables and function that are not part 
+#    of the production rules
 ##############################################################################
 #
 # VERSION HISTORY 
@@ -104,6 +107,12 @@ sub new {
 	for my $s (@facts) {
 		$self->assert_string($s);
 	}
+	
+	my %hash_data;
+	my %hash_func;
+	
+	$self->{'data'} = \%hash_data;
+	$self->{'func'} = \%hash_func ;
 	
     return $self;
 }
@@ -282,6 +291,43 @@ sub clean_tags { # SUBROUTINE TO DELETE
 		my %trk = map { $_ => 1 } @trk;
 		$self->{'facts'}{$f} = \%trk;
 	}
+}
+
+# the Facts class also include the capability some global variables
+
+sub setvar($$) { # set "global" variables
+	my $self = shift;
+	my $f = shift;
+	my $v = shift;
+# 	print STDERR "Rules.pm: Setting $f = $v\n";
+	$self->{'_data_'}{$f} = $v;
+}
+
+sub deffunc($\&) { # set "global" functions
+	my $self = shift;
+	my $f = shift;
+	my $func_ref = shift;
+# 	print STDERR "$f\t$func_ref\n";
+	$self->{'_func_'}{$f} = $func_ref;
+}
+
+sub getvar($) {
+	my $self = shift;
+	my $f = shift;
+# 	print STDERR "$f\t$self->{'data'}{$f}\n";
+	return undef if ! exists $self->{'_data_'}{$f};
+	return $self->{'_data_'}{$f};
+}
+
+sub func($@) {
+	my $self = shift;
+	my $f = shift;
+	my @args = @_;
+	if ( ! exists $self->{'_func_'}{$f} ) {
+		warn "Rules.pm: function $f is not defined";
+		return undef ;
+	}
+	return $self->{'_func_'}{$f}->($self, @args);
 }
 
 1;
@@ -537,13 +583,12 @@ sub match_rule_lhs {
 
 
 sub run { # Rules::run - the main inference engine. 
-	my ($self, @facts) = @_;
+	my $self = shift;
+	my $facts_ref = shift;  # Input: a Facts object
 	$self->{'debug_output'} = '';
 	
-	push @facts, '(initial-fact)';
+	$$facts_ref->assert('(initial-fact)'); #  push @facts, '(initial-fact)';
 	
-	my $facts = Facts->new(@facts) ;
-
 	$self->index_rules() if $self->{'f_needs_reindex'} ;
 	
 	my $n_new=0;
@@ -558,9 +603,9 @@ sub run { # Rules::run - the main inference engine.
 		++$iter;
 		$n_new=0;
 
-		my @fact_list = $facts->get_facts_list();
+		my @fact_list = $$facts_ref->get_facts_list();
 		
-		$self->debug_print(32, "Iter $iter: ".join(" | ", @fact_list) );
+		$self->debug_print(32, "Iter $iter: ".scalar(@fact_list). " facts"); # .join(" | ", @fact_list) );
 		
 		### First run the dynamic rule sets
 		my @dyn_rule_unmatched_facts = grep { ! exists $dyn_rule_facts_matched{$_} } @fact_list;
@@ -568,7 +613,7 @@ sub run { # Rules::run - the main inference engine.
 		for my $fact (@dyn_rule_unmatched_facts) {
 			$dyn_rule_facts_matched{$fact}++;
 			for my $dyn_rule (@dyn_ruleset) {
-				my @dyn_rule_rhs_to_fire = ( $self->{'dyn_rules'}{$dyn_rule}{'code'}->( $fact, $facts, \%{ $self->{'cache'} } ) );
+				my @dyn_rule_rhs_to_fire = ( $self->{'dyn_rules'}{$dyn_rule}{'code'}->( $fact, $$facts_ref, \%{ $self->{'cache'} } ) );
 				my @dyn_rule_lhs = ($fact);
 				my @fake_lhs = ($fact);
 				my @fake_lhs_assert = (0);
@@ -577,7 +622,7 @@ sub run { # Rules::run - the main inference engine.
 				if (scalar @dyn_rule_rhs_to_fire) {
 					my $rule = \%a;
 				    $self->debug_print(31, "   ".join("  ", $self->{'dyn_rules'}{$dyn_rule}{'name'}, $fact, '=>', join('; ', @dyn_rule_rhs_to_fire)))  ;
-					$n_new += $self->fire_rule($facts, $rule);
+					$n_new += $self->fire_rule($$facts_ref, $rule);
 # 					print STDERR "\e[1;36m|- ".join("\n", $fact, @{ $a{lhs} }, @{ $a{rhs} })." \e[0m\n" ;
 				}
 			}
@@ -585,11 +630,11 @@ sub run { # Rules::run - the main inference engine.
 		goto TO_NEXT_CYCLE if $n_new > 0;
 
 		### Now run the static rules clustered by the rule priorities
-		my %static_ruleset_by_prio = $self->retrieve_rules_by_prio( $facts->get_facts_list() );
+		my %static_ruleset_by_prio = $self->retrieve_rules_by_prio( $$facts_ref->get_facts_list() );
 		
 		for my $prio ( sort {$a <=> $b} keys %static_ruleset_by_prio ) {
 			for my $rule ( @{ $static_ruleset_by_prio{$prio} } ) { 
-				my ( $f_match, $constraints ) = $self->match_rule_lhs($facts, $rule);
+				my ( $f_match, $constraints ) = $self->match_rule_lhs($$facts_ref, $rule);
 # 				print "<$f_match> $_ <>\n" for @{ $constraints->{tags} } ;
 				
 				if ( $f_match ) {
@@ -599,7 +644,7 @@ sub run { # Rules::run - the main inference engine.
 					if (! exists $visited_rules{$match_id} ) {
 						my $n_lhs = scalar @{ $$rule{'lhs'} };
 						
-						my $n_new_rule = $self->fire_rule($facts, $rule, $constraints);
+						my $n_new_rule = $self->fire_rule($$facts_ref, $rule, $constraints);
 						$self->debug_print( ($n_new_rule ? 33 : 34) , "   ".join("\t", $n_lhs, rule_to_string($rule)) ) ;
 						$n_new += $n_new_rule ;
 						$visited_rules{$match_id} = 1;
@@ -613,12 +658,12 @@ sub run { # Rules::run - the main inference engine.
 		}
 		
 		TO_NEXT_CYCLE:
-		$self->debug_print(36, $facts->get_fact_tag_strings() ) ;
+		$self->debug_print(36, $$facts_ref->get_fact_tag_strings() ) ;
 	} while ($n_new != 0);
 	
 # 	$facts->clean_tags();
 	
-	return $facts->get_fact_tag_hash();
+	return $$facts_ref; 	# $facts->get_fact_tag_hash();
 }
 
 
@@ -741,8 +786,7 @@ sub facts_to_graphviz {
 }
 
 ##################################################################################
-# TEST CODE:
-# 
+# OLD TEST CODE:
 # my $ruleset = Rules->new( {debug_level=>1});
 # $ruleset->load('A => B; C [tag1]');
 # $ruleset->load('A; NOT B => E');
@@ -750,11 +794,13 @@ sub facts_to_graphviz {
 # $ruleset->load('A; (C OR E) => D [tag3]');
 # $ruleset->load('A; B => D [tag2]');
 # $ruleset->load('D => A [tag3]');
-# my %output = $ruleset->run('A', 'E');
+# my $facts = Facts->new('A', 'E') ;
+# my %output = $ruleset->run( \$facts ) ->get_fact_tag_hash();
+# # my %output = $ruleset->run( \( Facts->new('A', 'E') ) ) ->get_fact_tag_hash();
 # $ruleset->print;
 # print map { "$_\t[$output{$_}]\n" } sort keys %output;
-
-1;
+# 
+# 1;
 }
 
 
@@ -814,21 +860,25 @@ sub print {
 sub run {
 	my ($self, @facts) = @_;
 
-	$self->{'cache'} = (); # clear the runtime cache, used for storing dynamic runtime private facts
+	$self->{'cache'} = (); # clear the runtime cache, used for dynamic storage of runtime private facts
 	$self->{'debug_output'} = '';
 	
 	my $debug_output ;
+	
+	my $facts = Facts->new(@facts) ;
+	
 	for my $ruleset_name (sort keys %{ $self->{'modules'} }) {
+
 		$self->{'modules'}{$ruleset_name}->debug_print(37, "Running module: $ruleset_name");
-		my %retval = $self->{'modules'}{$ruleset_name}->run(@facts);
-		@facts = map { $_.(length($retval{$_}) ? " [$retval{$_}]" : "") } keys %retval;
-# 		print map { "> $_\n" } sort @facts; 
+		
+		$self->{'modules'}{$ruleset_name}->run(\$facts);
+
 		$debug_output .= $self->{'modules'}{$ruleset_name}{'debug_output'};
 	}
-# 	print STDERR "!! $_\n" for @retval;
 
 	$self->{'debug_output'} = $debug_output ;
-	return @facts;
+	
+	return $facts->get_fact_tag_strings();
 }
 
 

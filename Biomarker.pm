@@ -169,7 +169,7 @@ sub interp_variants {
 				( ($na_pos, $na_pos2, $na_org, $na_alt, $na_mut) = /^(?:c\.)(\d+[\+\-]?\d*)_?(\d+[\+\-]?\d*)?([AGTC]+)?(>|del|delins|ins|dup)([AGTC]+)?/ ) and do {
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'insertion' if ($na_alt eq 'ins') or ($na_alt eq 'dup') ;
-					push @conseq_t, 'indel'     ;
+					push @conseq_t, 'indel'  if (defined($na_org) and length($na_org)) != 1 or ( defined($na_mut) and length($na_mut) != 1);
 					last;
 				};
 				
@@ -179,8 +179,8 @@ sub interp_variants {
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'inframe_insertion' if ($muttype eq 'ins') or ($muttype eq 'dup') ;
 					push @conseq_t, 'inframe_deletion'  if ($muttype eq 'del') ;
-					push @conseq_t, 'stop_gained'       if ( $delins_spec eq '*' );
-					push @conseq_t, 'indel'      ;
+					push @conseq_t, ('stop_gained', 'truncating_mutation')  if ( $delins_spec eq '*' );
+					push @conseq_t, 'indel'  if defined($aa_pos2) and length($delins_spec) != 1 ;
 					if ($muttype eq 'delins') {
 						my $len_org = ( defined($aa_pos2) ? ($aa_pos2 - $aa_pos + 1) : 1 ) ;
 						my $len_mut = length $delins_spec;

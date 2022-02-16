@@ -1,14 +1,14 @@
 trial_id	eligibility_criteria
 ACTRN12619000844145	ALK:fusion
-ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12620000861954	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
 ACTRN12620000861954p	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
+ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12621000811808	(MET:exon_14_skipping_mutation OR MET:exon_14_deletion)
 NCT02408861	HIV_POSITIVE
 NCT02477826	*NOT prior_therapy:systemic_therapy
 NCT02568267	(NTRK1:oncogenic_mutation OR NTRK2:oncogenic_mutation OR NTRK3:oncogenic_mutation OR ROS1:oncogenic_mutation OR ALK:oncogenic_mutation)
-NCT02609776	MET:oncogenic_mutation
 NCT02609776	MET:exon_14_skipping_mutation; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin)
+NCT02609776	MET:oncogenic_mutation
 NCT02628067	catype:Anal Cancer
 NCT02628067	catype:Biliary Tract Cancer
 NCT02628067	catype:Cervical Cancer
@@ -23,14 +23,6 @@ NCT02628067	catype:Small-Cell Lung Carcinoma
 NCT02628067	catype:Thyroid Carcinoma
 NCT02628067	catype:Vulvar Cancer
 NCT02628067	microsatellite_instability:high
-NCT02857270	BRAF:alteration; catype:Melanoma
-NCT02857270	BRAF:alteration; catype:Non-small cell lung cancer
-NCT02857270	NO_LONGER_ENROLLING_PATIENTS; (BRAF:alteration OR KRAS:alteration OR NRAS:alteration)
-NCT02857270	NO_LONGER_ENROLLING_PATIENTS; catype:Pancreatic cancer
-NCT02857270	NRAS:alteration; catype:Melanoma
-NCT02857270	NRAS:alteration; catype:Melanoma
-NCT02857270	catype:Non-small cell lung cancer; (BRAF:alteration OR KRAS:alteration OR NRAS:alteration)
-NCT02857270	catype:colorectal cancer; BRAF:V600E
 NCT02974725	BRAF:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT02974725	KRAS:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT02974725	NRAS:oncogenic_mutation; catype:Melanoma
@@ -65,6 +57,7 @@ NCT03212404	catype:Small-Cell Lung Cancer
 NCT03212404	catype:Small-cell lung cancer
 NCT03212404	catype:Urothelial Carcinoma
 NCT03212404	catype:Urothelial carcinoma
+NCT03319940	catype:Small-cell lung carcinoma
 NCT03454451	catype:Bladder Cancer
 NCT03454451	catype:Cervical Cancer
 NCT03454451	catype:Cervical cancer
@@ -91,6 +84,7 @@ NCT03454451	catype:Urothelial carcinoma
 NCT03454451	catype:Urothelial carcinoma
 NCT03454451	catype:Uterine cancer
 NCT03497767	EGFR:oncogenic_mutation
+NCT03516981	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ERBB2:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT03539536	MET:alteration; catype:Non-small cell lung cancer
 NCT03549000	catype:Colorectal Cancer
 NCT03549000	catype:Colorectal Cancer; NOT microsatellite_instability:high
@@ -104,12 +98,6 @@ NCT03549000	catype:Pancreatic Cancer
 NCT03549000	catype:Prostate Cancer
 NCT03549000	catype:Renal Cell Carcinoma
 NCT03549000	catype:Triple-Negative Breast Cancer
-NCT03639714	catype:Colorectal Cancer
-NCT03639714	catype:Colorectal cancer; NOT microsatellite_instability:high; NOT BRAF:V600E
-NCT03639714	catype:Gastroesophageal Adenocarcinoma
-NCT03639714	catype:Non-Small Cell Lung Cancer
-NCT03639714	catype:Non-small cell lung cancer; NOT EGFR:alteration; NOT ALK:alteration; NOT ROS1:alteration; NOT RET:alteration; NOT NTRK1:alteration; NOT NTRK2:alteration; NOT NTRK3:alteration
-NCT03639714	catype:Urothelial Carcinoma
 NCT03906331	RET:fusion
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
 NCT03948763	(KRAS:G12D OR KRAS:G12V OR KRAS:G13D OR KRAS:G12C); catype:Colorectal cancer; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
@@ -120,23 +108,22 @@ NCT03994393	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_delet
 NCT04129502	EGFR:exon_20_insertion
 NCT04194944	RET:fusion; *NOT prior_therapy:systemic_therapy
 NCT04222972	catype:Non-small cell lung cancer; RET:fusion
-NCT04248829	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04262856	*NOT prior_therapy:systemic_therapy
-NCT04282018	catype:Haematologic cancer
-NCT04282018	catype:Non-small cell lung cancer
-NCT04282018	catype:Small cell lung cancer
-NCT04282018	catype:Head and neck squamous cell carcinoma
-NCT04282018	catype:Hepatocellular carcinoma
+NCT04282018	catype:Cervical cancer
+NCT04282018	catype:Endometrial carcinoma
 NCT04282018	catype:Gastric cancer
 NCT04282018	catype:Gastroesophageal junction carcinoma
-NCT04282018	catype:Nasopharyngeal carcinoma
-NCT04282018	catype:Renal cell carcinoma
-NCT04282018	catype:Cervical cancer
-NCT04282018	catype:Triple-negative breast cancer
-NCT04282018	catype:Ovarian cancer
-NCT04282018	catype:Endometrial carcinoma
-NCT04282018	catype:Oesophageal cancer
+NCT04282018	catype:Haematologic cancer
+NCT04282018	catype:Head and neck squamous cell carcinoma
+NCT04282018	catype:Hepatocellular carcinoma
 NCT04282018	catype:Melanoma
+NCT04282018	catype:Nasopharyngeal carcinoma
+NCT04282018	catype:Non-small cell lung cancer
+NCT04282018	catype:Oesophageal cancer
+NCT04282018	catype:Ovarian cancer
+NCT04282018	catype:Renal cell carcinoma
+NCT04282018	catype:Small cell lung cancer
+NCT04282018	catype:Triple-negative breast cancer
 NCT04282018	catype:Urothelial carcinoma
 NCT04282018	microsatellite_instability:High
 NCT04282018	mismatch_repair:deficient
@@ -146,18 +133,16 @@ NCT04383210	NRG1:fusion
 NCT04427072	MET:exon_14_skipping_mutation
 NCT04434482	NOT catype:central nervous system cancer
 NCT04447118	ERBB2:exon_20_mutation
-NCT04449874	KRAS:G12C; catype:Solid tumour
 NCT04449874	KRAS:G12C; catype:Colorectal cancer
 NCT04449874	KRAS:G12C; catype:Non-small cell lung cancer
+NCT04449874	KRAS:G12C; catype:Solid tumour
 NCT04487080	(EGFR:exon_19_deletion OR EGFR:exon_21_mutation OR EGFR:L858R)
 NCT04538664	EGFR:exon_20_insertion; *NOT prior_therapy:EGFR_inhibitor,exon_20_selective
 NCT04585815	BRAF:V600E
+NCT04619004	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
+NCT04624204	catype:Small-cell lung carcinoma
 NCT04644237	ERBB2:oncogenic_mutation; NOT EGFR:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion
+NCT04655976	NOT ALK:fusion; NOT EGFR:oncogenic_mutation; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT04699188	KRAS:G12C
 NCT04746924	NOT ALK:fusion; NOT EGFR:oncogenic_mutation
-NCT04655976	NOT ALK:fusion; NOT EGFR:oncogenic_mutation; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT04849273	ALK:fusion
-NCT03516981	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ERBB2:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:V600E
-NCT04624204	catype:Small-cell lung carcinoma
-NCT03319940	catype:Small-cell lung carcinoma
-NCT04619004	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)

@@ -70,9 +70,9 @@ AR ARAF ARHGAP26 ARHGAP5 ARHGEF10 ARHGEF10L ARHGEF12 ARID1A ARID1B ARID2 ARNT AS
 B2M BAP1 BARD1 BAX BAZ1A BCL10 BCL11A BCL11B BCL2 BCL2L12 BCL3 BCL6 BCL7A BCL9 BCL9L BCLAF1 BCOR BCORL1 BCR BIRC3 BIRC6
 BLM BMP5 BMPR1A BRAF BRCA1 BRCA2 BRD3 BRD4 BRIP1 BTG1 BTK BUB1B
 C15orf65 CACNA1D CALR CAMTA1 CANT1 CARD11 CARS CASP3 CASP8 CASP9 CBFA2T3 CBFB CBL CBLB CBLC CCDC6 CCNB1IP1 CCNC CCND1 CCND2 CCND3 CCNE1
-CCR4 CCR7 CD209 CD274 CD28 CD74 CD79A CD79B CDC73 CDH1 CDH10 CDH11 CDH17 CDK12 CDK4 CDK6 CDKN1A CDKN1B CDKN2A CDKN2C CDX2 CEBPA CEP89 CHCHD7
+CCR4 CCR7 CD209 CD274 CD276 CD28 CD74 CD79A CD79B CDC73 CDH1 CDH10 CDH11 CDH17 CDK12 CDK4 CDK6 CDKN1A CDKN1B CDKN2A CDKN2C CDX2 CEBPA CEP89 CHCHD7
 CHD2 CHD4 CHEK2 CHIC2 CHST11 CIC CIITA CLIP1 CLP1 CLTC CLTCL1 CNBD1 CNBP CNOT3 CNTNAP2 CNTRL COL1A1 COL2A1 COL3A1 COX6C CPEB3 CREB1 CREB3L1 CREB3L2 CREBBP
-CRLF2 CRNKL1 CRTC1 CRTC3 CSF1R CSF3R CSMD3 CTCF CTNNA2 CTNNB1 CTNND1 CTNND2 CUL3 CUX1 CXCR4 CYLD CYP2C8 CYSLTR2
+CRLF2 CRNKL1 CRTC1 CRTC3 CSF1 CSF1R CSF3R CSMD3 CTCF CTNNA2 CTNNB1 CTNND1 CTNND2 CUL3 CUX1 CXCR4 CYLD CYP2C8 CYSLTR2
 DAXX DCAF12L2 DCC DCTN1 DDB2 DDIT3 DDR2 DDX10 DDX3X DDX5 DDX6 DEK DGCR8 DICER1 DNAJB1 DNM2 DNMT3A DROSHA DUX4L1
 EBF1 ECT2L EED EGFR EIF1AX EIF3E EIF4A2 ELF3 ELF4 ELK4 ELL ELN EML4 EP300 EPAS1 EPHA3 EPHA7 EPS15
 ERBB2 ERBB3 ERBB4 ERC1 ERCC2 ERCC3 ERCC4 ERCC5 ERG ESR1 ETNK1 ETV1 ETV4 ETV5 ETV6 EWSR1 EXT1 EXT2 EZH2 EZR
@@ -86,7 +86,7 @@ JAK1 JAK2 JAK3 JAZF1 JUN
 KAT6A KAT6B KAT7 KCNJ5 KDM5A KDM5C KDM6A KDR KDSR KEAP1 KIAA1549 KIF5B KIT KLF4 KLF6 KLK2 KMT2A KMT2C KMT2D KNL1 KNSTRN KRAS KTN1
 LARP4B LASP1 LATS1 LATS2 LCK LCP1 LEF1 LEPROTL1 LHFPL6 LIFR LMNA LMO1 LMO2 LPP LRIG3 LRP1B LSM14A LYL1 LZTR1
 MACC1 MAF MAFB MALAT1 MALT1 MAML2 MAP2K1 MAP2K2 MAP2K4 MAP3K1 MAP3K13 MAPK1 MAPK3 MAX MB21D2 MDM2 MDM4 MDS2 MECOM MED12 MEN1 MET MGMT MITF MLF1 MLH1
-MLLT1 MLLT10 MLLT11 MLLT3 MLLT6 MN1 MNX1 MPL MRTFA MSH2 MSH6 MSI2 MSN MTCP1 MTOR MTORC1 MUC1 MUC16 MUC4 MUTYH MYB MYC MYCL MYCN MYD88 MYH11 MYH9 MYO5A MYOD1
+MLLT1 MLLT10 MLLT11 MLLT3 MLLT6 MN1 MNX1 MPL MRAS MRTFA MSH2 MSH6 MSI2 MSN MTCP1 MTOR MTORC1 MUC1 MUC16 MUC4 MUTYH MYB MYC MYCL MYCN MYD88 MYH11 MYH9 MYO5A MYOD1
 N4BP2 NAB2 NACA NBEA NBN NCKIPSD NCOA1 NCOA2 NCOA4 NCOR1 NCOR2 NDRG1 NF1 NF2 NFATC2 NFE2L2 NFIB NFKB2 NFKBIE NIN
 NKX2-1 NONO NOTCH1 NOTCH2 NPM1 NR4A3 NRAS NRG1 NSD1 NSD2 NSD3 NT5C2 NTHL1 NTRK1 NTRK3 NUMA1 NUP214 NUP98 NUTM1 NUTM2B NUTM2D
 OLIG2 OMD P2RY8
@@ -112,7 +112,7 @@ ZBTB16 ZCCHC8 ZEB1 ZFHX3 ZMYM2 ZMYM3 ZNF331 ZNF384 ZNF429 ZNF479 ZNF521 ZNRF3 ZR
 my @oncogene_list = qw(
 A1CF ABL1 ABL2 ACKR3 ACVR1 AFDN AFF3 AFF4 AKT1 AKT2 AKT3 ALK APOBEC3B AR ARAF ARHGAP5 ARNT ATF1 ATP1A1 
 BCL11A BCL11B BCL2 BCL2L12 BCL3 BCL6 BCL9 BCL9L BCORL1 BIRC3 BIRC6 BMPR1A BRAF BRD3 BRD4 BTK 
-CACNA1D CALR CARD11 CBL CBLC CCND1 CCND2 CCND3 CCNE1 CCR4 CCR7 CD28 CD74 CD79A CD79B CDH17 CDK4 CDK6 CDKN1A CHD4 CHST11 CIC CREB1 CREB3L2 CREBBP CRLF2 CRTC1 CSF1R CSF3R CTNNA2 CTNNB1 CTNND2 CUX1 CXCR4 CYSLTR2 
+CACNA1D CALR CARD11 CBL CBLC CCND1 CCND2 CCND3 CCNE1 CCR4 CCR7 CD28 CD74 CD79A CD79B CDH17 CDK4 CDK6 CDKN1A CHD4 CHST11 CIC CREB1 CREB3L2 CREBBP CRLF2 CRTC1 CSF1 CSF1R CSF3R CTNNA2 CTNNB1 CTNND2 CUX1 CXCR4 CYSLTR2 
 DAXX DDB2 DDIT3 DDR2 DDX5 DDX6 DEK DGCR8 
 EGFR ELF4 ELK4 EPAS1 ERBB2 ERBB3 ERBB4 ERG ESR1 ETV1 ETV4 ETV5 EWSR1 EZH2 
 FCGR2B FCRL4 FES FEV FGFR1 FGFR2 FGFR3 FGFR4 FLI1 FLT3 FLT4 FOXA1 FOXL2 FOXO1 FOXO3 FOXO4 FOXP1 FOXR1 FSTL3 FUBP1 
@@ -122,7 +122,7 @@ IDH1 IDH2 IKBKB IL6ST IL7R IRF4 IRS4
 JAK1 JAK2 JAK3 JUN 
 KAT6A KAT7 KCNJ5 KDM5A KDM6A KDR KIT KLF4 KMT2A KMT2D KNSTRN KRAS 
 LCK LEF1 LMO1 LMO2 LPP LYL1 
-MACC1 MAF MAFB MALAT1 MALT1 MAML2 MAP2K1 MAP2K2 MAP2K4 MAP3K1 MAP3K13 MAPK1 MAPK3 MDM2 MDM4 MECOM MET MITF MLLT10 MN1 MPL MRTFA MSI2 MTCP1 MTOR MTORC1 MUC16 MUC4 MYB MYC MYCL MYCN MYD88 MYOD1 NCOA2 
+MACC1 MAF MAFB MALAT1 MALT1 MAML2 MAP2K1 MAP2K2 MAP2K4 MAP3K1 MAP3K13 MAPK1 MAPK3 MDM2 MDM4 MECOM MET MITF MLLT10 MN1 MPL MRAS MRTFA MSI2 MTCP1 MTOR MTORC1 MUC16 MUC4 MYB MYC MYCL MYCN MYD88 MYOD1 NCOA2 
 NFATC2 NFE2L2 NFKB2 NKX2-1 NOTCH1 NOTCH2 NPM1 NR4A3 NRAS NSD2 NSD3 NT5C2 NTRK1 NTRK3 NUP98 NUTM1 
 OLIG2 
 P2RY8 PABPC1 PAX3 PAX5 PBX1 PDCD1LG2 PDGFB PDGFRA PDGFRB PIK3CA PIK3CB PIM1 PLAG1 PLCG1 POLQ POU2AF1 POU5F1 PPM1D PRDM16 PREX2 PRKACA PRKAR1A PSIP1 PTK6 PTPN11 
@@ -139,7 +139,7 @@ ZEB1 ZNF521
 my @TSG_list = qw(
 ABI1 ACVR2A AMER1 APC APOBEC3B ARHGAP26 ARHGEF10 ARHGEF10L ARHGEF12 ARID1A ARID1B ARID2 ARNT ASXL1 ASXL2 ATM ATP1A1 ATP2B3 ATR ATRX AXIN1 AXIN2 
 B2M BAP1 BARD1 BAX BAZ1A BCL10 BCL11B BCL9L BCOR BCORL1 BIRC3 BLM BMPR1A BRCA1 BRCA2 BRIP1 BTG1 BTK BUB1B 
-CAMTA1 CARS CASP3 CASP8 CASP9 CBFA2T3 CBFB CBL CBLB CBLC CCDC6 CCNB1IP1 CCNC CD274 CDC73 CDH1 CDH10 CDH11 CDK12 CDKN1A CDKN1B CDKN2A CDKN2C CDX2 CEBPA CHD2 CHEK2 CIC CIITA CLTC CLTCL1 CNBP CNOT3 CNTNAP2 CPEB3 CREB3L1 CREBBP CSMD3 CTCF CUL3 CUX1 CYLD 
+CAMTA1 CARS CASP3 CASP8 CASP9 CBFA2T3 CBFB CBL CBLB CBLC CCDC6 CCNB1IP1 CCNC CD274 CD276 CDC73 CDH1 CDH10 CDH11 CDK12 CDKN1A CDKN1B CDKN2A CDKN2C CDX2 CEBPA CHD2 CHEK2 CIC CIITA CLTC CLTCL1 CNBP CNOT3 CNTNAP2 CPEB3 CREB3L1 CREBBP CSMD3 CTCF CUL3 CUX1 CYLD 
 DAXX DDB2 DDX10 DDX3X DICER1 DNM2 DNMT3A DROSHA 
 EBF1 EED EIF3E ELF3 ELF4 ELL EP300 EPAS1 EPS15 ERBB4 ERCC2 ERCC3 ERCC4 ERCC5 ESR1 ETNK1 ETV6 EXT1 EXT2 EZH2 
 FANCA FANCC FANCD2 FANCE FANCF FANCG FANCL FAS FAT1 FAT4 FBLN2 FBXO11 FBXW7 FEN1 FES FH FHIT FLCN FOXL2 FOXO1 FOXO3 FOXO4 FUS 
@@ -188,7 +188,7 @@ $cancer_gene_type{$_} = 'TSG' for @TSG_list;
 $cancer_gene_type{$_} = 'oncogene' for @oncogene_list;
 $cancer_gene_type{ $other_biomarkers{$_} } = $other_biomarkers{$_} for keys %other_biomarkers;
 
-
+my %roman_numerals = (I => 1, II => 2, III => 3, IV => 4, V => 5, VI => 6, VII => 7, VIII => 8);
 
 sub deutf { my $x = shift; $x =~ s/\xc2\xa0//g; return $x ; }
 sub hl { my ($col, $x) = @_; return "\e[1;${col}m$x\e[0m"; }
@@ -207,10 +207,12 @@ sub encode_alteration_proper {
 
 	$x =~ s/mut$//;
 	$x =~ s/^\s+|\s+$//g;
-	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wildtype|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient|.*terminal tail.*)s?$/i ) { 
+	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wild.?type|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient|.*terminal tail.*)s?$/i ) { 
 		$x = lc($1) ;
 	} elsif ( $x =~ /^((?:high)?) *(mRNA) (expression)s?$/i ) { 
 		$x = join( " ", ( grep { length } ( lc($1 // ''), $2, lc($3) ) ) );
+	} elsif ( $x =~ /^(class) +([IV]+|123) +(mutation)s?$/i ) { 
+		$x = join( " ", ( grep { length } ( lc($1 // ''), (exists $roman_numerals{$2} ? $roman_numerals{$2} : $2), lc($3) ) ) );
 	} elsif ( $x =~ /^((?:DNA binding|kinase|\S+membrane|extracellular) domain (?:deletion|insertion|duplication|(?:missense )?mutation))s?$/i ) { 
 		$x = lc($1);
 	} elsif ( $x =~ /^(Exon \d+ (?i:deletion|(?:splic\w+ |skipping )?mutation|insertion|insertions?\/deletion|indel))s?$/i ) { 
@@ -260,6 +262,9 @@ sub encode_alteration {
 	}
 	
 	my $f_biomarker_has_plus = ( $biomarker =~ /\+/ );
+	
+	warn "f_biomarker_has_plus not defined" if ! defined $f_biomarker_has_plus ;
+	warn "biomarker not defined" if ! defined $biomarker ;
 	
 	return join("; ", ( map { 
 			( /^((?i:not)) +(?<bm>.*)/ ? 
@@ -356,14 +361,21 @@ sub gen_rule_knowledge_base {
 
 	my @fields = @{ $TSV_master->{'fields'} };
 
-	my ($fname_biomarker)   = grep { /Biomarker|Hugo\s+Symbol/x } @fields ;
-	my ($fname_alteration)  = grep { /Alteration|Alteration/x } @fields ;
-	my ($fname_cancer_type) = grep { /Tumour\s+Types?|Cancer\s+Types?/x } @fields ;
-	my ($fname_evidence)    = grep { /Evidence|PMIDs\s+for\s+drug/x } @fields ;
-	my ($fname_drugs)       = grep { /Drugs|Drug\(s\)/x } @fields ;
-	my ($fname_tier)        = grep { /Tier|Level/x } @fields ;
+	my ($fname_biomarker)   = grep { /Biomarkers?|Hugo\s*Symbols?/i } @fields ;
+	my ($fname_alteration)  = grep { /Alterations?|Alteration/i } @fields ;
+	my ($fname_cancer_type) = grep { /Tumour\s*Types?|Cancer\s*Types?/i } @fields ;
+	my ($fname_evidence)    = grep { /Evidence|PMIDs\s*for\s*drug/i } @fields ;
+	my ($fname_drugs)       = grep { /Drugs|Drug\(s\)/i } @fields ;
+	my ($fname_tier)        = grep { /Tier|Level/i } @fields ;
 	my $mtime_db            = strftime("%d/%m/%Y", localtime( mtime($srcf) ) );
 
+# 	print $TSV_master->to_string();
+# 	print STDERR join("\t", ( map { "[$_]" } @fields) )."\n";
+	die "FATAL: $0: Evidence.pm: $srckb knowledge base ($srcf) does not contain CancerType field. " if ! defined $fname_cancer_type;
+	die "FATAL: $0: Evidence.pm: $srckb knowledge base ($srcf) does not contain Alteration field. " if ! defined $fname_alteration;
+	die "FATAL: $0: Evidence.pm: $srckb knowledge base ($srcf) does not contain Biomarker field. " if ! defined $fname_biomarker;
+	warn "WARNING: $0: Evidence.pm: $srckb knowledge base ($srcf) does not contain Evidence field." if ! defined $fname_evidence;
+	
 	# First, register all known drug combinations from the database
 	for my $row ( @{ $TSV_master->{'data'} } ) {
 		my $treatment = deutf( $$row{$fname_drugs} );
@@ -395,6 +407,7 @@ sub gen_rule_knowledge_base {
 	if ( defined $repurposing_retier_cancer_type_str ) {
 		push @debug_msg, "repurposing-retier:cancer-type = $repurposing_retier_cancer_type_str\n";
 		%repurposing_retier_cancer_type = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*,\s*/, $repurposing_retier_cancer_type_str;
+# 		print STDERR join("; ", ( map { "$_ => $repurposing_retier_cancer_type{$_}" } keys %repurposing_retier_cancer_type ) )."\n";
 	}
 
 	my ($repurposing_retier_related_mutation_str) = POTTRConfig::get('repurposing-retier:related-mutation');
@@ -425,7 +438,11 @@ sub gen_rule_knowledge_base {
 		my $treatment   = deutf( $$row{$fname_drugs} );
 		my $evidence    = deutf( $$row{$fname_evidence} // '' );        $evidence =~ s/;/,/g;
 		my $comments    = deutf( $$row{'Comments'} // '' );
-		my ($biomarker_drug_class_focus) = ( $comments =~ /(\w+) inhibitors?/i ) ; # FIXME
+		my $biomarker_drug_class_focus;
+		for ($comments) {
+			/(\w+) inhibitors?/i and do { $biomarker_drug_class_focus = $1; last; } ;
+			/inhibits? (\w+)/i and do { $biomarker_drug_class_focus = $1; last; } ;
+		}
 		push @debug_msg, "\e[1;36mBiomarker focus in the comments: $biomarker_drug_class_focus\e[0m\n" if defined $biomarker_drug_class_focus;
 		my $treatment_class = Therapy::get_treatment_class( $$row{$fname_drugs}, $biomarker, $biomarker_drug_class_focus );
 		

@@ -431,12 +431,15 @@ sub gen_rules_catype_match($\@\@) {
 	my @catypecodes = @{ $_[2] };
 	my @catype_general = map { CancerTypes::match_catype_whole_word($_) } ("Neoplasms", "Cancer", "Adenocarcinoma", "Solid tumour", "Liquid cancer") ;
 	my $catype_general = join( "|", @catype_general );
-			
+	
+	my @non_general_hcc = map { /:/ ? $_ : CancerTypes::match_catype_whole_word($_) } grep { length and ( ! /^(?:$catype_general)$/ ) } @catypecodes; 
+	
+# 	print STDERR "$trial_id: N(eligibility_criteria_strs)=".join(" ", scalar(@eligibility_criteria_strs) )."\n";
 	for my $eligibility_criteria_str (@eligibility_criteria_strs) {
 	
-		next if ! defined $eligibility_criteria_str;
+# 		next if ! length $eligibility_criteria_str;
 		
-		my $f_eligibility_criteria_str_has_catype = ( (defined $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)catype:/ ) );
+		my $f_eligibility_criteria_str_has_catype = ( (length $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)catype:/ ) );
 				
 		$retval{$eligibility_criteria_str} = [] if ! exists $retval{$eligibility_criteria_str} ;
 		
@@ -444,40 +447,48 @@ sub gen_rules_catype_match($\@\@) {
 # 		print STDERR "\t>$_\n" for @eligibility_criteria_str_catypes ;
 				
 		my $cnt = 0;
-		HCC: for my $hcc (grep { length and ( $f_eligibility_criteria_str_has_catype || ! /^(?:$catype_general)$/ ) } @catypecodes) {
+		for my $hcc (grep { $f_eligibility_criteria_str_has_catype } @non_general_hcc) {
 # 			print STDERR ">> $trial_id || $f_eligibility_criteria_str_has_catype \t|| [$hcc] || ".($eligibility_criteria_str//'')." \n";
 					
 			for my $ecc ( @eligibility_criteria_str_catypes ) {
 				my $hcc_isa_ecc = CancerTypes::is_a( $hcc, $ecc );
 				my $ecc_isa_hcc = CancerTypes::is_a( $ecc, $hcc );
-				my $col  = ( $hcc_isa_ecc * $ecc_isa_hcc ) ?  33 : ( $hcc_isa_ecc ? 36 : ( $ecc_isa_hcc ? '38;5;72' : 30) );
 				my $flag = ( $hcc_isa_ecc * $ecc_isa_hcc ) ? "=" : ( $hcc_isa_ecc ? "(" : ( $ecc_isa_hcc ? ')' : "X" ) );
+				my $col  = ( $hcc_isa_ecc * $ecc_isa_hcc ) ?  33 : ( $hcc_isa_ecc ? 36 : ( $ecc_isa_hcc ? '38;5;72' : 30) );
 # 				print STDERR "\t\e[1;${col}m$hcc $flag $ecc\e[0m\n";
 				++$cnt;
-				next if $flag eq ')' or $flag eq 'X';
-				if ( $flag eq '=' ) {
+				next if $flag eq 'X'; # $flag eq ')' 
+				if ( $flag eq '=' or $flag eq ')' ) {
 					push @{ $retval{$eligibility_criteria_str} }, '';
 				} elsif ( $flag eq '(' ) {
 					push @{ $retval{$eligibility_criteria_str} }, join("; ", "catype:$ecc", "*catype:$hcc") if $ecc ne 'Cancer';
 				}
 			}
-			
-			if ( ! $cnt ) {
+		}
+		
+		if ( ! $cnt ) {
+# 			print STDERR "\t> !\$cnt\tnon_general_hcc=".join(", ", @non_general_hcc)."\n" ;
+		
+			for my $hcc (@non_general_hcc) {
 				push @{ $retval{$eligibility_criteria_str} }, "catype:$hcc" ;
-				my @hcc_ancestors = grep { defined and ! /Solid|^Cancer$|Haematologic/ } CancerTypes::get_ancestors( $hcc );
-				if ( grep { exists $Evidence::reference_catypes{$_} } @hcc_ancestors ) {
-					for my $a (@hcc_ancestors) {
-						last if $a eq $hcc;
-# 						my $col = (exists $reference_catypes{$a}) ? 33 : 30;
-# 						print STDERR "\t$hcc vs \e[1;${col}m$a \e[0m\n";
-						push @{ $retval{$eligibility_criteria_str} }, "catype:$a; *catype:$hcc" ;
-						if ( exists $Evidence::reference_catypes{$a} ) {
-							last;
+# 				print STDERR "\t> added $hcc\n" ;
+				my @hcc_ancestors = ( $hcc =~ /:/ ? ($hcc) : ( grep { defined and ! /Solid|^Cancer$|Haematologic/ } CancerTypes::get_ancestors( $hcc ) ) );
+				my @hcc_ancestor_is_a_reference_catype = grep { defined and exists $Evidence::reference_catypes{$_} } @hcc_ancestors;
+				if ( scalar(@hcc_ancestor_is_a_reference_catype) ) {
+					A: for my $a (@hcc_ancestors) {
+# 						print STDERR "$trial_id\t$hcc\t$a\t".scalar(@hcc_ancestor_is_a_reference_catype)." ".join(" ", @hcc_ancestor_is_a_reference_catype)."\n";
+						next A if $a eq $hcc;
+						for my $b (@hcc_ancestor_is_a_reference_catype) {
+							my $a_isa_b = CancerTypes::is_a( $a, $b );
+							next A if $a_isa_b ;
 						}
+						push @{ $retval{''} }, "catype:$a; *catype:$hcc" ;
 					}
 				}
 			}
 		}
+		
+		push @{ $retval{$eligibility_criteria_str} }, $eligibility_criteria_str if ( $eligibility_criteria_str =~ /catype:/ ) and ( ! grep { $_ eq $eligibility_criteria_str } @{ $retval{$eligibility_criteria_str} } );
 	}
 	return %retval;
 }
@@ -534,8 +545,6 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 				push @{ $Eligibility_by_trial_id{$trial_id} }, @{ $Eligibility_by_trial_id_this_file{$trial_id} }; 
 			}
 		}
-		
-		# %Eligibility_by_trial_id = $Eligibility->index_by('trial_id'); # OLD CODE - TODELETE
 	}
 
 	my @uniq_trials = sort keys %trial_db_by_trial_id;
@@ -546,8 +555,8 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		
 		my $matched_drug_names    = $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
 		my $matched_drug_classes  = $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
-		my $matched_combos        = $trial_db_by_trial_id{$trial_id}{'combo_list'}  // $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
-		my $matched_combo_classes = $trial_db_by_trial_id{$trial_id}{'combo_classes'} // $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
+		my $matched_combos        = $trial_db_by_trial_id{$trial_id}{'combo_list'}  || $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
+		my $matched_combo_classes = $trial_db_by_trial_id{$trial_id}{'combo_classes'} || $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
 		
 		my @matched_drug_names = map { Therapy::get_normalised_treatment_name($_) } ( grep { length } split /\s*;\s*/, $matched_drug_names ) ;
 		my @matched_drug_classes = split /\s*;\s*/, $matched_drug_classes ;
@@ -600,7 +609,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		
 		my @eligibility_criteria_strs = exists $Eligibility_by_trial_id{$trial_id} ? @{ $Eligibility_by_trial_id{$trial_id} } : ();
 		s!(catype:)(.+?)(\s+OR|\s*\)|\s*;|\s*=>|\s*$)!$1.((CancerTypes::match_catype($2))[0]//$2).$3!ge for @eligibility_criteria_strs ;
-		push @eligibility_criteria_strs, undef if ! scalar @eligibility_criteria_strs;  # add an undefined value if empty eligibility string
+		push @eligibility_criteria_strs, '' if ! scalar @eligibility_criteria_strs;  # add an undefined value if empty eligibility string
 		
 		my @trial_info ;
 		push @trial_info, "acronym:".            $trial_acronym ;
@@ -637,20 +646,22 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		my @tags = @trial_info ;
 
 		my %extra_catype_from_eligibility_str = gen_rules_catype_match($trial_id, @eligibility_criteria_strs, @catypecodes); 
+# 		print STDERR "| $trial_id\n";
 
-		for my $eligibility_criteria_str (@eligibility_criteria_strs) { # for each manually defined eligibility criteria (undef if none)
+		for my $eligibility_criteria_str (@eligibility_criteria_strs) { # for each manually defined eligibility criteria (empty string if none)
 		
-			my $f_eligibility_criteria_str_has_sensitivity = ( (defined $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)sensitive_to(?:_drug_class)?:/ ) );
-			my $f_eligibility_criteria_str_has_catype      = ( (defined $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)catype:/ ) );
+			my $f_eligibility_criteria_str_has_sensitivity = ( (length $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)sensitive_to(?:_drug_class)?:/ ) );
+			my $f_eligibility_criteria_str_has_catype      = ( (length $eligibility_criteria_str) && ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)catype:/ ) );
 
-			my @extra_catype_strs = $eligibility_criteria_str ? @{ $extra_catype_from_eligibility_str{$eligibility_criteria_str} } : () ;
+			my @extra_catype_strs = length $eligibility_criteria_str ? @{ $extra_catype_from_eligibility_str{$eligibility_criteria_str} } : ();
 			
-# 			print "|| $f_eligibility_criteria_str_has_sensitivity\t$eligibility_criteria_str\n";
+# 			print STDERR "|| f_eligibility_criteria_str_has_sensitivity=$f_eligibility_criteria_str_has_sensitivity\teligibility_criteria_str=$eligibility_criteria_str\n";
+# 			print STDERR "|| >>> extra_catype_strs=[".join(" ", @extra_catype_strs)."] \n";
 			
 			for my $d ( @matched_drug_names )  {
 				my $trial_match_criteria_str = "trial_match_criteria:drug_sensitivity";
 				for my $c ( @matched_combos )  {
-# 					print "|| $d\t$c\n";
+# 					print STDERR "|| $d\t$c\n";
 					my $drug_sensitivity_str = "sensitive_to:$d; NOT therapy_recommendation:$d:U";
 					my $drug_sensitivity_tag = "INFERRED:treatment_drug:$d";
 					my $f_preferential_trial_combo_complete_match = undef;
@@ -666,18 +677,20 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 					my $f_eligibility_criteria_str_has_drug_sensitivity = ( $f_eligibility_criteria_str_has_sensitivity and ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)$drug_sensitivity_str(?:\d*$|\b)/ ) );
 					my $f_assert_drug_sensitivity_tag = ( (! $f_eligibility_criteria_str_has_sensitivity) or $f_eligibility_criteria_str_has_drug_sensitivity) ;
 				
-# 					print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_sensitivity_str\t|\t$eligibility_criteria_str\n";
+# 					print STDERR "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_sensitivity_str\t|\t$eligibility_criteria_str\n";
 
 					for my $extra_catype_strs ('', @extra_catype_strs) {
 						next if $extra_catype_strs eq $catypecodes_str;
 						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
+						my $trial_match_criteria_str_spec = $trial_match_criteria_str;
+# 						$trial_match_criteria_str_spec = join("; ", $trial_match_criteria_str_spec, "trial_match_criteria:cancer_type");
 						push @trials_rules, mkrule( 
 							[ ( $f_eligibility_criteria_str_has_sensitivity ? undef : $drug_sensitivity_str) , 
 								( $f_eligibility_criteria_str_has_catype ? undef : ( ( $extra_catype_strs =~ /\*$catypecodes_str(?:;|$)/) ? undef : $catypecodes_str )  ) ,
 								$extra_catype_strs,
 								$eligibility_criteria_str 
 							], 
-							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @trial_info, $trial_match_criteria_str, 
+							[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @trial_info, $trial_match_criteria_str_spec, 
 								($f_assert_drug_sensitivity_tag ? $drug_sensitivity_tag: undef),
 								$f_preferential_trial_catype_complete_match,
 								$f_preferential_trial_combo_complete_match 
@@ -691,9 +704,11 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 				}
 			}
 			
+# 			print STDERR "| DC: ".join(" ", @matched_drug_classes)."\n";
 			for my $dc ( @matched_drug_classes )  {
 				my @tags = @trial_info ;
 				for my $cc ( @matched_combo_classes )  {
+# 					print STDERR "| DC: CC: $cc\n";
 					my $trial_match_criteria_str = "trial_match_criteria:drug_class_sensitivity";
 						
 					my $drug_class_sensitivity_str = "sensitive_to_drug_class:$dc";
@@ -712,7 +727,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 					my $f_eligibility_criteria_str_has_drug_class_sensitivity = ( $f_eligibility_criteria_str_has_sensitivity and ( $eligibility_criteria_str =~ /(?:^|;\s*|\bOR\s*)$drug_class_sensitivity_str(?:\d*$|\b)/ ) );
 					my $f_assert_drug_class_sensitivity_tag = ( (! $f_eligibility_criteria_str_has_sensitivity) or $f_eligibility_criteria_str_has_drug_class_sensitivity) ;
 							
-	# 				print "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_class_sensitivity_str\t|\t$eligibility_criteria_str\n";
+# 					print STDERR "||| DC: f_eligibility_criteria_str_has_drug_class_sensitivity=$f_eligibility_criteria_str_has_drug_class_sensitivity\tdrug_class_sensitivity_str=$drug_class_sensitivity_str\t|\teligibility_criteria_str=$eligibility_criteria_str\n";
 
 					for my $extra_catype_strs ('', @extra_catype_strs) {
 						next if $extra_catype_strs  eq $catypecodes_str;
@@ -739,16 +754,19 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 
 
 # 		print "$n_preferential_rules\t$matched_drug_names\n";
-
+# 		print STDERR "$trial_id:\t".join(" ", @catypecodes)."\n";
 		if ( scalar(@catypecodes) ) {
 			my @tags = @trial_info ;
 			push @tags, "trial_match_criteria:cancer_type";
 			for my $eligibility_criteria_str (@eligibility_criteria_strs) {
-				my @extra_catype_strs = $eligibility_criteria_str ? @{ $extra_catype_from_eligibility_str{$eligibility_criteria_str} } : () ;
+				my @extra_catype_strs = @{ $extra_catype_from_eligibility_str{$eligibility_criteria_str} } ;
 				
-# 				print STDERR "\t\e[1;38;5;97m$healthconditions\e[0m\n";
+# 				print STDERR "$trial_id:\teligibility_criteria_str=$eligibility_criteria_str: ".join(" ", scalar(@eligibility_criteria_strs), scalar(@extra_catype_strs) )."\n";
+			
+# 				print STDERR "\t\e[1;38;5;97mhealthconditions      =$healthconditions\e[0m\n";
+# 				print STDERR "\t\e[1;38;5;97m    extra_catype_strs =$_\e[0m\n" for @extra_catype_strs ;
 				for my $extra_catype_str (@extra_catype_strs) {
-# 					print STDERR "\t\e[1;38;5;144m$extra_catype_str\e[0m; \e[1;38;5;64m$eligibility_criteria_str\e[0m\n";
+# 					print STDERR "\t\e[1;38;5;144mextra_catype_str=$extra_catype_str\e[0m; \e[1;38;5;64meligibility_criteria_str=$eligibility_criteria_str\e[0m\n";
 					push @trials_rules, mkrule( 
 						[ $extra_catype_str, $eligibility_criteria_str ], 
 						[ Facts::mk_fact_str("preferential_trial_id:$trial_id", @tags, 

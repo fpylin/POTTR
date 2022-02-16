@@ -53,6 +53,9 @@ use Biomarker;
 use Therapy;
 use ClinicalTrials;
 use Evidence;
+use Data::Dumper;
+# use Carp qw(cluck longmess shortmess);
+
 
 ###############################################################################
 # Utility functions
@@ -88,8 +91,8 @@ sub score_tier {
 	$n  = +10  if ( $x =~ /^\(/ );
 	$n  = -1   if ( $x =~ /^\(?R1/ );
 	$n  = 2.2  if ( $x =~ /^\(?R2/ );
-	$n += 0.4  if ( $x =~ /B/   );
-	$n += 0.5  if ( $x =~ /R$/  );
+	$n += 0.5  if ( $x =~ /B/   );
+	$n += 0.4  if ( $x =~ /R$/  );
 	$n  = 5.2  if ( $x =~ /R2B/   );
 	$n += 1;
 	return $n;
@@ -132,20 +135,11 @@ sub new {
 }
 
 #######################################################################
-sub get_tier_list {
-	my $self = shift;
-	return keys %{ $self->{'tier_list'} }
-}
-
-sub is_resistance_tier {
-	my $self = shift;
-	my $tier = shift;
-	if ( exists $self->{'tier_list_resistance'} ) {
-		return ( exists $self->{'tier_list_resistance'}{$tier} ); 
-	} else {
-		return ( $tier =~ /^R/ );
-	}
-}
+# sub get_tier_list {
+# 	my $self = shift;
+# 	return keys %{ $self->{'tier_list'} }
+# }
+# 
 
 
 #######################################################################
@@ -153,32 +147,52 @@ sub load_module_init {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('00 - Initialisation and setup');
 
-	$rs->load( @POTTRConfig::predefined_rules ) if scalar @POTTRConfig::predefined_rules ;
-
 	$rs->define_dyn_rule( 'define_tier_rank_order',  sub { my $f = shift; my $facts = $_[0];
 		my @retval;
+		
 		for ($f) {
+# 			warn "$f";
+			/initial-fact/ and do {
+				$facts->deffunc('is_resistance_tier', sub { my $facts = $_[0]; my $tier = $_[1];
+						if ( my $a = $facts->getvar('tier_list_resistance') ) {
+							return ( exists $$a{$tier} ); 		
+						} 
+						return ( $tier =~ /^R/ );
+					}
+				);
+				last;
+			};
 			/^tier-rank-order:\s*(.*?)\s*$/ and do {
 				my @tier_order = split /\s+/, $1;
-				$self->{'tier_order'} = \@tier_order ;
+				$facts->setvar('tier_order', \@tier_order );
+# 				$self->{'tier_order'} = \@tier_order ;
 				@retval = ( Facts::mk_fact_str($f, 'processed') );
 				last;
 			}; 
 			/^tiers-list:\s*(.+?)\s*$/ and do {
 				my @tier_list = split /\s+/, $1;
-				$self->{'tier_list'}{$_} ++ for @tier_list ;
-				$self->{'tier_list_regex'} = join("|", ( sort { length($b) <=> length($a) } @tier_list ) );
+				my %tier_list = map { $_ => 1 } @tier_list ;
+				$facts->setvar('tier_list', \%tier_list);
+				$facts->setvar('tier_list_regex', join("|", ( sort { length($b) <=> length($a) } @tier_list ) ) );
 				last;
 			};
 			/^tiers-list-resistance:\s*(.+?)\s*$/ and do {
 				my @tier_list = split /\s+/, $1;
-				$self->{'tier_list_resistance'}{$_} ++ for @tier_list ;
+				my %tier_list = map { $_ => 1 } @tier_list ;
+				$facts->setvar('tier_list_resistance', \%tier_list);
 				last;
 			};
 		}
 		return @retval ;
 		}
 	);
+	
+# 	$rs = $self->{'modules'}->add_module('00.2 - Initialisation and setup: predefined rules');
+
+	if ( scalar @POTTRConfig::predefined_rules ) {
+# 		print STDERR ( map { "Predefined: $_\n" } @POTTRConfig::predefined_rules ) ;
+		$rs->load( @POTTRConfig::predefined_rules ) ;
+	}
 }
 
 
@@ -320,7 +334,7 @@ sub load_module_variant_evidence_grading {
 # 		$$cache{'summary_grade'}{'visited'}{$btt} = 1;
 # 		$cntf{$btt}++; print STDERR "$cache\t$cntf{$btt}\t$btt\n";
 		
-		my $tier_list_regex = $self->{'tier_list_regex'} // '[[:alnum:]]+';
+		my $tier_list_regex = $facts->getvar('tier_list_regex') // '[[:alnum:]]+';
 
 		my @matched_facts ;
 
@@ -331,7 +345,7 @@ sub load_module_variant_evidence_grading {
 # 			$$cache{'summary_grade'}{'matched_facts'} = \@matched_facts;
 # 		}
 		
-		my $tier_order_ref = $self->{'tier_order'} ;
+		my $tier_order_ref = $facts->getvar('tier_order');
 		
 		# Defining a heuristic to handle variant interactions: resistance and variant interactions.
 		# 
@@ -358,11 +372,12 @@ sub load_module_variant_evidence_grading {
 		my %tier_treatment_class_by_gene = ();
 # 		my %tier_drug_class = ( max_tier => undef, max_tier_score => undef, ref_biomarker => undef );
 
-		sub comp_max_tier_and_setvar(\%$$$) {
+		sub comp_max_tier_and_setvar(\%$$$$) {
 			my $var = $_[0];
 			my $t   = $_[1];
 			my $sc  = $_[2];
 			my $bm  = $_[3];
+			my $facts = $_[4];
 			if ( ! defined $var->{'max_tier'} ) { 
 				$var->{'max_tier'} = $t;
 				$var->{'max_tier_score'} = $sc;
@@ -374,22 +389,29 @@ sub load_module_variant_evidence_grading {
 				}
 				$var->{'ref_biomarker_tier'}{$bm} = max_tier( $var->{'ref_biomarker_tier'}{$bm}, $t );
 			}
+			
+# 			print $facts."\n".longmess( "Callstack:" );
+			my $tier_order_ref = $facts->getvar('tier_order');
+			
 
-		# ref_biomarker is the output variable
-		my @ref_biomarkers = uniq ( ( keys %{ $var->{'ref_biomarker_tier'} } ) );
-		
-		@ref_biomarkers  = sort { ( score_tier($var->{'ref_biomarker_tier'}{$a}) <=> score_tier($var->{'ref_biomarker_tier'}{$b}) ) || ( $a cmp $b ) }  @ref_biomarkers  ;
-		
-		my @ref_biomarkers1 = grep { ! ( ( $var->{'ref_biomarker_tier'}{$_} =~ /^R/ ) xor ( $var->{'max_tier'} =~ /^R/ ) ) } @ref_biomarkers;  # FIXME - need to formally define resistance tiers
-		@ref_biomarkers = @ref_biomarkers1  if scalar @ref_biomarkers1  ;
-		
-		$var->{'ref_biomarker'} = join (", ", @ref_biomarkers );
-# 		print join("\t", $type, $var, $t, $sc, $bm, $var->{'max_tier'}, $var->{'max_tier_score'}, $var->{'ref_biomarker'})."\n";
+
+			# ref_biomarker is the output variable
+			my @ref_biomarkers = uniq ( ( keys %{ $var->{'ref_biomarker_tier'} } ) );
+			
+			@ref_biomarkers  = sort { ( score_tier($var->{'ref_biomarker_tier'}{$a}, $tier_order_ref) <=> score_tier($var->{'ref_biomarker_tier'}{$b}, $tier_order_ref) ) || ( $a cmp $b ) }  @ref_biomarkers  ;
+			
+			my @ref_biomarkers1 = grep { ! ( $facts->func('is_resistance_tier', $var->{'ref_biomarker_tier'}{$_} ) xor $facts->func('is_resistance_tier', $var->{'max_tier'} ) ) } @ref_biomarkers; 
+			@ref_biomarkers = @ref_biomarkers1  if scalar @ref_biomarkers1  ;
+			
+			$var->{'ref_biomarker'} = join (", ", @ref_biomarkers );
+# 			print join("\t", $var, $t, $sc, $bm, $var->{'max_tier'}, $var->{'max_tier_score'}, $var->{'ref_biomarker'})."\n";
+# 			print Dumper($var)."\n";
 		}
 		
-		sub max_max_tier(\%\%) {
+		sub max_max_tier(\%\%$) {
 			my $var1 = $_[0];
 			my $var2 = $_[1];
+			my $facts = $_[2];
 			
 			if ( ! defined $var1->{'max_tier'} ) {
 				%{$var1} = %{$var2}; 
@@ -397,16 +419,15 @@ sub load_module_variant_evidence_grading {
 # 			print STDERR "var1 ".join(" ", map {$_ => $$var1{$_}} grep { $$var1{$_} } sort keys %{$var1}) ."\n";
 # 			print STDERR "var2 ".join(" ", map {$_ => $$var2{$_}} grep { $$var2{$_} } sort keys %{$var2}) ."\n";
 			
-			comp_max_tier_and_setvar(%{$var1}, $var2->{'max_tier'}, $var2->{'max_tier_score'}, $var2->{'ref_biomarker'}) if defined $var2->{'max_tier'};
+			comp_max_tier_and_setvar(%{$var1}, $var2->{'max_tier'}, $var2->{'max_tier_score'}, $var2->{'ref_biomarker'}, $facts) if defined $var2->{'max_tier'};
 		}
 		
-# 		++ $cntf; print STDERR "! $cntf ! $f\n";
-		
+# 		++ $cntf; print STDERR "! $cntf ! $f\n";		
 		for my $fact (@matched_facts) {
 			if ( $fact =~ /^(.+?):$type:\Q$therapy\E\s*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|,)/ ) { # R?[1234S][ABUR]?
 				my $biomarker = $1; # Get any biomarkers matched to the therapy / therapy class
 				my $tier = $2;
-				my $is_resistance_tier = $self->is_resistance_tier($tier);
+				my $is_resistance_tier = $facts->func('is_resistance_tier', $tier);
 				$has_R_tier = 1 if $is_resistance_tier ; 
 				@max_tier_tags = (@max_tier_tags, ( $facts->get_tags($fact) ));
 				
@@ -414,17 +435,17 @@ sub load_module_variant_evidence_grading {
 				if ($type eq 'treatment_class') {
 # 					# Treat the "treatment_class" as non-dominant 
 					if ( is_highest_tier($tier, $tier_order_ref ) ) { 
-						comp_max_tier_and_setvar( %tier_treatment_class, $tier, $score, $biomarker ) ;
+						comp_max_tier_and_setvar( %tier_treatment_class, $tier, $score, $biomarker, $facts) ;
 					}
-					comp_max_tier_and_setvar(%{ $tier_treatment_class_by_gene{$biomarker} }, $tier, $score, $biomarker) ;
+					comp_max_tier_and_setvar(%{ $tier_treatment_class_by_gene{$biomarker} }, $tier, $score, $biomarker, $facts) ;
 				} elsif ( exists $Evidence::cancer_gene_type{$biomarker} and $Evidence::cancer_gene_type{$biomarker} eq 'TSG' ) {  
 					# Reverse resistance/sensitivity ranking when encountering a true tumour suppressor gene, arranged by each gene
 # 					print STDERR  "A R $type, $biomarker, $therapy, $tier, $fact\n";
-					comp_max_tier_and_setvar(%{ $tier_TSG_by_gene{$biomarker} }, $tier, $score, $biomarker) ;
+					comp_max_tier_and_setvar(%{ $tier_TSG_by_gene{$biomarker} }, $tier, $score, $biomarker, $facts) ;
 # 					comp_max_tier_and_setvar(%{ $tier_TSG_by_gene{$biomarker} }, $tier, $score + ( ( ($type =~ /class/ ) && $is_resistance_tier) ? 1000 : 0 ), $biomarker) ;
 				} else { 
 # 					print STDERR  "A S $type, $biomarker, $therapy, $tier, $fact\n";
-					comp_max_tier_and_setvar(%tier_retval, $tier, $score, $biomarker) ;
+					comp_max_tier_and_setvar(%tier_retval, $tier, $score, $biomarker, $facts) ;
 					# If there are a drug class with different sensitivity/resistance profile, sensitivity > resistance;
 # 					comp_max_tier_and_setvar(%tier_retval, $tier, $score + ( ( ($type =~ /class/ ) && $is_resistance_tier) ? 1000 : 0 ) , $biomarker) ; 
 				}
@@ -433,23 +454,23 @@ sub load_module_variant_evidence_grading {
 		
 
 		for my $bm (keys %tier_TSG_by_gene) {
-			my $is_resistance_tier = $self->is_resistance_tier( $tier_TSG_by_gene{$bm}{max_tier} );
+			my $is_resistance_tier = $facts->func('is_resistance_tier', $tier_TSG_by_gene{$bm}{max_tier} );
 			my $mt = $tier_TSG_by_gene{$bm}{max_tier};
 			my $score = score_tier( $mt, $tier_order_ref) + ( $is_resistance_tier ? 1000 : 0 );
-			comp_max_tier_and_setvar(%tier_TSG, $mt, $score, $bm) ;
+			comp_max_tier_and_setvar(%tier_TSG, $mt, $score, $bm, $facts) ;
 		}
 		
 		for my $bm (keys %tier_treatment_class_by_gene) {
-			my $is_resistance_tier = $self->is_resistance_tier( $tier_treatment_class_by_gene{$bm}{max_tier} );
+			my $is_resistance_tier = $facts->func('is_resistance_tier', $tier_treatment_class_by_gene{$bm}{max_tier} );
 			my $mt = $tier_treatment_class_by_gene{$bm}{max_tier};
 			my $score = score_tier( $mt, $tier_order_ref) + ( $is_resistance_tier ? 1000 : 0 );
-			comp_max_tier_and_setvar(%tier_treatment_class, $mt, $score, $bm) ;
+			comp_max_tier_and_setvar(%tier_treatment_class, $mt, $score, $bm, $facts) ;
 		}
 		
 		if ($type eq 'treatment_class') {
-			max_max_tier(%tier_retval, %tier_treatment_class) ;
+			max_max_tier(%tier_retval, %tier_treatment_class, $facts) ;
 		} else {
-			max_max_tier(%tier_retval, %tier_TSG) ;
+			max_max_tier(%tier_retval, %tier_TSG, $facts) ;
 		}
 		
 		
@@ -517,7 +538,7 @@ sub load_module_drug_sensitivity_prediction {
 		my ($type, $therapy, $tier) = ( ($1 // '') , $2, $3); 
 
 		my @tags = $facts->get_tags($f);
-		return ( Facts::mk_fact_str("resistant_to$type:$therapy", @tags) ) if $self->is_resistance_tier($tier) or ( $facts->has_fact("resistant_to$type:$therapy") );
+		return ( Facts::mk_fact_str("resistant_to$type:$therapy", @tags) ) if $facts->func('is_resistance_tier', $tier) or ( $facts->has_fact("resistant_to$type:$therapy") );
 		return ( Facts::mk_fact_str("sensitive_to$type:$therapy", @tags) );
 	} );
 }
@@ -643,7 +664,8 @@ sub load_module_therapy_recomendation_and_grading {
 		my ($sensitivity, $drug_class) = ($1, $2); 
 		$drug_class =~ s/\s*\[.+?\]$//;
 		
-		my $tier_order_ref = $self->{'tier_order'} ;
+		my $tier_order_ref = $facts->getvar('tier_order');
+
 		
 		my @tags = $facts->get_tags($f);
 		my @rec_tiers = map { my $a = $_; $a =~ s/.*:\s*//; $a } grep { /^recommendation_tier/ } @tags ; # search both recommendation_tier and recommendation_tier_drug_class
@@ -670,7 +692,7 @@ sub load_module_therapy_prioritisation { # including all therapies
 	my $rs = $self->{'modules'}->add_module('05 - Therapy prioritisation');
 	
 	$rs->define_dyn_rule( 'therapy_prioritisation',  sub { my $f=shift; my $facts = $_[0];
-		my $tier_order_ref = $self->{'tier_order'} ;
+		my $tier_order_ref = $facts->getvar('tier_order');
 		
 		return () if $f !~ /(sensitive)_to:(.+)/; # (_drug_class)?
 		my ($sens_resi, $therapy) = ($1, $2, $3); # $is_drug_class, 
@@ -751,12 +773,13 @@ sub load_module_preferential_trial_prioritisation {
 # 		print "!!? $trial_id\t$_\n" for grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
 # 		push @new_tags, ( grep { /(?:CERTAIN|INFERRED):treatment_drug/ } @tags );
 		
-		my $tier_order_ref = $self->{'tier_order'} ;
+		my $tier_order_ref = $facts->getvar('tier_order');
 
 		my %a;
 		
-		my @transitive_efficacy_tiers = ('U');       # = maximum tier of the referring recommendation tier.
 		
+		
+		my @transitive_efficacy_tiers = ('U');       # = maximum tier of the referring recommendation tier.
 		
 		FACT1: for my $f ( grep { /^recommendation_tier:/} @facts_list) {
 			for my $d (@inf_drugs) {
@@ -770,20 +793,28 @@ sub load_module_preferential_trial_prioritisation {
 				$f =~ /^recommendation_tier_drug_class:\Q$dc\E:(\S+)/ and do { push @transitive_class_efficacy_tiers, $1; next FACT2 }  ;
 			}
 		}
+
+		my @biomarker_tiers = ('U');
+		FACT3: for my $t ( grep { /^AMP.LOE:/} @tags) {
+			$t =~ /^AMP.LOE:(\S+)/ and do { push @biomarker_tiers, $1; next FACT3 }  ;
+		}
 		
 		@transitive_efficacy_tiers = sort { score_tier($a, $tier_order_ref) <=> score_tier($b, $tier_order_ref) } map { Therapy::tidy_tier($_) } @transitive_efficacy_tiers ;
 		@transitive_class_efficacy_tiers = sort { score_tier($a, $tier_order_ref) <=> score_tier($b, $tier_order_ref) } map { Therapy::tidy_tier($_) } @transitive_class_efficacy_tiers ;
+		@biomarker_tiers = sort { score_tier($a, $tier_order_ref) <=> score_tier($b, $tier_order_ref) } map { Therapy::tidy_tier($_) } @biomarker_tiers;
 		
 		my $transitive_efficacy_tier = $transitive_efficacy_tiers[0];
 		my $transitive_class_efficacy_tier = $transitive_class_efficacy_tiers[0];
+		my $biomarker_tier = $biomarker_tiers[0];
 		
 		my $trial_match_criteria_score = (
 			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
-			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
+# 			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
 			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 2 : 0 ) 
 			);
+		my $trial_drug_sensitivity_score = ( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) ;
 		
-		my $num_referred_drug_classes_score = scalar(@inf_drug_classes) ;
+		my $num_referring_drug_classes_score = scalar(@inf_drug_classes) ;
 # 		
 		push @new_tags, # Annotate the trial
 			"transitive_class_efficacy_tier:". ( $a{'transitive_class_efficacy'}  = $transitive_class_efficacy_tier ) ,
@@ -793,16 +824,18 @@ sub load_module_preferential_trial_prioritisation {
 			"combo_maturity_tier:".            ( $a{'combo_maturity'}             = ClinicalTrials::get_drug_combination_maturity_tier_by_trial_id( $trial_id, @inf_drugs ) ) ,
 			"combo_class_maturity_tier:".      ( $a{'combo_class_maturity'}       = ClinicalTrials::get_drug_class_combination_maturity_tier_by_trial_id( $trial_id, @inf_drug_classes ) ),
 			"trial_phase_tier:".               ( $a{'trial_phase_tier'}           = ClinicalTrials::get_tier_by_phases_of_trials( $trial_id, $trial_phase ) ),
+			"biomarker_tier:".                 ( $a{'biomarker_tier'}             = $biomarker_tier ),
 			"trial_match_criteria_score:".     $trial_match_criteria_score ,
-			"referred_drug_classes_score:".    $num_referred_drug_classes_score
+			"referring_drug_classes_score:".   $num_referring_drug_classes_score
 		;
 		
 		
 		my $score = # Score the trial
-			( pow(20,8) * ( 8 - $trial_match_criteria_score ) ) + 
-			( pow(20,7) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,9) * ( 8 - $trial_match_criteria_score ) ) + 
+			( pow(20,8) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,7) * ( 8 - $trial_drug_sensitivity_score ) ) + 
 			( pow(20,6) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,5) * ( (19 - $num_referred_drug_classes_score) ) ) +
+			( pow(20,5) * ( (19 - $num_referring_drug_classes_score) ) ) +
 			( pow(20,4) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,3) * ( score_tier( $a{'trial_phase_tier'}, $tier_order_ref ) ) ) + 
 			( pow(20,2) * ( score_tier( $a{'drug_class_maturity'}, $tier_order_ref ) ) ) + 
@@ -889,6 +922,9 @@ sub init {
 
 	my %modules = map { $_ => 1 } split( /\s*[;, ]\s*/, $params->{'modules'} );
     
+# 	print STDERR ">>2 ".$POTTRConfig::f_initialised."\n";
+# 	print STDERR ">>2 $_.\n" for @POTTRConfig::predefined_rules;
+	POTTRConfig::ON_DEMAND_INIT();
     $self->load_module_init();
 	exists $modules{'CTM'}  and $self->load_module_cancer_type_mapping();
 	exists $modules{'CLI'}  and $self->load_module_clinical_data_module();

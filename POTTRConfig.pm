@@ -69,9 +69,9 @@ sub load {
 		if ( /^set +(.+)/i ) {
 			my $x = $1;
 			if ( $x =~ /=>/ ) { # is a rule
-				push @predefined_rules, $x;
+				push @POTTRConfig::predefined_rules, $x;
 			} else {
-				push @predefined_rules, '(initial-fact) => '.$x;
+				push @POTTRConfig::predefined_rules, '(initial-fact) => '.$x;
 			}
 			
 		}
@@ -122,6 +122,7 @@ sub ON_DEMAND_INIT {
 	$f_initiailised = 1;
 	
 	load( "pottr_config" );
+# 	print STDERR ">> $_.\n" for @POTTRConfig::predefined_rules;
 }
 
 1;

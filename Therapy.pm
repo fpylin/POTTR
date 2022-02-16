@@ -265,6 +265,14 @@ sub get_preferred_drug_name {
 my %normalised_treatment_class_name_cache;
 sub get_normalised_treatment_class_name { 
 	my $x = shift;
+	
+	if (! defined $x) {
+		return undef;
+	}
+	if ( exists $normalised_treatment_class_name_cache{$x} and ! defined $normalised_treatment_class_name_cache{$x} ) {
+		warn "Therapy.pm: normalised_treatment_class_name_cache\{$x\} is undefined." ;
+		return undef;
+	}
 	return $normalised_treatment_class_name_cache{$x} if exists $normalised_treatment_class_name_cache{$x} ;
 	&ON_DEMAND_INIT;
 	
@@ -516,7 +524,8 @@ sub load_drug_database {
 		my $primary_drug_name = $drug_parts[0];
 		
 		if ( $drug_classes =~ / \+ / ) { # this is a drug combination regimen
-			$drug_combo_regimens{$primary_drug_name} = trim($drug_classes);
+			my $drug_combinations = $drug_classes;
+			$drug_combo_regimens{ mk_signature($_) } = trim($drug_combinations) for @drug_parts;
 			next;
 		}
 		
@@ -564,7 +573,7 @@ sub load_drug_class_hirerchy {
 		for my $i (0 .. $#parts) {
 			last if $i+1 > $#parts;
 # 			print STDERR " mk_signature($parts[$i]) =>  mk_signature($parts[$i+1]) \n";
-			print STDERR "\e[1;31mTherapy.pm: Error in drug class hierarchy: $parts[$i] == $parts[$i+1]\e[0m" if $parts[$i] eq $parts[$i+1];
+# 			print STDERR "\e[1;31mTherapy.pm: Error in drug class hierarchy: $parts[$i] == $parts[$i+1]\e[0m" if $parts[$i] eq $parts[$i+1];
 			$drug_class_is_a{ mk_signature($parts[$i]) }{ mk_signature($parts[$i+1]) } = 1;
 			$drug_class_has_parent{ mk_signature($parts[$i+1]) }{ mk_signature($parts[$i]) } = 1;
 			push @hierarchy_pairs, join("\t", $parts[$i], $parts[$i+1]);
@@ -604,7 +613,8 @@ sub get_normalised_treatment_name {
 	my $treatment = shift;
 	return $normalised_treatment_name_cache{$treatment}  if exists $normalised_treatment_name_cache{$treatment} ;
 	&ON_DEMAND_INIT;
-	$treatment = $drug_combo_regimens{$treatment} if exists $drug_combo_regimens{$treatment};
+	my $sig_treatment = mk_signature($treatment) ;
+	$treatment = $drug_combo_regimens{ $sig_treatment } if exists $drug_combo_regimens{ $sig_treatment };
 	my @combo_parts = map { trim($_) } split /\s*(?:\||\+)\s*/, $treatment;
 	@combo_parts = sort map { get_preferred_drug_name($_) } @combo_parts ;
 	return ( $normalised_treatment_name_cache{$treatment} = join(" + ", @combo_parts ) );
@@ -625,7 +635,16 @@ sub get_treatment_class {
 	
 	my @combo_parts = map { trim($_) } split /\s*\+\s*/, $treatment;
 	
-	@combo_parts = map { exists $drug_combo_regimens{$_} ? ( split /\s+\+\s*/, $drug_combo_regimens{$_} ) : $_ } @combo_parts ;
+	@combo_parts = map {
+		my $dc = $_;
+		my $dc_sig = mk_signature( $dc );
+		my @retval = ($dc);
+		if ( exists $drug_combo_regimens{$dc_sig} ) {
+			my @drugs = split /\s+\+\s*/, $drug_combo_regimens{ $dc_sig };
+			@retval = @drugs;
+			}
+		@retval
+		} @combo_parts ;
 
 	my @combo_parts_class ;
 	for my $part (@combo_parts) {
@@ -735,18 +754,19 @@ sub get_all_matched_offspring_treatment_classes($) {
 # 	my @dc_combo_parts = map { exists $drug_combo_regimens{ mk_signature($_)} ? ( split /\s*(?:\+|\|)\s*/, $drug_combo_regimens{ mk_signature($_) } ) : trim($_) } split /\s*(?:\+|\|)\s*/, $treatment_class;
 	my @dc_combo_parts = map { trim($_) } split /\s*(?:\+|\|)\s*/, $treatment_class;
 	my @dc_combo_parts_expanded;
+# 	print STDERR ">> ".(join(" + ", @dc_combo_parts ))."\n";
 	for my $dc ( @dc_combo_parts ) {
-		my @offsprings = get_all_drug_class_offspring($dc);
+		my @offsprings = grep { defined } get_all_drug_class_offspring($dc);
 		push @dc_combo_parts_expanded, \@offsprings;
-# 		print "$dc: ".(join("; ", @offsprings))."\n";
+# 		print STDERR "$dc: ".(join("; ", @offsprings))."\n";
 	}
 	
 	my $combo = CombinationCounter->new(\@dc_combo_parts_expanded);
 	my @retval;
 	while ( ! $combo->overflow() ) {
 		my @combo = $combo->get();
-# 		print join(" ++ ", map { defined ? $_ : "\e[1;36mUNDEFINED\e[0m" } @combo)."\n";
-		push @retval, join(" + ", ( sort map { get_normalised_treatment_class_name($_) } @combo) );
+# 		print STDERR join(" ++ ", map { defined ? $_ : "\e[1;36mUNDEFINED\e[0m" } @combo)."\n";
+		push @retval, join(" + ", ( sort map { get_normalised_treatment_class_name($_) // 'UNDEF' } @combo) );
 		$combo->incr();
 	}
 	return sort @retval;

@@ -193,12 +193,13 @@ sub is_a { # catype is-a catype
 sub get_ancestors { 
 	&ON_DEMAND_INIT;
 	
-	my $x = mk_signature($_[0]);
+	my $x = mk_signature( get_preferred_catype_term($_[0]) );
 	my $visited = $_[1];
 	my @visited_stack;
 	$visited = \@visited_stack if ! defined $visited ;
 	push @{ $visited }, $x;
 	
+# 	print "\e[1;31m$x\e[0m\n";
 	if ( exists $catype_is_a{$x} ) {
 # 		print STDERR "!";
 # 		print "\e[1;31m$x\t$catype_is_a{$x}\e[0m\n";
@@ -219,7 +220,7 @@ sub get_ancestors {
 sub get_offsprings { 
 	&ON_DEMAND_INIT;
 	
-	my $x = mk_signature($_[0]);
+	my $x = mk_signature( get_preferred_catype_term($_[0]) );
 	my $visited = $_[1];
 	my @visited_stack;
 	$visited = \@visited_stack if ! defined $visited ;

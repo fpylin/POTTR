@@ -76,6 +76,7 @@ use TSV;
 use Rules;
 use POTTR;
 use POSIX;
+use Data::Dumper;
 
 #######################################################################
 sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
@@ -301,9 +302,9 @@ my @treatment_match_result = $Pottr->reason(@facts);
 my @results_catypes              = grep { /catype_name:/ }                                         @treatment_match_result ;
 my @results_biomarker            = grep { /has_biomarker:/ }                                       @treatment_match_result ;
 my @results_treatment            = grep { /(?:^\S+:treatment:)/ }                                  @treatment_match_result ;
-my @results_sens_to_drugs        = grep { /^(?:recommendation_tier:[^:]+?:[1234S])/ }              @treatment_match_result ;
+my @results_sens_to_drugs        = grep { /^(?:recommendation_tier:[^:]+?:[^R])/ }                 @treatment_match_result ;
 my @results_resi_to_drugs        = grep { /^(?:recommendation_tier:[^:]+?:R)/ }                    @treatment_match_result ;
-my @results_sens_drug_class      = grep { /^(?:recommendation_tier_drug_class:[^:]+?:[1234S])/ }   @treatment_match_result ;
+my @results_sens_drug_class      = grep { /^(?:recommendation_tier_drug_class:[^:]+?:[^R])/ }      @treatment_match_result ;
 my @results_resi_drug_class      = grep { /^(?:recommendation_tier_drug_class:[^:]+?:R)/ }         @treatment_match_result ;
 my @results_therapy_recommendations = grep { /^(?:therapy_recommendation:)/ }                          @treatment_match_result ;
 my @results_preferential_trials  = grep { /^(?:preferential_trial_id:)/ }                          @treatment_match_result ;
@@ -321,7 +322,6 @@ sub extract_LOM {
 
 sub extract_pref_score {
 	if ( $_[0] =~ /(?:^recommendation_tier\S*?:.*?:).*\bpref_score:(\d+(?:\.\d+)?)/ ) {
-# 		print "$_[0]\t$1\n";
 		return $1 
 	}
 	return  0 ;
@@ -390,6 +390,7 @@ sub extract_results_biomarkers {
 	my @retval;
 	for my $biomarker_line (sort @results_biomarker) {
 		my %AMP_LOE;
+		my $AMP_LOE_max = 'U';
 		my %is_original_fact;
 		my $biomarker = $biomarker_line;
 		$biomarker =~ s/has_biomarker://;
@@ -419,6 +420,8 @@ sub extract_results_biomarkers {
 			my @amp_loe = sort grep { /^AMP\.LOE:/ } @tags;
 			if ( scalar(@amp_loe) and $amp_loe[0] =~ /^AMP\.LOE:(.+)/ ) {
 				$AMP_LOE{$fact} = $1; 
+				$AMP_LOE_max = $AMP_LOE{$fact} if ( $AMP_LOE_max eq 'U' ) or (defined $AMP_LOE{$fact} and ( $AMP_LOE{$fact} lt $AMP_LOE_max ) );
+# 				print STDERR "$AMP_LOE_max\t$fact\t$AMP_LOE{$fact}\n";
 			} else {
 				$AMP_LOE{$fact} = undef;
 			}
@@ -437,6 +440,7 @@ sub extract_results_biomarkers {
 		@specifics = sort { ( $is_original_fact{$b} <=> $is_original_fact{$a} ) || ( ($AMP_LOE{$a} // 3) cmp ($AMP_LOE{$b} // 3) ) || ($a cmp $b ) }  @specifics ;
 		s/_/ /g for @matched;
 		
+# 		print STDERR "AMP_LOE_max($biomarker) = $AMP_LOE_max\n";
 		my %row = (
 			'biomarker'    => $biomarker ,
 			'aberration'   => \@aberration,
@@ -444,11 +448,14 @@ sub extract_results_biomarkers {
 			'consequence'  => \@consequence,
 			'oncogenicity' => \@oncogenicity,
 			'AMP.LOE'          => \%AMP_LOE,
+			'AMP.LOE.max'      => $AMP_LOE_max,
 			'is_original_fact' => \%is_original_fact,
 		);
 		push @retval, \%row;
 	}	
-	
+	@retval = sort { ( ( $$a{'AMP.LOE.max'} // '5' ) cmp ( $$b{'AMP.LOE.max'} // '5' ) ) || ($a cmp $b) } @retval;
+# 	print STDERR Dumper(@retval);
+
 	return @retval;
 };
 
@@ -527,9 +534,15 @@ sub extract_preferential_trials {
 		my %tags = Facts::string_to_tags_hashed($line);
 		my ($fact, @tags) = Facts::string_to_fact_and_tags($line);
 		
-		my %referred_genes = map { $_ => 1 } ( $tags =~ /referred_from:(.+?)[;\]]/g );
-		my %referred_drugs = map { $_ => 1 } ( $tags =~ /INFERRED:treatment_drug:(.+?)[;\]]/g );
-		my %referred_drug_classes = map { $_ => 1 } ( $tags =~ /INFERRED:treatment_drug_class:(.+?)[;\]]/g );
+		my %referring_catypes = map { s/catype://g; $_ => 1 } ( grep { /^\(?\s*catype:(.+)/ } @tags );
+		my %referring_genes = map { $_ => 1 } ( $tags =~ /referred_from:(.+?)[;\]]/g );
+		my %referring_drugs = map { $_ => 1 } ( $tags =~ /INFERRED:treatment_drug:(.+?)[;\]]/g );
+		my %referring_drug_classes = map { $_ => 1 } ( $tags =~ /INFERRED:treatment_drug_class:(.+?)[;\]]/g );
+		my %referring_alterations; 
+		
+		for my $biomarker ( keys %referring_genes ) {
+			$referring_alterations{$_}++ for grep { /^$biomarker:(.+)/ } @tags;
+		}
 		
 		my $full_title         = Facts::unescape( $tags{'studytitle'}        // '' );
 		my $trialacronym       = Facts::unescape( $tags{'trialacronym'}      // '' );
@@ -543,8 +556,9 @@ sub extract_preferential_trials {
 		my $matched_trial_combo_maturity       =  $tags{'combo_maturity_tier'};   
 		my $matched_trial_combo_class_maturity =  $tags{'combo_class_maturity_tier'};
 		my $matched_trial_phase_tier           =  $tags{'trial_phase_tier'};
+		my $matched_trial_biomarker_tier       =  $tags{'biomarker_tier'};
 		my $matched_trial_match_criteria_score =  $tags{'trial_match_criteria_score'};
-		my $matched_trial_referred_drug_classes_score =  $tags{'referred_drug_classes_score'};
+		my $matched_trial_referring_drug_classes_score =  $tags{'referring_drug_classes_score'};
 		my $matched_trial_LOM_score            =  $tags{'LOM'} // 'Not assessed';
 		my $ext_weblink                        =  $tags{'ext_weblink'};
 		my $notes                              =  join("; ", grep { /^\*/ } @tags);
@@ -556,7 +570,7 @@ sub extract_preferential_trials {
 		
 		my $matched_drug_classes = Facts::unescape( $tags{'drug_classes'} );
 		my @matched_drug_classes = split /\s*;\s*/, $matched_drug_classes ;
-# 		@matched_drug_classes    = map { exists $referred_drug_classes{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_classes ;
+# 		@matched_drug_classes    = map { exists $referring_drug_classes{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_classes ;
 		my @healthconditions   = split /;\s*/, ( Facts::unescape( $tags{'healthcondition'} // '' ) ); 
 		my @postcodes          = sort map { s/^\s*-\s*//; $_} split(/;\s*/, ( Facts::unescape( $tags{'postcode'} // '' ) )); 
 		
@@ -569,19 +583,22 @@ sub extract_preferential_trials {
 			'trialacronym' => $trialacronym,
 			'trialphase' => $trialphase,
 			'recruitmentstatus' => $recruitmentstatus,
-			'referred_genes' => \%referred_genes,
-			'referred_drugs' => \%referred_drugs,
-			'referred_drug_classes' => \%referred_drug_classes,
+			'referring_catypes' => \%referring_catypes,
+			'referring_genes' => \%referring_genes,
+			'referring_alterations' => \%referring_alterations,
+			'referring_drugs' => \%referring_drugs,
+			'referring_drug_classes' => \%referring_drug_classes,
 			'matched_drug_names' => \@matched_drug_names,
 			'matched_drug_classes' => \@matched_drug_classes,
 			'matched_trial_tier' => $matched_trial_tier,
 			'matched_trial_class_tier' => $matched_trial_class_tier,
+			'matched_trial_biomarker_tier' => $matched_trial_biomarker_tier,
 			'matched_trial_drug_maturity' => $matched_trial_drug_maturity,
 			'matched_trial_drug_class_maturity' => $matched_trial_drug_class_maturity,
 			'matched_trial_combo_maturity' => $matched_trial_combo_maturity,
 			'matched_trial_combo_class_maturity' => $matched_trial_combo_class_maturity,
 			'matched_trial_match_criteria_score' => $matched_trial_match_criteria_score,
-			'matched_trial_referred_drug_classes_score' => $matched_trial_referred_drug_classes_score,
+			'matched_trial_referring_drug_classes_score' => $matched_trial_referring_drug_classes_score,
 			'matched_trial_phase_tier_score' => $matched_trial_phase_tier,
 			'trial_match_criteria' => \@trial_match_criteria,
 			'healthcondition' => \@healthconditions,
@@ -1031,7 +1048,7 @@ sub gen_preferential_trial_report {
 
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score", 
-		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial phase tier score", "Trial match criteria", "Level of matching",
+		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Biomarker tier score", "Trial phase tier score", "Trial match criteria", "Level of matching",
 		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", "External weblink", "Assumptions"
 		)."\n";
 
@@ -1061,6 +1078,7 @@ sub gen_preferential_trial_report {
 				$$row{'matched_trial_combo_maturity'},
 				$$row{'matched_trial_combo_class_maturity'},
 				$$row{'matched_trial_phase_tier_score'},
+				$$row{'matched_trial_biomarker_tier'},
 				$trial_match_criteria,
 				$$row{'LOM'},
 				$matched_drug_names,
@@ -1116,11 +1134,14 @@ sub gen_preferential_trial_terminal {
 			push @lines, join("\t", "Drug class maturity tier",   thl( $$row{'matched_trial_drug_class_maturity'} ) )."\n";
 			push @lines, join("\t", "Combo maturity tier",        thl( $$row{'matched_trial_combo_maturity'} ) )."\n";
 			push @lines, join("\t", "Combo class maturity tier",  thl( $$row{'matched_trial_combo_class_maturity'} ) )."\n";
-			push @lines, join("\t", "Referred drug classes score", $$row{'matched_trial_referred_drug_classes_score'} )."\n";
+			push @lines, join("\t", "Referred drug classes score", $$row{'matched_trial_referring_drug_classes_score'} )."\n";
 			push @lines, join("\t", "Trial match criteria score", $$row{'matched_trial_match_criteria_score'} )."\n";
-			push @lines, join("\t", "Referring biomarker",        join("; ", sort( uniq( keys %{ $$row{'referred_genes'} } ) ) ) )."\n";
-			push @lines, join("\t", "Referring drugs",            join("; ", sort( uniq( keys %{ $$row{'referred_drugs'} } ) ) ) )."\n";
-			push @lines, join("\t", "Referring drug classes",     join("; ", sort( uniq( keys %{ $$row{'referred_drug_classes'} } ) ) ) )."\n";
+			push @lines, join("\t", "Biomarker tier",             thl_AMP( $$row{'matched_trial_biomarker_tier'} ) )."\n";
+			push @lines, join("\t", "Referring cancer types",     join("; ", sort( uniq( keys %{ $$row{'referring_catypes'} } ) ) ) )."\n";
+			push @lines, join("\t", "Referring biomarker",        join("; ", sort( uniq( keys %{ $$row{'referring_genes'} } ) ) ) )."\n";
+			push @lines, join("\t", "Referring alterations",      join("; ", sort( uniq( keys %{ $$row{'referring_alterations'} } ) ) ) )."\n";
+			push @lines, join("\t", "Referring drugs",            join("; ", sort( uniq( keys %{ $$row{'referring_drugs'} } ) ) ) )."\n";
+			push @lines, join("\t", "Referring drug classes",     join("; ", sort( uniq( keys %{ $$row{'referring_drug_classes'} } ) ) ) )."\n";
 		}
 		push @lines, join("\t", "Trial match criteria",       $trial_match_criteria )."\n";
 		push @lines, join("\t", "Level of matching",          $$row{'LOM'} )."\n";
@@ -1162,7 +1183,7 @@ sub mk_trial_href {
 sub gen_HTML_preferential_trial_report {
 	@results_preferential_trials = sort { cmp_preferential_trials($a, $b) } @results_preferential_trials ;
 
-	my $output = "<h2>List of biomarker matched clinial trials registered in ANZCTR:</h2>\n";
+	my $output = "<h2>List of biomarker matched clinial trials:</h2>\n";
 	$output .= "<table id=trial_list>\n";
 	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Trial ID",  "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria",
 		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode", "Notes") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
@@ -1171,11 +1192,11 @@ sub gen_HTML_preferential_trial_report {
 
 	for my $row ( extract_preferential_trials(@results_preferential_trials) ) {
 		my @matched_drug_names = @{ $$row{'matched_drug_names'} };
-		@matched_drug_names = map { exists $$row{'referred_drugs'}{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_names ;
+		@matched_drug_names = map { exists $$row{'referring_drugs'}{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_names ;
 		my $matched_drug_names = join("<br/>", @matched_drug_names);
 
 		my @matched_drug_classes = @{ $$row{'matched_drug_classes'} };
-		@matched_drug_classes    = map { exists $$row{'referred_drug_classes'}{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_classes ;
+		@matched_drug_classes    = map { exists $$row{'referring_drug_classes'}{$_} ? "<b>$_</b>" : $_  } grep { ! / \+ / } @matched_drug_classes ;
 		my $matched_drug_classes    = join("<br/>", @matched_drug_classes);
 		
 		my $healthcondition      = join(",<br/>", @{ $$row{'healthcondition'} } ); 
@@ -1238,6 +1259,7 @@ div.debug  {background:#cccccc;}
 HTMLHEAD
 ;
 	print gen_catypes_HTML();
+	print gen_prior_therapies_HTML();
 	print gen_HTML_biomarker_report();
 	print gen_HTML_drug_sens_report();
 	print gen_HTML_biomarker_evidence_report();
