@@ -2,7 +2,6 @@ ACTRN12613000279729	*NOT prior_therapy:Carboplatin; *NOT prior_therapy:Cisplatin
 ACTRN12613000297729	*NOT prior_therapy:Bevacizumab
 ACTRN12613000496718	*NOT prior_therapy:Carboplatin; *NOT prior_therapy:platinum-based_antineoplastic_agent
 ACTRN12613000556741	*NOT prior_therapy:Capecitabine; *NOT prior_therapy:Panitumumab; *prior_therapy:Cetuximab; *prior_therapy:Oxaliplatin
-ACTRN12614000268640	*NOT prior_therapy:Ipilimumab; *NOT prior_therapy:Rituximab; *NOT prior_therapy:Trastuzumab; *NOT prior_therapy:anti-HER2
 ACTRN12614001181695	*NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody
 ACTRN12614001292662	*NOT prior_therapy:Abiraterone; *NOT prior_therapy:Enzalutamide; *NOT prior_therapy:Taxane
 ACTRN12615000504516	*NOT prior_therapy:Paclitaxel; *NOT prior_therapy:Taxane; *prior_therapy:platinum-based_antineoplastic_agent
