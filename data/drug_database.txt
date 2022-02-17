@@ -595,6 +595,7 @@ MGD009|B7-H3 x CD3 DART Protein|MGD 009|MGD-009	humanized_B7-H3_x_CD3_dual-affin
 MGD013|MGD-013	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
 MI-773|SAR405838	p53-HDM2_interaction_inhibitor; MDM2_inhibitor
 MIK665|S-64315	MCL1_inhibitor
+MK-0482	ILT3_inhibitor
 MK-1697|MK1697	bispecific_PD-1/LAG3_antibody
 MK-4166	anti-GITR_monoclonal_antibody
 MK-4280|MK 4280|MK4280	anti-LAG3_monoclonal_antibody
