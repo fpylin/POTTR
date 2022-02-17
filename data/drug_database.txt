@@ -133,6 +133,7 @@ Axitinib|AG-013736|AG013736|Inlyta	VEGFR/PDGFR_inhibitor; KIT_inhibitor,ATP-comp
 Azacitidine|5-AC|Mylosar|CC-486|Vidaza|5 AZC|5-AZC|5-Aza-cytidine|Azacytidine|Ladakamycin|U-18496	DNA_methyltransferase_inhibitor; antimetabolite
 BAT-1306|BAT 1306|BAT1306	anti-PD-1_monoclonal_antibody
 BAT6021	anti-TIGIT_monoclonal_antibody
+BAT7104|BAT-7104	bispecific_PD-L1/CD47_antibody
 BAY-1895344	ATR_inhibitor
 BAY1436032|BAY 1436032|BAY-1436032	IDH1_R132_inhibitor
 BAY2757556	TRK_inhibitor,first_generation
@@ -452,6 +453,7 @@ HBM4003	anti-CTLA-4_monoclonal_antibody
 HH30134	AXL/FLT3/NTRK_inhibitor
 HKT288|HKT 288|Maytansine-based ADC HKT-288	CDH6-targeting_DM4-based_antibody-drug_conjugate
 HLX20|HLX 20|HLX-20	anti-PD-1_monoclonal_antibody
+HLX301|HLX-301	bispecific-PD-L1/TIGIT_antibody
 HMPL-453|HMPL 453|HMPL453	FGFR_inhibitor
 HMPL-523	Syk_inhibitor
 HS-10241	MET_inhibitor
@@ -525,10 +527,11 @@ KN046|KN 046|KN-046	bispecific_PD-L1/CTLA-4_antibody
 KRT-232|AMG 232|AMG-232|KRT 232|KRT232	MDM2_inhibitor
 KU-55933	ATM_inhibitor
 LHRH Agonist	LHRH_agonist
+LM-061	MET/VEGFR2/FLT3_inhibitor
+LM-108|LM108	anti-CCR8_monoclonal_antibody
 LOP628	anti-c-KIT_antibody-drug_conjugate
 LOXO-305	BTK_inhibitor
 LTT462|LTT 462	ERK_inhibitor
-Naporafenib|LXH254|LXH 254|LXH-254	RAF_dimer_inhibitor
 LY2874455	pan-FGFR_inhibitor
 LY294002	PI3K/BET_inhibitor
 LY3009120	RAF_inhibitor,type_2
@@ -648,6 +651,7 @@ Nab-paclitaxel|ABI-007|Abraxane|ABI 007|Albumin-bound Paclitaxel|Nanoparticle Pa
 Nadofaragene Firadenovec|SCH 721015|rAd-IFN	adenovirus-delivered_interferon_alpha-2b
 Nanatinostat|CHR-3996	HDAC_inhibitor,class_1_selective
 Napabucasin|BB608|BBI-608|BBI608	cancer_stemness_inhibitor
+Naporafenib|LXH254|LXH 254|LXH-254	RAF_dimer_inhibitor
 Naquotinib|ASP8273	EGFR_inhibitor,third_generation
 Navarixin|MK-7123|MK7123|PS291822|SCH 527123	CXCR2_antagonist
 Navitoclax|ABT-263|A-855071.0	BCL2_inhibitor
@@ -798,6 +802,7 @@ RO7121661|RO 7121661|RO-7121661	bispecific_PD-1/TIM-3_antibody
 RO7198457	personalized_cancer_vaccine
 RO7296682	Treg_cell_depleting_antibody
 RO7425781|RG6234	bispecific-GPRC5D/CD3_antibody
+RO7428731	anti-EGFRvIII_monoclonal_antibody
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
 RXC004|RXC-004	PORCN_inhibitor
 Radiotherapy|Radiation Therapy|Radiation Ionizing Radiotherapy	Radiotherapy
@@ -812,6 +817,7 @@ Relugolix|TAK 385|TAK-385|ORGOVYX	GnRH_antagonist
 ReoCure	oncolytic_virus
 Repotrectinib|TPX-0005	ALK_inhibitor,third_generation; ROS1_inhibitor; TRK_inhibitor,second_generation
 Retifanlimab|INCMGA 0012|INCMGA-0012|INCMGA00012|INCMGA0012|MGA 012|MGA-012|MGA012	anti-PD-1_monoclonal_antibody
+Retlirafusp alfa|SHR-1701|SHR1701	PD-L1/TGF-beta_fusion_protein
 Rezvilutamide|SHR3680|SHR 3680	androgen_receptor_antagonist
 Ribociclib|Kisqali|LEE-011|LEE011	CDK4/6_inhibitor
 Rigosertib|ON-01910	PLK1_inhibitor
@@ -824,7 +830,6 @@ Romidepsin|FR901228|Antibiotic FR 901228|Depsipeptide|FK228|Istodax	HDAC_inhibit
 Rovalpituzumab Tesirine|Rova-T|SC0002|SC16LD6.5	anti-DLL3_antibody-drug_conjugate
 Rucaparib|Rucaparib Phosphate|Rucaparib Camsylate|AG014699|C0-338|PF-01367338|Rubraca	PARP_inhibitor
 Ruxolitinib|INCB-18424|INCB18424|Jakafi	JAK1/JAK2_inhibitor
-RO7428731	anti-EGFRvIII_monoclonal_antibody
 S63845	MCL1_inhibitor
 S65487	BCL2_inhibitor
 SAR125844	MET_inhibitor
@@ -839,7 +844,6 @@ SG301	anti-CD38_monoclonal_antibody
 SHP099	SHP2_inhibitor
 SHR-1316|HTI-1088	anti-PD-L1_monoclonal_antibody
 SHR-1501|SHR 1501|SHR1501	anti-IL15_agonistic_monoclonal_antibody
-SHR-1701|SHR1701	PD-L1/TGF-beta_fusion_protein
 SHR-A1811	anti-ERBB2_antibody-drug_conjugate
 SN38-SPL9111|DEP-SN38	topoisomerase_inhibitor
 SNB-101	irinotecan_metabolite
@@ -1027,7 +1031,3 @@ eFT508	MNK_inhibitor
 mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 nab-Sirolimus|ABI-009	mTOR_inhibitor
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
-BAT7104|BAT-7104	bispecific_PD-L1/CD47_antibody
-LM-108|LM108	anti-CCR8_monoclonal_antibody
-HLX301|HLX-301	bispecific-PD-L1/TIGIT_antibody
-LM-061	MET/VEGFR2/FLT3_inhibitor
