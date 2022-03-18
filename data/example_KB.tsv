@@ -67,12 +67,14 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ERBB2	A775_G776insYVMA, G778_P780dup, G776delinsVC, Exon 20 insertion, Exon 20 mutation	Non-small cell lung cancer	Poziotinib	N=30. NSCLC subsequent to platinum-based chemotherapy. ORR 27%. Median DOR 5.0 months. Median PFS 5.5 months. Median OS 15 months.	34550757
 3	ERBB2	Exon 20 insertion	Non-small cell lung cancer	Poziotinib	ZENITH20. ORR 35% (combined EGFR and ERBB2 groups). PFS 5.5 months	10.1016/j.annonc.2020.08.2293
 3	ERBB2	Exon 20 insertion, A775_G776insYVMA	Non-small cell lung cancer	Tarloxotinib	Phase 2. RAIN-701 NCT03805841, Cohort B. 4/9 evaluable pts (44%) exhibited tumor reduction by RECIST and 2/9 pts experienced confirmed PR (22%).	10.1016/j.annonc.2020.08.2294
-3	ERBB2	Exon 20 insertion, Exon 20 mutation	Non-small cell lung cancer	Trastuzumab + Pertuzumab + Docetaxel	Phase 2 IFCT-1703 R2D2. ORR 29% (13/45) in patients treated with at least one prior line of therapy.	10.1200/JCO.2021.39.15_suppl.9015
+3	ERBB2	Exon 20 insertion, A775_G776insYVMA, P780_Y781insGSP, G776delinsVC, V777_G778insV	Non-small cell lung cancer	Poziotinib	Phase 2. ZENITH20. N=90. In as-treated population across all lines of prior therapies, ORR was 28% (25/90), DCR was 70%, median was DOR 5.1 months and median was PFS 5.5 months.	34550757
+3	ERBB2	Exon 20 insertion, Exon 20 mutation	Non-small cell lung cancer	Trastuzumab + Pertuzumab + Docetaxel	Phase 2 IFCT-1703 R2D2. ORR 29% (13/45) in patients treated with at least one prior line of therapy.	35073148, 10.1200/JCO.2021.39.15_suppl.9015
 3	ERBB2	G778_P780dup	Non-small cell lung cancer	Afatinib; Dacomitinib; Pyrotinib; Poziotinib		32036069
 3	ERBB2	G778_P780dup	Non-small cell lung cancer	Dacomitinib	Phase II trial: 2/2 patients harbouring the mutation responded to Dacomitinib with prolonged response.	25899785
 3	ERBB2	Kinase domain mutation	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01	10.1200/JCO.2020.38.15_suppl.9504
 3	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-small cell lung cancer	Pyrotinib		30596880
 3	ERBB2	Oncogenic mutations, V659E, A775_G776insYVMA, G778_P780dup, G778insCPG, G776delinsVC, exon 20 insertion	Non-small cell lung cancer	Ado-Trastuzumab Emtansine	Not TGA approved. OncoKB LOE 2. 	30206164, 29989854
+3	KRAS	G12C	Non-small cell lung cancer	Adagrasib	Phase 1/1B. KRYSTAL-1. At 600mg BD, 10/16 evaluable NSCLC with KRAS G12C achieved objective response.	35167329
 3	KRAS	G12C	Non-small cell lung cancer; Colorectal cancer; Solid tumours	Adagrasib	KRYSTAL-1. Combined Phase 1&amp;2. ORR 45% (NSCLC), 17% (CRC)	10.1016/S0959-8049(20)31076-5
 3	KRAS	Oncogenic mutations	Non-small cell lung cancer	Selumetinib + Docetaxel	Ph2 ORR 37%. Negative Ph 3 SELECT-1	23200175, 28492898
 3	MET	Amplification	Non-small cell lung cancer	Capmatinib	GEOMETRY mono-1: In MET amplified group (defined as gene copy number, GCN, &gt;= 10), ORR 29% (previously treated) versus 40% (previously untreated). Limited response were seen with GCN &lt;10 (ORR 7-12%).	32877583, 10.1200/JCO.2019.37.15_suppl.9004
@@ -98,6 +100,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ALK	Amplification, protein expression	Non-small cell lung cancer	Ensartinib		31628085, 25724526
 4	ALK	Fusion, T1151M, T1151_L1152insT, L1152R, L1152P, C1156Y, I1171N, F1174L, F1174S, F1174C, V1180L, L1196M and L1198F, L1198F and C1156Y, L1198F, G1202R and L1198F, G1202R, G1202del, D1203N, D1203N and E1210K, S1206R, E1210K and S1206C, E1210K, L1196M, F1245C, G1269A, S1269S, R1275Q	Non-small cell lung cancer	TPX-0131	Cell line assays comparing TPX-0131 against approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 4	ALK	T1151, C1156Y, F1174C, F1174L, F1174V, G1269A, L1196M, S1206R	Non-small cell lung cancer	Ensartinib		31857951
+4	ALK	VKORC1L1-ALK fusion, T1151K	Non-small cell lung cancer	Alectinib	Case report.	30519133
 4	ARAF	S214C	Non-small cell lung cancer	Sorafenib	Single case report. OncoKB LOE 3	24569458
 4	ATM	Protein expression	Non-small cell lung cancer	AZD1390 + Radiotherapy		29938225
 4	CDKN2A	Loss of protein expression	Non-small cell lung cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
@@ -131,6 +134,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR	Exon 19 deletion, Exon 19 deletion and T790M, E709K and L858R, E709_T710delInsD, G719A and T790M, S720P, K754E, D761N, A763_Y764insFQEA, A763_Y764insLQEA, S768dupSVD, S768dupSVD and V769M, S768I and V769L, H773insNPH, R776C, S784F, S811F, L833V, L858R and V834L, L858R, L858R and S784F, L858R and L792H, L858R and G724S, L861R	Non-small cell lung cancer	Mobocertinib	Cell line sensitivity data from mutational screening with Ba/F3 cells expressing the EGFR mutations. Mutations with log(mutant/WT) ratios &lt; 0.25 after drug exposure are listed.	34526717
 4	EGFR	Exon 20 mutation	Non-small cell lung cancer	EGFR inhibitor,exon 20 selective   	Review article	30854234
 4	EGFR	G719, S768I, L861Q	Non-small cell lung cancer	Osimertinib	Patient-derived xenografts (PDX) and cell lines studies	32943544
+4	EGFR	G724S and R776H	Non-small cell lung cancer	Afatinib	Case report.	33644199
 4	EGFR	I740_K745dupIPVAIK	Non-small cell lung cancer	Osimertinib	Two case reports showing respnses to Osimertinib in metastatic NSCLC harbouring this exon 19 duplication.	32216945
 4	EGFR	KIF5B-EGFR fusion	Non-small cell lung cancer	Afatinib + Bevacizumab		32903808
 4	EGFR	Kinase domain duplication	Non-small cell lung cancer	Afatinib		31567148
@@ -149,6 +153,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR	Oncogenic mutations	Non-small cell lung cancer	Patritumab deruxtecan	Treatment-refractory EGFR mutant NSCLC. ORR 25% seen in multiple mechanisms of EGFR TKI resistance.	10.1016/j.annonc.2020.08.2295
 4	EGFR	Overexpression	Non-small cell lung cancer; Head and neck squamous cell carcinoma 	Serclutamab Talirine		10.1200/JCO.2020.38.15_suppl.TPS3649
 4	EGFR	Protein expression	Head and neck squamous cell carcinoma; Non-small cell lung cancer; Colorectal cancer	MVC-101		NCT04844073
+4	EGFR	R776H	Non-small cell lung cancer	Osimertinib	Retrospective study. 	10.1200/JCO.2021.39.15_suppl.e21001
+4	EGFR	R776H, L861Q, G719S and E709K, G719S and R776H, L747_T751del and D837T, L833V and H835L, L858R and G873E, L858R and A871E	Non-small cell lung cancer	Erlotinib; Gefitinib; Afatinib	Retrospective study demonstrating response seen in harbouring the following mutations to first- and- second generation EGFR TKIs.	27875527
 4	EGFR	T751_I759delinsS	Non-small cell lung cancer	Afatinib; Osimertinib	Case report	34729927
 4	EGFR	T790M and C797S and T790M-C797S trans-allelic conformation	Non-small cell lung cancer	Erlotinib + Osimertinib		31075545
 4	EGFR+ALK	EGFR:Oncogenic mutations and ALK:fusion	Non-small cell lung cancer	Osimertinib + Crizotinib; Osimertinib + Alectinib	Two case reports	30957057
@@ -174,6 +180,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EZH2	Oncogenic mutations, A677G, Y641N, Y641C, Y641H, Y641S, Y641F, Y646, A687V	Non-Hodgkin’s lymphoma	Tazemetostat		24563539
 4	FANCD2	Loss-of-function mutations, Oncogenic mutations	Non-small cell lung cancer	Veliparib	Cell line study only using FANCD2 knockout	25566506
 4	FGFR2	FGFR2-BICC1 fusion	Non-small cell lung cancer	Erdafitinib	Case report showing partial response to erdafitinib	10.1200/PO.20.00110
+4	FGFR2	FGFR2-BICC1 fusion	Non-small cell lung cancer	Erdafitinib		35050756
+4	KEAP1	Oncogenic mutations	Non-small cell lung cancer	Talazoparib	Preclinical study. Loss of KEAP1 induces a BRCAness phenotype in KEAP1-mutant lung cancer, mediated by stabilisation of EMSY, leading to sensitisation of PARP inhibitor.	34963055
 4	KEAP1+KRAS	KRAS:G12C AND NOT KEAP1:Oncogenic mutations	Non-small cell lung cancer	Sotorasib	Higher ORR (44%) was identified in patients with KEAP oncogenic mutations treated with Sotorasib in the CodeBreak100 trial.	34096690, 10.1200/JCO.2021.39.15_suppl.9003
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	SHP2 inhibitor		29808006
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	Trametinib	Phase II, ORR 12% but worse PFS than docetaxel	10.1200/jco.2013.31.15_suppl.8029
@@ -233,6 +241,7 @@ R2	ALK	L1196M and L1198F, C1156Y and G1202R, L1196M and G1202R, L1198F and G1202
 R2	ALK	L1196M and L1198F, L1198F and C1156Y, C1156Y and G1202R, L1196M and G1202R, L1198F and G1202R, G1202R and G1269A	Non-small cell lung cancer	Alectinib; Brigatinib; Ceritinib; Lorlatinib	Cell line assays comparing TPX-0131 against approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 R2	ALK	L1198F and C1156Y	Non-small cell lung cancer	Lorlatinib		28122866
 R2	ALK	L1198F, G1202R	Non-small cell lung cancer	Ceritinib	Cell line assays comparing TPX-0131 against approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
+R2	ALK	T1151K	Non-small cell lung cancer	Crizotinib	Case report. Secondary mutation for ALK resistance mutation 	30519133
 R2	BCL2L11	Deletion	Non-small cell lung cancer	Gefitinib; Erlotinib		22426421
 R2	BRAF	G569R	Non-small cell lung cancer	Sotorasib	Treatment-emergent RAS and RAF hotspot mutations were also observed in both clinical samples and patient-derived xenograft models.	34759319
 R2	BRAF	Oncogenic mutations AND NOT V600	Non-small cell lung cancer	Vemurafenib	Phase 2. AcSé. NCT02304809. ORR: 0%. 	31959346

@@ -10,6 +10,7 @@ ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibod
 ABBV-428|ABBV 428	anti-CD40_agonist_antibody
 ABBV-467	MCL1_inhibitor
 ABBV-623	BCL2_inhibitor
+ABBV-637	unknown_drug_class,EGFR_targeting
 ABBV-927	anti-CD40_agonist_antibody
 ABBV-992	BTK_inhibitor
 ABCP regimen	Atezolizumab + Bevacizumab + Carboplatin + Paclitaxel
@@ -30,6 +31,7 @@ AK104|AK 104|AK-104	bispecific_PD-1/CTLA-4_antibody
 AK112|AK 112|AK-112	bispecific_PD-1_VEGF_monoclonal_antibody
 AK114|AK 114|AK-114	anti-IL-1beta_monoclonal_antibody
 AK117	anti-CD47_monoclonal_antibody
+AK119	anti-CD73_monoclonal_antibody
 AK127	anti-TIGIT_monoclonal_antibody
 AL-2846|AL 2846|AL2846	MET_inhibitor
 AL102|AL-102|BMS-986115	gamma_secretase_inhibitor
@@ -119,7 +121,7 @@ Apalutamide|ARN 509|ARN-509|ARN509|Erleada|JNJ 56021927|JNJ-56021927	antiandroge
 Apatinib	VEGF2_inhibitor
 Aprutumab|AGC-2500|BAY-1179470|BAY1179470	anti-FGFR2_monoclonal_antibody
 Arfolitixorin|6R-5,10-methyleneTHF|6R-5-10-Methylenetetrahydrofolate|6R-MTHF|6R-methylene THF|Modufolin|Rescufolin	reduced_folate-based_biomodulator
-Arsenic Trioxide|Trisenox|Arsenic Sesquioxide|Arsenous Acid|Arsenous Oxide|White Arsenic	arsenic
+Arsenic Trioxide|Trisenox|Arsenic Sesquioxide|Arsenous Acid|Arsenous Oxide|White Arsenic	arsenic; GLI2_inhibitor
 Asciminib|ABL001	BCR-ABL1_inhibitor
 Asparaginase|Asparaginase Erwinia chrysanthemi|Elspar|Colaspase|Kidrolase|L-Asnase|Leucogen|Leunase|ASP-1|L-ASP|Laspar|Lcf-ASP|MK-965|Paronal|Re-82-TAD-15|Serasa|Spectrila	asparaginase
 Aspirin|Acetylsalicylic acid	salicylates
@@ -509,8 +511,7 @@ Isatuximab|Hu 38SB19|SAR 650984|SAR650984|Sarclisa	anti-CD38_monoclonal_antibody
 Isatuximab|Isatuximab-irfc	anti-CD38_monoclonal_antibody
 Isatuximab|SAR650984	anti-CD38_monoclonal_antibody
 Isotretinoin|13-cRA|13-cis retinoic acid|13-cis-Retinoate|13-cis-Vitamin A Acid|Absorica|Accure|Accutane|Amnesteem|Cistane|Claravis|Isotrex|Myorisan|Neovitamin A|Oratane|Retinoicacid-13-cis|Ro 4-3780|Ro-4-3780|Roaccutan|Roacutan|Sotret|ZENATANE|Tretinoin|cis-Retinoic Acid	13-cis-retinoic_acid
-Itraconazole	azole_antifungal
-Itraconazole Dispersion In Polymer Matrix|SUBA-Itraconazole	azole_antifungal
+Itraconazole|Itraconazole Dispersion In Polymer Matrix|SUBA-Itraconazole	SMO_inhibitor
 Ivosidenib|AG-120|AG 120|Tibsovo	IDH1_R132_inhibitor
 Ixabepilone|BMS-247550|Ixempra|BMS 247550|BMS247550|Epothilone	microtubule_stabilizing_agent
 Ixazomib|MLN-2238|MLN2238	proteasome_inhibitor
@@ -569,7 +570,7 @@ Lisaftoclax|APG-2575|APG 2575|APG2575	BCL2_inhibitor
 Lisocabtagene maraleucel|Breyanzi	CD19-directed_CAR_T_cell
 Lodapolimab|LY3300054|WHO 11185	anti-PD-L1_monoclonal_antibody
 Lometrexol	antimetabolite
-Lomustine|CCNU|Cecenu|CeeNU|Chloroethylcyclohexylnitrosourea|Belustin|Chloroethylcyclo- hexylnitrosourea|Citostal|Gleostine|Lomeblastin|Lomustinum|Lucostin|Prava|RB-1509|WR-139017	alkylating_agent
+Lomustine|CCNU|Cecenu|CeeNU|Chloroethylcyclohexylnitrosourea|Belustin|Chloroethylcyclohexylnitrosourea|Citostal|Gleostine|Lomeblastin|Lomustinum|Lucostin|Prava|RB-1509|WR-139017	alkylating_agent
 Loncastuximab Tesirine|loncastuximab tesirine-lpyl|Zynlonta	anti-CD19_antibody-drug_conjugate
 Lorlatinib|Lorbrena|PF-06463922	ALK_inhibitor,third_generation; ROS1_inhibitor
 Lucitanib	VEGFR/PDGFR/FGFR1/2/3_inhibitor
@@ -647,6 +648,7 @@ NL-201	IL-2/IL-15_receptor_agonist
 NM21-1480|ND021	tri-specific-PD-L1/4-1BB/HSA_antibody
 NOV1401	PARP_inhibitor
 NRR2Mab	anti-NOTCH2_monoclonal_antibody
+NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NZV930|NZV 930|NZV-930|SRF 373|SRF-373|SRF373	anti-CD73_monoclonal_antibody
 Nab-paclitaxel|ABI-007|Abraxane|ABI 007|Albumin-bound Paclitaxel|Nanoparticle Paclitaxel|nanoparticle albumin-bound paclitaxel|Paclitaxel Albumin|Protein-bound Paclitaxel	taxane
 Nadofaragene Firadenovec|SCH 721015|rAd-IFN	adenovirus-delivered_interferon_alpha-2b
@@ -711,7 +713,7 @@ PLA2 inhibitor	PLA2_inhibitor
 PLX4720	RAF_inhibitor
 PLX8394	RAF_dimer_inhibitor
 PMR-116	RNA_polymerase_I_transcription_inhibitor
-PNU-159682	anthracycline
+PNU-159682|E-EDV-D682	EnGeneIC_Dream_Vector-nanocells-delivered,EGFR-targeting
 POMB-ACE	Cisplatin + Vincristine + Methotrexate + Bleomycin + Actinomycin D + Cyclophosphamide + Etoposide
 PRN1371|PRN 1371	pan-FGFR_inhibitor; pan-FGFR_inhibitor,irreversible
 PTX-100|GGTI-2418	geranylgeranyl_transferase_inhibitor
@@ -801,7 +803,7 @@ RO6870810|RG 6146|RG6146|RO-6870810|TEN 010|TEN-010	BET_inhibitor
 RO7082859	bispecific_CD20/CD3_monoclonal_antibody
 RO7121661|RO 7121661|RO-7121661	bispecific_PD-1/TIM-3_antibody
 RO7198457	personalized_cancer_vaccine
-RO7296682	Treg_cell_depleting_antibody
+RO7296682	anti-CD25_monoclonal_antibody
 RO7425781|RG6234	bispecific-GPRC5D/CD3_antibody
 RO7428731	anti-EGFRvIII_monoclonal_antibody
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
@@ -846,6 +848,7 @@ SHP099	SHP2_inhibitor
 SHR-1316|HTI-1088	anti-PD-L1_monoclonal_antibody
 SHR-1501|SHR 1501|SHR1501	anti-IL15_agonistic_monoclonal_antibody
 SHR-A1811	anti-ERBB2_antibody-drug_conjugate
+SM08502	CLK_inhibitor
 SN38-SPL9111|DEP-SN38	topoisomerase_inhibitor
 SNB-101	irinotecan_metabolite
 SNS-032	CDK2_inhibitor
@@ -892,6 +895,7 @@ Sunitinib|SU011248|SU11248|sunitinib malate|Sutent	KIT_inhibitor,first_generatio
 Surufatinib|HMPL-012	VEGFR_inhibitor; FGFR1_inhibitor; CSF1R_inhibitor
 Sym021	anti-PD-1_monoclonal_antibody
 Systemic Immune Checkpoint Inhibition	immune_checkpoint_blockade
+T-025	CLK_inhibitor
 T3011	oncolytic_virus
 TAK-733|TAK733	MEK_inhibitor
 TAK632	RAF_inhibitor,type_2
@@ -1032,3 +1036,6 @@ eFT508	MNK_inhibitor
 mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 nab-Sirolimus|ABI-009	mTOR_inhibitor
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+Lenzilumab	anti-GM-CSF_monoclonal_antibody
+Lexibulin|CYT997	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
+SHR-2002|SHR 2002	unknown_drug_class

@@ -378,6 +378,7 @@ sub gen_rule_knowledge_base {
 	
 	# First, register all known drug combinations from the database
 	for my $row ( @{ $TSV_master->{'data'} } ) {
+		warn "Line: $$row{$fname_biomarker} has invalid drug names" if ! defined $$row{$fname_drugs} ;
 		my $treatment = deutf( $$row{$fname_drugs} );
 		my @treatments = split /\s*(?:[;]|,)\s+/, $treatment;
 		for my $rx ( @treatments ) {

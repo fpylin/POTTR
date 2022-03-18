@@ -263,6 +263,7 @@ drug-class-hierarchy-file         = drug_class_hierarchy.txt            # a simp
 ################################################################################
 
 clinical-trial-database-file      = example_trial_DB_1.tsv  # ANZCTR clinical trial database
+
 clinical-trial-database-file      = example_trial_DB_2.tsv  # Expanded access program database
 
 

@@ -258,7 +258,7 @@ sub load_module_variant_feature_mapping {
 			($entity, $etype, $espec) = ($1, $2, '');
 		} else {
 			for ($f) {
-				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|info|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
+				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|preferential_|info|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
 				/^([^:]+):(.*(?:splice|skipping).*)$/i   and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };
 				/^([^:]+):(?:deletion|homozygous_deletion)$/i  and do { ($entity, $etype, $espec) = ($1, 'D', ''); last; };
@@ -583,11 +583,11 @@ sub gen_rules_drug_db {
 		);
 		push @drug_db, mkrule( 
 			["sensitive_to_drug_class:$dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$dc", "NOT resistant_to:$d", "sensitive_to:$d"], 
-			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$d", "CERTAIN:treatment_drug") ], ['prio:-1']
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$d", "CERTAIN:treatment_drug", "CERTAIN:treatment_drug:$d" ) ], ['prio:-1']
 		);
 		push @drug_db, mkrule( 
 			["sensitive_to_drug_class:$dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$dc", "NOT resistant_to:$d", "NOT sensitive_to:$d"],  
-			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$d", "INFERRED:treatment_drug") ], ['prio:0']
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$d", "INFERRED:treatment_drug", "INFERRED:treatment_drug:$d") ], ['prio:0']
 		);
 	}
 
@@ -597,7 +597,7 @@ sub gen_rules_drug_db {
 			["resistant_to_drug_class:$a", "NOT sensitive_to_drug_class:$b"], [ Facts::mk_fact_str("resistant_to_drug_class:$b", "CERTAIN:treatment_drug_class") ], ['prio:-1']
 		);
 		push @drug_db, mkrule( 
-			["sensitive_to_drug_class:$a", "NOT resistant_to_drug_class:$b"], [ Facts::mk_fact_str("sensitive_to_drug_class:$b", "CERTAIN:treatment_drug_class") ]
+			["sensitive_to_drug_class:$a", "NOT resistant_to_drug_class:$b"], [ Facts::mk_fact_str("sensitive_to_drug_class:$b", "CERTAIN:treatment_drug_class", "CERTAIN:treatment_drug_class:$b") ]
 		);
 	}
 
@@ -620,7 +620,7 @@ sub gen_rules_drug_db {
 			);
 			push @drug_db, mkrule( 
 				["sensitive_to_drug_class:$combo_dc_orig", "NOT $processed_lock", "NOT resistant_to_drug_class:$combo_dc"],  
-				[ $processed_lock, Facts::mk_fact_str("sensitive_to_drug_class:$combo_dc", "INFERRED:treatment_drug_class") ], ['prio:0']
+				[ $processed_lock, Facts::mk_fact_str("sensitive_to_drug_class:$combo_dc", "INFERRED:treatment_drug_class", "INFERRED:treatment_drug_class:$combo_dc") ], ['prio:0']
 			);
 		}
 	}
@@ -641,11 +641,11 @@ sub gen_rules_drug_db {
 		);
 		push @drug_db, mkrule( 
 			["sensitive_to_drug_class:$combo_dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$combo_dc", "NOT resistant_to:$combo", "sensitive_to:$combo"],  
-			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$combo", "CERTAIN:treatment_drug") ], ['prio:-1']
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$combo", "CERTAIN:treatment_drug", "CERTAIN:treatment_drug:$combo") ], ['prio:-1']
 		);
 		push @drug_db, mkrule( 
 			["sensitive_to_drug_class:$combo_dc", "NOT $processed_lock", "NOT resistant_to_drug_class:$combo_dc", "NOT resistant_to:$combo", "NOT sensitive_to:$combo"],  
-			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$combo", "INFERRED:treatment_drug") ], ['prio:0']
+			[ $processed_lock, Facts::mk_fact_str("sensitive_to:$combo", "INFERRED:treatment_drug", "INFERRED:treatment_drug:$combo") ], ['prio:0']
 		);
 	}
 	
@@ -760,8 +760,11 @@ sub load_module_preferential_trial_prioritisation {
 		return () if $f !~ /^(?:preferential_trial_id:)(\S+)/;
 		my $trial_id = $1; 
 		my @tags = $facts->get_tags($f);
-		my @inf_drugs        = map { my $a = $_; $a =~ s/(?:CERTAIN|INFERRED):treatment_drug://; $a }       grep { /(?:CERTAIN|INFERRED):treatment_drug:/ }       @tags ;
-		my @inf_drug_classes = map { my $a = $_; $a =~ s/(?:CERTAIN|INFERRED):treatment_drug_class://; $a } grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
+# 		my @inf_drugs        = map { my $a = $_; $a =~ s/(?:CERTAIN|INFERRED):treatment_drug://; $a }       grep { /(?:CERTAIN|INFERRED):treatment_drug:/ }       @tags ;
+# 		my @inf_drug_classes = map { my $a = $_; $a =~ s/(?:CERTAIN|INFERRED):treatment_drug_class://; $a } grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
+		my @inf_drugs        = map { /recommendation_tier:(.+):\S+/; $1 }            grep { /recommendation_tier:.+:\S+/ }       @tags ;
+		my @inf_drug_classes = map { /recommendation_tier_drug_class:(.+):\S+/; $1 } grep { /recommendation_tier_drug_class:.+:\S+/ } @tags ;
+		
 		my @trial_match_criteria = map { s/trial_match_criteria://; $_ } grep { /^trial_match_criteria:/} @tags;
 		my ($trial_phase)    = map { s/^phase://; $_ } grep { /^phase:/} @tags;
 		my @rec_drugs_tier;
@@ -783,14 +786,14 @@ sub load_module_preferential_trial_prioritisation {
 		
 		FACT1: for my $f ( grep { /^recommendation_tier:/} @facts_list) {
 			for my $d (@inf_drugs) {
-				$f =~ /^recommendation_tier:\Q$d\E:(\S+)/ and do { push @transitive_efficacy_tiers, $1; next FACT1 }  ;
+				$f =~ /^recommendation_tier:\Q$d\E:(\S+)/ and do { push @transitive_efficacy_tiers, $1; }  ; # next FACT1 
 			}
 		}
 		
 		my @transitive_class_efficacy_tiers = ('U'); # = maximum tier of the referring recommendation tier.
 		FACT2: for my $f ( grep { /^recommendation_tier_drug_class:/} @facts_list) {
 			for my $dc (@inf_drug_classes) {
-				$f =~ /^recommendation_tier_drug_class:\Q$dc\E:(\S+)/ and do { push @transitive_class_efficacy_tiers, $1; next FACT2 }  ;
+				$f =~ /^recommendation_tier_drug_class:\Q$dc\E:(\S+)/ and do { push @transitive_class_efficacy_tiers, $1; }  ; # next FACT2 
 			}
 		}
 
@@ -827,6 +830,7 @@ sub load_module_preferential_trial_prioritisation {
 			"biomarker_tier:".                 ( $a{'biomarker_tier'}             = $biomarker_tier ),
 			"trial_match_criteria_score:".     $trial_match_criteria_score ,
 			"referring_drug_classes_score:".   $num_referring_drug_classes_score
+# 			"transitive_class_efficacy_tiers_str:".join("-", @transitive_class_efficacy_tiers)
 		;
 		
 		

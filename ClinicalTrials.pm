@@ -416,7 +416,7 @@ sub load_drug_trial_phase_database {
 
 sub clean_catype {
 	my $x = $_[0];
-	$x =~ s/(?:\b|^)(?:and |or )?((?:any|recurrent|other|relapsed|broad|unspecified|inoperable|locally or metastatic|refractory|adult|childhood|by site|patients? with|cohort.*?:|unresectable|(phase|stage)s? (?:(?:[1234]|I+V?)[ABC]?)|metastatic|locally|advanced|(?:histology|histopathologically) confirmed)(?: and | or |\/| )?)+(?:\b|$)//ig;
+	$x =~ s/(?:\b|^)(?:and |or )?((?:any|recurrent|other|relapsed|broad|\s*harbou?ring.*|unspecified|inoperable|locally or metastatic|refractory|adult|childhood|by site|patients? with|cohort.*?:|unresectable|(phase|stage)s? (?:(?:[1234]|I+V?)[ABC]?)|metastatic|locally|advanced|(?:histology|histopathologically) confirmed)(?: and | or |\/| )?)+(?:\b|$)//ig;
 	$x =~ s/\s*\([A-Z0-9\-\.]*\)//g;
 	$x =~ s/\.$//g;
 	return $x;
@@ -625,13 +625,15 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		push @trial_info, "healthcondition:".    ( $trial_db_by_trial_id{$trial_id}{'healthcondition'}     // '' )  ;
 		push @trial_info, "postcode:".           ( $trial_db_by_trial_id{$trial_id}{'postcode'}            // '' )  ;
 		push @trial_info, "ext_weblink:".        ( $trial_db_by_trial_id{$trial_id}{'ext_weblink'}         // '' )  ;
-		
+
 		my $rhs_str = "preferential_trial_id:$trial_id";
+
+		push @trials_rules, mkrule( [ $rhs_str ], [ Facts::mk_fact_str( $rhs_str, @trial_info) ] ) ; # autoannotating trials
 		
 		my $n_preferential_rules = 0; # number of preferential trials listed
 		
 		my $catypecodes_str = ( scalar(@catypecodes) ? join(' OR ', ( map { /mutation/i ? $_ : "catype:$_" } @catypecodes )) : undef ) ;
-		$catypecodes_str = "($catypecodes_str)" if $catypecodes_str =~ / OR /;
+		$catypecodes_str = "($catypecodes_str)" if defined $catypecodes_str and $catypecodes_str =~ / OR /;
 		
 		 # adding information about recruitment status or available - consistent with CT.gov terminology
 		if ( $trial_db_by_trial_id{$trial_id}{'recruitmentstatus'} !~ /^(?:Recruiting|Available)$/i ) {
