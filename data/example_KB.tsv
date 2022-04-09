@@ -45,6 +45,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ALK	I1171T, I1171N, L1196M, S1206C, S1206Y, G1269A, G1269S	Non-small cell lung cancer	Ceritinib		28122866
 3	ALK	L1152P, L1152R, C1156Y, C1156T, F1174C, F1174L, F1174V, L1196M, S1206C, S1206Y, G1269A, G1269S	Non-small cell lung cancer	Alectinib		28122866
 3	ALK	L1198F	Non-small cell lung cancer	Crizotinib		26698910, 28122866 
+3	BRAF	V600	Anaplastic ganglioglioma; Anaplastic thyroid cancer; Cholangiocarcinoma; Biliary tract cancer; Erdheim-Chester disease; High-grade glioma; Langerhans cell histiocytosis; Low-grade glioma; Non-small cell lung cancer; Neuroendocrine carcinoma; Ovarian cancer; Salivary gland cancers; Sarcoma; Solid tumours except colorectal cancer, pancreatic adenocarcinoma	Vemurafenib	VE-BASKET. Phase 2. ORR of 33% (170) with median DOR 13 months. The selected cancer type has at least one responders. 	32029534
 3	BRAF	V600E, V600K, V600M	Non-small cell lung cancer	Vemurafenib	Phase 2. AcSé. NCT02304809. ORR: 43 of 96 (45%) patients. Median PFS 5.2 months. Median OS 10 months.	31959346
 3	EGFR	C797S, C797G	Non-small cell lung cancer	Erlotinib; Gefitinib		32206559
 3	EGFR	Exon 19 deletion, L858R	Non-small cell lung cancer	Amivantamab + Lazertinib	ORR 36% 15PR 1CR in osimertinib resistance cohort. ORR 100% treatment naive	10.1016/j.annonc.2020.08.1572
@@ -103,6 +104,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ALK	VKORC1L1-ALK fusion, T1151K	Non-small cell lung cancer	Alectinib	Case report.	30519133
 4	ARAF	S214C	Non-small cell lung cancer	Sorafenib	Single case report. OncoKB LOE 3	24569458
 4	ATM	Protein expression	Non-small cell lung cancer	AZD1390 + Radiotherapy		29938225
+4	CD274	Protein expression	Non-small cell lung cancer	Pembrolizumab + Vibostolimab	Phase 1. First-in-human MK7684-001. In treatment-naive NSCLC, combined anti-TIGIT and anti-PD-1 antibodies achieved DCR of 83% in TPS&gt;=1% and in 45% in TPS&lt;1%. DCR was 32% and 45% respectively in PD-L1/PD-L1 refractory subgroup.	34800678
 4	CDKN2A	Loss of protein expression	Non-small cell lung cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
 4	CDKN2A	Oncogenic mutations	Non-small cell lung cancer	Palbociclib	TAPUR. N=28. 1 PR. 6 SD	10.1200/JCO.2019.37.15_suppl.9041
 4	CEACAM5	Overexpression	Non-small cell lung cancer	SAR408701		10.1200/JCO.2020.38.15_suppl.9505

@@ -536,8 +536,10 @@ sub extract_preferential_trials {
 		
 		my %referring_catypes = map { s/catype://g; $_ => 1 } ( grep { /^\(?\s*catype:(.+)/ } @tags );
 		my %referring_genes = map { $_ => 1 } ( $tags =~ /referred_from:(.+?)[;\]]/g );
-		my %referring_drugs = map { $_ => 1 } ( $tags =~ /INFERRED:treatment_drug:(.+?)[;\]]/g );
-		my %referring_drug_classes = map { $_ => 1 } ( $tags =~ /INFERRED:treatment_drug_class:(.+?)[;\]]/g );
+		
+		my %referring_drugs        = map { /recommendation_tier:(.+):\S+/; $1 => 1 }            grep { /recommendation_tier:.+:\S+/ }            @tags ;
+		my %referring_drug_classes = map { /recommendation_tier_drug_class:(.+):\S+/; $1 => 1 } grep { /recommendation_tier_drug_class:.+:\S+/ } @tags ;
+		
 		my %referring_alterations; 
 		
 		for my $biomarker ( keys %referring_genes ) {

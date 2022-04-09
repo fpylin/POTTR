@@ -589,7 +589,11 @@ sub gen_rule_knowledge_base {
 						my $ppalt = $alt; 
 						$ppalt =~ s/;/ and /g;
 						
-						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs|Ha?ematologic cancers?/i ) {
+# 						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs|Ha?ematologic cancers?/i ) {
+						if (
+							 ( ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) and ( $lhs_catypes_ancestors_base =~ /solid/i ) ) or 
+							 ( ( $tumour_type =~ /Ha?ematologic/i ) and ( $lhs_catypes_ancestors_base =~ /haemat|liquid/i ) )  
+						   ) {
 							my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";
 							
 							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
@@ -644,9 +648,11 @@ sub gen_rule_knowledge_base {
 						my $ppalt = $alt; 
 						$ppalt =~ s/;/ and /g;
 							
-						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) {
+# 						if ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) {
+						if ( ( ( $tumour_type =~ /(?:All)?(?:.*Solid).*Tumou?rs/i ) and ( $lhs_catypes_ancestors_base =~ /solid/i ) ) or 
+							 ( ( $tumour_type =~ /Ha?ematologic/i ) and ( $lhs_catypes_ancestors_base =~ /haemat|liquid/i ) )  
+						   ) {
 							my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $tier, histotype agnostic)";
-						
 							
 							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
 							

@@ -1,4 +1,5 @@
 
+
 Cancer	Common cancer
 Cancer	Haematological malignancy	B-cell malignancy	Mature B-cell malignancy	B-cell lymphoma
 Cancer	Haematological malignancy	B-cell malignancy	Mature B-cell malignancy	B-cell lymphoma	High-grade B-cell lymphoma
@@ -53,8 +54,8 @@ Cancer	Haematological malignancy	Mast cell disorder	Systemic mastocytosis|Mastoc
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chronic Myelomonocytic Leukemia|CMML
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chuvash polycythemia
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic syndrome|MDS
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic/Myeloproliferative disease|Myelodysplastic/myeloproliferative neoplasm
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic/Myeloproliferative disease	Chronic myelomonocytic leukaemia
+Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic/Myeloproliferative disease|Myelodysplastic/myeloproliferative neoplasm
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelofibrosis|Primary myelofibrosis|Myeloproliferative neoplasm-associated myelofibrosis
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Polycythemia vera|Polycythemia ruba vera
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm|Myeloproliferative disorder
@@ -93,6 +94,7 @@ Cancer	Solid tumour	Cancer of unknown primary	Squamous cell carcinoma of unknown
 Cancer	Solid tumour	Cancer of unknown primary	Squamous cell carcinoma of unknown primary	Spindle cell carcinoma of unknown primary
 Cancer	Solid tumour	Cancer of unknown primary|Cancer of Unknown Primary Site
 Cancer	Solid tumour	Carcinoma	Adenocarcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Bladder neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Breast neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Cervical neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Anal small-cell carcinoma
@@ -107,11 +109,12 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Large cell neuroendocrine
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Large cell neuroendocrine carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of head and neck
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of unknown primary
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Anal small-cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Anal small-cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Bladder small cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Gallbladder small-cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Prostate neuroendocrine carcinoma|Prostate small-cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Small-cell carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma|Extra-pulmonary small cell carcinoma
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Gallbladder small-cell carcinoma
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Prostate neuroendocrine carcinoma|Prostate small-cell carcinoma
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Small-cell carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Small-cell lung cancer
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma|Small cell carcinoma|Carcinoma, Small Cell
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Thymic neuroendocrine carcinoma
@@ -178,7 +181,7 @@ Cancer	Solid tumour	Ependymoma	Papillary ependymoma
 Cancer	Solid tumour	Ewing family of tumours	Central nervous system primitive neuroectodermal tumour
 Cancer	Solid tumour	Extramammary Paget's disease
 Cancer	Solid tumour	Extramammary Paget's disease	Scrotum Paget's Disease
-Cancer	Solid tumour	Fallopian tube cancer
+Cancer	Solid tumour	Fallopian tube cancer|Fallopian Tube Neoplasm
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma	Platinum resistant high-grade epithelial cancers of fallopian tube
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma|Fallopian tube carcinoma|Fallopian tube serous carcinoma|Cancer of the falllopian tube
 Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal adenosquamous carcinoma
@@ -290,7 +293,7 @@ Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Canc
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian small cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian squamous cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian transitional cell carcinoma
-Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer|Ovarian surface epithelial tumour
+Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer|Ovarian surface epithelial tumour|Carcinoma, Ovarian Epithelial
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Mesonephric-like carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Ovarian Sertoli-Leydig cell tumour|Ovarian Sertoli cell tumour
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer
@@ -534,7 +537,7 @@ Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder adenocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder sarcomatoid carcinoma
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder sarcomatoid carcinoma|Sarcomatoid carcinoma of bladder|Pseudosarcomatous carcinoma of the bladder
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder signet ring cell carcinoma|Bladder signet ring adenocarcinoma
-Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder small cell carcinoma
+Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder small cell carcinoma|Bladder small-cell carcinoma|Bladder neuroendocrine carcinoma
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder squamous cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder urothelial carcinoma	Platinum-resistant urothelial carcinoma
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder urothelial carcinoma|Urothelial cancer|Transitional cell carcinoma of the bladder|Invasive bladder urothelial carcinoma

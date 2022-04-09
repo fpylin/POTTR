@@ -58,7 +58,13 @@ my $f_initiailised ;
 our %gene_feature_table;
 our %biomarker_synonyms;  
 our %variant_synonyms;  
-
+our %biomarker_name_lookup = (
+	'TMB' => 'tumour_mutational_burden',
+	'MMR' => 'mismatch_repair',
+	'MSI' => 'microsatellite_instability', 
+	'LOH' => 'loss_of_heterozygosity', 
+	'HRD' => 'homologous_recombination_deficiency_score', 
+);
 #######################################################################
 sub interp_variants {
 	&ON_DEMAND_INIT;
@@ -114,10 +120,13 @@ sub interp_variants {
 			};
 			last; 
 		};
+		
 		/T/ and do { # Tumour-wide complex biomarker;
 			for ( $biomarker_name ) {
 				/(TMB|MMR|MSI|LOH|HRD)/ and do { # FIXME - to replace with a separate dictionary.
+					$biomarker_name = $biomarker_name_lookup{$1} if exists $biomarker_name_lookup{$1} ;
 					$biomarker_spec =~ s/$1-//;
+					$biomarker_spec = lc($biomarker_spec) if $biomarker_spec =~ /High|Low/i;
 					last;
 				};
 			}

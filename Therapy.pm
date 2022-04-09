@@ -266,14 +266,16 @@ my %normalised_treatment_class_name_cache;
 sub get_normalised_treatment_class_name { 
 	my $x = shift;
 	
-	if (! defined $x) {
-		return undef;
+	return undef if ! defined $x;
+
+	if ( exists $normalised_treatment_class_name_cache{$x} ) {
+		if ( ! defined $normalised_treatment_class_name_cache{$x} ) {
+			warn "Therapy.pm: normalised_treatment_class_name_cache\{$x\} is undefined." ;
+			return undef;
+		} 
+		return $normalised_treatment_class_name_cache{$x} ;
 	}
-	if ( exists $normalised_treatment_class_name_cache{$x} and ! defined $normalised_treatment_class_name_cache{$x} ) {
-		warn "Therapy.pm: normalised_treatment_class_name_cache\{$x\} is undefined." ;
-		return undef;
-	}
-	return $normalised_treatment_class_name_cache{$x} if exists $normalised_treatment_class_name_cache{$x} ;
+	
 	&ON_DEMAND_INIT;
 	
 	if ( $x =~ /(?: +\+ +|\|)/ ) {
@@ -518,11 +520,12 @@ sub load_drug_database {
 	for my $line ( @lines ) {
 		chomp $line;
 		$line =~ s/#.*// ; # remove comments;
-		next if $line =~ /drug_class|^\s*$/ ;  # get rid of header
+		next if $line =~ /(?:^|\b)drug_class(?:\b|$)|^\s*$/ ;  # get rid of header
+		
 		my ($drug_str, $drug_classes) = split /\t/, $line;
 		my @drug_parts = map { trim($_) } split /\|/, $drug_str;
 		my $primary_drug_name = $drug_parts[0];
-		
+
 		if ( $drug_classes =~ / \+ / ) { # this is a drug combination regimen
 			my $drug_combinations = $drug_classes;
 			$drug_combo_regimens{ mk_signature($_) } = trim($drug_combinations) for @drug_parts;

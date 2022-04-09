@@ -416,7 +416,7 @@ sub load_drug_trial_phase_database {
 
 sub clean_catype {
 	my $x = $_[0];
-	$x =~ s/(?:\b|^)(?:and |or )?((?:any|recurrent|other|relapsed|broad|\s*harbou?ring.*|unspecified|inoperable|locally or metastatic|refractory|adult|childhood|by site|patients? with|cohort.*?:|unresectable|(phase|stage)s? (?:(?:[1234]|I+V?)[ABC]?)|metastatic|locally|advanced|(?:histology|histopathologically) confirmed)(?: and | or |\/| )?)+(?:\b|$)//ig;
+	$x =~ s/(?:\b|^)(?:and |or )?((?:any|recurrent|other|relapsed|broad|\s*harbou?ring.*|unspecified|inoperable|locally or metastatic|refractory|adult|childhood|by site|patients? with|cohort.*?:|unresectable|(phase|stage)s? (?:(?:[1234]|I+V?)[ABC]?)|metastatic|MSI-H |locally|advanced|(?:histology|histopathologically) confirmed)(?: and | or |\/| )?)+(?:\b|$)//ig;
 	$x =~ s/\s*\([A-Z0-9\-\.]*\)//g;
 	$x =~ s/\.$//g;
 	return $x;
@@ -429,7 +429,7 @@ sub gen_rules_catype_match($\@\@) {
 	my $trial_id = $_[0];
 	my @eligibility_criteria_strs = @{ $_[1] };
 	my @catypecodes = @{ $_[2] };
-	my @catype_general = map { CancerTypes::match_catype_whole_word($_) } ("Neoplasms", "Cancer", "Adenocarcinoma", "Solid tumour", "Liquid cancer") ;
+	my @catype_general = map { CancerTypes::match_catype_whole_word($_) } ("Neoplasms", "Cancer", "Adenocarcinoma", "Solid tumour", "Liquid cancer", "Haematological malignancy" ) ;
 	my $catype_general = join( "|", @catype_general );
 	
 	my @non_general_hcc = map { /:/ ? $_ : CancerTypes::match_catype_whole_word($_) } grep { length and ( ! /^(?:$catype_general)$/ ) } @catypecodes; 
@@ -682,7 +682,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 # 					print STDERR "||| $f_eligibility_criteria_str_has_sensitivity\t$drug_sensitivity_str\t|\t$eligibility_criteria_str\n";
 
 					for my $extra_catype_strs ('', @extra_catype_strs) {
-						next if $extra_catype_strs eq $catypecodes_str;
+						next if $extra_catype_strs eq ($catypecodes_str // '');
 						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
 						my $trial_match_criteria_str_spec = $trial_match_criteria_str;
 # 						$trial_match_criteria_str_spec = join("; ", $trial_match_criteria_str_spec, "trial_match_criteria:cancer_type");
@@ -732,7 +732,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 # 					print STDERR "||| DC: f_eligibility_criteria_str_has_drug_class_sensitivity=$f_eligibility_criteria_str_has_drug_class_sensitivity\tdrug_class_sensitivity_str=$drug_class_sensitivity_str\t|\teligibility_criteria_str=$eligibility_criteria_str\n";
 
 					for my $extra_catype_strs ('', @extra_catype_strs) {
-						next if $extra_catype_strs  eq $catypecodes_str;
+						next if $extra_catype_strs eq ($catypecodes_str // '');
 						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
 						
 						push @trials_rules, mkrule( 
