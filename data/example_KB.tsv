@@ -178,6 +178,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-small cell lung cancer	Neratinib	Single responders in lung ca.	29420467
 4	ERBB2	Overexpression, amplification	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01, no data available yet. Hypothesis generating	10.1200/JCO.2020.38.15_suppl.9504
 4	ERBB2	S335C	Non-small cell lung cancer	Pyrotinib	Case report. Partial response to pyrotinib in the non-tyrosine kinase domain mutation S335C.	33655632
+4	ERBB2	V659E	Non-small cell lung cancer	Lapatinib; Afatinib; Ado-Trastuzumab Emtansine	Retrospective case series. Response with prolonged PFS in one case harbouring V659E with both small molecule TKI and antibody drug conjugate.	10.1200/JCO.2020.38.15_suppl.e21521
 4	ERBB4	Oncogenic mutations	Non-small cell lung cancer; Melanoma	Lapatinib + Afatinib		29902295
 4	EZH2	Oncogenic mutations, A677G, Y641N, Y641C, Y641H, Y641S, Y641F, Y646, A687V	Non-Hodgkin’s lymphoma	Tazemetostat		24563539
 4	FANCD2	Loss-of-function mutations, Oncogenic mutations	Non-small cell lung cancer	Veliparib	Cell line study only using FANCD2 knockout	25566506
@@ -286,6 +287,7 @@ R2	EGFR	L747P	Non-small cell lung cancer	Osimertinib	Case report	29673089
 R2	EGFR	L747P, L747S	Non-small cell lung cancer	Gefitinib; Erlotinib		31200815
 R2	EGFR	L792H	Non-small cell lung cancer	Afatinib		32206559
 R2	EGFR	L858R and C797S	Non-small cell lung cancer	Tarloxotinib	Cell line study.	33710795
+R2	EGFR	Oncogenic mutations	Non-small cell lung cancer	Linsitinib + Erlotinib	Phase 2. Adding linsitinib to erlotinib resulted in inferior survival (8.4 versus 12.4 month).	27686971
 R2	EGFR	Oncogenic mutations	Non-small cell lung cancer	Pembrolizumab; Atezolizumab; Nivolumab; Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Meta-analysis of five clinical trials suggest that immune check point blockades confers no survival benefit as second-line therapy.	29270615
 R2	EGFR	R451C, G465R, S464L, I491M, ectodomain mutation	Non-small cell lung cancer	Panitumumab	Ectodomain mutations	25623215
 R2	EGFR	S492R, K467T, G465R, S464L, I491M, ectodomain mutation	Non-small cell lung cancer	Cetuximab	Ectodomain mutations	22270724, 27929064, 25623215

@@ -1,5 +1,3 @@
-
-
 Cancer	Common cancer
 Cancer	Haematological malignancy	B-cell malignancy	Mature B-cell malignancy	B-cell lymphoma
 Cancer	Haematological malignancy	B-cell malignancy	Mature B-cell malignancy	B-cell lymphoma	High-grade B-cell lymphoma
@@ -38,9 +36,9 @@ Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma	Classical Hodgkin L
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma|Hodgkins Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Diffuse large B-cell lymphoma	Testicular diffuse large B-cell lymphoma|Testicular DLBCL|Testicular lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Diffuse large B-cell lymphoma|DLBCL
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Follicular lymphoma
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Mantle cell lymphoma
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Marginal zone lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Follicular lymphoma|Follicular B-cell lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Mantle cell lymphoma|Mantle cell B-cell lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Marginal zone lymphoma|Marginal zone B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Small Lymphocytic Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Anaplastic large cell lymphoma|Lymphoma, Large-Cell, Anaplastic
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Cutaneous T-cell lymphoma	Mycosis fungoides
@@ -157,7 +155,7 @@ Cancer	Solid tumour	Central nervous system cancer	Meningioma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma	Atypical meningioma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma	Papillary meningioma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma	Transitional meningioma
-Cancer	Solid tumour	Central nervous system cancer|CNS cancer|Brain cancer|Primary Brain tumours
+Cancer	Solid tumour	Central nervous system cancer|CNS cancer|Brain cancer|Primary Brain tumour|Primary CNS tumour|Primary CNS cancer
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Adrenal cortical carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Phaeochromocytoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Papillary craniopharyngioma
@@ -166,7 +164,7 @@ Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumo
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer|Pituitary gland tumour|Pituitary tumour
 Cancer	Solid tumour	Endocrine gland cancer	Primary papillary tumour of the pineal region
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Anaplastic thyroid cancer|Anaplastic thyroid carcinoma
-Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Follicular thyroid cancer|Follicular thyroid carcinoma
+Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Follicular thyroid cancer|Follicular thyroid carcinoma|Follicular thyroid adenocarcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Hürthle cell carcinoma|Hurthle cell carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Medullary thyroid cancer	Small cell variant of medullary thyroid carcinoma|Thyroid small cell carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Medullary thyroid cancer|Medullary thyroid carcinoma
@@ -181,9 +179,9 @@ Cancer	Solid tumour	Ependymoma	Papillary ependymoma
 Cancer	Solid tumour	Ewing family of tumours	Central nervous system primitive neuroectodermal tumour
 Cancer	Solid tumour	Extramammary Paget's disease
 Cancer	Solid tumour	Extramammary Paget's disease	Scrotum Paget's Disease
-Cancer	Solid tumour	Fallopian tube cancer|Fallopian Tube Neoplasm
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma	Platinum resistant high-grade epithelial cancers of fallopian tube
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma|Fallopian tube carcinoma|Fallopian tube serous carcinoma|Cancer of the falllopian tube
+Cancer	Solid tumour	Fallopian tube cancer|Fallopian Tube Neoplasm
 Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal adenosquamous carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal basaloid squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal small-cell carcinoma
@@ -206,9 +204,9 @@ Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenoca
 Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite-stable colorectal cancer|MSS colorectal cancer|Colorectal Cancer Microsatellite Stable
 Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Non-microsatellite instability-high colorectal cancer|Non-MSI-H colorectal cancer	Microsatellite stable colorectal cancer|MSS colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Rectal adenocarcinoma|Rectal cancer|Rectum cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal neuroendocrine carcinoma|Colorectal large cell neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal signet ring carcinoma|Colorectal signet ring adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer|Carcinoma, colorectal|CRC
+Cancer	Solid tumour	Gastrointestinal cancer	Colorectal neuroendocrine carcinoma|Colorectal large cell neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine tumour
 Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer
@@ -282,7 +280,7 @@ Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ova
 Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum|Cancer of the ovary, fallopian tube, and peritoneum
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	High-grade serous ovarian cancer	Platinum resistant ovarian cancer|Platinum resistant high-grade epithelial cancer of ovary
-Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian carcinosarcoma
+Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian carcinosarcoma|Ovarian Mullerian mixed tumour|Ovarian MMMT
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian clear cell carcinoma|Ovarian clear cell adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian endometrioid adenocarcinoma|Ovarian endometrioid carcinoma|Endometrioid carcinoma of the ovary|Endometrioid Ovary Carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian mucinous carcinoma
@@ -390,14 +388,14 @@ Cancer	Solid tumour	Mesothelioma	Pleural mesothelioma|Malignant Pleural Mesothel
 Cancer	Solid tumour	Mesothelioma|Malignant mesothelioma
 Cancer	Solid tumour	Mixed neuronal-glial tumour
 Cancer	Solid tumour	Mixed neuronal-glial tumour	Anaplastic ganglioglioma|Ganglioglioma, anaplastic
+Cancer	Solid tumour	Neuroendocrine carcinoma	Gastro-entero-pancreatic neuroendocrine carcinoma	Pancreatic neuroendocrine carcinoma
+Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma
+Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma
+Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Gastric neuroendocrine carcinoma
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Appendiceal carcinoid
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Midgut neuroendocrine tumour
-Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour|Gastrointestinal neuroendocrine tumour
-Cancer	Solid tumour	Neuroendocrine tumour	Gastrointestinal neuroendocrine carcinoma
-Cancer	Solid tumour	Neuroendocrine tumour	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma
-Cancer	Solid tumour	Neuroendocrine tumour	Gastrointestinal neuroendocrine carcinoma	Gastric neuroendocrine carcinoma
 Cancer	Solid tumour	Neuroendocrine tumour	Lung carcinoid tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Paraganglioma|Malignant paraganglioma
 Cancer	Solid tumour	Neuroendocrine tumour	Somatostatinoma
@@ -426,6 +424,8 @@ Cancer	Solid tumour	Sarcoma	Aggressive fibromatosis|Desmoid|Desmoid tumour
 Cancer	Solid tumour	Sarcoma	Alveolar soft part sarcoma
 Cancer	Solid tumour	Sarcoma	Angiomatoid fibrous histiocytoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma
+Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Uterine carcinosarcoma
+Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Ovarian carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Dedifferentiated chondrosarcoma

@@ -271,6 +271,7 @@ benzodiazepam
 benzopyran
 biguanide_antihyperglycaemic_agent
 bispecific_ERBB2/CD3_monoclonal_antibody
+bispecific_c-Met_EGFR_monoclonal_antibody	trispecific_EGFR/cMET/CMET_antibody
 bispecific_PSMA/CD3_antibody
 bispecific_T_cell_engager_targeting_DLL3
 bispecific_c-Met_EGFR_monoclonal_antibody
@@ -384,3 +385,6 @@ virus-based_therapy	oncolytic_Coxsackie_virus,ICAM_overexpressing
 virus-based_therapy	oncolytic_HSV_virus
 virus-based_therapy	replication-competent_oncolytic_adenovirus
 virus-based_therapy	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
+ROS1_inhibitor	ALK/ROS1/IGF1R_inhibitor
+ALK_inhibitor,second_generation	ALK/ROS1/IGF1R_inhibitor
+IGF1R_inhibitor	ALK/ROS1/IGF1R_inhibitor

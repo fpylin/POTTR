@@ -160,6 +160,7 @@ BIL06v	peptide_conjugate_vaccine,nfP2X7-targeting
 BLYG8824A	bispecific_LY6G6D/CD3_antibody
 BLYG8824A	unknown_drug_class
 BLZ-100|Tozuleristide	peptide-fluorophore_conjugate
+BMS-754807	IGF1R_inhibitor
 BMS 936559|MDX-1105	anti-PD-L1_monoclonal_antibody
 BMS-813160	CCR2/CCR5_antagonist
 BMS-986012	anti-fucosyl-GM1_monoclonal_antibody
@@ -259,7 +260,7 @@ Celecoxib	COX2_inhibitor
 Cemiplimab|cemiplimab-rwlc|Libtayo|REGN2810	anti-PD-1_monoclonal_antibody
 Ceralasertib|AZD6738	ATR_inhibitor
 Cerdulatinib	SYK_inhibitor
-Ceritinib|LDK 378|LDK378|Zykadia	ROS1_inhibitor; ALK_inhibitor,second_generation
+Ceritinib|LDK 378|LDK378|Zykadia	ALK/ROS1/IGF1R_inhibitor
 Cetrelimab|JNJ 63723283|JNJ-63723283|JNJ63723283|WHO 10757	anti-PD-1_monoclonal_antibody
 Cetuximab|Erbitux|Chimeric Monoclonal Antibody C225|IMC-C225	anti-EGFR_monoclonal_antibody
 Chlorambucil|Amboclorin|Ecloril|Elcoril|Leukeran|Leukersan|Leukoran|Linfolizin|CB 1348|CB-1348|Linfolysin|Lympholysin|Phenylbutyric acid nitrogen mustard|WR-139013	alkylating_agent
@@ -402,7 +403,7 @@ Flotetuzumab|MGD006	humanized_CD123_x_CD3_dual-affinity_re-targeting_protein
 Fludarabine|2-Fluoro-9-beta-arabinofuranosyladenine|2-Fluorovidarabine|9-Beta-D-arabinofuranosyl-2-fluoro-9H-purin-6-amine|9-Beta-D-arabinofuranosyl-2-fluoroadenine|Fluradosa	antimetabolite
 Fluorouracil|5-FU|5-Fluorouracil|5 Fluorouracil|Fluracil|Fluril|2,4-Dioxo-5-fluoropyrimidine|5 FU|5FU|AccuSite|Adrucil|Carac|Fluoro Uracil|Fluouracil|Flurablastin|Fluracedyl|Fluroblastin|Ribofluor|Ro 2-9757|de Gramont|de Gramont 5-FU|Ro-2-9757	antimetabolite
 Flutamide|Apimid|Cebatrol|Chimax|Cytomid|Drogenil|Euflex|Eulexin|FLUT|Flucinom|Flugerel|Fluken|Flulem|Fugerel|Grisetin|Niftolide|Oncosal|Profamid|Prostacur|Prostadirex|Prostica|Prostogenat|SCH 13521|Tafenil|Testotard	antiandrogen,nonsteroidal,first_generation
-Fluzoparib|SHR-3162|SHR3162	PARP_inhibitor
+Fuzuloparib|Fluzoparib|SHR-3162|SHR3162	PARP_inhibitor
 Foretinib|XL880|GSK1363089	MET_inhibitor,type_2; ROS1_inhibitor
 Fosgemcitabine Palabenamide|Acelarin|Gemictabine ProTide|NUC 1031|NUC-1031	gemcitabine-phosphoramidate
 Fotemustine|Mustophoran	 alkylating_agent
@@ -861,6 +862,7 @@ SHR-1316|HTI-1088	anti-PD-L1_monoclonal_antibody
 SHR-1501|SHR 1501|SHR1501	anti-IL15_agonistic_monoclonal_antibody
 SHR-2002|SHR 2002	unknown_drug_class
 SHR-A1811	anti-ERBB2_antibody-drug_conjugate
+SHR-A1904	antibody-drug_conjugate,tumour-specific_antigen
 SM08502	CLK_inhibitor
 SN38-SPL9111|DEP-SN38	topoisomerase_inhibitor
 SNB-101	irinotecan_metabolite
@@ -1050,3 +1052,5 @@ eFT508	MNK_inhibitor
 mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 nab-Sirolimus|ABI-009	mTOR_inhibitor
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+GB263T	trispecific_EGFR/cMET/CMET_antibody
+RC402|ReoCure	oncolytic_virus
