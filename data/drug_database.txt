@@ -76,6 +76,7 @@ AZD0466	dual_Bcl2/xL_inhibitor
 AZD1390	ATM_inhibitor
 AZD1480	JAK1/JAK2_inhibitor
 AZD2461	PARP_inhibitor
+Barasertib|AZD2811	AURKB_inhibitor
 AZD2936	bispecific_PD-1/TIGIT_antibody
 AZD3463	ALK_inhibitor; IGF1R_inhibitor; ROS1_inhibitor
 AZD4205|AZD 4205|AZD-4205	JAK1-selective_inhibitor
@@ -324,6 +325,7 @@ Dovitinib	PDGFRB_inhibitor; VEGFR_inhibitor; FGFR1/2/3_inhibitor
 Doxorubicin|Adriamycin|Adriablastin|Hydroxydaunomycin|Hydroxyl Daunorubicin|Hydroxyldaunorubicin	anthracycline
 Durvalumab|Imfinzi|MEDI-4736|MEDI4736	anti-PD-L1_monoclonal_antibody
 Duvelisib|IPI-145	PI3K_delta_inhibitor
+Duligotuzumab|MEHD7945A	anti-EGFR/ERBB3_monoclonal_antibody
 E7016	PARP_inhibitor
 E7777	cytotoxic_fusion_protein,diphtheria-IL-2
 EBC-46	protein_kinase_C_regulator
@@ -555,7 +557,7 @@ LY3410738	IDH1_R132_inhibitor; IDH1_R132_inhibitor,covalent
 LY3410738	IDH1_R132_inhibitor; IDH1_R132_inhibitor,covalent
 LY3434172|LY 3434172|LY-3434172	bispecific_PD-1/PD-L1_antibody
 LY3475070|LY 3475070|LY-3475070	CD73_inhibitor
-LY3484356	selective_estrogen_receptor_degrader
+Imlunestrant|LY3484356	selective_estrogen_receptor_degrader
 LY3499446|LY 3499446|LY-3499446	KRAS_G12C_inhibitor
 LZM-009|LZM 009|LZM009	anti-PD-1_monoclonal_antibody
 Lacnotuzumab|MCS110	anti-CSF1_monoclonal_antibody
@@ -588,7 +590,7 @@ Lorlatinib|Lorbrena|PF-06463922	ALK_inhibitor,third_generation; ROS1_inhibitor
 Lu-177 vipivotide tetraxetan|Pluvicto|Lutetium-177-PSMA-617|177Lu-PSMA|Lutetium PSMA|lutetium-177 PSMA-617|Lu-PSMA617|Lutetium-177 PSMA	177Lu-PSMA-radioconjugate
 Lucitanib	VEGFR/PDGFR/FGFR1/2/3_inhibitor
 Luminespib|AUY922	HSP90_inhibitor
-Lumretuzumab	anti-ERBB3_monoclonal_antibody
+Lumretuzumab|RG7116|RO-5479599	anti-ERBB3_monoclonal_antibody
 Lurbinectedin|PM01183|ZEPZELCA	DNA_minor_groove-binding_agent
 Luspatercept|ACE-536|Reblozyl	recombinant_human_ActRIIb_fusion_protein
 M9241	IL-12-based_tumor-targeting_immunocytokine
@@ -610,6 +612,7 @@ MI-773|SAR405838	p53-HDM2_interaction_inhibitor; MDM2_inhibitor
 MIK665|S-64315	MCL1_inhibitor
 MK-0482	ILT3_inhibitor
 MK-1697|MK1697	bispecific_PD-1/LAG3_antibody
+MK-4830|MK4830	anti-ILT4_monoclonal_antibody
 MK-4166	anti-GITR_monoclonal_antibody
 MK-8033|MK8033	MET_inhibitor
 MK-8353|SCH 900353	ERK_inhibitor
@@ -913,6 +916,7 @@ Sym021	anti-PD-1_monoclonal_antibody
 Systemic Immune Checkpoint Inhibition	immune_checkpoint_blockade
 T-025	CLK_inhibitor
 T3011	oncolytic_virus
+TAK-280|MVC-280	bispecific_T_cell_engager_targeting_B7H3
 TAK-733|TAK733	MEK_inhibitor
 TAK632	RAF_inhibitor,type_2
 TAS6417|CLN 081|CLN-081|CLN081|TAS 6417|TAS-6417	EGFR_inhibitor,exon_20_selective
@@ -1025,7 +1029,7 @@ XAV939	YAP-TEAD_inhibitor; TNKS1/2_inhibitor
 XELIRI	Capecitabine + Irinotecan
 XL147|SAR245408	PI3K_inhibitor
 XL765|SAR245409	PI3K/mTOR_inhibitor
-XMT-1536	anti-NaPi2b_antibody-drug_conjugate
+Upifitamab Rilsodotin|XMT 1536|XMT-1536	anti-NaPi2b_antibody-drug_conjugate
 XNW7201	PORCN_inhibitor
 Xentuzumab|BI 836845	anti-IGF_ligand_antibody
 XmAb24306|RO 7310729|RO-7310729|RO7310729|XmAb 24306|XmAb-24306	IL15/IL15R_Fc-fusion_protein
@@ -1053,4 +1057,7 @@ mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 nab-Sirolimus|ABI-009	mTOR_inhibitor
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 GB263T	trispecific_EGFR/cMET/CMET_antibody
+LY3537982	KRAS_G12C_inhibitor
 RC402|ReoCure	oncolytic_virus
+SAR443579	NKp46-based_NK-cell_engager
+Valemetostat Tosylate|DS-3201b	EZH1/2_inhibitor

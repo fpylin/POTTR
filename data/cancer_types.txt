@@ -58,6 +58,7 @@ Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelofibrosis|Prima
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Polycythemia vera|Polycythemia ruba vera
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm|Myeloproliferative disorder
 Cancer	Haematological malignancy	Plasma cell disorder	Multiple myeloma|Myeloma
+Cancer	Haematological malignancy	Plasma cell disorder	Plasma cell leukaemia|Plasma cell leukemia
 Cancer	Haematological malignancy|Haematologic malignancy|Haematologic cancer|Liquid cancer|Blood cancer
 Cancer	Solid tumour	Breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma
@@ -94,7 +95,7 @@ Cancer	Solid tumour	Cancer of unknown primary|Cancer of Unknown Primary Site
 Cancer	Solid tumour	Carcinoma	Adenocarcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Bladder neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Breast neuroendocrine carcinoma
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Cervical neuroendocrine carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Cervical neuroendocrine carcinoma	Cervical small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Anal small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Appendiceal neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma
@@ -109,6 +110,7 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma 
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Anal small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Bladder small cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Cervical small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Gallbladder small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Prostate neuroendocrine carcinoma|Prostate small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Small-cell carcinoma of unknown primary
@@ -238,6 +240,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract c
 Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Intrahepatic cholangiocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenosquamous carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder small-cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer|Biliary cancer|Bile duct cancer|Biliary adenocarcinoma|Bile duct adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Hepatocellular carcinoma	Fibrolamellar hepatocellular carcinoma|Fibrolamellar carcinoma|Hepatocellular carcinoma, fibrolamellar
@@ -553,7 +556,6 @@ Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Seminom
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour|Malignant germ cell tumour
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Chromophobe renal cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Clear cell renal cell carcinoma|Clear cell renal carcinoma|Renal cell carcinoma|Renal Cell Cancer|Carcinoma, Renal Cell|Renal Cell Carcinoma, Clear Cell
-Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Clear cell sarcoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Fumurate hydrogenase-deficient renal cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	MiT family traslocation renal cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Papillary renal cell carcinoma

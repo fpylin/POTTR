@@ -388,3 +388,4 @@ virus-based_therapy	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing
 ROS1_inhibitor	ALK/ROS1/IGF1R_inhibitor
 ALK_inhibitor,second_generation	ALK/ROS1/IGF1R_inhibitor
 IGF1R_inhibitor	ALK/ROS1/IGF1R_inhibitor
+EZH2_inhibitor	EZH1/2_inhibitor

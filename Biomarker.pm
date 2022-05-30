@@ -65,6 +65,41 @@ our %biomarker_name_lookup = (
 	'LOH' => 'loss_of_heterozygosity', 
 	'HRD' => 'homologous_recombination_deficiency_score', 
 );
+
+my %aa_code = (
+	'Ala' => 'A',
+	'Arg' => 'R', 
+	'Asn' => 'N', 
+	'Asp' => 'D',
+	'Cys' => 'C', 
+	'Gln' => 'Q',
+	'Glu' => 'E',
+	'Gly' => 'G',
+	'His' => 'H',
+	'Ile' => 'I', 
+	'Leu' => 'L', 
+	'Lys' => 'K', 
+	'Met' => 'M', 
+	'Phe' => 'F', 
+	'Pro' => 'P', 
+	'Ser' => 'S', 
+	'Thr' => 'T', 
+	'Trp' => 'W', 
+	'Tyr' => 'Y', 
+	'Val' => 'V',
+	'Xaa' => 'X',
+	'Unk' => 'X',
+	'Asx' => 'B',
+	'Glx' => 'Z',
+	'Xle' => 'J',
+	'Ter' => '*',
+);
+
+my $aa_regex = "(?:".join('|', sort keys %aa_code)."|[A-Z])";
+
+$aa_code{$_} = $_ for values %aa_code;
+
+
 #######################################################################
 sub interp_variants {
 	&ON_DEMAND_INIT;
@@ -144,32 +179,38 @@ sub interp_variants {
 			for ( $biomarker_spec ) {
 				s/(?:,[_ ]?|\()?germline(?:\))?//i and do { $f_germline = 1; };
 				
-				( ($aa_org, $aa_pos, $aa_mut, $fs_ter) = /([A-Z])(\d+)([A-Z])?fs(\*\d+)?/ ) and do {
+				( ($aa_org, $aa_pos, $aa_mut, $fs_ter) = /(?:p\.)\(??($aa_regex)(\d+)($aa_regex)?fs(\*\d+)?\)?/ ) and do {
+					$aa_org = $aa_code{$aa_org};
+					$aa_mut = $aa_code{$aa_mut};
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'frameshift_variant';
 					last;
 				};
 				
-				( ($aa_org, $aa_pos, $aa_mut) = /^([A-Z])(\d+)([A-Z])$/ ) and do {
+				( ($aa_org, $aa_pos, $aa_mut) = /^(?:p\.)?\(?($aa_regex)(\d+)($aa_regex)\)?\)?$/ ) and do {
+					$aa_org = $aa_code{$aa_org};
+					$aa_mut = $aa_code{$aa_mut};
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'missense_variant'; # missense_variant
 					last;
 				};
 				
-				( ($aa_org, $aa_pos) = /^([A-Z])(\d+)$/ ) and do {
+				( ($aa_org, $aa_pos) = /^(?:p\.)?\(?($aa_regex)(\d+)\)?$/ ) and do {
+					$aa_org = $aa_code{$aa_org};
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'missense_variant'; # missense_variant
 					last;
 				};
 				
-				( ($aa_org, $aa_pos) = /^([A-Z])(\d+)\*$/ ) and do {
+				( ($aa_org, $aa_pos) = /^(?:p\.)?\(?($aa_regex)(\d+)\*\)?$/ ) and do {
+					$aa_org = $aa_code{$aa_org};
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'stop_gained';
 					$aa_mut = '*';
 					last;
 				};
 				
-				/splice site/ and ( ($aa_org, $ssite_spec) = /(?:c\.)?(\d+)(\-\d+[AGTC]+>[AGTC]+)/ ) and do {
+				/splice site/ and ( ($na_org, $ssite_spec) = /(?:c\.)?(\d+)(\-\d+[AGTC]+>[AGTC]+)/ ) and do {
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'splice_site_variant'; # duplication
 					last;
@@ -183,7 +224,10 @@ sub interp_variants {
 				};
 				
 				my $muttype ;
-				( ($aa_org, $aa_pos, $aa_org2, $aa_pos2, $muttype, $delins_spec) = /^(?:p\.)?([A-Z])(\d+)_?([A-Z])?(\d+)?((?:ins|dup|del(?:ins)?|>))(.*)$/ ) and do {
+				( ($aa_org, $aa_pos, $aa_org2, $aa_pos2, $muttype, $delins_spec) = /^(?:p\.)?\(?($aa_regex)(\d+)_?($aa_regex)?(\d+)?((?:ins|dup|del(?:ins)?|>))(.*)\)?$/ ) and do {
+					$aa_org = $aa_code{$aa_org};
+					$aa_org2 = $aa_code{$aa_org2};
+					$aa_mut = $aa_code{$aa_mut};
 					$muttype = 'delins' if $muttype eq '>';
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'inframe_insertion' if ($muttype eq 'ins') or ($muttype eq 'dup') ;
@@ -207,6 +251,7 @@ sub interp_variants {
 			push @alterations, $biomarker_spec;
 			push @alterations, $aa_org.$aa_pos.$aa_mut  if defined $aa_org and defined $aa_pos and defined $aa_mut ;
 			if ( defined $aa_org and defined $aa_pos ) {
+				$aa_org = $aa_code{$aa_org};
 				for my $conseq_t (@conseq_t) {
 					push @alterations, "codon_".$aa_pos."_".$conseq_t; # missense_variant"  ; # and defined $aa_mut 
 				}

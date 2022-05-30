@@ -5,7 +5,7 @@ ACTRN12617001325392	ERBB2:amplification
 ACTRN12617001573347	NOT catype:Glioblastoma
 ACTRN12618000233224	NOT BRAF:V600E; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12618000281291	*NOT catype:Basal Cell Carcinoma; *NOT prior_therapy:Vismodegib
-ACTRN12618000357257	catype:Angiosarcoma
+ACTRN12618000357257	catype:Angiosarcoma; NOT_RECRUITING
 ACTRN12619000844145	ALK:fusion
 ACTRN12619001117101	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; NOT ERBB2:over_expression
 ACTRN12619001185156	*(CCNE1:amplification OR CCNE1:overexpression)
@@ -14,11 +14,11 @@ ACTRN12620000568910	(CDK4:oncogenic_mutation OR CDK4:amplification OR CCND1:ampl
 ACTRN12620000568910	(CDKN2A:loss-of-function_mutation OR CDKN2A:deletion); *NOT catype:Breast cancer; *NOT prior_therapy:immune_checkpoint_blockade
 ACTRN12620000568910p	(CDK4:oncogenic_mutation OR CDK4:amplification OR CCND1:amplification OR CCND2:amplification OR CCND3:amplification OR CCND1:oncogenic_mutation OR CCND2:oncogenic_mutation OR CCND3:oncogenic_mutation); *NOT catype:Breast cancer; *NOT prior_therapy:immune_checkpoint_blockade
 ACTRN12620000568910p	(CDKN2A:loss-of-function_mutation OR CDKN2A:deletion); *NOT catype:Breast cancer; *NOT prior_therapy:immune_checkpoint_blockade
-ACTRN12620000861954	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
-ACTRN12620000861954p	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant)
+ACTRN12620000861954	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant); (catype:Solid tumour OR catype:Non-small cell lung cancer)
+ACTRN12620000861954p	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant); (catype:Solid tumour OR catype:Non-small cell lung cancer)
 ACTRN12620000918921	catype:Solid tumour; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; tumour_mutational_burden:high
-ACTRN12620000984998	*NOT catype:Chondrosarcoma
-ACTRN12620000984998	NOT catype:Osteosarcoma; *NOT_RECRUITING
+ACTRN12620000984998	*NOT catype:Chondrosarcoma; NOT_RECRUITING
+ACTRN12620000984998	NOT catype:Osteosarcoma; NOT_RECRUITING
 ACTRN12620001146987	MYC:alteration
 ACTRN12621000284864	(ROS1:fusion OR NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion)
 ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
@@ -31,7 +31,6 @@ ACTRN12621001690842	NOT catype:Non-small cell lung cancer; NOT catype:Colorectal
 NCT02408861	HIV_POSITIVE
 NCT02568267	(NTRK1:oncogenic_mutation OR NTRK2:oncogenic_mutation OR NTRK3:oncogenic_mutation OR ROS1:oncogenic_mutation OR ALK:oncogenic_mutation)
 NCT02576431	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion OR ROS1:fusion)
-NCT02601950	(SMARCB1:oncogenic_mutation OR EZH2:gain-of-function_mutation)
 NCT02609776	MET:exon_14_skipping_mutation; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin)
 NCT02609776	MET:oncogenic_mutation
 NCT02628067	catype:Anal Cancer
@@ -163,7 +162,6 @@ NCT03878719	BRAF:codon_600_missense_variant
 NCT03905148	*NOT catype:CNS cancer
 NCT03906331	RET:fusion
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
-NCT03933761	(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
 NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03975647	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
@@ -179,6 +177,7 @@ NCT04161885	catype:Acute Myeloid Leukemia
 NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
 NCT04176757	NOT ERBB2:amplification; NOT ERBB2:overexpression
+NCT04185883	KRAS:G12C
 NCT04188548	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04191499	catype:Breast cancer; NOT ERBB2:amplification; PIK3CA:alteration
 NCT04194944	RET:fusion; *NOT prior_therapy:systemic_therapy
@@ -192,6 +191,7 @@ NCT04249843	BRAF:alteration; NOT BRAF:V600E
 NCT04251117	catype:Hepatocellular carcinoma
 NCT04251533	(PIK3CA:oncogenic_mutation OR PTEN:oncogenic_mutation OR PTEN:loss_of_protein_expression); NOT ERBB2:amplification; NOT ERBB2:over_expression
 NCT04262856	*NOT prior_therapy:systemic_therapy
+NCT04269200	NOT catype:Leiomyosarcoma
 NCT04277637	NOT catype:solid tumours
 NCT04282018	catype:Cervical cancer
 NCT04282018	catype:Endometrial carcinoma
@@ -221,6 +221,7 @@ NCT04311710	catype:Non-small cell lung cancer
 NCT04311710	catype:Renal cell carcinoma
 NCT04311710	catype:Urothelial carcinoma
 NCT04383210	NRG1:fusion
+NCT04417621	catype:Melanoma; (BRAF:codon_600_misssense_mutation OR NRAS:oncogenic_mutation)
 NCT04418661	(KRAS:oncogenic_mutation OR KRAS:amplification OR BRAF:class_3_mutation OR NF1:loss-of-function_mutation OR NF1:oncogenic_mutation OR NF1:deletion)
 NCT04427072	MET:exon_14_skipping_mutation
 NCT04434482	NOT catype:central nervous system cancer
@@ -262,11 +263,12 @@ NCT04604132	(FGFR2:fusion OR FGFR2:amplification OR FGFR1:oncogenic_mutation OR 
 NCT04607421	BRAF:V600E; catype:Colorectal cancer
 NCT04619004	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04624204	catype:Small-cell lung carcinoma
-NCT04644237	ERBB2:oncogenic_mutation; NOT EGFR:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion
 NCT04655976	NOT ALK:fusion; NOT EGFR:oncogenic_mutation; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT ROS1:fusion; NOT BRAF:V600E
+NCT04623775	catype:Non-small cell lung cancer; NOT ALK:fusion; NOT EGFR:oncogenic_mutation; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT04665206	(NF2:oncogenic_mutation OR NF2:alteration)
 NCT04699188	KRAS:G12C
 NCT04720768	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_mutation)
+NCT04721015	catype:Non-small cell lung cancer
 NCT04746924	NOT ALK:fusion; NOT EGFR:oncogenic_mutation
 NCT04760288	RET:alteration
 NCT04849273	ALK:fusion
@@ -280,5 +282,11 @@ NCT04969887	(catype:Neuroendocrine tumour OR catype:Neuroendocrine carcinoma); N
 NCT04969887	catype:Gynaecological cancer; (catype:Ovarian Clear Cell Carcinoma OR catype:Uterine Clear Cell Carcinoma OR catype:Uterine carcinosarcoma OR catype:Ovarian carcinosarcoma OR catype:Uterine leiomyosarcoma OR catype:Carcinosarcoma OR catype:Vaginal cancer OR catype:Vulvar cancer); *NOT prior_therapy:immune_checkpoint_blockade
 NCT04969887	microsatellite_instability:high; NOT catype:Colorectal cancer; *NOT prior_therapy:immune_checkpoint_blockade
 NCT04969887	mismatch_repair:deficient; NOT catype:Colorectal cancer; *NOT prior_therapy:immune_checkpoint_blockade
+NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation)
+NCT04975308	catype:Breast cancer
 NCT05067283	KRAS:G12C
+NCT05150236	catype:Prostate cancer
+NCT05288166	catype:Prostate cancer
+NCT05059522	prior_therapy:Avelumab
+NCT03611868	(catype:Melanoma OR catype:Malignant peripheral nerve sheath tumor)

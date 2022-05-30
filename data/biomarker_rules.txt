@@ -6,6 +6,7 @@ ERBB2:overexpression => HER2:positive [CERTAIN:biomarker]
 ERBB2:amplification => HER2:positive [CERTAIN:biomarker]
 HER2:positive; *ERBB2:amplification => HER2:positive
 HER2:positive; *ERBB2:overexpression => HER2:positive
+ERBB2:amplification => ERBB2:protein_expression [INFERRED:biomarker]
 
 catype:Triple-negative breast cancer => ER:negative; PR:negative; HER2:negative
 PMS2:loss-of-protein_expression => mismatch_repair:deficient

@@ -810,8 +810,13 @@ sub load_module_preferential_trial_prioritisation {
 		my $transitive_class_efficacy_tier = $transitive_class_efficacy_tiers[0];
 		my $biomarker_tier = $biomarker_tiers[0];
 		
+# 		my $trial_match_criteria_score = (
+# 			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
+# # 			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
+# 			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 2 : 0 ) 
+# 			);
 		my $trial_match_criteria_score = (
-			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
+			( ( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) || ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ) ? 2 : 0 ) +
 # 			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
 			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 2 : 0 ) 
 			);
