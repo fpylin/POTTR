@@ -204,6 +204,19 @@ sub assert { # returns if assertion is a new fact
 	return $retval;
 }
 
+sub retract { # retract a fact
+	my $self = shift;
+	my $fact = shift;
+	my $retval = 0;
+
+	if ( exists $self->{'facts'}{$fact} ) {
+		delete $self->{'facts'}{$fact};
+		$retval = 1 ;
+	} 
+	
+	return $retval;
+}
+
 sub assert_string { # returns if assertion is a new fact
 	my $self = shift;
 	my $input = shift;
@@ -368,7 +381,12 @@ sub new {
     %params = %{ $_[0] } if defined $_[0] ;
     
     my @a;
-    my $self = { 'rules' => \@a, 'debug_level' => 0, 'debug_msg' => 'ansi' };
+    my $self = { 
+		'rules' => \@a, 
+		'debug_level' => 0, 
+		'debug_msg' => 'ansi',
+		'run_rules_only_once' => 1, # if specified, run rules more than once.
+	};
     
     bless($self, $class);
     
@@ -455,7 +473,7 @@ sub rule_to_string {
 		($rule->{'prio'} ? "[prio:$rule->{'prio'}] " : '').
 		join("; ", map { ($rule->{'lhs_assert'}[$_]?'*':'').($rule->{'lhs_neg'}[$_]?'NOT ':'').$rule->{'lhs'}[$_] } (0 .. $#{$rule->{'lhs'}} ) ).
 		" => ".
-		join("; ", @{ $rule->{'rhs'} })
+		join("; ", map { ($rule->{'rhs_neg'}[$_]?'NOT ':'').$rule->{'rhs'}[$_] } (0 .. $#{$rule->{'rhs'}} ) )
 		;
 	return $output;
 }
@@ -492,24 +510,34 @@ sub fire_rule {
 	my $constraints = shift; # optional reference to additional tracking tags ;
 	my $n_new = 0;
 	my @rhs = @{ $$rule{'rhs'} };
+	my @rhs_neg = @{ $$rule{'rhs_neg'} };
 	return 0 if ! scalar (@rhs);
 
-	for my $e (@rhs) {
-		my ($e, @tags) = Facts::string_to_fact_and_tags( $e );
+	for my $i (0 .. $#rhs) {
+		my $e = $rhs[$i];
+		my @tags;
+		($e, @tags) = Facts::string_to_fact_and_tags( $e );
 		my $n_tags = scalar @tags;
 		@tags = grep { $_ ne '__untrack__' } @tags; # if defined __untrack__ then no history should be tracked.
 		my $f_untrack = ( $n_tags != scalar(@tags) ) ;
 		
-		if ( ! $facts->has_fact($e) ) { # if fact already exists but no new tag defined, then simply do nothing.
-			$n_new += $facts->assert($e, @tags); # if a fact does not exist, then add a new fact!
-		} 
+		if ( $rhs_neg[$i] ) { # NOT in RHS indicates that a fact should be retracted
+			if ( $facts->has_fact($e) ) { 
+				$n_new += $facts->retract($e); 
+			} 
+			next;
+		} else { # assign the fact specified in the RHS
+			if ( ! $facts->has_fact($e) ) { # if fact already exists but no new tag defined, then simply do nothing.
+				$n_new += $facts->assert($e, @tags); # if a fact does not exist, then add a new fact!
+			}
+		}
 			
 		my @lhs_tags;
 		
 		if (! $f_untrack) {
 			for my $i ( 0 .. $#{ $$rule{'lhs'} } ) {
 				my $lhse = $$rule{'lhs'}[$i];
-				next if ! $facts->has_fact($lhse); # skip if no tags are mentioned in LHS element
+# 				next if ! $facts->has_fact($lhse); # skip if the fact does not exist CHECK; (or no tags are mentioned in LHS element)
 				
 				my $lhse_cleaned = clean_fact(($$rule{'lhs_neg'}[$i] ? "NOT " : "").$lhse);
 				my @t = $facts->get_tags($lhse);
@@ -616,9 +644,10 @@ sub run { # Rules::run - the main inference engine.
 				my @dyn_rule_rhs_to_fire = ( $self->{'dyn_rules'}{$dyn_rule}{'code'}->( $fact, $$facts_ref, \%{ $self->{'cache'} } ) );
 				my @dyn_rule_lhs = ($fact);
 				my @fake_lhs = ($fact);
+				my @fake_rhs_neg ;
 				my @fake_lhs_assert = (0);
 				my @fake_lhs_neg = (0);
-				my %a = ('lhs' => \@fake_lhs, 'lhs_neg' => \@fake_lhs_neg, 'lhs_assert' => \@fake_lhs_assert, 'rhs' => \@dyn_rule_rhs_to_fire);
+				my %a = ('lhs' => \@fake_lhs, 'lhs_neg' => \@fake_lhs_neg, 'lhs_assert' => \@fake_lhs_assert, 'rhs' => \@dyn_rule_rhs_to_fire, 'rhs_neg' => \@fake_rhs_neg );
 				if (scalar @dyn_rule_rhs_to_fire) {
 					my $rule = \%a;
 				    $self->debug_print(31, "   ".join("  ", $self->{'dyn_rules'}{$dyn_rule}{'name'}, $fact, '=>', join('; ', @dyn_rule_rhs_to_fire)))  ;
@@ -641,7 +670,7 @@ sub run { # Rules::run - the main inference engine.
 					my $match_id = join( "|", $rule->{'order'}, @{ $$constraints{'matched'} } );
 # 					$self->debug_print(35, "   visited = ".($visited_rules{$match_id}//0)." mid = ".$match_id )  ;
 
-					if (! exists $visited_rules{$match_id} ) {
+					if ( ! $self->{'run_rules_only_once'} or ! exists $visited_rules{$match_id} ) {
 						my $n_lhs = scalar @{ $$rule{'lhs'} };
 						
 						my $n_new_rule = $self->fire_rule($$facts_ref, $rule, $constraints);
@@ -697,16 +726,18 @@ sub load { # Load if-then rules
 		
 # 		my @rhs = map { s/^\s*|\s*$//g; $_ } split /\s*;\s*/, $rhs;
 		my @lhs_neg ;
+		my @rhs_neg ;
 		my @lhs_assert ; # false assertion for conditional constraint satisfication. Syntax "*LHS1"
 		for (@lhs) { push @lhs_assert, ( ( s/^\s*\*\s*// ) ? 1 : 0); } 
 		for (@lhs) { push @lhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); }
+		for (@rhs) { push @rhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); }
 		
 		if ( defined $prefix ) {
 			my %attrib = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*;\s*/, $prefix ;
 			$prio = $attrib{'prio'} if exists $attrib{'prio'} ;
 		}
 		
-		my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs);
+		my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs, 'rhs_neg' => \@rhs_neg);
 		++$order ;
 		push @rules_spec, \%a;
 		$self->{'rules_str'}{$rule_str}++;
@@ -728,11 +759,14 @@ sub load { # Load if-then rules
 			my @lhs = ($disj_lhs);
 			my @lhs_assert ;
 			my @lhs_neg ;
+			my @rhs_neg ;
 			for (@lhs) {
 				push @lhs_assert, ( ( s/^\s*\*\s*// ) ? 1 : 0); 
 				push @lhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); 
 			}
-			my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs);
+			for (@rhs) { push @rhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); }
+			
+			my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs, 'rhs_neg' => \@rhs_neg );
 			++$order ;
 			push @rules_spec, \%a;
 			$self->{'rules_str'}{$rule_str}++;
@@ -900,6 +934,15 @@ sub run {
 # $r->load("[prio:0] A=>B", "[prio:-1] B=>C", "[prio:0] C=>D"); 
 # $r->print; 
 # my %l = $r->run("A"); 
+# print map {"$_\t$l{$_}\n"} sort keys %l;
+# print $r->{'debug_output'} ;
+
+# my $r = Rules->new( { run_rules_only_once => 1}  ); 
+# my $f = Facts->new(); 
+# $r->load("0 => A", "A => NOT A; B", "B => NOT B; C", "C => NOT C; D", "D => NOT D; A"  );  
+# $r->print; 
+# $f->assert("A");
+# my %l = $r->run(\$f)->get_fact_tag_hash(); 
 # print map {"$_\t$l{$_}\n"} sort keys %l;
 # print $r->{'debug_output'} ;
 

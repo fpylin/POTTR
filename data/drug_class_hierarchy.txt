@@ -186,6 +186,7 @@ TNF_inhibitor
 TRK_inhibitor	AXL/FLT3/NTRK_inhibitor
 TRK_inhibitor	TRK_inhibitor,first_generation
 TRK_inhibitor	TRK_inhibitor,second_generation
+TRK_inhibitor	TRK_inhibitor,third_generation
 Treg_cell_depleting_antibody
 VEGFR/EGFR/RET_inhibitor
 VEGFR/KIT/PDGFR_inhibitor

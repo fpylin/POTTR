@@ -29,6 +29,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 2	EGFR	Exon 20 insertion	Non-small cell lung cancer	Mobocertinib	Not TGA approved. FDA approved 2021-09-15. NCT02716116: Phase 1/2 trial. ORR to TAK-788 was 43% in 28 patients who had exon 20 insertion. Median DOR was 14 months. Median PFS was 7.3 months.	33632775
 2	EGFR	G719, L861Q, S768I	Non-small cell lung cancer	Erlotinib; Gefitinib	Intermediate response to 1G TKI with resistance data	27413714, 28184913
 2	ERBB2	S310F, S310Y, L755S, L755P, A769H, A775_G776insYVMA, A775_G776insTVMA, G776S, G776delinsVC, V777L, G778_P780dup, G778_S779insLPS, Exon 20 insertion, Exon 20 mutation	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01. Phase 1/2. N=91. ORR 50/91 (55%). Median DOR 9.3 months. Median PFS 8.2 months. Median OS 17.8 months. DCR 84/91 (92%).	34534430, 10.1016/annonc/annonc741
+2	KRAS	G12C	Non-small cell lung cancer	Adagrasib	NCT03785249. In patients with previously treated metastatic non-small cell lung cancer, treatment with adagrasib resulted in ORR of 48/112 (43%), median PFS of 6.5 months and median OS of 12.6 months.	35658005
 2	KRAS	G12C	Non-small cell lung cancer	Sotorasib	Not TGA approved. FDA approved for second-line and beyond. Phase 2 CODEBREAK100. Previously treated patients. ORR 37%. PFS 6.8mo. OS 12.5mo.	32955176, 34096690, 10.1016/j.jtho.2019.09.020, 10.1200/JCO.2021.39.15_suppl.9003
 2	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Capmatinib	Not TGA approved; FDA approved; GEOMETRY mono-1: ORR 41% in 69 previously treated patients. Median DOR 9.7 months. ORR 68% in 28 treatment naive patients. Median DOR 12.6 months. 	32877583, 10.1200/JCO.2019.37.15_suppl.9004
 2	RET	Fusions, ARHGAP12-RET fusion, CCDC6-RET fusion, CCDC88C-RET fusion, CLIP1-RET fusion, DOCK1-RET fusion, ERC1-RET fusion, KIF5B-RET fusion, NCOA4-RET fusion, PRKAR1A-RET fusion, RBPMS-RET fusion, RELCH-RET fusion, TRIM24-RET fusion	Non-small cell lung cancer	Selpercatinib	Not TGA approved. LIBRETTO-001: First-line treatment. ORR 85%	32846060, 10.1200/JCO.2020.38.15_suppl.3584
@@ -88,6 +89,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Crizotinib	Phase 2. NCT02499614. N=26. In previously treated NSCLC patients, the ORR was 27% (7/26). PFS 4.4 months. OS 5.4 months. MET amplification defined as MET/CEP7 ratio &gt; 2.2.	31416808
 3	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Savolitinib		10.1158/1538-7445.AM2019-CT031
 3	MET	Overexpression	Non-small cell lung cancer	Amivantamab + Lazertinib	Phase 1 CHRYSALIS. ORR 90% (9 in 10) in patients with IHC positive (defined as combined EGFR+MET H score &gt;= 400)	10.1200/JCO.2021.39.15_suppl.9006
+3	NRG1	Fusions, ATP1B1-NRG1 fusion, CD74-NRG1 fusion, ITGB1-NRG1 fusion, SDC4-NRG1 fusion, SLC3A2-NRG1 fusion, ITGB1-NRG1 fusion	Solid tumours; Non-small cell lung cancer	Seribantumab	Phase 2. Cohort 1. In 12 of 15 patients (14 NSCLC patients, 1 pancreatic cancer) with evaluable disease, ORR  was 33% (4/12, including 2 CR), and DCR was 92% (11/12).	10.1200/JCO.2022.40.16_suppl.3006
 3	RET	Fusions	Non-small cell lung cancer	BOS172738	ORR 33% (10/30)	10.1200/JCO.2021.39.15_suppl.3008
 3	RET	Fusions	Non-small cell lung cancer	Cabozantinib	Not TGA approved. Single-arm phase 2. ORR 28%	27825636
 3	RET	Fusions	Non-small cell lung cancer	Lenvatinib	Single-arm phase 2. ORR 16%. PFS 7.3mo	31710864
@@ -100,6 +102,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	Tumour Mutational Burden	High	Non-small cell lung cancer	Durvalumab + Tremelimumab	MYSTIC trial	32271377
 3	Tumour Mutational Burden	High	Non-small cell lung cancer	Ipilimumab + Nivolumab + Carboplatin + Pemetrexed; Ipilimumab + Nivolumab + Cisplatin + Pemetrexed; Ipilimumab + Nivolumab + Carboplatin + Paclitaxel	Checkmakte 9LA: In non-EGFR/ALK-altered NSCLC, the prespecified subgroup analysis showed that high tumour TMB (at cut off of 10 mut/MB) is associated with high ORR in the chemo + IO group (46 v 28%), also mPFS (8.9 vs 4.7mo) and OS (15.0 vs 10.8 mo). Similar benefit was was also observed in bTMB at the 16 and 20 mut/MB thresholds.	10.1016/S1556-0864(21)01940-7
 4	ALK	Amplification, protein expression	Non-small cell lung cancer	Ensartinib		31628085, 25724526
+4	ALK	Fusion AND Amplification, L1196M, E1408V, T1151M	Non-small cell lung cancer	Brigatinib		10.1200/JCO.2017.35.15_suppl.9065
 4	ALK	Fusion, T1151M, T1151_L1152insT, L1152R, L1152P, C1156Y, I1171N, F1174L, F1174S, F1174C, V1180L, L1196M and L1198F, L1198F and C1156Y, L1198F, G1202R and L1198F, G1202R, G1202del, D1203N, D1203N and E1210K, S1206R, E1210K and S1206C, E1210K, L1196M, F1245C, G1269A, S1269S, R1275Q	Non-small cell lung cancer	TPX-0131	Cell line assays comparing TPX-0131 against approved ALK inhibitors	10.1158/1538-7445.AM2020-5226
 4	ALK	T1151, C1156Y, F1174C, F1174L, F1174V, G1269A, L1196M, S1206R	Non-small cell lung cancer	Ensartinib		31857951
 4	ALK	VKORC1L1-ALK fusion, T1151K	Non-small cell lung cancer	Alectinib	Case report.	30519133
@@ -108,7 +111,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	CD274	Protein expression	Non-small cell lung cancer	Pembrolizumab + Vibostolimab	Phase 1. First-in-human MK7684-001. In treatment-naive NSCLC, combined anti-TIGIT and anti-PD-1 antibodies achieved DCR of 83% in TPS&gt;=1% and in 45% in TPS&lt;1%. DCR was 32% and 45% respectively in PD-L1/PD-L1 refractory subgroup.	34800678
 4	CDKN2A	Loss of protein expression	Non-small cell lung cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
 4	CDKN2A	Oncogenic mutations	Non-small cell lung cancer	Palbociclib	TAPUR. N=28. 1 PR. 6 SD	10.1200/JCO.2019.37.15_suppl.9041
-4	CEACAM5	Overexpression	Non-small cell lung cancer	SAR408701		10.1200/JCO.2020.38.15_suppl.9505
+4	CEACAM5	Overexpression	Non-small cell lung cancer	Tusamitamab ravtansine		10.1200/JCO.2020.38.15_suppl.9505
 4	EGFR	A763insFQEA, V769insASV, D770insSVD, H773insNPH	Non-small cell lung cancer	Tarloxotinib	Cell line study.	33710795
 4	EGFR	Amplification	Non-small cell lung cancer	Afatinib	Phase 2 EGFR FISH-positive NSCLC. ORR 13%. DCR 51%.	25514804
 4	EGFR	Amplification AND L858R; Amplification AND Exon 19 deletion	Non-small cell lung cancer	Erlotinib	Retrospective study showing the subgroup with EGFR amplification and sensitizing mutations had prolonged PFS and ORR than those without. 	30284706
@@ -187,6 +190,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	FGFR2	FGFR2-BICC1 fusion	Non-small cell lung cancer	Erdafitinib		35050756
 4	KEAP1	Oncogenic mutations	Non-small cell lung cancer	Talazoparib	Preclinical study. Loss of KEAP1 induces a BRCAness phenotype in KEAP1-mutant lung cancer, mediated by stabilisation of EMSY, leading to sensitisation of PARP inhibitor.	34963055
 4	KEAP1+KRAS	KRAS:G12C AND NOT KEAP1:Oncogenic mutations	Non-small cell lung cancer	Sotorasib	Higher ORR (44%) was identified in patients with KEAP oncogenic mutations treated with Sotorasib in the CodeBreak100 trial.	34096690, 10.1200/JCO.2021.39.15_suppl.9003
+4	KRAS	G12C	Non-small cell lung cancer; Colorectal cancer	JAB-21822	Phase 1. NCT05009329.	10.1200/JCO.2022.40.16_suppl.3089
+4	KRAS	Oncogenic mutations	Non-small cell lung cancer	RMC-5552 + RMC-6272	Phase 1. NCT04774952.	10.1200/JCO.2022.40.16_suppl.3098
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	SHP2 inhibitor		29808006
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	Trametinib	Phase II, ORR 12% but worse PFS than docetaxel	10.1200/jco.2013.31.15_suppl.8029
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	Trametinib + Ponatinib	Intrinsic MEK resistance by FGFR1 activation	27338794, NCT03704688
@@ -196,13 +201,17 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MAP2K1	K57N, Q56P	Non-small cell lung cancer	Selumetinib	Cell line study showing NSCLC cells sensitive to AZD6244	18632602
 4	MAP2K1	Oncogenic mutations	Non-small cell lung cancer	Cobimetinib; Trametinib	OncoKB LOE 3	31715422
 4	MET	Amplification	Non-small cell lung cancer	Tepotinib		NCT02864992
+4	MET	D1028H	Non-small cell lung cancer	Crizotinib	Case report. c.3082G&gt;C could result in skipping of exon 14. Radiographic response to crizotinib was observed.	25898962
+4	MET	D1028N	Non-small cell lung cancer	Crizotinib	Case report. 	26892698
 4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation	Non-small cell lung cancer	Crizotinib	Case reports	26845194, 27022036
 4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation	Non-small cell lung cancer	Crizotinib; Cabozantinib	Case series.	26896094
 4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation, Y1003, D1010, Amplification, D1228, G1163	Non-small cell lung cancer	Cabozantinib	Cabozantinib has activities; Note MET IHC not a biomarker	30762593, 27825638, 27693535
 4	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Amivantamab	CHRYSALIS. NCT02609776. N=16. MET-2 cohort. 4 Confirmed partial responses.	10.1016/j.jtho.2021.08.084
 4	MET	Fusions	Non-small cell lung cancer; Glioblastoma	Crizotinib	Case reports	29527595, 30339198, 27748748
+4	MET	Overexpression	Non-small cell lung cancer	ABN401	Phase 1. NCT04052971. Two responders were seen in tumour with MET overexpressed NSCLC.	10.1200/JCO.2022.40.16_suppl.3105
 4	MET	Y1003S	Non-small cell lung cancer	Crizotinib	Case report showing significant response and DOR	30885356
 4	MET	Y1021H	Non-small cell lung cancer	Crizotinib	Case report, sensitive to Crizotinib	31809977
+4	MET1	CAV-MET1 fusion	Non-small cell lung cancer; Small-cell lung cancer	Crizotinib	Case report. Objective response was seen in SCLC transformation with Inframe fusion of exons 1-2 of CAV1 to exons 2-21 of MET on the background of EGFR L858R.	31122565
 4	NF1	Oncogenic mutations	Non-small cell lung cancer	Trametinib		NCT03232892
 4	NOTCH3	Overexpression	Non-small cell lung cancer	MRK003	Pre-clinical evidence	17804716
 4	NRG1	CD74-NRG1 fusion	Non-small cell lung cancer	GSK2849330	Phase 1. NCT01966445. Single responder with durable response. 	34132450

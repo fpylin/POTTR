@@ -41,10 +41,12 @@ Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Marginal zone lymphoma|Marginal zone B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Small Lymphocytic Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Anaplastic large cell lymphoma|Lymphoma, Large-Cell, Anaplastic
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Cutaneous T-cell lymphoma	Mycosis fungoides
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Cutaneous T-cell lymphoma	Sézary syndrome|Sezary syndrome|Sezary's Disease
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Cutaneous T-cell lymphoma|Cutaneous lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Gamma-delta T-cell lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Angioimmunoblastic lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma	Mycosis fungoides
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma	Sézary syndrome|Sezary syndrome|Sezary's Disease
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma|Cutaneous lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma|Non-hodgkin Lymphoma
 Cancer	Haematological malignancy	Lymphoma|Lymphoid malignancy
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell sarcoma
@@ -74,9 +76,8 @@ Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Inflammatory breast carc
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Triple-negative breast cancer|TNBC
 Cancer	Solid tumour	Breast cancer	Breast adenoid cystic carcinoma
 Cancer	Solid tumour	Breast cancer	Breast neuroendocrine carcinoma
-Cancer	Solid tumour	Breast cancer	Breast secretory carcinoma
+Cancer	Solid tumour	Breast cancer	Breast secretory carcinoma|Secretory breast carcinoma|Secretory carcinoma of the breast
 Cancer	Solid tumour	Breast cancer	Malignant phyllodes tumour
-Cancer	Solid tumour	Breast cancer	Mammary analogue secretory carcinoma
 Cancer	Solid tumour	Breast cancer	Medullary breast carcinoma
 Cancer	Solid tumour	Breast cancer	Metaplastic breast carcinoma|Breast metaplastic carcinoma
 Cancer	Solid tumour	Cancer of unknown primary	Adenocarcinoma of unknown primary
@@ -144,7 +145,7 @@ Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	High-g
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma|Diffuse midline glioma, H3 K27M mutant
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma|Glioma, high-grade
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse glioma, WHO Grade 2|Diffuse astrocytoma, WHO Grade 2
-Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse leptomeningeal neuroglial tumor
+Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse leptomeningeal neuroglial tumour
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Oligodendroglioma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Paediatric low grade gliomas|Childhood low-grade glioma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Pleomorphic xanthoastrocytoma
@@ -152,6 +153,20 @@ Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-gr
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma|Glioma, low-grade
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma|Glioma, malignant
 Cancer	Solid tumour	Central nervous system cancer	Glioma|Brain Glioma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Anaplastic ganglioglioma|Ganglioglioma, anaplastic
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Central neurocytoma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Desmoplastic infantile astrocytoma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Desmoplastic infantile ganglioma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Diffuse leptomeningeal glioneuronal tumour|Diffuse leptomeningeal neuroglial tumour
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Dysembryoplastic neuroepithelial tumour
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Extra-ventricular Neurocytoma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Gangliocytoma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Ganglioglioma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Liponeurocytoma
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Papillary glioneuronal tumour|Papillary neuroglial tumour
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Rosette-forming glioneuronal tumour of the fourth ventricle
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour	Rosetted glioneuronal tumour with neuropil-like islands
+Cancer	Solid tumour	Central nervous system cancer	Glioneuronal tumour|Mixed neuronal-glial tumour|Neuroglial tumour
 Cancer	Solid tumour	Central nervous system cancer	Hemangioblastoma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma	Atypical meningioma
@@ -333,6 +348,7 @@ Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	Clear cell carcin
 Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	High-grade salivary gland carcinoma
 Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	Intracapsular carcinoma
 Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	Lymphoepithelial carcinoma
+Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	Mammary analogue secretory carcinoma|Mammary analogue secretory carcinoma of the salivary gland
 Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	Salivary duct carcinoma
 Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	Salivary gland acini cell carcinoma|Salivary gland acinar cell carcinoma|Acinic cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Salivary gland cancer	Salivary gland basal cell adenocarcinoma
@@ -389,8 +405,6 @@ Cancer	Solid tumour	Mesothelioma	Pericardial mesothelioma
 Cancer	Solid tumour	Mesothelioma	Peritoneal mesothelioma
 Cancer	Solid tumour	Mesothelioma	Pleural mesothelioma|Malignant Pleural Mesothelioma|Mesotheliomas pleural
 Cancer	Solid tumour	Mesothelioma|Malignant mesothelioma
-Cancer	Solid tumour	Mixed neuronal-glial tumour
-Cancer	Solid tumour	Mixed neuronal-glial tumour	Anaplastic ganglioglioma|Ganglioglioma, anaplastic
 Cancer	Solid tumour	Neuroendocrine carcinoma	Gastro-entero-pancreatic neuroendocrine carcinoma	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma
 Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma
@@ -427,8 +441,8 @@ Cancer	Solid tumour	Sarcoma	Aggressive fibromatosis|Desmoid|Desmoid tumour
 Cancer	Solid tumour	Sarcoma	Alveolar soft part sarcoma
 Cancer	Solid tumour	Sarcoma	Angiomatoid fibrous histiocytoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma
-Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Uterine carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Ovarian carcinosarcoma
+Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Uterine carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Dedifferentiated chondrosarcoma

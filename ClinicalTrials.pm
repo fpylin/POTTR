@@ -531,6 +531,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		for my $row ( @{ $Eligibility_this_file->{'data'} } ) {
 			my $trial_id = $$row{'trial_id'};
 			my $ec = $$row{'eligibility_criteria'};
+			next if ! defined $trial_id;
 			push @{ $Eligibility_by_trial_id_this_file{$trial_id} }, $ec; # rules are populated in disjunction
 		}
 		

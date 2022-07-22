@@ -227,7 +227,6 @@ sub interp_variants {
 				( ($aa_org, $aa_pos, $aa_org2, $aa_pos2, $muttype, $delins_spec) = /^(?:p\.)?\(?($aa_regex)(\d+)_?($aa_regex)?(\d+)?((?:ins|dup|del(?:ins)?|>))(.*)\)?$/ ) and do {
 					$aa_org = $aa_code{$aa_org};
 					$aa_org2 = $aa_code{$aa_org2};
-					$aa_mut = $aa_code{$aa_mut};
 					$muttype = 'delins' if $muttype eq '>';
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'inframe_insertion' if ($muttype eq 'ins') or ($muttype eq 'dup') ;

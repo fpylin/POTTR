@@ -237,7 +237,12 @@ sub load_module_cancer_type_mapping {
 sub load_module_variant_feature_mapping {
 	my $self = shift;
 
-	my $rs = $self->{'modules'}->add_module('01B - Variant Feature Mapping');
+	my $rs = $self->{'modules'}->add_module('01B - Predefined biomarker rules');
+	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-rules-file') ) {
+		$rs->load( file( $srcfile ) );
+	}
+	
+	$rs = $self->{'modules'}->add_module('01C - Variant Feature Mapping');
 	$rs->define_dyn_rule( 'preprocessing_variant',  sub { my $f = shift; my $facts = $_[0];
 		my @retval ;
 		my @tags = $facts->get_tags($f);
@@ -282,7 +287,7 @@ sub load_module_variant_feature_mapping {
 		$rs->load( file( $srcfile ) );
 	}
 	
-	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-rules-file') ) {
+	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-rules-file') ) { # biomarker rule file is processed again.
 		$rs->load( file( $srcfile ) );
 	}
 	
@@ -304,7 +309,7 @@ sub load_module_variant_feature_mapping {
 #######################################################################
 sub load_module_clinical_data_module {
 	my $self = shift;
-	my $rs = $self->{'modules'}->add_module('01C - Clinical data module');
+	my $rs = $self->{'modules'}->add_module('01D - Clinical data module');
 	
 	$rs->load( $self->gen_rules_drug_db_prior_therapy() ); 
 }

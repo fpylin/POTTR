@@ -1,3 +1,5 @@
+MET:T1010I => NOT MET:T1010I; MET:T992I
+
 ER:positive; catype:Breast cancer => ESR1:protein_expression
 PR:positive; catype:Breast cancer => PGR:protein_expression
 HER2:positive; catype:Breast cancer => catype:HER2-positive breast cancer
@@ -76,6 +78,8 @@ BRAF:G466R => BRAF:class_3_mutation
 BRAF:S467L => BRAF:class_3_mutation
 BRAF:G469E => BRAF:class_3_mutation
 BRAF:K483E => BRAF:class_3_mutation
+BRAF:E501G => BRAF:class_3_mutation
+BRAF:E501Q => BRAF:class_3_mutation
 BRAF:Q524L => BRAF:class_3_mutation
 BRAF:R558Q => BRAF:class_3_mutation
 BRAF:N581I => BRAF:class_3_mutation
@@ -97,3 +101,6 @@ BRAF:T599A => BRAF:class_3_mutation
 BRAF:class_3_mutation => BRAF:oncogenic_mutation; BRAF:loss-of-function_mutation
 BRAF:class_2_mutation => BRAF:oncogenic_mutation; BRAF:gain-of-function_mutation
 BRAF:class_1_mutation => BRAF:oncogenic_mutation; BRAF:gain-of-function_mutation
+
+# VUS not further passed for treatment recommendation
+BRAF:V276L => NOT BRAF:V276L 
