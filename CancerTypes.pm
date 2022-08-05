@@ -90,7 +90,8 @@ sub get_preferred_catype_term {
 	}
 	
 	if ( defined $x ) {
-		print STDERR "\e[1;31mCancerTypes.pm: ``$x'' not found in the database.\e[0m\n";
+		warn "\e[1;31m".(my $msg = "CancerTypes.pm: ``$x'' not found in the database.")."\e[0m\n";
+		main::error_hook( $msg ) if ( UNIVERSAL::can("main", "error_hook") ); # Generating an alert
 		$catype_not_found{ $x } ++ ;
 		$catype_preferred_term{ mk_signature($x) } = $preferred_catype_term_cache{$x} = $x;
 	}
@@ -381,9 +382,9 @@ sub match_catype_whole_word {
 	our $MMM = '';
 	if ( $string =~ /^[[:punct:][:space:]]*(${catype_regex_M})[[:punct:][:space:]]*\s*$/ig ) {
 		my $m = $match_catype_whole_word_cache{$string} = get_preferred_catype_term($MMM);
-# 		print STDERR "\tCancerTypes::match_catype_whole_word: $string: new: $1: $MMM => $m\n";
+# 		print STDERR "\tCancerTypes::match_catype_whole_word: $string: new: $1: $MMM => $m\n" ;
 		open FOUT_CACHE, ">$match_catype_whole_word_cache_fn";
-		print FOUT_CACHE map { "$_\t$match_catype_whole_word_cache{$_}\n" } (sort keys %match_catype_whole_word_cache );
+		print FOUT_CACHE map { "$_\t$match_catype_whole_word_cache{$_}\n" } grep { defined $match_catype_whole_word_cache{$_} } (sort keys %match_catype_whole_word_cache ); # die $match_catype_whole_word_cache{$_} if ! exists $match_catype_whole_word_cache{$_} 
 		close FOUT_CACHE;
 		return ($m);
 	}

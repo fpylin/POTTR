@@ -222,10 +222,10 @@ sub encode_alteration_proper {
 		$x = lc($1);
 	} elsif ( $x =~ /^(.*) (fusions?)$/i ) { 
 		$x = $1."_".lc($2);
-	} elsif ( $x =~ /^[A-Z](\d+)ins$/i ) { 
-		$x = lc("codon_$1_inframe_insertion");
-	} elsif ( $x =~ /^[A-Z](\d+)$/i ) { 
-		$x = lc("codon_$1_missense_variant");
+	} elsif ( $x =~ /^([A-Z])(\d+)ins$/i ) { 
+		$x = $1.lc("$2_inframe_insertion"); # Variant at codon number should NOT be used. aa_pos must be specified e.g., confusion between MET D1010H and T1010I due to different transcripts
+	} elsif ( $x =~ /^([A-Z])(\d+)X?$/i ) { 
+		$x = $1.lc("$2_missense_variant"); # Variant at codon number should NOT be used. aa_pos must be specified e.g., confusion between MET D1010H and T1010I due to different transcripts
 	} else {
 		return ($bm // '').$x;
 	}
@@ -527,8 +527,12 @@ sub gen_rule_knowledge_base {
 		if ( $alterations =~ /\s*(?:except|(?:but) not)\s*/i ) {
 			($alterations, $alterations_neg) = ($`, $');
 		}
-		
-		my @alterations = grep { length($_) } map { s/^\s*|\s*$//; $_ } split /\s*[$alterations_sep]\s*/, $alterations ;
+				
+		my @alterations = grep { length($_) } map { 
+			s/^\s*|\s*$//; 
+			/^(.*?)\s*\(\s*([A-Z]\d+[A-Z]?)\s*\)/ ? ($1, $2) : $_ 
+			} split /\s*[$alterations_sep]\s*/, $alterations ;
+
 		
 		my @alterations_neg = grep { length($_) } map { s/^\s*|\s*$//; $_ } ( split /\s*[$alterations_sep]\s*/, $alterations_neg );
 		

@@ -139,6 +139,8 @@ sub interp_variants {
 				push @alterations, "exon_$1"."_splice_mutation"; 
 				push @alterations, "exon_$1"."_deletion"; 
 				push @alterations, "exon_$1"."_mutation"; 
+			} elsif ( $biomarker_spec =~ /(v[IV]+)(?:\b|$)/i ) {
+				push @alterations, $1, $1."_variant"; 
 			}
 			last; 
 		};
@@ -226,7 +228,7 @@ sub interp_variants {
 				my $muttype ;
 				( ($aa_org, $aa_pos, $aa_org2, $aa_pos2, $muttype, $delins_spec) = /^(?:p\.)?\(?($aa_regex)(\d+)_?($aa_regex)?(\d+)?((?:ins|dup|del(?:ins)?|>))(.*)\)?$/ ) and do {
 					$aa_org = $aa_code{$aa_org};
-					$aa_org2 = $aa_code{$aa_org2};
+					$aa_org2 = defined $aa_org2 ? $aa_code{$aa_org2} : '';
 					$muttype = 'delins' if $muttype eq '>';
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'inframe_insertion' if ($muttype eq 'ins') or ($muttype eq 'dup') ;
@@ -252,7 +254,8 @@ sub interp_variants {
 			if ( defined $aa_org and defined $aa_pos ) {
 				$aa_org = $aa_code{$aa_org};
 				for my $conseq_t (@conseq_t) {
-					push @alterations, "codon_".$aa_pos."_".$conseq_t; # missense_variant"  ; # and defined $aa_mut 
+# 					push @alterations, "codon_".$aa_pos."_".$conseq_t; # missense_variant" ; # Variant at codon number should NOT be used. aa_pos must be specified e.g., confusion between MET D1010H and T1010I due to different transcripts
+					push @alterations, $aa_org.$aa_pos."_".$conseq_t; # missense_variant"  ; # and defined $aa_mut 
 				}
 			}
 			

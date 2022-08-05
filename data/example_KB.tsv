@@ -84,7 +84,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	MET	Amplification	Non-small cell lung cancer	Capmatinib	GEOMETRY mono-1 study	10.1200/JCO.2020.38.15_suppl.9509
 3	MET	Amplification	Non-small cell lung cancer	Crizotinib	Phase 2. N=38. ORR 38% for high (8/21, &gt;=4 MET-to-CEP7 ratio on FISH), 14% for medium (2/14, &gt;2.2 to &lt;4 MET-to-CEP7 ratio), and 1 in 3 low (≥1.8 to ≤2.2 MET-to-CEP7 ratio). Median PFS were 6.7 months (high), 1.9 months (medium), and 1.8 months (low).	33676017
 3	MET	Amplification	Non-small cell lung cancer	Tepotinib	Phase II VISION Cohort B. N=24. MET gene copy number &gt;=2.5 by liquid biopsy. No exon 14 skipping mutations. ORR 42%. In previously untreated patient, ORR 71%.	10.1200/JCO.2021.39.15_suppl.9021
-3	MET	Amplification, D1010, Exon 14 Deletion, Exon 14 splicing mutation, Y1003	Non-small cell lung cancer	Crizotinib	Not TGA or FDA approved; NCCN Category 2A. Note: no conclusive data from large trials to date.	26729443, 10.1200/jco.2014.32.15_suppl.8001
+3	MET	Amplification, D1010 (D1028), Exon 14 Deletion, Exon 14 splicing mutation, Y1003 (Y1021)	Non-small cell lung cancer	Crizotinib	Not TGA or FDA approved; NCCN Category 2A. Note: no conclusive data from large trials to date.	26729443, 10.1200/jco.2014.32.15_suppl.8001
 3	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Crizotinib		31932802
 3	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Crizotinib	Phase 2. NCT02499614. N=26. In previously treated NSCLC patients, the ORR was 27% (7/26). PFS 4.4 months. OS 5.4 months. MET amplification defined as MET/CEP7 ratio &gt; 2.2.	31416808
 3	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Savolitinib		10.1158/1538-7445.AM2019-CT031
@@ -201,16 +201,16 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MAP2K1	K57N, Q56P	Non-small cell lung cancer	Selumetinib	Cell line study showing NSCLC cells sensitive to AZD6244	18632602
 4	MAP2K1	Oncogenic mutations	Non-small cell lung cancer	Cobimetinib; Trametinib	OncoKB LOE 3	31715422
 4	MET	Amplification	Non-small cell lung cancer	Tepotinib		NCT02864992
-4	MET	D1028H	Non-small cell lung cancer	Crizotinib	Case report. c.3082G&gt;C could result in skipping of exon 14. Radiographic response to crizotinib was observed.	25898962
-4	MET	D1028N	Non-small cell lung cancer	Crizotinib	Case report. 	26892698
+4	MET	D1028H (D1010H)	Non-small cell lung cancer	Crizotinib	Case report. c.3082G&gt;C could result in skipping of exon 14. Radiographic response to crizotinib was observed.	25898962
+4	MET	D1028N (D1010N)	Non-small cell lung cancer	Crizotinib	Case report. 	26892698
 4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation	Non-small cell lung cancer	Crizotinib	Case reports	26845194, 27022036
 4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation	Non-small cell lung cancer	Crizotinib; Cabozantinib	Case series.	26896094
-4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation, Y1003, D1010, Amplification, D1228, G1163	Non-small cell lung cancer	Cabozantinib	Cabozantinib has activities; Note MET IHC not a biomarker	30762593, 27825638, 27693535
+4	MET	Exon 14 deletion, Exon 14 splicing mutation,  Exon 14 skipping mutation, Y1003 (Y1021), D1010 (D1028), Amplification, D1228, G1163	Non-small cell lung cancer	Cabozantinib	Cabozantinib has activities; Note MET IHC not a biomarker	30762593, 27825638, 27693535
 4	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Amivantamab	CHRYSALIS. NCT02609776. N=16. MET-2 cohort. 4 Confirmed partial responses.	10.1016/j.jtho.2021.08.084
 4	MET	Fusions	Non-small cell lung cancer; Glioblastoma	Crizotinib	Case reports	29527595, 30339198, 27748748
 4	MET	Overexpression	Non-small cell lung cancer	ABN401	Phase 1. NCT04052971. Two responders were seen in tumour with MET overexpressed NSCLC.	10.1200/JCO.2022.40.16_suppl.3105
-4	MET	Y1003S	Non-small cell lung cancer	Crizotinib	Case report showing significant response and DOR	30885356
-4	MET	Y1021H	Non-small cell lung cancer	Crizotinib	Case report, sensitive to Crizotinib	31809977
+4	MET	Y1003S (Y1021S)	Non-small cell lung cancer	Crizotinib	Case report showing significant response and DOR	30885356
+4	MET	Y1021H (Y1003H)	Non-small cell lung cancer	Crizotinib	Case report, sensitive to Crizotinib	31809977
 4	MET1	CAV-MET1 fusion	Non-small cell lung cancer; Small-cell lung cancer	Crizotinib	Case report. Objective response was seen in SCLC transformation with Inframe fusion of exons 1-2 of CAV1 to exons 2-21 of MET on the background of EGFR L858R.	31122565
 4	NF1	Oncogenic mutations	Non-small cell lung cancer	Trametinib		NCT03232892
 4	NOTCH3	Overexpression	Non-small cell lung cancer	MRK003	Pre-clinical evidence	17804716
@@ -335,17 +335,17 @@ R2	KRAS+MET	MET:exon 14 skipping mutation and KRAS:Oncogenic mutations	Non-small
 R2	Loss-of-heterozygosity score	High	Non-small cell lung cancer	Rucaparib	Phase 2 Lung-MAP Sub-Study, S1900A. ORR 7%. Genomic LOH does not predict activity.	10.1200/JCO.2021.39.15_suppl.9024
 R2	MET	Amplification	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib; Osimertinib		30676858
 R2	MET	Amplification	Non-small cell lung cancer	Osimertinib	Secondary resistance post Osimertinib. Amplification determined by FISH.	27252416
-R2	MET	D1228N	Non-small cell lung cancer	Crizotinib		27343442
-R2	MET	D1228N, D1228	Non-small cell lung cancer	Capmatinib; Tepotinib; Savolitinib		32034073
-R2	MET	D1246N	Non-small cell lung cancer	Crizotinib	Case report. Emergent variant post exposure to Crizotinib. Possible Acquired resistance	31809977
-R2	MET	F1007fs	Non-small cell lung cancer	Crizotinib	Case report. Primary resistance to crizotinib	29935852
-R2	MET	G1163R, D1228H, D1228A, Y1230H	Non-small cell lung cancer	Crizotinib	Case report. Emergent mutations detected on ctDNA at the time progression after treatment with crizotinib.	29110851
-R2	MET	H1094Y, L1195V	Non-small cell lung cancer	Glesatinib		32034073
-R2	MET	L1195V, Y1230, D1228N, D1228, D1246, Y1248, G1163	Non-small cell lung cancer	Crizotinib	Strong evidence for Crizotinib. Capmatinib inferred	28522754, 27987579, 32306194, 32034073
+R2	MET	D1228N (D1246N)	Non-small cell lung cancer	Crizotinib		27343442
+R2	MET	D1228N (D1246N), D1228 (D1246)	Non-small cell lung cancer	Capmatinib; Tepotinib; Savolitinib		32034073
+R2	MET	D1246N (D1228N)	Non-small cell lung cancer	Crizotinib	Case report. Emergent variant post exposure to Crizotinib. Possible Acquired resistance	31809977
+R2	MET	F1007fs (F1025fs)	Non-small cell lung cancer	Crizotinib	Case report. Primary resistance to crizotinib	29935852
+R2	MET	G1163R (G1181R), D1228H (D1246N), D1228A (D1246A), Y1230H (Y1248A)	Non-small cell lung cancer	Crizotinib	Case report. Emergent mutations detected on ctDNA at the time progression after treatment with crizotinib.	29110851
+R2	MET	H1094Y (H1112Y), L1195V (L1213V)	Non-small cell lung cancer	Glesatinib		32034073
+R2	MET	L1195V (L1213V), Y1230 (Y1248), D1228N (D1246N), D1228 (D1246), D1246 (D1228), Y1248 (Y1230), G1163 (G1181)	Non-small cell lung cancer	Crizotinib	Strong evidence for Crizotinib. Capmatinib inferred	28522754, 27987579, 32306194, 32034073
 R2	MET	No protein expression	Non-small cell lung cancer	Amivantamab + Lazertinib	Phase 1 CHRYSALIS. ORR 10% (1 in 10 patients) with negative IHC (defined as combined EGFR+MET H score &lt; 400)	10.1200/JCO.2021.39.15_suppl.9006
-R2	MET	Y1230C	Non-small cell lung cancer	Crizotinib	Case report. Pre-treatment D1010H sensitizing to crizotinib.	27666659
-R2	MET	Y1230H	Non-small cell lung cancer	Crizotinib	Case report. Acquired resistance	28629543
-R2	MET	Y1230S, Y1230H, D1228N, D1228H, F1200I, L1195V, S244fs	Non-small cell lung cancer	Crizotinib	Case series.	31548343
+R2	MET	Y1230C (Y1248C)	Non-small cell lung cancer	Crizotinib	Case report. Pre-treatment D1010H sensitizing to crizotinib.	27666659
+R2	MET	Y1230H (Y1248H)	Non-small cell lung cancer	Crizotinib	Case report. Acquired resistance	28629543
+R2	MET	Y1230S (Y1248S), D1228N (D1246N), D1228H (D1246H), F1200I (F1218I), L1195V (L1213V), S244fs	Non-small cell lung cancer	Crizotinib	Case series.	31548343
 R2	MET+TP53	MET:Exon 14 skipping mutation and TP53:Oncogenic mutations	Non-small cell lung cancer	Crizotinib	Case series. TP53 mutation shown in post-exposure to crizotinib 7 of 12 cases.	31548343
 R2	MRAS	Q71R	Non-small cell lung cancer	Sotorasib	Treatment-emergent RAS and RAF hotspot mutations were also observed in both clinical samples and patient-derived xenograft models.	34759319
 R2	NF1	Oncogenic mutations	Non-small cell lung cancer	Crizotinib	Case series.	31548343
@@ -366,4 +366,5 @@ R2	ROS1	L1951R, L2026M, G2032R, D2033N	Non-small cell lung cancer	Brigatinib		26
 R2	ROS1	L2026M, G2032R	Non-small cell lung cancer	AZD3463		26372962, 31395437
 R2	ROS1	L2026M, G2032R, D2033N	Non-small cell lung cancer	Entrectinib		26372962, 31395437
 R2	ROS1+MET	ROS1:fusion AND MET:D1228N	Non-small cell lung cancer	Crizotinib	Case report	33000474
+R2	SETD2	Truncating mutations	Non-clear cell renal cell carcinoma	Cabozantinib + Nivolumab	NCT03635892. Single arm in Non-clear cell renal cell carcinomas. In non-chromophobe group, the overall ORR was 48%. In exploratory biomarker analysis, SETD2 truncating mutation was associated with reduced response with Cabozantinib and Nivolumab (0 of 5 cases).	35298296
 R2	STK11+KRAS	STK11:Oncogenic mutations AND KRAS:Oncogenic mutations	Non-small cell lung cancer	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Pre-clinical study	29773717

@@ -1,4 +1,6 @@
 MET:T1010I => NOT MET:T1010I; MET:T992I
+(MET:D1010H OR MET:D1228H) => MET:D1010H; MET:D1228H; MET:exon_14_skipping_mutation
+(MET:D1010 OR MET:D1228) => MET:D1010; MET:D1228; MET:exon_14_skipping_mutation
 
 ER:positive; catype:Breast cancer => ESR1:protein_expression
 PR:positive; catype:Breast cancer => PGR:protein_expression
