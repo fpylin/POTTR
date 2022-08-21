@@ -19,6 +19,7 @@ ABCP regimen	Atezolizumab + Bevacizumab + Carboplatin + Paclitaxel
 ABN401|ABN 401|ABN-401	MET_inhibitor,type_1
 ABSK043	PD-L1_inhibitor,oral
 ABT-122|ABT122	bispecific_TNF/IL-17A_antibody
+ABT-737	dual_Bcl2/xL_inhibitor
 ABT-767	PARP_inhibitor
 ACT001|ACT-001	NFKB_inhibitor
 ADG116	anti-CTLA-4_monoclonal_antibody
@@ -59,6 +60,7 @@ AMG-427|AMG 427	bispecific_FLT3/CD3_monoclonal_antibody
 AMG-673|AMG 673	anti-CD33/CD3_BiTE_antibody
 AMG-701|AMG 701	anti-BCMA_BiTE_antibody
 AMG319	PI3K_delta_inhibitor
+AMX-818|AMX 818	ERBB2-XPAT_T-cell_engager
 AMV002	HPV_DNA_vaccine
 APG-1387|APG 1387|APG1387|SM-1387	IAP_inhibitor; SMAC_mimetic
 APL-501	anti-PD-1_monoclonal_antibody
@@ -600,6 +602,7 @@ LM-061	MET/VEGFR2/FLT3_inhibitor
 LM-108|LM108	anti-CCR8_monoclonal_antibody
 LNS8801	GPER_agonist
 LOP628	anti-c-KIT_antibody-drug_conjugate
+LOXO-260	RET inhibitor
 LOXO-338	BCL2_inhibitor
 LOXO-783	PI3Kalpha_H1047R_inhibitor
 LTT462|LTT 462	ERK_inhibitor
@@ -684,6 +687,7 @@ MK2206	AKT_inhibitor
 MLN0128	MTORC1/MTORC2_inhibitor
 MORAb-202	anti-FR_alpha_antibody-drug_conjugate
 MRK003	gamma_secretase_inhibitor
+MRTX1133|MRTX-1133	KRAS_G12D_inhibitor
 MSB0254	anti-VEGFR2_monoclonal_antibody
 MSC2156119J	MET_inhibitor
 MT-5111	anti-ERBB2_engineered_toxin_body
@@ -765,6 +769,7 @@ OBI-999	anti-globoH_antibody-drug_conjugate
 OBT076	anti-CD205_antibody-drug_conjugate
 OMO-1|JNJ-38877618|OMO1	MET_inhibitor
 ONC201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
+ONC392|ONC-392	anti-CTLA4_monoclonal_antibody
 OP-1250	complete_estrogen_receptor_antagonist
 Obinutuzumab|Afutuzumab|GA-101|GA101|Gazyva|R7159|RO 5072759|RO-5072759|RO5072759	anti-CD20_monoclonal_antibody
 Ociperlimab|BGB-A1217|BGB A1217|BGBA1217	anti-TIGIT_monoclonal_antibody
@@ -1103,6 +1108,7 @@ Trastuzumab Emtansine|Ado-Trastuzumab Emtansine|Kadcyla|PRO132365|RO5304020|T-DM
 Trastuzumab|Herceptin|ABP 980|ALT02|Anti-p185-HER2|Herzuma|Ogivri|Ontruzant|PF-05280014|RO0452317|SB3|Trazimera|rhuMAb HER2	anti-ERBB2_monoclonal_antibody
 Tremelimumab|CP-675|Ticilimumab	anti-CTLA-4_monoclonal_antibody
 Treosulfan	alkylating_agent
+Trichostatin A	HDAC_inhibitor
 Trifluridine/Tipiracil|trifluridine-tipiracil|Lonsurf|TAS 102|TAS-102|Tipiracil Hydrochloride Mixture with Trifluridine|Trifluridine and Tipiracil Hydrochloride	antimetabolite; thymidine_phosphorylase_inhibitor; Tipiracil Hydrochloride; Trifluridine
 Trilaciclib	CDK4/6_inhibitor
 Triptorelin|6-D-Tryptophan-LH-RH|6-D-Tryptophanluteinizing Hormone-releasing Factor|AY-25650|CL-118,532|Detryptoreline	LHRH_agonist

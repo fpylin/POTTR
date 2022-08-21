@@ -360,8 +360,8 @@ sub get_catype_synonyms {
 our %match_catype_whole_word_cache;
 our %match_catype_cache;
 
-our $match_catype_whole_word_cache_fn = '/tmp/pottr_catypes_whole_word.cache';
-our $match_catype_cache_fn = '/tmp/pottr_catypes.cache';
+our $match_catype_whole_word_cache_fn = POTTRConfig::mk_type_path('cache', 'pottr_catypes_whole_word.cache');
+our $match_catype_cache_fn = POTTRConfig::mk_type_path('cache', 'pottr_catypes.cache');
 
 sub match_catype_whole_word {
 	&ON_DEMAND_INIT;

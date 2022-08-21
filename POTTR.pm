@@ -326,7 +326,8 @@ sub load_module_variant_evidence_grading {
 		$evidence_base_label //= "KB$cnt";
 		$evidence_base_label =~ s|.*/||;
 		$evidence_base_label =~ s|\W.*||;
-		$rs->load( Evidence::gen_rule_knowledge_base( $evidence_base_label, $evidence_base_file, $evidence_base_file.".rulescache.txt" ) );
+		my $rules_cache_file = POTTRConfig::mk_type_path("cache",  ($evidence_base_file =~ s/^.*\///r).".rulescache.txt" );
+		$rs->load( Evidence::gen_rule_knowledge_base( $evidence_base_label, $evidence_base_file, $rules_cache_file ) );
 		++ $cnt ;
 	}
 
@@ -744,14 +745,16 @@ sub load_module_preferential_trial_matching {
 
 	# multiple rule files are allowed to filter search results trials based on clinical eligibility
 	my @trial_eligibility_file = POTTRConfig::get_paths('data', 'clinical-trial-eligibility-file'); 
+
 	
 	for my $trial_database_file (@trial_database_files) {
+		my $trial_database_cache_file = POTTRConfig::mk_type_path( 'cache',  ($trial_database_file =~ s/^.*\///r).".rulescache.txt" );
 		$rs->load( $self->gen_rule_ret_msg(
 				$trial_database_file, [
 				 ClinicalTrials::gen_rules_clinical_trials(
 					$trial_database_file,
 					@trial_eligibility_file, 
-					$trial_database_file.".rulescache.txt"
+					$trial_database_cache_file
 				) ]
 			)
 		);

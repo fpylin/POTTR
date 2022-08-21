@@ -101,46 +101,9 @@ NCT03363867	NOT catype:Ovarian Clear cell Carcinoma; NOT catype:Ovarian Mucinous
 NCT03369223	NOT catype:central nervous system cancer
 NCT03390504	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration)
 NCT03424005	NOT ERBB2:amplification
-NCT03454451	catype:Bladder Cancer
-NCT03454451	catype:Cervical Cancer
-NCT03454451	catype:Cervical cancer
-NCT03454451	catype:Colorectal cancer; microsatellite_instability:high
-NCT03454451	catype:Colorectal cancer; microsatellite_instability:high
-NCT03454451	catype:Endometrial cancer
-NCT03454451	catype:Endometrial cancer
-NCT03454451	catype:Non-Small Cell Lung Cancer
-NCT03454451	catype:Non-hodgkin Lymphoma
-NCT03454451	catype:Non-small cell lung cancer
-NCT03454451	catype:Ovarian Cancer
-NCT03454451	catype:Pancreatic Cancer
-NCT03454451	catype:Prostate Cancer
-NCT03454451	catype:Prostate cancer
-NCT03454451	catype:Renal Cell Cancer
-NCT03454451	catype:Renal cell carcinoma
-NCT03454451	catype:Renal cell carcinoma
-NCT03454451	catype:Sarcoma
-NCT03454451	catype:Sarcoma
-NCT03454451	catype:Squamous Cell Carcinoma of the Head and Neck
-NCT03454451	catype:Triple-Negative Breast Cancer
-NCT03454451	catype:Triple-negative breast cancer
-NCT03454451	catype:Urothelial carcinoma
-NCT03454451	catype:Urothelial carcinoma
-NCT03454451	catype:Uterine cancer
 NCT03486873	EXTENSION_STUDY
 NCT03497767	EGFR:oncogenic_mutation
 NCT03539536	MET:alteration; catype:Non-small cell lung cancer
-NCT03549000	catype:Colorectal Cancer
-NCT03549000	catype:Colorectal Cancer; NOT microsatellite_instability:high
-NCT03549000	catype:Gastrointestinal Stromal Tumors
-NCT03549000	catype:Head and Neck Squamous Cell Carcinoma
-NCT03549000	catype:Non-small Cell Lung Cancer
-NCT03549000	catype:Non-small Cell Lung Carcinoma
-NCT03549000	catype:Oesophageal cancer; catype:Squamous Cell Carcinoma
-NCT03549000	catype:Ovarian Cancer
-NCT03549000	catype:Pancreatic Cancer
-NCT03549000	catype:Prostate Cancer
-NCT03549000	catype:Renal Cell Carcinoma
-NCT03549000	catype:Triple-Negative Breast Cancer
 NCT03551626	BRAF:codon_600_missense_variant
 NCT03555149	catype:Colorectal cancer; NOT MSI:high; NOT BRAF:oncogenic_mutation
 NCT03600883	KRAS:G12C
@@ -176,7 +139,6 @@ NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03975647	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
 NCT03994393	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04008030	(MSI:H OR MMR:deficient)
-NCT04045613	(catype:Urothelial carcinoma OR catype:Bladder cancer); (FGFR1:oncogenic_mutation OR FGFR2:oncogenic_mutation OR FGFR3:oncogenic_mutation OR FGFR4:oncogenic_mutation OR FGFR1:missense_variant OR FGFR1:indel OR FGFR1:fusion OR FGFR2:missense_variant OR FGFR2:indel OR FGFR2:fusion OR FGFR3:missense_variant OR FGFR3:indel OR FGFR3:fusion OR FGFR4:missense_variant OR FGFR4:indel OR FGFR4:fusion); NOT FGFR1:resistance_mutations,pan-FGFR_inhibitor
 NCT04064060	NOT catype:solid tumours
 NCT04083976	NOT catype:Urothelial carcinoma; NOT catype:Bladder cancer; (FGFR1:fusion OR FGFR2:fusion OR FGFR3:fusion)
 NCT04083976	NOT catype:Urothelial carcinoma; NOT catype:Bladder cancer; (FGFR1:oncogenic_mutation OR FGFR2:oncogenic_mutation OR FGFR3:oncogenic_mutation OR FGFR4:oncogenic_mutation); NOT FGFR1:fusion; NOT FGFR2:fusion; NOT FGFR3:fusion; (FGFR1:missense_variant OR FGFR1:indel OR FGFR1:fusion OR FGFR2:indel OR FGFR2:missense_variant OR FGFR2:fusion OR FGFR3:missense_variant OR FGFR3:indel OR FGFR3:fusion OR FGFR4:missense_variant OR FGFR4:indel OR FGFR4:fusion); NOT FGFR1:resistance_mutations,pan-FGFR_inhibitor; *(FGFR1:S125L OR FGFR1:P150S OR FGFR1:R189C OR FGFR1:K656E OR FGFR2:W72C OR FGFR2:A97T OR FGFR2:D101Y OR FGFR2:R203H OR FGFR2:R210Q OR FGFR2:E219K OR FGFR2:R251Q OR FGFR2:S252L OR FGFR2:S252P OR FGFR2:S252T OR FGFR2:S252A OR FGFR2:P253L OR FGFR2:S267P OR FGFR2:F276C OR FGFR2:W290R OR FGFR2:W290C OR FGFR2:D304N OR FGFR2:Y308C OR FGFR2:A315T OR FGFR2:G338R OR FGFR2:Y340C OR FGFR2:S351C OR FGFR2:S354C OR FGFR2:T370R OR FGFR2:S372C OR FGFR2:Y375C OR FGFR2:C382F OR FGFR2:C382R OR FGFR2:A389T OR FGFR2:C390Y OR FGFR2:C390S OR FGFR2:V395D OR FGFR2:K526E OR FGFR2:M535I OR FGFR2:M537I OR FGFR2:I547V OR FGFR2:L550F OR FGFR2:E565G OR FGFR2:E565Q OR FGFR2:E565A OR FGFR2:L617F OR FGFR2:K641R OR FGFR2:K659M OR FGFR2:K659N OR FGFR2:W678G OR FGFR2:E731K OR FGFR2:L770* OR FGFR2:L770V OR FGFR2:E777* OR FGFR2:E777K OR FGFR3:S84L OR FGFR3:R248J OR FGFR3:R248C OR FGFR3:S249Y OR FGFR3:S249F OR FGFR3:S249C OR FGFR3:P250R OR FGFR3:Y278C OR FGFR3:L324V OR FGFR3:G370S OR FGFR3:G370C OR FGFR3:S371G OR FGFR3:S371R OR FGFR3:S371C OR FGFR3:Y373N OR FGFR3:Y373H OR FGFR3:Y373C OR FGFR3:G380E OR FGFR3:F384L OR FGFR3:A391V OR FGFR3:R399C OR FGFR3:S433C OR FGFR3:A500T OR FGFR3:M528I OR FGFR3:P572A OR FGFR3:P572L OR FGFR3:E627D OR FGFR3:D641N OR FGFR3:K650T OR FGFR3:K650N OR FGFR3:K650Q OR FGFR3:R669Q OR FGFR3:R750C OR FGFR4:Y367C)
@@ -185,7 +147,6 @@ NCT04129502	EGFR:exon_20_insertion
 NCT04161885	catype:Acute Myeloid Leukemia
 NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
-NCT04176757	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04185883	KRAS:G12C
 NCT04188548	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04191499	catype:Breast cancer; NOT ERBB2:amplification; PIK3CA:alteration
@@ -266,7 +227,6 @@ NCT04589845	(sensitive_to_drug_class:RAF_dimer_inhibitor OR sensitive_to:Belvara
 NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
 NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
 NCT04589845	tumour_mutational_burden:high; *NOT prior_therapy:immune_checkpoint_blockade
-NCT04604132	(FGFR2:fusion OR FGFR2:amplification OR FGFR1:oncogenic_mutation OR FGFR2:oncogenic_mutation OR FGFR3:oncogenic_mutation); NOT ERBB2:amplification
 NCT04607421	BRAF:V600E; catype:Colorectal cancer
 NCT04619004	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04624204	catype:Small-cell lung carcinoma
@@ -284,11 +244,11 @@ NCT04857372	catype:Solid tumour; (YAP1:fision OR NF2:oncogenic_mutation)
 NCT04895358	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04907851	(catype:Biliary tract cancer OR catype:Gallbladder cancer OR catype:Cholangiocarcinoma OR catype:Ampullary cancer)
 NCT04907851	RNF43:oncogenic_mutation; *RNF43:loss-of-function_mutation; *(RNF43:A46V OR RNF43:I48T OR RNF43:G67C OR RNF43:G67D OR RNF43:F69C OR RNF43:A73F OR RNF43:A73V OR RNF43:G80E OR RNF43:G80R OR RNF43:L82S OR RNF43:K108E OR RNF43:R127P OR RNF43:G133E OR RNF43:A136T OR RNF43:P154L OR RNF43:V162M OR RNF43:G166V OR RNF43:A169T OR RNF43:I186T OR RNF43:C275F OR RNF43:R286Q OR RNF43:R286W OR RNF43:C290F OR RNF43:H292R OR RNF43:E293K OR RNF43:H295R OR RNF43:R296H OR RNF43:C298Y OR RNF43:D300G OR RNF43:D300Y OR RNF43:P301S OR RNF43:R307W OR RNF43:C309F OR RNF43:P310A OR RNF43:C312W OR RNF43:Q22* OR RNF43:G29* OR RNF43:S41* OR RNF43:A46V OR RNF43:F69Lfs* OR RNF43:L82S OR RNF43:R113* OR RNF43:R117fs* OR RNF43:R132* OR RNF43:R145* OR RNF43:R152* OR RNF43:Q153* OR RNF43:P154L OR RNF43:W159* OR RNF43:V162M OR RNF43:A169T OR RNF43:I186T OR RNF43:W200* OR RNF43:W200Sfs* OR RNF43:S216* OR RNF43:R225Afs* OR RNF43:W259* OR RNF43:L311Sfs* OR RNF43:R330* OR RNF43:R337* OR RNF43:R371*)
-NCT04969887	(catype:Biliary tract cancer OR catype:Gallbladder cancer OR catype:Cholangiocarcinoma); *NOT prior_therapy:immune_checkpoint_blockade
-NCT04969887	(catype:Lung neuroendocrine tumour OR catype:Neuroendocrine carcinoma); NOT catype:Small-cell lung carcinoma; *NOT prior_therapy:immune_checkpoint_blockade
-NCT04969887	catype:Gynaecological cancer; (catype:Ovarian Clear Cell Carcinoma OR catype:Uterine Clear Cell Carcinoma OR catype:Uterine carcinosarcoma OR catype:Ovarian carcinosarcoma OR catype:Uterine leiomyosarcoma OR catype:Carcinosarcoma OR catype:Vaginal cancer OR catype:Vulvar cancer); *NOT prior_therapy:immune_checkpoint_blockade
-NCT04969887	microsatellite_instability:high; NOT catype:Colorectal cancer; *NOT prior_therapy:immune_checkpoint_blockade
-NCT04969887	mismatch_repair:deficient; NOT catype:Colorectal cancer; *NOT prior_therapy:immune_checkpoint_blockade
+NCT04969887	(catype:Biliary tract cancer OR catype:Gallbladder cancer OR catype:Cholangiocarcinoma); *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
+NCT04969887	(catype:Lung neuroendocrine tumour OR catype:Neuroendocrine carcinoma); NOT catype:Small-cell lung carcinoma; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
+NCT04969887	catype:Gynaecological cancer; (catype:Ovarian Clear Cell Carcinoma OR catype:Uterine Clear Cell Carcinoma OR catype:Uterine carcinosarcoma OR catype:Ovarian carcinosarcoma OR catype:Uterine leiomyosarcoma OR catype:Carcinosarcoma OR catype:Uterine carcinosarcoma OR catype:Vaginal cancer OR catype:Vulvar cancer); *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
+NCT04969887	microsatellite_instability:high; NOT catype:Colorectal cancer; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
+NCT04969887	mismatch_repair:deficient; NOT catype:Colorectal cancer; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation)
 NCT04975308	catype:Breast cancer

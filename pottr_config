@@ -26,7 +26,7 @@
 
 [Directories]
 data_dir  =  data
-cache_dir =  data
+cache_dir =  cache
 
 [Ontologies]
 

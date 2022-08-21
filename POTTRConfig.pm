@@ -90,20 +90,44 @@ sub get {
 	return @{ $data{$x} };
 }
 
-sub get_paths {
+# get_dir: get directory name specified by the variable {type}_dir
+sub get_dir {
 	&ON_DEMAND_INIT;
 	my $type = shift;
-	my $x = shift;
 
 	die "FATAL: $type directory not defined.\n".(join(" ", keys %data))."\n" if ! exists $data{$type.'_dir'};
 	my @dirs = $data{$type.'_dir'};
 	my $dir  = $data{$type.'_dir'}[0];
 	
-	$dir = "$base_rel_path/$dir" if ( $dir !~ /^\// ) and ( defined $base_rel_path ) and ( -d "$base_rel_path/$dir" ) ;
-	
 	if ( ! -d $dir ) {
-		die "FATAL: [$type] directory ``$dir'' does not exist at ".join(":", caller)."\n" ;
+		if ( $dir eq 'cache' ) {
+			mkdir $dir;
+		} else {
+			die "FATAL: [$type] directory ``$dir'' does not exist at ".join(":", caller)."\n" ;
+		}
 	}
+	
+	return $dir;
+}
+
+
+sub mk_type_path { # type, basename
+	my $type = shift;
+	my @path = @_;
+	my $full_path = join("/", get_dir($type), @path );
+	return $full_path ;
+}
+
+
+# get_paths: get directory name specified by the variable {type}_dir, with {x}_file
+sub get_paths {
+	&ON_DEMAND_INIT;
+	my $type = shift;
+	my $x = shift;
+
+	my $dir  = get_dir($type);
+	
+	$dir = "$base_rel_path/$dir" if ( $dir !~ /^\// ) and ( defined $base_rel_path ) and ( -d "$base_rel_path/$dir" ) ;
 	
 	return () if ! exists $data{$x} ;
 	return map { "$dir/$_" } @{ $data{$x} };

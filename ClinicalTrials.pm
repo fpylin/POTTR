@@ -539,7 +539,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 			if ( exists $Eligibility_by_trial_id{$trial_id} ) { # if old rule set already exists, concatenate the new rules behind each of the old rules
 				for my $ec_old ( @{ $Eligibility_by_trial_id{$trial_id} } ) {
 					for my $ec_new ( @{ $Eligibility_by_trial_id_this_file{$trial_id} } ) {
-						$ec_old = join('; ', $ec_old, $ec_new);
+						$ec_old = join('; ', ( grep { defined } ( $ec_old, $ec_new) ) );
 					}
 				}
 			} else { # populate all rules in disjunction.

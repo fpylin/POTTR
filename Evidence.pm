@@ -131,6 +131,7 @@ RAC1 RAD21 RAF1 RAP1GDS1 RARA RECQL4 REL RET RHOA ROS1 RSPO3 RUNX1 RUNX1T1
 SALL4 SET SETBP1 SETDB1 SF3B1 SGK1 SH3GL1 SIX1 SIX2 SKI SMO SND1 SOX2 SRC SRSF2 SRSF3 SSX1 SSX2 SSX4 STAT3 STAT5B STAT6 STIL SUZ12 SYK 
 TAF15 TAL1 TAL2 TBL1XR1 TBX3 TCF3 TCF7L2 TCL1A TEC TERT TET1 TFE3 TFEB TLX1 TLX3 TNC TNFRSF17 TP63 TRIM24 TRIM27 TRRAP TSHR 
 U2AF1 UBR5 USP6 USP8 
+YAP1
 WAS WT1 WWTR1 
 XPO1 
 ZEB1 ZNF521
@@ -170,16 +171,24 @@ my %other_biomarkers = (
 	'BCL2L1'  => 'oncogene',    'BCL2L11'=> 'TSG',      'BRD2'   => 'TSG',       'BRD7'   => 'Other',  'BRDT'   => 'TSG',    
 	'CD20'    => 'Other',       'CHEK1'  => 'TSG',      'CEACAM5' => 'Other',    'CD33'   => 'Other',  'CD38' => 'Other',  'CD123' => 'Other',  'CD19' => 'Other', 'CD30' => 'Other',  'CXCL13' => 'Other',
 	'EMSY'    => 'oncogene',    'ERRFI1'  => 'TSG',     'ERCC1'   => 'TSG', 
-	'FAM175A' => 'TSG',         'FANCI'   => 'TSG',         'FANCM'   => 'TSG',     'FGF19'   => 'oncogene', 'FOLR' => 'Other', 'FRS2' => 'oncogene', 
+	'FAM175A' => 'TSG',         'FANCI'   => 'TSG',     'FANCM'   => 'TSG',     'FGF19'   => 'oncogene', 'FOLR1' => 'Other', 'FRS2' => 'oncogene', 
 	'GLI2'    => 'TSG',
 	'HGF'     => 'oncogene',    
 	'MCL1'    => 'oncogene',   'MRE11A'  => 'TSG',      'MSLN'    => 'protein',  'MTAP'   => 'TSG',  
 	'NECTIN4' => 'Other',      'NOTCH3'  => 'oncogene', 'NTRK2'  => 'oncogene', 'NTRK3'  => 'oncogene',
 	'PDGFB'   => 'oncogene',   'PPP2R2A' => 'TSG',      'PRKCA'  => 'oncogene', 'PRKC'   => 'oncogene', 'PRMT1'  => 'TSG',      'PSMA'    => 'protein', 'PGR' => 'oncogene', 
-	'RAD51C'  => 'TSG',        'RAD51D'  => 'TSG',      'RAD54L' => 'TSG',      'RASA1'  => 'TSG',      'RICTOR' => 'oncogene',
+	'RAD51'   => 'TSG',        'RAD51C'  => 'TSG',       'RAD51D'  => 'TSG',      'RAD54L' => 'TSG',      'RASA1'  => 'TSG',      'RICTOR' => 'oncogene',
 	'SMARCA1' => 'TSG',        'SLAMF7' => 'Other',     'SSTR2'  => 'Other',    'SMARCA2' => 'TSG',     'SLC1A5' => 'Other',
 	'TACSTD2' => 'Other',
+	'YAP1'    => 'Oncogene',
 	'XRCC2'   => 'TSG',
+	'Chromosome' => 'Other',   
+	'Immunoscore IC' => 'Other',
+	'CDH6' => 'Other',   'CLDN18' => 'Other',	
+	'HLA-A'  => 'Other', 'HLA-A2'  => 'Other', 'IRS2' => 'Other',
+	'PMEL'  => 'Other',
+	'RSPO1' => 'Other', 
+	'CALB1' => 'Other',
 );
 
 our %cancer_gene_type ;

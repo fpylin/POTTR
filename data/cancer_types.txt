@@ -114,7 +114,7 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Cervical small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Gallbladder small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Oesophageal small cell carcinoma
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Prostate neuroendocrine carcinoma|Prostate small-cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Prostate neuroendocrine carcinoma|Prostate small-cell carcinoma|Prostate small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Small-cell carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma|Extra-pulmonary small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Small-cell lung cancer
