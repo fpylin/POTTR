@@ -609,12 +609,12 @@ sub gen_rule_knowledge_base {
 						   ) {
 							my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $tier, histotype agnostic)";
 							
-							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
+							push @rules, mkrule( [$lhs_alteration, $lhs_catypes_ancestors_base, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "CERTAIN:treatment_class", @tags ) ] );
 							if ( defined $lhs_alteration_pos ) {
 								my $rhs_treatment_class_str = "$biomarker:treatment_class:$drug_class_regimen ($srckb LOE: $repurposing_retier_related_mutation{$tier}, from $ppalt)";
 								
 								push @{ $rules_treatment_by_catype_mutation_position{$drug_class_regimen}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
+									mkrule( [$lhs_alteration_pos, $lhs_catypes_ancestors_base, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_class_str, "INFERRED:treatment_class", @tags ) ] );
 							}
 							
 						} else {
@@ -667,13 +667,13 @@ sub gen_rule_knowledge_base {
 						   ) {
 							my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $tier, histotype agnostic)";
 							
-							push @rules, mkrule( [$lhs_alteration, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
+							push @rules, mkrule( [$lhs_alteration, $lhs_catypes_ancestors_base, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "CERTAIN:treatment", @tags ) ] );
 							
 							if ( defined $lhs_alteration_pos ) {
 								my $rhs_treatment_str = "$biomarker:treatment:$rx ($srckb LOE: $repurposing_retier_related_mutation{$tier}, histotype agnostic and from $ppalt)";
 								
 								push @{ $rules_treatment_by_catype_mutation_position{$rx}{$lhs_alteration_pos}{$lhs_alteration} }, 
-									mkrule( [$lhs_alteration_pos, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
+									mkrule( [$lhs_alteration_pos, $lhs_catypes_ancestors_base, $lhs_catype_neg], [ Facts::mk_fact_str( $rhs_treatment_str, "INFERRED:treatment", @tags ) ] );
 							}
 							
 						} else {

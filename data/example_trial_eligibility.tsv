@@ -9,7 +9,7 @@ ACTRN12617000741381	TRANSPLANT_RELATED_CANCERS
 ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12617001325392	ERBB2:amplification
 ACTRN12617001573347	NOT catype:Glioblastoma
-ACTRN12619001265167	NOT catype:Non-small cell lung cancer; (ERBB2:amplification OR ERBB2:overexpression OR ERBB2:oncogenic_mutation); *NOT_RECRUITING
+ACTRN12619001265167	NOT catype:Non-small cell lung cancer; (ERBB2:amplification OR ERBB2:overexpression OR ERBB2:oncogenic_mutation); NOT catype:Breast cancer; NOT catype:Gastric adenocarcinoma; NOT catype:Gastric cancer; NOT catype:Gastroesophageal adenocarcinoma; *NOT_RECRUITING
 ACTRN12619001265167	catype:Non-small cell lung cancer; (ERBB2:amplification OR ERBB2:overexpression OR ERBB2:oncogenic_mutation); *NOT_RECRUITING
 ACTRN12618000233224	NOT_RECRUITING; NOT BRAF:V600E; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12618000281291	*NOT catype:Basal Cell Carcinoma; *NOT prior_therapy:Vismodegib
@@ -22,8 +22,8 @@ ACTRN12620000568910	(CDK4:oncogenic_mutation OR CDK4:amplification OR CCND1:ampl
 ACTRN12620000568910	(CDKN2A:loss-of-function_mutation OR CDKN2A:deletion); *NOT catype:Breast cancer; *NOT prior_therapy:immune_checkpoint_blockade
 ACTRN12620000568910p	(CDK4:oncogenic_mutation OR CDK4:amplification OR CCND1:amplification OR CCND2:amplification OR CCND3:amplification OR CCND1:oncogenic_mutation OR CCND2:oncogenic_mutation OR CCND3:oncogenic_mutation); *NOT catype:Breast cancer; *NOT prior_therapy:immune_checkpoint_blockade
 ACTRN12620000568910p	(CDKN2A:loss-of-function_mutation OR CDKN2A:deletion); *NOT catype:Breast cancer; *NOT prior_therapy:immune_checkpoint_blockade
-ACTRN12620000861954	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant); (catype:Solid tumour OR catype:Non-small cell lung cancer); *NOT catype:Colorectal cancer
-ACTRN12620000861954p	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_variant); (catype:Solid tumour OR catype:Non-small cell lung cancer); *NOT catype:Colorectal cancer
+ACTRN12620000861954	(BRAF:V600E OR BRAF:V600K OR BRAF:V600_missense_variant); (catype:Solid tumour OR catype:Non-small cell lung cancer); *NOT catype:Colorectal cancer
+ACTRN12620000861954p	(BRAF:V600E OR BRAF:V600K OR BRAF:V600_missense_variant); (catype:Solid tumour OR catype:Non-small cell lung cancer); *NOT catype:Colorectal cancer
 ACTRN12620000918921	catype:Solid tumour; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; tumour_mutational_burden:high
 ACTRN12620000984998	*NOT catype:Chondrosarcoma; NOT_RECRUITING
 ACTRN12620000984998	NOT catype:Osteosarcoma; NOT_RECRUITING
@@ -33,9 +33,11 @@ ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12621000507886	catype:lymphoma
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
 ACTRN12621000811808	(MET:exon_14_skipping_mutation OR MET:exon_14_deletion)
+ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12621001436864	BRAF:V600E; NOT KRAS:oncogenic_mutation
 ACTRN12621001436864	KRAS:oncogenic_mutation
 ACTRN12621001690842	NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer
+ACTRN12620000767909	NOT catype:Breast cancer; NOT catype:Gastric adenocarcinoma; NOT catype:Gastric cancer; NOT catype:Gastroesophageal adenocarcinoma
 NCT02408861	HIV_POSITIVE
 NCT02568267	(NTRK1:oncogenic_mutation OR NTRK2:oncogenic_mutation OR NTRK3:oncogenic_mutation OR ROS1:oncogenic_mutation OR ALK:oncogenic_mutation)
 NCT02576431	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion OR ROS1:fusion)
@@ -104,8 +106,7 @@ NCT03424005	NOT ERBB2:amplification
 NCT03486873	EXTENSION_STUDY
 NCT03497767	EGFR:oncogenic_mutation
 NCT03539536	MET:alteration; catype:Non-small cell lung cancer
-NCT03551626	BRAF:codon_600_missense_variant
-NCT03555149	catype:Colorectal cancer; NOT MSI:high; NOT BRAF:oncogenic_mutation
+NCT03551626	BRAF:V600_missense_variant
 NCT03600883	KRAS:G12C
 NCT03674567	catype:Cervical cancer
 NCT03674567	catype:Gastric cancer
@@ -130,7 +131,7 @@ NCT03821935	catype:Hepatocellular carcinoma
 NCT03821935	catype:Pancreatic adenocarcinoma
 NCT03821935	catype:Triple-negative breast cancer
 NCT03821935	catype:Urothelial cancer
-NCT03878719	BRAF:codon_600_missense_variant
+NCT03878719	BRAF:V600_missense_variant
 NCT03905148	*NOT catype:CNS cancer
 NCT03906331	RET:fusion
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
@@ -138,6 +139,7 @@ NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
 NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03975647	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
 NCT03994393	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
+NCT04000529	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Oesophageal squamous cell carcinoma OR catype:Gastrointestinal stromal tumour OR catype:Colorectal cancer)
 NCT04008030	(MSI:H OR MMR:deficient)
 NCT04064060	NOT catype:solid tumours
 NCT04083976	NOT catype:Urothelial carcinoma; NOT catype:Bladder cancer; (FGFR1:fusion OR FGFR2:fusion OR FGFR3:fusion)
@@ -191,8 +193,8 @@ NCT04311710	catype:Non-small cell lung cancer
 NCT04311710	catype:Renal cell carcinoma
 NCT04311710	catype:Urothelial carcinoma
 NCT04383210	NRG1:fusion
-NCT04417621	catype:Melanoma; (BRAF:codon_600_misssense_mutation OR NRAS:oncogenic_mutation)
-NCT04418661	(KRAS:oncogenic_mutation OR KRAS:amplification OR BRAF:class_3_mutation OR NF1:loss-of-function_mutation OR NF1:oncogenic_mutation OR NF1:deletion OR NF1:oncogenic_mutation OR KRAS:G12C)
+NCT04417621	catype:Melanoma; (BRAF:V600_misssense_mutation OR NRAS:oncogenic_mutation)
+NCT04418661	(KRAS:oncogenic_mutation OR KRAS:amplification OR BRAF:class_3_mutation OR NF1:loss-of-function_mutation OR NF1:oncogenic_mutation OR NF1:deletion OR NF1:oncogenic_mutation OR KRAS:G12C); NOT catype:Central nervous system cancer
 NCT04427072	MET:exon_14_skipping_mutation
 NCT04434482	NOT catype:central nervous system cancer
 NCT04447118	ERBB2:exon_20_mutation
@@ -209,7 +211,7 @@ NCT04546009	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04565275	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration); *NOT prior_therapy:pan-FGFR_inhibitor
 NCT04585035	KRAS:G12C
 NCT04585815	BRAF:V600E
-NCT04589845	(sensitive_to:GDC-0077 OR sensitive_to_drug_class:PI3K_inhibitor); *(PIK3CA:codon_542_missense_variant OR PIK3CA:codon_545_missense_variant OR PIK3CA:codon_1047_missense_variant); *(PIK3CA:E81K OR PIK3CA:E88Q OR PIK3CA:E88P OR PIK3CA:R93Q OR PIK3CA:R93W OR PIK3CA:P104L OR PIK3CA:codon_106_missense_variant  OR PIK3CA:codon_108_missense_variant OR PIK3CA:codon_111_missense_variant  OR PIK3CA:codon_118_missense_variant OR PIK3CA:codon_345_missense_variant OR PIK3CA:codon_357_missense_variant OR PIK3CA:codon_378_missense_variant OR PIK3CA:codon_420_missense_variant OR PIK3CA:codon_453_missense_variant OR PIK3CA:codon_542_missense_variant OR PIK3CA:codon_545_missense_variant OR PIK3CA:codon_546_missense_variant OR PIK3CA:codon_1004_missense_variant OR PIK3CA:codon_1043_missense_variant OR PIK3CA:codon_1047_missense_variant OR PIK3CA:codon_1048_missense_variant OR PIK3CA:codon_1049_missense_variant)
+NCT04589845	(sensitive_to:GDC-0077 OR sensitive_to_drug_class:PI3K_inhibitor); *(PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:H1047_missense_variant); *(PIK3CA:E81K OR PIK3CA:E88Q OR PIK3CA:E88P OR PIK3CA:R93Q OR PIK3CA:R93W OR PIK3CA:P104L OR PIK3CA:G106_missense_variant  OR PIK3CA:R108_missense_variant OR PIK3CA:K111_missense_variant  OR PIK3CA:G118_missense_variant OR PIK3CA:N345_missense_variant OR PIK3CA:R357_missense_variant OR PIK3CA:C378_missense_variant OR PIK3CA:C420_missense_variant OR PIK3CA:E453_missense_variant OR PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:Q546_missense_variant OR PIK3CA:M1004_missense_variant OR PIK3CA:M1043_missense_variant OR PIK3CA:H1047_missense_variant OR PIK3CA:H1048_missense_variant OR PIK3CA:G1049_missense_variant)
 NCT04589845	(sensitive_to:Trastuzumab emtansine OR sensitive_to_drug_class:anti-ERBB2_antibody-drug_conjugate); NOT ERBB2:amplification; *NOT prior_therapy:Trastuzumab emtansine; (ERBB2:G222C OR ERBB2:R226S OR ERBB2:E265K OR ERBB2:D277H OR ERBB2:G292R OR ERBB2:G309A OR ERBB2:G309E OR ERBB2:S310F OR ERBB2:S310Y OR ERBB2:C311R OR ERBB2:C311S OR ERBB2:E321G OR ERBB2:C334S)
 NCT04589845	(sensitive_to:Trastuzumab emtansine OR sensitive_to_drug_class:anti-ERBB2_antibody-drug_conjugate); NOT ERBB2:amplification; *NOT prior_therapy:Trastuzumab emtansine; (ERBB2:P551L OR ERBB2:R552S OR ERBB2:S418T OR ERBB2:A440T)
 NCT04589845	(sensitive_to:Trastuzumab emtansine OR sensitive_to_drug_class:anti-ERBB2_antibody-drug_conjugate); NOT ERBB2:amplification; *NOT prior_therapy:Trastuzumab emtansine; (ERBB2:S653C OR ERBB2:V659E OR ERBB2:G660D OR ERBB2:R678Q)
@@ -227,6 +229,7 @@ NCT04589845	(sensitive_to_drug_class:RAF_dimer_inhibitor OR sensitive_to:Belvara
 NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
 NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
 NCT04589845	tumour_mutational_burden:high; *NOT prior_therapy:immune_checkpoint_blockade
+NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04607421	BRAF:V600E; catype:Colorectal cancer
 NCT04619004	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04624204	catype:Small-cell lung carcinoma
@@ -234,10 +237,11 @@ NCT04655976	NOT ALK:fusion; NOT EGFR:oncogenic_mutation; NOT NTRK1:fusion; NOT N
 NCT04623775	catype:Non-small cell lung cancer; NOT ALK:fusion; NOT EGFR:oncogenic_mutation; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT ROS1:fusion; NOT BRAF:V600E
 NCT04665206	(NF2:oncogenic_mutation OR NF2:alteration)
 NCT04699188	KRAS:G12C
-NCT04720768	(BRAF:V600E OR BRAF:V600K OR BRAF:codon_600_missense_mutation)
+NCT04720768	(BRAF:V600E OR BRAF:V600K OR BRAF:V600_missense_mutation)
 NCT04721015	catype:Non-small cell lung cancer
 NCT04746924	NOT ALK:fusion; NOT EGFR:oncogenic_mutation
 NCT04760288	RET:alteration
+NCT04793958	KRAS:G12C; catype:Colorectal adenocarcinoma
 NCT04849273	ALK:fusion
 NCT04857372	catype:Mesothelioma
 NCT04857372	catype:Solid tumour; (YAP1:fision OR NF2:oncogenic_mutation)
@@ -253,6 +257,7 @@ NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation)
 NCT04975308	catype:Breast cancer
 NCT05067283	KRAS:G12C
+NCT05084859	(catype:Non-small cell lung cancer OR catype:Prostate cancer OR catype:Colorectal cancer)
 NCT05150236	catype:Prostate cancer
 NCT05198934	KRAS:G12C; catype:Colorectal cancer
 NCT05288166	catype:Prostate cancer
@@ -263,5 +268,8 @@ NCT05054725	KRAS:G12C
 NCT04472429	catype:Anal cancer
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma)
 NCT03900442	catype:Gastric cancer; *catype:Diffuse gastric cancer
+NCT05182931	(BRAF:V600E OR NRAS:oncogenic_mutation)
+NCT05152147	(ERBB2:amplification OR ERBB2:overexpression)
 NCT05364073	catype:Non-small cell lung cancer
 NCT05311176	(catype:Gastroesophageal junction adenocarcinoma OR Gastroesophageal adenocarcinoma OR catype:Gastric Cancer)
+NCT05440786	catype:Ewings sarcoma

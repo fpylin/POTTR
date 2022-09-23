@@ -55,7 +55,7 @@ BEGIN {
 }
 
 sub mtime { my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($_[0]); return $mtime; }
-sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
+sub uniq { my %order; my %a; my $cnt = 0; for(@_) { $a{$_} = 1; $order{$_} = $cnt if ! exists $order{$_} ; ++$cnt }; return sort {$order{$a} <=> $order{$b}} keys %a; }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 
 
@@ -521,6 +521,10 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 	#   { e11 & e21, e11 & e22, ... e12 & e21, e212 &e22 ...  }
 	# where eligibility_list_1 = { e11, e12, ... e1k }, eligibility_list_2 = { e21, e22, ... e2m } 
 	
+	@srcf_eligibility = uniq(@srcf_eligibility);
+	
+# 	die join("\n", @srcf_eligibility)."\n";
+	
 	for my $srcf_eligibility ( @srcf_eligibility ) {
 		my $Eligibility_this_file = ( ($srcf_eligibility =~ /.tsv/) ? 
 			TSV->new( $srcf_eligibility ) : # if defined as a TSV, then load as is, 
@@ -539,7 +543,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 			if ( exists $Eligibility_by_trial_id{$trial_id} ) { # if old rule set already exists, concatenate the new rules behind each of the old rules
 				for my $ec_old ( @{ $Eligibility_by_trial_id{$trial_id} } ) {
 					for my $ec_new ( @{ $Eligibility_by_trial_id_this_file{$trial_id} } ) {
-						$ec_old = join('; ', ( grep { defined } ( $ec_old, $ec_new) ) );
+						$ec_old = join('; ', (  ( $ec_old, $ec_new) ) ); # grep { defined }
 					}
 				}
 			} else { # populate all rules in disjunction.

@@ -182,6 +182,7 @@ Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumo
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pineoblastoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer|Pituitary gland tumour|Pituitary tumour
 Cancer	Solid tumour	Endocrine gland cancer	Primary papillary tumour of the pineal region
+Cancer	Solid tumour	Endocrine gland cancer	Parathyroid gland carcinoma|Parathyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Anaplastic thyroid cancer|Anaplastic thyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Follicular thyroid cancer|Follicular thyroid carcinoma|Follicular thyroid adenocarcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Hürthle cell carcinoma|Hurthle cell carcinoma
@@ -333,6 +334,7 @@ Cancer	Solid tumour	Head and neck cancer
 Cancer	Solid tumour	Head and neck cancer	Adenoid cystic carcinoma
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Laryngeal squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Nasopharyngeal carcinoma	EBV-associated nasopharyngeal carcinoma
+Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Nasopharyngeal carcinoma	Basaloid nasopharyngeal carcinoma|Basaloid nasopharyngeal squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Nasopharyngeal carcinoma|Nasopharyngeal neoplasm
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Oropharyngeal squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Oropharyngeal squamous cell carcinoma	Squamous cell carcinoma of the base of tongue

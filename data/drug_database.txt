@@ -94,7 +94,7 @@ AZD5438	CDK1/2/9_inhibitor
 AZD7762	CHEK1_inhibitor
 AZD8055	MTORC1/MTORC2_inhibitor
 AZD8186|AZD-8186	PI3K_beta_inhibitor
-AZD8205	unknown_antibody-drug_conjugate
+AZD8205|AZD-8205	anti-B7-H4_antibody-drug_conjugate
 AZD8701	FOXP3_antisense_oligonucleotide
 Abemaciclib|LY-2835219|LY2835219|Verzenio	CDK4/6_inhibitor
 Abiraterone|Abiraterone Acetate|CB 7598|CB7630|Zytiga	CYP17A1_inhibitor
@@ -811,6 +811,8 @@ PF-06293622	anti-NOTCH1_monoclonal_antibody
 PF-06804103	anti-ERBB2_antibody-drug_conjugate
 PF-06940434|PF06940434	IL15_agonistic_monoclonal_antibody
 PF-07062119	bispecific-GUCY2C/CD3_antibody
+PF-07248144	KAT6_inhibitor
+PF-9363|CTx-648	KAT6_inhibitor
 PF-477736	CHEK1_inhibitor
 PGG Beta-Glucan|Imprime PGG	dectin_receptor_agonist
 PHE885	autologous_CAR-T-cells,BCMA-targeting
@@ -919,6 +921,7 @@ RO7198457	personalized_cancer_vaccine
 RO7296682	anti-CD25_monoclonal_antibody
 RO7425781|RG6234	bispecific-GPRC5D/CD3_antibody
 RO7428731	anti-EGFRvIII_monoclonal_antibody
+RO7444973|IMC-C103C	bispecific-MAGE-A4/CD3_antibody
 RP-3500	ATR_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
 RXC004|RXC-004	PORCN_inhibitor

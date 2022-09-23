@@ -56,6 +56,7 @@ use Evidence;
 use Data::Dumper;
 # use Carp qw(cluck longmess shortmess);
 
+our $default_tier_order_ref;
 
 ###############################################################################
 # Utility functions
@@ -67,12 +68,14 @@ sub trim { my $s = shift; $s =~ s/^\s*|\s*$//g if (defined $s) ; return $s; }
 sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
 sub v_safe { my $x = shift; return '' if ! defined $x; return $x; }
 
-
-
 ##################################################################################
 sub score_tier {
 	my $x = shift;
 	my $sref = shift;
+	
+	if ( ! defined($sref) and defined($default_tier_order_ref) ) {
+		$sref = $default_tier_order_ref ;
+	}
 	
 	if ( defined($sref) ) { # sref indicates the rank order of the tiers
 # 		print "[$x]\t";
@@ -155,7 +158,7 @@ sub load_module_init {
 			/initial-fact/ and do {
 				$facts->deffunc('is_resistance_tier', sub { my $facts = $_[0]; my $tier = $_[1];
 						if ( my $a = $facts->getvar('tier_list_resistance') ) {
-							return ( exists $$a{$tier} ); 		
+							return ( exists $$a{$tier} ); 
 						} 
 						return ( $tier =~ /^R/ );
 					}
@@ -165,6 +168,8 @@ sub load_module_init {
 			/^tier-rank-order:\s*(.*?)\s*$/ and do {
 				my @tier_order = split /\s+/, $1;
 				$facts->setvar('tier_order', \@tier_order );
+				$default_tier_order_ref = \@tier_order ;
+
 # 				$self->{'tier_order'} = \@tier_order ;
 				@retval = ( Facts::mk_fact_str($f, 'processed') );
 				last;
@@ -746,7 +751,6 @@ sub load_module_preferential_trial_matching {
 	# multiple rule files are allowed to filter search results trials based on clinical eligibility
 	my @trial_eligibility_file = POTTRConfig::get_paths('data', 'clinical-trial-eligibility-file'); 
 
-	
 	for my $trial_database_file (@trial_database_files) {
 		my $trial_database_cache_file = POTTRConfig::mk_type_path( 'cache',  ($trial_database_file =~ s/^.*\///r).".rulescache.txt" );
 		$rs->load( $self->gen_rule_ret_msg(

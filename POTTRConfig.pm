@@ -77,10 +77,11 @@ sub load {
 		}
 		
 		if ( my ($lhs, $rhs) = split /\s*=\s*/, $_ ) {
-			push @{ $data{$lhs} }, $rhs;
+			push @{ $data{$lhs} }, $rhs if ( defined($rhs) and ! ( grep { $rhs eq $_ } @{ $data{$lhs} } ) );
 		}
 	}
 	$f_initiailised = 1;
+	return 1;
 }
 
 sub get {
@@ -114,6 +115,7 @@ sub get_dir {
 sub mk_type_path { # type, basename
 	my $type = shift;
 	my @path = @_;
+# 	print STDERR "POTTRConfig::mk_type_path: called from ".(join ":", caller)."\n" ;
 	my $full_path = join("/", get_dir($type), @path );
 	return $full_path ;
 }
@@ -130,7 +132,7 @@ sub get_paths {
 	$dir = "$base_rel_path/$dir" if ( $dir !~ /^\// ) and ( defined $base_rel_path ) and ( -d "$base_rel_path/$dir" ) ;
 	
 	return () if ! exists $data{$x} ;
-	return map { "$dir/$_" } @{ $data{$x} };
+	return ( map { "$dir/$_" } @{ $data{$x} } );
 }
 
 sub get_first_path {
@@ -142,6 +144,7 @@ sub get_first_path {
 }
 
 sub ON_DEMAND_INIT {
+# 	print STDERR "POTTRConfig::ON_DEMAND_INIT: called from ".(join ":", caller)."\n" ;
 	return if $f_initiailised ;
 	$f_initiailised = 1;
 	

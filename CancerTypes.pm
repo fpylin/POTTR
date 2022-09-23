@@ -360,8 +360,8 @@ sub get_catype_synonyms {
 our %match_catype_whole_word_cache;
 our %match_catype_cache;
 
-our $match_catype_whole_word_cache_fn = POTTRConfig::mk_type_path('cache', 'pottr_catypes_whole_word.cache');
-our $match_catype_cache_fn = POTTRConfig::mk_type_path('cache', 'pottr_catypes.cache');
+our $match_catype_whole_word_cache_fn ; # = POTTRConfig::mk_type_path('cache', 'pottr_catypes_whole_word.cache');
+our $match_catype_cache_fn ; # = POTTRConfig::mk_type_path('cache', 'pottr_catypes.cache');
 
 sub match_catype_whole_word {
 	&ON_DEMAND_INIT;
@@ -429,6 +429,9 @@ sub match_catype {
 sub ON_DEMAND_INIT {
 	return if $f_initiailised ;
 	$f_initiailised = 1;
+	
+	$match_catype_whole_word_cache_fn = POTTRConfig::mk_type_path('cache', 'pottr_catypes_whole_word.cache');
+	$match_catype_cache_fn = POTTRConfig::mk_type_path('cache', 'pottr_catypes.cache');
 	
 	for my $db ( POTTRConfig::get_paths('data', 'cancer-types-ontology-file') ) {
 		if ( ! -f $db ) {
