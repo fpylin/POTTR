@@ -315,6 +315,7 @@ D-1553	KRAS_G12C_inhibitor
 D3S-001	KRAS_G12C_inhibitor
 DB-1303	anti-ERBB2_antibody-drug_conjugate
 DCC-3116	ULK1/2_inhibitor
+DF6002|BMS-986415	IL-12_Fc-fusion_protein
 DKN-01	anti-DKK1_monoclonal_antibody
 DS-1001|DS 1001	IDH1_R132_inhibitor
 DS-1062a	anti-Trop2_antibody-drug_conjugate
@@ -462,6 +463,7 @@ GD2-iCAR-PBT	autologous_GD2_CAR_T_cells
 GDC-0623	MEK_inhibitor
 GDC-0879	BRAF_V600E_inhibitor
 GDC-6036	KRAS_G12C_inhibitor
+GFH018	TGFBR1_inhibitor
 GNE-617	NAMPT_inhibitor
 GNOS-PV02	personalized_neoantigen_vaccine
 GQ1001	anti-ERBB2_antibody-drug_conjugate
@@ -920,7 +922,7 @@ RO7121661|RO 7121661|RO-7121661	bispecific_PD-1/TIM-3_antibody
 RO7198457	personalized_cancer_vaccine
 RO7296682	anti-CD25_monoclonal_antibody
 RO7425781|RG6234	bispecific-GPRC5D/CD3_antibody
-RO7428731	anti-EGFRvIII_monoclonal_antibody
+RO7428731	bispecific_EGFRvIII/CD3_antibody
 RO7444973|IMC-C103C	bispecific-MAGE-A4/CD3_antibody
 RP-3500	ATR_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor

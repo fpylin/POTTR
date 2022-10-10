@@ -805,6 +805,12 @@ FGFR2	exon_15	663	686
 FGFR2	exon_16	687	732
 FGFR2	exon_17	733	767
 FGFR2	exon_18	768	821
+FGFR2	ig-like_domain_1	25	119
+FGFR2	ig-like_domain_2	158	246
+FGFR2	ig-like_domain_3	247	350
+FGFR2	extracellular_domain	1	350
+FGFR2	transmembrane_domain	357	478
+FGFR2	tyrosine_kinase_domain	479	770
 FGFR3	exon_2	1	37
 FGFR3	exon_3	38	127
 FGFR3	exon_4	128	149
