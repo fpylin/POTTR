@@ -395,6 +395,7 @@ sub match_catype_whole_word {
 }
 
 
+
 sub match_catype {
 	&ON_DEMAND_INIT;
 	my $string = $_[0];
@@ -407,11 +408,12 @@ sub match_catype {
 	}
 	
 	$catype_regex_M = get_catype_regex_M( get_all_catypes() )  if ! defined $catype_regex_M ;
+# 	$catype_regex_M = get_catype_regex_M_expand_regex( get_all_catypes() )  if ! defined $catype_regex_M ;
 	
 	our $MMM = '';
 	while ( $string =~ /(${catype_regex_M})/ig ) {
 		my $start = length($`);
-		my %match = (start => $start, end => $start + length($1), text => $1 );
+		my %match = (start => $start, end => $start + length($1), len =>length($1), text => $1 );
 		my $term = get_preferred_catype_term($MMM);
 		push @{ $x{$term} }, \%match;
 	}

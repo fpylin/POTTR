@@ -55,7 +55,8 @@ my $f_initiailised ;
 
 sub import {
 	my $self = shift;
-	$base_rel_path = shift if scalar @_;
+	$base_rel_path = ( scalar @_ ) ? shift() : undef;
+	
 # 	print STDERR "base_path = $base_rel_path. called from ".(join ":", caller)."\n" if defined $base_rel_path;
 # 	print STDERR "No base_path defined. called from ".(join ":", caller)."\n"  if ! defined $base_rel_path;
 }

@@ -34,7 +34,7 @@ Cancer	Haematological malignancy	Leukaemia	Waldenström Macroglobulinemia|Walden
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma	Classical Hodgkin Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma|Hodgkins Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Diffuse large B-cell lymphoma	Testicular diffuse large B-cell lymphoma|Testicular DLBCL|Testicular lymphoma
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Diffuse large B-cell lymphoma|DLBCL
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Diffuse large B-cell lymphoma|DLBCL|Large B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Follicular lymphoma|Follicular B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Mantle cell lymphoma|Mantle cell B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Marginal zone lymphoma|Marginal zone B-cell lymphoma
@@ -50,6 +50,8 @@ Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma|Non-hodgkin Lym
 Cancer	Haematological malignancy	Lymphoma|Lymphoid malignancy
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell sarcoma
 Cancer	Haematological malignancy	Mast cell disorder	Systemic mastocytosis|Mastocytosis
+Cancer	Haematological malignancy	Mast cell disorder	Systemic mastocytosis	Systemic mastocytosis with an associated hematological neoplasm
+Cancer	Haematological malignancy	Mast cell disorder	Mast cell leukaemia
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chronic Myelomonocytic Leukemia|CMML
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chuvash polycythemia
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic syndrome|MDS
@@ -240,15 +242,16 @@ Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric canc
 Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric signet ring cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric small cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric undifferentiated carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma|Gastroesophageal adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma|Gastroesophageal adenocarcinoma|GEJ adenocarcinoma|GEJ cancer|GOJ adenocarcinoma| gastroesophageal junction (GEJ) adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-positive gastroesophageal cancer|HER2-positive gastroesophageal adenocarcinoma|HER2-positive GEJ adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Primary gastric squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric undifferentiated malignancy
 Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Gastroesophageal junction adenocarcinoma|Lower oesophageal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal neuroendocrine carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal squamous cell carcinoma|Oesophageal SCC|Squamous cell carcinoma of the oesophagus
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer|Oesophagus cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer|Gastro-oesophageal cancer|Oesophagogastric cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal adenocarcinoma|Esophageal adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal neuroendocrine carcinoma|Esophageal neuroendocrine carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal squamous cell carcinoma|Esophageal squamous cell carcinoma|Oesophageal SCC|Squamous cell carcinoma of the oesophagus
+Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer|Oesophagus cancer|Esophageal cancer|Esophagus cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer|Gastro-oesophageal cancer|Oesophagogastric cancer|Esophagogastric cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei
 Cancer	Solid tumour	Gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei	Appendiceal pseudomyxoma peritonei
 Cancer	Solid tumour	Gastrointestinal cancer	Gastrointestinal stromal tumour|Gastrointestinal stromal tumour|GIST
@@ -375,8 +378,9 @@ Cancer	Solid tumour	Head and neck cancer	Sinonasal squamous cell carcinoma	Ethmo
 Cancer	Solid tumour	Head and neck cancer	Sinonasal undifferentiated carcinoma
 Cancer	Solid tumour	KRAS G12C-mutant solid tumour|KRAS p.G12C-mutant solid tumour
 Cancer	Solid tumour	Lung cancer	Lung carcinoid tumour|Lung carcinoid|Lung neuroendocrine tumour
-Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	ALK-rearranged non-small cell lung cancer|ALK-positive non-small cell lung cancer
+Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	ALK-rearranged non-small cell lung cancer|ALK-positive non-small cell lung cancer|ALK-positive NSCLC
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	EGFR-mutant non-small cell lung cancer|EGFR-positive non-small cell lung cancer|Non-small cell lung cancer with mutation in epidermal growth factor receptor
+Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	RET fusion-positive non-small cell lung cancer|RET-positive non-small cell lung cancer
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	KRAS G12C-mutant non-small cell lung cancer|KRAS G12C-mutant NSCLC
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Lung adenoid cystic carcinoma
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Non-small cell lung cancer harbouring MET exon 14 skipping mutation
@@ -476,6 +480,7 @@ Cancer	Solid tumour	Sarcoma	Giant cell tumor of bone
 Cancer	Solid tumour	Sarcoma	Hemangiopericytoma
 Cancer	Solid tumour	Sarcoma	Histiocytic sarcoma
 Cancer	Solid tumour	Sarcoma	Inflammatory myofibroblastic tumour|Myofibroblastic tumour|Epithelioid inflammatory myofibroblastic sarcoma
+Cancer	Solid tumour	Sarcoma	Inflammatory myofibroblastic tumour	ALK-positive inflammatory myofibroblastic tumour
 Cancer	Solid tumour	Sarcoma	Kaposi sarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	EBV-related leiomyosarcoma
@@ -625,6 +630,9 @@ Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelia
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelial cancer	Ureteral urothelial carcinoma
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma|Urothelial cancer|Transitional cell carcinoma
 Cancer	Solid tumour	Urogenital cancer|Genitourinary cancer
+Cancer	Solid tumour	Solid tumour with ongenic fusion	RET fusion-positive solid tumour	RET fusion-positive non-small cell lung cancer
+Cancer	Solid tumour	Solid tumour with ongenic fusion	ALK fusion-solid tumour	ALK-positive inflammatory myofibroblastic tumour
+Cancer	Solid tumour	Solid tumour with ongenic fusion	ALK fusion-solid tumour	ALK-positive non-small-cell lung cancer
 Cancer	Solid tumour|Solid malignancy|Solid neoplasm|Malignant solid tumour
 Cancer	Uncommon cancer
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma

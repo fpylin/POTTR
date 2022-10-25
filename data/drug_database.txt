@@ -7,6 +7,7 @@ drug	drug_class
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
 A-337|SP51616	bispecific_CD3/EpCAM_antibody
+Safusidenib|AB-218	IDH1_R132_inhibitor
 ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibody
 ABBV-428|ABBV 428	anti-CD40_agonist_antibody
 ABBV-453	BCL2_inhibitor
@@ -235,6 +236,7 @@ CAVATAK	virus-based_therapy
 CB-103	CSL-NICD_transcription_factor_complex_inhibitor
 CB-5339	p97_inhibitor
 CBP-1008	bispecific-FR_alpha/TRPV6_antibody
+CI-8993	anti-VISTA_monoclonal_antibody
 CC-90003	ERK_inhibitor
 CC-95251|CC 95251|CC95251	anti-SIRPa_monoclonal_antibody
 CCT128930	AKT2_inhibitor
@@ -248,8 +250,9 @@ CH5126766|VS-6766|RO5126766	RAF/MEK_inhibitor
 CK-101|CK 101|CK101|OLAFERTINIB|RX-518	EGFR_inhibitor,third_generation
 CLN-619	anti-MICA/MICB_monoclonal_antibody
 CMP-001|ARB-1598|CYT 003|CYT-003	TLR9_agonist
-CN1	anti-OX40_agnostic_monoclonal_antibody
-CN401	unknown_drug_class
+CN1	anti-OX40_agonistic_monoclonal_antibody
+CN202	PD-L1/TGF-beta_fusion_protein
+Tenalisib|RP6530|CN401	PI3K_delta/gamma_inhibitor
 COJEC regimen|COJEC induction chemotherapy	Cisplatin + Vincristine + Carboplatin + Etoposide + Cyclophosphamide
 CPI-006|CPI 006|CPI006|CPX-006	anti-CD73_monoclonal_antibody
 CPI-818	ITK_inhibitor
@@ -362,6 +365,7 @@ Doxorubicin|Adriamycin|Adriablastin|Hydroxydaunomycin|Hydroxyl Daunorubicin|Hydr
 Duligotuzumab|MEHD7945A	anti-EGFR/ERBB3_monoclonal_antibody
 Durvalumab|Imfinzi|MEDI-4736|MEDI4736	anti-PD-L1_monoclonal_antibody
 Duvelisib|IPI-145	PI3K_delta_inhibitor
+DYP688	GNAQ/GNA11_inhibitor
 E7016	PARP_inhibitor
 E7777	cytotoxic_fusion_protein,diphtheria-IL-2
 EBC-46	protein_kinase_C_regulator
@@ -382,7 +386,7 @@ ESG206	anti-BAFFR_monoclonal_antibody
 ETC-159	PORCN_inhibitor
 ETH-155008	FLT3/CDK4/6_inhibitor
 Efineptakin alfa|NT-I7	human_IL-7
-Efizonerimod|MEDI6383	anti-OX40_agnostic_monoclonal_antibody
+Efizonerimod|MEDI6383	anti-OX40_agonistic_monoclonal_antibody
 Eftilagimod Alpha|EFTILAGIMOD ALFA|IMP321|Immufact	T-cell_immunostimulatory_factor
 Ektomun	anti-GD2_monoclonal_antibody
 Elacestrant|ER-306323|RAD1901	selective_estrogen_receptor_degrader
@@ -475,7 +479,7 @@ GSK126	EZH2_inhibitor
 GSK2256098	FAK_inhibitor
 GSK2636771	PI3K_beta_inhibitor
 GSK2849330	anti-ERBB3_monoclonal_antibody
-GSK3174998|GSK-3174998	anti-OX40_agnostic_monoclonal_antibody
+GSK3174998|GSK-3174998	anti-OX40_agonistic_monoclonal_antibody
 GSK321	IDH1_R132_inhibitor
 GSK3359609|GSK-3359609	anti-ICOS_agonist_antibody
 GSK3368715|GSK 3368715|GSK-3368715	PRMT_inhibitor,type_1
@@ -674,7 +678,7 @@ MEDI7247|MEDI 7247	anti-ASCT2_antibody-drug_conjugate
 MG010	CRAF_inhibitor
 MGC018	anti-B7-H3_antibody-drug_conjugate
 MGD009|B7-H3 x CD3 DART Protein|MGD 009|MGD-009	humanized_B7-H3_x_CD3_dual-affinity_re-targeting_protein
-MGD013|MGD-013	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
+Tebotelimab|MGD013|MGD-013	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
 MGTA-117	anti-CD117-antibody-drug_conjugate
 MI-773|SAR405838	p53-HDM2_interaction_inhibitor; MDM2_inhibitor
 MIK665|S-64315	MCL1_inhibitor
@@ -687,7 +691,7 @@ MK-8033|MK8033	MET_inhibitor
 MK-8353|SCH 900353	ERK_inhibitor
 MK2206	AKT_inhibitor
 MLN0128	MTORC1/MTORC2_inhibitor
-MORAb-202	anti-FR_alpha_antibody-drug_conjugate
+Farletuzumab Ecteribulin|MORAb-202	anti-FR_alpha_antibody-drug_conjugate
 MRK003	gamma_secretase_inhibitor
 MRTX1133|MRTX-1133	KRAS_G12D_inhibitor
 MSB0254	anti-VEGFR2_monoclonal_antibody
@@ -808,7 +812,7 @@ PDD00017273	PARG_inhibitor
 PDS0101	HPV-cancer_vaccine,E6/E7_targeting
 PE0116	anti-4-1BB_agonist_antibody
 PF-03732010	P-cadherin_inhibitor
-PF-04518600|PF04518600	anti-OX40_agnostic_monoclonal_antibody
+PF-04518600|PF04518600	anti-OX40_agonistic_monoclonal_antibody
 PF-06293622	anti-NOTCH1_monoclonal_antibody
 PF-06804103	anti-ERBB2_antibody-drug_conjugate
 PF-06940434|PF06940434	IL15_agonistic_monoclonal_antibody
@@ -1067,7 +1071,7 @@ Tarlatamab|AMG 757|AMG-757|AMG757	bispecific_T_cell_engager_targeting_DLL3
 Tarloxotinib|TH-4000	pan_ERBB_inhibitor,hypoxia_activating
 Taselisib|GDC-0032|RO5537381	PI3K_alpha_inhibitor
 Tavokinogene telseplasmid	DNA_plasmid_encoding_IL-12
-Tavolimab|MEDI-0562|MEDI0562|TAVOLIXIZUMAB	anti-OX40_agnostic_monoclonal_antibody
+Tavolimab|MEDI-0562|MEDI0562|TAVOLIXIZUMAB	anti-OX40_agonistic_monoclonal_antibody
 Tazemetostat|E7438|EPZ-6438|EPZ6438|TAZVERIK	EZH2_inhibitor
 Tebentafusp|IMCgp100|ImmTAC-gp100	anti-CD3/scFv_fusion_protein,gp100-targeting
 Teclistamab	bispecific-BCMA/CD3_antibody
@@ -1105,7 +1109,7 @@ Toradol	non-steroidal_anti-inflammatory_drug
 Toremifene	selective_estrogen_receptor_modulator
 Toripalimab|JS001|TAB 001|TAB-001	anti-PD-1_monoclonal_antibody
 Tovorafenib|DAY101	pan-RAF_inhibitor
-Trabectedin|Yondelis	alkylating_agent
+Trabectedin|Yondelis	DNA_minor_groove_binding_agent
 Trametinib|GSK1120212|JTP-74057|Mekinist	MEK_inhibitor
 TransCon TLR7/8 agonist	TLR7/8_agonist
 Trastuzumab Deruxtecan|Fam-trastuzumab deruxtecan-nxki|T-Dxd|DS-8201|Enhertu|WHO 10516	anti-ERBB2_antibody-drug_conjugate
@@ -1153,7 +1157,7 @@ Vinflunine	vinca_alkaloid
 Vinorelbine|Dihydroxydeoxynorvinkaleukoblastine|Navelbine	vinca_alkaloid
 Vismodegib|GDC-0449|Erivedge	SMO_inhibitor,first_generation
 Vistusertib|AZD2014	MTORC1/MTORC2_inhibitor
-Vonlerolizumab|MOXR0916|Pogalizumab|RG 7888|RG-7888|RG7888|RO7021608	anti-OX40_agnostic_monoclonal_antibody
+Vonlerolizumab|MOXR0916|Pogalizumab|RG 7888|RG-7888|RG7888|RO7021608	anti-OX40_agonistic_monoclonal_antibody
 Vorasidenib|AG 881|AG-881|AG881	IDH1/IDH2_mutant_selective_inhibitor
 Vorinostat|SAHA|Suberanilohydroxamic Acid|Zolinza|L-001079038|MSK-390|Suberoylanilide Hydroxamic Acid	HDAC_inhibitor
 Vudalimab|XmAb20717	bispecific-PD-1/CTLA4_antibody
@@ -1174,8 +1178,8 @@ XmAb23104	bispecific-PD-1/ICOS_antibody
 XmAb24306|RO 7310729|RO-7310729|RO7310729|XmAb 24306|XmAb-24306	IL15/IL15R_Fc-fusion_protein
 YBL006|YBL-006	anti-PD-1_monoclonal_antibody
 YH001|YH-001	anti-CTLA-4_monoclonal_antibody
-YH002|YH-002	anti-OX40_agnostic_monoclonal_antibody
-YH003|YH-003	anti-OX40_agnostic_monoclonal_antibody
+YH002|YH-002	anti-OX40_agonistic_monoclonal_antibody
+YH003|YH-003	anti-OX40_agonistic_monoclonal_antibody
 YH004	4-1BB_agonist_antibody
 YTB323	CD19-specific_CAR-T_cells
 ZEN-3694	BET_inhibitor
@@ -1198,3 +1202,11 @@ mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 PBI-200	TRK_inhibitor,second_generation
+TYRA-300|TYRA300	FGFR3_inhibitor
+AMT-151	anti-FR-alpha_antibody-drug_conjugate
+JSKN003|JSKN-003|KN-026	anti-ERBB2_antibody-drug_conjugate
+RO7247669	bispecific_PD-1/LAG3_antibody
+TAC-001	TLR9_agonist_antibody_conjugate
+SW1115C3	mRNA_personalised_cancer_vaccine
+HH3806	BET_inhibitor
+Evolocumab	anti-PCSK9_monoclonal_antibody

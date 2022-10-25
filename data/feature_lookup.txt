@@ -57,6 +57,7 @@ MET	exon_14_splicing	c.2941	c.2941-28
 MET	exon_14_splicing	c.2941	c.2941-33
 MET	exon_14_splicing	c.2941	c.2941-30
 MET	exon_14_splicing	c.2888-30	c.2888
+MET	exon_14_splicing	c.2887+64	c.2887
 RET	cadherin_like_domain_1	28	156	32083997
 RET	cadherin_like_domain_2	166	271	32083997
 RET	cadherin_like_domain_3	272	387	32083997

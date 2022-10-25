@@ -232,7 +232,7 @@ sub load_module_cancer_type_mapping {
 	
 # 	$rs = $self->{'modules'}->add_module('01C - Define solid tumours');
 	$rs->load(
-		mkrule( ["(catype-processed)", "NOT catype:Leukaemia", "NOT catype:Lymphoma"], ["catype:Solid tumour"] ),
+		mkrule( ["(catype-processed)", "NOT catype:Haematological malignancy", "NOT catype:Myeloproliferative Neoplasm", "NOT catype:Leukaemia", "NOT catype:Lymphoma", "NOT catype:"], ["catype:Solid tumour"] ),
 		mkrule( ["(catype-processed)", "catype:Leukaemia"], ["catype:Haematologic cancer"] )
 	);
 }

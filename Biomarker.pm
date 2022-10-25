@@ -314,8 +314,10 @@ sub interp_variants {
 								my ($feat_start_loc, $feat_start_delta) = ($1, $2);
 								my ($feat_end_loc, $feat_end_delta) = ( $feat_end =~ /^[c]\.(\d+)([\+\-]\d+)?/ );
 # 								print ">> $biomarker_name\t$feat_start\t$feat_end\t$na_pos_loc\t$na_pos_delta\t$na_pos2_loc\t$na_pos2_delta\n";
-								next if ($na_pos2_loc + ($na_pos2_delta // 0 ) ) < ( $feat_start_loc + ( $feat_start_delta // 0) ) ;
-								next if ($na_pos_loc  + ($na_pos_delta  // 0 ) ) > ( $feat_end_loc   + ( $feat_end_delta   // 0) ) ;
+								next if $na_pos2_loc < $feat_start_loc  ;
+								next if $na_pos_loc > $feat_end_loc  ;
+# 								next if ($na_pos2_loc + ($na_pos2_delta // 0 ) ) < ( $feat_start_loc + ( $feat_start_delta // 0) ) ;
+# 								next if ($na_pos_loc  + ($na_pos_delta  // 0 ) ) > ( $feat_end_loc   + ( $feat_end_delta   // 0) ) ;
 							} else { # default is p. 
 								next if ( $na_pos2_loc / 3 ) < $feat_start ;
 								next if ( $na_pos_loc  / 3 ) > $feat_end ;
