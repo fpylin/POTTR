@@ -976,7 +976,7 @@ SHR-1316|HTI-1088	anti-PD-L1_monoclonal_antibody
 SHR-1501|SHR 1501|SHR1501	anti-IL15_agonistic_monoclonal_antibody
 SHR-2002|SHR 2002	unknown_drug_class
 SHR-A1811	anti-ERBB2_antibody-drug_conjugate
-SHR-A1904	antibody-drug_conjugate,tumour-specific_antigen
+SHR-A1904	antibody-CLDN18.2_antibody-drug_conjugate
 SHR2554	EZH2_inhibitor
 SM08502	CLK_inhibitor
 SN38-SPL9111|DEP-SN38	topoisomerase_inhibitor
