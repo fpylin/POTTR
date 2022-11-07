@@ -37,7 +37,7 @@ ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12621001436864	BRAF:V600E; NOT KRAS:oncogenic_mutation
 ACTRN12621001436864	KRAS:oncogenic_mutation
 ACTRN12621001690842	NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer
-ACTRN12620000767909	NOT catype:Breast cancer; NOT catype:Gastric adenocarcinoma; NOT catype:Gastric cancer; NOT catype:Gastroesophageal adenocarcinoma
+ACTRN12620000767909	*NOT catype:Breast cancer; *NOT catype:Gastric adenocarcinoma; *NOT catype:Gastric cancer; *NOT catype:Gastroesophageal adenocarcinoma
 NCT02408861	HIV_POSITIVE
 NCT02568267	(NTRK1:oncogenic_mutation OR NTRK2:oncogenic_mutation OR NTRK3:oncogenic_mutation OR ROS1:oncogenic_mutation OR ALK:oncogenic_mutation)
 NCT02576431	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion OR ROS1:fusion)
@@ -254,7 +254,6 @@ NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation)
 NCT04975308	catype:Breast cancer
 NCT05067283	KRAS:G12C
-NCT05084859	(catype:Non-small cell lung cancer OR catype:Prostate cancer OR catype:Colorectal cancer)
 NCT05150236	catype:Prostate cancer
 NCT05198934	KRAS:G12C; catype:Colorectal cancer
 NCT05288166	catype:Prostate cancer

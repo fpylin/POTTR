@@ -26,6 +26,7 @@ Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblasti
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Chronic lymphocytic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Hairy Cell Leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Acute myeloid leukaemia
+Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Acute myelomonocytic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Acute promyelocytic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic eosinophilic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic myelogenous leukaemia|Chronic myeloid leukaemia|CML
