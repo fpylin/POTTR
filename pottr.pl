@@ -191,7 +191,8 @@ sub column_wrap_text($@) {
 
 
 #######################################################################
-my $f_from_web = ( (exists $ENV{'HOME'}) ) ? 0 : 1 ;
+# my $f_from_web = ( (exists $ENV{'HOME'}) ) ? 0 : 1 ;
+my $f_from_web = 0 ;
 
 my $pottr_modules = undef;
 my $f_webpage = undef;

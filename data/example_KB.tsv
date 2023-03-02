@@ -24,12 +24,13 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 2	EGFR	A763_Y764insFQEA	Non-small cell lung cancer	Afatinib; Gefitinib; Erlotinib	Not explicitly TGA listed.	27413714, 10.1200/JCO.2019.37.15_suppl.e20593
 2	EGFR	C797S, Exon 20 insertion	Non-small cell lung cancer	Amivantamab		10.1200/JCO.2019.37.15_suppl.9009, 10.1200/JCO.2020.38.15_suppl.9512 
 2	EGFR	Exon 19 deletion, L858R	Non-small cell lung cancer	Apatinib + Gefitinib 	Apatinib not TGA or FDA approved. ACTIVE Phase 3 trial.	10.1016/j.annonc.2020.08.2283
+2	EGFR	Exon 19 deletion, L858R	Non-small cell lung cancer	Aumolertinib	Not TGA approved. EMA approved. AENEAS. Phase 3. NCT03849768. Median DOR of Aumolertinib was 18.1 months vs Gefitinib 8.3 months.	35580297
 2	EGFR	Exon 19 deletion, L858R	Non-small cell lung cancer	Dacomitinib	Not TGA approved. ARCHER 1009/1050	28958502, 25439691
 2	EGFR	Exon 20 insertion	Non-small cell lung cancer	Amivantamab	Not TGA approved. FDA accelerated approval 2021-05-21. Phase 1 CHRYSALIS trial. ORR 40%, including 3 CR. Median DOR 11.1 months. Median PFS 8.3 months.	34339292, 32414908, 10.1200/JCO.2020.38.15_suppl.9512
 2	EGFR	Exon 20 insertion	Non-small cell lung cancer	Mobocertinib	Not TGA approved. FDA approved 2021-09-15. NCT02716116: Phase 1/2 trial. ORR to TAK-788 was 43% in 28 patients who had exon 20 insertion. Median DOR was 14 months. Median PFS was 7.3 months.	33632775
 2	EGFR	G719, L861Q, S768I	Non-small cell lung cancer	Erlotinib; Gefitinib	Intermediate response to 1G TKI with resistance data	27413714, 28184913
 2	ERBB2	S310F, S310Y, L755S, L755P, A769H, A775_G776insYVMA, A775_G776insTVMA, G776S, G776delinsVC, V777L, G778_P780dup, G778_S779insLPS, Exon 20 insertion, Exon 20 mutation	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	Not TGA approved. FDA approved. DESTINY-Lung01. Phase 1/2. N=91. ORR 50/91 (55%). Median DOR 9.3 months. Median PFS 8.2 months. Median OS 17.8 months. DCR 84/91 (92%).	34534430, 10.1016/annonc/annonc741
-2	KRAS	G12C	Non-small cell lung cancer	Adagrasib	NCT03785249. In patients with previously treated metastatic non-small cell lung cancer, treatment with adagrasib resulted in ORR of 48/112 (43%), median PFS of 6.5 months and median OS of 12.6 months.	35658005
+2	KRAS	G12C	Non-small cell lung cancer	Adagrasib	Not TGA approved. FDA approved 12/12/2022. NCT03785249. In patients with previously treated metastatic non-small cell lung cancer, treatment with adagrasib resulted in ORR of 48/112 (43%), median PFS of 6.5 months and median OS of 12.6 months.	35658005
 2	KRAS	G12C	Non-small cell lung cancer	Sotorasib	Not TGA approved. FDA approved for second-line and beyond. Phase 2 CODEBREAK100. Previously treated patients. ORR 37%. PFS 6.8mo. OS 12.5mo.	32955176, 34096690, 10.1016/j.jtho.2019.09.020, 10.1200/JCO.2021.39.15_suppl.9003
 2	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Capmatinib	Not TGA approved; FDA approved 10/8/2022; GEOMETRY mono-1: ORR 41% in 69 previously treated patients. Median DOR 9.7 months. ORR 68% in 28 treatment naive patients. Median DOR 12.6 months. 	32877583, 10.1200/JCO.2019.37.15_suppl.9004
 2	RET	Fusions, ARHGAP12-RET fusion, CCDC6-RET fusion, CCDC88C-RET fusion, CLIP1-RET fusion, DOCK1-RET fusion, ERC1-RET fusion, KIF5B-RET fusion, NCOA4-RET fusion, PRKAR1A-RET fusion, RBPMS-RET fusion, RELCH-RET fusion, TRIM24-RET fusion	Non-small cell lung cancer	Selpercatinib	Not TGA approved. FDA Approved 21/09/2022. LIBRETTO-001: First-line treatment. ORR 85%. 	32846060, 10.1200/JCO.2020.38.15_suppl.3584
@@ -113,6 +114,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	CDKN2A	Loss of protein expression	Non-small cell lung cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
 4	CDKN2A	Oncogenic mutations	Non-small cell lung cancer	Palbociclib	TAPUR. N=28. 1 PR. 6 SD	10.1200/JCO.2019.37.15_suppl.9041
 4	CEACAM5	Overexpression	Non-small cell lung cancer	Tusamitamab ravtansine		10.1200/JCO.2020.38.15_suppl.9505
+4	DNMT3A	Loss-of-function mutations	Non-small cell lung cancer	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody		10.1200/JCO.2021.39.15_suppl.9113
 4	EGFR	A763insFQEA, V769insASV, D770insSVD, H773insNPH	Non-small cell lung cancer	Tarloxotinib	Cell line study.	33710795
 4	EGFR	Amplification	Non-small cell lung cancer	Afatinib	Phase 2 EGFR FISH-positive NSCLC. ORR 13%. DCR 51%.	25514804
 4	EGFR	Amplification AND L858R; Amplification AND Exon 19 deletion	Non-small cell lung cancer	Erlotinib	Retrospective study showing the subgroup with EGFR amplification and sensitizing mutations had prolonged PFS and ORR than those without. 	30284706
@@ -225,6 +227,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	NRG1	Fusion; SDC4-NRG1 fusion; ATP1B1-NRG1 fusion	Non-small cell lung cancer; Cholangiocarcinoma	Afatinib	Case reports. Partial response seen in patients with fusion in two NSCLC.	28950338
 4	NRG1	Fusion; SLC3A2-NRG1 fusion	Non-small cell lung cancer	Lumretuzumab + Erlotinib	Case report of  invasive mucinous adenocarcinoma of lung. NRG fusion	30268483
 4	NRG1	Fusions	Non-small cell lung cancer	Afatinib	Retrospective registry-based study. Afatinib ORR 25%. CD74-NRG1 and non-CD74-NRG1 have similar ORR (22% and 27% respectively).	34077268
+4	PDGFRA	P567P, I843del, D842del, R560del, V516D, I843_D846del, Exon 12 mutation, Exon 18 deletion	Gastrointestinal stromal tumour	Imatinib	Retrospective study. Responses (5/7) were seen in patients with Non-D842V exon 18 mutations and exon 12 mutations.	26130666
 4	RASA1	Loss-of-function mutations; Oncogenic mutations	Non-small cell lung cancer	Trametinib		29127119
 4	RET	Fusions, KIF5B-RET fusion	Non-small cell lung cancer	Cabozantinib	Case report. Best response is SD for 9 months.	30653139
 4	RET	Fusions, TRIM33-RET fusion, KIF5B-RET fusion	Non-small cell lung cancer	Cabozantinib	Case series from a Phase 2 study of XL-184 in RET-positive NSCLC. Two responders. DOR not reported.	23533264

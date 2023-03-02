@@ -68,6 +68,7 @@ ERK_inhibitor
 ERK_inhibitor	AKT/ERK_inhibitor
 EWS-FLI1_inhibitor
 EZH2_inhibitor
+EZH2_inhibitor	EZH1/2_inhibitor
 FGFR1/2/3_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
 FGFR_inhibitor
 FGFR_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor

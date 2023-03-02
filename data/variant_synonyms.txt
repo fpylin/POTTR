@@ -3,3 +3,4 @@ ERBB2:P780_Y781insGSP	ERBB2:G778_P780dup
 MET:exon_14_splicing_mutation	MET:exon_14_skipping_mutation
 ALK:rearrangement	ALK:fusion
 BRAF:class_2_mutation	BRAF:class_II_mutation
+EGFR:S768_V769delinsIL	EGFR:S768I; EGFR:V769L
