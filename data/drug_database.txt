@@ -922,6 +922,7 @@ Procarbazine|Benzethyzin|Ibenzmethyzin|N-Methylhydrazine|Procarbazin	alkylating_
 Prochlorperazine|RP 6140|SKF-4657	antihistamine
 Propranolol	beta_adrenergic_blockade
 Proxalutamide|GT-0918	antiandrogen,nonsteroidal,second_generation
+PRS-344|PRS344|S095012	bispecific_PD-L1/4-1BB_antibody
 Pyrotinib	EGFR_inhibitor,exon_20_selective; ERBB2_inhibitor,second_generation
 Q-1802	bispecific-CLDN18.2/PD-L1_antibody
 QBS10072S	amino_acid_analogue,LAT1_targeting
@@ -1247,3 +1248,4 @@ mRNA-5671|mRNA-5671/V941|V941	mRNA-derived_KRAS-targeting_vaccine
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 PD173074	FGFR1_inhibitor
+RO7502175	unknown_drug_class

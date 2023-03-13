@@ -318,6 +318,7 @@ R2	EGFR	T790M, C797S, C797G	Non-small cell lung cancer	Dacomitinib		29410323, 32
 R2	EGFR	V843I	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib		25057940
 R2	EGFR+ALK	EGFR:Oncogenic mutations and ALK:fusion	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Osimertinib		30957057
 R2	EGFR+BRAF	EGFR:Oncogenic mutations and BRAF:V600E	Non-small cell lung cancer	Osimertinib	Case report	33580193
+R2	EGFR+CD274	CD274:Protein expression and EGFR:Oncogenic mutations	Non-small cell lung cancer	Pembrolizumab	NCT02879994. Phase 2. The ORR was &lt;9% in in EGFR-Mutant, TKI naive patients treated with pembrolizumab. including PD-L1 expression ≥50%.	29874546
 R2	EGFR+EGFR	EGFR:T790M and EGFR:C797S and EGFR:T790M-C797S cis-allelic conformation	Non-small cell lung cancer	Osimertinib	On-target resistance	31075545
 R2	EGFR+RB1	EGFR:Oncogenic mutations and RB1:Oncogenic mutations	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Osimertinib	Small-cell transformation	25758528, 30550363
 R2	EGFR+RET	EGFR:Oncogenic mutations and RET:fusion	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Osimertinib		30257958, 30957057

@@ -183,7 +183,6 @@ NCT04417621	catype:Melanoma; (BRAF:V600_misssense_mutation OR NRAS:oncogenic_mut
 NCT04418661	(KRAS:oncogenic_mutation OR KRAS:amplification OR BRAF:class_3_mutation OR NF1:loss-of-function_mutation OR NF1:oncogenic_mutation OR NF1:deletion OR NF1:oncogenic_mutation OR KRAS:G12C); NOT catype:Central nervous system cancer
 NCT04427072	MET:exon_14_skipping_mutation
 NCT04434482	NOT catype:central nervous system cancer
-NCT04447118	ERBB2:exon_20_mutation
 NCT04449874	KRAS:G12C; catype:Colorectal cancer
 NCT04449874	KRAS:G12C; catype:Non-small cell lung cancer
 NCT04449874	KRAS:G12C; catype:Solid tumour
