@@ -158,6 +158,7 @@ Azacitidine|5-AC|Mylosar|CC-486|Vidaza|5 AZC|5-AZC|5-Aza-cytidine|Azacytidine|La
 BA3071	anti-CTLA-4_monoclonal_antibody
 BAT-1306|BAT 1306|BAT1306	anti-PD-1_monoclonal_antibody
 BAT6021	anti-TIGIT_monoclonal_antibody
+BAT6026	anti-OX40_agonistanti_antibody
 BAT7104|BAT-7104	bispecific_PD-L1/CD47_antibody
 BAY-1895344|BAY 1895344	ATR_inhibitor
 BAY1436032|BAY 1436032|BAY-1436032	IDH1_R132_inhibitor
