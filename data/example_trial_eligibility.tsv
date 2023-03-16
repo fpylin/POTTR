@@ -180,7 +180,6 @@ NCT04311710	catype:Non-small cell lung cancer
 NCT04311710	catype:Renal cell carcinoma
 NCT04311710	catype:Urothelial carcinoma
 NCT04417621	catype:Melanoma; (BRAF:V600_misssense_mutation OR NRAS:oncogenic_mutation)
-NCT04418661	(KRAS:oncogenic_mutation OR KRAS:amplification OR BRAF:class_3_mutation OR NF1:loss-of-function_mutation OR NF1:oncogenic_mutation OR NF1:deletion OR NF1:oncogenic_mutation OR KRAS:G12C); NOT catype:Central nervous system cancer
 NCT04427072	MET:exon_14_skipping_mutation
 NCT04434482	NOT catype:central nervous system cancer
 NCT04449874	KRAS:G12C; catype:Colorectal cancer
@@ -229,7 +228,7 @@ NCT04857372	catype:Mesothelioma
 NCT04857372	catype:Solid tumour; (YAP1:fision OR NF2:oncogenic_mutation)
 NCT04895358	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04907851	(catype:Biliary tract cancer OR catype:Gallbladder cancer OR catype:Cholangiocarcinoma OR catype:Ampullary cancer); *NOT_RECRUITING
-NCT04907851	RNF43:oncogenic_mutation; *RNF43:loss-of-function_mutation; *(RNF43:A46V OR RNF43:I48T OR RNF43:G67C OR RNF43:G67D OR RNF43:F69C OR RNF43:A73F OR RNF43:A73V OR RNF43:G80E OR RNF43:G80R OR RNF43:L82S OR RNF43:K108E OR RNF43:R127P OR RNF43:G133E OR RNF43:A136T OR RNF43:P154L OR RNF43:V162M OR RNF43:G166V OR RNF43:A169T OR RNF43:I186T OR RNF43:C275F OR RNF43:R286Q OR RNF43:R286W OR RNF43:C290F OR RNF43:H292R OR RNF43:E293K OR RNF43:H295R OR RNF43:R296H OR RNF43:C298Y OR RNF43:D300G OR RNF43:D300Y OR RNF43:P301S OR RNF43:R307W OR RNF43:C309F OR RNF43:P310A OR RNF43:C312W OR RNF43:Q22* OR RNF43:G29* OR RNF43:S41* OR RNF43:A46V OR RNF43:F69Lfs* OR RNF43:L82S OR RNF43:R113* OR RNF43:R117fs* OR RNF43:R132* OR RNF43:R145* OR RNF43:R152* OR RNF43:Q153* OR RNF43:P154L OR RNF43:W159* OR RNF43:V162M OR RNF43:A169T OR RNF43:I186T OR RNF43:W200* OR RNF43:W200Sfs* OR RNF43:S216* OR RNF43:R225Afs* OR RNF43:W259* OR RNF43:L311Sfs* OR RNF43:R330* OR RNF43:R337* OR RNF43:R371*)
+NCT04907851	RNF43:oncogenic_mutation; *RNF43:loss-of-function_mutation; *(RNF43:A46V OR RNF43:I48T OR RNF43:G67C OR RNF43:G67D OR RNF43:F69C OR RNF43:A73F OR RNF43:A73V OR RNF43:G80E OR RNF43:G80R OR RNF43:L82S OR RNF43:K108E OR RNF43:R127P OR RNF43:G133E OR RNF43:A136T OR RNF43:P154L OR RNF43:V162M OR RNF43:G166V OR RNF43:A169T OR RNF43:I186T OR RNF43:C275F OR RNF43:R286Q OR RNF43:R286W OR RNF43:C290F OR RNF43:H292R OR RNF43:E293K OR RNF43:H295R OR RNF43:R296H OR RNF43:C298Y OR RNF43:D300G OR RNF43:D300Y OR RNF43:P301S OR RNF43:R307W OR RNF43:C309F OR RNF43:P310A OR RNF43:C312W OR RNF43:Q22* OR RNF43:G29* OR RNF43:S41* OR RNF43:A46V OR RNF43:F69Lfs* OR RNF43:L82S OR RNF43:R113* OR RNF43:R117fs* OR RNF43:R132* OR RNF43:R145* OR RNF43:R152* OR RNF43:Q153* OR RNF43:P154L OR RNF43:W159* OR RNF43:V162M OR RNF43:A169T OR RNF43:I186T OR RNF43:W200* OR RNF43:W200Sfs* OR RNF43:S216* OR RNF43:R225Afs* OR RNF43:W259* OR RNF43:L311Sfs* OR RNF43:R330* OR RNF43:R337* OR RNF43:R371*); catype:Pancreatic adenocarcinoma
 NCT04969887	(catype:Biliary tract cancer OR catype:Gallbladder cancer OR catype:Cholangiocarcinoma); *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
 NCT04969887	(catype:Lung neuroendocrine tumour OR catype:Neuroendocrine carcinoma); NOT catype:Small-cell lung carcinoma; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
 NCT04969887	catype:Gynaecological cancer; (catype:Ovarian Clear Cell Carcinoma OR catype:Uterine Clear Cell Carcinoma OR catype:Uterine carcinosarcoma OR catype:Ovarian carcinosarcoma OR catype:Uterine leiomyosarcoma OR catype:Carcinosarcoma OR catype:Uterine carcinosarcoma OR catype:Vaginal cancer OR catype:Vulvar cancer); *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
@@ -254,7 +253,6 @@ NCT05152147	(ERBB2:amplification OR ERBB2:overexpression)
 NCT05364073	catype:Non-small cell lung cancer
 NCT05311176	(catype:Gastroesophageal junction adenocarcinoma OR Gastroesophageal adenocarcinoma OR catype:Gastric Cancer); *(ERBB2:overexpression OR ERBB2:amplification); *prior_therapy:Trastuzumab
 NCT05440786	catype:Ewings sarcoma
-NCT03110107	NOT catype:Central nervous system cancer
 NCT03400332	NOT catype:Central nervous system cancer
 NCT05176509	NOT catype:Central nervous system cancer
 NCT05388669	EGFR:oncogenic_mutation; *prior_therapy:Osimertinib

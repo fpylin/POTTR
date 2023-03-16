@@ -20,6 +20,7 @@ ACTRN12617001325392	*NOT prior_therapy:Olaparib; *NOT prior_therapy:Trastuzumab;
 ACTRN12617001573347	*NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *prior_therapy:Oxaliplatin
 ACTRN12618000053224	*prior_therapy:anti-PD-1_monoclonal_antibody
 ACTRN12618000233224	*NOT prior_therapy:Bevacizumab; *NOT prior_therapy:Cetuximab; *NOT prior_therapy:Panitumumab; *NOT prior_therapy:systemic_therapy
+ACTRN12618000354280	*NOT prior_therapy:CDK4/6_inhibitor
 ACTRN12618000357257	*NOT prior_therapy:Taxane
 ACTRN12618000686202	*NOT prior_therapy:Bevacizumab; *NOT prior_therapy:Durvalumab; *NOT prior_therapy:Olaparib; *NOT prior_therapy:PARP_inhibitor; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:platinum-based_antineoplastic_agent
 ACTRN12618000954224	*NOT prior_therapy:Ipilimumab; *NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade
@@ -86,7 +87,6 @@ NCT02964013	*NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_thera
 NCT03036098	*NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:systemic_therapy
 NCT03069469	*NOT prior_therapy:Nilotinib
 NCT03093116	*NOT prior_therapy:platinum-based_antineoplastic_agent
-NCT03110107	*NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT03157128	*NOT prior_therapy:platinum-based_antineoplastic_agent
 NCT03175224	*NOT prior_therapy:EGFR_inhibitor
 NCT03188159	*prior_therapy:platinum-based_antineoplastic_agent
@@ -168,7 +168,8 @@ NCT04251117	*NOT prior_therapy:Lenvatinib; *NOT prior_therapy:Sorafenib; *NOT pr
 NCT04269200	*NOT prior_therapy:PARP_inhibitor; *NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:systemic_therapy
 NCT04282018	*NOT prior_therapy:PI3K_inhibitor
 NCT04294810	*NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:systemic_therapy
-NCT04305054	*NOT prior_therapy:Lenvatinib; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:systemic_therapy
+NCT04305041	*NOT prior_therapy:Lenvatinib; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody
+NCT04322318	*NOT prior_therapy:systemic_therapy
 NCT04334759	*NOT prior_therapy:Carboplatin; *NOT prior_therapy:Cisplatin; *NOT prior_therapy:Durvalumab; *NOT prior_therapy:Ipilimumab; *NOT prior_therapy:Nivolumab; *NOT prior_therapy:anti-CD137_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L2_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade; *NOT prior_therapy:systemic_therapy
 NCT04343885	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:systemic_therapy
 NCT04370704	*NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:immune_checkpoint_blockade

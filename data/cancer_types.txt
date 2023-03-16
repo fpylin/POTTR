@@ -23,6 +23,7 @@ Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblasti
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia	Childhood B-cell acute lymphoblastic leukemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia|Childhood ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma|T-cell lymphoblastic leukaemia/lymphoma|T-lymphoblastic leukaemia/lymphoma|T-cell acute lymphoblastic leukaemia|T-cell lymphoblastic leukaemia|T-cell lymphoblastic lymphoma|T-cell ALL
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma	     T cell prolymphocytic leukemia|Prolymphocytic leukemia, T-cell type
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Chronic lymphocytic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Hairy Cell Leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Acute myeloid leukaemia
@@ -434,6 +435,7 @@ Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrin
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Midgut neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour|Gastrointestinal neuroendocrine tumour
+Cancer	Solid tumour	Neuroendocrine tumour	Ovarian neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Lung carcinoid tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Paraganglioma|Malignant paraganglioma
 Cancer	Solid tumour	Neuroendocrine tumour	Somatostatinoma
