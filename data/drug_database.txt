@@ -250,6 +250,7 @@ CAVATAK	virus-based_therapy
 CB-103	CSL-NICD_transcription_factor_complex_inhibitor
 CB-5339	p97_inhibitor
 CBP-1008	bispecific-FR_alpha/TRPV6_antibody
+BMS-986360|CC-90001|CC90001	JNK_inhibitor
 CC-90003	ERK_inhibitor
 CC-95251|CC 95251|CC95251	anti-SIRPa_monoclonal_antibody
 CCT128930	AKT2_inhibitor
@@ -1010,7 +1011,7 @@ SG301	anti-CD38_monoclonal_antibody
 SHP099	SHP2_inhibitor
 SHR-1316|SHR1316|SHR 1317|HTI-1088	anti-PD-L1_monoclonal_antibody
 SHR-1501|SHR 1501|SHR1501	anti-IL15_agonistic_monoclonal_antibody
-SHR-2002|SHR 2002	unknown_drug_class
+SHR-2002|SHR 2002	bispecific_CD112R/TIGIT_antibody
 SHR-A1811	anti-ERBB2_antibody-drug_conjugate
 SHR-A1904|SHRA1904	antibody-CLDN18.2_antibody-drug_conjugate
 SHR-A1921	antibody-drug_conjugate,unknown_target
@@ -1227,7 +1228,7 @@ YBL006|YBL-006	anti-PD-1_monoclonal_antibody
 YH001|YH-001	anti-CTLA-4_monoclonal_antibody
 YH002|YH-002	anti-OX40_agonistic_monoclonal_antibody
 YH003|YH-003	anti-OX40_agonistic_monoclonal_antibody
-YH004	4-1BB_agonist_antibody
+YH004|YH-004	4-1BB_agonist_antibody
 YTB323	CD19-specific_CAR-T_cells
 ZEN-3694	BET_inhibitor
 ZN-C3	WEE1_inhibitor
