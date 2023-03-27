@@ -257,3 +257,4 @@ NCT03400332	NOT catype:Central nervous system cancer
 NCT05176509	NOT catype:Central nervous system cancer
 NCT05388669	EGFR:oncogenic_mutation; *prior_therapy:Osimertinib
 NCT04801966	*OBSERVATIONA_STUDY
+NCT05315700	NOT EGFR:T790M

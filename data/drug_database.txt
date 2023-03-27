@@ -703,7 +703,7 @@ MEDI5083|MEDI 5083|MEDI-5083	CD40L-Fc_fusion_protein; anti-CD40_agonist_antibody
 MEDI5752	bispecific_PD-L1/CTLA-4_antibody
 MEDI7247|MEDI 7247	anti-ASCT2_antibody-drug_conjugate
 MG010	CRAF_inhibitor
-MGC018	anti-B7-H3_antibody-drug_conjugate
+Vobramitamab duocarmazine|MGC018	anti-B7-H3_antibody-drug_conjugate
 MGD009|B7-H3 x CD3 DART Protein|MGD 009|MGD-009	humanized_B7-H3_x_CD3_dual-affinity_re-targeting_protein
 MGTA-117	anti-CD117-antibody-drug_conjugate
 MHB036C	anti-TROP2_antibody-drug_conjugate

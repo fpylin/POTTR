@@ -23,7 +23,7 @@ Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblasti
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia	Childhood B-cell acute lymphoblastic leukemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia|Childhood ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma|T-cell lymphoblastic leukaemia/lymphoma|T-lymphoblastic leukaemia/lymphoma|T-cell acute lymphoblastic leukaemia|T-cell lymphoblastic leukaemia|T-cell lymphoblastic lymphoma|T-cell ALL
-Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma	     T cell prolymphocytic leukemia|Prolymphocytic leukemia, T-cell type
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma	     T-cell prolymphocytic leukaemia|Prolymphocytic leukemia, T-cell type
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Chronic lymphocytic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Hairy Cell Leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Acute myeloid leukaemia
@@ -327,6 +327,7 @@ Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Canc
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian transitional cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer|Ovarian surface epithelial tumour|Carcinoma, Ovarian Epithelial
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Mesonephric-like carcinoma
+Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Ovarian yolk sac tumour
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Ovarian Sertoli-Leydig cell tumour|Ovarian Sertoli cell tumour
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer	Vaginal adenocarcinoma
@@ -596,6 +597,7 @@ Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-sem
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma|Non-seminomatous Germ Cell tumour|NSGCT
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Seminoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian dysgerminoma
+Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian yolk sac tumour
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour|Malignant germ cell tumour
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Clear cell renal cell carcinoma|Clear cell renal carcinoma|Renal cell carcinoma|Renal Cell Cancer|Carcinoma, Renal Cell|Renal Cell Carcinoma, Clear Cell
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	Chromophobe renal cell carcinoma
