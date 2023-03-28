@@ -258,3 +258,6 @@ NCT05176509	NOT catype:Central nervous system cancer
 NCT05388669	EGFR:oncogenic_mutation; *prior_therapy:Osimertinib
 NCT04801966	*OBSERVATIONA_STUDY
 NCT05315700	NOT EGFR:T790M
+NCT05187624	EGFR:vIII
+NCT05173987	*(microsatellite_instability:high OR mismatch_repair:deficient)
+NCT05307705	PIK3CA:H1047R

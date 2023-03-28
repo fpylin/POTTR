@@ -491,6 +491,7 @@ GFH018	TGFBR1_inhibitor
 GNE-617	NAMPT_inhibitor
 GNOS-PV02	personalized_neoantigen_vaccine
 GQ1001	anti-ERBB2_antibody-drug_conjugate
+GQ1007	anti-ERBB2_antibody-immune-agonist-conjugate
 GR-1405|GR 1405|GR1405	anti-PD-L1_monoclonal_antibody
 GRWD5769	ERAP1_inhibitor
 GS-3583	FLT3_agonist_fusion_protein

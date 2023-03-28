@@ -181,13 +181,14 @@ Cancer	Solid tumour	Central nervous system cancer	Meningioma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma	Atypical meningioma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma	Papillary meningioma
 Cancer	Solid tumour	Central nervous system cancer	Meningioma	Transitional meningioma
+Cancer	Solid tumour	Central nervous system cancer	Pineal gland tumour	Pineoblastoma
+Cancer	Solid tumour	Central nervous system cancer	Pineal gland tumour	Pineal parenchymal tumours of intermediate differentiation|PPTID
 Cancer	Solid tumour	Central nervous system cancer|CNS cancer|Brain cancer|Primary Brain tumour|Primary CNS tumour|Primary CNS cancer
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Adrenal cortical carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Phaeochromocytoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Papillary craniopharyngioma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pituitary adenoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pituitary carcinoma
-Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pineoblastoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer|Pituitary gland tumour|Pituitary tumour
 Cancer	Solid tumour	Endocrine gland cancer	Primary papillary tumour of the pineal region
 Cancer	Solid tumour	Endocrine gland cancer	Parathyroid gland carcinoma|Parathyroid carcinoma
