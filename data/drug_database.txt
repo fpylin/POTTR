@@ -723,6 +723,7 @@ MK-8353|SCH 900353	ERK_inhibitor
 MK2206	AKT_inhibitor
 MLN0128	MTORC1/MTORC2_inhibitor
 MRK003	gamma_secretase_inhibitor
+mRNA-4359	mRNA_vaccine,IDO/PD-L1-targeting
 MRTX1133|MRTX-1133	KRAS_G12D_inhibitor
 MSB0254	anti-VEGFR2_monoclonal_antibody
 MSC2156119J	MET_inhibitor
