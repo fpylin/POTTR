@@ -127,6 +127,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR	E709_T710delinsD	Non-small cell lung cancer	Gefitinib	Case report. 	22982663
 4	EGFR	EGFR-RAD51 fusion	Non-small cell lung cancer	Erlotinib		27102076
 4	EGFR	EGFR-RAD51 Fusion, EGFR-PURB fusion	Non-small cell lung cancer	Erlotinib		29290255, 27413714, 27102076
+4	EGFR	EGFR-SEPT14 Fusion	Non-small cell lung cancer	Osimertinib + Pemetrexed	Case report of a NSCLC leptomeningeal metastasis harbouring EGFR-SEPT14 osimertinib with intrathecal pemetrexed.	34486539
 4	EGFR	Exon 18 deletion, Exon 18 mutation, E709_T710delinsD, E709K, G719A	Non-small cell lung cancer	Erlotinib; Gefitinib; Afatinib; Osimertinib	OncoKB LOE 3. Cell line study. In Ba/F3 cells transfected with exon 18 deletion or mutations, Afatinb demonstrated higher relative sensitivity (IC90) than Gefitinib, Erlotinib, as well as third-generation TKIs Osimertinib and CO1686.	26206867
 4	EGFR	Exon 19 deletion and amplification; L858R and amplification; Exon 21 mutation  and amplification	Non-small cell lung cancer	Osimertinib + Necitumumab	ORCHARD trial	NCT03944772, NCT02496663
 4	EGFR	Exon 19 deletion and L718V, Exon 19 deletion and G724S, Exon 19 deletion and L792F, Exon 19 deletion and L792H, Exon 19 deletion and C797S, L858R and L718Q, L858R and L718V, L858R and L792F, L858R and L792H, L858R and C797G	Non-small cell lung cancer	Tarloxotinib	Cell line study.	33710795
@@ -297,6 +298,7 @@ R2	EGFR	Exon 20 insertion and T790M and C797S	Non-small cell lung cancer	Afatini
 R2	EGFR	Exon 20 mutation	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib	On-target resistance	24353160
 R2	EGFR	Exon 20 mutation	Non-small cell lung cancer	Tarloxotinib	Phase 2. RAIN-701 NCT03805841, Cohort B. ORR was 0% (N=11) for tumours with EGFR exon 20 mutations.	10.1016/j.annonc.2020.08.2294
 R2	EGFR	H773insH	Non-small cell lung cancer	Tarloxotinib	Cell line study.	33710795
+R2	EGFR	H773L and V774M	Non-small cell lung cancer	Afatinib		31007929
 R2	EGFR	Kinase domain duplication AND T790M	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib	Cell line study. EGFR-KDDT790M Ba/F3 cell line. T790M-positive Ba/F3 cell lines were resistant to 1st and 2nd generation EGFR TKIs	33940786
 R2	EGFR	Kinase domain duplication AND T790M AND C797S	Non-small cell lung cancer	Osimertinib; Lazertinib 	Cell line study. EGFR-KDDT790M Ba/F3 cell line. C797S in kinase domain 2 was found mediating resistance mechanism against 3rd generation EGFR TKIs.	33940786
 R2	EGFR	L718V, L718Q, G719	Non-small cell lung cancer	Osimertinib	OncoKB R2 (concordant)	29506987, 31301016
@@ -366,6 +368,7 @@ R2	NRG1	Fusions	Non-small cell lung cancer	Pembrolizumab + Carboplatin + Pemetre
 R2	NRG1	Overexpression	Non-small cell lung cancer	Seribantumab + Docetaxel	No PFS improvement in EGFR wt NSCLC	10.1200/JCO.2019.37.15_suppl.9036
 R2	PIK3CA	G118D	Non-small cell lung cancer	Osimertinib	Cell line data. Off-target resistance	28202511
 R2	PIK3CA	Oncogenic mutations	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
+R2	RB1	Oncogenic mutations	Non-small cell lung cancer	Trastuzumab deruxtecan	Case series. The emergence of acquired resistance to trastuzumab deruxtecan in TP53-/HER2-mutated non-small-cell lung cancer may be correlated with the loss of Rb1.	36809053
 R2	RET	Fusion	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
 R2	RET	G810A, G810S, G810C, G810R	Non-small cell lung cancer	Selpercatinib	Case report and xenograft studies. Acquired resistance after treatment with Selpercatinib as a result by steric hinderance of drug binding.	31988000
 R2	RET	G810S, G810R	Non-small cell lung cancer	Selpercatinib; Pralsetinib	Retrospective study. The study identified acquisition of RET kinase solvent front mutations (G810), as well as genomic amplification of MET and KRAS as potential bypass mechanisms.	33007380

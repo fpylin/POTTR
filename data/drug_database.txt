@@ -1231,6 +1231,7 @@ YH001|YH-001	anti-CTLA-4_monoclonal_antibody
 YH002|YH-002	anti-OX40_agonistic_monoclonal_antibody
 YH003|YH-003	anti-OX40_agonistic_monoclonal_antibody
 YH004|YH-004	4-1BB_agonist_antibody
+YH32367|ABL105	bispecific-ERBB2/4-1BB_antibody
 YTB323	CD19-specific_CAR-T_cells
 ZEN-3694	BET_inhibitor
 ZN-C3	WEE1_inhibitor

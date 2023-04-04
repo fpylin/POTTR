@@ -107,6 +107,8 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Cervical neuroendocrine c
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Anal small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Appendiceal neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma	Colorectal small-cell neuroendocrine carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma	Colorectal large-cell neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Gallbladder small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Gastric neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Oesophageal neuroendocrine carcinoma
@@ -120,6 +122,7 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma 
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Anal small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Bladder small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Cervical small-cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Colorectal small-cell neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Gallbladder small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Oesophageal small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Prostate neuroendocrine carcinoma|Prostate small-cell carcinoma|Prostate small cell carcinoma
@@ -283,6 +286,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic colloid
 Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic neuroendocrine tumour
 Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic solid pseudopapillary tumour|Solid pseudopapillary tumour of the pancreas|Pancreatic pseudopapillary tumour
+Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic intraductal oncocytic papillary carcinoma|Intraductal oncocytic papillary carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Small intestine cancer	Ampullary cancer|Ampullary carcinoma|cancer of the Ampulla of Vater
 Cancer	Solid tumour	Gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma|Small bowel adenocarcinoma
