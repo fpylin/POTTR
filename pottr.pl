@@ -35,10 +35,11 @@
 #   Version 0.92 - 13 Jun 2020
 #   Version 0.93 - 14 Sep 2020
 #   Version 0.95 - 24 Dec 2021
+#   Version 0.96 - 09 Apr 2023
 #
 ##############################################################################
 
-our $POTTR_version = '0.95';
+our $POTTR_version = '0.96';
 our $POTTR_title = qq|Precision Oncology Treatment and Trial Recommender (Version $POTTR_version)|;
 
 our $POTTR_subtitle = qq|
@@ -955,6 +956,7 @@ sub extract_therapy_summaries {
 		my @evidence = map { my $a = $_; $a =~ s/^evidence:\s*//; my @a = split /\s*[,;]\s*/, $a; @a } grep { /^evidence:/ } @tags; 
 		my @referred_from = sort map { my $a = $_; $a =~ s/^referred_from:\s*//; my @a = split /\s*[,;]\s*/, $a; @a } grep { /^referred_from:/ } @tags; 
 		my @lom = sort map { my $a = $_; $a =~ s/^LOM:\s*(\d+).*/$1/; $a } grep { /^LOM:/ } @tags; 
+		my @kblines = sort map { my $a = $_; $a =~ s/^KBLine:\s*(\d+).*/$1/; $a } grep { /^KBLine:/ } @tags; 
 
 		my %row = (
 			'therapy'         => $therapy,
@@ -963,7 +965,8 @@ sub extract_therapy_summaries {
 			'rec_score'       => $tags{'therapy_recommendation_score'},
 			'referred_from'   => join(", ", @referred_from),
 			'evidence'        => join(", ", @evidence),
-			'lom'             => join(", ", @lom)
+			'lom'             => join(", ", @lom),
+			'kblines'         => join(", ", @kblines)
 		);
 		
 		push @retval, \%row;
@@ -973,11 +976,11 @@ sub extract_therapy_summaries {
 
 
 sub gen_therapy_summary_report {
-	my $output = join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "LOM", "Evidence")."\n";
+	my $output = join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "LOM", "Evidence", "KBLines")."\n";
 	my @lines;
 
 	for my $row ( sort { $$a{'rec_score'} <=> $$b{'rec_score'} } extract_therapy_summaries(@results_therapy_recommendations) ) {
-		push @lines, join("\t", $$row{'therapy'}, $$row{'tier'}, $$row{'tier_drug_class'}, $$row{'referred_from'}, $$row{'lom'}, $$row{'evidence'});
+		push @lines, join("\t", $$row{'therapy'}, $$row{'tier'}, $$row{'tier_drug_class'}, $$row{'referred_from'}, $$row{'lom'}, $$row{'evidence'}, $$row{'kblines'});
 	}
 
 	$output .= join("\n", @lines)."\n";
@@ -989,7 +992,7 @@ sub gen_therapy_summary_terminal {
 	
 	my @lines;
 	
-	push @lines, join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "LOM", "Evidence")."\n";
+	push @lines, join("\t", "Therapy", "Tier", "Tier (drug class)", "Biomarker", "LOM", "Evidence", "KBLines")."\n";
 	
 	for my $row ( sort { $$a{'rec_score'} <=> $$b{'rec_score'} } extract_therapy_summaries(@results_therapy_recommendations) ) {
 		my $f_hl;
@@ -997,7 +1000,7 @@ sub gen_therapy_summary_terminal {
 		$f_hl = 30 if $$row{'tier'} =~ /^3B|^4|^R2B/;
 		$f_hl = 31 if $$row{'tier'} =~ /^R1/;
 # 		push @lines, join( "\t", ( map { $$row{$_} }  qw(therapy tier tier_drug_class evidence) ) )."\n";
-		push @lines, join("\t", ($f_hl ? hl($f_hl, $$row{'therapy'}) : $$row{'therapy'}) , thl( $$row{'tier'} ), thl( $$row{'tier_drug_class'} ), $$row{'referred_from'}, $$row{'lom'}, $$row{'evidence'})."\n";
+		push @lines, join("\t", ($f_hl ? hl($f_hl, $$row{'therapy'}) : $$row{'therapy'}) , thl( $$row{'tier'} ), thl( $$row{'tier_drug_class'} ), $$row{'referred_from'}, $$row{'lom'}, $$row{'evidence'}, $$row{'kblines'} )."\n";
 	}
 	
 	@lines = column(@lines) ;

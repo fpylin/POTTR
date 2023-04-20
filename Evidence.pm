@@ -456,7 +456,7 @@ sub gen_rule_knowledge_base {
 		push @debug_msg, "\e[1;36mBiomarker focus in the comments: $biomarker_drug_class_focus\e[0m\n" if defined $biomarker_drug_class_focus;
 		my $treatment_class = Therapy::get_treatment_class( $$row{$fname_drugs}, $biomarker, $biomarker_drug_class_focus );
 		
-		my $version_str = ($date =~ m|(\d+)/(\d+)/(\d+)| ? "KBver:$3$2$1; KBLine: $line" : "KBLine: $line");
+		my $version_str = ($date =~ m|(\d+)/(\d+)/(\d+)| ? "KBver:$3$2$1; KBLine:$line" : "KBLine:$line");
 		
 		my $tier_partial_match_catype = $repurposing_retier_cancer_type{$tier} // 'U';
 		

@@ -175,6 +175,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR+MET	EGFR:Oncogenic mutations and MET:amplification and NOT EGFR:T790M	Non-small cell lung cancer	Gefitinib + Savolitinib		30156984
 4	EGFR+MET	EGFR:T790M and MET:amplification	Non-small cell lung cancer	Osimertinib + Crizotinib	Case reports	28274743, 30881166, 31157314
 4	EGFR+MET	MET:Alteration and EGFR:Oncogenic mutations	Non-small cell lung cancer	Amivantamab		10.1200/JCO.2019.37.15_suppl.9009
+4	EGFR+RBM10	EGFR:Oncogenic mutations and RBM10:Loss-of-function mutations	Non-small cell lung cancer	Osimertinib + Navitoclax	Preclinical study. In RBM10-loss xenograft models, adding BH3-mimetic to Osimertinib leads to restored apoptosis in EGFR-mutant cells that have a RBM10-null condition.	35579943
 4	EGFR+RET	EGFR:Exon 19 deletion and EGFR:T790M and RET:ANK3-RET fusion	Non-small cell lung cancer	Osimertinib + Pralsetinib	Case report. Acquired resistance of ANK3-RET fusion following treatment to know EGFR mutations. Durable response of &gt;12 months to Osimertinib and Pralsetinib combination.	35797511
 4	EGFR+RET	EGFR:Oncogenic mutations and RET:fusion	Non-small cell lung cancer	Osimertinib + Pralsetinib	Two case reports	30257958
 4	EGFR+ROS1	EGFR:Oncogenic mutations and ROS1:fusion	Non-small cell lung cancer	Osimertinib + Crizotinib	Case report	29935846
@@ -369,6 +370,7 @@ R2	NRG1	Overexpression	Non-small cell lung cancer	Seribantumab + Docetaxel	No PF
 R2	PIK3CA	G118D	Non-small cell lung cancer	Osimertinib	Cell line data. Off-target resistance	28202511
 R2	PIK3CA	Oncogenic mutations	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
 R2	RB1	Oncogenic mutations	Non-small cell lung cancer	Trastuzumab deruxtecan	Case series. The emergence of acquired resistance to trastuzumab deruxtecan in TP53-/HER2-mutated non-small-cell lung cancer may be correlated with the loss of Rb1.	36809053
+R2	RBM10	Loss-of-function mutations	Non-small cell lung cancer	Osimertinib	Preclinical and retrospective observational study. RBM10 loss is associated with reduced response to Osimretinib in EGFR-mutant non-small cell lung cancer models and cohort.	35579943
 R2	RET	Fusion	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
 R2	RET	G810A, G810S, G810C, G810R	Non-small cell lung cancer	Selpercatinib	Case report and xenograft studies. Acquired resistance after treatment with Selpercatinib as a result by steric hinderance of drug binding.	31988000
 R2	RET	G810S, G810R	Non-small cell lung cancer	Selpercatinib; Pralsetinib	Retrospective study. The study identified acquisition of RET kinase solvent front mutations (G810), as well as genomic amplification of MET and KRAS as potential bypass mechanisms.	33007380

@@ -554,6 +554,7 @@ Hydroxyurea|Hydroxycarbamide	antimetabolite
 IAG933	YAP-TEAD_inhibitor
 IBI110	anti-LAG3_monoclonal_antibody
 IBI319	bispecific_PD-1/CD137_antibody
+IBI334	bispecific_EGFR/B7H3_antibody
 IBI343|IBI-343	anti-CLDN18.2_antibody-drug_conjuagate
 IBI351|GFH925	KRAS_G12C_inhibitor
 IBI354	anti-ERBB2_antibody-drug_conjugate
@@ -775,6 +776,7 @@ NRR2Mab	anti-NOTCH2_monoclonal_antibody
 NT219	IRS1/2/STAT3_inhibitor
 NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NVG-111	bispecific_T-cell_engager,ROR1-targeting
+NVL-520	ROS1_inhibitor
 NX-2127	BTK_inhibitor
 NZV930|NZV 930|NZV-930|SRF 373|SRF-373|SRF373	anti-CD73_monoclonal_antibody
 Nab-Sirolimus|ABI-009	mTOR_inhibitor
