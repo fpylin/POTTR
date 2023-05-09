@@ -79,7 +79,9 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ERBB2	Kinase domain mutation	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01	10.1200/JCO.2020.38.15_suppl.9504
 3	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-small cell lung cancer	Pyrotinib		30596880
 3	ERBB2	Oncogenic mutations, V659E, A775_G776insYVMA, G778_P780dup, G778insCPG, G776delinsVC, exon 20 insertion	Non-small cell lung cancer	Ado-Trastuzumab Emtansine	Not TGA approved. OncoKB LOE 2. 	30206164, 29989854
+3	FGFR2	Fusion	Ovarian cancer; Pancreatic adenocarcinoma; Cervical cancer; Non-small cell lung cancer; Prostate cancer	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
 3	KRAS	G12C	Non-small cell lung cancer	Adagrasib	Phase 1/1B. KRYSTAL-1. At 600mg BD, 10/16 evaluable NSCLC with KRAS G12C achieved objective response.	35167329
+3	KRAS	G12C	Non-small cell lung cancer	IBI351	Phase 1. NCT05005234. N=67. NSCLC across all dose levels, the confirmed ORR was 45%, and DCR was 93%.	10.1158/1538-7445.AM2023-CT030
 3	KRAS	G12C	Non-small cell lung cancer; Colorectal adenocarcinoma; Solid tumours	Adagrasib	KRYSTAL-1. Combined Phase 1&amp;2. ORR 45% (NSCLC), 17% (CRC)	10.1016/S0959-8049(20)31076-5
 3	KRAS	Oncogenic mutations	Non-small cell lung cancer	Selumetinib + Docetaxel	Ph2 ORR 37%. Negative Ph 3 SELECT-1	23200175, 28492898
 3	MET	Amplification	Non-small cell lung cancer	Capmatinib	GEOMETRY mono-1: In MET amplified group (defined as gene copy number, GCN, &gt;= 10), ORR 29% (previously treated) versus 40% (previously untreated). Limited response were seen with GCN &lt;10 (ORR 7-12%).	32877583, 10.1200/JCO.2019.37.15_suppl.9004
@@ -110,6 +112,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ALK	VKORC1L1-ALK fusion, T1151K	Non-small cell lung cancer	Alectinib	Case report.	30519133
 4	ARAF	S214C	Non-small cell lung cancer	Sorafenib	Single case report. OncoKB LOE 3	24569458
 4	ATM	Protein expression	Non-small cell lung cancer	AZD1390 + Radiotherapy		29938225
+4	BRAF	V600E	Non-small cell lung cancer	Lifirafenib + Mirdametinib	Phase 1b. NCT03905148. ORR 15/54 (28%) in efficacy-evaluable patients. 	10.1158/1538-7445.AM2023-CT033
 4	CD274	Protein expression	Non-small cell lung cancer	Pembrolizumab + Vibostolimab	Phase 1. First-in-human MK7684-001. In treatment-naive NSCLC, combined anti-TIGIT and anti-PD-1 antibodies achieved DCR of 83% in TPS&gt;=1% and in 45% in TPS&lt;1%. DCR was 32% and 45% respectively in PD-L1/PD-L1 refractory subgroup.	34800678
 4	CDKN2A	Loss of protein expression	Non-small cell lung cancer	Abemaciclib; Palbociclib	Cytostatic	27217383, 30647837
 4	CDKN2A	Oncogenic mutations	Non-small cell lung cancer	Palbociclib	TAPUR. N=28. 1 PR. 6 SD	10.1200/JCO.2019.37.15_suppl.9041
@@ -198,6 +201,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	FGFR2	FGFR2-BICC1 fusion	Non-small cell lung cancer	Erdafitinib		35050756
 4	KEAP1	Oncogenic mutations	Non-small cell lung cancer	Talazoparib	Preclinical study. Loss of KEAP1 induces a BRCAness phenotype in KEAP1-mutant lung cancer, mediated by stabilisation of EMSY, leading to sensitisation of PARP inhibitor.	34963055
 4	KEAP1+KRAS	KRAS:G12C AND NOT KEAP1:Oncogenic mutations	Non-small cell lung cancer	Sotorasib	Higher ORR (44%) was identified in patients with KEAP oncogenic mutations treated with Sotorasib in the CodeBreak100 trial.	34096690, 10.1200/JCO.2021.39.15_suppl.9003
+4	KRAS	G12C	Non-small cell lung cancer	LY3537982	Phase 1. NCT04956640. ORR 3/5 (60%) in KRAS G12C inhibitor treatment naive NSCLC.	10.1158/1538-7445.AM2023-CT028
 4	KRAS	G12C	Non-small cell lung cancer; Colorectal adenocarcinoma	JAB-21822	Phase 1. NCT05009329.	10.1200/JCO.2022.40.16_suppl.3089
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	RMC-5552 + RMC-6272	Phase 1. NCT04774952.	10.1200/JCO.2022.40.16_suppl.3098
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	SHP2 inhibitor		29808006
@@ -222,6 +226,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MET	Y1021H (Y1003H)	Non-small cell lung cancer	Crizotinib	Case report, sensitive to Crizotinib	31809977
 4	NF1	Oncogenic mutations	Non-small cell lung cancer	Trametinib		NCT03232892
 4	NOTCH3	Overexpression	Non-small cell lung cancer	MRK003	Pre-clinical evidence	17804716
+4	NRAS	Q61K	Non-small cell lung cancer	Lifirafenib + Mirdametinib	Phase 1b. NCT03905148. ORR 15/54 (28%) in efficacy-evaluable patients. 	10.1158/1538-7445.AM2023-CT033
 4	NRG1	CD74-NRG1 fusion	Non-small cell lung cancer	GSK2849330	Phase 1. NCT01966445. Single responder with durable response. 	34132450
 4	NRG1	Fusion, DOC4-NRG1 fusion, SLC3A2-NRG1 fusion, CD74-NRG1 fusion	Breast cancer; Non-small cell lung cancer; Ovarian cancer; Solid tumours	Seribantumab	Seribantumab inhibits in vitro and in vivo of NRG1 fusion in breast, lung, and ovarian patient-derived cancer models.	33824166
 4	NRG1	Fusion; CD74-NRG1 fusion; POMK-NRG1 fusion; APP-NRG1 fusion	Non-small cell lung cancer; Solid tumours	Afatinib	Case series. Partial response seen in patients with fusion in two NSCLC, one colorectal cancer, and one pancreatic cancer treated with afatinib. Two NSCLC patients treated with afatinib were seen with prolonged responses.	10.1200/JGO.2019.5.suppl.110
@@ -281,6 +286,7 @@ R2	EGFR	Amplification	Non-small cell lung cancer	Capmatinib; Crizotinib	Off-targ
 R2	EGFR	Amplification	Non-small cell lung cancer	Crizotinib	Case series. EGFR Amplification in three cases	31548343
 R2	EGFR	Amplification	Non-small cell lung cancer	Osimertinib		32385709, 28625643
 R2	EGFR	Amplification	Non-small cell lung cancer	Osimertinib	Cell line data. Wild type EGFR	28202511
+R2	EGFR	C797S	Non-small cell lung cancer	Aumolertinib	The most common mechanisms of resistance to Aumolertinib were acquired EGFR C797S mutation and aberration in PIK3CA bypass track.	10.1016/j.jtho.2022.07.739
 R2	EGFR	C797S, C797G	Non-small cell lung cancer	Afatinib		32206559
 R2	EGFR	C797S, C797G	Non-small cell lung cancer	Osimertinib		25964297; 30073261
 R2	EGFR	D761Y	Non-small cell lung cancer	Gefitinib	Acquired resistance	17085664, 18981003
@@ -368,6 +374,7 @@ R2	NRAS	Q61K, G13R	Non-small cell lung cancer	Sotorasib	Treatment-emergent RAS a
 R2	NRG1	Fusions	Non-small cell lung cancer	Pembrolizumab + Carboplatin + Pemetrexed	Retrospective registry-based study. Chemoimmunotherapy ORR 0%.	34077268
 R2	NRG1	Overexpression	Non-small cell lung cancer	Seribantumab + Docetaxel	No PFS improvement in EGFR wt NSCLC	10.1200/JCO.2019.37.15_suppl.9036
 R2	PIK3CA	G118D	Non-small cell lung cancer	Osimertinib	Cell line data. Off-target resistance	28202511
+R2	PIK3CA	Oncogenic mutations	Non-small cell lung cancer	Aumolertinib	The most common mechanisms of resistance to Aumolertinib were acquired EGFR C797S mutation and aberration in PIK3CA bypass track.	10.1016/j.jtho.2022.07.739
 R2	PIK3CA	Oncogenic mutations	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
 R2	RB1	Oncogenic mutations	Non-small cell lung cancer	Trastuzumab deruxtecan	Case series. The emergence of acquired resistance to trastuzumab deruxtecan in TP53-/HER2-mutated non-small-cell lung cancer may be correlated with the loss of Rb1.	36809053
 R2	RBM10	Loss-of-function mutations	Non-small cell lung cancer	Osimertinib	Preclinical and retrospective observational study. RBM10 loss is associated with reduced response to Osimretinib in EGFR-mutant non-small cell lung cancer models and cohort.	35579943

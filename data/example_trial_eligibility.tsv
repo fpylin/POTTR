@@ -131,7 +131,6 @@ NCT03906331	RET:oncogenic_mutation; NOT RET:amplification
 NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
 NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03975647	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
-NCT03994393	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04008030	(MSI:H OR MMR:deficient)
 NCT04064060	NOT catype:solid tumours
 NCT04083976	NOT catype:Urothelial carcinoma; NOT catype:Bladder cancer; (FGFR1:fusion OR FGFR2:fusion OR FGFR3:fusion)
@@ -186,9 +185,7 @@ NCT04449874	KRAS:G12C; catype:Solid tumour
 NCT04450732	(ERBB2:oncogenic_mutation OR ERBB2:amplification OR ERBB2:overexpression)
 NCT04505826	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
-NCT04521686	IDH1:oncogenic_mutation
 NCT04538742	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
-NCT04546009	NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT04565275	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration); *NOT prior_therapy:pan-FGFR_inhibitor
 NCT04585035	KRAS:G12C
 NCT04589845	(sensitive_to:GDC-0077 OR sensitive_to_drug_class:PI3K_inhibitor); *(PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:H1047_missense_variant); *(PIK3CA:E81K OR PIK3CA:E88Q OR PIK3CA:E88P OR PIK3CA:R93Q OR PIK3CA:R93W OR PIK3CA:P104L OR PIK3CA:G106_missense_variant  OR PIK3CA:R108_missense_variant OR PIK3CA:K111_missense_variant  OR PIK3CA:G118_missense_variant OR PIK3CA:N345_missense_variant OR PIK3CA:R357_missense_variant OR PIK3CA:C378_missense_variant OR PIK3CA:C420_missense_variant OR PIK3CA:E453_missense_variant OR PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:Q546_missense_variant OR PIK3CA:M1004_missense_variant OR PIK3CA:M1043_missense_variant OR PIK3CA:H1047_missense_variant OR PIK3CA:H1048_missense_variant OR PIK3CA:G1049_missense_variant)
@@ -258,3 +255,10 @@ NCT05187624	EGFR:vIII
 NCT05173987	*(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT05307705	PIK3CA:H1047R
 NCT05269316	NOT catype:Central nervous system cancer
+NCT05253651	(ERBB2:amplification OR ERBB2:overexpression)
+NCT05480865	KRAS:G12C
+NCT05425940	catype:Colorectal cancer
+NCT04952753	catype:Colorectal cancer
+NCT05609370	catype:Colorectal cancer; NOT MSI:high; NOT MMR:deficient
+NCT02513849	catype:Oesophageal cancer
+NCT04631731	*BIOMARKER_STUDY

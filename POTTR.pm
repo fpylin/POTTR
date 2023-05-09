@@ -341,21 +341,10 @@ sub load_module_variant_evidence_grading {
 	$rs->define_dyn_rule( 'summary_grade',  sub { my $f = shift; my $facts = $_[0]; # my $cache = $_[1];
 		return () if $f !~ /^(\S+):(treatment(?:_class)?):(.+?)\s*\(/ ;
 		my ($biomarker, $type, $therapy) = ($1, $2, $3);
-		my $btt = join(":", $biomarker, $type, $therapy);
-# 		return () if exists $$cache{'summary_grade'}{'visited'}{$btt};
-# 		$$cache{'summary_grade'}{'visited'}{$btt} = 1;
-# 		$cntf{$btt}++; print STDERR "$cache\t$cntf{$btt}\t$btt\n";
 		
 		my $tier_list_regex = $facts->getvar('tier_list_regex') // '[[:alnum:]]+';
 
-		my @matched_facts ;
-
-# 		if ( exists $$cache{'summary_grade'}{'matched_facts'} ) { # Computationally redundant and expensive search. Using cache
-# 			@matched_facts = @{ $$cache{'summary_grade'}{'matched_facts'} } ;
-# 		} else {
-			@matched_facts = grep { /:$type:.*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|, (?i:inferred|referred) from|, histotype agnostic)/ } ( $facts->get_facts_list() ); # R?[1234S][ABR]?
-# 			$$cache{'summary_grade'}{'matched_facts'} = \@matched_facts;
-# 		}
+		my @matched_facts = grep { /:$type:.*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|, (?i:inferred|referred) from|, histotype agnostic)/ } ( $facts->get_facts_list() ); # R?[1234S][ABR]?
 		
 		my $tier_order_ref = $facts->getvar('tier_order');
 		

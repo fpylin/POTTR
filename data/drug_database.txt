@@ -65,6 +65,7 @@ AMG-427|AMG 427	bispecific_FLT3/CD3_monoclonal_antibody
 AMG-673|AMG 673	anti-CD33/CD3_BiTE_antibody
 AMG-701|AMG 701	anti-BCMA_BiTE_antibody
 AMG319	PI3K_delta_inhibitor
+AMP945|AMP-945	FAK_inhibitor
 AMT-151	anti-FR-alpha_antibody-drug_conjugate
 AMT-116	HER2-specific_CAR_T_cells
 AMT-253	CAR_T_cells,unknown_specificity
@@ -84,7 +85,7 @@ ASP5878	FGFR_inhibitor
 ASTX295|ASTX 295|ASTX-295	MDM2_inhibitor
 ATG-017	ERK_inhibitor
 ATG 022|ATG-022	anti-CLDN18.2_antibody-drug_conjuagate
-ATG-037	CD73_inhibitor
+ATG 037|ATG-037	CD73_inhibitor
 ATG-101	bispecific_PD-L1/4-1BB_antibody
 ATOR1017	anti-41BB_monoclonal_antibody
 ATX-101	cell_penetrating_peptide
@@ -200,6 +201,7 @@ BMS-986218|BMS 986218	anti-CTLA-4_monoclonal_antibody
 BMS-986249|BMS 986249|BMS986249	CTLA-4-directed_probody
 BMS-986258|BMS 986258	anti-TIM3_monoclonal_antibody
 BMS-986277	replication-competent_oncolytic_adenovirus
+BMS-986340	anti-CCR8_monoclonal_antibody
 BNA35|BNA035|BNA-035|HLX35	bispecific-EGFR/4-1BB_antibody
 BNC-105|BNC 105|BNC105	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNC101|BNC-101|ET-101	anti-LGR5_monoclonal_antibody
@@ -1256,3 +1258,7 @@ modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 PD173074	FGFR1_inhibitor
 RO7502175	unknown_drug_class
+Ponsegromab	anti-GDF15_monoclonal_antibody
+LBL-007	anti-LAG3_monoclonal_antibody
+JS-006	anti-TIGIT_monoclonal_antibody
+JS-009	anti-CD112R_monoclonal_antibody

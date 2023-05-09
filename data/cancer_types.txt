@@ -71,8 +71,8 @@ Cancer	Haematological malignancy	Plasma cell disorder	Plasma cell leukaemia|Plas
 Cancer	Haematological malignancy|Haematologic malignancy|Haematologic cancer|Liquid cancer|Blood cancer
 Cancer	Solid tumour	Breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma
-Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Breast invasive ductal carcinoma|Invasive ductal carcinoma|Breast ductal carcinoma
-Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Breast invasive lobular carcinoma|Invasive lobular carcinoma|Breast lobular carcinoma
+Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Breast invasive ductal carcinoma|Invasive ductal carcinoma|Infiltrative ductal carcinoma|Breast ductal carcinoma
+Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Breast invasive lobular carcinoma|Invasive lobular carcinoma|Infiltrative lobular carcinoma|Breast lobular carcinoma
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-negative breast cancer	ER-positive HER2-negative breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-negative breast cancer|HER2-ve breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-positive breast cancer
@@ -156,7 +156,7 @@ Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	High-g
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma	Diffuse intrinsic pontine glioma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma|Diffuse midline glioma, H3 K27M mutant
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma|Glioma, high-grade
-Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse glioma, WHO Grade 2|Diffuse astrocytoma, WHO Grade 2
+Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse glioma, WHO Grade 2|Diffuse astrocytoma, WHO Grade 2|Diffuse astrocytoma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse leptomeningeal neuroglial tumour
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Oligodendroglioma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Paediatric low grade gliomas|Childhood low-grade glioma
@@ -214,85 +214,87 @@ Cancer	Solid tumour	Extramammary Paget's disease	Scrotum Paget's Disease
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma	Platinum resistant high-grade epithelial cancers of fallopian tube
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma|Fallopian tube carcinoma|Fallopian tube serous carcinoma|Cancer of the falllopian tube
 Cancer	Solid tumour	Fallopian tube cancer|Fallopian Tube Neoplasm
-Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal adenosquamous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal basaloid squamous cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal small-cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer	Anal squamous cell carcinoma|Squamous cell carcinoma of the anal canal|Squamous cell carcinoma of the anus 
-Cancer	Solid tumour	Gastrointestinal cancer	Anal cancer|Anal carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal adenocarcinoma ex Goblet cell carcinoid
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma|Appendix adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal signet ring cell adenocarcinoma|Appendiceal signet ring cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal mucinous adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer	Appendiceal neuroendocrine carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer	Appendiceal pseudomyxoma peritonei
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer	Goblet cell carcinoma|Goblet cell adenocarcinoma|Goblet cell carcinoid
-Cancer	Solid tumour	Gastrointestinal cancer	Appendiceal cancer|Appendiceal carcinoma|Appendix cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600 colorectal cancer	BRAF V600E colorectal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600 colorectal cancer|BRAF V600 colorectal adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma	Microsatellite stable colon cancer|Colon cancer microsatellite stable|MSS Colon Cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma|Colon cancer|Bowel cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal mucinous adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite instability-high colorectal cancer|MSI-H colorectal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite-stable colorectal cancer|MSS colorectal cancer|Colorectal Cancer Microsatellite Stable
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Non-microsatellite instability-high colorectal cancer|Non-MSI-H colorectal cancer	Microsatellite stable colorectal cancer|MSS colorectal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Rectal adenocarcinoma|Rectal cancer|Rectum cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer	Colorectal signet ring carcinoma|Colorectal signet ring adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal cancer|Carcinoma, colorectal|CRC
-Cancer	Solid tumour	Gastrointestinal cancer	Colorectal neuroendocrine carcinoma|Colorectal large cell neuroendocrine carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer|Lower GI cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal cancer	Anal adenosquamous carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal cancer	Anal basaloid squamous cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal cancer	Anal small-cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal cancer	Anal squamous cell carcinoma|Squamous cell carcinoma of the anal canal|Squamous cell carcinoma of the anus 
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal cancer|Anal carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal adenocarcinoma ex Goblet cell carcinoid
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma|Appendix adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal signet ring cell adenocarcinoma|Appendiceal signet ring cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal mucinous adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal neuroendocrine carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal pseudomyxoma peritonei
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Goblet cell carcinoma|Goblet cell adenocarcinoma|Goblet cell carcinoid
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer|Appendiceal carcinoma|Appendix cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600 colorectal cancer	BRAF V600E colorectal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600 colorectal cancer|BRAF V600 colorectal adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma	Microsatellite stable colon cancer|Colon cancer microsatellite stable|MSS Colon Cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma|Colon cancer|Bowel cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal mucinous adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite instability-high colorectal cancer|MSI-H colorectal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite-stable colorectal cancer|MSS colorectal cancer|Colorectal Cancer Microsatellite Stable
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Non-microsatellite instability-high colorectal cancer|Non-MSI-H colorectal cancer	Microsatellite stable colorectal cancer|MSS colorectal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Rectal adenocarcinoma|Rectal cancer|Rectum cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal signet ring carcinoma|Colorectal signet ring adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer|Carcinoma, colorectal|CRC
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal neuroendocrine carcinoma|Colorectal large cell neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine tumour
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	EBV-related gastric carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma	HER2-positive gastric cancer|HER2-positive gastric adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric neuroendocrine carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric poorly differentiated carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric signet ring cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric small cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric undifferentiated carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma|Gastroesophageal adenocarcinoma|GEJ adenocarcinoma|GEJ cancer|GOJ adenocarcinoma| gastroesophageal junction (GEJ) adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-positive gastroesophageal cancer|HER2-positive gastroesophageal adenocarcinoma|HER2-positive GEJ adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Primary gastric squamous cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric undifferentiated malignancy
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Gastroesophageal junction adenocarcinoma|Lower oesophageal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal adenocarcinoma|Esophageal adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal neuroendocrine carcinoma|Esophageal neuroendocrine carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal squamous cell carcinoma|Esophageal squamous cell carcinoma|Oesophageal SCC|Squamous cell carcinoma of the oesophagus
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer|Oesophagus cancer|Esophageal cancer|Esophagus cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Gastroesophageal cancer|Gastro-oesophageal cancer|Oesophagogastric cancer|Esophagogastric cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei
-Cancer	Solid tumour	Gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei	Appendiceal pseudomyxoma peritonei
-Cancer	Solid tumour	Gastrointestinal cancer	Gastrointestinal stromal tumour|Gastrointestinal stromal tumour|GIST
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer|Ampullary carcinoma|Cancer of the Ampulla of Vater
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Extrahepatic cholangiocarcinoma	Distal cholangiocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Extrahepatic cholangiocarcinoma	Perihilar cholangiocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Intrahepatic cholangiocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Combined hepatocellular cholangiocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenosquamous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder small-cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer|Biliary cancer|Bile duct cancer|Biliary adenocarcinoma|Bile duct adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Hepatocellular carcinoma	Fibrolamellar hepatocellular carcinoma|Fibrolamellar carcinoma|Hepatocellular carcinoma, fibrolamellar
-Cancer	Solid tumour	Gastrointestinal cancer	Hepatobiliary cancer	Hepatocellular carcinoma|Liver cancer|HCC|Carcinoma, Hepatocellular
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic acinar cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic adenocarcinoma|Pancreatic ductal adenocarcinoma|PDAC
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic adenosquamous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic colloid carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic neuroendocrine carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic neuroendocrine tumour
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic solid pseudopapillary tumour|Solid pseudopapillary tumour of the pancreas|Pancreatic pseudopapillary tumour
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic intraductal oncocytic papillary carcinoma|Intraductal oncocytic papillary carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Pancreatic cancer	Pancreatic squamous cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Small intestine cancer	Ampullary cancer|Ampullary carcinoma|cancer of the Ampulla of Vater
-Cancer	Solid tumour	Gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma|Small bowel adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Small intestine cancer	Small intestine adenosquamous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Small intestine cancer	Small intestine neuroendocrine carcinoma|Small bowel neuroendocrine carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Small intestine cancer|Small bowel cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer|Upper GI cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	EBV-related gastric carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma	HER2-positive gastric cancer|HER2-positive gastric adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric neuroendocrine carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric poorly differentiated carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric signet ring cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric small cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric undifferentiated carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma|Gastroesophageal adenocarcinoma|GEJ adenocarcinoma|GEJ cancer|GOJ adenocarcinoma| gastroesophageal junction (GEJ) adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-positive gastroesophageal cancer|HER2-positive gastroesophageal adenocarcinoma|HER2-positive GEJ adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Primary gastric squamous cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric undifferentiated malignancy
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Gastroesophageal junction adenocarcinoma|Lower oesophageal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal adenocarcinoma|Esophageal adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal neuroendocrine carcinoma|Esophageal neuroendocrine carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal squamous cell carcinoma|Esophageal squamous cell carcinoma|Oesophageal SCC|Squamous cell carcinoma of the oesophagus
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer|Oesophagus cancer|Esophageal cancer|Esophagus cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer|Gastro-oesophageal cancer|Oesophagogastric cancer|Esophagogastric cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei	Appendiceal pseudomyxoma peritonei
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastrointestinal stromal tumour|Gastrointestinal stromal tumour|GIST
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer|Ampullary carcinoma|Cancer of the Ampulla of Vater
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Extrahepatic cholangiocarcinoma	Distal cholangiocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Extrahepatic cholangiocarcinoma	Perihilar cholangiocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Intrahepatic cholangiocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Combined hepatocellular cholangiocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenosquamous carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder small-cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer|Biliary cancer|Bile duct cancer|Biliary adenocarcinoma|Bile duct adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Hepatocellular carcinoma	Fibrolamellar hepatocellular carcinoma|Fibrolamellar carcinoma|Hepatocellular carcinoma, fibrolamellar
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Hepatocellular carcinoma|Liver cancer|HCC|Carcinoma, Hepatocellular
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic acinar cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic adenocarcinoma|Pancreatic ductal adenocarcinoma|PDAC
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic adenosquamous carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic colloid carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic neuroendocrine carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic neuroendocrine tumour
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic solid pseudopapillary tumour|Solid pseudopapillary tumour of the pancreas|Pancreatic pseudopapillary tumour
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic intraductal oncocytic papillary carcinoma|Intraductal oncocytic papillary carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatic cancer	Pancreatic squamous cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Ampullary cancer|Ampullary carcinoma|cancer of the Ampulla of Vater
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma|Small bowel adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenosquamous carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine neuroendocrine carcinoma|Small bowel neuroendocrine carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer|Small bowel cancer
 Cancer	Solid tumour	Gynaecological cancer	Cervical cancer
 Cancer	Solid tumour	Gynaecological cancer	Cervical cancer	Cervical adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Cervical cancer	Cervical clear cell carcinoma
@@ -473,7 +475,6 @@ Cancer	Solid tumour	Sarcoma	Carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Ovarian carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Uterine carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma
-Cancer	Solid tumour	Sarcoma	Chondrosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Dedifferentiated chondrosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Mesenchymal chondrosarcoma
 Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Myxoid chondrosarcoma
@@ -613,6 +614,7 @@ Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell ca
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	Papillary renal cell carcinoma	Type 1 papillary renal cell carcinoma|papillary renal cell carcinoma Type 1
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	Papillary renal cell carcinoma	Type 2 papillary renal cell carcinoma|papillary renal cell carcinoma Type 2 
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	Sarcomatoid renal cell carcinoma|Renal sarcomatoid carcinoma|Pseudosarcomatous renal cell carcinoma
+Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	TCEB1-mutated renal cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	TFE3-translocation renal cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	Xp11 translocation renal carcinoma|Xp11.2 Translocation-Related Renal Cell Carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Renal medullary marcinoma 

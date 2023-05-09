@@ -593,7 +593,9 @@ sub gen_rule_knowledge_base {
 					$drug_class_regimen = $normalised_class if $f_no_specific_drug ;
 					
 					my @tags = ( $version_str );
-					push @tags, "evidence:$evidence" if length $evidence;
+					push @tags, "evidence:$evidence {tier:$tier}" if length $evidence;
+					push @tags, "comment:$comments. {evidence:$evidence}{tier:$tier}" if length $comments;
+# 					push @tags, "comment:$comments." if length $comments;
 					push @tags, "biomarker_focus:$biomarker_drug_class_focus" if defined $biomarker_drug_class_focus;
 					
 					if ( $drug_class_regimen ) {

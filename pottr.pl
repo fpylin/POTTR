@@ -81,7 +81,8 @@ use Data::Dumper;
 
 #######################################################################
 
-sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
+sub uniq { my %a; $a{$_} = 1 for(grep { defined } @_) ; return keys %a; }
+sub trim { return $_[0] =~ s/^\s+|\s+$//gr }
 sub max { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ > $v) ; } return $v; }
 sub column {
 	my @lines = @_;
@@ -473,12 +474,14 @@ sub extract_drug_sensitivity {
 	my @retval;
 	for my $result_line ( @results_to_filter ) {
 		my %row;
-		my $ent = $result_line ;
+# 		my $ent = $result_line ;
 		my $is_drug_class = ( $result_line =~ /^recommendation_tier_drug_class/ );
+# 		$ent =~ s/\s*\[(.*)\]\s*$//;
+		my ($fact, @tags) = Facts::string_to_fact_and_tags( $result_line );
+		my $ent = $fact;
 		$ent =~ s/^recommendation_tier\S*?://;
 		$ent =~ s/\S+_(?:to|evidence)_\S+://;
-		$ent =~ s/\s*\[(.*)\]\s*$//;
-		my @tags = split /\s*;\s*/, $1 if defined $1 ;
+# 		my @tags = split /\s*;\s*/, $1 if defined $1 ;
 		my @biomarkers = sort ( uniq( map { s/referred_from://; split /\s*\+\s*/, $_} grep { /referred_from:/ } @tags ) );
 		my $biomarkers = join ", ", @biomarkers;
 		my @lom = sort map { my $a = $_; $a =~ s/^LOM:\s*(\d+).*/$1/; $a } grep { /^LOM:/ } @tags; 
@@ -495,8 +498,13 @@ sub extract_drug_sensitivity {
 		}
 		$ent =~ s/_/ /g;
 		$biomarkers =~ s/_/ /g;
+		
+		my $evidence = join(',', sort (  uniq( ( map { /^evidence:(.+)/; split /, /, $1 } grep { /evidence:.+/ } @tags ) ) ) );
+		my $kblines = join(',', sort { $a <=> $b || $a cmp $b } (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
+		my $ref_cancer_types = join(',', sort (  uniq( (map { /^catype:(.+)/i; $1 } grep { /catype:.+/i } @tags ) ) ) );
 	
 		my ($therapy, $tier) = ($ent =~ /(.*):(\S+)/);
+		
 	
 		my $alterations = join ", ", @alterations ;
 		$row{'alterations'} = $alterations ;
@@ -504,6 +512,9 @@ sub extract_drug_sensitivity {
 		$row{'therapy'} = $therapy ;
 		$row{'tier'} = $tier ;
 		$row{'lom'} = $lom ;
+		$row{'referring_catypes'} = $ref_cancer_types ;
+		$row{'evidence'} = $evidence ;
+		$row{'kblines'} = $kblines ;
 		
 		if ( $f_clinical_report ) {
 			next if $tier eq 'R2B';
@@ -543,10 +554,13 @@ sub extract_preferential_trials {
 		my %referring_drugs        = map { /recommendation_tier:(.+):\S+/; $1 => 1 }            grep { /recommendation_tier:.+:\S+/ }            @tags ;
 		my %referring_drug_classes = map { /recommendation_tier_drug_class:(.+):\S+/; $1 => 1 } grep { /recommendation_tier_drug_class:.+:\S+/ } @tags ;
 		
+		my $evidence = join(',', sort (  uniq( ( map { /^evidence:(.+)/; split /, /, $1 } grep { /evidence:.+/ } @tags ) ) ) );
+		my $kblines = join(',', sort {$a <=> $b} (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
+		
 		my %referring_alterations; 
 		
 		for my $biomarker ( keys %referring_genes ) {
-			$referring_alterations{$_}++ for grep { /^$biomarker:(.+)/ } @tags;
+			$referring_alterations{$_}++ for grep { /^\Q$biomarker\E:(.+)/ } @tags;
 		}
 		
 		my $full_title         = Facts::unescape( $tags{'studytitle'}        // '' );
@@ -567,7 +581,7 @@ sub extract_preferential_trials {
 		my $matched_trial_LOM_score            =  $tags{'LOM'} // 'Not assessed';
 		my $ext_weblink                        =  $tags{'ext_weblink'};
 		my $notes                              =  join("; ", grep { /^\*/ } @tags);
-		my $preferential_trial_score           =  $tags{'pref_trial_score'}  // '';
+		my $preferential_trial_score          =  $tags{'pref_trial_score'}  // '';
 		
 		my @matched_drug_names   = split /\s*;\s*/, $matched_drug_names ;
 		@matched_drug_names = uniq( map { Therapy::get_preferred_drug_name($_) } @matched_drug_names );
@@ -605,6 +619,8 @@ sub extract_preferential_trials {
 			'matched_trial_match_criteria_score' => $matched_trial_match_criteria_score,
 			'matched_trial_referring_drug_classes_score' => $matched_trial_referring_drug_classes_score,
 			'matched_trial_phase_tier_score' => $matched_trial_phase_tier,
+			'evidence' => $evidence,
+			'kblines' => $kblines,
 			'trial_match_criteria' => \@trial_match_criteria,
 			'healthcondition' => \@healthconditions,
 			'postcodes' => \@postcodes,
@@ -776,22 +792,27 @@ sub gen_drug_sens_report {
 	my $output ; # = "List of sensitived and resistant therapy and therapy classes\n";
 
 	sub gen_drug_sens_table {
-		my $title = shift;
+		my $sensresi= shift;
+		my $type = shift;
 		my @results_to_filter = @_;
 		my $output = '';
-		$output .= "$title\n".
-			join("\t", 'Therapy or class', 'Tier', 'Biomarker(s)', 'LOM', 'Alteration(s)')."\n";
 		
 		for my $row ( extract_drug_sensitivity(@results_to_filter) ) {
-			$output .= join("\t", $$row{'therapy'}, $$row{'tier'}, $$row{'biomarker'}, $$row{'lom'}, $$row{'alterations'})."\n";
+			$output .= join("\t", $sensresi, $type, trim($$row{'therapy'}), $$row{'tier'}, $$row{'biomarker'}, $$row{'lom'}, $$row{'alterations'}, $$row{'referring_catypes'}, $$row{'evidence'}, $$row{'kblines'})."\n";
 		}
 		return $output ;
 	}
 
-	$output .= gen_drug_sens_table("Sensitive to therapies or therapy combinations", @results_sens_to_drugs );
-	$output .= gen_drug_sens_table("Sensitive to therapy classes", @results_sens_drug_class);
-	$output .= gen_drug_sens_table("Resistant to therapies or therapy combinations", @results_resi_to_drugs );
-	$output .= gen_drug_sens_table("Resistant to therapy classes", @results_resi_drug_class);
+	# 	Old format:
+	# 	$output .= gen_drug_sens_table("Sensitive to therapies or therapy combinations", @results_sens_to_drugs );
+	# 	$output .= gen_drug_sens_table("Sensitive to therapy classes", @results_sens_drug_class);
+	# 	$output .= gen_drug_sens_table("Resistant to therapies or therapy combinations", @results_resi_to_drugs );
+	# 	$output .= gen_drug_sens_table("Resistant to therapy classes", @results_resi_drug_class);
+	$output .= join("\t", 'Sensitive or resistant', 'Type',  'Therapy or class', 'Tier', 'Biomarker(s)', 'LOM', 'Alteration(s)', 'Cancer types', 'Evidence', 'KBLines')."\n";
+	$output .= gen_drug_sens_table("Sensitive", "Therapy",        @results_sens_to_drugs );
+	$output .= gen_drug_sens_table("Sensitive", "Therapy class",  @results_sens_drug_class);
+	$output .= gen_drug_sens_table("Resistant", "Therapy",        @results_resi_to_drugs );
+	$output .= gen_drug_sens_table("Resistant", "Therapy class",  @results_resi_drug_class);
 
 	return $output;
 }
@@ -897,7 +918,7 @@ sub gen_HTML_biomarker_evidence_report {
 
 sub gen_biomarker_evidence_report {
 	my $output ; # = "Evidence of matched target therapies:\n";
-	$output .= join("\t", "Biomarker", "Drug", "Level of Evidence", "Reference")."\n"; # "Status", "Relevance", "Hospital", 
+	$output .= join("\t", "Biomarker", "Drug", "Level of Evidence", "Reference", "KBLines")."\n"; # "Status", "Relevance", "Hospital", 
 
 	sort_results_treatment();
 
@@ -905,13 +926,17 @@ sub gen_biomarker_evidence_report {
 	for my $treatment_line (@results_treatment) {
 		my ($kb_loe)     = ( $treatment_line =~ /\(\w+ LOE: (.+?)\)/ );
 		my %tags = Facts::string_to_tags_hashed( $treatment_line );
+		my ($fact, @tags) = Facts::string_to_fact_and_tags( $treatment_line );
+		
 		my @evidence = ( exists $tags{'evidence'} ? ( split /\s*[;,]\s*/, $tags{'evidence'}) : () );
 		$treatment_line =~ s/(?:\(\w+|\[LOM).*//;
 		my ($gene_trigger, $dummy, $treatment)  =  split /:/, $treatment_line ;
+		$treatment = trim($treatment);
 # 		next if $kb_loe =~ /, in/;
 		$kb_loe .= " [repurposed]" if $kb_loe =~ /, in/;
+		my $kblines = join(',', sort { $a <=> $b || $a cmp $b } (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
 		
-		$output .= join("\t", $gene_trigger,  $treatment,  $kb_loe, join(', ', @evidence) )."\n";
+		$output .= join("\t", $gene_trigger,  $treatment,  $kb_loe, join(', ', @evidence), $kblines )."\n";
 	}
 	$output .= "\n";
 	return $output;
@@ -1055,8 +1080,12 @@ sub gen_preferential_trial_report {
 
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score", 
-		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Biomarker tier score", "Trial phase tier score", "Trial match criteria", "Level of matching",
-		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", "External weblink", "Assumptions"
+		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Biomarker tier score", "Trial phase tier score", "Trial match criteria", 
+		"Level of matching",
+		"Referring cancer types",  "Referring biomarker",  "Referring alterations",  "Referring drugs", "Referring drug classes",     
+		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", 
+		"Evidence", "KB Lines",
+		"External weblink", "Assumptions"
 		)."\n";
 
 	my $cnt = 1;
@@ -1088,13 +1117,20 @@ sub gen_preferential_trial_report {
 				$$row{'matched_trial_biomarker_tier'},
 				$trial_match_criteria,
 				$$row{'LOM'},
+				join("; ", sort( uniq( keys %{ $$row{'referring_catypes'} } ) ) ) ,
+				join("; ", sort( uniq( keys %{ $$row{'referring_genes'} } ) ) ) ,
+				join("; ", sort( uniq( keys %{ $$row{'referring_alterations'} } ) ) ) ,
+				join("; ", sort( uniq( keys %{ $$row{'referring_drugs'} } ) ) ) ,
+				join("; ", sort( uniq( keys %{ $$row{'referring_drug_classes'} } ) ) ) ,
 				$matched_drug_names,
 				$matched_drug_classes,
 				$healthcondition,
-				$$row{'trialphase'},				
+				$$row{'trialphase'},
 				(length( $$row{'$trialacronym'} ) ? "$$row{'$trialacronym'} - " : "").$$row{'full_title'},
 				$postcodes,
 				$$row{'ext_weblink'},
+				$$row{'evidence'},
+				$$row{'kblines'},
 				$$row{'notes'}
 				)
 			)."\n";
@@ -1149,6 +1185,8 @@ sub gen_preferential_trial_terminal {
 			push @lines, join("\t", "Referring alterations",      join("; ", sort( uniq( keys %{ $$row{'referring_alterations'} } ) ) ) )."\n";
 			push @lines, join("\t", "Referring drugs",            join("; ", sort( uniq( keys %{ $$row{'referring_drugs'} } ) ) ) )."\n";
 			push @lines, join("\t", "Referring drug classes",     join("; ", sort( uniq( keys %{ $$row{'referring_drug_classes'} } ) ) ) )."\n";
+			push @lines, join("\t", "Evidence",                   $$row{'evidence'} )."\n";
+			push @lines, join("\t", "KB Lines",                   $$row{'kblines'} )."\n";
 		}
 		push @lines, join("\t", "Trial match criteria",       $trial_match_criteria )."\n";
 		push @lines, join("\t", "Level of matching",          $$row{'LOM'} )."\n";
