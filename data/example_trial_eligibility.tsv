@@ -262,3 +262,8 @@ NCT04952753	catype:Colorectal cancer
 NCT05609370	catype:Colorectal cancer; NOT MSI:high; NOT MMR:deficient
 NCT02513849	catype:Oesophageal cancer
 NCT04631731	*BIOMARKER_STUDY
+NCT05512377	MDM2:amplification; NOT TP53:oncogenic_mutation
+NCT04886804	NRG1:fusion
+NCT04886804	ERBB2:overexpression
+NCT04886804	ERBB2:amplification
+NCT04886804	ERBB2:oncogenic_mutation; catype:Non-small cell lung cancer

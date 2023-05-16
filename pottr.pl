@@ -499,7 +499,7 @@ sub extract_drug_sensitivity {
 		$ent =~ s/_/ /g;
 		$biomarkers =~ s/_/ /g;
 		
-		my $evidence = join(',', sort (  uniq( ( map { /^evidence:(.+)/; split /, /, $1 } grep { /evidence:.+/ } @tags ) ) ) );
+		my $evidence = join(',', sort (  uniq( ( map { /^evidence:(.+)/; ( $1 ? (split /, /, $1) : () ) } grep { /evidence:.+/ } @tags ) ) ) );
 		my $kblines = join(',', sort { $a <=> $b || $a cmp $b } (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
 		my $ref_cancer_types = join(',', sort (  uniq( (map { /^catype:(.+)/i; $1 } grep { /catype:.+/i } @tags ) ) ) );
 	

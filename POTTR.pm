@@ -260,7 +260,6 @@ sub load_module_variant_feature_mapping {
 		push @retval, Facts::mk_fact_str($f, @tags) if $f =~ s/^(?i:MSI|microsatellite_instability):(?:T:)?(.*)/"microsatellite_instability:".lc($1)/e;
 		push @retval, Facts::mk_fact_str($f, @tags) if $f =~ s/^(?i:LOH|loss-of-heterozygosity_score):(?:T:)?(.*)/"loss-of-heterozygosity_score:".lc($1)/e;
 		push @retval, Facts::mk_fact_str($f, @tags) if $f =~ s/^(?i:HRD|homologous_recombination_deficiency_score):(?:)?(.*)/"homologous_recombination_deficiency_score:".lc($1)/e;
-		
 		my ($entity, $etype, $espec) ;
 		if ( $f =~ /^(.+?):([VSFTE]):(.+)?$/ ) {
 			($entity, $etype, $espec) = ($1, $2, $3);
