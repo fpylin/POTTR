@@ -1,4 +1,3 @@
-
 Cancer	Common cancer
 Cancer	Haematological malignancy	B-cell malignancy	Mature B-cell malignancy	B-cell lymphoma
 Cancer	Haematological malignancy	B-cell malignancy	Mature B-cell malignancy	B-cell lymphoma	High-grade B-cell lymphoma
@@ -59,6 +58,7 @@ Cancer	Haematological malignancy	Mast cell disorder	Mast cell leukaemia
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell sarcoma
 Cancer	Haematological malignancy	Mast cell disorder	Systemic mastocytosis	Systemic mastocytosis with an associated hematological neoplasm
 Cancer	Haematological malignancy	Mast cell disorder	Systemic mastocytosis|Mastocytosis
+Cancer	Haematological malignancy	Refractory anaemia
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chronic Myelomonocytic Leukemia|CMML
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chuvash polycythemia
 Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic syndrome|MDS
@@ -412,7 +412,7 @@ Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Non-squamous non-smal
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	PD-L1-positive non-small cell lung cancer
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	RET fusion-positive non-small cell lung cancer|RET-positive non-small cell lung cancer
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	RET-fusion non-small cell lung cancer
-Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Squamous non-small-cell lung cancer|Lung squamous cell carcinoma|Squamous NSCLC|Squamous cell lung cancer|Non Small Cell Lung Cancer Squamous|Non-small Cell Lung Cancer, Squamous|Non small cell lung cancer squamous
+Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Squamous non-small-cell lung cancer|Lung squamous cell carcinoma|Squamous NSCLC|Squamous cell lung cancer|Non Small Cell Lung Cancer Squamous|Non-small Cell Lung Cancer, Squamous|Non small cell lung cancer squamous|Squamous Non-Small Cell Lung Cancer
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer|NSCLC|Lung Cancer, Non-Small Cell|Non small cell lung cancer|Carcinoma, Non-small-cell Lung
 Cancer	Solid tumour	Lung cancer	Small-cell lung cancer|Small-cell lung carcinoma|Lung small cell carcinoma|SCLC
 Cancer	Solid tumour	Lung cancer|Cancer, lung|Cancer of lung|Broncogenic carcinoma|Carcinoma, bronchogenic
@@ -557,6 +557,8 @@ Cancer	Solid tumour	Skin cancer
 Cancer	Solid tumour	Skin cancer	Cutaneous melanoma|Skin melanoma|Melanomatous skin cancer
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Basaloid squamous cell carcinoma
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Cutaneous adnexal tumour	Digital papillary adenocarcinoma
+Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Cutaneous adnexal tumour	Eccrine papillary adenocarcinoma
+Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Cutaneous adnexal tumour	Microcystic adnexal carcinoma|Sclerosing sweat duct carcinoma
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Cutaneous basal cell carcinoma|Basal cell carcinoma|Carcinoma, Basal Cell
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Cutaneous squamous cell carcinoma|Squamous cell carcinoma of skin|Skin squamous cell carcinoma
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Dermatofibrosarcoma protuberans|Dermatofibrosarcoma
@@ -607,7 +609,7 @@ Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-sem
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Teratoma|Malignant teratoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Testicular embryonal carcinoma|Embryonal carcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Yolk sac tumour|Yolk sac tumour
-Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma|Non-seminomatous Germ Cell tumour|NSGCT
+Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma|Non-seminomatous Germ Cell tumour|NSGCT|Germ cell tumor, nonseminomatous
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Seminoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour|Malignant germ cell tumour
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Clear cell renal cell carcinoma|Clear cell renal carcinoma|Renal cell carcinoma|Renal Cell Cancer|Carcinoma, Renal Cell|Renal Cell Carcinoma, Clear Cell

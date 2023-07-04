@@ -232,6 +232,7 @@ anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_engineered_toxin_body
 anti-ERBB2_monoclonal_antibody
 anti-ERBB2_monoclonal_antibody	anti-ERBB2_monoclonal_antibody,dimerization_inhibitor
 anti-ERBB3_monoclonal_antibody
+anti-ERBB3_monoclonal_antibody	anti-ERBB3_monoclonal_antibody,third_generation
 anti-EphA3_antibody
 anti-FGFR2_monoclonal_antibody
 anti-GARP_monoclonal_antibody
@@ -350,6 +351,7 @@ microtubule_stabilizing_agent
 mutant_p53_reactivator	mutant_p53_reactivator,Y220C-selective
 nanoparticle_Stat3/NF-kB/poly-TKI
 orotate_phosphoribosyltransferase_inhibitor
+pan-KRAS_inhibitor	SOS1-KRAS_inhibitor
 pegylated_IL-10
 peptide_receptor_radionuclide_therapy
 peptide_receptor_radionuclide_therapy	177Lu-DOTA-radioconjugate
@@ -392,3 +394,4 @@ ROS1_inhibitor	ALK/ROS1/IGF1R_inhibitor
 ALK_inhibitor,second_generation	ALK/ROS1/IGF1R_inhibitor
 IGF1R_inhibitor	ALK/ROS1/IGF1R_inhibitor
 EZH2_inhibitor	EZH1/2_inhibitor
+YAP-TEAD_inhibitor	TEAD_palmitoylation_inhibitor
