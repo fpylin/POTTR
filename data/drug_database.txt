@@ -55,10 +55,11 @@ AMG 160|AMG-160|AMG160	PSMA_bispecific_T-cell_engager
 AMG 193|AMG-193|AMG193	PRMT5_inhibitor
 AMG 212|BAY2010112	PSMA_bispecific_T-cell_engager
 AMG 256|AMG-256	anti-PD-1_x_IL21_mutein
+AMG 305|AMG-305|AMG305	bispecific_MSLN/CD3_antibody
 AMG 337|AMG337	MET_inhibitor
 AMG 404|AMG-404|AMG404	anti-PD-1_monoclonal_antibody
 AMG 509|AMG-509|AMG509	bispecific_STEAP1/CD3_antibody
-AMG 596|AMG-596|AMG596	anti-EGFRvIII/CD3_BiTE_antibody
+AMG 596|AMG-596|AMG596	bispecific_EGFRvIII/CD3_antibody
 AMG 650|AMG-650|AMG650	KIF18A_inhibitor
 AMG 820	anti-CSF1_monoclonal_antibody
 AMG-228|AMG 228|AMG228	anti-GITR_monoclonal_antibody
@@ -89,6 +90,7 @@ ASTX295|ASTX 295|ASTX-295	MDM2_inhibitor
 ATG 022|ATG-022	anti-CLDN18.2_antibody-drug_conjuagate
 ATG 037|ATG-037	CD73_inhibitor
 ATG-017	ERK_inhibitor
+ATG-018	ATR_inhibitor
 ATG-101	bispecific_PD-L1/4-1BB_antibody
 ATOR1017	anti-41BB_monoclonal_antibody
 ATX-101	cell_penetrating_peptide
@@ -244,7 +246,7 @@ Bleomycin	antineoplastic_antibiotic
 Blinatumomab	anti-CD19/CD3_BiTE_antibody
 Bortezomib|PS-341|LDP 341|MLN341|PS341|Velcade	proteasome_inhibitor
 Bosutinib|SKI-606|4-Anilino-3-quinolinecarbonitrile|Bosulif|SKI 606	BCR-ABL1_inhibitor,second_generation; SRC_inhibitor
-Bozitinib|APL-101|APL101|CBI-3103|CBT-101|PLB-1001|PLB1001	MET_inhibitor,type_1
+Vebreltinib|Bozitinib|APL-101|APL101|CBI-3103|CBT-101|PLB-1001|PLB1001	MET_inhibitor,type_1
 Brentuximab Vedotin|Adcetris|SGN-35|cAC10-vcMMAE	anti-CD30_antibody-drug_conjugate
 Brigatinib|AP 26113|AP-26113|AP26113|Alunbrig	ROS1_inhibitor; ALK_inhibitor,second_generation
 Brilanestrant|GDC-0810|ARN-810	selective_estrogen_receptor_degrader
@@ -273,6 +275,7 @@ CGT9486|PLX9486	KIT_inhibitor
 CH5126766|VS-6766|RO5126766	RAF/MEK_inhibitor
 CI-8993	anti-VISTA_monoclonal_antibody
 CK-101|CK 101|CK101|OLAFERTINIB|RX-518	EGFR_inhibitor,third_generation
+CLN-418|HBM7008	bispecific_41BB/B7H4_antibody
 CLN-619	anti-MICA/MICB_monoclonal_antibody
 CMP-001|ARB-1598|CYT 003|CYT-003	TLR9_agonist
 CN1	anti-OX40_agonistic_monoclonal_antibody
@@ -341,6 +344,7 @@ Cyproterone|SH-881	antiandrogen,steroidal
 Cytarabine|Arabinofuranosylcytosine|Arabinosylcytosine|Aracytidine|Cytosar|U 19920|Alexan|Ara-C|Arabine|Aracytin|CHX-3311|Cytarabinum|Cytarbel|Cytosine Arabinoside|Cytosine-.beta.-arabinoside|Cytosine-beta-arabinoside|Erpalfa|Starasid|U-19920|Udicil|WR-28453	antimetabolite
 D-1553	KRAS_G12C_inhibitor
 D3S-001	KRAS_G12C_inhibitor
+D3S-002	ERK_inhibitor
 DB-1303	anti-ERBB2_antibody-drug_conjugate
 DCC-3116	ULK1/2_inhibitor
 DF6002|BMS-986415	IL-12_Fc-fusion_protein
@@ -565,6 +569,7 @@ Hydroxychloroquine	anti-malarial_agent
 Hydroxyurea|Hydroxycarbamide	antimetabolite
 IAG933	YAP-TEAD_inhibitor
 IBI110	anti-LAG3_monoclonal_antibody
+IBI130	anti-Trop2_monoclonal_antibody
 IBI319	bispecific_PD-1/CD137_antibody
 IBI334	bispecific_EGFR/B7H3_antibody
 IBI343|IBI-343	anti-CLDN18.2_antibody-drug_conjuagate
@@ -725,7 +730,7 @@ MEDI7247|MEDI 7247	anti-ASCT2_antibody-drug_conjugate
 MG010	CRAF_inhibitor
 MGD009|B7-H3 x CD3 DART Protein|MGD 009|MGD-009	humanized_B7-H3_x_CD3_dual-affinity_re-targeting_protein
 MGTA-117	anti-CD117-antibody-drug_conjugate
-MHB036C	anti-TROP2_antibody-drug_conjugate
+MHB036C	anti-Trop2_antibody-drug_conjugate
 MHB088C	anti-B7-H3-antibody-drug_conjugate
 MI-773|SAR405838	p53-HDM2_interaction_inhibitor; MDM2_inhibitor
 MIK665|S-64315	MCL1_inhibitor
@@ -975,8 +980,10 @@ RMC-4550	SHP2_inhibitor
 RMC-4630|SAR442720	SHP2_inhibitor
 RMC-5552	mTORC1_inhibitor
 RMC-6272	mTORC1_inhibitor
+RMC-6291	KRAS_G12C_inhibitor
 RO-5045337|R7112|RO5045337	MDM2_inhibitor
 RO-6874281|RG 7461|RG-7461|RG7461|RO 6874281|RO6874281	anti-FAP/interleukin-2_fusion_protein
+RO-7656594|GDC-2992	unknown_drug_class
 RO6839921	MDM2_inhibitor
 RO6870810|RG 6146|RG6146|RO-6870810|TEN 010|TEN-010	BET_inhibitor
 RO7082859	bispecific_CD20/CD3_monoclonal_antibody
@@ -1180,7 +1187,7 @@ Topotecan|Hycamptamine	topoisomerase_inhibitor
 Toradol	non-steroidal_anti-inflammatory_drug
 Toremifene	selective_estrogen_receptor_modulator
 Toripalimab|JS001|TAB 001|TAB-001	anti-PD-1_monoclonal_antibody
-Tovorafenib|DAY101	pan-RAF_inhibitor
+Tovorafenib|DAY101|DAY-101	pan-RAF_inhibitor
 Trabectedin|Yondelis	DNA_minor_groove_binding_agent
 Trametinib|GSK1120212|JTP-74057|Mekinist	MEK_inhibitor
 TransCon TLR7/8 agonist	TLR7/8_agonist

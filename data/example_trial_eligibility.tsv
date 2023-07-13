@@ -236,7 +236,6 @@ NCT05288166	catype:Prostate cancer
 NCT05059522	prior_therapy:Avelumab
 NCT03611868	(catype:Melanoma OR catype:Malignant peripheral nerve sheath tumor)
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
-NCT04472429	catype:Anal cancer
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma)
 NCT03900442	catype:Gastric cancer; *catype:Diffuse gastric cancer
 NCT05182931	(BRAF:V600E OR NRAS:oncogenic_mutation)
@@ -278,3 +277,6 @@ NCT05501886	NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_th
 NCT05118789	ROS1:fusion
 NCT04835805	NRAS:oncogenic_mutation
 NCT05338970	EGFR:oncogenic_mutation
+NCT04771130	*NOT prior_therapy:BCL2_inhibitor; *NOT prior_therapy:Azacitidine
+NCT05910827	NOT KRAS:oncogenic_mutation; NOT PIK3CA:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT PTEN:deletion; NOT PTEN:oncogenic_mutation; NOT MET:amplification; catype:Lung squamous cell carcinoma; NOT prior_therapy:docetaxel; NOT prior_therapy:cetuximab; NOT prior_therapy:anti-HER3_monoclonal_antibody
+NCT05286801	(SMARCB1:loss OR SMARCB1:oncogenic_mutation OR SMARCB1:loss of protein expression OR SMARCA4:loss OR SMARCA4:oncogenic_mutation OR SMARCA4:loss of protein expression); *PAEDIATRIC_TRIAL

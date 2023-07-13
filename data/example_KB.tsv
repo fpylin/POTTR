@@ -94,6 +94,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Savolitinib		10.1158/1538-7445.AM2019-CT031
 3	MET	Overexpression	Non-small cell lung cancer	Amivantamab + Lazertinib	Phase 1 CHRYSALIS. ORR 90% (9 in 10) in patients with IHC positive (defined as combined EGFR+MET H score &gt;= 400)	10.1200/JCO.2021.39.15_suppl.9006
 3	NRG1	Fusions, ATP1B1-NRG1 fusion, CD74-NRG1 fusion, ITGB1-NRG1 fusion, SDC4-NRG1 fusion, SLC3A2-NRG1 fusion, ITGB1-NRG1 fusion	Solid tumours; Non-small cell lung cancer	Seribantumab	Phase 2. Cohort 1. In 12 of 15 patients (14 NSCLC patients, 1 pancreatic cancer) with evaluable disease, ORR  was 33% (4/12, including 2 CR), and DCR was 92% (11/12).	10.1200/JCO.2022.40.16_suppl.3006
+3	RET	Fusion	Non-small cell lung cancer; Solid tumours	KL590586	Phase 1. NCT05265091. ORR in solid tumour was 60%, 70% and 81% in pretreated and treatment-naive NSCLC respectively.	JCO.2023.41.16_suppl.3007
 3	RET	Fusions	Non-small cell lung cancer	BOS172738	ORR 33% (10/30)	10.1200/JCO.2021.39.15_suppl.3008
 3	RET	Fusions	Non-small cell lung cancer	Cabozantinib	Not TGA approved. Single-arm phase 2. ORR 28%	27825636
 3	RET	Fusions	Non-small cell lung cancer	Lenvatinib	Single-arm phase 2. ORR 16%. PFS 7.3mo	31710864
