@@ -639,8 +639,8 @@ JNJ-67856633	MALT1_inhibitor
 JNJ-75276617	KMT2A_inhibitor
 JNJ-75348780	bispecific_CD22/CD3_antibody
 JQ1|JQ1 compound	BET_inhibitor
-JS-006	anti-TIGIT_monoclonal_antibody
-JS-009	anti-CD112R_monoclonal_antibody
+JS-006|JS006	anti-TIGIT_monoclonal_antibody
+JS-009|JS009	anti-CD112R_monoclonal_antibody
 JSKN003|JSKN-003|KN-026	anti-ERBB2_antibody-drug_conjugate
 JTX-4014|JTX 4014|JTX4014	anti-PD-1_monoclonal_antibody
 KER-050	modified_ActRIIA_ligand_trap_protein
