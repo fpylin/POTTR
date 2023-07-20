@@ -111,6 +111,19 @@ variant-feature-file = feature_lookup.txt
 
 biomarker-rules-file = biomarker_rules.txt
 
+###############################################################################
+# CLINICAL INFERENCE/ASSERTION FILE [OPTIONAL]
+# 
+# This optional file contains additional rules for clinical  interpretation.
+#
+# The following is an example pathogenicity database. See 
+# attached file for format. For example:
+# ERBB2:amplified; catype:Breast cancer => catype:HER2-positive breast cancer
+# 
+###############################################################################
+
+clinical-rules-file = clinical_rules.txt
+
 
 ###############################################################################
 # BIOMARKER EVIDENCE FILE [REQIURED] - Core evidence database.

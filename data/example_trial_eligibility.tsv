@@ -103,7 +103,6 @@ NCT03363867	NOT catype:Ovarian Clear cell Carcinoma; NOT catype:Ovarian Mucinous
 NCT03390504	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration)
 NCT03486873	EXTENSION_STUDY
 NCT03497767	EGFR:oncogenic_mutation
-NCT03539536	MET:alteration; catype:Non-small cell lung cancer
 NCT03551626	BRAF:V600_missense_variant
 NCT03674567	catype:Cervical cancer
 NCT03674567	catype:Gastric cancer

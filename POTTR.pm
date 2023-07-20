@@ -316,7 +316,12 @@ sub load_module_clinical_data_module {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('01D - Clinical data module');
 	
-	$rs->load( $self->gen_rules_drug_db_prior_therapy() ); 
+	$rs->load( $self->gen_rules_drug_db_prior_therapy() );
+
+	$rs = $self->{'modules'}->add_module('01E - Extra clinical rules');
+	for my $srcfile ( POTTRConfig::get_paths('data', 'clinical-rules-file') ) {
+		$rs->load( file( $srcfile ) );
+	}	
 }
 
 #######################################################################

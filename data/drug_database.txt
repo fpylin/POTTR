@@ -39,7 +39,7 @@ AG-270|AG270	MAT2A_inhibitor
 AGEN-1181|AGEN 1181|AGEN1181	anti-CTLA-4_monoclonal_antibody
 AIC100	autologous_CAR-T-cells,ICAM1-targeting
 AK104|AK 104|AK-104	bispecific_PD-1/CTLA-4_antibody
-AK112|AK 112|AK-112	bispecific_PD-1_VEGF_monoclonal_antibody
+Ivonescimab|AK112|AK 112|AK-112	bispecific_PD-1_VEGF_monoclonal_antibody
 AK114|AK 114|AK-114	anti-IL-1beta_monoclonal_antibody
 AK117|AK 117|AK-117	anti-CD47_monoclonal_antibody
 AK119	anti-CD73_monoclonal_antibody
