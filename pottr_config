@@ -123,7 +123,7 @@ biomarker-rules-file = biomarker_rules.txt
 ###############################################################################
 
 clinical-rules-file = clinical_rules.txt
-
+clinical-interpretation-rules-file = clinical_interpretation_rules.txt
 
 ###############################################################################
 # BIOMARKER EVIDENCE FILE [REQIURED] - Core evidence database.

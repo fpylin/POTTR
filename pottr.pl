@@ -213,6 +213,7 @@ my $f_list_evidence = undef;
 my $f_list_therapies = undef;
 my $f_list_therapy_summaries = undef;
 my $f_clinical_report = undef;
+my $f_interpretation = undef;
 my $f_help = undef;
 my $f_man = undef;
 my $f_version = undef;
@@ -239,6 +240,7 @@ GetOptions (
 	"list-therapies|R"        => \$f_list_therapies,
 	"list-therapy-summary|S"  => \$f_list_therapy_summaries,
 	"list-trials|T"           => \$f_list_trials,
+	"interpret|I"             => \$f_interpretation,
 	"trials-terse"            => \$f_list_trials_terse,
 );
 
@@ -250,8 +252,8 @@ if ($f_version) {
 }
 
 
-if ( ! ($f_interp_catype || $f_interp_variants || $f_list_evidence || $f_list_trials || $f_list_therapy_summaries|| $f_list_therapies) ) {
-	$f_interp_catype = $f_interp_variants = $f_list_evidence = $f_list_therapy_summaries = $f_list_trials = $f_list_therapies = 1;
+if ( ! ($f_interp_catype || $f_interp_variants || $f_list_evidence || $f_list_trials || $f_list_therapy_summaries|| $f_list_therapies || $f_interpretation) ) {
+	$f_interp_catype = $f_interp_variants = $f_list_evidence = $f_list_therapy_summaries = $f_list_trials = $f_list_therapies = $f_interpretation = 1;
 }
 
 POTTRConfig::load( $f_config ); # loading configuration file
@@ -267,10 +269,10 @@ my @pottr_modules;
 if (! defined $pottr_modules) {
 	push @pottr_modules, "CTM" if defined $f_interp_catype ;
 	push @pottr_modules, "VFM" if defined $f_interp_variants ;
-	push @pottr_modules, "CTM CLI VFM VEG" if defined $f_list_evidence ;
-	push @pottr_modules, "CTM CLI VFM VEG DSO" if defined $f_list_therapies ;
-	push @pottr_modules, "CTM CLI VFM VEG DSO TRG" if defined $f_list_therapy_summaries ;
-	push @pottr_modules, "CTM CLI VFM VEG DSO TRG PTM PTP" if defined $f_list_trials ;
+	push @pottr_modules, "CTM CLI VFM VEG INT" if defined $f_list_evidence ;
+	push @pottr_modules, "CTM CLI VFM VEG DSO INT" if defined $f_list_therapies ;
+	push @pottr_modules, "CTM CLI VFM VEG DSO TRG INT" if defined $f_list_therapy_summaries ;
+	push @pottr_modules, "CTM CLI VFM VEG DSO TRG PTM PTP INT" if defined $f_list_trials ;
 }
 
 $Pottrparams->{'modules'} = ( (defined $pottr_modules) ? $pottr_modules : join(" ", @pottr_modules) );
@@ -310,8 +312,9 @@ my @results_sens_to_drugs        = grep { /^(?:recommendation_tier:[^:]+?:[^R])/
 my @results_resi_to_drugs        = grep { /^(?:recommendation_tier:[^:]+?:R)/ }                    @treatment_match_result ;
 my @results_sens_drug_class      = grep { /^(?:recommendation_tier_drug_class:[^:]+?:[^R])/ }      @treatment_match_result ;
 my @results_resi_drug_class      = grep { /^(?:recommendation_tier_drug_class:[^:]+?:R)/ }         @treatment_match_result ;
-my @results_therapy_recommendations = grep { /^(?:therapy_recommendation:)/ }                          @treatment_match_result ;
+my @results_therapy_recommendations = grep { /^(?:therapy_recommendation:)/ }                      @treatment_match_result ;
 my @results_preferential_trials  = grep { /^(?:preferential_trial_id:)/ }                          @treatment_match_result ;
+my @results_interpretations      = grep { /^(?:interpretation:)/ }                                 @treatment_match_result ;
 
 #######################################################################################################################################
 sub extract_LOE {
@@ -1214,7 +1217,15 @@ sub gen_preferential_trial_terminal {
 	return $output ;
 }
 
+sub gen_interpretations_terminal {
+	@results_interpretations = map { s/^interpretation://; s/(.*)(\[.*)/$1\n\t$2/; $_ } @results_interpretations;
 
+	my $output = "\n\n\e[1;37mINTERPRETATIONS\e[0m\n";
+	
+	$output .= join("\n", ( map { "$_\n" } @results_interpretations ) )."\n" ;
+	return $output;
+	
+}
 
 sub mk_trial_href {
 	my $x = shift;
@@ -1357,6 +1368,7 @@ HTMLTAIL
 	print gen_biomarker_evidence_terminal()."\n" if $f_list_evidence ; 
 	print gen_therapy_summary_terminal()."\n" if $f_list_therapy_summaries;
 	print gen_preferential_trial_terminal()."\n" if $f_list_trials; 
+	print gen_interpretations_terminal()."\n" if $f_interpretation; 
 }
 
 

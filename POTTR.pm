@@ -927,13 +927,21 @@ sub load_module_deinit {
 
 }
 
+sub load_module_interpretation {
+	my $self = shift;
+	my $rs = $self->{'modules'}->add_module('08 - Clinical interpretation');
+	for my $srcfile ( POTTRConfig::get_paths('data', 'clinical-interpretation-rules-file') ) {
+		$rs->load( file( $srcfile ) );
+	}
+}
+
 #######################################################################
 sub init {
 	my $self = shift;
 	
     my $params = $self->{'params'} ;
     
-	$params->{'modules'} = join(',', qw(CTM CLI VFM VEG DSO TRG PTM PTP)) if ! defined $params->{'modules'} ;
+	$params->{'modules'} = join(',', qw(CTM CLI VFM VEG DSO TRG PTM PTP INT)) if ! defined $params->{'modules'} ;
 
 	my %modules = map { $_ => 1 } split( /\s*[;, ]\s*/, $params->{'modules'} );
     
@@ -951,6 +959,7 @@ sub init {
 	exists $modules{'PTM'}  and $self->load_module_preferential_trial_matching();
 	exists $modules{'PTP'}  and $self->load_module_preferential_trial_prioritisation();
 	$self->load_module_deinit();
+	exists $modules{'INT'}  and $self->load_module_interpretation();
 }
 
 #######################################################################

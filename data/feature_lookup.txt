@@ -27,6 +27,10 @@ BRAF	class_2	599	599
 BRAF	class_1	600	600
 BRAF	class_2	601	601
 EGFR	kinase_domain	672	998
+ESR1	AF1_domain	1	184
+ESR1	dna_binding_domain	184	263
+ESR1	hinge_region	263	302
+ESR1	ligand_binding_domain	302	553
 EIF1AX	n-terminal_tail	1	31
 EIF1AX	rna_binding_domain	32	93
 EIF1AX	helical_domain	94	112
