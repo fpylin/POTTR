@@ -1,0 +1,3 @@
+
+
+catype:Breast cancer; ESR1:oncogenic_mutation => interpretation:The presence of a hotspot mutation in the ligand binding domain of the ESR1 gene supports the mechanism of endocrine resistance to previous treatments.
