@@ -93,7 +93,7 @@ ATG-017	ERK_inhibitor
 ATG-018	ATR_inhibitor
 ATG-101	bispecific_PD-L1/4-1BB_antibody
 ATOR1017	anti-41BB_monoclonal_antibody
-ATX-101	cell_penetrating_peptide
+ATX-101	cell_penetrating_peptide,PCNA-targeting
 AXA-042	TLR2/6_agonist
 AZD-9496|AZD 9496|AZD9496	selective_estrogen_receptor_degrader
 AZD0466	dual_Bcl2/xL_inhibitor

@@ -176,6 +176,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR	R776H, L861Q, G719S and E709K, G719S and R776H, L747_T751del and D837T, L833V and H835L, L858R and G873E, L858R and A871E	Non-small cell lung cancer	Erlotinib; Gefitinib; Afatinib	Retrospective study demonstrating response seen in harbouring the following mutations to first- and- second generation EGFR TKIs.	27875527
 4	EGFR	T751_I759delinsS	Non-small cell lung cancer	Afatinib; Osimertinib	Case report	34729927
 4	EGFR	T790M and C797S and T790M-C797S trans-allelic conformation	Non-small cell lung cancer	Erlotinib + Osimertinib		31075545
+4	EGFR	V659E	Non-small cell lung cancer	Afatinib; Pyrotinib	Retrospective study. N=7812. Lung adenocarcinoma with ERBB2 V659E mutation. HER2 inhibitors resulted in longer median PFS compared to chemotherapy. Afatinib and pyrotinib showed stronger binding ability to the HER2 kinase domain.	10.1200/JCO.2020.38.15_suppl.e21521
 4	EGFR+ALK	EGFR:Oncogenic mutations and ALK:fusion	Non-small cell lung cancer	Osimertinib + Crizotinib; Osimertinib + Alectinib	Two case reports	30957057
 4	EGFR+BRAF	EGFR:Oncogenic mutations and BRAF:V600E	Non-small cell lung cancer	Dabrafenib + Trametinib + Osimertinib	Case report	33580193
 4	EGFR+ERBB2	EGFR:Exon 19 deletion and ERBB2:Amplification	Non-small cell lung cancer	Afatinib + Bevacizumab	Case report. Resistance to Gefitinib (Acquired) and Osimertinib associated with acquired ERBB2 amplification in a case of exon 19 deletion. Tumour shrinkage to ERBB2 was observed with overall SD of &gt; 6 months following treatment with afatinib + bevacizumab.	33663050
@@ -349,7 +350,7 @@ R2	ERBB2	Exon 16 skipping mutation	Non-small cell lung cancer	Osimertinib	In EGF
 R2	ERBB2	Exon 20 insertion except G778ins, S779ins, P780ins	Solid tumours; Non-small cell lung cancer	Afatinib; Dacomitinib; Neratinib; Pyrotinib		31588020
 R2	ERBB3	Amplification	Non-small cell lung cancer	Capmatinib	Off-target resistance	32034073
 R2	ERBB3	Amplification, Overexpression	Non-small cell lung cancer	Tarloxotinib	Cell line study. ER3 overexpression was identified as a mechanism of resistance to tarloxotinib-E.	34584864
-R2	FBXW7	Deletion	Non-small cell lung cancer	Gefitinib		29633504
+R2	FBXW7	Deletion	Non-small cell lung cancer	Gefitinib	Preclinical study. Loss of FBXW7 in NSCLC leads to decreased OS and promotes tumor progression, epithelial-mesenchymal transition, migration, and invasion. Deletion of FBXW7 occurs in a significant proportion of lung adenocarcinomas and squamous cell carcinomas. 	29633504
 R2	FGFR2	Fusions, FGFR2-CCDC6 fusion, FGFR2-KIAA1598 fusion, FGFR2-TACC2 fusion	Non-small cell lung cancer	Osimertinib; Gefitinib		35566609
 R2	FGFR3	FGFR3-TACC3 fusion	Non-small cell lung cancer	Osimertinib; Gefitinib		35566609
 R2	FGFR3	Fusion	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965

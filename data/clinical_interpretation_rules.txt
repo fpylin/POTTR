@@ -1,3 +1,29 @@
+catype:Breast cancer; *prior_therapy:endocrine_therapy; ESR1:ligand_binding_domain_mutation => interpretation:The presence of a hotspot mutation in the ligand binding domain of the ESR1 gene supports the mechanism of endocrine resistance to previous treatments.
+
+catype:Prostate cancer; CDK12:oncogenic_mutation => interpretation:The CDK12-altered subtype in metastatic prostate cancer has been linked to an aggressive biology and is associated with a negative impact on survival and reduced sensitivity to chemotherapy. However, CDK12-altered mCRPC have been known to have favorable outcomes with immune checkpoint blockade (ICB) in retrospective studies (Tier 4). 
+
+(sensitive_to_drug_class:anti-PD-1_monoclonal_antibody OR sensitive_to_drug_class:anti-PD-L1_monoclonal_antibody) => interpretation:In select circumstances, participating in clinical trials utilizing an immune checkpoint blockade may be appropriate.
+
+catype:Papillary renal cell carcinoma; BAP1:deletion => interpretation:The deep deletion of BAP1 may play a role in the pathogenesis of Papillary renal cell carcinoma.
+
+catype:Non-small cell lung cancer; prior_therapy:Osimertinib; MET:amplification => interpretation:Alongside the well-known oncogenic EGFR mutations, MET amplification was detected in the biopsy sample after treatment with Osimertinib, which may suggest that a MET-related resistance mechanism cannot be excluded (Tier R2).
+
+catype:Solid tumour; BRIP1:oncogenic_mutation; sensitive_to_drug_class:PARP_inhibitor => interpretation:Potential clinical trial involving a PARP inhibitor may have a role in treating BRIP1-deficient tumors, despite the lack of conclusive clinical data (Tier 4).
+
+catype:Solid tumour; CHEK2:oncogenic_mutation; sensitive_to:Olaparib => interpretation:The conclusive evidence of the effectiveness of Olaparib in solid tumours in the presence of CHEK2 is uncertain. For instance, no response was observed in patients with CHEK2 in the TBCRC048 trial (PMID: 33119476, Tier R2).
+
+catype:Breast cancer; KRAS:oncogenic_mutation => interpretation:KRAS oncogenic mutations are more commonly een in metastatic breast cancer than early breast cancer. The utility of targeting oncogenic KRAS mutations in advanced breast cancer setting is unknown (Tier 4). 
+
+catype:Breast cancer; prior_therapy:Fulvestrant => interpretation:Prior exposure to fulvestrant may exclude the participation in some trials containing SERD and/or combination therapies.
+
+catype:Gastrointestinal stromal tumour; KIT:exon_11_insertion => interpretation:The primary KIT exon 11 inframe insertion has been detected through comprehensive genomic profiling.
+
+catype:Gastrointestinal stromal tumour; KIT:V654A; prior_therapy:Imatinib; NOT prior_therapy:Sunitinib; NOT prior_therapy:Sorafenib; NOT prior_therapy:Ripretinib => interpretation:The presence of KIT V654A is believed to be the acquired resistance mechanism to Imatinib (Tier R2). This specific mutation combination could potentially still respond to Sunitinib (Tier 2), Sorafenib (Tier 2), and Ripretinib (Tier 1B). 
+
+catype:Lung squamous cell carcinoma; BRCA2:oncogenic_mutation => interpretation:The comprehensive genomic profiling revealed a somatic mutation at a splice acceptor site in the BRCA2 gene, which has been determined to have a potential pathogenic effect. However, the effectiveness of PARP inhibitors in treating homologous recombination repair-deficient squamous cell lung cancer is yet to be established. The results from the Lung-MAP Substudy S1400G indicated a low objective response rate of 4% with talazoparib in the PARP subgroup (PMID: 33583720), which does not provide significant evidence of efficacy (Tier R2).
+
+catype:Lung squamous cell carcinoma; FGFR1:amplification => The presence of FGFR1 amplification was detected through comprehensive genomic profiling. The efficacy of FGFR inhibitors in treating squamous non-small cell lung cancer (NSCLC) is still unknown. In the Phase II SWOG S1400D trial, results showed limited activity in squamous lung carcinoma patients treated with AZD4547 (PMID: 31195180, Tier R2), while some patients achieved objective responses with Infigratinib treatment (PMID: 27870574, Tier 4).
 
 
-catype:Breast cancer; ESR1:oncogenic_mutation => interpretation:The presence of a hotspot mutation in the ligand binding domain of the ESR1 gene supports the mechanism of endocrine resistance to previous treatments.
+catype:Non-small cell lung cancer; EGFR:G719 => interpretation:An uncommon EGFR point mutation (G719, exon 18) was identified. This variant results in the displacement of P-loop and alpha C-helix, affecting the drug-binding pocket. The variant is predicted to be sensitive to second-generation TKI (e.g., afatinib) but may have reduced sensitivity to first (e.g., as erlotinib and gefitinib) and third-generation TKI (e.g., osimertinib). In a multicenter phase II trial (KCSG-LU15-09, PMID: 31825714), the objective response rate was in 10 of 19 patients (53%) with G719 variant, with reduced progression-free survival (median: 8.2 months) compared to common EGFR mutations (e.g., exon 19 deletion or L858R). In a combined post hoc analysis of LUX-Lung trials (PMID: 26051236), afatinib was known an ORR of 78% and PFS of 13.8 months in the G719X subgroup. Balancing treatment tolerability against potential efficacy may be helpful in the consideration, in the absence of evidence from direct randomised comparison between different TKIs.
+
