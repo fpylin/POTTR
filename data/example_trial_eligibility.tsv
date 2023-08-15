@@ -99,7 +99,6 @@ NCT03363776	catype:Ovarian
 NCT03363776	catype:Pancreatic
 NCT03363776	catype:Prostate
 NCT03363776	catype:Urothelial carcinoma
-NCT03363867	NOT catype:Ovarian Clear cell Carcinoma; NOT catype:Ovarian Mucinous Carcinoma; NOT catype:Ovarian Carcinosarcoma
 NCT03390504	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration)
 NCT03486873	EXTENSION_STUDY
 NCT03497767	EGFR:oncogenic_mutation
@@ -283,3 +282,5 @@ NCT04789096	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04740918	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04924075	*NOT KIT:oncogenic_mutation
 NCT05261399	catype:Non-small cell lung cancer
+NCT05876754	IDH:R132
+NCT05043090	catype:Papillary renal cell carcinoma

@@ -28,7 +28,6 @@ NCT02609776	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT02611960	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT02628067	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT02702414	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
-NCT02724579	*NOT prior_therapy:systemic_therapy
 NCT02775435	*NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:systemic_therapy
 NCT02787005	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT02861573	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
@@ -104,7 +103,6 @@ NCT04835805	*prior_therapy:anti-PD-1_monoclonal_antibody
 NCT04854499	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT04895358	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT04907851	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
-NCT04935359	*NOT prior_therapy:systemic_therapy
 NCT04974398	*NOT prior_therapy:systemic_therapy
 NCT04976634	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT04986852	*NOT prior_therapy:anti-PD-1_monoclonal_antibody
