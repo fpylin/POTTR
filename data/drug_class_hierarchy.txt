@@ -397,3 +397,6 @@ ALK_inhibitor,second_generation	ALK/ROS1/IGF1R_inhibitor
 IGF1R_inhibitor	ALK/ROS1/IGF1R_inhibitor
 EZH2_inhibitor	EZH1/2_inhibitor
 YAP-TEAD_inhibitor	TEAD_palmitoylation_inhibitor
+CLDN18.2-targeting_agent	anti-CLDN18.2_antibody-drug_conjugate
+CLDN18.2-targeting_agent	anti-CLDN18.2_monoclonal_antibody
+CLDN18.2-targeting_agent	bispecific-CLDN18.2/PD-L1_antibody

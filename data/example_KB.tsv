@@ -85,6 +85,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	KRAS	G12C	Non-small cell lung cancer	Adagrasib	Phase 1/1B. KRYSTAL-1. At 600mg BD, 10/16 evaluable NSCLC with KRAS G12C achieved objective response.	35167329
 3	KRAS	G12C	Non-small cell lung cancer	IBI351	Phase 1. NCT05005234. N=67. NSCLC across all dose levels, the confirmed ORR was 45%, and DCR was 93%.	10.1158/1538-7445.AM2023-CT030
 3	KRAS	G12C	Non-small cell lung cancer; Colorectal adenocarcinoma; Solid tumours	Adagrasib	KRYSTAL-1. Combined Phase 1&amp;2. ORR 45% (NSCLC), 17% (CRC)	10.1016/S0959-8049(20)31076-5
+3	KRAS	G12C	Non-small cell lung cancer; Colorectal adenocarcinoma; Solid tumours	Divarasib	Phase 1/2 single arm trial. GO42144. Divarasib. NCT04449874. N=137 (NSCLC=60, Colorectal cancer =55, other solid tumors=22). ORR in NSCLC was 53% with PFS: 13.1 months. ORR in CRC was 29% with PFS of 5.6 months. Responses also seen in other solid tumors. 	37611121
 3	KRAS	Oncogenic mutations	Non-small cell lung cancer	Selumetinib + Docetaxel	Ph2 ORR 37%. Negative Ph 3 SELECT-1	23200175, 28492898
 3	MET	Amplification	Non-small cell lung cancer	Capmatinib	GEOMETRY mono-1: In MET amplified group (defined as gene copy number, GCN, &gt;= 10), ORR 29% (previously treated) versus 40% (previously untreated). Limited response were seen with GCN &lt;10 (ORR 7-12%).	32877583, 10.1200/JCO.2019.37.15_suppl.9004
 3	MET	Amplification	Non-small cell lung cancer	Capmatinib	GEOMETRY mono-1 study	10.1200/JCO.2020.38.15_suppl.9509
@@ -356,6 +357,7 @@ R2	FGFR3	FGFR3-TACC3 fusion	Non-small cell lung cancer	Osimertinib; Gefitinib		3
 R2	FGFR3	Fusion	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
 R2	KRAS	Amplification	Non-small cell lung cancer	Crizotinib	Case series.	31548343
 R2	KRAS	Amplification	Non-small cell lung cancer	Selpercatinib; Pralsetinib	Retrospective study. The study identified acquisition of RET kinase solvent front mutations (G810), as well as genomic amplification of MET and KRAS as potential bypass mechanisms.	33007380
+R2	KRAS	Amplification, G12A, G12D, G12R, G12V, G13D, R68S, H95R, Y96D, Y96H, Y96N, Q99L, A146T, Oncogenic mutation AND NOT G12C	Non-small cell lung cancer; Colorectal adenocarcinoma; Solid tumours	Divarasib	Phase 1/2 single arm trial. GO42144. Divarasib. NCT04449874. Acquired and treatment-emergent mutations	37611121
 R2	KRAS	Amplification, G12D	Non-small cell lung cancer	Crizotinib	Off-target resistance	32034073
 R2	KRAS	G12S	Non-small cell lung cancer	Osimertinib	Secondary resistance post Osimertinib	27252416
 R2	KRAS	G12V	Non-small cell lung cancer	Sotorasib	Treatment-emergent RAS and RAF hotspot mutations were also observed in both clinical samples and patient-derived xenograft models.	34759319
@@ -364,6 +366,7 @@ R2	KRAS	Oncogenic mutations	Non-small cell lung cancer	Osimertinib	Off-target me
 R2	KRAS+MET	MET:exon 14 skipping mutation and KRAS:Oncogenic mutations	Non-small cell lung cancer	Crizotinib		30352902
 R2	KRAS+NRAS+BRAF	NOT KRAS:Oncogenic mutation and NOT NRAS:Oncogenic mutation and NOT BRAF:Oncogenic mutation	Breast cancer; Non-small cell lung cancer; Ovarian cancer	Cetuximab	NCT02693535. TAPUR. N=49 including breast, NSCLC, and ovarian cancers. ORR 0%.	33090333
 R2	Loss-of-heterozygosity score	High	Non-small cell lung cancer	Rucaparib	Phase 2 Lung-MAP Sub-Study, S1900A. ORR 7%. Genomic LOH does not predict activity.	10.1200/JCO.2021.39.15_suppl.9024
+R2	MAP2K1 	Q56P, K57N, E203K	Non-small cell lung cancer; Colorectal adenocarcinoma; Solid tumours	Divarasib	Phase 1/2 single arm trial. GO42144. Divarasib. NCT04449874. Acquired and treatment-emergent mutations	37611121
 R2	MET	Amplification	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib; Osimertinib		30676858
 R2	MET	Amplification	Non-small cell lung cancer	Osimertinib	Secondary resistance post Osimertinib. Amplification determined by FISH.	27252416
 R2	MET	Amplification	Non-small cell lung cancer	Selpercatinib; Pralsetinib	Retrospective study. The study identified acquisition of RET kinase solvent front mutations (G810), as well as genomic amplification of MET and KRAS as potential bypass mechanisms.	33007380
