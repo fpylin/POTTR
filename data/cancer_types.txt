@@ -422,7 +422,7 @@ Cancer	Solid tumour	MSI-H/dMMR solid tumour	MSI-H solid cancer
 Cancer	Solid tumour	MSI-H/dMMR solid tumour	dMMR solid cancer
 Cancer	Solid tumour	MSI-H/dMMR solid tumour|MSI-H/dMMR cancer
 Cancer	Solid tumour	Melanoma	Acral lentiginous melanoma
-Cancer	Solid tumour	Melanoma	Acral lentiginous melanoma|Arcal melanom
+Cancer	Solid tumour	Melanoma	Acral lentiginous melanoma|Acral melanoma
 Cancer	Solid tumour	Melanoma	Cutaneous melanoma	Cutaneous in-transit melanoma metastasis
 Cancer	Solid tumour	Melanoma	Cutaneous melanoma|Cutaneous malignant melanoma|Skin melanoma
 Cancer	Solid tumour	Melanoma	Desmoplastic melanoma

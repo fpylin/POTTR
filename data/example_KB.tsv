@@ -231,6 +231,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MET	Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	Amivantamab	CHRYSALIS. NCT02609776. N=16. MET-2 cohort. 4 Confirmed partial responses.	10.1016/j.jtho.2021.08.084
 4	MET	Fusions	Non-small cell lung cancer; Glioblastoma	Crizotinib	Case reports	29527595, 30339198, 27748748
 4	MET	Overexpression	Non-small cell lung cancer	ABN401	Phase 1. NCT04052971. Two responders were seen in tumour with MET overexpressed NSCLC.	10.1200/JCO.2022.40.16_suppl.3105
+4	MET	Overexpression	Non-small cell lung cancer; Gastroesophageal junction adenocarcinoma; Gastric Cancer; Endometrial carcinoma; Acral melanoma	ABBV-400	Phase 2. NCT05029882. Clinical activity was observed with ABBV-400 with an ORR of 24% (11/45). All responses were confirmed partial responses. DCR was 81%. Overexpression was determined IHC. 	10.1200/JCO.2023.41.16_suppl.3015
 4	MET	Y1003S (Y1021S)	Non-small cell lung cancer	Crizotinib	Case report showing significant response and DOR	30885356
 4	MET	Y1021H (Y1003H)	Non-small cell lung cancer	Crizotinib	Case report, sensitive to Crizotinib	31809977
 4	NF1	Oncogenic mutations	Non-small cell lung cancer	Trametinib		NCT03232892
