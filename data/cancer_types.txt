@@ -214,6 +214,8 @@ Cancer	Solid tumour	Extramammary Paget's disease
 Cancer	Solid tumour	Extramammary Paget's disease	Scrotum Paget's Disease
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma	Platinum resistant high-grade epithelial cancers of fallopian tube
 Cancer	Solid tumour	Fallopian tube cancer	Primary fallopian tube serous carcinoma|Fallopian tube carcinoma|Fallopian tube serous carcinoma|Cancer of the falllopian tube
+Cancer	Solid tumour	Epithelial ovarian cancer	Primary fallopian tube serous carcinoma	Platinum resistant high-grade epithelial cancers of fallopian tube
+Cancer	Solid tumour	Epithelial ovarian cancer	Primary fallopian tube serous carcinoma|Fallopian tube carcinoma|Fallopian tube serous carcinoma|Cancer of the falllopian tube
 Cancer	Solid tumour	Fallopian tube cancer|Fallopian Tube Neoplasm
 Cancer	Solid tumour	Gastrointestinal cancer	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine tumour
@@ -292,6 +294,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancre
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic intraductal oncocytic papillary carcinoma|Intraductal oncocytic papillary carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic neuroendocrine tumour
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic undifferentiated carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic solid pseudopapillary tumour|Solid pseudopapillary tumour of the pancreas|Pancreatic pseudopapillary tumour
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Ampullary cancer|Ampullary carcinoma|cancer of the Ampulla of Vater
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma|Small bowel adenocarcinoma
@@ -524,6 +527,7 @@ Cancer	Solid tumour	Sarcoma	Retinoblastoma
 Cancer	Solid tumour	Sarcoma	SMARCA4-deficient thoracic sarcoma|SMARCA4-DTS
 Cancer	Solid tumour	Sarcoma	Sarcoma, synovial-like	Clear cell sarcoma
 Cancer	Solid tumour	Sarcoma	Sarcoma, synovial-like	Synovial sarcoma
+Cancer	Solid tumour	Sarcoma	Low-grade spindle cell neoplasm
 Cancer	Solid tumour	Sarcoma	Small cell sarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Angiosarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Breast angiosarcoma

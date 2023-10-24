@@ -146,8 +146,8 @@ sub interp_variants {
 		};
 		
 		/E/ and do { push @alterations, $biomarker_spec; last; };
-		/A/ and do { push @alterations, ('amplification'); last; };
-		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion', 'loss-of-function_mutation'); last; }; # 'truncating_mutation'
+		/A/ and do { push @alterations, ('amplification', 'alteration'); last; };
+		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion', 'loss-of-function_mutation', 'alteration'); last; }; # 'truncating_mutation'
 		/F/ and do { 
 			push @alterations, ('fusion'); 
 			if ( ($biomarker_spec =~ /[LR]:([A-Z0-9]+?)--?([A-Z0-9]+)/ ) or #
@@ -177,6 +177,8 @@ sub interp_variants {
 			my @conseq_t; # consequence types
 			
 			my $f_germline = 0;
+			
+			push @alterations, 'alteration';
 			
 			for ( $biomarker_spec ) {
 				s/(?:,[_ ]?|\()?germline(?:\))?//i and do { $f_germline = 1; };
@@ -249,7 +251,7 @@ sub interp_variants {
 				};
 			}
 			
-			push @alterations, $biomarker_spec;
+			push @alterations, $biomarker_spec, 'alteration';
 			push @alterations, $aa_org.$aa_pos.$aa_mut  if defined $aa_org and defined $aa_pos and defined $aa_mut ;
 			if ( defined $aa_org and defined $aa_pos ) {
 				$aa_org = $aa_code{$aa_org};

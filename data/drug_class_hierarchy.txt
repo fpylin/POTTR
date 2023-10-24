@@ -137,6 +137,7 @@ NFKB_inhibitor
 NOTCH_inhibitor
 PARP_inhibitor
 PARP_inhibitor	PARP/TNKS_inhibitor
+PARP_inhibitor	PARP1-selective_inhibitor
 PDGFRA_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
 PDGFRA_inhibitor	KIT_D816V/PDGFRA_inhibitor
 PDGFRB_inhibitor	FLT3/PDGFRA/PDGFRB_inhibitor

@@ -2,3 +2,5 @@ catype:Breast cancer; prior_therapy:selective_estrogen_receptor_degrader => ESR1
 catype:Breast cancer; prior_therapy:aromatase_inhibitor => ESR1:protein_expression; catype:ER-positive breast cancer [INFERRED:catype]
 catype:Breast cancer; prior_therapy:CDK4/6_inhibitor => ESR1:protein_expression; catype:ER-positive breast cancer [INFERRED:catype]
 catype:Breast cancer; prior_therapy:Trastuzumab => HER2:positive; catype:HER2-positive breast cancer [INFERRED:catype]
+catype:
+catype:Myelodysplastic syndrome => catype:Acute myeloid leukaemia [INFERRED:catype; localrule]

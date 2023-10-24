@@ -39,6 +39,13 @@ ERBB2	extracellular_domain	22	653
 ERBB2	transmembrane_domain	654	720
 ERBB2	juxtamembrane_domain	675	714
 ERBB2	kinase_domain	731	906	10.1371/journal.pcbi.1002661
+ERBB3	extracellular_domain_I	55	213
+ERBB3	extracellular_domain_II	214	329
+ERBB3	extracellular_domain_III	330	498
+ERBB3	extracellular_domain_IV	499	599
+ERBB3	extracellular_domain	20	599
+ERBB3	transmembrane_domain	599	708
+ERBB3	kinase_domain	709	966	
 FLT3	extracellular_domain	22	541	30332834
 FLT3	transmembrane_domain	542	563	30332834
 FLT3	juxtamembrane_domain	594	610	30332834
