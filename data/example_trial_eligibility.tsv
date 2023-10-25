@@ -339,3 +339,11 @@ NCT05388669	EGFR:oncogenic_mutation
 NCT04895709	*NOT prior_therapy:Docetaxel
 NCT05348577	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:AKT_inhibitor
 NCT05544552	FGFR3:alteration
+NCT04670679	*NOT PTPN11:oncogenic_mutation; *NOT prior_therapy:SHP2_inhibitor
+NCT06024174	KRAS:G12C
+NCT04802759	catype:Breast cancer; *ESR1:protein_expresion
+NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression)
+NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Ipatasertib; *NOT prior_therapy:AKT_inhibitor
+NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Inavolisib; *NOT prior_therapy:AKT_inhibitor; *NOT prior_therapy:PI3K_alpha_inhibitor; *NOT prior_therapy:MTOR_inhibitor
+NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; *NOT prior_therapy:MTOR_inhibitor
+NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Atezolizumab; *NOT prior_therapy:anti-CD137_agonistic_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody
