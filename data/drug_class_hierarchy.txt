@@ -151,8 +151,10 @@ PI3K-gamma_inhibitor
 PI3K/mTOR_inhibitor
 PI3K_alpha_inhibitor
 PI3K_alpha_inhibitor	PI3K_alpha/PI3K_delta_inhibitor
+PI3K_alpha_inhibitor	dual_PI3K/mTOR_inhibitor
 PI3K_beta_inhibitor
 PI3K_delta_inhibitor	PI3K_alpha/PI3K_delta_inhibitor
+PI3K_delta_inhibitor	dual_PI3K/mTOR_inhibitor
 PI3K_inhibitor
 PKC/VEGFR2/KIT/PDGFR/FLT3_inhibitor
 PKC_inhibitor
@@ -330,6 +332,7 @@ immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/PD-L1_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1/TIM-3_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	bispecific_PD-1_VEGF_monoclonal_antibody
+immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	anti-PD1-IL2_fusion_protein
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1_targeting	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	PD-L1/TGF-beta_fusion_protein
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-L1_targeting	PD-L1_inhibitor,oral
@@ -347,6 +350,7 @@ iron_chelator
 irreversible_monoamine_oxidase_inhibitor
 mTOR_inhibitor	MTORC1_inhibitor	MTORC1/MTORC2_inhibitor
 mTOR_inhibitor	MTORC2_inhibitor	MTORC1/MTORC2_inhibitor
+mTOR_inhibitor	dual_PI3K/mTOR_inhibitor
 macrocyclic_ketone_analogue
 mesothelin-targeting_antibody-drug_conjugate
 miR-16_miRNA_mimic

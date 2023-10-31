@@ -199,6 +199,7 @@ BI-2852	KRAS_G12D_inhibitor; KRAS_switch1/2_pocket_inhibitor
 BI-3812	BCL6_inhibitor
 BI836880|BI 836880	VEGF/Ang2-blocking_nanobody
 BIL06v	peptide_conjugate_vaccine,nfP2X7-targeting
+BL0020	unknown_drug_class
 BLU-945	EGFR_inhibitor,fourth_generation
 BLYG8824A	bispecific_LY6G6D/CD3_antibody
 BLZ-100|Tozuleristide	peptide-fluorophore_conjugate
@@ -1315,3 +1316,4 @@ modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 NUV-868|NUV868	BET_inhibitor
 BMS-986466|BMS986466|BBP 398|BBP398|IACS-15509|IACS 15509|IACS15509	SHP2_inhibitor
+AWT020	anti-PD1-IL2_fusion_protein
