@@ -29,9 +29,10 @@ ABT-122|ABT122	bispecific_TNF/IL-17A_antibody
 ABT-737	dual_Bcl2/xL_inhibitor
 ABT-767	PARP_inhibitor
 ACT001|ACT-001	NFKB_inhibitor
-ADG116	anti-CTLA-4_monoclonal_antibody
-ADG126	anti-CTLA-4_monoclonal_antibody
-ADG206	anti-CD137-agonist_antibody
+ADG106|ADG-106	anti-CD137-agonist_antibody
+ADG116|ADG-116	anti-CTLA-4_monoclonal_antibody
+ADG126|ADG-126	anti-CTLA-4_monoclonal_antibody
+ADG206|aDG-206	anti-CD137-agonist_antibody
 ADU-1604|ADU 1604|ADU1604	anti-CTLA-4_monoclonal_antibody
 ADU-S100|MIW815	STING_agonist
 AEE788	EGFR/ERBB2/VEGF2_inhibitor
