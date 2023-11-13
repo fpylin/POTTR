@@ -223,6 +223,7 @@ BNA35|BNA035|BNA-035|HLX35	bispecific-EGFR/4-1BB_antibody
 BNC-105|BNC 105|BNC105	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNC101|BNC-101|ET-101	anti-LGR5_monoclonal_antibody
 BNC105P	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
+BNT111	mRNA_personalised_cancer_vaccine
 BOS172738	RET_inhibitor
 BTX-1188	dual_GSPT1/IKZF1_degrader
 Bacillus Calmette-Guérin|BCG	BCG_vaccine
