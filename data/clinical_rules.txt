@@ -4,3 +4,4 @@ catype:Breast cancer; prior_therapy:CDK4/6_inhibitor => ESR1:protein_expression;
 catype:Breast cancer; prior_therapy:Trastuzumab => HER2:positive; catype:HER2-positive breast cancer [INFERRED:catype]
 catype:
 catype:Myelodysplastic syndrome => catype:Acute myeloid leukaemia [INFERRED:catype; localrule]
+catype:Prostate cancer; prior_therapy:Cabazitaxel => catype:Castrate-resistant prostate cancer

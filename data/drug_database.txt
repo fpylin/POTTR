@@ -1020,6 +1020,7 @@ RO7296682	anti-CD25_monoclonal_antibody
 RO7425781|RG6234	bispecific-GPRC5D/CD3_antibody
 RO7428731	bispecific_EGFRvIII/CD3_antibody
 RO7444973|IMC-C103C	bispecific-MAGE-A4/CD3_antibody
+RO7496353	anti-TGF-beta_monoclonal_antibody
 RO7502175	unknown_drug_class
 RO7656594	unknown_drug_class
 RP-6306|RP 6306	PKMYT1_inhibitor
