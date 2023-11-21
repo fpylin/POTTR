@@ -112,7 +112,6 @@ NCT03674567	catype:Non-small cell lung cancer
 NCT03674567	catype:Oesophageal carcinoma
 NCT03674567	catype:Triple-negative breast cancer
 NCT03674567	catype:Urothelial carcinoma
-NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -218,7 +217,7 @@ NCT04969887	catype:Gynaecological cancer; (catype:Ovarian Clear Cell Carcinoma O
 NCT04969887	microsatellite_instability:high; NOT catype:Colorectal cancer; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
 NCT04969887	mismatch_repair:deficient; NOT catype:Colorectal cancer; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody + anti-PD-L1_monoclonal_antibody
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
-NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation)
+NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation); NOT_RECRUITING
 NCT05067283	KRAS:G12C
 NCT05150236	catype:Prostate cancer
 NCT05288166	catype:Prostate cancer
@@ -236,7 +235,6 @@ NCT03400332	NOT catype:Central nervous system cancer
 NCT05176509	NOT catype:Central nervous system cancer
 NCT05315700	NOT EGFR:T790M; (EGFR:exon_20_insertion OR ERBB2:exon_20_insertion OR ERBB2:amplification OR ERBB2:overexpression)
 NCT05187624	EGFR:vIII
-NCT05173987	*(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT05307705	PIK3CA:H1047R
 NCT05269316	NOT catype:Central nervous system cancer
 NCT05253651	(ERBB2:amplification OR ERBB2:overexpression)
@@ -277,7 +275,10 @@ NCT04924075	catype:Solid tumour; (EPAS1:alteration OR FH:alteration OR SDHA:alte
 NCT05261399	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation; *NOT prior_therapy:Osimertinib
 NCT05876754	catype:Cholangiocarcinoma; IDH1:R132_mutation
 NCT05043090	catype:Papillary renal cell carcinoma
-NCT05487235	*sensitive_to:GDC-1971
+NCT05487235	*sensitive_to:GDC-1971; catype:Solid tumour
+NCT05487235	*sensitive_to:GDC-1971; catype:Non-small cell lung cancer
+NCT05487235	*sensitive_to:GDC-1971; catype:Head and neck squamous cell carcinoma
+NCT05487235	*sensitive_to:GDC-1971; catype:Melanoma; NOT BRAF:oncogenic_mutation
 NCT05919537	NRG1:fusion
 NCT05743036	BRAF:V600E; catype:Colorectal cancer
 NCT05611931	NOT TP53:oncogenic_mutation
@@ -339,3 +340,5 @@ NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Inavolis
 NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; *NOT prior_therapy:MTOR_inhibitor
 NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Atezolizumab; *NOT prior_therapy:anti-CD137_agonistic_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody
 NCT05417594	*(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
+NCT05954871	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT BRAF:V600E; NOT NRAS:oncogenic_mutation
+NCT05954871	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)

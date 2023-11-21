@@ -908,13 +908,14 @@ PHE885	autologous_CAR-T-cells,BCMA-targeting
 PLA2 inhibitor	PLA2_inhibitor
 PLX2853	BET_inhibitor
 PLX4720	RAF_inhibitor
-PLX8394	RAF_dimer_inhibitor
+FORE8394|PLX8394	RAF_dimer_inhibitor
 PM8001	bifunctional_PD-L1/TGF-beta_fusion_protein
 PMR-116	RNA_polymerase_I_transcription_inhibitor
 PNU-159682|E-EDV-D682	EnGeneIC_Dream_Vector-nanocells-delivered,EGFR-targeting
 POMB-ACE	Cisplatin + Vincristine + Methotrexate + Bleomycin + Actinomycin D + Cyclophosphamide + Etoposide
 PRN1371|PRN 1371	pan-FGFR_inhibitor; pan-FGFR_inhibitor,irreversible
 PRS-344|PRS344|S095012	bispecific_PD-L1/4-1BB_antibody
+PRT811	PRMT5_inhibitor
 PSB205	bifunctional-PD-1/CTLA4_antibody_pair
 PTX-100|GGTI-2418	geranylgeranyl_transferase_inhibitor
 PV-10|Injectable Rose Bengal 10%|Provecta|Rose Bengal Disodium 10%	rose_bengal_disodium
@@ -1320,3 +1321,5 @@ rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Re
 NUV-868|NUV868	BET_inhibitor
 BMS-986466|BMS986466|BBP 398|BBP398|IACS-15509|IACS 15509|IACS15509	SHP2_inhibitor
 AWT020	anti-PD1-IL2_fusion_protein
+KL590586	RET_inhibitor
+RO7566802	unknown_drug_class
