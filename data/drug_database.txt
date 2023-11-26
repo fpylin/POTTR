@@ -111,6 +111,7 @@ AZD4205|AZD 4205|AZD-4205	JAK1-selective_inhibitor
 AZD4547	FGFR1/2/3_inhibitor
 AZD4573	CDK9_inhibitor
 AZD5305	PARP_inhibitor
+AZD5335	anti-FR-alpha_antibody-drug_conjugate
 AZD5438	CDK1/2/9_inhibitor
 AZD7762	CHEK1_inhibitor
 AZD8055	MTORC1/MTORC2_inhibitor
@@ -414,6 +415,7 @@ EBC-46	protein_kinase_C_regulator
 ECX	Epirubicin + Cisplatin + Capecitabine
 ELU001	CDot_drug_conjugate,FR_alpha-targeting
 ELVN-001	BCR-ABL_inhibitor
+ELVN-002	ERBB2_inhibitor,exon_20_selective
 EMB-02	bispecific_PD-1/LAG3_antibody
 EMB-06	bispecific_BCMA/CD3_antibody
 EMB-07	bispecific_PD-L1/OX40_antibody

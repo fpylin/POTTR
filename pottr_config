@@ -160,7 +160,7 @@ clinical-interpretation-rules-file = clinical_interpretation_rules.txt
 
 [Evidence:TOPOGRAPH]
 therapy-evidence-database-name = TOPOGRAPH
-therapy-evidence-database-file = example_KB.tsv
+therapy-evidence-database-file = TOPOGRAPH-master.tsv
 
 ################################################################################
 # Multiple evidence databaess are allowed. However, the tiering system must be 
@@ -275,9 +275,9 @@ drug-class-hierarchy-file         = drug_class_hierarchy.txt            # a simp
 #                                   clinicaltrials.gov or ANZCTR web page)
 ################################################################################
 
-clinical-trial-database-file      = example_trial_DB_1.tsv  # ANZCTR clinical trial database
+clinical-trial-database-file      = trial_registry.AU.tsv  # ANZCTR clinical trial database
 
-clinical-trial-database-file      = example_trial_DB_2.tsv  # Expanded access program database
+clinical-trial-database-file      = trial_registry.AP.tsv  # Expanded access program database
 
 
 ################################################################################
@@ -294,8 +294,8 @@ clinical-trial-database-file      = example_trial_DB_2.tsv  # Expanded access pr
 #  Multiple files are allowed. 
 ################################################################################
 
-clinical-trial-eligibility-file   = example_trial_eligibility.tsv                    # Trial-specific criteria, manually entered
-clinical-trial-eligibility-file   = example_trial_eligibility_annotations.txt        # Trial-specific criteria
+clinical-trial-eligibility-file   = trial_eligibility.AU.tsv                    # Trial-specific criteria, manually entered
+clinical-trial-eligibility-file   = trial_eligibility_annotations.AU.txt        # Trial-specific criteria
 
 ################################################################################
 # THERAPY MATURITY FILE - (OPTIONAL) Databases used to assess the maturity of 

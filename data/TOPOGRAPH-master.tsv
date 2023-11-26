@@ -339,6 +339,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	BRAF	G469R, A598_T599insV, AGAP3-BRAF fusion, L597Q, T470R	Melanoma	Trametinib	Phase 2. NCT02296112. Trametinib in non-V600 BRAF fusions. ORR was 33% (3/9). Median PFS 7.3 months.	33861486
 3	BRAF	V600	Anaplastic ganglioglioma; Anaplastic thyroid cancer; Cholangiocarcinoma; Biliary tract cancer; Erdheim-Chester disease; High-grade glioma; Langerhans cell histiocytosis; Low-grade glioma; Non-small cell lung cancer; Neuroendocrine carcinoma; Ovarian cancer; Salivary gland cancers; Sarcoma; Solid tumours except Colorectal adenocarcinoma, pancreatic adenocarcinoma	Vemurafenib	VE-BASKET. Phase 2. ORR of 33% (170) with median DOR 13 months. The selected cancer type has at least one responders. 	32029534
 3	BRAF	V600	Colorectal adenocarcinoma	Vemurafenib + Cobimetinib	TAPUR Phase 2 Basket trial. The ORR was 30%, and the DCR was 52%. Median duration of therapy was 8.1 weeks. Median PFS was 15.7 weeks.	36409971, 10.1200/JCO.2020.38.4_suppl.122
+3	BRAF	V600, fusions	Solid tumour	FORE8394	Phase 1/2a FORE8394-201 study. NCT02428712. N=110. ORR in the treatment naive cohort was 39% (9/23); 18% (3/17) in previously treated with MAPKi.	10.1200/JCO.2023.41.16_suppl.3006
 3	BRAF	V600E	Colorectal adenocarcinoma	Cetuximab + Irinotecan + Vemurafenib	Phase 2 SWOG S1406. Triplet including vemurafenib (vs without) improved ORR (17 v 4%) with improved PFS (4.2 v 2.0 mo).	33356422
 3	BRAF	V600E	Colorectal adenocarcinoma	Dabrafenib + Trametinib	Phase 2. NCT01072175. ORR 12% in pretreated CRC with PFS of 3.5 months.	26392102
 3	BRAF	V600E	Colorectal adenocarcinoma	Panitumumab + Dabrafenib + Trametinib		29431699
@@ -600,6 +601,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	RET	Fusions	Non-small cell lung cancer	Vandetanib	Single-arm phase 2. LURET. ORR 47%. PFS 4.7mo	27825636
 3	RET	Fusions	Non-small cell lung cancer	Vandetanib	Single-arm phase 2. ORR 18%. PFS 4.5mo	27803005
 3	RET	Fusions	Solid tumours	Pralsetinib	ARROW	10.1200/JCO.2020.38.15_suppl.109
+3	RET	Fusions, Oncogenic mutations	Solid tumour	KL590586	Phase I KL400-I/II-01 trial. NCT05265091. In the dose expansion part (n=69), ORR was 64% in RET altered tumors including NSCLC, MTC, pancreatic cancer and ovarian cancer. ORR in systemic pretreated NSCLC was 63%, DCR 91%. ORR in treatment nave NSCLC was 76% with DCR of 92%. CNS DCR was 100%.	10.1200/JCO.2023.41.16_suppl.3007
 3	RET	Oncogenic mutations (germline)	Paraganglioma; Phaeochromocytoma	Sunitinib	Phase 2. SNIPP trial. N=25 enrolled. Overall DCR was 83%. Three patients with germline SDHB, SDHA, or RET mutations achieved RECIST objective response.	31105270
 3	ROS1	Fusion	Non-small cell lung cancer	Crizotinib	Phase 2. NCT02499614. Cohort A. N=26. In previously treated NSCLC patients, the ORR was 70% (17/26), including 1 CR. Median PFS 22.8 months. OS rate at 12 month 79%. ROS1 rearrangement defined by FISH in &gt;= 15% of cells	31416808
 3	ROS1	Fusion	Solid tumours	Repotrectinib	Phase 1. NCT03093116, ongoing clinical trial. Confirmed ORR 90% in 10 treatment-naive patients. In 18 pre-treated patients, the ORR was 28% with DOR of 10.2 months. Repotrectinib was shown to be active in patients with brain metastases.	JCO.2019.37.15_suppl.9011
@@ -979,6 +981,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB2	Exon 16 skipping mutation	Non-small cell lung cancer	Afatinib		31557536
 4	ERBB2	Exon 20 insertion	Solid tumours	Tarloxotinib	Cell line and xenograft study. Tarloxotinib-E showed activities in the inhibition of two models harboring EGFR exon 20 insertion mutations.	33355298
 4	ERBB2	Exon 20 insertion, A775_G776insYVMA	Solid tumours	Tarloxotinib	Cell line and xenograft studies, and one case report. Tarloxotinib-E inhibits MDA-MB-175VIII cell line harboring HER2 exon 20 insertion or amplifications. Response in a clinical case report with ERBB2 A775_Y776insYVMA was seen.	33355298
+4	ERBB2	Exon 20 insertion, A775_G776insYVMA, G776delinsVC, G776_V777delinsLC, G776_V777delinsVV, G776_V777delinsCVCS310Y, R678Q, L755S, L755P, D769N, V773M, V777L, L869R, L869R and T798I, V842I	Solid tumour	ELVN-002	Cell line study. Mutational drug sensitivity screen on transfected Ba/F3 cells.	10.1158/1538-7445.AM2023-4019
 4	ERBB2	Exon 21 mutation	Colorectal adenocarcinoma	ERBB2 inhibitor		31588020
 4	ERBB2	Extracellular domain mutations; transmembrane domain mutations	Solid tumours	Lapatinib; Afatinib; Neratinib; Osimertinib	High throughput screening of VUS in ERBB2	29967253
 4	ERBB2	G309A, V777L, D769H, V842I, L755S, L755_759del	Breast cancer	Neratinib		23220880
@@ -1015,6 +1018,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB2	S310F	Extramammary Paget’s disease	Lapatinib + Capecitabine	Case report	25085898
 4	ERBB2	S310F	Extramammary Paget’s disease	Trastuzumab + Carboplatin	Case report	31803359
 4	ERBB2	S310F, S310Y, L403V, L755S, D769Y, A775_Y776insYVMA, V777L, T862A	Breast cancer	Pyrotinib		33145402
+4	ERBB2	S310F, S310Y, R678Q, D769N, V773M, V777L, V842I, P780_Y781insGSP, V777_G778insGC	Solid tumour	Tucatinib	Cell line study. Mutational drug sensitivity screen on transfected Ba/F3 cells.	10.1158/1538-7445.AM2023-4019
 4	ERBB2	S310F, S653C, D277H and S310F	Urothelial carcinoma	Lapatinib; Afatinib		24971884
 4	ERBB2	S335C	Non-small cell lung cancer	Pyrotinib	Case report. Partial response to pyrotinib in the non-tyrosine kinase domain mutation S335C.	33655632
 4	ERBB2	Transmembrane domain mutations	Solid tumours	Trastuzumab	High throughput screening of VUS in ERBB2	29967253
@@ -1157,6 +1161,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	IDH1	R132	Chondrosarcoma	Ivosidenib	Phase 1 trial. Treatment with ivosidenib resulted in no objective response, but with a CBR 52% and associated reduction of 2HG level.	32208957
 4	IDH1	R132	Glioma	Olutasidenib		10.1200/JCO.2020.38.15_suppl.2505
 4	IDH1	R132	Glioma; Glioblastoma	Ivosidenib	Phase 1 trial. PFS 13.6 month non-enhancing. ORR 2%	32530764
+4	IDH1	R132	High-grade gliomas	PRT811	Phase 1 dose-expansion trial. NCT04089449. In IDH1/2-mutated glioma (n=16), PRT811 treatment was associated with 2 CR (1 durable) and 1 unconfirmed PR.	10.1200/JCO.2023.41.16_suppl.3008
 4	IDH1	R132, R132C, R132L, R132G	Cholangiocarcinoma	Ivosidenib; Olutasidenib; Vorasidenib	Multicentre retrospective series. Median PFS was 4.6 months with DCR 29% in 15 (23%) patients treated with IDH inhibitors.	35005992
 4	IDH1	R132C, R132	Chondrosarcoma; Epithelioid hemangioendothelioma	Olaparib	OLAPCO. Clinical benefit observed in 3 of 5 chondrosarcomas (1 PR and 2 SD). One prolonged SD in pulmonary epithelioid hemangioendothelioma.	34994649
 4	IDH1	R132C, R132H, R132	Solid tumours; Glioma; Glioblastoma; Cholangiocarcinoma	Olaparib; Veliparib	Cell line study. Mutant IDH cells were demonstrated to be deficient in DNA DSB break repair.	28148839, 32494639
@@ -1836,6 +1841,7 @@ R2	ERBB2	ERBB2-GRB7 fusion	Colorectal adenocarcinoma	Afatinib; Trastuzumab		2666
 R2	ERBB2	ERBB2-GRB7 fusion	Colorectal adenocarcinoma	Trastuzumab	Case report. Retrospective series. Acquired ERBB2-GRB7 fusion in the follow-up was identified on liquid biopsy.	36470901
 R2	ERBB2	Exon 16 skipping mutation	Non-small cell lung cancer	Osimertinib	In EGFR L858R/T790M-positive lung adenocarcinoma who developed resistance to osimertinib through an Src-independent pathway.	31557536, 33209639
 R2	ERBB2	Exon 20 insertion except G778ins, S779ins, P780ins	Solid tumours; Non-small cell lung cancer	Afatinib; Dacomitinib; Neratinib; Pyrotinib		31588020
+R2	ERBB2	Exon 20 insertion, T798M, A775_G776insYVMA, G776delinsVC, G776_V777delinsLC, G776_V777delinsVV, G776_V777delinsCVC	Solid tumour	Tucatinib	Cell line study. Mutational drug sensitivity screen on transfected Ba/F3 cells.	10.1158/1538-7445.AM2023-4019
 R2	ERBB2	G309A, G309E, S310F, D769H, D769Y, L755S, V777L, V842I, E321G, R896C, P780ins, L755_T759del, R678Q	Colorectal adenocarcinoma	Trastuzumab + Pertuzumab	Phase 2. NCT02693535. TAPUR. N=28 in Cohort 2. ORR was 0%. DCR 10%.	36315917
 R2	ERBB2	L755M, L755S, A775_G776insYVMA, G776delinsLC, G776delinsVC, S779_P780insVGS, V842I, T862A	Solid tumours	Lapatinib	High throughput screening of VUS in ERBB2	29967253
 R2	ERBB2	L755S	Breast cancer	Lapatinib; Neratinib; Tucatinib; Trastuzumab	HER2+ BT474 cell model study	10.1158/1538-7445.SABCS20-PD3-09
@@ -1852,6 +1858,7 @@ R2	ERBB2	Overexpression, Protein expression	Pancreatic adenocarcinoma	Trastuzuma
 R2	ERBB2	R487W, L755P, L755S, D769Y, A775_G776insYVMA, G776S, G776V, G776delinsLC, G776delinsVC, V777L, G778_S779insG, P780_Y781insGSP, L841V, V842I, N857S, T862A, D962N, P1199T	Solid tumours	Trastuzumab	High throughput screening of VUS in ERBB2	29967253
 R2	ERBB2	T798I	Breast cancer	Neratinib	Case report. ERBB2 T798I gatekeeper mutation was found in a breast cancer patient after sustained partial response to neratinib.	28274957
 R2	ERBB2	T798I, L785F, D769Y	Breast cancer	Neratinib; Fulvestrant + Neratinib	Gatekeeper mutation	31806627
+R2	ERBB2	T798M	Solid tumour	ELVN-002	Cell line study. Mutational drug sensitivity screen on transfected Ba/F3 cells.	10.1158/1538-7445.AM2023-4019
 R2	ERBB2	ZNF207-ERBB2 fusion	Gastric cancer	Trastuzumab; Ado-Trastuzumab Emtansine		25889497
 R2	ERBB2+ERBB3	ERBB2:Oncogenic mutation and ERBB3:E928G, ERBB2:S310F and ERBB3:E928G, ERBB2:L755S and ERBB3:E928G, ERBB2:V777L and ERBB3:E928G, ERBB2:L869R and ERBB3:E928G	Breast cancer	Neratinib; Trastuzumab + Pertuzumab; Trastuzumab	Cell-line study. HER2/HER3 co-mutations activate both ERBB and PI3K signaling pathways in tumour cells, resulting in resistance to HER2 inhibitors.	34171264
 R2	ERBB2+KRAS	ERBB2:amplification and KRAS:G12	Colorectal adenocarcinoma	Trastuzumab + Pertuzumab	MyPathway subgroup	30857956
@@ -2086,6 +2093,7 @@ R2	PIK3CA	E545K	Colorectal adenocarcinoma	Divarasib	Phase 1/2 single arm trial. 
 R2	PIK3CA	G118D	Non-small cell lung cancer	Osimertinib	Cell line data. Off-target resistance	28202511
 R2	PIK3CA	H1047R	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
 R2	PIK3CA	N345T, H1047R, H1047L	Gastric cancer	Trastuzumab	Case-control study	29208673
+R2	PIK3CA	Oncogenic mutation	Glioblastoma	Buparlisib	Phase 2 trial. NCT01968451. N=65. Patients with recurrent glioblastoma harboring PI3K pathway activation. Buparlisib had minimal single-agent efficacy in patients with PI3K-activated recurrent glioblastoma. PFS 1.6 months.	30715997
 R2	PIK3CA	Oncogenic mutations	Breast cancer	Pictilisib + Fulvestrant	FERGI. PIK3CA mutation status had no effect on benefit.	27155741
 R2	PIK3CA	Oncogenic mutations	Breast cancer	Pictilisib + Paclitaxel	PEGGY. No PFS improvement over placebo. Similar ORR	27573562
 R2	PIK3CA	Oncogenic mutations	Colorectal adenocarcinoma	MK2206	ORR 0%	10.1200/JCO.2016.34.15_suppl.3563
@@ -2096,6 +2104,7 @@ R2	PIK3CA	Oncogenic mutations	Non-small cell lung cancer	Osimertinib	Off-target 
 R2	PIK3CA	Oncogenic mutations	Solid tumours except Breast cancer, Gastric cancer, Lung squamous cell carcinoma	Taselisib	NCT02465060. NCI-MATCH (EAY131) Subprotocol I. N=61. ORR 0%. PFS rate at 6 months was 20%.	35138919
 R2	PIK3CA	Oncogenic mutations, E542K, E545K, E545, H1074R, Q546X	Gastroesophageal junction adenocarcinoma; Gastric Cancer	Ipatasertib + FOLFOX	Randomised phase 2 trial. JAGUAR. No significant PFS benefit was observed in the addition of ipatasertib to FOLFOX or in subgroups with PI3KCA/AKT-alteration.	30592991
 R2	PIK3CA	Oncogenic mutations; Amplification	Solid tumours	Buparlisib	Phase 2. NCT01833169. Single-agent Buparlisib has limited clinical activity (ORR 1.4%) in PI3K pathway altered solid tumours.	31741715
+R2	PIK3R1	Oncogenic mutation	Glioblastoma	Buparlisib	Phase 2 trial. NCT01968451. N=65. Patients with recurrent glioblastoma harboring PI3K pathway activation. Buparlisib had minimal single-agent efficacy in patients with PI3K-activated recurrent glioblastoma. PFS 1.6 months.	30715997
 R2	PIK3R1	Oncogenic mutations	Endometrial cancer	LY3023414	N=28 with 25 Evaluable patients. ORR 16%. CBR 28%. Median PFS 2.5 months. Median OS 9.2 months	31880826
 R2	PIK3R1	Oncogenic mutations	Solid tumours	Buparlisib	Phase 2. NCT01833169. Single-agent Buparlisib has limited clinical activity (ORR 1.4%) in PI3K pathway altered solid tumours.	31741715
 R2	PIK3R1	S361fs	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
@@ -2111,6 +2120,7 @@ R2	PTEN	Loss-of-function mutations, loss of protein expression	Solid tumours	GSK
 R2	PTEN	N48K, G209V	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
 R2	PTEN	Oncogenic mutations	Pancreatic adenocarcinoma	Olaparib	Two Phase II studies of Olaparib in previously treatment pancreatic cancer. ORR 4% did not meet predefined threshold. PTEN (N=2)	33662100
 R2	PTEN	Oncogenic mutations, Loss-of-function mutations, Loss of protein expression	Gastroesophageal junction adenocarcinoma; Gastric Cancer	Ipatasertib + FOLFOX	Randomised phase 2 trial. JAGUAR. No significant PFS benefit was observed in the addition of ipatasertib to FOLFOX or in subgroups with PI3KCA/AKT-alteration.	30592991
+R2	PTEN	Oncogenic mutations; Deletions; Loss of protein expression	Glioblastoma	Buparlisib	Phase 2 trial. NCT01968451. N=65. Patients with recurrent glioblastoma harboring PI3K pathway activation. Buparlisib had minimal single-agent efficacy in patients with PI3K-activated recurrent glioblastoma. PFS 1.6 months.	30715997
 R2	PTPN11	E76K	Solid tumours	RMC-4550	Cell line study.	30104724
 R2	PTPN11	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	PTPN11	Oncogenic mutations	Acute myeloid leukaemia	Ivosidenib	RTK pathway mutations are associated with primary resistance to ivosidenib	32380538
@@ -2170,6 +2180,4 @@ R2	TSC1	Oncogenic mutations	Urothelial carcinoma	Buparlisib		32767682
 R2	Tumour Mutational Burden	High	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	WT1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor		27634897
-3	BRAF	V600, fusions	Solid tumour	FORE8394	Phase 1/2a FORE8394-201 study. NCT02428712. N=110. ORR in the treatment naive cohort was 39% (9/23); 18% (3/17) in previously treated with MAPKi.	10.1200/JCO.2023.41.16_suppl.3006
-3	RET	Fusions, Oncogenic mutations	Solid tumour	KL590586	Phase I KL400-I/II-01 trial. NCT05265091. In the dose expansion part (n=69), ORR was 64% in RET altered tumors including NSCLC, MTC, pancreatic cancer and ovarian cancer. ORR in systemic pretreated NSCLC was 63%, DCR 91%. ORR in treatment nave NSCLC was 76% with DCR of 92%. CNS DCR was 100%.	10.1200/JCO.2023.41.16_suppl.3007
-4	IDH1	R132	High-grade gliomas	PRT811	Phase 1 dose-expansion trial. NCT04089449. In IDH1/2-mutated glioma (n=16), PRT811 treatment was associated with 2 CR (1 durable) and 1 unconfirmed PR.	10.1200/JCO.2023.41.16_suppl.3008
+4	PTEN	Loss-of-function mutations, deletion	Acute myeloid leukaemia	Talazoparib		10.1182/blood-2021-146694

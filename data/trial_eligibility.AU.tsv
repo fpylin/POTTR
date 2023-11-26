@@ -112,6 +112,7 @@ NCT03674567	catype:Non-small cell lung cancer
 NCT03674567	catype:Oesophageal carcinoma
 NCT03674567	catype:Triple-negative breast cancer
 NCT03674567	catype:Urothelial carcinoma
+NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -269,16 +270,15 @@ NCT05286801	(SMARCB1:loss OR SMARCB1:oncogenic_mutation OR SMARCB1:loss of prote
 NCT05646862	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; catype:Breast cancer; NOT catype:HER2-positive breast cancer
 NCT04879329	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04789096	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
-NCT04740918	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04924075	*NOT KIT:oncogenic_mutation; *NOT PDGFRB:oncogenic_mutation; catype:Gastrointestinal stromal tumour
 NCT04924075	catype:Solid tumour; (EPAS1:alteration OR FH:alteration OR SDHA:alteration OR SDHB:alteration OR SDHC:alteration OR SDHD:alteration OR SDHAF2:alteration OR EGLN1:alteration OR EGLN:alteration OR MDH2:alteration OR ELOC:alteration OR TCEB1:alteration); *NOT VHL:oncogenic_mutation
 NCT05261399	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation; *NOT prior_therapy:Osimertinib
 NCT05876754	catype:Cholangiocarcinoma; IDH1:R132_mutation
 NCT05043090	catype:Papillary renal cell carcinoma
-NCT05487235	*sensitive_to:GDC-1971; catype:Solid tumour
-NCT05487235	*sensitive_to:GDC-1971; catype:Non-small cell lung cancer
-NCT05487235	*sensitive_to:GDC-1971; catype:Head and neck squamous cell carcinoma
-NCT05487235	*sensitive_to:GDC-1971; catype:Melanoma; NOT BRAF:oncogenic_mutation
+NCT05487235	catype:Solid tumour; sensitive_to:GDC-1971
+NCT05487235	catype:Non-small cell lung cancer; *sensitive_to:GDC-1971
+NCT05487235	catype:Head and neck squamous cell carcinoma; *sensitive_to:GDC-1971
+NCT05487235	catype:Melanoma; NOT BRAF:oncogenic_mutation; *sensitive_to:GDC-1971
 NCT05919537	NRG1:fusion
 NCT05743036	BRAF:V600E; catype:Colorectal cancer
 NCT05611931	NOT TP53:oncogenic_mutation
@@ -342,3 +342,6 @@ NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Atezoliz
 NCT05417594	*(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
 NCT05954871	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT BRAF:V600E; NOT NRAS:oncogenic_mutation
 NCT05954871	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
+NCT05920356	KRAS:G12C
+NCT06119581	KRAS:G12C
+NCT05462717	KRAS:G12C
