@@ -112,7 +112,6 @@ NCT03674567	catype:Non-small cell lung cancer
 NCT03674567	catype:Oesophageal carcinoma
 NCT03674567	catype:Triple-negative breast cancer
 NCT03674567	catype:Urothelial carcinoma
-NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -331,7 +330,6 @@ NCT04929223	catype:Colorectal adenocarcinoma; (*microsatellite_instability:high 
 NCT04895709	*NOT prior_therapy:Docetaxel
 NCT05348577	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:AKT_inhibitor
 NCT05544552	FGFR3:alteration
-NCT04670679	*NOT PTPN11:oncogenic_mutation; *NOT prior_therapy:SHP2_inhibitor
 NCT06024174	KRAS:G12C
 NCT04802759	catype:Breast cancer; *ESR1:protein_expresion
 NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression)
@@ -342,6 +340,13 @@ NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Atezoliz
 NCT05417594	*(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
 NCT05954871	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT BRAF:V600E; NOT NRAS:oncogenic_mutation
 NCT05954871	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
-NCT05920356	KRAS:G12C
+NCT05920356	KRAS:G12C; NOT prior_therapy:systemic_therapy
 NCT06119581	KRAS:G12C
 NCT05462717	KRAS:G12C
+NCT05328908	catype:Colorectal adenocarcinoma; NOT prior_therapy:Regorafenib; NOT prior_therapy:Trifluridine; NOT prior_therapy:immune_checkpoint_blockade; *prior_therapy:fluoropyrimidine; *prior_therapy:Oxaliplatin; *prior_therapy:Irinotecan
+NCT05775289	*NOT prior_therapy:systemic_therapy
+NCT03768063	prior_therapy:Atezolizumab
+NCT05450692	NOT EGFR:exon_19_deletion; NOT EGFR:L858R; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody); *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin)
+NCT05867121	catype:Non-small cell lung cancer
+NCT05867121	catype:Gastric cancer
+NCT05867121	catype:Pancreatic adenocarcinoma

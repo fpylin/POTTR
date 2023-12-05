@@ -317,8 +317,8 @@ Camrelizumab|INCSHR1210|INCSHR01210|SHR-301210|SHR-1210|SHR1210	anti-PD-1_monocl
 Canakinumab	anti-IL-1beta_antibody
 Canertinib|CI-1033	EGFR/ERBB2_inhibitor
 Cantrixil|TRX E 002 1|TRX-E-002-1|TRXE0021	benzopyran
-Capecitabine|Xeloda|Ro 09-1978/000	antimetabolite
-Capivasertib|AZD5363	pan-AKT_inhibitor
+Capecitabine|Xeloda|Ro 09-1978/000	fluoropyrimidine
+Capivasertib|Truqap|AZD5363	pan-AKT_inhibitor
 Capmatinib|INC-280|INC280|INCB 28060|INCB028060|INCB28060|TABRECTA	MET_inhibitor,type_1
 Carboplatin|CBDCA|1,1-cyclobutanedicarboxylic acid platinum complex|Blastocarb|Carboplat|Carbosin|Carbosol|Carbotec|Displata|Ercar|JM-8|Nealorin|Novoplatinum|Paraplat|Platinwas|Ribocarbo	platinum-based_antineoplastic_agent
 Carboxyamidotriazole Orotate	calcium_channel_blockade
@@ -353,7 +353,7 @@ Cusatuzumab	anti-CD70_monoclonal_antibody
 Cyclophosphamide|Clafen|Claphene|Cyclophosphan|Cyclostin|Cytophosphan|Genoxal|Mitoxan|Neosar|CP monohydrate|CYCLO-cell|Carloxan|Ciclofosfamida|Ciclofosfamide|Cicloxal|Cycloblastin|Cyclophospham|Cytoxan|Fosfaseron|Genuxal|Ledoxina|Revimmune|Syklofosfamid|WR- 138719	alkylating_agent
 Cyproterone|SH-881	antiandrogen,steroidal
 Cytarabine|Arabinofuranosylcytosine|Arabinosylcytosine|Aracytidine|Cytosar|U 19920|Alexan|Ara-C|Arabine|Aracytin|CHX-3311|Cytarabinum|Cytarbel|Cytosine Arabinoside|Cytosine-.beta.-arabinoside|Cytosine-beta-arabinoside|Erpalfa|Starasid|U-19920|Udicil|WR-28453	antimetabolite
-D-1553	KRAS_G12C_inhibitor
+Garsorasib|D-1553	KRAS_G12C_inhibitor
 D3S-001	KRAS_G12C_inhibitor
 D3S-002	ERK_inhibitor
 DB-1303	anti-ERBB2_antibody-drug_conjugate
@@ -501,7 +501,7 @@ Filgrastim|G-CSF|granulocyte colony-stimulating factor|Neupogen|Recombinant Meth
 Fisogatinib|BLU 554|BLU-554|BLU554|CS 3008|CS-3008|CS3008	FGFR4_inhibitor
 Flotetuzumab|MGD006	humanized_CD123_x_CD3_dual-affinity_re-targeting_protein
 Fludarabine|2-Fluoro-9-beta-arabinofuranosyladenine|2-Fluorovidarabine|9-Beta-D-arabinofuranosyl-2-fluoro-9H-purin-6-amine|9-Beta-D-arabinofuranosyl-2-fluoroadenine|Fluradosa	antimetabolite
-Fluorouracil|5-FU|5-Fluorouracil|5 Fluorouracil|Fluracil|Fluril|2,4-Dioxo-5-fluoropyrimidine|5 FU|5FU|AccuSite|Adrucil|Carac|Fluoro Uracil|Fluouracil|Flurablastin|Fluracedyl|Fluroblastin|Ribofluor|Ro 2-9757|de Gramont|de Gramont 5-FU|Ro-2-9757	antimetabolite
+Fluorouracil|5-FU|5-Fluorouracil|5 Fluorouracil|Fluracil|Fluril|2,4-Dioxo-5-fluoropyrimidine|5 FU|5FU|AccuSite|Adrucil|Carac|Fluoro Uracil|Fluouracil|Flurablastin|Fluracedyl|Fluroblastin|Ribofluor|Ro 2-9757|de Gramont|de Gramont 5-FU|Ro-2-9757	fluoropyrimidine
 Flutamide|Apimid|Cebatrol|Chimax|Cytomid|Drogenil|Euflex|Eulexin|FLUT|Flucinom|Flugerel|Fluken|Flulem|Fugerel|Grisetin|Niftolide|Oncosal|Profamid|Prostacur|Prostadirex|Prostica|Prostogenat|SCH 13521|Tafenil|Testotard	antiandrogen,nonsteroidal,first_generation
 Foretinib|XL880|GSK1363089	MET_inhibitor,type_2; ROS1_inhibitor
 Fosgemcitabine Palabenamide|Acelarin|Gemictabine ProTide|NUC 1031|NUC-1031	gemcitabine-phosphoramidate
@@ -509,7 +509,7 @@ Fotemustine|Mustophoran	 alkylating_agent
 Fresolimumab|GC1008	anti-TGF-beta_monoclonal_antibody
 Fruquintinib	VEGFR1/2/3_inhibitor
 Fulvestrant|Faslodex|ICI 182,780|ICI 182780|ZD9238	selective_estrogen_receptor_degrader
-Furmonertinib	EGFR_inhibitor,third_generation; EGFR_inhibitor,exon_20_selective; ERBB2_inhibitor,exon_20_selective
+Furmonertinib|AST2818	EGFR_inhibitor,third_generation; EGFR_inhibitor,exon_20_selective; ERBB2_inhibitor,exon_20_selective
 Futibatinib|TAS-120	pan-FGFR_inhibitor,irreversible
 Fuzuloparib|Fluzoparib|SHR-3162|SHR3162	PARP_inhibitor
 GB1211	galectin-3_inhibitor
@@ -599,6 +599,7 @@ IBI363	anti-PD-1_IL-2-immunocytokine_conjugate
 ICE regimen	Ifosfamide + Carboplatin + Etoposide
 ICP-723	TRK_inhibitor,second_generation
 IDH305	IDH1_R132_inhibitor
+IDE397|IDE-397	MAT2A_inhibitor
 IGM-2323	bispecific_CD20/CD3_antibody
 II-B08	PTP_inhibitor
 IK-175	AHR_inhibitor
@@ -636,7 +637,7 @@ Imgatuzumab|GA201|RG 7160|RG-7160|RO5083945	anti-EGFR_monoclonal_antibody
 Imiquimod|Aldara|R 837|S 26308|Zyclara	topical_immune_response_modifier
 Imlunestrant|LY3484356	selective_estrogen_receptor_degrader
 Immune Therapeutic Agent	immune_checkpoint_blockade
-Inavolisib|GDC-0077|GDC 0077|GDC0077|RG 6114|RG-6114|RG6114|RO 7113755	PI3K_inhibitor
+Inavolisib|GDC-0077|GDC 0077|GDC0077|RG 6114|RG-6114|RG6114|RO 7113755	PI3K_alpha_inhibitor
 Infigratinib|BGJ-398|BGJ398	FGFR1/2/3_inhibitor
 Infliximab|Remicade	anti-TNFalpha_monoclonal_antibody
 Inotuzumab ozogamicin	anti-CD22_antibody-drug_conjugate
@@ -1185,7 +1186,7 @@ Tazemetostat|E7438|EPZ-6438|EPZ6438|TAZVERIK	EZH2_inhibitor
 Tebentafusp|IMCgp100|ImmTAC-gp100	anti-CD3/scFv_fusion_protein,gp100-targeting
 Tebotelimab|MGD013|MGD-013	humanized_PD-1xLAG-3_dual-affinity_re-targeting_protein
 Teclistamab	bispecific-BCMA/CD3_antibody
-Tegafur	antimetabolite
+Tegafur	fluoropyrimidine
 Tegafur-gimeracil-oteracil pPotassium|S-1|BMS 247616|BMS-247616|Tegafur, mixture with Gimeracil and Potassium Oxonate|Teysuno	DPD_inhibitor; antimetabolite; orotate_phosphoribosyltransferase_inhibitor
 Tegavivint|BC2059	TBL1_inhibitor
 Telaglenastat|CB-839|WHO 10815	glutaminase_inhibitor
