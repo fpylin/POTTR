@@ -7,6 +7,7 @@ drug	drug_class
 177Lu-edotreotide|lutetium-177-DOTATATE|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
 212Pb-ADVC001|[212Pb]Pb-ADVC001	212Pb-PSMA-radioconjugate
 225Ac-FPI-1966|[225Ac]-FPI-1966	FGFR3-targeting-radioconjugate
+225Ac-FPI-2059	NTSR1-targeting-radioconjugate
 225Ac-PSMA-617	225Ac-PSMA-radioconjugate
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
@@ -92,6 +93,7 @@ ASG-22ME	anti-Nectin-4_antibody
 ASN003	PI3K_alpha_inhibitor
 ASP5878	FGFR_inhibitor
 ASTX295|ASTX 295|ASTX-295	MDM2_inhibitor
+AT-0174|AT0174	dual_IDO/TDO_inhibitor
 ATG 022|ATG-022	anti-CLDN18.2_antibody-drug_conjugate
 ATG 037|ATG-037	CD73_inhibitor
 ATG-017	ERK_inhibitor
@@ -227,6 +229,7 @@ BNC101|BNC-101|ET-101	anti-LGR5_monoclonal_antibody
 BNC105P	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNT111	mRNA_personalised_cancer_vaccine
 BOS172738	RET_inhibitor
+BOS-342|BOS342|PRS342|PRS-342	bispecific-41BB/GPC3_antibody
 BTX-1188	dual_GSPT1/IKZF1_degrader
 Bacillus Calmette-Guérin|BCG	BCG_vaccine
 Bafetinib|INNO-406|NS-187	BCR-ABL1_inhibitor
@@ -1326,3 +1329,5 @@ BMS-986466|BMS986466|BBP 398|BBP398|IACS-15509|IACS 15509|IACS15509	SHP2_inhibit
 AWT020	anti-PD1-IL2_fusion_protein
 KL590586	RET_inhibitor
 RO7566802	unknown_drug_class
+SR-8541A	ENPP1_inhibitor
+MYTX-011	anti-cMET_antibody-drug_conjugate

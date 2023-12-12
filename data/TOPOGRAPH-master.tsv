@@ -267,6 +267,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 2	KIT	Protein expression, Oncogenic mutations	Gastrointestinal stromal tumour	Pimitespib	Phase 3. CHAPTER-GIST-301. Single-agent Pimitespib in treat-refractory GIST patients after imatinib, sunitinib, and regorafenib failure. Median PFS was 2.8 vs. 1.4 mo (placebo). Median OS: 13.8 vs 9.6 mo (placebo). Pimitespib was also effective in patients who had secondary KIT resistance.	10.1200/JCO.2021.39.15_suppl.11524
 2	KIT	T670I	Gastrointestinal stromal tumour	Regorafenib	Not TGA approved by NGS unless IHC positive	10.1200/jco.2013.31.15_suppl.10510
 2	KIT	V654A, T670I	Gastrointestinal stromal tumour	Sunitinib	Not TGA approved by NGS unless IHC positive	19164557
+2	KRAS	G12C	Colorectal cancer	Divarasib + Cetuximab	Phase 1b. NCT04449874. Confirmed ORR of 62% (18/29). Ongoing study.	10.1158/1538-7445.AM2023-CT029
 2	KRAS	G12C	Colorectal cancer	Sotorasib + Panitumumab	Phase 3 trial. CodeBreaK 300. NCT05198934. N=160. Sotorasib + panitumumab showed longer progression-free survival (PFS) than standard treatment in chemorefractory metastatic colorectal cancer with mutated KRAS G12C. Median PFS: 5.6 months and 3.9 months for sotorasib at doses of 960 mg and 240 mg, respectively; 2.2 months for standard treatment (HR, 0.49 and 0.58, respectively). Overall survival data are maturing. Objective response rate: 26.4%, 5.7%, and 0% in the sotorasib-panitumumab groups and standard-care group, respectively. Treatment-related adverse events of grade 3 or higher occurred in 35.8%, 30.2%, and 43.1% of patients, respectively.	37870968
 2	KRAS	G12C	Non-small cell lung cancer	Adagrasib	Not TGA approved. FDA approved 12/12/2022. NCT03785249. In patients with previously treated metastatic non-small cell lung cancer, treatment with adagrasib resulted in ORR of 48/112 (43%), median PFS of 6.5 months and median OS of 12.6 months.	35658005
 2	KRAS	G12R, G13C, R149C	Histiocytosis	Cobimetinib	Phase 2 trial. MEK inhibitor Cobimetinib was effective (ORR 89%) and durable in patients with histiocytoses regardless of genotype, including patients with ARAF, BRAF, RAF1, NRAS, KRAS, MAP2K1 and MAP2K2 mutations	30867592
@@ -1000,10 +1001,11 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB2	MDK-ERBB2 fusion, Fusions	Gastric cancer	Trastuzumab; Ado-Trastuzumab Emtansine		25889497
 4	ERBB2	Oncogenic mutations	Lung adenocarcinoma	Afatinib	One unconfirmed response from seven patients (5 SD). Individual and concomitant mutations not reported.	25682316
 4	ERBB2	Oncogenic mutations	Solid tumours	anti-ERBB2 monoclonal antibody	Check Tier	29320312, NCT02091141
-4	ERBB2	Oncogenic mutations, Amplification	Solid tumours	BI-1810631	Beamion Lung 1 . NCT04886804. Preliminary data showed responses seen in oesophageal carcinoma and cholangiocarcinoma.	36528522; JCO.2023.41.16_suppl.8545
 4	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-small cell lung cancer	Neratinib	Single responders in lung ca.	29420467
+4	ERBB2	Oncogenic mutations, Amplification	Solid tumours	BI-1810631	Beamion Lung 1 . NCT04886804. Preliminary data showed responses seen in oesophageal carcinoma and cholangiocarcinoma.	36528522; JCO.2023.41.16_suppl.8545
 4	ERBB2	Overexpression	Solid tumours	Margetuximab		28119295
 4	ERBB2	Overexpression, amplification	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01, no data available yet. Hypothesis generating	10.1200/JCO.2020.38.15_suppl.9504
+4	ERBB2	Overexpression, amplification	Solid tumour	GQ1001		10.1158/1538-7445.AM2023-2702
 4	ERBB2	Overexpression, Amplification	Solid tumours	Runimotamab	Phase 1 trial eligibility 	NCT03448042
 4	ERBB2	Overexpression, Protein expression	Breast cancer; Gastric cancer; Gastroesophageal junction adenocarcinoma	Runimotamab	Phase 1 trial eligibility 	NCT03448042
 4	ERBB2	Overexpression, Protein expression	Breast cancer; Gastric cancer; Gastroesophageal junction adenocarcinoma; Solid tumours	GQ1001	Phase 1 trial eligibility 	NCT04450732
@@ -1055,12 +1057,14 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ESR1	Oncogenic mutations, Protein expression	Breast cancer	OP-1250		NCT04505826
 4	ESR1	Protein expression	Breast cancer	AZD9496		29440181
 4	ESR1	Protein expression	Breast cancer	Giredestrant	NCT03332797	10.1200/JCO.2021.39.15_suppl.1017
+4	ESR1	Protein expression	Breast cancer	INX-315	Preclinical study. INX-315 induces senescence in CCNE1-amplified luminal breast cancer cell lines, leading to growth control and overcoming and delaying breast cancer resistance to CDK4/6i.	38047585
 4	ESR1	Protein expression	Breast cancer	Samuraciclib + Fulvestrant		NCT03363893
 4	ESR1	Protein expression	Endometrial cancer	Letrozole; Anastrozole	Systematic review	31134155
 4	ESR1	Protein expression, D538G, Y537S	Breast cancer	Lasofoxifene + Abemaciclib		10.1200/JCO.2022.40.16_suppl.1022
 4	ESR1	Protein expression, Y537, D538, E380, L536	Breast cancer	Imlunestrant	Phase 1. EMBER. In advanced breast cancerpatients, ORR was 8% (6/75). CBR was 40.4% (42/104). In endometriod cancer patients, ORR was 5% (1/20). CBR was 47%. CBR seen regardless of ESR1 mutation.	10.1200/JCO.2022.40.16_suppl.1021
 4	ESR1	Protein expression, Y537S	Breast cancer	H3B-6545	Phase 1/2: ORR 17% (12/72) at RP2D in heavily pretreated patients and visceral metastases. 7/10 PR and SD seen in clonal Y537S mutation.	10.1200/JCO.2021.39.15_suppl.1018
 4	ESR1	Y537S, D538G, Y537N, E380Q, L536H, L536P	Breast cancer	Elacestrant	Objective responses seen in 5 of 15 (33%) patients. 	33513026
+4	ESR1+CCNE1	ESR1:Protein expression and CCNE1:Amplification	Breast cancer	INX-315	Preclinical study. INX-315 induces senescence in CCNE1-amplified luminal breast cancer cell lines, leading to growth control and overcoming and delaying breast cancer resistance to CDK4/6i.	38047585
 4	EZH2	Oncogenic mutations	Solid tumours	Tazemetostat	Pediatric MATCH Treatment Trial	NCT03213665
 4	EZH2	Oncogenic mutations, A677G, Y641N, Y641C, Y641H, Y641S, Y641F, Y646, A687V	Non-Hodgkin’s lymphoma	Tazemetostat		24563539
 4	EZH2	Oncogenic mutations, A677G, Y641N, Y641C, Y641H, Y641S, Y641F, Y646, A687V	Solid tumours	Tazemetostat		23051747
@@ -1218,7 +1222,6 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	KRAS	G12, G12D, G12V, G12R, G12D, G12V, G12A	Pancreatic adenocarcinoma; Non-small cell lung cancer	RMC-6236	Phase 1 trial. NCT04896732. N=33. in patients with KRASG12X, preliminary anti-tumor activity was seen with RMC-6236 pancreatic ductal adenocarcinoma (PDAC) and non-small cell lung cancer (NSCLC). Objective response rate was 36% (2 / 10  confirmed, 3 / 4 unconfirmed), median time to onset of initial response was 6 weeks, disease control rate was 86.	10.1016/j.annonc.2023.09.1838
 4	KRAS	G12A	Endometrial cancer	Lifirafenib + Mirdametinib	Phase 1b. NCT03905148. ORR 15/54 (28%) in efficacy-evaluable patients. 	10.1158/1538-7445.AM2023-CT033
 4	KRAS	G12C	Colorectal adenocarcinoma	Sotorasib	CODEBREAK 100. ORR 7%	32955176, 10.1200/JCO.2020.38.15_suppl.4018
-4	KRAS	G12C	Colorectal cancer	Divarasib + Cetuximab	Phase 1b. NCT04449874. Confirmed ORR of 62% (18/29). Ongoing study.	10.1158/1538-7445.AM2023-CT029
 4	KRAS	G12C	Colorectal cancer; Pancreatic adenocarcinoma; Solid tumours	LY3537982	Phase 1. NCT04956640. ORR was 7% (1/17) in CRC,  3/8 (38%) in pancreatic, and 4/15 (36%) in other solid tumorus.	10.1158/1538-7445.AM2023-CT028
 4	KRAS	G12C	Non-small cell lung cancer	LY3537982	Phase 1. NCT04956640. ORR 3/5 (60%) in KRAS G12C inhibitor treatment naive NSCLC.	10.1158/1538-7445.AM2023-CT028
 4	KRAS	G12C	Non-small cell lung cancer; Colorectal adenocarcinoma	JAB-21822	Phase 1. NCT05009329.	10.1200/JCO.2022.40.16_suppl.3089
@@ -1294,6 +1297,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MET	Overexpression	Head and neck squamous cell carcinoma	Ficlatuzumab + Cetuximab	NCT03422536. In treatment refractory HNSCC, patients in the Ficlatuzumab + Cetuximab combination arm resulted in significant hazard reduction for progression of 0.3 in cMET positive subgroup, defined as H-score of &gt;= 150	36977289
 4	MET	Overexpression	Non-small cell lung cancer	ABN401	Phase 1. NCT04052971. Two responders were seen in tumour with MET overexpressed NSCLC.	10.1200/JCO.2022.40.16_suppl.3105
 4	MET	Overexpression	Non-small cell lung cancer; Gastroesophageal junction adenocarcinoma; Gastric Cancer; Endometrial carcinoma; Acral melanoma	ABBV-400	Phase 2. NCT05029882. Clinical activity was observed with ABBV-400 with an ORR of 24% (11/45). All responses were confirmed partial responses. DCR was 81%. Overexpression was determined IHC. 	10.1200/JCO.2023.41.16_suppl.3015
+4	MET	Overexpression	Solid tumour; Non-small cell lung cancer	MTYX-5000	Preclinical study. MYTX-011 showed activities in higher internalization in cMet+ tumor cells, cytotoxicity across a cMet+ cancer cell lines in vitro, and in NSCLC xenograft models.	10.1158/1538-7445.AM2023-5000
 4	MET	Overexpression	Solid tumours	Telisotuzumab Vedotin		33675179, 10.1200/JCO.2019.37.15_suppl.9023
 4	MET	PTPRZ-MET fusion, TFG-MET fusion	Glioblastoma	Crizotinib; Foretinib		27748748
 4	MET	Y1003S (Y1021S)	Non-small cell lung cancer	Crizotinib	Case report showing significant response and DOR	30885356
@@ -1644,7 +1648,7 @@ R2	ALK	L1198F, G1202R	Non-small cell lung cancer	Ceritinib	Cell line assays comp
 R2	ALK	NPM-ALK fusion	Anaplastic large cell lymphoma 	Crizotinib		28050598; 28122866
 R2	ALK	T1151K	Non-small cell lung cancer	Crizotinib	Case report. Secondary mutation for ALK resistance mutation 	30519133
 R2	AR	Amplification	Prostate cancer	Anti-androgen	Clinical cohort studies	25712683; 26537258
-R2	AR	AR-V7	Prostate cancer	Abiraterone acetate; Enzalutamide		25184630
+R2	AR	AR-V7	Prostate cancer	Abiraterone acetate; Enzalutamide; Androgen receptor antagonist; CYP17A1 inhibitor	Phase 2. Detection of AR-V7 circulating tumour cells in metastatic castration resistant prostate cancer patients treated with enzalutamide or abiraterone showed a significant lower PFS, OS, and response rate compared to those without AR-V7.	25184630
 R2	AR	F877L	Prostate cancer	Enzalutamide; Apalutamide		23842682, 26563462
 R2	AR	H875Y, F877L, T878A, T878S, T878A and S889G, F877L and T878A, H875Y and T878A	Prostate cancer	Apalutamide		26813233
 R2	AR	H875Y, F877L, T878A, T878S, T878A and S889G, T878A and D891H, F877L and T878A, H875Y and T878A	Prostate cancer	Enzalutamide		26813233
@@ -2195,4 +2199,3 @@ R2	TSC1	Oncogenic mutations	Urothelial carcinoma	Buparlisib		32767682
 R2	Tumour Mutational Burden	High	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	WT1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor		27634897
-4	ERBB2	Overexpression, amplification	Solid tumour	GQ1001		10.1158/1538-7445.AM2023-2702
