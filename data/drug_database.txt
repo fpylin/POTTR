@@ -14,6 +14,7 @@ drug	drug_class
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
 A-337|SP51616	bispecific_CD3/EpCAM_antibody
 ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibody
+Mirzotamab clezutoclax|ABBV-155	anti-B7H3_antibody-drug_conjugate
 ABBV-400	anti-c-Met_antibody-drug_conjugate
 ABBV-428|ABBV 428	anti-CD40_agonist_antibody
 ABBV-453	BCL2_inhibitor
@@ -91,6 +92,7 @@ ARS-853	KRAS_G12C_inhibitor
 ARV-471	ER_PROTAC_degrader
 ARX788	anti-ERBB2_antibody-drug_conjugate
 AS602868	IKK2_inhibitor
+ASKG315	IL-15_prodrug
 ASG-22ME	anti-Nectin-4_antibody
 ASN003	PI3K_alpha_inhibitor
 ASP5878	FGFR_inhibitor
@@ -103,6 +105,8 @@ ATG-018|ATG018	ATR_inhibitor
 ATG-101|ATG101	bispecific_PD-L1/4-1BB_antibody
 ATOR1017	anti-41BB_monoclonal_antibody
 ATX-101	cell_penetrating_peptide,PCNA-targeting
+AU-007	anti-IL-2_monoclonal_antibody
+AUM001	MNK_inhibitor
 AXA-042	TLR2/6_agonist
 AZD-9496|AZD 9496|AZD9496	selective_estrogen_receptor_degrader
 AZD0466	dual_Bcl2/xL_inhibitor
@@ -121,6 +125,7 @@ AZD7762	CHEK1_inhibitor
 AZD8055	MTORC1/MTORC2_inhibitor
 AZD8186|AZD-8186	PI3K_beta_inhibitor
 AZD8205|AZD-8205	anti-B7-H4_antibody-drug_conjugate
+AZD8421|AZD-8421	CDK2_inhibitor
 AZD8701	FOXP3_antisense_oligonucleotide
 AZD9592	bispecific_c-Met_EGFR_monoclonal_antibody
 AZD9574	PARP1-selective_inhibitor
@@ -194,6 +199,7 @@ BGB-15025	HPK1_inhibitor
 BGB-16673	BTK-PROTAC
 BGB-24714	IAP_inhibitor; SMAC_mimetic
 BGB-30813	DGK_zeta_inhibitor
+BGB-43395	CDK4_inhibitor
 BGB-3245	RAF_dimer_inhibitor
 BGB-A333|BGB A333|BGBA333	anti-PD-L1_monoclonal_antibody
 BGB-A3055	anti-CCR8_monoclonal_antibody
@@ -838,6 +844,7 @@ NT219	IRS1/2/STAT3_inhibitor
 NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NVG-111	bispecific_T-cell_engager,ROR1-targeting
 NVL-520	ROS1_inhibitor
+NVL-655	ALK_inhibitor,fourth_generation
 NVU-868	BET_inhibitor
 NX-2127	BTK_inhibitor
 NZV930|NZV 930|NZV-930|SRF 373|SRF-373|SRF373	anti-CD73_monoclonal_antibody
@@ -1142,6 +1149,7 @@ Sintilimab|IBI 308|IBI308	anti-PD-1_monoclonal_antibody
 Siremadlin|HDM201|NVP-HDM 201	HDM2_inhibitor
 Sirolimus	MTORC1/MTORC2_inhibitor
 Sitravatinib|MGCD516	KIT/PDGFR/RET/VEGFR_inhibitor; KIT_inhibitor; PDGFR_inhibitor; RET_inhibitor; VEGFR_inhibitor
+SON-1010	IL-12_variant
 Sonidegib|Erismodegib|LDE-225|LDE225|Odomzo	SMO_inhibitor,first_generation
 Sorafenib|BAY 43-9006|Nexavar|BA4 43 9006|BAY 54-9085|Bay-439006	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor; CRAF_inhibitor; FLT3_inhibitor; KIT_inhibitor; PDGFR_inhibitor; VEGFR_inhibitor
 Sotorasib|AMG-510|AMG 510|AMG510	KRAS_G12C_inhibitor
@@ -1175,7 +1183,7 @@ TL-895	BTK_inhibitor
 TNO155	SHP2_inhibitor
 TPF regimen	Cisplatin + Docetaxel + 5-Fluorouracil
 TPST-1120	PPAR-alpha_inhibitor
-TPX-0131	ALK_inhibitor,fourth_generation
+Zotizalkib|TPX0131|TPX-0131	ALK_inhibitor,fourth_generation
 TPX0022|TPX-0022	MET/SRC/CSF1R_inhibitor
 TPX0046|TPX-0046	RET/SRC_inhibitor; RET_inhibitor
 TST001	anti-CLDN18.2_monoclonal_antibody
@@ -1304,7 +1312,7 @@ WYE354	MTOR_inhibitor
 Wnt-C59	PORCN_inhibitor
 XAV939	YAP-TEAD_inhibitor; TNKS1/2_inhibitor
 XELIRI	Capecitabine + Irinotecan
-XL092	MET/VEGFR2/AXL/MER_inhibitor
+Zanzalintinib|XL092	MET/VEGFR2/AXL/MER_inhibitor
 XL765|SAR245409	PI3K/mTOR_inhibitor
 XNW7201	PORCN_inhibitor
 XTX202	tumor-selective_IL-2

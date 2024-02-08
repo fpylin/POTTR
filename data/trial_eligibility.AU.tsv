@@ -129,7 +129,6 @@ NCT03974022	(ERBB2:oncogenic_mutation OR EGFR:oncogenic_mutation)
 NCT03975647	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
 NCT04008030	(MSI:H OR MMR:deficient)
 NCT04064060	NOT catype:solid tumours
-NCT04161885	catype:Acute Myeloid Leukemia
 NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
 NCT04185883	KRAS:G12C
@@ -216,7 +215,6 @@ NCT04969887	mismatch_repair:deficient; NOT catype:Colorectal cancer; *NOT prior_
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation); NOT_RECRUITING
 NCT05067283	KRAS:G12C
-NCT05288166	catype:Prostate cancer
 NCT05059522	prior_therapy:Avelumab
 NCT03611868	(catype:Melanoma OR catype:Malignant peripheral nerve sheath tumor)
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
@@ -246,6 +244,7 @@ NCT04886804	ERBB2:amplification
 NCT04886804	ERBB2:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT05614739	FGFR3:alteration
 NCT04650581	NOT prior_therapy:Fulvestrant; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:PI3K_inhibitor; NOT prior_therapy:AKT_inhibitor; NOT prior_therapy:mTOR_inhibitor
+NCT05501886	NOT prior_therapy:PI3K_inhibitor; NOT prior_therapy:AKT_inhibitor; NOT prior_therapy:mTOR_inhibitor
 NCT05555732	*NOT prior_therapy:systemic_therapy; catype:Non-squamous non-small cell lung cancer
 NCT05384626	(ALK:oncogenic_mutation OR ALK:fusion)
 NCT05789082	KRAS:G12C
@@ -295,6 +294,7 @@ NCT04612751	NOT prior_therapy:systemic_therapy
 NCT04612751	NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT05555732	NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT BRAF:V600E; NOT BRAF:class_2_mutation; NOT BRAF:class_3_mutation; NOT RET:fusion; NOT MET:exon_14_skipping_mutation; NOT prior_therapy:systemic_therapy; NOT prior_therapy:anti-Trop2_monoclonal_antibody; NOT prior_therapy:anti-PD-1_monoclonal_antibody; NOT prior_therapy:anti-PD-L1_monoclonal_antibody
 NCT05855200	catype:Colorectal adenocarcinoma; *catype:Colon adenocarcinoma
+NCT05328908	catype:Colorectal adenocarcinoma
 NCT04305249	*sensitive_to:ATG-017
 NCT04985721	*sensitive_to:Pamiparib
 NCT05067283	catype:Solid tumour; NOT catype:Non-small cell lung cancer; KRAS:G12C; prior_therapy:systemic_therapy
