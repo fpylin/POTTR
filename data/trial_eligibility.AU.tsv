@@ -225,7 +225,6 @@ NCT05152147	(ERBB2:amplification OR ERBB2:overexpression)
 NCT05364073	catype:Non-small cell lung cancer
 NCT05311176	(catype:Gastroesophageal junction adenocarcinoma OR Gastroesophageal adenocarcinoma OR catype:Gastric Cancer); *(ERBB2:overexpression OR ERBB2:amplification); *prior_therapy:Trastuzumab
 NCT05440786	catype:Ewings sarcoma
-NCT03400332	NOT catype:Central nervous system cancer
 NCT05176509	NOT catype:Central nervous system cancer
 NCT05315700	NOT EGFR:T790M; (EGFR:exon_20_insertion OR ERBB2:exon_20_insertion OR ERBB2:amplification OR ERBB2:overexpression)
 NCT05187624	EGFR:vIII
