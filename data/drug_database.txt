@@ -616,6 +616,7 @@ Hydroxychloroquine	anti-malarial_agent
 Hydroxyurea|Hydroxycarbamide	antimetabolite
 IAG933	YAP-TEAD_inhibitor
 IBI110	anti-LAG3_monoclonal_antibody
+IBI129	anti-B7H3_antibody-drug_conjugate
 IBI130	anti-Trop2_monoclonal_antibody
 IBI133	anti-ERBB3_monoclonal_antibody
 IBI3003	bispecific_GPRC5D/CD3_antibody
@@ -898,6 +899,7 @@ OMO-1|JNJ-38877618|OMO1	MET_inhibitor
 ONC201|ONC-201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
 ONC201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
 ONC392|ONC-392	anti-CTLA4_monoclonal_antibody
+OncoSil	brachytherapy
 Palazestrant|OP-1250	complete_estrogen_receptor_antagonist
 ORIC-114	ERBB2_inhibitor,exon_20_selective; EGFR_inhibitor,exon_20_selective
 Obinutuzumab|Afutuzumab|GA-101|GA101|Gazyva|R7159|RO 5072759|RO-5072759|RO5072759	anti-CD20_monoclonal_antibody
