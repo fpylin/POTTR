@@ -1180,6 +1180,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	Homologous Recombination Deficiency Score	High	Breast cancer	Cisplatin		26957554
 4	Homologous Recombination Deficiency Score	High	Endometrial cancer; Uterine serous carcinoma	Cisplatin; Olaparib	Cell line studies suggest that models with high HRD score have higher sensitive to cisplatin and olaparib.	33563487
 4	HPV genotype	HPV16-positive	HPV16-positive cancers	HB-201; HB-201 + HB-202	NCT04180215	10.1200/JCO.2021.39.15_suppl.2502
+4	HRAS	G12C	Solid tumour	Sotorasib; JQD443; RM-018	Preclinical study. Sotorasib is a potent NRASG12C inhibitor, more potent than KRASG12C (5-fold) in vitro. In addition, sotorasib is also a HRASG12C inhibitor. This was demonstrated by the clinical response of a patient with NRASG12C colorectal cancer treated with sotorasib and panitumumab.	38236605
 4	HRAS	Oncogenic mutations	Solid tumours	Selumetinib; Cobimetinib; PD0325901	Cell line study	26544513
 4	HRAS	Oncogenic mutations	Solid tumours	Ulixertinib; LY3214996; LTT462; Ravoxertinib	ERK inhibitors	29431672, 29247021, 10.1200/JCO.2019.37.15_suppl.3001
 4	Human Papillomavirus Status	Negative	Head and neck squamous cell carcinoma	Ficlatuzumab + Cetuximab	NCT03422536. In treatment refractory HPV-negative HNSCC, patients in the Ficlatuzumab + Cetuximab combination arm resulted in ORR of 38% (6/16) with median PFS of 4.1 months.	36977289
@@ -1393,6 +1394,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	NOTCH2	Rearrangements	Solid tumours	MRK003 + paclitaxel	Pre-clinical evidence	25104330
 4	NOTCH3	Overexpression	Non-small cell lung cancer	MRK003	Pre-clinical evidence	17804716
 4	NOTCH3	Overexpression	Pancreatic adenocarcinoma	Tarextumab	Note negative trial in SCLC (NCT01859741). Drug development discontinued	25934888
+4	NRAS	G12C	Solid tumour	Sotorasib; JQD443; RM-018	Preclinical study. Sotorasib is a potent NRASG12C inhibitor, more potent than KRASG12C (5-fold) in vitro. In addition, sotorasib is also a HRASG12C inhibitor. This was demonstrated by the clinical response of a patient with NRASG12C colorectal cancer treated with sotorasib and panitumumab.	38236605
 4	NRAS	G12S, Q61K	Melanoma	BGB-3245	Phase 1. NCT04249843. Response seen in a patient post-BRAF/MEK inhibitor	10.1158/1538-7445.AM2023-CT031
 4	NRAS	Oncogenic mutations	Melanoma	Exarafenib		10.1158/1538-7445.AM2023-CT032
 4	NRAS	Oncogenic mutations	Solid tumours	SCH772984		23614898
@@ -1969,6 +1971,7 @@ R2	GNAQ	Oncogenic mutations	Solid tumour except Uveal melanoma	Trametinib	Phase 
 R2	GNAS	R201C, R201H	Non-small cell lung cancer	Osimertinib	Case report	35946511
 R2	HGF	Overexpression	Gastric cancer	MEK inhibitor		28314274
 R2	HLA-A	A*03	Solid tumours	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody; Anti-CTLA-4 monoclonal antibody; Avelumab; Nivolumab; Avelumab + Axitinib	HLA-A*03 was significantly associated with reduced OS after immune checkpoint inhibitor in the MSK-IMPACT and DFCI studies, JAVELIN solid tumour trials (HR 1.22-1.48), reduced PFS in nivolumab trials (CheckMate 009, 010, 025, HR1.31) and in JAVELIN renal 101 (HR 1.59 per allele) but not the control group. The meta-analysis showed that HLA-A*03 was associated with poor outcomes treated with ICI at genome-wide significance.	34895481
+R2	HRAS	G12C	Solid tumour	Adagrasib; GDC6036	Preclinical study. Both adagrasib and GDC6036 are KRAS G12C specific inhibitors.	38236605
 R2	HRAS	G12V	Solid tumours	Sonidegib; Vismodegib	Off-target mechanism	26130651
 R2	HRAS	G13D	Colorectal adenocarcinoma	Panitumumab; Cetuximab; Cetuximab + Irinotecan; Cetuximab + FOLFIRI; FOLFOX + Panitumumab	Case report and cell line study. A single case report of metastatic colorectal cancer harbouring HRAS G13D mutation, showing lack of response to Panitumumab. HRAS mutations constitute 1% of colorectal cancer.	26561417
 R2	HRAS	G13V	Colorectal adenocarcinoma	Divarasib; Divarasib + Cetuximab	Phase 1b trial. NCT04449874. GO42144. Potential treatment-emergent resistance mechanisms in ctDNA following divarasib plus cetuximab treatment in KRAS G12C-positive CRC.	38052910
@@ -2101,7 +2104,10 @@ R2	Mismatch repair	Proficient, NOT Deficient	Endometrial cancer	Durvalumab	PHAED
 R2	MRAS	Q71R	Non-small cell lung cancer	Sotorasib	Treatment-emergent RAS and RAF hotspot mutations were also observed in both clinical samples and patient-derived xenograft models.	34759319
 R2	MTOR	F2108L	Anaplastic thyroid cancer 	Everolimus	F2108L confers resistance to allosteric mTOR inhibition	25295501
 R2	MYC	Amplification	Colorectal adenocarcinoma	Divarasib; Divarasib + Cetuximab	Phase 1b trial. NCT04449874. GO42144. Potential treatment-emergent resistance mechanisms in ctDNA following divarasib plus cetuximab treatment in KRAS G12C-positive CRC.	38052910
+R2	MYC	Amplification	Small-cell lung cancer	Cisplatin + Etoposide; Carboplatin + Etoposide; Olaparib + Temozolomide; Topotecan	Preclinical study. Serial PDX models revealed that cross-resistance was acquired through MYC amplification on extranuclear DNA (ecDNA). Genomic and transcriptional profiles of the full PDX panel revealed that MYC paralog amplifications on ecDNAs were recurrent in relapsed cross-resistant SCLC with corroboration from tumour biopsies from relapsed patients.	38386926
+R2	MYCL	Amplification	Small-cell lung cancer	Cisplatin + Etoposide; Carboplatin + Etoposide; Olaparib + Temozolomide; Topotecan	Preclinical study. Serial PDX models revealed that cross-resistance was acquired through MYC amplification on extranuclear DNA (ecDNA). Genomic and transcriptional profiles of the full PDX panel revealed that MYC paralog amplifications on ecDNAs were recurrent in relapsed cross-resistant SCLC with corroboration from tumour biopsies from relapsed patients.	38386926
 R2	MYCN	Amplification	Prostate cancer	Androgen receptor antagonist; GnRH agonist; CYP17A1 inhibitor; Enzalutamide; Apalutamide	Off-target mechanism	26563462
+R2	MYCN	Amplification	Small-cell lung cancer	Cisplatin + Etoposide; Carboplatin + Etoposide; Olaparib + Temozolomide; Topotecan	Preclinical study. Serial PDX models revealed that cross-resistance was acquired through MYC amplification on extranuclear DNA (ecDNA). Genomic and transcriptional profiles of the full PDX panel revealed that MYC paralog amplifications on ecDNAs were recurrent in relapsed cross-resistant SCLC with corroboration from tumour biopsies from relapsed patients.	38386926
 R2	NF1	Deletion	Colorectal adenocarcinoma	Divarasib; Divarasib + Cetuximab	Phase 1b trial. NCT04449874. GO42144. Potential treatment-emergent resistance mechanisms in ctDNA following divarasib plus cetuximab treatment in KRAS G12C-positive CRC.	38052910
 R2	NF1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	NF1	Oncogenic mutations	Acute myeloid leukaemia	Ivosidenib	RTK pathway mutations are associated with primary resistance to ivosidenib	32380538
@@ -2116,6 +2122,7 @@ R2	NF2	Loss-of-function mutations	Solid tumours	Defactinib	NCI-MATCH Arm U: ORR 
 R2	NRAS	Amplification	Melanoma	Imatinib		23775962
 R2	NRAS	Amplification, G13R, Q61R	Colorectal adenocarcinoma	Divarasib; Divarasib + Cetuximab	Phase 1b trial. NCT04449874. GO42144. Potential treatment-emergent resistance mechanisms in ctDNA following divarasib plus cetuximab treatment in KRAS G12C-positive CRC.	38052910
 R2	NRAS	G12, G13, Q61	Solid tumours except melanoma	Binimetinib	NCI-MATCH. NRAS subprotocol. ORR 2% with a single responder.	33637626
+R2	NRAS	G12C	Solid tumour	Adagrasib; GDC6036	Preclinical study. Both adagrasib and GDC6036 are KRAS G12C specific inhibitors.	38236605
 R2	NRAS	G13R	Colorectal adenocarcinoma	Divarasib	Phase 1/2 single arm trial. GO42144. Divarasib. NCT04449874. Acquired and treatment-emergent mutations	37611121
 R2	NRAS	Oncogenic mutations	Acute myeloid leukaemia	Ivosidenib	NRAS- reduced response rate compared with WT NRAS	32380538
 R2	NRAS	Oncogenic mutations	Rhabdomyosarcoma	Ulixertinib	Phase 2. Pediatric MATCH Arm J (APEC1621J). NCT03698994. In paediatric population with treatment-refractory tumors (N=20) harbouring activating MAPK alterations, ORR was 0%.	10.1200/JCO.2022.40.16_suppl.3009

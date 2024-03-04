@@ -53,7 +53,7 @@ BEGIN {
 sub min { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ < $v) ; } return $v; }
 sub max { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ > $v) ; } return $v; }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
-sub trim { my $s = shift; $s =~ s/^\s*|\s*$//g if (defined $s) ; return $s; }
+sub trim { my $s = shift; $s =~ s/^\s*//; $s =~ s/\s*$//; return $s; }
 sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
 sub levenshtein {
 	my ($s1, $s2) = @_;
@@ -107,9 +107,9 @@ sub mk_signature {
 	my $x = shift;
 	return $drug_signature_cache{$x} if exists $drug_signature_cache{$x} ;
 	$x =~ s/[^A-Za-z0-9]//g;
-	$x = lc($x);
-	$drug_signature_cache{$x} = lc($x);
-	return lc($x);
+	my $lc_x = lc($x);
+	$drug_signature_cache{$x} = $lc_x;
+	return $lc_x;
 }
 
 sub is_a_drug { 

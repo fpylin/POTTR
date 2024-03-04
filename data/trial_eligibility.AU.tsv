@@ -346,7 +346,7 @@ NCT05581004	*(catype:Non-small cell lung cancer OR catype:head and neck squamous
 NCT05696626	ESR1:oncogenic_mutation
 NCT05208047	catype:Gastrointestinal stromal tumour
 NCT05330429	catype:Colorectal cancer
-NCT04526106	catype:Cholangiocarcinoma
+NCT04526106	catype:Cholangiocarcinoma; FGFR2:alteration
 ACTRN12619000566134	catype:Colorectal cancer
 NCT04524871	catype:Hepatocellular carcinoma
 NCT06036836	catype:Cutaneous squamous cell carcinoma; *NOT prior_therapy:systemic_therapy
@@ -357,3 +357,4 @@ NCT05650879	ERBB2:exon_20_insertion
 NCT06016738	*prior_therapy:CDK4/6_inhibitor; NOT prior_therapy:Eribulin; NOT prior_therapy:Elacestrant
 NCT06105632	NOT ERBB2:amplification; *prior_therapy:CDK4/6_inhibitor
 NCT06179160	KRAS:G12D
+NCT04585750	TP53:Y220C

@@ -93,7 +93,9 @@ use warnings;
 { # class / package for managing facts
 package Facts;
 
-sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
+use Storable;
+
+sub uniq { my %a; $a{$_} = 1 for(@_) ; return sort keys %a; }
 
 sub new {
     my $class = shift;
@@ -128,9 +130,13 @@ my %escchar_map = (
 my %escchar_map_r = map { $escchar_map{$_} => $_ } keys %escchar_map ;
 my $escchar_map_r_regex = join('|', sort { length $b <=> length $a } keys %escchar_map_r );
 
+my %__escape_cache;
+
 sub escape {
-	my $x = shift;
+	my $x0 = my $x = shift;
+	return $__escape_cache{$x} if exists $__escape_cache{$x} ;
 	$x =~ s/([;#\[\]])/"--".$escchar_map{$1}."--"/sge;
+	$__escape_cache{$x0} = $x ;
 	return $x;
 }
 
@@ -140,24 +146,32 @@ sub unescape {
 	return $x;
 }
 
+our %mk_fact_str_cache ;
 
 sub mk_fact_str($@) {
 	my $fact = shift;
 	my @tags = @_;
-	my $retval = $fact;
-	@tags = sort( uniq( grep { defined } @tags) );
-	$retval .= " [".join('; ', ( map { escape($_) } @tags))."]" if scalar @tags;
-	return $retval ;
+	@tags = grep { defined } @tags ;
+	return $fact if ! scalar @tags;
+	my $z = join("\0",$fact, @tags) ;
+	return $mk_fact_str_cache{ $z } if ( exists $mk_fact_str_cache{ $z } );
+	@tags = uniq( @tags );
+	return (  $mk_fact_str_cache{ $z } = $fact." [".join('; ', ( map { escape($_) } @tags))."]"  );
 }
+
+our %string_to_fact_and_tags_cache;
 
 sub string_to_fact_and_tags($) {
 	my $input = shift; # string
+	return @{ Storable::thaw( $string_to_fact_and_tags_cache{$input} ) } if exists $string_to_fact_and_tags_cache{$input};
 	my ($fact, $tags) = ( $input =~ /^(.+)\s*\[\s*(.+)\s*\]\s*$/ );
 	$fact = $input if ! defined $fact;
 	$fact =~ s/^\s*//; $fact =~ s/\s*$//;
 	my @tags ;
 	@tags = split /\s*;\s*/, $tags if defined $tags ; # map { unescape($_) } 
-	return ($fact, @tags) ;
+	my @a = ($fact, @tags);
+	$string_to_fact_and_tags_cache{$input} = Storable::freeze(\@a);
+	return @a;
 }
 
 sub string_to_tags_hashed($) {
@@ -349,6 +363,8 @@ sub func($@) {
 ######################################################################################
 {
 package Rules;
+
+use Storable;
 
 our @EXPORT;
 our @EXPORT_OK;
@@ -695,81 +711,125 @@ sub run { # Rules::run - the main inference engine.
 	return $$facts_ref; 	# $facts->get_fact_tag_hash();
 }
 
+our %__Rule_load_proper_cache ;
+our %__Rule_load_proper_cache_long ;
+
+sub __Rule_load_proper($$$$) {
+	my ($self, $order, $prio, $rule_str) = @_;
+	
+	return undef if exists $self->{'rules_str'}{$rule_str};
+	
+	my ($lhs, $rhs) = split /\s*=>\s*/, $rule_str;
+	
+	return undef if ! defined $rhs;
+
+	my @lhs ;
+	my @lhs_neg ;
+	my @lhs_assert ; # false assertion for conditional constraint satisfication. Syntax "*LHS1"
+	
+	if ( exists $__Rule_load_proper_cache_long{$lhs} ) { # Two level caching to improve performance.
+		my $c = Storable::thaw( $__Rule_load_proper_cache_long{$lhs} ) ;
+		@lhs_assert = @{ $$c{a} };
+		@lhs_neg = @{ $$c{n} };
+		@lhs = @{ $$c{e} };
+	} else {
+		for my $lhse ( split /\s*;\s*/, $lhs ) {
+			my $lhse0 = $lhse ;
+			if ( exists $__Rule_load_proper_cache{$lhse0} ) {
+				my $c = Storable::thaw( $__Rule_load_proper_cache{$lhse0} ) ;
+				push @lhs_assert, $$c{a};
+				push @lhs_neg, $$c{n};
+				push @lhs, $$c{e};
+			} else {
+				$lhse =~ s/^\s*//; 
+				$lhse =~ s/\s*$//; 
+				push @lhs_assert, ( my $lhsa = ( ( $lhse =~ s/^\s*\*\s*// ) ? 1 : 0) ); 
+				push @lhs_neg, ( my $lhsn = ( ( $lhse =~ s/^\s*NOT\b\s*// ) ? 1 : 0) ) ; 
+				push @lhs, $lhse;
+				$__Rule_load_proper_cache{$lhse0} = Storable::freeze( { a => $lhsa, n => $lhsn, e => $lhse } ) ;
+			}
+		}
+		$__Rule_load_proper_cache_long{$lhs} = Storable::freeze( { a => \@lhs_assert, n => \@lhs_neg, e => \@lhs } ) ;
+	}
+
+	my @rhs ;
+	my @rhs_neg ;
+	
+	if ( exists $__Rule_load_proper_cache_long{$rhs} ) { # Two level caching to improve performance.
+		my $c = Storable::thaw( $__Rule_load_proper_cache_long{$rhs} ) ;
+		@rhs_neg = @{ $$c{n} };
+		@rhs = @{ $$c{e} };
+	} else {
+		my $rhs0 = $rhs;
+		while ( length($rhs) ) {
+			$rhs =~ s/^\s*//;
+			if ( $rhs =~ /^(.+?(?:\[.+?\])?)\s*(?:;|$)/ ) {
+				$rhs = $';
+				
+				my $rhse0 = my $rhse = $1;
+				if ( exists $__Rule_load_proper_cache{$rhse0} ) {
+					my $c = Storable::thaw( $__Rule_load_proper_cache{$rhse0} ) ;
+					push @rhs_neg, $$c{n};
+					push @rhs, $$c{e};
+				} else {
+					push @rhs_neg, ( my $rhsn = ( ( $rhse =~ s/^\s*NOT\b\s*// ) ? 1 : 0) ); 
+					push @rhs, $rhse;
+					$__Rule_load_proper_cache{$rhse0} = Storable::freeze( { a => 0, n => $rhsn, e => $rhse } ) ;
+				}
+			}
+		}
+		$__Rule_load_proper_cache_long{$rhs0} = Storable::freeze( { a => [ 0 x scalar(@rhs) ], n => \@rhs_neg, e => \@rhs } ) ;
+	}
+	
+	my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs, 'rhs_neg' => \@rhs_neg);
+	
+	$self->{'rules_str'}{$rule_str}++;
+	
+	return \%a;
+}
 
 
-sub load { # Load if-then rules
+sub load { # Load if-then rules from strings
 	my ($self, @rules_strs) = @_;
 	my @rules_spec;
 	
 	my %disjunctive_lhs;
-	
+
 	my $order = 1;
-	
+
 	for my $rule_str (@rules_strs) {
 		$rule_str  =~ s/\s*#.*//; # remove comments
 		my $prio = 0; # defines rule priority;
 		my $prefix = ( $rule_str =~ s/^\s*\[(.+?)\]\s*// ) ? $1 : undef;
-		my ($lhs, $rhs) = split /\s*=>\s*/, $rule_str;
-		next if ! defined $rhs;
-
-# 		printf "\e[1;31mRULE ALREADY EXISTS: $rule_str\e[0m\n" if exists $self->{'rules_str'}{$rule_str};
-		next if exists $self->{'rules_str'}{$rule_str};
-		my @lhs = map { s/^\s*|\s*$//g; $_ } split /\s*;\s*/, $lhs;
-		my @rhs ;
-		while ( length($rhs) ) {
-			$rhs =~ s/^\s*//;
-			if ( $rhs =~ /^(.+?(?:\[.+?\])?)(?:;|$)/ ) {
-				push @rhs, $1;
-				$rhs = $';
-			}
-		}
-		
-# 		my @rhs = map { s/^\s*|\s*$//g; $_ } split /\s*;\s*/, $rhs;
-		my @lhs_neg ;
-		my @rhs_neg ;
-		my @lhs_assert ; # false assertion for conditional constraint satisfication. Syntax "*LHS1"
-		for (@lhs) { push @lhs_assert, ( ( s/^\s*\*\s*// ) ? 1 : 0); } 
-		for (@lhs) { push @lhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); }
-		for (@rhs) { push @rhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); }
 		
 		if ( defined $prefix ) {
 			my %attrib = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*;\s*/, $prefix ;
 			$prio = $attrib{'prio'} if exists $attrib{'prio'} ;
 		}
 		
-		my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs, 'rhs_neg' => \@rhs_neg);
+		my $a = $self->__Rule_load_proper($order, $prio, $rule_str);
+		next if ! defined $a;
 		++$order ;
-		push @rules_spec, \%a;
-		$self->{'rules_str'}{$rule_str}++;
+		push @rules_spec, $a ; # compiled rules
 		
-		$disjunctive_lhs{$_} = \%a for grep { /^\(.*?\s+OR\s+.*\)$/ } @lhs ; # Now can handle simple disjunctions (one level only) FIXME
+		$disjunctive_lhs{$_} = $a for grep { /^\(.*?\s+OR\s+.*\)$/ } @{ $a->{lhs} } ; # Now can handle simple disjunctions (one level only) FIXME
 	}
 
 	for my $disj_lhs (sort { $disjunctive_lhs{$a}{'order'} <=> $disjunctive_lhs{$b}{'order'} } keys %disjunctive_lhs) {
 		my ($disj_rhs, $disj_rhs_orig) = ($disj_lhs, $disj_lhs);
 		$disj_rhs =~ s/^\((.+)\)$/$1/;
 		my @disj_lhs = split /\s+OR\s+/, $disj_rhs ;
-		my @rhs = ($disj_rhs_orig) ;
 		
 		my $prio = ( $disjunctive_lhs{$disj_lhs}{'prio'} - 1 ); # Handling of rules should take precedence before the actual rules.
 		
 		for my $disj_lhs (@disj_lhs) { 
 			my $rule_str = "$disj_lhs => $disj_rhs_orig";
-			next if exists $self->{'rules_str'}{$rule_str};
-			my @lhs = ($disj_lhs);
-			my @lhs_assert ;
-			my @lhs_neg ;
-			my @rhs_neg ;
-			for (@lhs) {
-				push @lhs_assert, ( ( s/^\s*\*\s*// ) ? 1 : 0); 
-				push @lhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); 
-			}
-			for (@rhs) { push @rhs_neg, ( ( s/^\s*NOT\b\s*// ) ? 1 : 0); }
 			
-			my %a = ('order' => $order, 'prio' => $prio, 'lhs' => \@lhs, 'lhs_neg' => \@lhs_neg, 'lhs_assert' => \@lhs_assert, 'rhs' => \@rhs, 'rhs_neg' => \@rhs_neg );
+			my $a = $self->__Rule_load_proper($order, $prio, $rule_str);
+			next if ! defined $a;
+			
 			++$order ;
-			push @rules_spec, \%a;
-			$self->{'rules_str'}{$rule_str}++;
+			push @rules_spec, $a; # compiled rules
 		}
 	}
 	

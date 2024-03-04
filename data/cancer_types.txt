@@ -143,6 +143,7 @@ Cancer	Solid tumour	Central nervous system cancer	Central nervous system primiti
 Cancer	Solid tumour	Central nervous system cancer	Central nervous system primitive neuroectodermal tumour|CNS PNET|CNS-PNET
 Cancer	Solid tumour	Central nervous system cancer	Germinoma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Astrocytoma
+Cancer	Solid tumour	Central nervous system cancer	Glioma	Astrocytoma	Diffuse astrocytoma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Astrocytoma	Malignant astrocytoma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Benign glioma	Pilocytic astrocytoma
 Cancer	Solid tumour	Central nervous system cancer	Glioma	Benign glioma	Pilocytic astrocytoma	Childhood pilocytic astrocytoma
