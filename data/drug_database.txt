@@ -182,6 +182,7 @@ Aumolertinib|HS-10296	EGFR_inhibitor,third_generation
 Autologous GD2 chimeric antigen receptor-expressing peripheral blood T cells	autologous_GD2_CAR_T_cells
 Avapritinib|AYVAKIT|BLU-285	KIT_D816V_inhibitor; KIT_inhibitor,ATP-competitive; PDGFRA_inhibitor
 Avelumab|Bavencio|MSB-0010718C|MSB0010718C	anti-PD-L1_monoclonal_antibody
+Avutometinib|VS-6766	RAF/MEK_clamp
 Axitinib|AG-013736|AG013736|Inlyta	VEGFR/PDGFR_inhibitor; KIT_inhibitor,ATP-competitive
 Azacitidine|5-AC|Mylosar|CC-486|Vidaza|5 AZC|5-AZC|5-Aza-cytidine|Azacytidine|Ladakamycin|U-18496	DNA_methyltransferase_inhibitor; antimetabolite
 BA3071	anti-CTLA-4_monoclonal_antibody
@@ -555,6 +556,7 @@ GR-1405|GR 1405|GR1405	anti-PD-L1_monoclonal_antibody
 GRWD5769	ERAP1_inhibitor
 GS-3583	FLT3_agonist_fusion_protein
 GS-4224|GS 4224|GS4224	anti-PD-L1_monoclonal_antibody
+GS-9911	DGK-alpha_inhibitor
 GS493	SHP2_inhibitor
 GSK126	EZH2_inhibitor
 GSK2256098	FAK_inhibitor
@@ -800,6 +802,7 @@ MIL93	anti-CLDN18.2_monoclonal_antibody
 MK-0482|MK0482	anti-ILT3_monoclonal_antibody
 MK-1084	KRAS_G12C_inhibitor
 MK-1697|MK1697	bispecific_PD-1/LAG3_antibody
+MK-2870|SKB264	anti-Trop2_antibody-drug_conjugate
 MK-4166	anti-GITR_monoclonal_antibody
 MK-4830|MK4830	anti-ILT4_monoclonal_antibody
 MK-7684A	Vibostolimab + Pembrolizumab

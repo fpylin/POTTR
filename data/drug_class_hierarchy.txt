@@ -125,6 +125,7 @@ MDM2_inhibitor
 MDM2_inhibitor	p53-HDM2_interaction_inhibitor
 MEK_inhibitor
 MEK_inhibitor	RAF/MEK_inhibitor
+MEK_inhibitor	RAF/MEK_inhibitor	RAF/MEK_clamp
 MET_inhibitor
 MET_inhibitor	ALK/ROS1/MET_inhibitor
 MET_inhibitor	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor
