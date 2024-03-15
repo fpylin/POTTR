@@ -1,4 +1,9 @@
 13-cis-retinoic_acid
+161Tb-PSMA-radioconjugate
+177Lu-anti-CA9-radioconjugate
+212Pb-PSMA-radioconjugate
+225Ac-PSMA-radioconjugate
+4-1BB_agonist_antibody
 A2aR_antagonist	adenosine_A2aR_and_A2bR_antagonist
 A2bR_antagonist	adenosine_A2aR_and_A2bR_antagonist
 AKT_inhibitor	AKT2_inhibitor
@@ -215,7 +220,7 @@ AR_pathway_inhibitor	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,first_g
 AR_pathway_inhibitor	antiandrogen,oral_PROTAC
 AR_pathway_inhibitor	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,second_generation
 AR_pathway_inhibitor	antiandrogen,steroidal
-AR_pathway_inhibitor	antiandrogen,nonsteroidal	antiandrogen,AR_NTD_inhibior
+AR_pathway_inhibitor	antiandrogen,nonsteroidal	antiandrogen,AR_NTD_inhibitor
 AR_pathway_inhibitor	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation
 AR_pathway_inhibitor	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation	antiandrogen,nonsteroidal,second_generation
 AR_pathway_inhibitor	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation	CYP17A1_inhibitor
