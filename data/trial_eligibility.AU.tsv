@@ -322,7 +322,7 @@ NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Ipataser
 NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Inavolisib; *NOT prior_therapy:AKT_inhibitor; *NOT prior_therapy:PI3K_alpha_inhibitor; *NOT prior_therapy:MTOR_inhibitor
 NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; *NOT prior_therapy:MTOR_inhibitor
 NCT04802759	catype:Breast cancer; *ESR1:protein_expresion; sensitive_to:Atezolizumab; *NOT prior_therapy:anti-CD137_agonistic_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody
-NCT05417594	*(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
+NCT05417594	(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
 NCT05954871	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT BRAF:V600E; NOT NRAS:oncogenic_mutation; NOT EGFR:oncogenic_mutation
 NCT05954871	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion); NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:V600E; *prior_therapy:Osimertinib
 NCT05920356	KRAS:G12C; *NOT prior_therapy:systemic_therapy
