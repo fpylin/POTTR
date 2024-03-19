@@ -244,6 +244,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Append
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600 colorectal cancer	BRAF V600E colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600 colorectal cancer|BRAF V600 colorectal adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Medullary colorectal carcinoma|Medullary carcinoma of the colon
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma	Microsatellite stable colon cancer|Colon cancer microsatellite stable|MSS Colon Cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma|Colon cancer|Bowel cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal mucinous adenocarcinoma
