@@ -114,6 +114,7 @@ NCT03674567	catype:Non-small cell lung cancer
 NCT03674567	catype:Oesophageal carcinoma
 NCT03674567	catype:Triple-negative breast cancer
 NCT03674567	catype:Urothelial carcinoma
+NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation

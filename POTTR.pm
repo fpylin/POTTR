@@ -604,6 +604,11 @@ sub gen_rules_drug_db {
 		push @drug_db, mkrule( 
 			["sensitive_to_drug_class:$a", "NOT resistant_to_drug_class:$b"], [ Facts::mk_fact_str("sensitive_to_drug_class:$b", "CERTAIN:treatment_drug_class", "CERTAIN:treatment_drug_class:$b") ]
 		);
+		# If there is only resistance from other cancer type, it is uncertain and should be whitelisted.
+		push @drug_db, mkrule( 
+			["sensitive_to_drug_class:$a", "resistant_to_drug_class:$b", "recommendation_tier_drug_class:$b:R2B", "NOT recommendation_tier_drug_class:$b:R2", "NOT recommendation_tier_drug_class:$b:R1"], 
+			[ Facts::mk_fact_str("sensitive_to_drug_class:$b", "NOT resistant_to_drug_class:$b", "CERTAIN:treatment_drug_class", "CERTAIN:treatment_drug_class:$b") ]
+		);
 	}
 
 	for my $combo ( Therapy::get_all_known_combinations() ) {
