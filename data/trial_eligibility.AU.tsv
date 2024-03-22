@@ -104,7 +104,6 @@ NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_
 NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
 NCT03497767	EGFR:oncogenic_mutation
-NCT03551626	BRAF:V600_missense_variant
 NCT03674567	catype:Cervical cancer
 NCT03674567	catype:Gastric cancer
 NCT03674567	catype:Head and neck squamous cell carcinoma
@@ -211,7 +210,7 @@ NCT04857372	catype:Solid tumour; (YAP1:fision OR NF2:oncogenic_mutation)
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation); NOT_RECRUITING
 NCT05067283	KRAS:G12C
-NCT05086692	*prior_therapy:immune_checkpoint_blockade
+NCT05086692	*prior_therapy:immune_checkpoint_blockade; catype:Melanoma 
 NCT05059522	prior_therapy:Avelumab
 NCT03611868	(catype:Melanoma OR catype:Malignant peripheral nerve sheath tumor)
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
@@ -337,7 +336,6 @@ NCT05132582	*NOT prior_therapy:Pyrotinib; *NOT prior_therapy:Lapatinib; *NOT pri
 NCT05581004	*(catype:Non-small cell lung cancer OR catype:head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Urothelial carcinoma OR catype:Cervical cancer OR catype:Renal cell carcinoma OR catype:Hepatocellular carcinoma OR catype:Gastric cancer OR catype:Oesophageal cancer)
 NCT05696626	ESR1:oncogenic_mutation
 NCT05208047	catype:Gastrointestinal stromal tumour
-NCT05330429	catype:Colorectal cancer
 ACTRN12619000566134	catype:Colorectal cancer
 NCT04524871	catype:Hepatocellular carcinoma
 NCT06036836	catype:Cutaneous squamous cell carcinoma; *NOT prior_therapy:systemic_therapy
@@ -352,6 +350,5 @@ NCT04585750	TP53:Y220C
 NCT05094336	*CDKN2A:deletion; MTAP:deletion; (catype:Non-small cell lung cancer OR catype:Biliary tract cancer OR catype:Head and neck squamous cell carcinoma OR catype:Pancreatic adenocarcinoma)
 NCT05975073	MTAP:deletion; *MTAP:loss_of_protein_expression
 NCT06065748	*NOT (ERBB2:amplification OR ERBB2:overexpression); *ESR1:protein_expresion; ESR1:oncogenic_mutation; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
-NCT04468607	catype:Colorectal cancer; NOT microsatelite_instability:high; *NOT mismatch_repair:deficient; *prior_therapy:systemic_therapy
 NCT05867121	*(TGFBR1:oncogenic_mutation OR TGFBR2:oncogenic_mutation); *(catype:Non-small cell lung carcinoma OR catype:Gastric cancer OR catype:Pancreatic adenocarcinoma)
 NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)

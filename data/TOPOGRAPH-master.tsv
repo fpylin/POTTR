@@ -834,7 +834,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	CCNE1	Amplification	Triple-negative breast cancer	Adavosertib		30181387
 4	CCNE1	Amplification, Overexpression	Solid tumours	RP-6306	Inhibition of the PKMYT1 kinase is synthetic lethal in solid tumour vivo models harbouring amplification of CCNE1 gene.	35444283
 4	CCNE1	Overexpression	Triple-negative breast cancer	Olaparib + Ceralasertib	Phase 2 plasmaMatch Cohort E. ATM loss, high CCNE1 expresion, and low RAD51 were associated with higher rate of response and PFS.	10.1200/JCO.2022.40.16_suppl.1024
-4	CD274	Amplification	Solid tumours	Anti-PD-1 monoclonal antibody; immune checkpoint blockade,PD-L1 targeting 	Retrospective review suggest ORR 66%	27900363; 27942391; 29902298; 10.1200/PO.18.00017
+4	CD274	Amplification	Solid tumours	Anti-PD-1 monoclonal antibody; immune checkpoint blockade,PD-L1-targeting 	Retrospective review suggest ORR 66%	27900363; 27942391; 29902298; 10.1200/PO.18.00017
 4	CD274	Amplification, protein expression	Malignant peripheral nerve sheath tumour	Nivolumab	Case report. PD-L1 &gt; 90%. 	10.1200/PO.18.00375
 4	CD274	Protein expression	Biliary tract cancers	Nivolumab	PD-L1 positive v negative (&gt;=1%), PFS 10.4 v 2.3 mo	32352498
 4	CD274	Protein expression	Gastric cancer	Toripalimab	ORR 37% in tumours with PD-L1 expression &gt;= 1% for TC or IC using SP142 assay (v 8%).	31236579
