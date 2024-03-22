@@ -210,7 +210,8 @@ NCT04857372	catype:Solid tumour; (YAP1:fision OR NF2:oncogenic_mutation)
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT04913285	(BRAF:oncogenic_mutation OR NRAS:oncogenic_mutation); NOT_RECRUITING
 NCT05067283	KRAS:G12C
-NCT05086692	*prior_therapy:immune_checkpoint_blockade; catype:Melanoma 
+NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catype:Non-melanoma skin cancer)
+NCT05086692	(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT05059522	prior_therapy:Avelumab
 NCT03611868	(catype:Melanoma OR catype:Malignant peripheral nerve sheath tumor)
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
@@ -306,7 +307,7 @@ NCT05894239	PIK3CA:oncogenic_mutation; *(ERBB2:amplification OR ERBB2:overexpres
 NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression)
 NCT05872295	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression); prior_therapy:systemic_therapy
 NCT05872295	catype:Solid tumour; NOT Breast cancer; NOT Gastric cancer; NOT Gastroesophageal adenocarcinoma; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression OR ERBB2:oncogenic_mutation)
-NCT05577416	NOT prior_therapy:systemic_therapy
+NCT05577416	NOT prior_therapy:systemic_therapy; catype:Low-grade glioma
 NCT04929223	catype:Colorectal adenocarcinoma; *(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT04929223	catype:Colorectal adenocarcinoma; KRAS:G12C
 NCT04895709	*NOT prior_therapy:Docetaxel

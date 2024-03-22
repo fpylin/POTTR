@@ -203,6 +203,7 @@ BGB-11417	BCL2_inhibitor
 BGB-15025	HPK1_inhibitor
 BGB-16673	BTK-PROTAC
 BGB-24714	IAP_inhibitor; SMAC_mimetic
+BGB-21447	BCL2_inhibitor
 BGB-30813	DGK-zeta_inhibitor
 BGB-3245	RAF_dimer_inhibitor
 BGB-43395	CDK4_selective_inhibitor
@@ -656,6 +657,7 @@ INX-315	CDK2_inhibitor
 IOA-244	PI3K-delta_inhibitor
 IPI-549|IPI 549	PI3K-gamma_inhibitor
 ISB-1442|ISB 1442	bispecific_CD38/CD47_antibody
+ISB-2001|ISB 2001	trispecific_BCMA/CD38_T-cell_engager
 IWP-1	PORCN_inhibitor
 IWP-2	PORCN_inhibitor
 Ibrutinib|CRA-032765|Imbruvica|PCI-32765	BTK_inhibitor
