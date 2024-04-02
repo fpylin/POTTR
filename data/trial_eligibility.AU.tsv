@@ -193,9 +193,9 @@ NCT04589845	(sensitive_to_drug_class:RAF_dimer_inhibitor OR sensitive_to:Belvara
 NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
 NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
 NCT04589845	tumour_mutational_burden:high; *NOT prior_therapy:immune_checkpoint_blockade; *NOT_RECRUITING
-NCT04589845	(ATM:oncogenic_mutation OR ATM:deletion)
-NCT04589845	(SETD2:oncogenic_mutation OR SETD2:deletion)
-NCT04589845	KRAS:G12C; NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer
+NCT04589845	(ATM:oncogenic_mutation OR ATM:deletion); NOT_RECRUITING
+NCT04589845	(SETD2:oncogenic_mutation OR SETD2:deletion); NOT_RECRUITING
+NCT04589845	KRAS:G12C; NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer; *WARNING_NOT_IN_VIC
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04607421	BRAF:V600E; catype:Colorectal cancer
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
@@ -232,7 +232,7 @@ NCT05425940	catype:Colorectal cancer; NOT prior_therapy:Regorafenib; NOT prior_t
 NCT05609370	catype:Colorectal cancer; NOT MSI:high; NOT MMR:deficient
 NCT02513849	catype:Oesophageal cancer
 NCT04631731	*BIOMARKER_STUDY
-NCT05512377	MDM2:amplification; NOT TP53:oncogenic_mutation; (catype:Biliary tract cancer OR catype:Pancreatic adenocarcinoma OR catype:Urothelial carcinoma OR catype:Lung adenocarcinoma)
+NCT05512377	MDM2:amplification; NOT TP53:oncogenic_mutation; (catype:Urothelial carcinoma OR catype:Lung adenocarcinoma)
 NCT04886804	ERBB2:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT05614739	FGFR3:alteration
 NCT04650581	NOT prior_therapy:Fulvestrant; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:PI3K_inhibitor; NOT prior_therapy:AKT_inhibitor; NOT prior_therapy:mTOR_inhibitor
