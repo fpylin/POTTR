@@ -515,8 +515,8 @@ Cancer	Solid tumour	Sarcoma	EBV-related sarcoma
 Cancer	Solid tumour	Sarcoma	Endometrial stromal sarcoma
 Cancer	Solid tumour	Sarcoma	Epithelioid sarcoma
 Cancer	Solid tumour	Sarcoma	Extra-salivary myoepithelial carcinoma
-Cancer	Solid tumour	Sarcoma	Ewing family of tumors	Primitive neuroectodermal tumour	Ewing sarcoma|Ewing sarcoma of bone|Peripheral primitive neuroectodermal tumor|Peripheral PNET
-Cancer	Solid tumour	Sarcoma	Ewing family of tumors	Primitive neuroectodermal tumour|Primitive neuroectodermal tumor
+Cancer	Solid tumour	Sarcoma	Ewing family of tumours	Primitive neuroectodermal tumour	Ewing sarcoma|Ewing sarcoma of bone|Peripheral primitive neuroectodermal tumor|Peripheral PNET
+Cancer	Solid tumour	Sarcoma	Ewing family of tumours	Primitive neuroectodermal tumour|Primitive neuroectodermal tumor
 Cancer	Solid tumour	Sarcoma	Fibromyxoid tumour
 Cancer	Solid tumour	Sarcoma	Fibromyxosarcoma
 Cancer	Solid tumour	Sarcoma	Fibrosarcoma
@@ -701,6 +701,10 @@ Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelia
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelial cancer	Ureteral urothelial carcinoma
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma|Urothelial cancer|Transitional cell carcinoma
 Cancer	Solid tumour	Urogenital cancer|Genitourinary cancer
+Cancer	Solid tumour	Biomarker-defined solid tumour	KRAS G12C mutant solid tumour
+Cancer	Solid tumour	Biomarker-defined solid tumour	MSI-H/dMMR solid tumour	Mismatch-deficient solid tumour|dMMR solid tumour|dMMR solid cancer
+Cancer	Solid tumour	Biomarker-defined solid tumour	MSI-H/dMMR solid tumour	Microsatellite instability high solid tumour|MSI-High solid tumour
+Cancer	Solid tumour	Biomarker-defined solid tumour	MSI-H/dMMR solid tumour
 Cancer	Solid tumour|Solid malignancy|Solid neoplasm|Malignant solid tumour
 Cancer	Uncommon cancer
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma

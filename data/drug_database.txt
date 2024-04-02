@@ -871,6 +871,7 @@ NL-201	IL-2/IL-15_receptor_agonist
 NM21-1480|ND021	trispecific_PD-L1/4-1BB/HSA_antibody
 NOV1401	PARP_inhibitor
 NRR2Mab	anti-NOTCH2_monoclonal_antibody
+NST-628	pan-RAF/MEK_glue
 NT219	IRS1/2/STAT3_inhibitor
 NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NUV-868|NUV868	BET_inhibitor

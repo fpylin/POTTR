@@ -1686,7 +1686,7 @@ R2	ARID1A	Oncogenic mutation	Ovarian Cancer	PLX2853; PLX2853 + carboplatin	Phase
 R2	ARID1A	Oncogenic mutations	Breast cancer	Fulvestrant		31932695
 R2	ARID1A	Oncogenic mutations	Pancreatic adenocarcinoma	Olaparib	Two Phase II studies of Olaparib in previously treatment pancreatic cancer. ORR 4% did not meet predefined threshold. ARID1A (N=3)	33662100
 R2	ARID1A	Oncogenic mutations AND NOT Loss of protein expression	Solid tumours	Ceralasertib + Olaparib	Phase 2. Interim result from NCT03682289. N=10 in the ARID1A-intact cohort (defined as positive IHC staining for BAF250a). ORR 0% (0/10) with best response of SD in 4/10 patients.	10.1016/j.annonc.2021.08.1034
-R2	ATM	Loss-of-function mutations, Truncating mutations, Loss-of-protein expression	Pancreatic adenocarcinoma	Olaparib	Phase 2 single arm study. NCT02677038 and NCT02511223. No objective response in 14 patients in both somatic and germline ATM alteration. No responders in 5 patients in the loss-of-protein expression group.	33662100
+R2	ATM	Loss-of-function mutations, Truncating mutations, Loss-of-protein expression	Pancreatic adenocarcinoma	Olaparib	Phase 2 single arm study. NCT02677038 and NCT02511223. No responders in 5 patients in the loss-of-protein expression group.	33662100
 R2	ATM	Oncogenic mutation	Solid tumour	Ipilimumab + Nivolumab	Phase 2. TAPUR study. NCT02693560. N=29. ORR and PFS for nivolumab + ipilimumab in patients with ATM mutation (ORR 14%, DC rate 24%) did not meet the prespecified endpoints. 	38039429
 R2	ATM	Oncogenic mutations	Breast cancer	Olaparib	TBCRC048. No responders	33119476, 10.1200/JCO.2020.38.15_suppl.1002
 R2	ATM	Oncogenic mutations	Lung squamous cell carcinoma	Talazoparib	Lung-MAP Substudy S1400G. ORR primary population 4%	33583720
