@@ -248,7 +248,7 @@ sub get_all_parents { # drug
 		}
 	}
 	
-	return sort map { ( $drug_preferred_name{$_} // $drug_class_name{$_} ) } keys %visited_stack;
+	return sort grep { defined } map { ( $drug_preferred_name{$_} // $drug_class_name{$_} ) } keys %visited_stack;
 }
 
 

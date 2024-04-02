@@ -214,7 +214,7 @@ BGB-A445	anti-OX40_agonistic_antibody
 BGB-B167	bispecific_CEACAM5/4-1BB_antibody
 BGB659	RAF_inhibitor,type_2
 BI 1701963|BI=1701963	SOS1-KRAS_inhibitor
-BI 1810631|BI-1810631	ERBB2_inhibitor,second_generation
+Zongertinib|BI 1810631|BI-1810631	ERBB2_inhibitor,second_generation
 BI 754111|BI-754111	anti-LAG3_monoclonal_antibody
 BI 894999|BI-894999	BET_inhibitor
 BI-2852	KRAS_G12D_inhibitor; KRAS_switch1/2_pocket_inhibitor
@@ -222,6 +222,7 @@ BI-3812	BCL6_inhibitor
 BI836880|BI 836880	VEGF/Ang2-blocking_nanobody
 BIL06v	peptide_conjugate_vaccine,nfP2X7-targeting
 BL0020	unknown_drug_class
+Motixafortide|BL-8040|BL8040	CXCR4_antagonist
 BLU-945	EGFR_inhibitor,fourth_generation
 BLYG8824A	bispecific_T-cell_engager,LY6G6D-targeting
 BLZ-100|Tozuleristide	peptide-fluorophore_conjugate
@@ -390,9 +391,10 @@ DKN-01	anti-DKK1_monoclonal_antibody
 DR-01	anti-CD94_monoclonal_antibody
 DS-1001|DS 1001	IDH1_R132_inhibitor
 DS-1062a	anti-Trop2_antibody-drug_conjugate
-DS-6000a	anti-CDH6_antibody-drug_conjugate
 DS-6157a	anti-GPR20_antibody-drug_conjugate
 DS-8895a	anti-EphA2_monoclonal_antibody
+Raludotatug deruxtecan|DS-6000|DS-6000a	anti-CDH6_antibody-drug_conjugate
+DS-7300	anti-B7H3_antibody-drug_conjugate
 DSP-0390	emopamil_binding_protein
 DSP-5336	menin_inhibitor
 DSP107	bifunctional_CD47/4-1BB_fusion_protein
@@ -599,7 +601,7 @@ HBM7008|HBM-7008	bispecific_B7H4/4-1BB_antibody
 HFB200301	TNFR2_agonistic_antibody
 HH30134	AXL/FLT3/NTRK_inhibitor
 HH3806	BET_inhibitor
-HKT288|HKT 288|Maytansine-based ADC HKT-288	CDH6-targeting_DM4-based_antibody-drug_conjugate
+HKT288|HKT 288|Maytansine-based ADC HKT-288	anti-CDH6_antibody-drug_conjugate
 HLX10|HLX 10|HLX-10	anti-PD-1_monoclonal_antibody
 HLX20|HLX 20|HLX-20	anti-PD-1_monoclonal_antibody
 HLX301|HLX-301	bispecific_PD-L1/TIGIT_antibody
@@ -1184,6 +1186,7 @@ Sintilimab|IBI 308|IBI308	anti-PD-1_monoclonal_antibody
 Siremadlin|HDM201|NVP-HDM 201	HDM2_inhibitor
 Sirolimus	mTORC1/mTORC2_inhibitor
 Sitravatinib|MGCD516	KIT/PDGFR/RET/VEGFR_inhibitor; KIT_inhibitor; PDGFR_inhibitor; RET_inhibitor; VEGFR_inhibitor
+Sodium Valproate|Valproate|valproic acid|Epilim	HDAC_inhibitor
 Sonidegib|Erismodegib|LDE-225|LDE225|Odomzo	SMO_inhibitor,first_generation
 Sorafenib|BAY 43-9006|Nexavar|BA4 43 9006|BAY 54-9085|Bay-439006	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor; CRAF_inhibitor; FLT3_inhibitor; KIT_inhibitor; PDGFR_inhibitor; VEGFR_inhibitor
 Sotorasib|AMG-510|AMG 510|AMG510	KRAS_G12C/NRAS_G12C/HRAS_G12C_inhibitor
