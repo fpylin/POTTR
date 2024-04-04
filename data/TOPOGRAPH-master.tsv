@@ -1561,6 +1561,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ROS1	SLC4A4-ROS1 fusion	Pancreatic adenocarcinoma	Entrectinib	Case series. KRAS wild-type PDAC. Stable disease with duration of treatment of 7 months.	10.1200/PO.18.00039
 4	RSPO1	Fusion	Colorectal adenocarcinoma	RXC004	Phase 1. EudraCT 2017-000720-98. 2 cases of SD in Wnt ligand dependent group (RNF43 mutation or RSPO1 fusion).	10.1016/j.annonc.2021.08.1039
 4	SETD2	Oncogenic mutations	Ovarian cancer	Camonsertib	Phase 1. TRESR. Responses are seen in solid tumours with BRCA1/2, RAD51C, SETD2, ATM, CDK12 mutations.	37277454
+4	SF3B1	H662Q, K700E, R625H, R625C, R625L	Pancreatic adenocarcinoma	Talazoparib; Talazoparib + AZD0156	Preclinical study. Synthetic lethal drug screens revealed that SF3B1 mutant cell lines are selectively sensitive to PARP inhibition in cell line models as well as antitumor effects in in vivo models.	37524790
 4	SF3B1	Oncogenic mutations	Myelodysplastic syndrome; Chronic myelomonocytic leukaemia; Acute myeloid leukaemia	H3B-8800	Phase 1. N=27. No CR or PR meeting IWG criteria but nine RBC transfusion free intervals were observed, including 5 of 15 transfusion-dependent MDS cases.	34172893
 4	SF3B1	Oncogenic mutations	Solid tumours; Liquid cancers	H3B-8800		29457796
 4	SLC1A5	Overexpression	Liquid cancers	MEDI7247		10.1200/JCO.2018.36.15_suppl.TPS2603
@@ -1722,6 +1723,7 @@ R2	BRAF	K601E	Melanoma	Vemurafenib	Case report. Lack of response to melanoma	311
 R2	BRAF	L485_P490del	Solid tumours	LY3009120	Class II mutations. BRAF in-frame deletion in the alpha-C helix favour dimerization and is sensitive to LY3009120 but resistant to Vemurafenib	26732095
 R2	BRAF	L505H	Melanoma	Vemurafenib	Case report. Secondary mutation acquired following Vemurafenib.	25515853
 R2	BRAF	N486_P490del	Solid tumours	Vemurafenib		26996308
+R2	BRAF	Oncogenic mutation, Amplification, Fusion, Class I mutation, Class II mutation,  Class III mutation, BCAP29-BRAF fusion, SND1-BRAF fusion, D594G, D594N, G466A, G469A, G469R, G469V, G596C, I617V, K601E, N486_P490del, N581I, V487_P492&gt;A, V600E, V600E , V600K	Solid tumours	Regorafenib	Phase 2. TAPUR. NCT02604757. N=28. Regorafenib did not meet prespecified criteria for activity in patients with solid tumors and BRAF alterations. DCR was 21%. ORR was 7%.	10.1200/PO.23.00527
 R2	BRAF	Oncogenic mutations	Acute myeloid leukaemia	Ivosidenib	RTK pathway mutations are associated with primary resistance to ivosidenib	32380538
 R2	BRAF	Oncogenic mutations AND NOT V600	Non-small cell lung cancer	Vemurafenib	Phase 2. AcSé. NCT02304809. ORR: 0%. 	31959346
 R2	BRAF	Oncogenic mutations, fusion	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
