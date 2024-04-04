@@ -705,6 +705,14 @@ Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelia
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelial cancer	Ureteral urothelial carcinoma
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma|Urothelial cancer|Transitional cell carcinoma
 Cancer	Solid tumour	Urogenital cancer|Genitourinary cancer
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Breast adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Adenoid cystic carcinoma of unknown primary
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Vulval adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Adenoid cystic carcinoma of lacrimal gland
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Adenoid cystic carcinoma of salivary gland
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Tracheal adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Lung adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma   Primary cutaneous adenoid cystic carcinoma
 Cancer	Solid tumour|Solid malignancy|Solid neoplasm|Malignant solid tumour
 Cancer	Uncommon cancer
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma
