@@ -28,7 +28,6 @@ ACTRN12620000918921	catype:Solid tumour; *NOT prior_therapy:anti-PD-1_monoclonal
 ACTRN12620000984998	*NOT catype:Chondrosarcoma; NOT_RECRUITING
 ACTRN12620000984998	NOT catype:Osteosarcoma; NOT_RECRUITING
 ACTRN12620001146987	MYC:alteration
-ACTRN12621000284864	(ROS1:fusion OR NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion)
 ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12621000507886	catype:lymphoma; catype:B-cell lymphoma
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
@@ -104,15 +103,7 @@ NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_
 NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
 NCT03497767	EGFR:oncogenic_mutation
-NCT03674567	catype:Cervical cancer
-NCT03674567	catype:Gastric cancer
-NCT03674567	catype:Head and neck squamous cell carcinoma
-NCT03674567	catype:Hodgkin lymphoma
-NCT03674567	catype:Nasopharyngeal carcinoma
-NCT03674567	catype:Non-small cell lung cancer
-NCT03674567	catype:Oesophageal carcinoma
-NCT03674567	catype:Triple-negative breast cancer
-NCT03674567	catype:Urothelial carcinoma
+NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -311,7 +302,6 @@ NCT04929223	catype:Colorectal adenocarcinoma; KRAS:G12C
 NCT04895709	*NOT prior_therapy:Docetaxel
 NCT05348577	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:AKT_inhibitor
 NCT05544552	FGFR3:alteration
-NCT06024174	KRAS:G12C; (catype:Non-small cell lung cancer OR catype:Pancreatic adenocarcinoma OR catype:Biliary tract cancer OR catype:Colorectal cancer); NOT BRAF:V600; NOT PTPN:oncogenic_mutation; NOT KRAS:Q61
 NCT04802759	catype:Breast cancer; *ESR1:protein_expression
 NCT04802759	catype:Breast cancer; *ESR1:protein_expression; sensitive_to:Ipatasertib; *NOT prior_therapy:AKT_inhibitor
 NCT04802759	catype:Breast cancer; *ESR1:protein_expression; sensitive_to:Inavolisib; *NOT prior_therapy:AKT_inhibitor; *NOT prior_therapy:PI3K_alpha_inhibitor; *NOT prior_therapy:MTOR_inhibitor
