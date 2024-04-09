@@ -69,7 +69,7 @@ AMG 212|BAY2010112	bispecific_T-cell_engager,PSMA-targeting
 AMG 305|AMG-305|AMG305	bispecific_T-cell_engager,MSLN-targeting
 AMG 337|AMG337	MET_inhibitor
 AMG 404|AMG-404|AMG404	anti-PD-1_monoclonal_antibody
-AMG 509|AMG-509|AMG509	bispecific_T-cell_engager,STEAP1-targeting
+Xaluritamig|AMG 509|AMG-509|AMG509	bispecific_T-cell_engager,STEAP1-targeting
 AMG 596|AMG-596|AMG596	bispecific_T-cell_engager,EGFRvIII-targeting
 AMG 650|AMG-650|AMG650	KIF18A_inhibitor
 AMG 820	anti-CSF1_monoclonal_antibody
@@ -664,6 +664,7 @@ INCB161734	KRAS_G12D_inhibitor
 INI-4001	TLR7/8_agonist
 INO-9012	DNA_plasmid_encoding_IL-12
 INX-315	CDK2_inhibitor
+IO102-IO103|IO102/IO103	immune-modulatory_vaccine,IDO/PD-L1-targeting
 IOA-244	PI3K-delta_inhibitor
 IPI-549|IPI 549	PI3K-gamma_inhibitor
 ISB-1442|ISB 1442	bispecific_CD38/CD47_antibody
@@ -1383,6 +1384,7 @@ Zanidatamab|ZW25	bispecific_ERBB2/ERBB2_antibody
 Zanubrutinib|BGB-3111|BTK-InhB|Brukinsa	BTK_inhibitor
 Zanzalintinib|XL092	MET/VEGFR2/AXL/MER_inhibitor
 Zimberelimab|AB122|AB 122|AB-122|GLS 010|GLS-010|GLS010	anti-PD-1_monoclonal_antibody
+Zilovertamab vedotin|MK-2140|MK 2140	antibody-drug_conjugate,ROR1-targeting
 Zolbetuximab|Claudiximab|IMAB 362|IMAB-362|IMAB362	anti-CLDN18.2_monoclonal_antibody
 Zoledronic Acid|Zometa|CGP 42446|CGP42446A|NDC-Zoledronate|Reclast|ZOL 446	bisphosphonate
 Zorifertinib|AZD3759	EGFR_inhibitor,third_generation
