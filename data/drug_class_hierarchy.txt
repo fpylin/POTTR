@@ -2039,3 +2039,13 @@ virus-based_therapy	oncolytic_virus	oncolytic_Coxsackie_virus,ICAM_overexpressin
 virus-based_therapy	oncolytic_virus	oncolytic_HSV_virus
 virus-based_therapy	oncolytic_virus	replication-competent_oncolytic_adenovirus
 virus-based_therapy	oncolytic_virus	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
+CAR-T-cell_therapy	CAR-T-cell_therapy,STEAP2-targeting
+CAR-T-cell_therapy,STEAP2-targeting	allogeneic_CAR-T-cell_therapy,STEAP2-targeting
+allogeneic_CAR-T-cell_therapy	allogeneic_CAR-T-cell_therapy,STEAP2-targeting
+cancer_therapy	cancer_therapy,anti-IL-15-targeting
+cancer_therapy,FGFR-targeting	FGFR_inhibitor,type_2
+cancer_therapy,anti-IL-15-targeting	immuno-oncology_therapy,anti-IL-15-targeting
+immuno-oncology_therapy,ERBB2-targeting	bispecific_ERBB2/ERBB2_antibody
+immuno-oncology_therapy,STING-targeting	IL-15/STING_variant,S.Typhimurium-attenuated_bacterial_cancer_therapy
+immuno-oncology_therapy,anti-IL-15-targeting	anti-IL-15_agonistic_antibody
+immuno-oncology_therapy,variant-targeting	IL-15/STING_variant,S.Typhimurium-attenuated_bacterial_cancer_therapy

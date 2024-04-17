@@ -16,7 +16,7 @@ drug	drug_class
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
 A-337|SP51616	bispecific_T-cell_engager,EpCAM-targeting
-AB-201	allogeneic_CAR-NK-cell_therapy,HER2-targeting
+AB-201	allogeneic_CAR-NK-cell_therapy,ERBB2-targeting
 ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibody
 ABBV-319	anti-CD19_antibody-drug_conjugate,glucocorticoid_receptor_modulator
 ABBV-400	anti-cMET_antibody-drug_conjugate
@@ -119,6 +119,7 @@ AZD0305	anti-GPRC5D_antibody-drug_conjugate
 AZD0466	dual_Bcl2/BclxL_inhibitor
 AZD0486|TNB-486	bispecific_T-cell_engager,CD19-targeting
 AZD0754|AZD-0754	allogeneic_CAR-T-cell_therapy,STEAP2-targeting
+AZD0901|AZD-0901	anti-CLDN18.2_antibody-drug_conjugate
 AZD1390	ATM_inhibitor
 AZD1480	JAK1/JAK2_inhibitor
 AZD2461	PARP_inhibitor
@@ -1359,6 +1360,7 @@ WVT078	bispecific_T-cell_engager,BCMA-targeting
 WYE354	mTOR_inhibitor
 Wnt-C59	PORCN_inhibitor
 XAV939	YAP-TEAD_inhibitor; TNKS1/2_inhibitor
+XB002|XB-002	anti-TF_antibody-drug_conjugate
 XELIRI	Capecitabine + Irinotecan
 XL765|SAR245409	PI3K/mTOR_inhibitor
 XNW7201	PORCN_inhibitor
@@ -1384,7 +1386,7 @@ Zanidatamab|ZW25	bispecific_ERBB2/ERBB2_antibody
 Zanubrutinib|BGB-3111|BTK-InhB|Brukinsa	BTK_inhibitor
 Zanzalintinib|XL092	MET/VEGFR2/AXL/MER_inhibitor
 Zimberelimab|AB122|AB 122|AB-122|GLS 010|GLS-010|GLS010	anti-PD-1_monoclonal_antibody
-Zilovertamab vedotin|MK-2140|MK 2140	antibody-drug_conjugate,ROR1-targeting
+Zilovertamab vedotin|MK-2140|MK 2140	anti-ROR1_antibody-drug_conjugate
 Zolbetuximab|Claudiximab|IMAB 362|IMAB-362|IMAB362	anti-CLDN18.2_monoclonal_antibody
 Zoledronic Acid|Zometa|CGP 42446|CGP42446A|NDC-Zoledronate|Reclast|ZOL 446	bisphosphonate
 Zorifertinib|AZD3759	EGFR_inhibitor,third_generation

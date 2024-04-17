@@ -472,6 +472,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	EZH2	Y646F, Y646N, Y646S, Y646H, Y646C, A682G, A692V	Follicular lymphoma	Tazemetostat	Single-arm study in relapsed or refractory disease. ORR 69% in EZH2 mutant group (vs 35% in wildtype). EZH2 hotspot oncogenic mutation.	33035457
 3	FGFR1	Amplification	Breast cancer	Lucitanib	Phase 2. FINESSE. NCT02053636. In HR+/HER2− metastatic breast cancer, ORR was 19% in the FGFR1-amplified cohort (defined as gene/centromere ratio ≥2 or average copy number ≥6).	31619444
 3	FGFR1	Fusion	Endometrial cancer	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
+3	FGFR1	Fusion; FGFR1-TACC1 fusion	Solid tumour	Erdafitinib	Phase 2. NCI-MATCH. EAY131-K2 trial. NCT03198147. N=35. Erdafitinib showed antitumor efficacy in patients with FGFR1-4 mutations or fusions with ORR of 16% (4/25) and Median PFS of 3.6 months. 	38603650
 3	FGFR1	High mRNA expression	Urothelial carcinoma	Rogaratinib	NCT03410693. Randomised Phase 2. FORT-1. FGFR1/3 mRNA positive population. N=87 in the Rogaratinib group. ORR was 21% (18/87), and median OS was 8.3 months. However, neither ORR or OS was superior to chemotherapy group. 	36240478
 3	FGFR1	K656E	Diffuse astrocytoma	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
 3	FGFR1	Oncogenic mutations	Solid tumours	Erdafitinib	Phase 2. RAGNAR. NCT04083976. Across FGFR1-3 alterations (mutations and fusions) treated with erdafitinib, ORR was 29% (52/178, including 3 CR) by independent review committee, DCR was 73% (129/178). Median DOR 7.1 months. PFS 5.2 months. OS 10.9 months. ORR was comparable with FGFR mutations vs fusions (26-27%).	10.1200/JCO.2022.40.16_suppl.3007
@@ -485,10 +486,12 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	FGFR2	Fusion, FGFR2-BICC1 fusion, FGFR2-CCDC6 fusion, FGFR2-CLIP1 fusion, FGFR2-USP33	Solid tumours	Pemigatinib	Phase 1. FIGHT-101. In FGFR fusion/rearragement cohort (N=20), ORR was 25% (5/20). 	35176457
 3	FGFR2	Fusions	Cholangiocarcinoma	Erdafitinib	LUC2001	10.1200/JCO.2019.37.15_suppl.4117
 3	FGFR2	Fusions, Oncogenic mutations	Solid tumours	Erdafitinib	Phase 2. RAGNAR. NCT04083976. Across FGFR1-3 alterations (mutations and fusions) treated with erdafitinib, ORR was 29% (52/178, including 3 CR) by independent review committee, DCR was 73% (129/178). Median DOR 7.1 months. PFS 5.2 months. OS 10.9 months. ORR was comparable with FGFR mutations vs fusions (26-27%).	10.1200/JCO.2022.40.16_suppl.3007
+3	FGFR2	S252W; Fusion; FGFR2-ACOT11 fusion; FGFR2-AHCYL1 fusion; FGFR2-FOXP1 fusion; FGFR2-BICC1 fusion; 	Solid tumour	Erdafitinib	Phase 2. NCI-MATCH. EAY131-K2 trial. NCT03198147. N=35. Erdafitinib showed antitumor efficacy in patients with FGFR1-4 mutations or fusions with ORR of 16% (4/25) and Median PFS of 3.6 months. 	38603650
 3	FGFR3	Fusion	Glioblastoma; Cervical cancer	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
 3	FGFR3	Fusions, FGFR3-TACC3 fusion, Oncogenic mutations, R248C, S249C, Y375C, Y373C, G370C, F386L, K650E	Urothelial carcinoma	Infigratinib		29848605, 10.1200/JCO.2019.37.15_suppl.4510
 3	FGFR3	Fusions, Oncogenic mutations	Solid tumours	Erdafitinib	Phase 2. RAGNAR. NCT04083976. Across FGFR1-3 alterations (mutations and fusions) treated with erdafitinib, ORR was 29% (52/178, including 3 CR) by independent review committee, DCR was 73% (129/178). Median DOR 7.1 months. PFS 5.2 months. OS 10.9 months. ORR was comparable with FGFR mutations vs fusions (26-27%).	10.1200/JCO.2022.40.16_suppl.3007
 3	FGFR3	High mRNA expression	Urothelial carcinoma	Rogaratinib	NCT03410693. Randomised Phase 2. FORT-1. FGFR1/3 mRNA positive population. N=87 in the Rogaratinib group. ORR was 21% (18/87), and median OS was 8.3 months. However, neither ORR or OS was superior to chemotherapy group. 	36240478
+3	FGFR3	S249C; Fusion; FGFR3-TACC3 fusion	Solid tumour	Erdafitinib	Phase 2. NCI-MATCH. EAY131-K2 trial. NCT03198147. N=35. Erdafitinib showed antitumor efficacy in patients with FGFR1-4 mutations or fusions with ORR of 16% (4/25) and Median PFS of 3.6 months. 	38603650
 3	FGFR3	Y373C	Urothelial carcinoma	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
 3	FH	Loss-of-function mutations (germline)	Papillary renal cell carcinoma	Bevacizumab + erlotinib	NCT01130519	10.1200/JCO.2020.38.15_suppl.5004
 3	FLT3	Internal tandem duplication	Acute myeloid leukaemia	Sorafenib	SORMAIN trial. Maintenance treatment. 24 months RFS 53.3% vs 85% placebo	32673171
@@ -1936,11 +1939,15 @@ R2	FGFR1	Amplification	Breast cancer	Fulvestrant + Palbociclib; Fulvestrant + Ri
 R2	FGFR1	Amplification	Breast cancer	Tamoxifen	Amplification was determined by CISH, if &gt;50% of cells harbored either &gt;5 copies.	20179196
 R2	FGFR1	Amplification	Colorectal cancer	PD173074	Retrospective exploratory and cell line studies. In 764 surgically resected colorectal cancers, FGFR1 amplification was found in 3-7 of CRCs. FGFR1 amplification was mutually exclusive with BRAF mutation, microsatellite instability, and MLH1 methylation, and associated with inferior progression-free survival. PD173074 repressed the proliferation of a CRC cell line overexpressing FGFR1 but not cells with FGFR1 amplification.	31096734
 R2	FGFR1	Amplification	Lung squamous cell carcinoma	AZD4547	SWOG S1400D; Minimal response (1/27)	31195180
+R2	FGFR1	Amplification	Solid tumour except urothelial carcinoma	Erdafitinib	Phase 2 NCI-MATCH. EAY131-K1 trial. NCT03167159. N=35. Erdafitinib did not meet its primary end point of efficacy as determined by ORR in treatment-refractory solid tumors harboring FGFR1-4 amplifications.	38603651
 R2	FGFR1	Amplification	Solid tumours	AZD4547	No response in these cohorts	32463741
+R2	FGFR1	Amplification; Oncogenic mutations	Breast cancer	Sunitinib	NCT02693535. TAPUR. Phase 2. Single agent Sunitinib had ORR of 7% in FGFR1 altered group. DCR was 27% did not meet the prespecified threshold.	38354330
 R2	FGFR1	N564K	Solid tumours	Ponatinib; Dovitinib; Infigratinib	Molecular hinge	27558949
 R2	FGFR1	V561M	Solid tumours	Infigratinib; AZD4547; Debio1347	Gatekeeper mutation	28646488
 R2	FGFR2	Amplification	Breast cancer	Fulvestrant + Ribociclib		30914635
+R2	FGFR2	Amplification	Solid tumour except urothelial carcinoma	Erdafitinib	Phase 2 NCI-MATCH. EAY131-K1 trial. NCT03167159. N=35. Erdafitinib did not meet its primary end point of efficacy as determined by ORR in treatment-refractory solid tumors harboring FGFR1-4 amplifications.	38603651
 R2	FGFR2	Amplification	Solid tumours	AZD4547	No response in these cohorts	32463741
+R2	FGFR2	Amplification; Oncogenic mutations	Breast cancer	Sunitinib	NCT02693535. TAPUR. Phase 2. Single agent Sunitinib had DCR of 0% in FGFR2 altered group.	38354330
 R2	FGFR2	E565A, L617M	Cholangiocarcinoma	Infigratinib		31911531
 R2	FGFR2	Fusions, FGFR2-CCDC6 fusion, FGFR2-KIAA1598 fusion, FGFR2-TACC2 fusion	Non-small cell lung cancer	Osimertinib; Gefitinib		35566609
 R2	FGFR2	L618F	Cholangiocarcinoma	Debio1347		33926920
@@ -1957,6 +1964,7 @@ R2	FGFR2	V564F, N549H, N549K, E565A, L617V, K641R, K659M	Cholangiocarcinoma	Infi
 R2	FGFR2	V565I, N550K, V564M, V564F	Solid tumours	Infigratinib; AZD4547; Debio1347; Dovitinib; Ponatinib	Gatekeeper mutation	26224133, 23908597
 R2	FGFR2	V565L	Cholangiocarcinoma	Futibatinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 R2	FGFR3	Alteration	Lung squamous cell carcinoma	AZD4547	Lung-MAP S1400D	31195180, 33125909
+R2	FGFR3	Amplification	Solid tumour except urothelial carcinoma	Erdafitinib	Phase 2 NCI-MATCH. EAY131-K1 trial. NCT03167159. N=35. Erdafitinib did not meet its primary end point of efficacy as determined by ORR in treatment-refractory solid tumors harboring FGFR1-4 amplifications.	38603651
 R2	FGFR3	Amplification, Fusion, S249C	Lung squamous cell carcinoma	AZD4547	SWOG S1400D; Minimal response (1/27)	31195180
 R2	FGFR3	FGFR3-TACC3 fusion	Non-small cell lung cancer	Osimertinib; Gefitinib		35566609
 R2	FGFR3	FGFR3-TACC3 fusion	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
