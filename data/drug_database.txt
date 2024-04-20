@@ -460,7 +460,7 @@ EMB-09	bispecific_PD-L1/OX40_antibody
 EMD 1204831	MET_inhibitor
 ENB003|ENB 003|ENB-003	ETBR_inhibitor
 ENMD-2076	AURKA_inhibitor; angiogenesis_inhibitor
-EO1001|NT113|NT-113|APL-122	pan-ERBB_inhibitor; EGFR_inhibitor,second_generation
+EO1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; ERBB4_inhibitor; EGFR_inhibitor,second_generation
 EOX	Epirubicin + Oxaliplatin + Capecitabine
 EP0042	FLT3/Aurora_inhibitor
 EPI-7386	antiandrogen,AR_NTD_inhibitor
@@ -651,6 +651,7 @@ IK-175	AHR_inhibitor
 IK-930	YAP-TEAD_inhibitor
 IKS014	anti-ERBB2_antibody-drug_conjugate
 IKS03	anti-CD19_antibody-drug_conjugate
+IMD-101	IL2_conjugate
 IMG-7289	LSD1_inhibitor
 IMM-101	heat-killed_Mycobacterium_preparation
 IMP9064	ATR_inhibitor
@@ -708,6 +709,7 @@ Ixabepilone|BMS-247550|Ixempra|BMS 247550|BMS247550|Epothilone	microtubule_stabi
 Ixazomib|MLN-2238|MLN2238	proteasome_inhibitor
 JAB-21822	KRAS_G12C_inhibitor
 JANX007	PSMA-tumor-activated_T-cell_engager
+JBI802|JBI-802	LSD1/HDAC6_inhibitor
 JDQ443	KRAS_G12C_inhibitor
 JNJ-67856633	MALT1_inhibitor
 JNJ-75276617	KMT2A_inhibitor
