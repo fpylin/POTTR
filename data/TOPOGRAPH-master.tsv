@@ -904,6 +904,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	EGFR	Amplification and NOT Oncogenic mutation	Non-small cell lung cancer	Gefitinib	Case report of wild-type amplified EGFR	30622811
 4	EGFR	Amplification and NOT Oncogenic mutation	Non-small cell lung cancer	Gefitinib; Erlotinib	Retrospective study in 502 patients. In 226 patients with EGFR wildtype with amplification (FISH positive) treated with first-generation EGFR TKIs, ORR was 18% (11/62) versus 9% (16/185), and PFS was 4.4 months (FISH-positive) versus 2.0 months (FISH-negative). This is compared to mutation-positive group where ORR was 44% (110/252).	23557218
 4	EGFR	Amplification AND NOT Oncogenic mutations	Non-small cell lung cancer	Afatinib	ORR of 4/43 (9%) in the EGFR FISH-positive subgroup (gene/chr ratio &gt;= 2, or Copy number &gt;= 15) without EGFR sensitising mutation. 	25514804
+4	EGFR	Amplification, vIII	Glioblastoma	EO1001	Preclinical study. NT113, a pan-ERBB inhibitor with high brain penetrance, showing activity in glioblastoma xenografts model with EGFR amplification and models transfected with vIII.	25313012
 4	EGFR	E709_T710delinsD	Non-small cell lung cancer	Afatinib	Case report. Partial response to afatinib with clinical benefit of 23 months. 	34178699
 4	EGFR	E709_T710delinsD	Non-small cell lung cancer	Afatinib	Case report. Both CT and metabolic response to afatinib.	28625646
 4	EGFR	E709_T710delinsD	Non-small cell lung cancer	Gefitinib	Case report. 	22982663

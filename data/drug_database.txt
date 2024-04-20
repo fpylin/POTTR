@@ -460,7 +460,7 @@ EMB-09	bispecific_PD-L1/OX40_antibody
 EMD 1204831	MET_inhibitor
 ENB003|ENB 003|ENB-003	ETBR_inhibitor
 ENMD-2076	AURKA_inhibitor; angiogenesis_inhibitor
-EO1001	EGFR_inhibitor; ERBB2_inhibitor; ERBB4_inhibitor; pan-ERBB_inhibitor
+EO1001|NT113|NT-113|APL-122	pan-ERBB_inhibitor
 EOX	Epirubicin + Oxaliplatin + Capecitabine
 EP0042	FLT3/Aurora_inhibitor
 EPI-7386	antiandrogen,AR_NTD_inhibitor

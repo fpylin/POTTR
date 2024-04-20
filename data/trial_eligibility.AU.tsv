@@ -103,7 +103,6 @@ NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_
 NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
 NCT03497767	EGFR:oncogenic_mutation
-NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -261,7 +260,6 @@ NCT04928846	NOT EGFR:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT05245968	catype:Gastrointestinal stromal tumour
 NCT05383352	catype:Pancreatic adenocarcinoma
 NCT05759728	catype:Colorectal adenocarcinoma
-NCT05513703	catype:Non-small cell lung cancer; NOT catype:Lung squamous cell carcinoma; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:systemic_therapy; *MET:amplification
 ACTRN12620001146987	*NOT_RECRUITING
 NCT04976634	catype:Hepatocellular carcinoma
 NCT04976634	catype:Colorectal adenocarcinoma; NOT microsatellite:instable; NOT mismatch_repair:deficient
