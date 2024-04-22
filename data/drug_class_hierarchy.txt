@@ -2049,3 +2049,7 @@ immuno-oncology_therapy,ERBB2-targeting	bispecific_ERBB2/ERBB2_antibody
 immuno-oncology_therapy,STING-targeting	IL-15/STING_variant,S.Typhimurium-attenuated_bacterial_cancer_therapy
 immuno-oncology_therapy,anti-IL-15-targeting	anti-IL-15_agonistic_antibody
 immuno-oncology_therapy,variant-targeting	IL-15/STING_variant,S.Typhimurium-attenuated_bacterial_cancer_therapy
+HDAC6_inhibitor	LSD1/HDAC6_inhibitor
+LSD1_inhibitor	LSD1/HDAC6_inhibitor
+cancer_therapy	cancer_therapy,HDAC6-targeting
+cancer_therapy,HDAC6-targeting	HDAC6_inhibitor

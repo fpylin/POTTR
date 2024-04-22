@@ -125,10 +125,11 @@ AZD1480	JAK1/JAK2_inhibitor
 AZD2461	PARP_inhibitor
 AZD2936	bispecific_PD-1/TIGIT_antibody
 AZD3463	ALK_inhibitor; IGF1R_inhibitor; ROS1_inhibitor
+AZD3470	PRMT5_inhibitor
 AZD4205|AZD 4205|AZD-4205	JAK1-selective_inhibitor
 AZD4547	FGFR1/2/3_inhibitor
 AZD4573	CDK9_inhibitor
-AZD5305	PARP_inhibitor
+Saruparib|AZD5305	PARP_inhibitor
 AZD5335	anti-FR-alpha_antibody-drug_conjugate
 AZD5438	CDK1/2/9_inhibitor
 AZD7762	CHEK1_inhibitor
@@ -633,6 +634,7 @@ IBI110	anti-LAG3_monoclonal_antibody
 IBI129	anti-B7H3_antibody-drug_conjugate
 IBI130	anti-Trop2_monoclonal_antibody
 IBI133	anti-ERBB3_monoclonal_antibody
+IBI3001	antibody-drug_conjugate,EGFR/B7H3-targeting
 IBI3003	bispecific_T-cell_engager,GPRC5D-targeting
 IBI3004	unknown_drug_class
 IBI319	bispecific_PD-1/4-1BB_antibody
@@ -685,6 +687,7 @@ Ieramilimab|IMP-701|LAG 525|LAG525	anti-LAG3_monoclonal_antibody
 Ifabotuzumab|Fibatuzumab|KB 004|KB-004|KB004	anti-EphA3_antibody
 Ifosfamide|Ifosphamide|Cyfos|Ifex|Iphosphamid|Isoendoxan|Isophosphamide|Mitoxana|Naxamide|Holoxan|IFO|IFX|Iso-Endoxan|MJF 9325|MJF-9325|Seromida|Tronoxal|Z 4942|Z-4942	alkylating_agent
 Imatinib|Imatinib Mesylate|Gleevec|Glivec	BCR-ABL1_inhibitor,first_generation; KIT_inhibitor; PDGFRA_inhibitor
+IMC-F106C	bispecific_T-cell_engager,PRAME-targeting
 Imetelstat|GRN163L	telomerase_inhibitor
 Imgatuzumab|GA201|RG 7160|RG-7160|RO5083945	anti-EGFR_monoclonal_antibody
 Imiquimod|Aldara|R 837|S 26308|Zyclara	topical_immune_response_modifier
@@ -714,6 +717,7 @@ JDQ443	KRAS_G12C_inhibitor
 JNJ-67856633	MALT1_inhibitor
 JNJ-75276617	KMT2A_inhibitor
 JNJ-75348780	bispecific_T-cell_engager,CD22-targeting
+JNJ-78278343	bispecific_T-cell_engager,KLK2-targeting
 JNJ-80948543	trispecific_CD79b/CD20/CD3_antibody
 JNJ-90009530	autologous_CAR-T-cell_therapy,CD20-targeting
 JQ1|JQ1 compound	BET_inhibitor
@@ -791,6 +795,7 @@ Lodapolimab|LY3300054|WHO 11185	anti-PD-L1_monoclonal_antibody
 Lometrexol	antimetabolite
 Lomustine|CCNU|Cecenu|CeeNU|Chloroethylcyclohexylnitrosourea|Belustin|Citostal|Gleostine|Lomeblastin|Lomustinum|Lucostin|Prava|RB-1509|WR-139017	alkylating_agent
 Loncastuximab Tesirine|loncastuximab tesirine-lpyl|Zynlonta	anti-CD19_antibody-drug_conjugate
+Lorigerlimab	bispecific_PD-1×CTLA-4_dual-affinity_responsive_target_molecule
 Lorlatinib|Lorbrena|PF-06463922	ALK_inhibitor,third_generation; ROS1_inhibitor
 Lu-177 vipivotide tetraxetan|Pluvicto|Lutetium-177-PSMA-617|177Lu-PSMA|Lutetium PSMA|lutetium-177 PSMA-617|Lu-PSMA617|Lutetium-177 PSMA	radioligand,PSMA-targeting
 Lucitanib	VEGFR/PDGFR/FGFR1/2/3_inhibitor
