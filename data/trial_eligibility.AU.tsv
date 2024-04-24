@@ -352,7 +352,7 @@ NCT05894239	PIK3CA:oncogenic_mutation; *(ERBB2:amplification OR ERBB2:overexpres
 NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression)
 NCT05872295	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression); prior_therapy:systemic_therapy
 NCT05872295	catype:Solid tumour; NOT Breast cancer; NOT Gastric cancer; NOT Gastroesophageal adenocarcinoma; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression OR ERBB2:oncogenic_mutation)
-NCT04929223	catype:Colorectal adenocarcinoma; *(microsatellite_instability:high OR mismatch_repair:deficient)
+NCT04929223	catype:Colorectal adenocarcinoma; *(microsatellite_instability:high OR mismatch_repair:deficient); *NOT_RECRUITING
 NCT04929223	catype:Colorectal adenocarcinoma; KRAS:G12C
 NCT04895709	*NOT prior_therapy:Docetaxel
 NCT05348577	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:AKT_inhibitor
@@ -396,3 +396,4 @@ NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carbop
 NCT05907304	(KRAS:Q61 OR NRAS:Q61 OR HRAS:Q61); *NOT prior_therapy:ERK_inhibitor; *NOT prior_therapy:MEK_inhibitor; *NOT prior_therapy:RAF_inhibitor; *NOT prior_therapy:RAS_inhibitor
 NCT06003621	NOT catype:Non-small cell lung cancer
 NCT06031441	*MOA_UNKNOWN
+NCT05805501	catype:Clear cell renal cell carcinoma
