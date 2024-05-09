@@ -321,6 +321,7 @@ CI-8993	anti-VISTA_monoclonal_antibody
 CK-101|CK 101|CK101|OLAFERTINIB|RX-518	EGFR_inhibitor,third_generation
 CLN-418|HBM7008	bispecific_4-1BB/B7H4_antibody
 CLN-619	anti-MICA/MICB_monoclonal_antibody
+CLDN6 CAR-T	autologous_CAR-T-cell_therapy,CLDN6-targeting
 CMP-001|ARB-1598|CYT 003|CYT-003	TLR9_agonist
 CN1	anti-OX40_agonistic_antibody
 CN202	PD-L1/TGF-beta_fusion_protein
@@ -710,7 +711,7 @@ Ivonescimab|AK112|AK 112|AK-112	bispecific_PD-1/VEGF_monoclonal_antibody
 Ivosidenib|AG-120|AG 120|Tibsovo	IDH1_R132_inhibitor
 Ixabepilone|BMS-247550|Ixempra|BMS 247550|BMS247550|Epothilone	microtubule_stabilizing_agent
 Ixazomib|MLN-2238|MLN2238	proteasome_inhibitor
-JAB-21822	KRAS_G12C_inhibitor
+Glecirasib|JAB-21822	KRAS_G12C_inhibitor
 JANX007	PSMA-tumor-activated_T-cell_engager
 JBI802|JBI-802	LSD1/HDAC6_inhibitor
 JDQ443	KRAS_G12C_inhibitor
@@ -1125,6 +1126,7 @@ Ribociclib|Kisqali|LEE-011|LEE011	CDK4/6_inhibitor
 Rigosertib|ON-01910	PLK1_inhibitor
 Ripretinib|DCC-2618|DCC2618|QINLOCK	KIT_inhibitor,switch_control_kinase_inhibitor; PDGFRA_inhibitor
 Rituximab|Rituxan|ABP 798|BI 695500|C2B8 Monoclonal Antibody|CT-P10|Chimeric Anti-CD20 Antibody|IDEC-102|IDEC-C2B8|MabThera|PF-05280586|RTXM83|Truxima	anti-CD20_monoclonal_antibody
+Rilvegostomig|AZD2936	bispecific_PD-1/TIGIT_antibody
 Rociletinib|CO-1686	EGFR_inhibitor,third_generation
 Rogaratinib|BAY-1163877|BAY1163877	pan-FGFR_inhibitor
 Rolinsatamab Talirine|ABBV 176|ABBV-176|ABBV176	anti-PRLR_antibody-drug_conjugate
@@ -1300,7 +1302,7 @@ Topotecan|Hycamptamine	topoisomerase_inhibitor
 Toradol	non-steroidal_anti-inflammatory_drug
 Toremifene	selective_estrogen_receptor_modulator
 Toripalimab|JS001|TAB 001|TAB-001	anti-PD-1_monoclonal_antibody
-Tovorafenib|DAY101|DAY-101	pan-RAF_inhibitor
+Tovorafenib|DAY101|TAK-580|MLN2480|BIIB024|DAY-101	RAF_inhibitor,type_2
 Trabectedin|Yondelis	DNA_minor_groove-binding_agent
 Trametinib|GSK1120212|JTP-74057|Mekinist	MEK_inhibitor
 TransCon TLR7/8 agonist	TLR7/8_agonist

@@ -1966,7 +1966,7 @@ orotate_phosphoribosyltransferase_inhibitor
 p97_inhibitor
 pan-FGFR_inhibitor	KIT/PDGFR/RET/VEGFR/FGFR_inhibitor
 pan-LOX_inhibitor
-pan-proteasome_inhibitor
+proteasome_inhibitor	pan-proteasome_inhibitor
 pan_ERBB_inhibitor,hypoxia_activating
 pegylated_IL-10
 peptide-fluorophore_conjugate
