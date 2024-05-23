@@ -85,6 +85,7 @@ AMT-116	anti-CD44v9_antibody-drug_conjugate
 AMT-151	anti-FR-alpha_antibody-drug_conjugate
 AMT-253	anti-MUC18_antibody-drug_conjugate
 AMT-562	anti-ERBB3_antibody-drug_conjugate
+AMT-676	anti-CDH17_antibody-drug_conjugate
 AMV002	HPV_DNA_vaccine
 AMX-500|SAR446329	unknown_drug_class
 AMX-818|AMX 818	bispecific_T-cell_engager,ERBB2-targeting
@@ -635,6 +636,7 @@ IBI133	anti-ERBB3_monoclonal_antibody
 IBI3001	antibody-drug_conjugate,EGFR/B7H3-targeting
 IBI3003	bispecific_T-cell_engager,GPRC5D-targeting
 IBI3004	unknown_drug_class
+IBI3005	unknown_drug_class,bispecific_antibody
 IBI319	bispecific_PD-1/4-1BB_antibody
 IBI334	bispecific_EGFR/B7H3_antibody
 IBI343|IBI-343	anti-CLDN18.2_antibody-drug_conjugate
@@ -1101,6 +1103,7 @@ RO7444973|IMC-C103C	bispecific_T-cell_engager,MAGE-A4-targeting
 RO7496353	anti-TGF-beta_monoclonal_antibody
 RO7502175	unknown_drug_class
 RO7566802	unknown_drug_class
+RO7617991	unknown_drug_class
 RO7656594	unknown_drug_class
 RP-6306|RP 6306	PKMYT1_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
@@ -1388,7 +1391,7 @@ YH004|YH-004	anti-4-1BB_agonistic_antibody
 YH32367|ABL105	bispecific_ERBB2/4-1BB_antibody
 YTB323	autologous_CAR-T-cell_therapy,CD19-targeting
 ZEN-3694	BET_inhibitor
-ZN-C3	WEE1_inhibitor
+Azenosertib|ZN-C3	WEE1_inhibitor
 ZN-C5	selective_estrogen_receptor_degrader
 ZN-d5	BCL2_inhibitor
 ZW49	anti-ERBB2_antibody-drug_conjugate
