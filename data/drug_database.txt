@@ -1,6 +1,7 @@
 drug	drug_class
 111In-FPI-1967|[111In]-FPI-1967	radioconjugate,FGFR3-targeting
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
+131I-TLX-101|4-iodophenylalanine	radioligand,LAT1/2-targeting
 161Tb-PSMA-I&T|161[Tb]Tb-PSMA-I&T	radioligand,PSMA-targeting
 177Lu-DOTA-rosopatamab|177Lu-DOTA-TLX591-CHO|TLX591	radioligand,PSMA-targeting
 177Lu-PNT2002|[Lu-177]-PNT2002	radioligand,PSMA-targeting
@@ -621,6 +622,7 @@ HMPL-523	SYK_inhibitor
 HMPL-760	BTK_inhibitor
 HP518	antiandrogen,oral_PROTAC
 HS-10241	MET_inhibitor
+HS-20093	anti-B7H3_antibody-drug_conjugate
 HSK29116	PROTAC_antineoplastic_drug
 HTI-1090|HTI 1090|SHR9146	IDO/TDO_inhibitor
 HX009|HX 009|HX-009	bispecific_PD-1/CD47_antibody
