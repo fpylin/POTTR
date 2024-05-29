@@ -741,6 +741,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	BCL2	Overexpression	Small-cell lung cancer	Venetoclax		25787766, 25787766, 30518523
 4	BCL6	Protein expression	Breast cancer; Diffuse large B-cell lymphoma	BCL6 inhibitor		12944904, 18927431, 27482887
 4	BRAF	A400V, G464V, G466V, G464E, L485_P490del, N581S, L597R, K601N, G469A, N581Y, G569R	Solid tumours	LY3009120	Class II mutations. A cell line study demonstrating sensitivity to dimer inhibition.	26732095
+4	BRAF	Class II mutations, Class III mutations	Solid tumour	NST-628	Preclinical study. NST-628, a pan-RAF-MEK molecular glue, demonstrated broad activity in cell line and PDX models with MAPK pathway alterations.	38588399
 4	BRAF	Class II mutations, Class III mutations	Solid tumours	KIN-2787		10.1200/JCO.2021.39.15_suppl.3116, 10.1158/1538-7445.AM2022-2674
 4	BRAF	Class II mutations, G469A, L597R, K601N	Solid tumours	BGB659; TAK632; LY3009120	Class II mutation; Sensitive to Group 2 inhibitors	30559419
 4	BRAF	Class III mutations, Class II mutations, Fusion	Solid tumours	Belvarafenib	TAPISTRY trial	NCT04589845
@@ -1275,6 +1276,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	KRAS	Oncogenic mutations	Non-small cell lung cancer	Trametinib + Ponatinib	Intrinsic MEK resistance by FGFR1 activation	27338794, NCT03704688
 4	KRAS	Oncogenic mutations	Ovarian cancer	Binimetinib	MILO/ENGOT-ov11. Low-grade serous ovarian cancers. Single-agent binimetinib did not improve PFS. Post-hoc KRAS mutant population ORR 44% (vs. wildtype 19%).	32822286
 4	KRAS	Oncogenic mutations	Solid tumour	BI-1701963	NCT04111458	10.1016/j.annonc.2021.08.1046
+4	KRAS	Oncogenic mutations	Solid tumour	NST-628	Preclinical study. NST-628, a pan-RAF-MEK molecular glue, demonstrated broad activity in cell line and PDX models with MAPK pathway alterations.	38588399
 4	KRAS	Oncogenic mutations	Solid tumours	Binimetinib	Phase I, ORR 3%	28152546
 4	KRAS	Oncogenic mutations	Solid tumours	GGTI-2418		31372813
 4	KRAS	Oncogenic mutations	Solid tumours	MEK inhibitor + SHP2 inhibitor		29808009, 30045908, 31068384, 31439712
@@ -1412,6 +1414,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	NRAS	Oncogenic mutations	Solid tumours	Ulixertinib; LY3214996; LTT462; Ravoxertinib	ERK inhibitors	29431672, 29247021, 10.1200/JCO.2019.37.15_suppl.3001
 4	NRAS	Q61K	Neuroblastoma	SHP099 + Trametinib; SHP099 + Ulixertinib	Cell line study showed that NB cell line is sensitive to SHP2 inhibition (NRAS WT) but resistant to in vivo model with NRAS Q61K. Combining SHP2i with MEKi or ERKi reversed the resistance.	32586982
 4	NRAS	Q61K	Non-small cell lung cancer	Lifirafenib + Mirdametinib	Phase 1b. NCT03905148. ORR 15/54 (28%) in efficacy-evaluable patients. 	10.1158/1538-7445.AM2023-CT033
+4	NRAS	Q61R, Q61	Solid tumour	NST-628	Preclinical study. NST-628, a pan-RAF-MEK molecular glue, demonstrated broad activity in cell line and PDX models with MAPK pathway alterations.	38588399
 4	NRAS	Q61R, Q61S	Melanoma	Belvarafenib	NCT02405065, NCT03118817	33953400
 4	NRG1	CD74-NRG1 fusion	Non-small cell lung cancer	GSK2849330	Phase 1. NCT01966445. Single responder with durable response. 	34132450
 4	NRG1	DOC4-NRG1 fusion, CLU-NRG1 fusion	Solid tumours	Tarloxotinib	Cell line and xenograft studies. Tarloxotinib-E inhibits MDA-MB-175VIII cell model harboring DOC4-NRG1 fusion, and a xenograft model harbouring CLU-NRG1 fusion.	33355298
