@@ -184,7 +184,7 @@ Aspirin|Acetylsalicylic acid	salicylates
 Atezolizumab|MPDL 3280A|MPDL 328OA|MPDL-3280A|MPDL3280A|MPDL328OA|RG7446|RO5541267|Tecentriq	anti-PD-L1_monoclonal_antibody
 Atorvastatin	HMG-CoA_reductase_inhibitor
 Auceliciclib	CDK4/6_inhibitor
-Aumolertinib|HS-10296	EGFR_inhibitor,third_generation
+Almonertinib|Aumolertinib|HS-10296	EGFR_inhibitor,third_generation
 Autologous GD2 chimeric antigen receptor-expressing peripheral blood T cells	autologous_CAR-T-cell_therapy,GD2-targeting
 Avapritinib|AYVAKIT|BLU-285	KIT_D816V_inhibitor; KIT_inhibitor,ATP-competitive; PDGFRA_inhibitor
 Avelumab|Bavencio|MSB-0010718C|MSB0010718C	anti-PD-L1_monoclonal_antibody
@@ -828,7 +828,7 @@ MIL93	anti-CLDN18.2_monoclonal_antibody
 MK-0482|MK0482	anti-ILT3_monoclonal_antibody
 MK-1084	KRAS_G12C_inhibitor
 MK-1697|MK1697	bispecific_PD-1/LAG3_antibody
-MK-2870|SKB264	anti-Trop2_antibody-drug_conjugate
+Sacituzumab tirumotecan|MK-2870|SKB264	anti-Trop2_antibody-drug_conjugate
 MK-4166	anti-GITR_monoclonal_antibody
 MK-4830|MK4830	anti-ILT4_monoclonal_antibody
 MK-7684A	Vibostolimab + Pembrolizumab
