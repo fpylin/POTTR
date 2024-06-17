@@ -100,8 +100,6 @@ NCT03212404	catype:Urothelial carcinoma
 NCT03273153	NOT BRAF:V600_missense_variant
 NCT03278717	NOT catype:Ovarian clear cell carcinoma; NOT catype:Ovarian carcinosarcoma; NOT catype:Ovarian mucinous carcinoma; catype:Ovarian cancer
 NCT03319940	catype:Small-cell lung carcinoma
-NCT03337698	catype:Non-small-cell lung cancer; *NOT prior_therapy:systemic_therapy
-NCT03337698	catype:Non-small-cell lung cancer; *(prior_therapy:Cisplatin OR prior_therapy:Carboplatin)
 NCT03363776	catype:Breast
 NCT03363776	catype:Colorectal
 NCT03363776	catype:Ovarian
@@ -113,7 +111,6 @@ NCT03424005	NOT ERBB2:amplification; *NOT ESR1:protein_expression; *CD274:protei
 NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_mutation
 NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
-NCT03497767	EGFR:oncogenic_mutation
 NCT03523585	ERBB2:amplification
 NCT03529110	ERBB2:amplification
 NCT03539536	MET:alteration; catype:Non-small cell lung cancer
@@ -149,7 +146,6 @@ NCT03821935	catype:Hepatocellular carcinoma
 NCT03821935	catype:Pancreatic adenocarcinoma
 NCT03821935	catype:Triple-negative breast cancer
 NCT03821935	catype:Urothelial cancer
-NCT03829332	*NOT prior_therapy:systemic_therapy
 NCT03878719	BRAF:V600_missense_variant
 NCT03905148	*NOT catype:CNS cancer; NRAS:oncogenic_mutation
 NCT03906331	RET:fusion; *Expanded access program
@@ -213,6 +209,7 @@ NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Colorectal 
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Solid tumour
 NCT04450732	(ERBB2:oncogenic_mutation OR ERBB2:amplification OR ERBB2:overexpression)
+NCT04460456	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
 NCT04482309	catype:Solid tumour; NOT catype:Breast cancer; NOT catype:Colorectal cancer; NOT catype:Gastric cancer; NOT catype:Gastroesophageal junction carcinoma; NOT catype:Non-Small Cell Lung Cancer; (ERBB2:oncogenic_mutation OR ERBB2:amplification OR ERBB2:overexpression)
 NCT04487080	(EGFR:exon_19_deletion OR EGFR:exon_21_mutation OR EGFR:L858R)
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
@@ -350,9 +347,10 @@ NCT05919537	NRG1:fusion
 NCT05919537	NOT NRG1:fusion; ERBB3:oncogenic_mutation; *(ERBB3:V104M OR ERBB3:V104L OR ERBB3:G284R OR ERBB3:D297V OR ERBB3:D297Y OR ERBB3:A232V); *NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:oncogenic_mutation; *NOT PTEN:loss; *NOT MET:amplification
 NCT05694936	*NOT prior_therapy:systemic_therapy
 NCT05894239	PIK3CA:oncogenic_mutation; *(ERBB2:amplification OR ERBB2:overexpression); *(PIK3CA:H1047L OR PIK3CA:H1047R OR PIK3CA:H1047Y OR PIK3CA:E545A OR PIK3CA:E545D OR PIK3CA:E545G OR PIK3CA:E545K OR PIK3CA:Q546E OR PIK3CA:Q546E OR PIK3CA:Q546R OR PIK3CA:E542K OR PIK3CA:C420R OR PIK3CA:Q88Q OR PIK3CA:N345K OR PIK3CA:M1043I OR PIK3CA:G1049R)
-NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression)
-NCT05872295	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression); prior_therapy:systemic_therapy
-NCT05872295	catype:Solid tumour; NOT Breast cancer; NOT Gastric cancer; NOT Gastroesophageal adenocarcinoma; *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:low_protein_expression OR ERBB2:oncogenic_mutation)
+NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression ERBB2:protein_expression OR OR ERBB2:low_protein_expression)
+NCT05872295	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); prior_therapy:systemic_therapy
+NCT05872295	catype:Solid tumour; NOT Breast cancer; NOT Gastric cancer; NOT Gastroesophageal adenocarcinoma; *(ERBB2:amplification OR ERBB2:protein_expression OR ERBB2:overexpression OR ERBB2:low_protein_expression OR ERBB2:oncogenic_mutation)
+NCT05577416	NOT prior_therapy:systemic_therapy; catype:Low-grade glioma
 NCT04929223	catype:Colorectal adenocarcinoma; *(microsatellite_instability:high OR mismatch_repair:deficient); *NOT_RECRUITING
 NCT04929223	catype:Colorectal adenocarcinoma; KRAS:G12C
 NCT04895709	*NOT prior_therapy:Docetaxel
@@ -369,11 +367,11 @@ NCT05954871	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_delet
 NCT05920356	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT06119581	KRAS:G12C; *NOT prior_therapy:systemic_therapy; catype:Non-small cell lung cancer
 NCT05462717	KRAS:G12C
+NCT05775289	*NOT prior_therapy:systemic_therapy; NOT_RECRUITING
 NCT03768063	prior_therapy:Atezolizumab
 NCT05867121	catype:Non-small cell lung cancer
 NCT05867121	catype:Gastric cancer
 NCT05867121	catype:Pancreatic adenocarcinoma
-NCT05909397	NOT prior_therapy:CDK4/6_inhibitor; NOT prior_therapy:Fulvestrant; NOT prior_therapy:Elacestrant; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
 NCT05132582	*NOT prior_therapy:Pyrotinib; *NOT prior_therapy:Lapatinib; *NOT prior_therapy:Tucatinib; *NOT prior_therapy:Neratinib; *NOT prior_therapy:Afatinib
 NCT05696626	ESR1:oncogenic_mutation
 NCT05208047	catype:Gastrointestinal stromal tumour
@@ -402,3 +400,11 @@ NCT05805501	catype:Clear cell renal cell carcinoma
 NCT04644068	sensitive_to_drug_class:PARP_inhibitor
 NCT06151574	ERBB2:kinase_domain_mutation; catype:Non-small cell lung cancer
 NCT06372574	*MAGEA4:protein_expression
+NCT06326411	catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation)
+NCT06326411	catype:Solid tumour; NOT catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR KRAS:oncogenic_mutation)
+NCT06326411	catype:Glioma; BRAF:oncogenic_mutation
+NCT06018337	(ERBB2:protein_expression OR ERBB2:low_protein_expression); NOT ERBB2:amplification; NOT ERBB2:overexpression
+NCT06326411	(BRAF:K601E OR BRAF:K601N OR BRAF:K601T OR BRAF:K601Q OR BRAF:N486_A489delinsK OR BRAF:N486_P490del OR BRAF:G469A OR BRAF:G469V OR BRAF:G469R OR BRAF:G649S OR BRAF:fusion OR BRAF:L597Q OR BRAF:L597R OR BRAF:L597S OR BRAF:L597V)
+NCT06326411	(BRAF:D287H OR BRAF:G466A OR BRAF:G466 OR BRAF:G466 OR BRAF:G466E OR BRAF:G466V OR BRAF:G466R OR BRAF:G469E OR BRAF:N581I OR BRAF:N581S OR BRAF:N581T OR BRAF:N581Y OR BRAF:N581K OR BRAF:D594A OR BRAF:D594G OR BRAF:D594H OR BRAF:D594N OR BRAF:D594E OR BRAF:D594Y OR BRAF:D594V OR BRAF:D596D OR BRAF:D596R OR BRAF:D596C OR BRAF:D596V)
+NCT06326411	(NRAS:Q61 OR NRAS:G12 OR NRAS:G13)
+NCT06326411	(KRAS:Q61 OR KRAS:G12 OR KRAS:G13)
