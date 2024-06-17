@@ -754,7 +754,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	BCL2	Overexpression	Small-cell lung cancer	Venetoclax		25787766, 25787766, 30518523
 4	BCL6	Protein expression	Breast cancer; Diffuse large B-cell lymphoma	BCL6 inhibitor		12944904, 18927431, 27482887
 4	BRAF	A400V, G464V, G466V, G464E, L485_P490del, N581S, L597R, K601N, G469A, N581Y, G569R	Solid tumours	LY3009120	Class II mutations. A cell line study demonstrating sensitivity to dimer inhibition.	26732095
-4	BRAF	Class II mutations, Class III mutations	Solid tumour	NST-628	Preclinical study. NST-628, a pan-RAF-MEK molecular glue, demonstrated broad activity in cell line and PDX models with MAPK pathway alterations.	38588399
+4	BRAF	Class II mutations, Class III mutations	Solid tumours	NST-628	Preclinical study. NST-628, a pan-RAF-MEK molecular glue, demonstrated broad activity in cell line and PDX models with MAPK pathway alterations.	38588399
 4	BRAF	Class II mutations, Class III mutations	Solid tumours	KIN-2787		10.1200/JCO.2021.39.15_suppl.3116, 10.1158/1538-7445.AM2022-2674
 4	BRAF	Class II mutations, G469A, L597R, K601N	Solid tumours	BGB659; TAK632; LY3009120	Class II mutation; Sensitive to Group 2 inhibitors	30559419
 4	BRAF	Class III mutations, Class II mutations, Fusion	Solid tumours	Belvarafenib	TAPISTRY trial	NCT04589845
@@ -2301,3 +2301,4 @@ R2	TSC1	Oncogenic mutations	Urothelial carcinoma	Buparlisib	Phase 2. N=19. Bupar
 R2	Tumour Mutational Burden	High	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	WT1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor		27634897
+4	NRAS	Oncogenic mutations	Solid tumours	NST-628	Based on Phase 1 inclusion criteria	NCT06326411
