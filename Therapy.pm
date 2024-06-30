@@ -150,6 +150,20 @@ sub is_a { # drug is-a drug_class
 	return 0;
 }
 
+sub is_a_strict { # drug is-a drug_class  
+	&ON_DEMAND_INIT;
+	my $x = mk_signature($_[0]);
+	my $y = mk_signature($_[1]);
+	
+# 	print "$x\t$y\n";
+	if ( exists $drug_class_has_parent{$x} ) {
+		return 1 if exists $drug_class_has_parent{$x}{$y};
+	} elsif ( exists $drug_class{$x} ) {
+		return 1 if exists $drug_class{$x}{$y};
+	}
+	return 0;
+}
+
 sub is_drug_PBS_reimbursed { 
 	&ON_DEMAND_INIT;
 	return is_a($_[0], 'PBS_listed') ; 

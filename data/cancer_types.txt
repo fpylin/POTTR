@@ -81,8 +81,8 @@ Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Breast invasive ductal carcinoma|Invasive ductal carcinoma|Infiltrative ductal carcinoma|Breast ductal carcinoma
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	Breast invasive lobular carcinoma|Invasive lobular carcinoma|Infiltrative lobular carcinoma|Breast lobular carcinoma
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-negative breast cancer	ER-positive HER2-negative breast cancer
-Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-negative breast cancer|HER2-ve breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-negative breast cancer	HER2-low breast cancer
+Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-negative breast cancer|HER2-ve breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HER2-positive breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HR-positive breast cancer	ER-positive breast cancer	ER-positive HER2-negative breast cancer|Oestrogen receptor-positive, HER2-negative breast cancer
 Cancer	Solid tumour	Breast cancer	Breast adenocarcinoma	HR-positive breast cancer	ER-positive breast cancer|Oestrogen receptor-positive breast cancer
@@ -427,7 +427,9 @@ Cancer	Solid tumour	Neuroendocrine tumour	Well-differentiated neuroendocrine tum
 Cancer	Solid tumour	Neuroendocrine tumour|Carcinoid tumour|Atypical carcinoid tumour
 Cancer	Solid tumour	Neuroepithelial tumour
 Cancer	Solid tumour	Neurofibromatosis|Plexiform Neurofibroma	Type 1 neurofibromatosis
-Cancer	Solid tumour	Neurological cancer|Neurologic cancer|Nervous system cancer
+Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis|Type 2 neurofibromatosis
+Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis	NF2-deficient meningioma
+Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis	NF2-deficient Schwannoma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Central nervous system primitive neuroectodermal tumour	Atypical teratoid rhabdoid tumour
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Central nervous system primitive neuroectodermal tumour	Medulloblastoma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Central nervous system primitive neuroectodermal tumour|CNS PNET|CNS-PNET
@@ -484,6 +486,7 @@ Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	Atypical meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	Papillary meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	Transitional meningioma
+Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	NF2-deficient meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Pineal gland tumour	Pineal parenchymal tumours of intermediate differentiation|PPTID
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Pineal gland tumour	Pineoblastoma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer|CNS cancer|Brain cancer|Primary Brain tumour|Primary CNS tumour|Primary CNS cancer
@@ -493,7 +496,10 @@ Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neurobl
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neuroblastic tumour	Ganglioneuroma
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neuroblastic tumour	Neuroblastoma	Olfactory neuroblastoma|Esthesioneuroblastoma
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neuroblastic tumour	Neuroblastoma|Peripheral neuroblastic tumour
-Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma|Acoustic neuroma
+Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma|Acoustic neuroma|Vestibular schwannoma
+Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma	NF2-deficient Schwannoma
+Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma	Non-vestibular schwannoma
+Cancer	Solid tumour	Neurological cancer|Neurologic cancer|Nervous system cancer
 Cancer	Solid tumour	Oncocytic carcinoma
 Cancer	Solid tumour	PD-L1 amplified tumour
 Cancer	Solid tumour	Parathyroid carcinoma
@@ -507,14 +513,21 @@ Cancer	Solid tumour	Sarcoma
 Cancer	Solid tumour	Sarcoma	Aggressive fibromatosis|Desmoid|Desmoid tumour
 Cancer	Solid tumour	Sarcoma	Alveolar soft part sarcoma
 Cancer	Solid tumour	Sarcoma	Angiomatoid fibrous histiocytoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Chondrosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Chondrosarcoma	Dedifferentiated chondrosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Chondrosarcoma	Mesenchymal chondrosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Chondrosarcoma	Myxoid chondrosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Chordoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Ewing sarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Giant cell tumor of bone
+Cancer	Solid tumour	Sarcoma	Bone cancer	Osteosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Osteosarcoma	Chondroblastic osteosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Osteosarcoma	Fibroblastic osteosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Osteosarcoma	Small cell osteosarcoma
+Cancer	Solid tumour	Sarcoma	Bone cancer	Osteosarcoma	Telangiectatic osteosarcoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Ovarian carcinosarcoma
 Cancer	Solid tumour	Sarcoma	Carcinosarcoma	Uterine carcinosarcoma
-Cancer	Solid tumour	Sarcoma	Chondrosarcoma
-Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Dedifferentiated chondrosarcoma
-Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Mesenchymal chondrosarcoma
-Cancer	Solid tumour	Sarcoma	Chondrosarcoma	Myxoid chondrosarcoma
-Cancer	Solid tumour	Sarcoma	Chordoma
 Cancer	Solid tumour	Sarcoma	Desmoplastic small round cell tumour
 Cancer	Solid tumour	Sarcoma	EBV-related sarcoma
 Cancer	Solid tumour	Sarcoma	Endometrial stromal sarcoma
@@ -528,7 +541,6 @@ Cancer	Solid tumour	Sarcoma	Fibrosarcoma
 Cancer	Solid tumour	Sarcoma	Fibrosarcoma	Congenital fibrosarcoma
 Cancer	Solid tumour	Sarcoma	Follicular dendritic cell sarcoma
 Cancer	Solid tumour	Sarcoma	Giant cell sarcoma
-Cancer	Solid tumour	Sarcoma	Giant cell tumor of bone
 Cancer	Solid tumour	Sarcoma	Hemangiopericytoma
 Cancer	Solid tumour	Sarcoma	Histiocytic sarcoma
 Cancer	Solid tumour	Sarcoma	Inflammatory myofibroblastic tumour	ALK-positive inflammatory myofibroblastic tumour
@@ -547,11 +559,6 @@ Cancer	Solid tumour	Sarcoma	Malignant peripheral nerve sheath tumour|Malignant p
 Cancer	Solid tumour	Sarcoma	Malignant tumour, spindle cell type
 Cancer	Solid tumour	Sarcoma	Myoepithelioma
 Cancer	Solid tumour	Sarcoma	Myxosarcoma
-Cancer	Solid tumour	Sarcoma	Osteosarcoma
-Cancer	Solid tumour	Sarcoma	Osteosarcoma	Chondroblastic osteosarcoma
-Cancer	Solid tumour	Sarcoma	Osteosarcoma	Fibroblastic osteosarcoma
-Cancer	Solid tumour	Sarcoma	Osteosarcoma	Small cell osteosarcoma
-Cancer	Solid tumour	Sarcoma	Osteosarcoma	Telangiectatic osteosarcoma
 Cancer	Solid tumour	Sarcoma	Perivascular epithelioid cell tumour	Angiomyolipoma|Renal angiomyolipoma
 Cancer	Solid tumour	Sarcoma	Perivascular epithelioid cell tumour	Pulmonary lymphangioleiomyomatosis
 Cancer	Solid tumour	Sarcoma	Perivascular epithelioid cell tumour|PEComa|Malignant perivascular epithelioid cell tumour|Malignant PEComa|Uterine PEComa
@@ -568,7 +575,7 @@ Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Leiomyosarcoma	Cervical leiomyos
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Leiomyosarcoma	Uterine leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Liposarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Liposarcoma	Dedifferentiated liposarcoma
-Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Liposarcoma	Liposarcoma	Myxoid liposarcoma
+Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Liposarcoma	Liposarcoma	Myxoid liposarcoma|Round cell liposarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Liposarcoma	Pleomorphic liposarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Liposarcoma	Well-differentiated liposarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Pleuropulmonary blastoma
@@ -706,14 +713,6 @@ Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelia
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma	Upper tract urothelial cancer	Ureteral urothelial carcinoma
 Cancer	Solid tumour	Urogenital cancer	Urothelial carcinoma|Urothelial cancer|Transitional cell carcinoma
 Cancer	Solid tumour	Urogenital cancer|Genitourinary cancer
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Breast adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of unknown primary
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Vulval adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of lacrimal gland
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of salivary gland
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Tracheal adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Lung adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Primary cutaneous adenoid cystic carcinoma
 Cancer	Solid tumour|Solid malignancy|Solid neoplasm|Malignant solid tumour
 Cancer	Uncommon cancer
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma
@@ -728,4 +727,12 @@ Cancer	Viral-related cancer	HPV-related cancer	HPV16-positive cancer	Cervical ca
 Cancer	Viral-related cancer	HPV-related cancer	HPV16-positive cancer	Oropharyngeal squamous cell carcinoma
 Cancer	Viral-related cancer	HPV-related cancer	HPV16-positive cancer	Penile cancer
 Cancer	Viral-related cancer|Virus-induced cancer
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of lacrimal gland
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of salivary gland
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of unknown primary
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Breast adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Lung adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Primary cutaneous adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Tracheal adenoid cystic carcinoma
+Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Vulval adenoid cystic carcinoma
 Cancer|Neoplasm|Malignant neoplasm
