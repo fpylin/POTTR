@@ -211,7 +211,7 @@ BG-68501	CDK2_inhibitor
 BGB-10188	PI3K-delta_inhibitor
 BGB-11417	BCL2_inhibitor
 BGB-15025	HPK1_inhibitor
-BGB-16673	BTK-PROTAC
+BGB-16673	BTK_PROTAC_degrader
 BGB-21447	BCL2_inhibitor
 BGB-24714	IAP_inhibitor; SMAC_mimetic
 BGB-30813	DGK-zeta_inhibitor
@@ -259,7 +259,7 @@ BNC101|BNC-101|ET-101	anti-LGR5_monoclonal_antibody
 BNC105P	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNT111	mRNA_personalised_cancer_vaccine
 BOS-342|BOS342|PRS342|PRS-342	bispecific_4-1BB/GPC3_antibody
-BOS172738	RET_inhibitor
+BOS172738	RET-selective_inhibitor
 BTX-1188	dual_GSPT1/IKZF1_degrader
 Bacillus Calmette-Guérin|BCG	BCG_vaccine
 Bafetinib|INNO-406|NS-187	BCR-ABL1_inhibitor
@@ -624,10 +624,10 @@ HMBD-001	anti-ERBB3_monoclonal_antibody,third_generation
 HMPL-453|HMPL 453|HMPL453	FGFR_inhibitor
 HMPL-523	SYK_inhibitor
 HMPL-760	BTK_inhibitor
-HP518	antiandrogen,oral_PROTAC
+HP518	AR_PROTAC_degrader
 HS-10241	MET_inhibitor
 HS-20093	anti-B7H3_antibody-drug_conjugate
-HSK29116	PROTAC_antineoplastic_drug
+HSK29116	BTK_PROTAC_degrader
 HTI-1090|HTI 1090|SHR9146	IDO/TDO_inhibitor
 HX009|HX 009|HX-009	bispecific_PD-1/CD47_antibody
 Halofuginone	glutamyl-prolyl_tRNA_synthetase_inhibitor
@@ -754,7 +754,7 @@ LM-108|LM108	anti-CCR8_monoclonal_antibody
 LM-302|LM302	anti-CDLN18.2_antibody-drug_conjugate
 LNS8801	GPER_agonist
 LOP628	anti-cKIT_antibody-drug_conjugate
-LOXO-260	RET_inhibitor
+LOXO-260	RET-selective_inhibitor
 LOXO-338	BCL2_inhibitor
 LOXO-435	FGFR3_inhibitor
 LOXO-783	PI3Kalpha_H1047R_inhibitor
@@ -1060,7 +1060,7 @@ Posaconazole|Noxafil|SCH 56592	azole_antifungal
 Poziotinib|HM781-36B|NOV120101	ERBB2_inhibitor,exon_20_selective
 Pracinostat	HDAC_inhibitor
 Pralatrexate|10-Propargyl-10-Deazaaminopterin|FOLOTYN	DHFR_inhibitor
-Pralsetinib|BLU-667|BLU667	RET_inhibitor
+Pralsetinib|BLU-667|BLU667	RET-selective_inhibitor
 Prednisolone|Decortin H|Deltacortril|.delta.1-Hydrocortisone|1,2-Dehydrohydrocortisone|Adnisolone|Aprednislon|Capsoid|Cortalone|Cortisolone|Dacortin H|Decaprednil|Delta- Cortef|Delta-Cortef|Delta-Diona|Delta-F|Delta-Phoricol|Delta1-dehydro-hydrocortisone|Deltahydrocortisone|Deltasolone|Deltidrosol|Dhasolone|Di-Adreson-F|Dontisolon D|Estilsona|Fisopred|Frisolona|Gupisone|Hostacortin H|Hydeltra|Klismacort|Kuhlprednon|Lenisolone|Lepi-Cortinolo|Linola-H N|Linola-H-Fett N|Longiprednil|Metacortandralone|Meti Derm|Meticortelone|Opredsone|Panafcortelone|Precortisyl|Pred-Clysma|Predeltilone|Predni-Coelin|Predni-Helvacort|Prednicortelone|Prednisolonum|Prelone|Prenilone|Sterane	glucocorticoid
 Prednisone	glucocorticoid
 Prexasertib|LY2606368	CHEK1_inhibitor
@@ -1208,7 +1208,7 @@ Seclidemstat|SP-2577	LSD1_inhibitor
 Selicrelumab|RO7009789	anti-CD40_agonistic_antibody
 Selinexor|KPT-330	selective_inhibitor_of_nuclear_export
 Selitrectinib|BAY 2731954|LOXO 195|LOXO-195|LOXO195	TRK_inhibitor,second_generation
-Selpercatinib|LOXO-292|Loxo292|LOXO 292|RETEVMO	RET_inhibitor
+Selpercatinib|LOXO-292|Loxo292|LOXO 292|RETEVMO	RET-selective_inhibitor
 Selumetinib|AZD6244|ARRY-142886|KOSELUGO	MEK_inhibitor
 Senaparib|IMP4297|IMP 4297|IMP-4297	PARP_inhibitor
 Serabelisib|INK1117|MLN-1117|MLN1117|TAK 117|TAK-117	PI3K_alpha_inhibitor
@@ -1246,7 +1246,7 @@ TAK-500	STING_agonist
 TAK-676	STING_agonist
 TAK-733|TAK733	MEK_inhibitor
 TAK632	RAF_inhibitor,type_2
-TAS0953/HM06	RET_inhibitor
+TAS0953/HM06	RET-selective_inhibitor
 TAS6417|CLN 081|CLN-081|CLN081|TAS 6417|TAS-6417	EGFR_inhibitor,exon_20_selective
 TG-1501|TG 1501|TG1501	anti-PD-L1_monoclonal_antibody
 TG-1801	bispecific_CD47/CD19_antibody
