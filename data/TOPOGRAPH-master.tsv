@@ -332,6 +332,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ALK	C1156Y, C1156T, L1196M	Non-small cell lung cancer	Entrectinib		28122866
 3	ALK	EML4-ALK Fusion, Fusions	Non-small cell lung cancer	Ensartinib		31628085
 3	ALK	EML4-ALK Fusion, Fusions	Non-small cell lung cancer	Entrectinib		10.1200/jco.2015.33.15_suppl.2517
+3	ALK	Fusion	Non-small cell lung cancer	APG-2449	Phase 1/2. APG-2449. NCT03917043. N=144. ORR was 68% in ROS1 TKI-naive and 796% in ALK TKI-naive patients. In 2G ALK inhibitor-resistant patients, ORR was 41%, mPFS was 11.9 months. Encouraging intracranial ORR was seen.	10.1200/JCO.2024.42.16_suppl.3124
 3	ALK	Fusion	Solid tumours	Crizotinib	NCI-MATCH (EAY131) Subprotocol F. N=4 with ORR of 50%.	35233056
 3	ALK	G1202R, G1202del, F1174, L1196M, G1269A, I1171	Non-small cell lung cancer	Lorlatinib	Loratinib has activities in patients who developed acquired resistance to first and second generation TKIs. ORR 42-89% across the list of mutations.	30892989
 3	ALK	I1151ins, L1152P, L1152R, C1156Y, C1156T, F1174C, F1174L, F1174V, L1196M, S1206C, S1206Y, G1269A, G1269S	Non-small cell lung cancer	Brigatinib		28122866
@@ -460,6 +461,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ERBB2	Kinase domain mutation	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01	10.1200/JCO.2020.38.15_suppl.9504
 3	ERBB2	kinase domain mutation, S310, exon 20 insertion	Solid tumours	Neratinib		29420467
 3	ERBB2	NOT Amplification and NOT Overexpression	Breast cancer	Patritumab deruxtecan	NCT04699630. Phase 2. N=60. In HER2-negative metastatic breast cancer, HER3-DXD resulted in ORR of 35% for all pts with CBR of 48%. Response are seen irrespective of HER3 expression status. 	10.1200/JCO.2023.41.16_suppl.1004
+3	ERBB2	Oncogenic mutations	Non-small cell lung cancer	BAY 2927088	Phase I/II SOHO-01 study. NCT05099172. N=34. BAY 2927088 led to ORR of 70% (23/33) and DCR of 82% in HER2-mutant NSCLC patients. Median PFS was 8.1 months.	10.1200/JCO.2024.42.17_suppl.LBA8598
 3	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-small cell lung cancer	Pyrotinib		30596880
 3	ERBB2	Oncogenic mutations, V659E, A775_G776insYVMA, G778_P780dup, G778insCPG, G776delinsVC, exon 20 insertion	Non-small cell lung cancer	Ado-Trastuzumab Emtansine	Not TGA approved. OncoKB LOE 2. 	30206164, 29989854
 3	ERBB2	Overexpression	Biliary tract cancer	Trastuzumab deruxtecan	Phase 2. NCT04482309. DESTINY-PanTumor02. ORR in biliary 	10.1200/JCO.2023.41.17_suppl.LBA3000
@@ -681,6 +683,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ALK	A348D, F856S	Acute lymphoblastic leukaemia	Crizotinib; Ceritinib; Brigatinib		26032424
 4	ALK	Amplification, protein expression	Non-small cell lung cancer	Ensartinib		31628085, 25724526
 4	ALK	EML4-ALK fusion, F1174L, R1275Q, L1196M, C1156Y	Solid tumours	Alectinib		21575866
+4	ALK	EML4-ALK fusion, NPM-ALK fusion, C1156Y, L1196M, I1171T, F1197M, G1269A, S1206Y, R1275Q, F1174L	Solid tumours; Non-small cell lung cancer; Anaplastic large cell lymphoma	APG-2449	Preclinical study. APG-2449 is a ALK/ROS1/FAK inhibitor	35820889
 4	ALK	F1174C	Prostate small cell carcinoma	Alectinib	Case report. In one case of prostate small cell carcinoma harbouring ALK F1174C, Alectinib led to stable disease for more than 6 months, improved symptoms, and in ctDNA vaf.	29559559
 4	ALK	F1174V, F1174L, G1128A, I1171N, R1192P, F1245C, R1275Q, Y1278S	Neuroblastoma	Repotrectinib; Crizotinib	Cell line study. Repotrectinib reduced the growth of ALK transfected PC12 cells that harbour constitutively active ALK mutations.	32269053
 4	ALK	F1245C	Neuroblastoma	Alectinib		29603581
@@ -860,7 +863,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	CCNE1	Amplification	Triple-negative breast cancer	Adavosertib		30181387
 4	CCNE1	Amplification, Overexpression	Solid tumours	RP-6306	Inhibition of the PKMYT1 kinase is synthetic lethal in solid tumour vivo models harbouring amplification of CCNE1 gene.	35444283
 4	CCNE1	Overexpression	Triple-negative breast cancer	Olaparib + Ceralasertib	Phase 2 plasmaMatch Cohort E. ATM loss, high CCNE1 expresion, and low RAD51 were associated with higher rate of response and PFS.	10.1200/JCO.2022.40.16_suppl.1024
-4	CD274	Amplification	Solid tumours	Anti-PD-1 monoclonal antibody; immune checkpoint blockade,PD-L1-targeting 	Retrospective review suggest ORR 66%	27900363; 27942391; 29902298; 10.1200/PO.18.00017
+4	CD274	Amplification	Solid tumours	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody; immune checkpoint blockade,PD-L1-targeting 	Retrospective review suggest ORR 66%	27900363; 27942391; 29902298; 10.1200/PO.18.00017
 4	CD274	Amplification, protein expression	Malignant peripheral nerve sheath tumour	Nivolumab	Case report. PD-L1 &gt; 90%. 	10.1200/PO.18.00375
 4	CD274	Protein expression	Biliary tract cancers	Nivolumab	PD-L1 positive v negative (&gt;=1%), PFS 10.4 v 2.3 mo	32352498
 4	CD274	Protein expression	Gastric cancer	Toripalimab	ORR 37% in tumours with PD-L1 expression &gt;= 1% for TC or IC using SP142 assay (v 8%).	31236579
@@ -1583,6 +1586,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	RNF43	Oncogenic mutations	Solid tumours	Wnt-C59		26023187
 4	RNF43	Truncating mutations, Frameshift mutations, C-terminal truncating mutations, Loss-of-function mutations, Oncogenic mutations, Deletion, R371fs, G659fs, P660fs	Pancreatic adenocarcinoma	ETC-159	RNF43 truncating and frameshift mutations, and  are sensitive to PORCN inhibitors in cell line assay.	33067269
 4	ROS1	Amplification	Solid tumours	Entrectinib; Brigatinib; Repotrectinib	STARTRK-1 reported only 1 case of amplification. ROS1 amplification included as inclusion criteria for NCT02097810, NCT03868423, NCT04094610.	28183697, NCT02097810, NCT03868423, NCT04094610
+4	ROS1	CD74-ROS1 fusion, L2026M	Non-small cell lung cancer	APG-2449	Preclinical study. APG-2449 is a ALK/ROS1/FAK inhibitor	35820889
 4	ROS1	EZR-ROS1 fusion	Non-small cell lung cancer	Crizotinib	Case report. Crizotinib resulted in a 6-month clinical benefit in a NSCLC patient harbouring EZR-ROS1 fusion. 	29361925
 4	ROS1	EZR-ROS1 fusion	Papillary thyroid cancer	Entrectinib		32913977
 4	ROS1	Fusion, CD74-ROS1 fusion, G2032R	Non-small cell lung cancer	Repotrectinib	In both cell line and xenograft models, repotrectinib was active against preclinical models harbouring CD74-ROS1 fusion with or without G2032R subsitution. 	32269053
@@ -1700,6 +1704,7 @@ R2	ALK	F1174L, Amplification	Neuroblastoma	Crizotinib	Phase 2 study. ADVL0912	33
 R2	ALK	Fusion	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
 R2	ALK	Fusion	Non-small cell lung cancer	Pembrolizumab; Atezolizumab; Nivolumab; Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	IMMUNOTARGET registry	31125062
 R2	ALK	G1128A, E1129V, L1122V, C1156Y, D1160H, F1174, R1192P, L1196M, L1198F, G1202R, G1269A	Non-small cell lung cancer	Crizotinib	Resistance listed for groups EXP2/EXP3A (crizotinib) only. For EXP(3B-5), exposure to individual drugs was not detailed in the publication.	30892989
+R2	ALK	G1202R	Non-small cell lung cancer	APG-2449	Preclinical study. APG-2449 is a ALK/ROS1/FAK inhibitor	35820889
 R2	ALK	G1202R, G1202del	Non-small cell lung cancer	Ensartinib		31857951
 R2	ALK	G1202R, G1202del	Non-small cell lung cancer	Entrectinib		28122866
 R2	ALK	G1202R, G1202del, D1203N, E1210K, E1210K and S1206C, E1210K and D1203N	Non-small cell lung cancer	Brigatinib		28122866, 28435288, 29935304
@@ -2153,7 +2158,7 @@ R2	MET	Y1230H (Y1248H)	Non-small cell lung cancer	Crizotinib	Case report. Acquir
 R2	MET	Y1230S (Y1248S), D1228N (D1246N), D1228H (D1246H), F1200I (F1218I), L1195V (L1213V), S244fs	Non-small cell lung cancer	Crizotinib	Case series.	31548343
 R2	MET+TP53	MET:Exon 14 skipping mutation and TP53:Oncogenic mutations	Non-small cell lung cancer	Crizotinib	Case series. TP53 mutation shown in post-exposure to crizotinib 7 of 12 cases.	31548343
 R2	Microsatellite Instability	Stable	Colorectal adenocarcinoma	Atezolizumab; Atezolizumab + Cobimetinib	Phase 3. IMBlaze370. ORR 4/273 (1%) in the Atezolizumab groups.	31003911
-R2	Microsatellite Instability	Stable, NOT High	Endometrial cancer	Durvalumab	PHAEDRA. Phase 2. ORR in the pMMR cohort was 3% (1 of 35) with median PFS of 1.8 months.	34103352
+R2	Microsatellite Instability	Stable	Endometrial cancer	Durvalumab	PHAEDRA. Phase 2. ORR in the pMMR cohort was 3% (1 of 35) with median PFS of 1.8 months.	34103352
 R2	Mismatch repair	Deficient	High-grade gliomas	Pembrolizumab	N=13. Single-agent PD-1 inhibitor showed no response in a prospective case series (ORR 0%) with 4 SD.	32823925
 R2	Mismatch repair	Deficient	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	Mismatch repair	Deficient	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Pembrolizumab	N=13. ORR 0%. All patients were microsatellite stable.	32823925
