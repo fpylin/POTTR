@@ -526,16 +526,19 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 # 	die join("\n", @srcf_eligibility)."\n";
 	
 	for my $srcf_eligibility ( @srcf_eligibility ) {
-		my $Eligibility_this_file = ( ($srcf_eligibility =~ /.tsv/) ? 
+		my $Eligibility_list_in_this_file = ( ($srcf_eligibility =~ /.tsv/) ? 
 			TSV->new( $srcf_eligibility ) : # if defined as a TSV, then load as is, 
 			TSV->new( $srcf_eligibility, ['trial_id', 'eligibility_criteria'] ) # otherwise assume default order of fields of trial_id, ec
 		);
 			
 		my %Eligibility_by_trial_id_this_file ;
-		for my $row ( @{ $Eligibility_this_file->{'data'} } ) {
+		for my $row ( @{ $Eligibility_list_in_this_file->{'data'} } ) {
 			my $trial_id = $$row{'trial_id'};
 			my $ec = $$row{'eligibility_criteria'};
 			next if ! defined $trial_id;
+			next if ! defined $ec;
+			# FIXME: A temporarily fix to whitelist the recruitment criteria
+			next if $ec =~ /^recruiting\s*(?:$|\b|\[)/i;
 			push @{ $Eligibility_by_trial_id_this_file{$trial_id} }, $ec; # rules are populated in disjunction
 		}
 		
