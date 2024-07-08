@@ -220,7 +220,7 @@ BGB-16673	BTK_PROTAC_degrader
 BGB-21447	BCL2_inhibitor
 BGB-24714	IAP_inhibitor; SMAC_mimetic
 BGB-30813	DGK-zeta_inhibitor
-BGB-3245	RAF_dimer_inhibitor
+Brimarafenib|BGB-3245	RAF_dimer_inhibitor
 BGB-43395	CDK4_selective_inhibitor
 BGB-A3055	anti-CCR8_monoclonal_antibody
 BGB-A333|BGB A333|BGBA333	anti-PD-L1_monoclonal_antibody
