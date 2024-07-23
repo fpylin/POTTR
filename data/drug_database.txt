@@ -284,6 +284,7 @@ Bazedoxifene	selective_estrogen_receptor_modulator,third_generation
 Belantamab Mafodotin|GSK2857916|GSK'916|GSK 916|GSK-916|Belamaf|J6M0-mcMMAF	anti-BCMA-immunoconjugate
 Belinostat	HDAC_inhibitor
 Belvarafenib|GDC-5573	pan-RAF_inhibitor
+Belzupacap Sarotalocan|AU-011	viral_nanoparticle_drug_conjugates
 Belzutifan|MK-6482	HIF2a_inhibitor
 Bemarituzumab|FPA144	anti-FGFR2_monoclonal_antibody
 Bemcentinib|BGB324	AXL_inhibitor
@@ -416,6 +417,7 @@ DCC-3116	ULK1/2_inhibitor
 DCSZ11	anti-CD93_monoclonal_antibody
 DF6002|BMS-986415	IL-12_Fc-fusion_protein
 DF6215	IL-2_variant
+DFF332	HIF2a_inhibitor
 DKN-01	anti-DKK1_monoclonal_antibody
 DR-01	anti-CD94_monoclonal_antibody
 DR-0201	unknown_drug_class,bispecific_antibody
@@ -1483,3 +1485,4 @@ ALLO-501A	allogeneic_CAR-T-cell_therapy,CD19-targeting
 WHG626	gamma_secretase_inhibitor
 WZTL002	autologous_CAR-T-cell_therapy,CD19-targeting
 Feladilimab	anti-ICOS_agonistic_antibody
+FG-M108	anti-CLDN18.2_monoclonal_antibody

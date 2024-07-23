@@ -342,6 +342,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ALK	L1198F	Non-small cell lung cancer	Crizotinib		26698910, 28122866 
 3	ALK	R1275Q	Neuroblastoma	Crizotinib	Phase 2 study. ADVL0912. ORR 15%	33568345
 3	APC	Loss-of-function mutations; oncogenic mutations	Aggressive fibromatosis	Nirogacestat	N=17. A total of 15 patients had APC or CTNNB1 mutations. ORR was 29% (5/17), and 5/17 had stable disease. Neither APC loss-of-function or CTNNB1 gain-of-function mutations was selected prospectively, but are known central alteration in aggressive fibromatosis. Responses were seen regardless of APC or CTNNB1 mutations.	28350521
+3	AR	Ligand-binding domain mutation	Prostate cancer	ARV-766	Phase 1/2 study. NCT05067140. N=103. In castration-resistant prostate cancer patients with AR LBD mutations resulted in PSA50 of 50%.	10.1200/JCO.2024.42.16_suppl.5011
 3	AR	Overexpression	Salivary gland cancers	Abiraterone Acetate + Leuprorelin; Abiraterone Acetate + Triptorelin; Abiraterone Acetate + Goserelin	Phase 2. NCT02867852. N=24. Median PFS: 3.7 months. Median OS: 22.5 months. ORR 21%. DCR 63%. AR overexpression is defined as combined score expression = 6.	34597119
 3	AR	Protein expression	Breast cancer	Proxalutamide	Phase 1B: NCT04103853. AR positivity defined as &gt;1% IHC.	10.1200/JCO.2021.39.15_suppl.1019
 3	AR	Protein expression	Salivary gland cancers	Apalutamide + Goserelin	Phase 2. NCT04325828. AR-expressing SGC, pts treated with APA and GOS. ORR (6/24) was 25%. Clinical benefit rate and DCR were 50% and 70.8%, respectively. PFS and OS in the treated pts were 7.4 months and not reached, respectively.	10.1200/JCO.2022.40.16_suppl.6079
@@ -409,6 +410,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	CSF1	Overexpression, Fusion, Rearrangement	Tenosynovial giant cell tumor	Pexidartinib	Phase 1. NCT01004861. N=23. Pexidartinib blocks the activity of CSF1R-dependent tumor-associated macrophage, required for tumour development. ORR was 52% (12/23) with partial response and DCR 83%. Alteration in CSF1 signalling is implied in the neoplastic development of TCGT, but the therapeutic eligibility is not selected by CSF1.	26222558
 3	CTAG1B	Protein expression, Overexpression	Synovial sarcoma; Myxoid liposarcoma; Round cell liposarcoma	Letetresgene autoleucel	Phase 2. IGNYTE-ESO substudy 2. NCT03967223. N=45. ORR was 40% (18/45) in patients with NY-ESO-1-expressing synovial sarcoma or myxoid/round cell liposarcoma. Median duration of response of 10.6 months.	10.1200/JCO.2024.42.16_suppl.2500
 3	CTNNB1	T41A, S45F, Gain-of-function mutations	Aggressive fibromatosis	Nirogacestat	N=17. A total of 15 patients had APC or CTNNB1 mutations. ORR was 29% (5/17), and 5/17 had stable disease. Neither APC loss-of-function or CTNNB1 gain-of-function mutations was selected prospectively, but are known central alteration in aggressive fibromatosis. Responses were seen regardless of APC or CTNNB1 mutations.	28350521
+3	DLL3	Protein expression	Prostate small cell carcinoma	Tarlatamab	Phase 1b study. NCT04702737. N=38 (evaluable patients with de novo or treatment-emergent neuroendocrine prostate cancer). ORR was 22% (4/38) and median PFS was 3.8 months in the DLL3+ subgroup. No response was seen in 20 evaluable patients. DLL3 positivity was defined by IHC in &gt;= 1% of patients.	10.1200/JCO.2024.42.16_suppl.5012
 3	DLL3	Protein expression	Small-cell lung cancer	Tarlatamab	Phase 2. DeLLphi-301. NCT05060016. N=220. In patients with previously treated extensive stage SCLC. Tarlatamab showed antitumor activity, with ORR of 32-40% across seen in different dose groups and durable objective responses (&gt;6 months) in 40 of 68 (59%) patients. Note DLL3 expression was not required as per trial eligibility but ubiquitously expressed  in SCLC. Objective responses were seen in patients with both positive, negative DLL3 expression.	37861218
 3	EGFR	C797S, C797G	Non-small cell lung cancer	Erlotinib; Gefitinib		32206559
 3	EGFR	Exon 19 deletion, L858R	Non-small cell lung cancer	Amivantamab + Lazertinib	ORR 36% 15PR 1CR in osimertinib resistance cohort. ORR 100% treatment naive	10.1016/j.annonc.2020.08.1572
@@ -464,9 +466,9 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ERBB2	Oncogenic mutations	Non-small cell lung cancer	BAY 2927088	Phase I/II SOHO-01 study. NCT05099172. N=34. BAY 2927088 led to ORR of 70% (23/33) and DCR of 82% in HER2-mutant NSCLC patients. Median PFS was 8.1 months.	10.1200/JCO.2024.42.17_suppl.LBA8598
 3	ERBB2	Oncogenic mutations, A775_G776insYVMA, exon 20 insertion	Non-small cell lung cancer	Pyrotinib		30596880
 3	ERBB2	Oncogenic mutations, V659E, A775_G776insYVMA, G778_P780dup, G778insCPG, G776delinsVC, exon 20 insertion	Non-small cell lung cancer	Ado-Trastuzumab Emtansine	Not TGA approved. OncoKB LOE 2. 	30206164, 29989854
-3	ERBB2	Overexpression	Biliary tract cancer	Trastuzumab deruxtecan	Phase 2. NCT04482309. DESTINY-PanTumor02. ORR in biliary 	10.1200/JCO.2023.41.17_suppl.LBA3000
+3	ERBB2	Overexpression	Biliary tract cancer	Trastuzumab deruxtecan	Phase 2. NCT04482309. DESTINY-PanTumor02. ORR in biliary 	37870536, 37870536, 10.1200/JCO.2023.41.17_suppl.LBA3000
 3	ERBB2	Overexpression	Gastroesophageal junction adenocarcinoma; Gastric Cancer	Ado-Trastuzumab Emtansine	ORR 20% GATSBY trial, but failed in P3 against docetaxel	28343975
-3	ERBB2	Overexpression, Protein expression	Cervical cancer; Endometrial cancer; Ovarian cancer; Bladder cancer; Solid tumours except Pancreatic adenocarcinoma, Biliary tract cancers	Trastuzumab deruxtecan	Phase 2. NCT04482309. DESTINY-PanTumor02	10.1200/JCO.2023.41.17_suppl.LBA3000
+3	ERBB2	Overexpression, Protein expression	Cervical cancer; Endometrial cancer; Ovarian cancer; Bladder cancer; Solid tumours except Pancreatic adenocarcinoma, Biliary tract cancers	Trastuzumab deruxtecan	Phase 2. NCT04482309. DESTINY-PanTumor02	37870536, 10.1200/JCO.2023.41.17_suppl.LBA3000
 3	ERBB2	Overexpression, Protein expression, Amplification	Solid tumours	IMU-131	Phase Ib Trial IMU.ACS.001. NCT02795988. Objective response seen in 5 of 14 patients.	33879458
 3	ERBB2	protein expression and NOT amplification	Gastric cancer; Gastroesophageal junction adenocarcinoma	Trastuzumab Deruxtecan	Phase 2. DESTINY-Gastric01. NCT03329690. Confirmed ORR 26% (5/19, cohort 1, ISH-negative, IHC 2+) and 10%(2/21, cohort 2, IHC 1+). 13 (68%, cohort 1) and 12 (60%, cohort 2) experienced reduced tumor size. Median OS was 7.8 months (Cohort 1) and 8.5 months (Cohort 2). Median PFS 4.4 (Cohort 1) and 2.8 months (Cohort 2).	36379002
 3	ERBB2	Protein expression AND NOT Oncogenic mutations, Overexpression AND NOT Oncogenic mutations	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	Phase 2. NCT03505710. DESTINY-Lung01. Confirmed ORR 27% (N=49, Cohort 1) and 34 (N=41, Cohort 1A) respectively.	38547891
@@ -490,6 +492,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	FGFR1	Fusion; FGFR1-TACC1 fusion	Solid tumour	Erdafitinib	Phase 2. NCI-MATCH. EAY131-K2 trial. NCT03198147. N=35. Erdafitinib showed antitumor efficacy in patients with FGFR1-4 mutations or fusions with ORR of 16% (4/25) and Median PFS of 3.6 months. 	38603650
 3	FGFR1	High mRNA expression	Urothelial carcinoma	Rogaratinib	NCT03410693. Randomised Phase 2. FORT-1. FGFR1/3 mRNA positive population. N=87 in the Rogaratinib group. ORR was 21% (18/87), and median OS was 8.3 months. However, neither ORR or OS was superior to chemotherapy group. 	36240478
 3	FGFR1	K656E	Diffuse astrocytoma	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
+3	FGFR1	K656E	Glioblastoma	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. N=107. Pemigatinib achieved ORRs of 27% (fusions,n=49), 9.4% (actionable SNV, n=32), and 3.8% (kinase domain mutations, n=26); median PFS was 4.5 and 3.7 months, and OS was 17.5 and 11.4 months.	38710951
 3	FGFR1	Oncogenic mutations	Solid tumours	Erdafitinib	Phase 2. RAGNAR. NCT04083976. Across FGFR1-3 alterations (mutations and fusions) treated with erdafitinib, ORR was 29% (52/178, including 3 CR) by independent review committee, DCR was 73% (129/178). Median DOR 7.1 months. PFS 5.2 months. OS 10.9 months. ORR was comparable with FGFR mutations vs fusions (26-27%).	10.1200/JCO.2022.40.16_suppl.3007
 3	FGFR2	C382R	Cervical cancer	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
 3	FGFR2	C382R, I291_Y308del, Extracellular domain deletion, Y375C, W290C	Cholangiocarcinoma	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
@@ -499,10 +502,14 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	FGFR2	Fusion	Ovarian cancer; Pancreatic adenocarcinoma; Cervical cancer; Non-small cell lung cancer; Prostate cancer	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
 3	FGFR2	Fusion, C382R, R678H, H167_N173del, C383R, W290C	Cholangiocarcinoma	RLY-4008	Phase 1/2.ReFocus. NCT04526106. ORR in FGFR2-Mutated cholangiocarcinoma was 29%. In the cohort with an FGFR2 fusion and a dosage of 70mg or higher, the ORR was 73% (8/11). In FGFRi refractory CCA, the ORR was 21% (3/14).	10.1200/JCO.2023.41.16_suppl.4009
 3	FGFR2	Fusion, FGFR2-BICC1 fusion, FGFR2-CCDC6 fusion, FGFR2-CLIP1 fusion, FGFR2-USP33	Solid tumours	Pemigatinib	Phase 1. FIGHT-101. In FGFR fusion/rearragement cohort (N=20), ORR was 25% (5/20). 	35176457
+3	FGFR2	Fusion, FGFR2-BICC1 fusion, FGFR2-RBM20 fusion, FGFR2-MRVI1 fusion, FGFR2-CROCC fusion, FGFR2-KIAA1598 fusion, FGFR2 1291_Y308del, FGFR2 W290C, FGFR2 Y375C, FGFR2 C382R	Cholangiocarcinoma	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. N=107. Pemigatinib achieved ORRs of 27% (fusions,n=49), 9.4% (actionable SNV, n=32), and 3.8% (kinase domain mutations, n=26); median PFS was 4.5 and 3.7 months, and OS was 17.5 and 11.4 months.	38710951
 3	FGFR2	Fusions	Cholangiocarcinoma	Erdafitinib	LUC2001	10.1200/JCO.2019.37.15_suppl.4117
 3	FGFR2	Fusions, Oncogenic mutations	Solid tumours	Erdafitinib	Phase 2. RAGNAR. NCT04083976. Across FGFR1-3 alterations (mutations and fusions) treated with erdafitinib, ORR was 29% (52/178, including 3 CR) by independent review committee, DCR was 73% (129/178). Median DOR 7.1 months. PFS 5.2 months. OS 10.9 months. ORR was comparable with FGFR mutations vs fusions (26-27%).	10.1200/JCO.2022.40.16_suppl.3007
 3	FGFR2	S252W; Fusion; FGFR2-ACOT11 fusion; FGFR2-AHCYL1 fusion; FGFR2-FOXP1 fusion; FGFR2-BICC1 fusion; 	Solid tumour	Erdafitinib	Phase 2. NCI-MATCH. EAY131-K2 trial. NCT03198147. N=35. Erdafitinib showed antitumor efficacy in patients with FGFR1-4 mutations or fusions with ORR of 16% (4/25) and Median PFS of 3.6 months. 	38603650
+3	FGFR2 	C382R	Cervical cancer; Endometrial cancer	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. N=107. Pemigatinib achieved ORRs of 27% (fusions,n=49), 9.4% (actionable SNV, n=32), and 3.8% (kinase domain mutations, n=26); median PFS was 4.5 and 3.7 months, and OS was 17.5 and 11.4 months.	38710951
+3	FGFR3	FGFR3-TACC3 fusion, FGFR3 Y373C	Urothelial carcinoma; Glioblastoma; Cervical cancer; Endometrial cancer	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. N=107. Pemigatinib achieved ORRs of 27% (fusions,n=49), 9.4% (actionable SNV, n=32), and 3.8% (kinase domain mutations, n=26); median PFS was 4.5 and 3.7 months, and OS was 17.5 and 11.4 months.	38710951
 3	FGFR3	Fusion	Glioblastoma; Cervical cancer	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
+3	FGFR3	Fusion, FGFR3-TACC3 fusion	Cervical cancer; Endometrial cancer	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. N=107. Pemigatinib achieved ORRs of 27% (fusions,n=49), 9.4% (actionable SNV, n=32), and 3.8% (kinase domain mutations, n=26); median PFS was 4.5 and 3.7 months, and OS was 17.5 and 11.4 months.	38710951
 3	FGFR3	Fusions, FGFR3-TACC3 fusion, Oncogenic mutations, R248C, S249C, Y375C, Y373C, G370C, F386L, K650E	Urothelial carcinoma	Infigratinib		29848605, 10.1200/JCO.2019.37.15_suppl.4510
 3	FGFR3	Fusions, Oncogenic mutations	Solid tumours	Erdafitinib	Phase 2. RAGNAR. NCT04083976. Across FGFR1-3 alterations (mutations and fusions) treated with erdafitinib, ORR was 29% (52/178, including 3 CR) by independent review committee, DCR was 73% (129/178). Median DOR 7.1 months. PFS 5.2 months. OS 10.9 months. ORR was comparable with FGFR mutations vs fusions (26-27%).	10.1200/JCO.2022.40.16_suppl.3007
 3	FGFR3	High mRNA expression	Urothelial carcinoma	Rogaratinib	NCT03410693. Randomised Phase 2. FORT-1. FGFR1/3 mRNA positive population. N=87 in the Rogaratinib group. ORR was 21% (18/87), and median OS was 8.3 months. However, neither ORR or OS was superior to chemotherapy group. 	36240478
@@ -903,6 +910,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	CHEK1	Overexpression	Small-cell lung cancer	Berzosertib + PF-477736	Pre-clinical only	29138515
 4	CHEK2	Oncogenic mutations	Prostate cancer	Olaparib	PROFOUND trial; Cohort B: 12 patients. HR: 0.87 not powered.	32343890
 4	CHEK2	Oncogenic mutations	Prostate cancer	Olaparib	TOPARP-B; single case of PSA50 response but no RECIST response.	31806540
+4	CLDN18	Overexpression, Protein expression, Low protein expression	Pancreatic adenocarcinoma	FG-M108 + Nab-paclitaxel + Gemcitabine	Phase 1b study. NCT04894825. Activities were observed in PDAC patients with positive Claudin 18.2 expression receiving FG-M108 + nab-paclitaxel and gemcitabine in CLDN18.2 expression. Immunohistochemistry (IHC) showed at least 1+ in at least 10% of cells.	10.1200/JCO.2024.42.16_suppl.4049
 4	CLDN18	Protein expression	Solid tumours	MIL93	Phase 1. NCT04671875. In 10 evaluable patients, 1 responders were seen in CLDN18.2-positive gastric cancer achieved PR.	10.1200/JCO.2022.40.16_suppl.3086
 4	Consensus molecular subtype	CMS2, CMS3	Colorectal adenocarcinoma	Capecitabine + Bevacizumab	MAX: Exploratory analysis showed CMS2 and CMS3 is associated with longer PFS in bevacizumab groups, but not OS.	30247524
 4	Consensus molecular subtype	CMS4	Colorectal adenocarcinoma	FOLFIRI + Cetuximab	FIRE-3: for RAS wild-type tumours, CMS4 was associated with longer PFS (HR 0.67, p=0.048) and OS (HR 0.57, p=0.008) in Cetuximab versus Bevacizumab in combination with FOLFIRI in the first-line setting.	31868905
@@ -1792,6 +1800,7 @@ R2	BRAF	V600E and L514V	Glioma	BGB3245	Type II AC-IN/DFG-OUT RAF dimer inhibitor
 R2	BRAF	V600E and L514V	Glioma	Vemurafenib; Dabrafenib; PLX8394	Secondary mutation acquired following dabrafenib, inducing BRAF Dimerization	29880583
 R2	BRAF	V600E, AKAP9-BRAF fusion	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
 R2	BRAF	V600E, Class I mutations, Class II mutations, G469A	Solid tumours	RMC-4550	Cell line study.	30104724
+R2	BRAF	V600E, L525R	Cholangiocarcinoma	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	BRAF+EGFR	EGFR:Oncogenic mutations and BRAF:fusion	Non-small cell lung cancer	EGFR inhibitor            	Off-target mechanism	30831205
 R2	BRAF+KRAS	BRAF:V600E AND KRAS:G12D, BRAF:V600E AND KRAS:Oncogenic mutations	Colorectal adenocarcinoma	Encorafenib + Cetuximab	Case report.	34994629
 R2	BRAF+KRAS	BRAF:V600E AND KRAS:Q61R	Non-small cell lung cancer	Dabrafenib + Trametinib		32388065
@@ -1951,7 +1960,7 @@ R2	ERBB2	L755S, V842I, K753E	Breast cancer	Lapatinib		32256585
 R2	ERBB2	Low protein expression	Gastroesophageal junction adenocarcinoma; Gastric Cancer	Trastuzumab deruxtecan	DESTINY-Gastric 01. NCT03329690. Exploratory cohort. In IHC 1+ cohort, ORR was 9.5% (2/21) and did not meet the prespecified endpoint. DCR 71%. 	36379002
 R2	ERBB2	No protein expression, Low protein expression	Colorectal adenocarcinoma	Fam-trastuzumab deruxtecan-nxki	Phase 2 DESTINY-CRC01. No objective responses seen in cohort B (IHC2+ and ISH-negative) or cohort C (IHC1+).	33961795, 10.1200/JCO.2020.38.15_suppl.4000
 R2	ERBB2	Overexpression	Urothelial carcinoma	Lapatinib		28034079
-R2	ERBB2	Overexpression, Protein expression	Pancreatic adenocarcinoma	Trastuzumab deruxtecan	Phase 2. NCT04482309. DESTINY-PanTumor02	10.1200/JCO.2023.41.17_suppl.LBA3000
+R2	ERBB2	Overexpression, Protein expression	Pancreatic adenocarcinoma	Trastuzumab deruxtecan	Phase 2. NCT04482309. DESTINY-PanTumor02	37870536, 10.1200/JCO.2023.41.17_suppl.LBA3000
 R2	ERBB2	R487W, L755P, L755S, D769Y, A775_G776insYVMA, G776S, G776V, G776delinsLC, G776delinsVC, V777L, G778_S779insG, P780_Y781insGSP, L841V, V842I, N857S, T862A, D962N, P1199T	Solid tumours	Trastuzumab	High throughput screening of VUS in ERBB2	29967253
 R2	ERBB2	T798I	Breast cancer	Neratinib	Case report. ERBB2 T798I gatekeeper mutation was found in a breast cancer patient after sustained partial response to neratinib.	28274957
 R2	ERBB2	T798I, L785F, D769Y	Breast cancer	Neratinib; Fulvestrant + Neratinib	Gatekeeper mutation	31806627
@@ -1991,24 +2000,30 @@ R2	FGFR1	Amplification	Lung squamous cell carcinoma	AZD4547	SWOG S1400D; Minimal
 R2	FGFR1	Amplification	Solid tumour except urothelial carcinoma	Erdafitinib	Phase 2 NCI-MATCH. EAY131-K1 trial. NCT03167159. N=35. Erdafitinib did not meet its primary end point of efficacy as determined by ORR in treatment-refractory solid tumors harboring FGFR1-4 amplifications.	38603651
 R2	FGFR1	Amplification	Solid tumours	AZD4547	No response in these cohorts	32463741
 R2	FGFR1	Amplification; Oncogenic mutations	Breast cancer	Sunitinib	NCT02693535. TAPUR. Phase 2. Single agent Sunitinib had ORR of 7% in FGFR1 altered group. DCR was 27% did not meet the prespecified threshold.	38354330
+R2	FGFR1	N546K, N546D	Breast cancer; Endometrial cancer; Solitary fibrous tumour	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. De novo primary resistance mutations prior to Pemigatinib without response	38710951
 R2	FGFR1	N564K	Solid tumours	Ponatinib; Dovitinib; Infigratinib	Molecular hinge	27558949
+R2	FGFR1	V559L, V559M, N546K	Pancreatic adenocarcinoma	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	FGFR1	V561M	Solid tumours	Infigratinib; AZD4547; Debio1347	Gatekeeper mutation	28646488
 R2	FGFR2	Amplification	Breast cancer	Fulvestrant + Ribociclib		30914635
 R2	FGFR2	Amplification	Solid tumour except urothelial carcinoma	Erdafitinib	Phase 2 NCI-MATCH. EAY131-K1 trial. NCT03167159. N=35. Erdafitinib did not meet its primary end point of efficacy as determined by ORR in treatment-refractory solid tumors harboring FGFR1-4 amplifications.	38603651
 R2	FGFR2	Amplification	Solid tumours	AZD4547	No response in these cohorts	32463741
 R2	FGFR2	Amplification; Oncogenic mutations	Breast cancer	Sunitinib	NCT02693535. TAPUR. Phase 2. Single agent Sunitinib had DCR of 0% in FGFR2 altered group.	38354330
 R2	FGFR2	E565A, L617M	Cholangiocarcinoma	Infigratinib		31911531
+R2	FGFR2	E565A, N549K 	Cancer of unknown primary	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	FGFR2	Fusions, FGFR2-CCDC6 fusion, FGFR2-KIAA1598 fusion, FGFR2-TACC2 fusion	Non-small cell lung cancer	Osimertinib; Gefitinib		35566609
 R2	FGFR2	L618F	Cholangiocarcinoma	Debio1347		33926920
 R2	FGFR2	N549K	Cholangiocarcinoma	AZD4547; Infigratinib; Erdafitinib; Pemigatinib		34272467
 R2	FGFR2	N549K	Cholangiocarcinoma	AZD4547; Infigratinib; Pemigatinib		34272467
+R2	FGFR2	N549K, N549D, N549H, N549F, M537I, V564I, V564F, V564L, L617V, K641R, K569M	Cholangiocarcinoma	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	FGFR2	N549K, N549H, E565A, L617V, K641R, K659M	Cholangiocarcinoma	Pemigatinib	Exploratory analysis of on-target secondary mutations from FIGHT-202 trial. No gatekeepter V564 mutations were identified.	33218975
+R2	FGFR2	N549K, V395D, R664W, K505E	Breast cancer; Endometrial cancer; Solitary fibrous tumour	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. De novo primary resistance mutations prior to Pemigatinib without response	38710951
 R2	FGFR2	N549S, N549H	Cholangiocarcinoma	Dovitinib		34272467
 R2	FGFR2	N550, V565, E565A, C492	Cholangiocarcinoma	Futibatinib		10.1016/S0959-8049(20)31121-7
 R2	FGFR2	N550D, N550K, V563I, V565I, V565L, E566A, E566G, K642I, L642R, K660M	Cholangiocarcinoma	Infigratinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 R2	FGFR2	N550D, N550K, V565I, V565L, K642I, K660M	Cholangiocarcinoma	Pemigatinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 R2	FGFR2	N550H, V565I, V565L, E566G, K660M	Solid tumours	AZD4547; Infigratinib	In cell line studies, futibatinib is active several drug-resistant FGFR2 mutants including V565I gatekeeper mutants.	32973082
 R2	FGFR2	N550K, V565L, K642I, K660M	Cholangiocarcinoma	Erdafitinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
+R2	FGFR2	V564F	Gastric cancer	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	FGFR2	V564F, N549H, N549K, E565A, L617V, K641R, K659M	Cholangiocarcinoma	Infigratinib		28034880
 R2	FGFR2	V565I, N550K, V564M, V564F	Solid tumours	Infigratinib; AZD4547; Debio1347; Dovitinib; Ponatinib	Gatekeeper mutation	26224133, 23908597
 R2	FGFR2	V565L	Cholangiocarcinoma	Futibatinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
@@ -2020,6 +2035,7 @@ R2	FGFR3	FGFR3-TACC3 fusion	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-tar
 R2	FGFR3	Fusion	Non-small cell lung cancer	Osimertinib	Off-target mechanism	23470965
 R2	FGFR3	N540K, V555M, L608V	Cholangiocarcinoma	Infigratinib; AZD4547; Debio1347		28034880
 R2	FGFR3	V443, V555M	Solid tumours	Infigratinib; AZD4547; Debio1347	Gatekeeper mutation	22869148, 29848605
+R2	FGFR3	V555M, V555L	Non-small cell lung cancer	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	FGFR4	V550E, V550L	Solid tumours; Hepatocellular carcinoma	Fisogatinib	Gatekeeper mutation	31575540
 R2	FLT3	Amplification	Colorectal adenocarcinoma	Sunitinib	NCT02693535. TAPUR. ORR 0%.	33068284
 R2	FLT3	D835	Acute myeloid leukaemia	Sorafenib		22368270
@@ -2077,6 +2093,7 @@ R2	KIT	V654A, N655S, T670I, N680K, F681L, C809G, D816G, D816H, D816V, D816, D820
 R2	KIT	V654A, N655S, T670I, N822T, S840N	Gastrointestinal stromal tumour	Avapritinib	Secondary resistance	19164557,31085175,30792533,31123346,30101284, 31270078
 R2	KIT	V654A, N822K, N822Y, D820G 	Gastrointestinal stromal tumour	Imatinib + Binimetinib		35041493
 R2	KIT	V654A, T670I	Gastrointestinal stromal tumour	Midostaurin		31270078
+R2	KRAS	A59T, G13D	Cancer of unknown primary	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	KRAS	Amplification	Colorectal adenocarcinoma	Binimetinib + Encorafenib	Paired pre-post treatment sequencing	25673644
 R2	KRAS	Amplification	Colorectal adenocarcinoma	Cetuximab; Panitumumab	Cell line study. Tumors or cell lines harboring KRAS amplification are not responsive to anti-EGFR inhibitors.	23404247
 R2	KRAS	Amplification	Colorectal adenocarcinoma	Cetuximab; Panitumumab	Retrospective study. Multi-institutional cohort showing disease progression on treatment in 8 patients with KRAS amplified CRC receiving anti-EGFR therapies.	32376853
@@ -2191,12 +2208,14 @@ R2	NRAS	Oncogenic mutations	Acute myeloid leukaemia	Ivosidenib	NRAS- reduced res
 R2	NRAS	Oncogenic mutations	Rhabdomyosarcoma	Ulixertinib	Phase 2. Pediatric MATCH Arm J (APEC1621J). NCT03698994. In paediatric population with treatment-refractory tumors (N=20) harbouring activating MAPK alterations, ORR was 0%.	10.1200/JCO.2022.40.16_suppl.3009
 R2	NRAS	Oncogenic mutations	Rhabdomyosarcoma; Neuroblastoma	Selumetinib	NCI-COG Pediatric MATCH Trial. Arm E. NCT03213691. N=20 with MAPK pathway gene alterations with no objective responses observed. Three patients achieved stable disease as BOR.	35363510
 R2	NRAS	Oncogenic mutations	Solid tumours	Selumetinib	Phase 2. NCI-COG arm E. N=21. Pediatric with MAPK pathway alterations. No objective responses was observed.	10.1200/JCO.2021.39.15_suppl.10008
+R2	NRAS	Q61H, G13D, G12D	Cancer of unknown primary	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	NRAS	Q61K	Neuroblastoma	SHP099; II-B08; RMC-4550	Cell line study showed that NB cell line is sensitive to SHP2 inhibition (NRAS WT) but resistant to in vivo model with NRAS Q61K. Combining SHP2i with MEKi or ERKi reversed the resistance.	32586982
 R2	NRAS	Q61K	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
 R2	NRAS	Q61K	Solid tumours	Ponatinib	Anti-RET activity	32083997
 R2	NRAS	Q61K, G12C	Acute myeloid leukaemia	Gilteritinib	Mutations in MAPK pathway mediate secondary clinical resistance to FLT3-mutated AML	31088841
 R2	NRAS	Q61K, G13R	Non-small cell lung cancer	Sotorasib	Treatment-emergent RAS and RAF hotspot mutations were also observed in both clinical samples and patient-derived xenograft models.	34759319
 R2	NRAS	Q61R, Q61K	Melanoma	Dabrafenib; Trametinib; Dabrafenib + Trametinib	Progression biopsy study. Acquired NRAS Q61 mutation confers resistance to both RAF and MEK inhibition.	24265153
+R2	NRAS	Q61R, Q61K, G13V, G13D, G12S	Cholangiocarcinoma	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	NRG1	Fusions	Non-small cell lung cancer	Pembrolizumab + Carboplatin + Pemetrexed	Retrospective registry-based study. Chemoimmunotherapy ORR 0%.	34077268
 R2	NRG1	Overexpression	Non-small cell lung cancer	Seribantumab + Docetaxel	No PFS improvement in EGFR wt NSCLC	10.1200/JCO.2019.37.15_suppl.9036
 R2	NTRK1	Alterations AND NOT fusion	Solid tumours	Larotrectinib	One PR (of 73) with short DOR.	10.1158/1538-7445.AM2020-CT062

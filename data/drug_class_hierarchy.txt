@@ -1207,6 +1207,7 @@ cancer_therapy	radiotherapy	brachytherapy
 cancer_therapy	unknown_drug_class
 cancer_therapy	vaccine-based_therapy
 cancer_therapy	virus_based_therapy	oncolytic_virus
+cancer_therapy	virus_based_therapy	virus-like_drug_conjugate
 cancer_therapy,4-1BB-targeting	immuno-oncology_therapy,4-1BB-targeting
 cancer_therapy,ACE-targeting	ACE_inhibitor
 cancer_therapy,AHR-targeting	AHR_inhibitor
@@ -2294,3 +2295,4 @@ virus-based_therapy	oncolytic_virus	oncolytic_HSV_virus
 virus-based_therapy	oncolytic_virus	replication-competent_oncolytic_adenovirus
 virus-based_therapy	oncolytic_virus	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
 virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
+virus-based_therapy	viral_nanoparticle_drug_conjugates

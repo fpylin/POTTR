@@ -136,6 +136,10 @@ AR	exon_5	726	773
 AR	exon_6	774	817
 AR	exon_7	818	869
 AR	exon_8	870	920
+AR	N-terminal_domain	1	558
+AR	DNA-binding_domain	559	621
+AR	hinge_domain	622	670
+AR	ligand-binding_domain	671	920
 ARID1A	exon_1	1	379
 ARID1A	exon_2	380	450
 ARID1A	exon_3	451	601

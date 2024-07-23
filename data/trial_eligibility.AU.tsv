@@ -63,7 +63,6 @@ NCT03212404	catype:Small-Cell Lung Cancer
 NCT03212404	catype:Small-cell lung cancer
 NCT03212404	catype:Urothelial Carcinoma
 NCT03212404	catype:Urothelial carcinoma
-NCT03319940	catype:Small-cell lung carcinoma
 NCT03486873	EXTENSION_STUDY
 NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
@@ -96,7 +95,6 @@ NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Colorectal 
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Solid tumour
 NCT04460456	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
-NCT04482309	catype:Solid tumour; NOT catype:Breast cancer; NOT catype:Colorectal cancer; NOT catype:Gastric cancer; NOT catype:Gastroesophageal junction carcinoma; NOT catype:Non-Small Cell Lung Cancer; (ERBB2:oncogenic_mutation OR ERBB2:amplification OR ERBB2:overexpression)
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT04565275	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration); *NOT prior_therapy:pan-FGFR_inhibitor
 NCT04589845	*NOT_RECRUITING; (sensitive_to:GDC-0077 OR sensitive_to_drug_class:PI3K_inhibitor); *(PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:H1047_missense_variant); *(PIK3CA:E81K OR PIK3CA:E88Q OR PIK3CA:E88P OR PIK3CA:R93Q OR PIK3CA:R93W OR PIK3CA:P104L OR PIK3CA:G106_missense_variant  OR PIK3CA:R108_missense_variant OR PIK3CA:K111_missense_variant  OR PIK3CA:G118_missense_variant OR PIK3CA:N345_missense_variant OR PIK3CA:R357_missense_variant OR PIK3CA:C378_missense_variant OR PIK3CA:C420_missense_variant OR PIK3CA:E453_missense_variant OR PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:Q546_missense_variant OR PIK3CA:M1004_missense_variant OR PIK3CA:M1043_missense_variant OR PIK3CA:H1047_missense_variant OR PIK3CA:H1048_missense_variant OR PIK3CA:G1049_missense_variant)
@@ -167,13 +165,14 @@ NCT05501886	NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_th
 NCT05118789	ROS1:fusion
 NCT05338970	EGFR:oncogenic_mutation
 NCT04771130	*NOT prior_therapy:BCL2_inhibitor; *NOT prior_therapy:Azacitidine
-NCT05910827	*NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:deletion; *NOT PTEN:oncogenic_mutation; *NOT MET:amplification; catype:Lung squamous cell carcinoma; NOT prior_therapy:docetaxel; NOT prior_therapy:cetuximab; NOT prior_therapy:anti-HER3_monoclonal_antibody
+NCT05910827	*NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:deletion; *NOT PTEN:oncogenic_mutation; *NOT MET:amplification; catype:Lung squamous cell carcinoma; *prior_therapy:cancer_therapy,PD-1/PD-L1-targeting; NOT prior_therapy:docetaxel; NOT prior_therapy:cetuximab; *NOT prior_therapy:cancer_therapy,ERBB3-targeting; *prior_therapy:systemic_therapy
 NCT05286801	(SMARCB1:loss OR SMARCB1:oncogenic_mutation OR SMARCB1:loss of protein expression OR SMARCA4:loss OR SMARCA4:oncogenic_mutation OR SMARCA4:loss of protein expression); *PAEDIATRIC_TRIAL
 NCT05646862	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; catype:Breast cancer; NOT catype:HER2-positive breast cancer
 NCT04879329	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04789096	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression; *prior_therapy:Trastuzumab; *prior_therapy:Pertuzumab; *prior_therapy:taxane; *prior_therapy:Trastuzumab emtansine; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:Nivolumab; *NOT prior_therapy:Atezolizumab; *NOT prior_therapy:Durvalumab; *NOT prior_therapy:Avelumab; *NOT prior_therapy:Ipilimumab; *NOT prior_therapy:Tremelimumab
 NCT04924075	*NOT KIT:oncogenic_mutation; *NOT PDGFRB:oncogenic_mutation; catype:Gastrointestinal stromal tumour
-NCT04924075	catype:Solid tumour; (EPAS1:alteration OR FH:alteration OR SDHA:alteration OR SDHB:alteration OR SDHC:alteration OR SDHD:alteration OR SDHAF2:alteration OR EGLN1:alteration OR EGLN:alteration OR MDH2:alteration OR ELOC:alteration OR TCEB1:alteration); *NOT VHL:oncogenic_mutation
+NCT04924075	VHL:oncogenic_mutation; (catype:Pheochromocytoma OR catype:Paraganglioma)
+NCT04924075	catype:Solid tumour; (EPAS1:alteration OR FH:alteration OR SDHA:alteration OR SDHB:alteration OR SDHC:alteration OR SDHD:alteration OR SDHAF2:alteration OR EGLN1:alteration OR EGLN:alteration OR MDH2:alteration OR ELOC:alteration OR TCEB1:alteration); *NOT VHL:oncogenic_mutation; *NOT SDHA:alteration; *NOT SDHB:alteration; *NOT SDHC:alteration; *NOT SDHD:alteration
 NCT05261399	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation; *NOT prior_therapy:Osimertinib
 NCT05876754	catype:Cholangiocarcinoma; IDH1:R132_mutation; *NOT prior_therapy:IDH1_R132_inhibitor
 NCT05043090	catype:Papillary renal cell carcinoma; *MET:alteration; *NOT FH:oncogenic_mutation
@@ -240,7 +239,7 @@ NCT04802759	catype:Breast cancer; *ESR1:protein_expression; sensitive_to:Inavoli
 NCT04802759	catype:Breast cancer; *ESR1:protein_expression; *NOT prior_therapy:MTOR_inhibitor
 NCT04802759	catype:Breast cancer; *ESR1:protein_expression; sensitive_to:Atezolizumab; *NOT prior_therapy:anti-CD137_agonistic_antibody; *NOT prior_therapy:anti-CTLA-4_monoclonal_antibody; *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody
 NCT05417594	(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
-NCT05954871	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT BRAF:V600E; NOT NRAS:oncogenic_mutation; NOT EGFR:oncogenic_mutation
+NCT05954871	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT BRAF:V600E; NOT NRAS:oncogenic_mutation; NOT EGFR:oncogenic_mutation; *CRC_COHORT_NO_SLOTS
 NCT05954871	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion); NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:V600E; *prior_therapy:Osimertinib
 NCT05920356	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT06119581	KRAS:G12C; *NOT prior_therapy:systemic_therapy; catype:Non-small cell lung cancer
@@ -253,7 +252,6 @@ NCT05867121	catype:Non-small cell lung cancer
 NCT05867121	catype:Gastric cancer
 NCT05867121	catype:Pancreatic adenocarcinoma
 NCT05909397	NOT prior_therapy:CDK4/6_inhibitor; NOT prior_therapy:Fulvestrant; NOT prior_therapy:Elacestrant; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
-NCT05132582	*NOT prior_therapy:Pyrotinib; *NOT prior_therapy:Lapatinib; *NOT prior_therapy:Tucatinib; *NOT prior_therapy:Neratinib; *NOT prior_therapy:Afatinib
 NCT05696626	ESR1:oncogenic_mutation
 NCT05208047	catype:Gastrointestinal stromal tumour
 NCT05330429	catype:Colorectal cancer
@@ -269,7 +267,8 @@ NCT06105632	NOT ERBB2:amplification; *prior_therapy:CDK4/6_inhibitor
 NCT06179160	KRAS:G12D
 NCT06194877	(KRAS:oncogenic_mutation OR NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation); (catype:Colorectal adenocarcinoma OR catype:Pancreatic adenocarcinoma)
 NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation
-NCT05094336	*CDKN2A:deletion; MTAP:deletion; (catype:Non-small cell lung cancer OR catype:Biliary tract cancer OR catype:Gastric cancer OR catype:Gastroesophageal cancer OR catype:Head and neck squamous cell carcinoma OR catype:Pancreatic adenocarcinoma OR catype:High-grade glioma)
+NCT05094336	*CDKN2A:deletion; MTAP:deletion; *(catype:Non-small cell lung cancer OR catype:Biliary tract cancer OR catype:Gastric cancer OR catype:Gastroesophageal cancer OR catype:Head and neck squamous cell carcinoma OR catype:High-grade glioma)
+NCT05094336	*CDKN2A:deletion; MTAP:deletion; catype:Pancreatic adenocarcinoma; *NO_SLOTS_AVAILABLE
 NCT05975073	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06065748	*NOT (ERBB2:amplification OR ERBB2:overexpression); *ESR1:protein_expression; ESR1:oncogenic_mutation; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
 NCT05867121	*(TGFBR1:oncogenic_mutation OR TGFBR2:oncogenic_mutation); *(catype:Non-small cell lung carcinoma OR catype:Gastric cancer OR catype:Pancreatic adenocarcinoma)
