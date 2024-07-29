@@ -250,8 +250,10 @@ sub interp_variants {
 				};
 			}
 			
-			push @alterations, $biomarker_spec, 'alteration';
-			push @alterations, 'oncogenic_mutation' if $biomarker_spec !~ /^(alteration|positive|negative|high|low)$/;
+			if ( $biomarker_spec !~ /^(alteration|positive|negative|high|low)$/i ) {
+				push @alterations, $biomarker_spec, 'alteration' ;
+				push @alterations, 'oncogenic_mutation' ;
+			}
 			push @alterations, $aa_org.$aa_pos.$aa_mut  if defined $aa_org and defined $aa_pos and defined $aa_mut ;
 			if ( defined $aa_org and defined $aa_pos ) {
 				$aa_org = $aa_code{$aa_org};
