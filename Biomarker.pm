@@ -357,9 +357,9 @@ sub interp_variants {
 				my $regex = ( join("|", @$p) =~ s/_/./r );
 				if ( $biomarker_spec =~ /^(?:$regex)$/i ) {
 					for ($biomarker_name) {
-						/^ER$/ and do { push @alterations, ( map { ( "ESR1:".s/\\//gr, s/\\//gr ) } @$p ); last; };
-						/^PR$/ and do { push @alterations, ( map { ( "PGR:".s/\\//gr, s/\\//gr ) } @$p ); last; };
-						/^HER2$/ and do { push @alterations, ( map { ( "ERBB2:".s/\\//gr, s/\\//gr ) } @$p ); last; };
+						/^ER$/ and do { push @alterations, ( map { ( "ESR1:".lc(s/\\//gr), lc(s/\\//gr) ) } @$p ); last; };
+						/^PR$/ and do { push @alterations, ( map { ( "PGR:".lc(s/\\//gr), lc(s/\\//gr) ) } @$p ); last; };
+						/^HER2$/ and do { push @alterations, ( map { ( "ERBB2:".lc(s/\\//gr), lc(s/\\//gr) ) } @$p ); last; };
 						push @alterations, ( map { s/\\//gr } @$p );
 					}
 				}

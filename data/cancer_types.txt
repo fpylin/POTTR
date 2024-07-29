@@ -207,12 +207,14 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastro
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	EBV-related gastric carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma	HER2-positive gastric cancer|HER2-positive gastric adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma	HER2-negative gastric cancer|HER2-negative gastric adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric poorly differentiated carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric signet ring cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric small cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric undifferentiated carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-positive gastroesophageal cancer|HER2-positive gastroesophageal adenocarcinoma|HER2-positive GEJ adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-negative gastroesophageal cancer|HER2-negative gastroesophageal adenocarcinoma|HER2-negative GEJ adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma|Gastroesophageal adenocarcinoma|GEJ adenocarcinoma|GEJ cancer|GOJ adenocarcinoma| gastroesophageal junction (GEJ) adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Primary gastric squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric undifferentiated malignancy
