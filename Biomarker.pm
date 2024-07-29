@@ -128,7 +128,12 @@ sub interp_variants {
 	for ( $biomarker_code ) {
 		/[VSADEFP]/ and do { 
 # 			$$facttable{'biomarker'} = $biomarker_name ; 
-			push @alterations, 'alteration' ;
+			if ( ! /E/ ) {
+				push @alterations, 'alteration' ;
+			} else {
+				push @alterations, 'alteration' if ( ( $biomarker_name =~ /HER2|ERBB2/ ) and ( $biomarker_spec =~ /Positive|3\+/i ) );
+				push @alterations, 'alteration' if ( ( $biomarker_name =~ /MLH1|MSH2|MSH6|PMS2/ ) and ( $biomarker_spec =~ /Absent|0/i ) );
+			}
 		};
 
 		/S/ and do { 
