@@ -5,6 +5,9 @@ MET:T1010I => NOT MET:T1010I; MET:T992I
 
 # Managing HER2 status
 HER2:negative => ERBB2:negative
+ERBB2:negative =>> HER2:negative
+HER2:positive => ERBB2:positive
+ERBB2:positive => HER2:positive
 ERBB2:overexpression => HER2:positive [CERTAIN:biomarker]
 ERBB2:amplification => HER2:positive [CERTAIN:biomarker]
 HER2:positive; *ERBB2:amplification => HER2:positive
