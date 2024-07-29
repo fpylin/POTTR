@@ -273,7 +273,8 @@ sub load_module_variant_feature_mapping {
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };
 				/^([^:]+):(?:deletion|homozygous_deletion)$/i  and do { ($entity, $etype, $espec) = ($1, 'D', ''); last; };
 				/^([^:]+):(.*fusion.*)$/i   and do { ($entity, $etype, $espec) = ($1, 'F', $2); last; };
-				/^([^:]+):(.*express.*)$/i  and do { ($entity, $etype, $espec) = ($1, 'E', $2); last; };
+				/^([^:]+):(.*express.*|[0123]\+?)$/i  and do { ($entity, $etype, $espec) = ($1, 'E', $2); last; };
+				/^(ER|PR|HER2|PD-?L1):(positive|negative)$/i  and do { ($entity, $etype, $espec) = ($1, 'E', $2); last; };
 				/^([^:]+):(.+)$/i           and do { ($entity, $etype, $espec) = ($1, 'V', $2); last; };
 				return @retval;
 			}
@@ -304,8 +305,8 @@ sub load_module_variant_feature_mapping {
 		return () if ! grep { ! /^INFERRED:|^\Q$bm\E:(?i:oncogenic_mutation|alteration|.*fusion|amplification|.*expression)(?:,[_\s]*germline)?/ } @tags;
 # 		return () if $f !~ /^(\S+?):(?:oncogenic_mutation)\s*$/ ;
 # 		return ( Facts::mk_fact_str($f, ($facts->get_tags($f)), 'INFERRED:oncogenicity') );
-		my $f_inferred_oncogenicity = "$bm:oncogenic_mutation".$germline_suffix ;
-		return ( Facts::mk_fact_str( $f_inferred_oncogenicity, 'INFERRED:oncogenicity') ); # ($facts->get_tags($f)), 
+# 		my $f_inferred_oncogenicity = "$bm:oncogenic_mutation".$germline_suffix ;
+# 		return ( Facts::mk_fact_str( $f_inferred_oncogenicity, 'INFERRED:oncogenicity') ); # ($facts->get_tags($f)), 
 		}
 	);
 }

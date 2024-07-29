@@ -132,7 +132,7 @@ AZD0901|AZD-0901	anti-CLDN18.2_antibody-drug_conjugate
 AZD1390	ATM_inhibitor
 AZD1480	JAK1/JAK2_inhibitor
 AZD2461	PARP_inhibitor
-AZD2936	bispecific_PD-1/TIGIT_antibody
+Rilvegostomig|AZD2936	bispecific_PD-1/TIGIT_antibody
 AZD3463	ALK_inhibitor; IGF1R_inhibitor; ROS1_inhibitor
 AZD3470	PRMT5_inhibitor
 AZD4205|AZD 4205|AZD-4205	JAK1-selective_inhibitor
@@ -856,7 +856,7 @@ MDNA11	IL-2_superkine
 MEDI0680|AMP-514	anti-PD-1_monoclonal_antibody
 MEDI2228	anti-BCMA-immunoconjugate
 MEDI5083|MEDI 5083|MEDI-5083	CD40L-Fc_fusion_protein; anti-CD40_agonistic_antibody
-MEDI5752	bispecific_PD-L1/CTLA4_antibody
+Volrustomig|MEDI5752	bispecific_PD-L1/CTLA4_antibody
 MEDI7247|MEDI 7247	anti-ASCT2_antibody-drug_conjugate
 MG010	CRAF_inhibitor
 MGD009|B7-H3 x CD3 DART Protein|MGD 009|MGD-009	humanized_B7H3xCD3_dual-affinity_re-targeting_protein
@@ -1486,3 +1486,6 @@ WHG626	gamma_secretase_inhibitor
 WZTL002	autologous_CAR-T-cell_therapy,CD19-targeting
 Feladilimab	anti-ICOS_agonistic_antibody
 FG-M108	anti-CLDN18.2_monoclonal_antibody
+S095018	anti-TIM3_monoclona_antibody
+S095024	anti-CD73_monoclona_antibody
+S095029	anti-NKG2A_monoclona_antibody

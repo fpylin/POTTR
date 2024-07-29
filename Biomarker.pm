@@ -126,7 +126,7 @@ sub interp_variants {
 	}
 	
 	for ( $biomarker_code ) {
-		/[VSADEF]/ and do { 
+		/[VSADEFP]/ and do { 
 # 			$$facttable{'biomarker'} = $biomarker_name ; 
 			push @alterations, 'alteration' ;
 		};
@@ -145,7 +145,6 @@ sub interp_variants {
 			last; 
 		};
 		
-		/E/ and do { push @alterations, $biomarker_spec; last; };
 		/A/ and do { push @alterations, ('amplification', 'alteration'); last; };
 		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion', 'loss-of-function_mutation', 'alteration'); last; }; # 'truncating_mutation'
 		/F/ and do { 
@@ -235,7 +234,7 @@ sub interp_variants {
 					push @conseq_t, 'mutation';
 					push @conseq_t, 'inframe_insertion' if ($muttype eq 'ins') or ($muttype eq 'dup') ;
 					push @conseq_t, 'inframe_deletion'  if ($muttype eq 'del') ;
-					push @conseq_t, ('stop_gained', 'truncating_mutation')  if ( $delins_spec eq '*' );
+					push @conseq_t, ('stop_gained', 'truncating_mutation')  if ( $delins_spec eq '*' ); # , 'loss-of-function_mutation'
 					push @conseq_t, 'indel'  if defined($aa_pos2) and length($delins_spec) != 1 ;
 					if ($muttype eq 'delins') {
 						my $len_org = ( defined($aa_pos2) ? ($aa_pos2 - $aa_pos + 1) : 1 ) ;
@@ -252,6 +251,7 @@ sub interp_variants {
 			}
 			
 			push @alterations, $biomarker_spec, 'alteration';
+			push @alterations, 'oncogenic_mutation' if $biomarker_spec !~ /^(alteration|positive|negative|high|low)$/;
 			push @alterations, $aa_org.$aa_pos.$aa_mut  if defined $aa_org and defined $aa_pos and defined $aa_mut ;
 			if ( defined $aa_org and defined $aa_pos ) {
 				$aa_org = $aa_code{$aa_org};
@@ -343,8 +343,28 @@ sub interp_variants {
 				my @germline_alterations = map { "$_,germline" } @alterations ;
 				push @alterations, @germline_alterations ;
 			}
-			
 			last;
+		};
+		/E/ and do {
+			push @alterations, $biomarker_spec; 
+			my @protein_IHC_table = (
+				['0', '0\+', 'negative', 'no_protein_expression', 'loss_of_protein_expression'],
+				['1\+', 'low_protein_expression'],
+				['2\+', 'protein_expression'],
+				['3\+', 'overexpression'],
+			);
+			for my $p (@protein_IHC_table) {
+				my $regex = ( join("|", @$p) =~ s/_/./r );
+				if ( $biomarker_spec =~ /^(?:$regex)$/i ) {
+					for ($biomarker_name) {
+						/^ER$/ and do { push @alterations, ( map { ( "ESR1:".s/\\//gr, s/\\//gr ) } @$p ); last; };
+						/^PR$/ and do { push @alterations, ( map { ( "PGR:".s/\\//gr, s/\\//gr ) } @$p ); last; };
+						/^HER2$/ and do { push @alterations, ( map { ( "ERBB2:".s/\\//gr, s/\\//gr ) } @$p ); last; };
+						push @alterations, ( map { s/\\//gr } @$p );
+					}
+				}
+			}
+			last; 
 		};
 	}
 	
@@ -352,7 +372,11 @@ sub interp_variants {
 	
 	for my $a ( @alterations ) {
 		next if ! length $a;
-		push @alterations_uniq , "$biomarker_name:$a" if ! grep { $_ eq "$biomarker_name:$a" } @alterations_uniq ;
+		if ( ($a =~ /^(?:ERBB2|ESR1|PGR|AR):/ ) ) {
+			push @alterations_uniq , "$a" if ( ! grep { $_ eq $a } @alterations_uniq );
+			next;
+		}
+		push @alterations_uniq , "$biomarker_name:$a" if ! grep { $_ eq "$biomarker_name:$a" || $_ eq $a } @alterations_uniq ;
 	}
 	
 	return @alterations_uniq ;

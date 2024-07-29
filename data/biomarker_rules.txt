@@ -1,10 +1,9 @@
+# MET variant name normalization
 MET:T1010I => NOT MET:T1010I; MET:T992I
 (MET:D1010H OR MET:D1228H) => MET:D1010H; MET:D1228H; MET:exon_14_skipping_mutation
 (MET:D1010 OR MET:D1228) => MET:D1010; MET:D1228; MET:exon_14_skipping_mutation
 
-ER:positive; catype:Breast cancer => ESR1:protein_expression
-PR:positive; catype:Breast cancer => PGR:protein_expression
-HER2:positive; catype:Breast cancer => catype:HER2-positive breast cancer
+# Managing HER2 status
 HER2:negative => ERBB2:negative
 ERBB2:overexpression => HER2:positive [CERTAIN:biomarker]
 ERBB2:amplification => HER2:positive [CERTAIN:biomarker]
@@ -13,7 +12,36 @@ HER2:positive; *ERBB2:overexpression => HER2:positive
 ERBB2:amplification => ERBB2:protein_expression [INFERRED:biomarker]
 HER2:positive; catype:Solid tumour => catype:HER2-positive solid tumour [CERTAIN:biomarker]
 
+# Breast cancer by  ER/PR/HER2 status
+ER:1+ => ER:positive
+ER:2+ => ER:positive
+ER:3+ => ER:positive
+PR:1+ => PR:positive
+PR:2+ => PR:positive
+PR:3+ => PR:positive
+HER2:0 => HER2:negative; ERBB2:no_protein_expression
+HER2:1+ => HER2:negative; ERBB2:low_protein_expression
+HER2:2+; NOT ERBB2:amplification => HER2:negative; ERBB2:low_protein_expression
+HER2:2+; ERBB2:amplification => HER2:positive
+HER2:3+ => HER2:positive
+
+catype:Breast cancer; ER:positive => ESR1:protein_expression; catype:ER-positive breast cancer
+catype:Breast cancer; ER:positive; HER2:positive => ESR1:protein_expression; catype:ER-positive HER2-positive breast cancer
+catype:Breast cancer; PR:positive => PGR:protein_expression; catype:HR-positive breast cancer
+catype:Breast cancer; ER:negative; NOT PR:positive; HER2:negative => catype:Triple-negative breast cancer
+catype:Breast cancer; ER:negative; PR:negative; HER2:negative => catype:Triple-negative breast cancer
+catype:Breast cancer; HER2:positive => catype:HER2-positive breast cancer
+
 catype:Triple-negative breast cancer => ER:negative; PR:negative; HER2:negative
+catype:HER2-positive breast cancer => HER2:positive
+
+# Gastric / GOJ cancers by HER2 status
+HER2:positive; catype:Gastric adenocarcinoma => catype:HER2-positive gastric cancer
+HER2:positive; catype:Gastroesophageal adenocarcinoma => catype:HER2-positive gastroesophageal cancer
+HER2:negative; catype:Gastric adenocarcinoma => catype:HER2-negative gastric cancer
+HER2:negative; catype:Gastroesophageal adenocarcinoma => catype:HER2-negative gastroesophageal cancer
+
+
 PMS2:loss-of-protein_expression => mismatch_repair:deficient
 MLH1:loss-of-protein_expression => mismatch_repair:deficient
 MSH2:loss-of-protein_expression => mismatch_repair:deficient
