@@ -774,6 +774,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	BRAF	Class III mutations, D287, D287H, V459, V459L, G466, G466V, G466E, G466A, S467, S467L, N581, N581S, N581I, D594, D594N, D594G, D594A, D594H, F595, F595L, G596, G596D, G596R	Solid tumours	MEK inhibitor + anti-EGFR monoclonal antibody	Class III mutation	28783719; 10.1200/PO.18.00195
 4	BRAF	Class III mutations, D287, D287H, V459, V459L, G466, G466V, G466E, G466A, S467, S467L, N581, N581S, N581I, D594, D594N, D594G, D594A, D594H, F595, F595L, G596, G596D, G596R	Solid tumours	RMC-4630 + Cobimetinib	Phase 1.	10.1016/S0959-8049(20)31089-3
 4	BRAF	Class III mutations, G466V, G596R	Solid tumours	RMC-4550	Cell line study demonstrating BRAF class III mutations are sensitive to SHP2 inhibition.	30104724
+4	BRAF	Exon 12 deletion	Solid tumours	Naporfenib	Preclinical study. BRAFΔβ3-αC in-frame deletion mutants reveals differences in sensitivitywith RAF inhibitors.	37656784
 4	BRAF	F247L, G466E, G466V, Q524L, R558Q, N581I, N581S, N581T, D594G, D594N, F595L, Class III mutations	Colorectal adenocarcinoma	Cetuximab; Panitumumab	Retrospective study. ORR 37% in class III BRAF mutants in third-and-later lines treatment.	31515458
 4	BRAF	Fusion; MBNL2-BRAF fusion; SND1-BRAF fusion; LUC7L2-BRAF fusion	Pancreatic adenocarcinoma	Trametinib	Case series. 3 (of 4) responders.	34476331
 4	BRAF	Fusions	Low-grade serous ovarian cancer	Selumetinib	Case report only	26324360
@@ -784,6 +785,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	BRAF	K601, K601E	Melanoma	Trametinib	Case reports only; OncoKB LOE 3	23248257; 31924734
 4	BRAF	K601E	Endometrial cancer	BGB-3245	Phase 1. NCT04249843. Response seen in a patient with endometrial cancer harbouring BRAF K601E mutation	10.1158/1538-7445.AM2023-CT031
 4	BRAF	L485_P490del	Solid tumours	LY3009120	Class II mutations. BRAF in-frame deletion in the alpha-C helix favour dimerization and is sensitive to LY3009120 but resistant to Vemurafenib	26732095
+4	BRAF	L485_P490delinsF, L485_P490delinsY	Solid tumours	Sorafenib	Preclinical study. BRAFΔβ3-αC in-frame deletion mutants reveals differences in sensitivitywith RAF inhibitors.	37656784
 4	BRAF	L597, L597Q	Melanoma	Trametinib	Single case report	24933606
 4	BRAF	L597, L597Q, K601, K601E	Solid tumours	PLX8394	With Cobicistat	10.1158/1535-7163.TARG-17-B176, 10.1016/S0959-8049(20)31078-9
 4	BRAF	L597, L597Q, K601, K601E	Solid tumours	RAF dimer inhibitor	Class II mutations	30770389
@@ -792,6 +794,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	BRAF	N486_P490del	Pancreatic adenocarcinoma	Dabrafenib	Cell line study. Demonstrating sensitivty of Dabrafenib in the delNVTAP cell line. 	26996308
 4	BRAF	N486_P490del	Pancreatic adenocarcinoma	Trametinib	Case series. 1 (of 4 )responders.	34476331
 4	BRAF	N486_P490del	Pancreatic adenocarcinoma	Trametinib; Ulixertinib	Case report. DOR of trametinib was 5.5 months. CfDNA Response to Ulixertinib was shown.	34476331
+4	BRAF	N486_P490del, V487_P492delinsA	Solid tumours	Encorafenib, Dabrafenib	Preclinical study. BRAFΔβ3-αC in-frame deletion mutants reveals differences in sensitivitywith RAF inhibitors.	37656784
 4	BRAF	Oncogenic mutations	Solid tumours	LY3009120	Phase 1 dose escalation and expansion study of LY3009120.	31645440
 4	BRAF	Oncogenic mutations	Solid tumours	LY3214996		23614898, 10.1158/1538-7445.AM2017-4973, 10.1200/JCO.2019.37.15_suppl.3001
 4	BRAF	Oncogenic mutations	Solid tumours	Ravoxertinib	Phase 1. NCT01875705. N=47. Objective response seen in two BRAF-mutant colorectal cancers. Partial metabolic responses by FDG-PET were seen in 11 of 20 patients.	31848189
@@ -1778,6 +1781,7 @@ R2	BRAF	G469A, L597Q, L597R, V600E, K601E	Colorectal adenocarcinoma; Solid tumou
 R2	BRAF	G569R	Non-small cell lung cancer	Sotorasib	Treatment-emergent RAS and RAF hotspot mutations were also observed in both clinical samples and patient-derived xenograft models.	34759319
 R2	BRAF	K601E	Melanoma	Vemurafenib	Case report. Lack of response to melanoma	31182949
 R2	BRAF	L485_P490del	Solid tumours	LY3009120	Class II mutations. BRAF in-frame deletion in the alpha-C helix favour dimerization and is sensitive to LY3009120 but resistant to Vemurafenib	26732095
+R2	BRAF	L485_P490delinsF, L485_P490delinsY, L485delinsFS	Solid tumours	Encorafenib, Dabrafenib	Preclinical study. BRAFΔβ3-αC in-frame deletion mutants reveals differences in sensitivitywith RAF inhibitors.	37656784
 R2	BRAF	L505H	Melanoma	Vemurafenib	Case report. Secondary mutation acquired following Vemurafenib.	25515853
 R2	BRAF	N486_P490del	Solid tumours	Vemurafenib		26996308
 R2	BRAF	Oncogenic mutation	Colorectal adenocarcinoma	Panitumumab + FOLFOX	Exploratory analysis of phase 3 PARADIGM study (N=802). Acquired gene alteration was associated with shorter post-progression survival in panitumumab + FOLFOX group, particularly with RTK/RAS alterations (13.2 vs 18.8 months).	10.1200/JCO.2024.42.16_suppl.3507
