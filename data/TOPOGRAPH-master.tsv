@@ -1214,6 +1214,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	FOLR1	Overexpression	Ovarian cancer	Mirvetuximab soravtansine	FORWARD II	10.1200/JCO.2020.38.15_suppl.6004
 4	FOLR1	Protein expression	Solid tumours	MORAb-202	Phase 1. NCT03386942. Responses were seen in 10 of 22 across all dose levels. FR-alpha IHC was determined by any intensity in &gt;= 5% of tumour cells.	33926914, 10.1200/JCO.2022.40.16_suppl.3090
 4	FRS2	Amplification	Liposarcoma	LY2874455		30795553
+4	Globo H	Expression	Solid Tumours	OBI-999	Phase 1. NCT04084366.	36701651
 4	GNA11	Oncogenic mutations	Solid tumours; Uveal melanoma	IDE196; Crizotinib + IDE196; Binimetinib + IDE196		NCT03947385
 4	GNA11	Oncogenic mutations	Uveal melanoma	DYP688		NCT05415072
 4	GNAQ	Oncogenic mutations	Solid tumours; Uveal melanoma	IDE196; Crizotinib + IDE196; Binimetinib + IDE196		NCT03947385

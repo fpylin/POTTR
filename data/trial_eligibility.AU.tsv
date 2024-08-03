@@ -77,7 +77,6 @@ NCT03905148	*NOT catype:CNS cancer; NRAS:oncogenic_mutation
 NCT03906331	RET:fusion; *Expanded access program
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification; *Expanded access program
 NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
-NCT03975647	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
 NCT04008030	(MSI:H OR MMR:deficient)
 NCT04064060	NOT catype:solid tumours
 NCT04164199	access:by_invitation_only
@@ -293,3 +292,5 @@ NCT06326411	(KRAS:Q61 OR KRAS:G12 OR KRAS:G13)
 NCT05203172	BRAF:V600E
 NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *ERBB2:overexpression; *NOT ERBB2:oncogenic_mutation
 NCT06162572	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *CD274:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:alteration; NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
+NCT06208657	trial_type:paediatric
+NCT03906669	trial_type:curative

@@ -2,6 +2,7 @@
 MET:T1010I => NOT MET:T1010I; MET:T992I
 (MET:D1010H OR MET:D1228H) => MET:D1010H; MET:D1228H; MET:exon_14_skipping_mutation
 (MET:D1010 OR MET:D1228) => MET:D1010; MET:D1228; MET:exon_14_skipping_mutation
+MET:c.3028+3A => MET:exon_14_skipping_mutation
 
 # Managing HER2 status
 HER2:negative => ERBB2:negative

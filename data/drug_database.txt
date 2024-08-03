@@ -1241,6 +1241,7 @@ Sargramostim|23-L-Leucinecolony-Stimulating Factor 2|DRG-0012|Leukine|Prokine|Sa
 Saruparib|AZD5305	PARP1-selective_inhibitor
 Sasanlimab	anti-PD-1_monoclonal_antibody
 Satoreotide Tetraxetan|177Lu-OPS201|177Lu-IPN01072|177Lu-SSO110|[177Lu-satoreotide tetraxetan	177Lu-DOTA-radioconjugate
+Satricabtagene autoleucel|satri-cel|CT041	autologous_CART-T-cell_therapy,CLDN18.2-targeting
 Savolitinib|AZD 6094|AZD6094|HMPL-504|Volitinib	MET_inhibitor,type_1
 Seclidemstat|SP-2577	LSD1_inhibitor
 Selicrelumab|RO7009789	anti-CD40_agonistic_antibody
