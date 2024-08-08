@@ -92,7 +92,7 @@ AMT-151	anti-FR-alpha_antibody-drug_conjugate
 AMT-253	anti-MUC18_antibody-drug_conjugate
 AMT-562	anti-ERBB3_antibody-drug_conjugate
 AMT-676	anti-CDH17_antibody-drug_conjugate
-AMV002	HPV_DNA_vaccine
+AMV002	vaccine_therapy,HPV-E6/HPV-E7-targeting
 AMX-500|SAR446329	unknown_drug_class
 AMX-818|AMX 818	bispecific_T-cell_engager,ERBB2-targeting
 AMXT-1501|AMXT1501	polyamine_transport_inhibitor
@@ -270,6 +270,7 @@ BNC-105|BNC 105|BNC105	tubulin_polymerization_inhibitor_and_vascular_disruption_
 BNC101|BNC-101|ET-101	anti-LGR5_monoclonal_antibody
 BNC105P	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNT111	mRNA_personalised_cancer_vaccine
+BNT113	vaccine_therapy,HPV-E6/HPV-E7-targeting
 BOS-342|BOS342|PRS342|PRS-342	bispecific_GPC3/4-1BB_antibody
 BOS172738	RET-selective_inhibitor
 BTX-1188	dual_GSPT1/IKZF1_degrader
@@ -632,8 +633,8 @@ Gusacitinib|ASN002|ASN-002	SYK/JAK_inhibitor
 H3B-6545	selective_estrogen_receptor_covalent_antagonist
 H3B-8800|H3B 8800	SF3B1_inhibitor
 H3Mab-17	anti-ERBB3_monoclonal_antibody
-HB-201	HPV-cancer_vaccine,HPV-E6/HPV-E7-targeting
-HB-202	HPV-cancer_vaccine,HPV-E6/HPV-E7-targeting
+HB-201	vaccine_therapy,HPV-E6/HPV-E7-targeting
+HB-202	vaccine_therapy,HPV-E6/HPV-E7-targeting
 HBM4003	anti-CTLA4_monoclonal_antibody
 HBM7008|HBM-7008	bispecific_B7H4/4-1BB_antibody
 HFB200301	TNFR2_agonistic_antibody
@@ -1013,7 +1014,7 @@ PD-0360324|PD 0360324|PD 360324|PD-360,324	anti-CSF1_monoclonal_antibody
 PD-180970	BCR-ABL1_inhibitor
 PD173074	FGFR1_inhibitor
 PDD00017273	PARG_inhibitor
-PDS0101	HPV-cancer_vaccine,HPV-E6/HPV-E7-targeting
+PDS0101	vaccine_therapy,HPV-E6/HPV-E7-targeting
 PE0116	anti-4-1BB_agonistic_antibody
 PEP07|PEP-07|CASC-578	CHK1_inhibitor	
 PF-03732010	P-cadherin_inhibitor

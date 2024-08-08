@@ -105,14 +105,13 @@ NCT04589845	(sensitive_to_drug_class:pan-AKT_inhibitor OR sensitive_to:Ipatasert
 NCT04589845	(sensitive_to_drug_class:pan-AKT_inhibitor OR sensitive_to:Ipatasertib); (AKT3:E17K OR AKT3:L51R OR AKT3:Q78K); *NOT prior_therapy:AKT_inhibitor; *NOT_RECRUITING
 NCT04589845	(sensitive_to_drug_class:pan-AKT_inhibitor OR sensitive_to:Ipatasertib); AKT2:E17K; *NOT prior_therapy:AKT_inhibitor; *NOT_RECRUITING
 NCT04589845	COHORT_CLOSED; sensitive_to_drug_class:MDM2_inhibitor; MDM2:amplification; NOT TP53:oncogenic_mutation; catype:Liquid cancer; *NOT_RECRUITING
-NCT04589845	sensitive_to:Alectinib; ALK:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ALK_inhibitor; *NOT ALK:I1171N; *NOT ALK:I1171S; *NOT ALK:G1202R
+NCT04589845	sensitive_to:Alectinib; ALK:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ALK_inhibitor; *NOT ALK:I1171N; *NOT ALK:I1171S; *NOT ALK:G1202R; *NOT_RECRUITING
 NCT04589845	sensitive_to:Entrectinib; (NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); *NOT prior_therapy:NTRK_inhibitor
 NCT04589845	sensitive_to:Entrectinib; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
 NCT04589845	sensitive_to_drug_class:ALK_inhibitor,second_generation; ALK:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ALK_inhibitor
 NCT04589845	sensitive_to_drug_class:NTRK_inhibitor; (NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); *NOT prior_therapy:NTRK_inhibitor
 NCT04589845	(sensitive_to_drug_class:RAF_dimer_inhibitor OR sensitive_to:Belvarafenib); (BRAF:fusion OR BRAF:class_2_mutation OR BRAF:class_3_mutation); *NOT_RECRUITING
-NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
-NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
+NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor; *NOT_RECRUITING
 NCT04589845	tumour_mutational_burden:high; *NOT prior_therapy:immune_checkpoint_blockade; *NOT_RECRUITING
 NCT04589845	(ATM:oncogenic_mutation OR ATM:deletion); NOT_RECRUITING
 NCT04589845	(SETD2:oncogenic_mutation OR SETD2:deletion); NOT_RECRUITING
