@@ -273,7 +273,8 @@ sub load_module_variant_feature_mapping {
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };
 				/^([^:]+):(?:deletion|homozygous_deletion)$/i  and do { ($entity, $etype, $espec) = ($1, 'D', ''); last; };
 				/^([^:]+):(.*fusion.*)$/i   and do { ($entity, $etype, $espec) = ($1, 'F', $2); last; };
-				/^([^:]+):(.*express.*|[0-9]+(%|\+)?|equivocal|positive|negative)$/i  and do { ($entity, $etype, $espec) = ($1, 'E', $2); last; };
+				/^([^:]+):(.*express.*|[><=]*[0-9]+(%|\+)?|equivocal|positive|negative)$/i  and do { ($entity, $etype, $espec) = ($1, 'E', $2); last; };
+				/^(ER|PR|ERBB2|HER2|PD-?L-?1):(.*express.*|[><=]*[0-9]+(%|\+)?|equivocal|positive|negative)$/i  and do { ($entity, $etype, $espec) = ($1, 'E', $2); last; };
 				/^([^:]+):(.+)$/i           and do { ($entity, $etype, $espec) = ($1, 'V', $2); last; };
 				return @retval;
 			}
