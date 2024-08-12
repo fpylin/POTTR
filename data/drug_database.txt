@@ -167,7 +167,7 @@ Alectinib|Alecensa|AF-802|AF802|CH5424802|RG7853|RO5424802	ALK_inhibitor,second_
 Alemtuzumab|Campath|LDP-03|Lemtrada	anti-CD52_monoclonal_antibody
 Alisertib	AURKA_inhibitor
 Almirall|ASLAN003	DHODH_inhibitor
-Almonertinib|Aumolertinib|HS-10296	EGFR_inhibitor,third_generation
+Almonertinib|Aumolertinib|EQ143|HS-10296	EGFR_inhibitor,third_generation
 Alnuctamab|ALNUC|BMS-986349|CC-93269	bispecific_T-cell_engager,BCMA-targeting
 Alpelisib|BYL719|Piqray	PI3K_alpha_inhibitor
 Alrizomadlin|APG-115|APG 115	p53-HDM2_interaction_inhibitor; MDM2_inhibitor

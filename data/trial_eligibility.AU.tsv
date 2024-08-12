@@ -8,7 +8,6 @@ ACTRN12619001527156	(catype:Head and Neck Squamous Cell Carcinoma OR catype:Trip
 ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12621000507886	catype:lymphoma; catype:B-cell lymphoma
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
-ACTRN12621000811808	(MET:exon_14_skipping_mutation OR MET:exon_14_deletion)
 ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12621001436864	BRAF:V600E; NOT KRAS:oncogenic_mutation; STOPPED_EARLY
 ACTRN12621001436864	KRAS:oncogenic_mutation; STOPPED_EARLY
