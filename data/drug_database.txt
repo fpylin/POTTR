@@ -156,7 +156,7 @@ Acetazolamide|Diacarb|Diluran	carbonic_anhydrase_inhibitor
 Adagloxad simolenin|OBI-822	Globo_H-KLH_immunostimulant
 Adagrasib|MRTX849	KRAS_G12C_inhibitor
 Adavosertib|AZD-1775|AZD1775|MK-1775|MK1775	WEE1_inhibitor
-Afatinib|BIBW 2992|BIBW2992	EGFR_inhibitor,second_generation
+Afatinib|BIBW 2992|BIBW2992	EGFR_inhibitor,second_generation; ERBB2_inhibitor,second_generation
 Aflibercept|ziv-aflibercept|Eylea|Zaltrap	VEGF_inhibitor
 Agerafenib|RXDX-105|RXDX105	BRAF_inhibitor; BRAF_V600_inhibitor; RET_inhibitor
 Aglatimagene besadenovec|CAN2409	oncolytic_virus
