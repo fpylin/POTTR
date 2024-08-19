@@ -63,7 +63,6 @@ NCT03212404	catype:Small-cell lung cancer
 NCT03212404	catype:Urothelial Carcinoma
 NCT03212404	catype:Urothelial carcinoma
 NCT03486873	EXTENSION_STUDY
-NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -117,7 +116,6 @@ NCT04589845	(SETD2:oncogenic_mutation OR SETD2:deletion); NOT_RECRUITING
 NCT04589845	KRAS:G12C; NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer; *WARNING_NOT_IN_VIC
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
-NCT04624204	catype:Small-cell lung carcinoma
 NCT04665206	(NF2:oncogenic_mutation OR NF2:alteration)
 NCT04699188	KRAS:G12C
 NCT04720768	(BRAF:V600E OR BRAF:V600K OR BRAF:V600_missense_mutation)
@@ -292,3 +290,6 @@ NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_thera
 NCT06162572	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *CD274:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:alteration; NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
 NCT06208657	trial_type:paediatric
 NCT03906669	trial_type:curative
+NCT06343402	KRAS:G12C
+NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
+NCT05352672	*NOT prior_therapy:systemic_therapy
