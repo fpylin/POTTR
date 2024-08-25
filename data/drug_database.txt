@@ -1363,6 +1363,7 @@ Toripalimab|JS001|TAB 001|TAB-001	anti-PD-1_monoclonal_antibody
 Tovorafenib|DAY101|TAK-580|MLN2480|BIIB024|DAY-101	RAF_inhibitor,type_2
 Trabectedin|Yondelis	DNA_minor_groove-binding_agent
 Trametinib|GSK1120212|JTP-74057|Mekinist	MEK_inhibitor
+TransCon IL-2 beta/gamma|TransCon IL-2 b/g	IL-2_variant
 TransCon TLR7/8 agonist	TLR7/TLR8_agonist
 Trastuzumab Deruxtecan|Fam-trastuzumab deruxtecan-nxki|T-Dxd|DS-8201|Enhertu|WHO 10516	anti-ERBB2_antibody-drug_conjugate
 Trastuzumab Emtansine|Ado-Trastuzumab Emtansine|Kadcyla|PRO132365|RO5304020|T-DM1|Trastuzumab-DM1|Trastuzumab-MCC-DM1	anti-ERBB2_antibody-drug_conjugate
@@ -1491,3 +1492,5 @@ FG-M108	anti-CLDN18.2_monoclonal_antibody
 S095018	anti-TIM3_monoclona_antibody
 S095024	anti-CD73_monoclona_antibody
 S095029	anti-NKG2A_monoclona_antibody
+PRT3789	SMARCA2_degrader
+BI-764532|BI 764532	bispecific_T-cell_engager,DLL3-targeting

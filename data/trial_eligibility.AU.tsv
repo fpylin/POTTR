@@ -148,7 +148,6 @@ NCT05480865	KRAS:G12C
 NCT05425940	catype:Colorectal cancer; NOT prior_therapy:Regorafenib; NOT prior_therapy:Trifluridine/Tipiracil; NOT prior_therapy:TAS-102; NOT prior_therapy:Lonsurf
 NCT05609370	catype:Colorectal cancer; NOT MSI:high; NOT MMR:deficient
 NCT05512377	MDM2:amplification; NOT TP53:oncogenic_mutation; (catype:Urothelial carcinoma OR catype:Lung adenocarcinoma)
-NCT04886804	ERBB2:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT05614739	FGFR3:alteration
 NCT05501886	NOT prior_therapy:PI3K_inhibitor; NOT prior_therapy:AKT_inhibitor; NOT prior_therapy:mTOR_inhibitor
 NCT05555732	*NOT prior_therapy:systemic_therapy; catype:Non-squamous non-small cell lung cancer

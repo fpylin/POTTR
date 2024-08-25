@@ -761,6 +761,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	BARD1	Oncogenic mutations	Prostate cancer	Olaparib	PROFOUND trial; Cohort B: 1 patient only.	32343890, 32955174
 4	BARD1	Oncogenic mutations	Solid tumours	PARP inhibitor	Included in multiple phase 1/2 trials as part of HRR genes	30925164, 27197561, NCT02401347, NCT02489006, NCT02760849, NCT02952534, NCT02993068, NCT03207347, NCT03377556, NCT03495544, NCT03786796, NCT04171700, NCT04190667, NCT04276376
 4	BARD1	Oncogenic mutations	Urothelial carcinoma	Durvalumab + Olaparib	Randomised phase 2. BAYOU. NCT03459846. Untreated platinum-ineligible urothelial carcinoma. Primary endpoint was not met (PFS durvalumab + olaparib 4.2 months v durvalumab + placebo 3.5 months). However, in 20% of patient with mutation in predefined 15-gene of homologous recombination repair mutation (HRRm subset), the PFS was longer in olaparib group (5.6 months v placebo: 1.8 months) (predefined secondary endpoint).	35737919
+4	BARD1	Oncogenic mutations (germline)	Neuroblastoma	Talazoparib	Case report. Complete response to talazoparib + irinotecan in a child with refractory neuroblastoma and germline BARD1 mutation and achieving sustained disease control for 32 months.	39141861
 4	BCL2	Amplification	Small-Cell Lung Cancer	Venetoclax	Preclinical data only	29118061
 4	BCL2	Amplification	Solid tumours; Liquid cancers	Venetoclax		27605552, 27582059
 4	BCL2	Overexpression	Breast cancer	Venetoclax	HER2-negative breast cancer	25787766, 25787766, 30518523
@@ -2335,3 +2336,5 @@ R2	TSC1	Oncogenic mutations	Urothelial carcinoma	Buparlisib	Phase 2. N=19. Bupar
 R2	Tumour Mutational Burden	High	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	WT1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor		27634897
+4	STK11	Oncogenic mutations	Non-small cell lung cancer	Everolimus		34422335
+3	DLL3	Protein expression	Small-cell lung cancer; Neuroendocrine carcinoma	BI 764532	Phase 1. NCT04429087. First-in-human dose-escalation trial of BI 764532 in DLL3-positive SCLC and NEC. N=90. At the target dose, ORR was 33% in SCLC and 22% in NEC.	10.1200/JCO.2023.41.16_suppl.8502
