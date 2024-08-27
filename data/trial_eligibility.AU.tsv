@@ -142,12 +142,12 @@ NCT05388669	EGFR:oncogenic_mutation; *prior_therapy:Osimertinib
 NCT05315700	NOT EGFR:T790M; (EGFR:exon_20_insertion OR ERBB2:exon_20_insertion OR ERBB2:amplification OR ERBB2:overexpression)
 NCT05187624	EGFR:vIII; NOT_RECRUITING
 NCT05307705	PIK3CA:H1047R
-NCT05269316	NOT catype:Central nervous system cancer
+NCT05269316	NOT catype:Central nervous system cancer; *NOT_RECRUITING_IN_WA_NSW
 NCT05253651	(ERBB2:amplification OR ERBB2:overexpression)
 NCT05480865	KRAS:G12C
 NCT05425940	catype:Colorectal cancer; NOT prior_therapy:Regorafenib; NOT prior_therapy:Trifluridine/Tipiracil; NOT prior_therapy:TAS-102; NOT prior_therapy:Lonsurf
 NCT05609370	catype:Colorectal cancer; NOT MSI:high; NOT MMR:deficient
-NCT05512377	MDM2:amplification; NOT TP53:oncogenic_mutation; (catype:Urothelial carcinoma OR catype:Lung adenocarcinoma)
+NCT05512377	MDM2:amplification; NOT TP53:oncogenic_mutation; (catype:Urothelial carcinoma OR catype:Lung adenocarcinoma); *NOT catype:Urothelial carcinoma
 NCT05614739	FGFR3:alteration
 NCT05501886	NOT prior_therapy:PI3K_inhibitor; NOT prior_therapy:AKT_inhibitor; NOT prior_therapy:mTOR_inhibitor
 NCT05555732	*NOT prior_therapy:systemic_therapy; catype:Non-squamous non-small cell lung cancer
