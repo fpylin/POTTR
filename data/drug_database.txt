@@ -19,6 +19,7 @@ drug	drug_class
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
 9MW2821	anti-NECTIN4_antibody-drug_conjugate
 A-337|SP51616	bispecific_T-cell_engager,EpCAM-targeting
+A947|A-947	SMARCA2-selective_PROTAC_degrader
 AB-201	allogeneic_CAR-NK-cell_therapy,ERBB2-targeting
 ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibody
 ABBV-319	anti-CD19_antibody-drug_conjugate,glucocorticoid_receptor_modulator
@@ -112,6 +113,7 @@ ARX788	anti-ERBB2_antibody-drug_conjugate
 AS602868	IKK2_inhibitor
 ASKG315	IL-15_prodrug
 ASN003	PI3K_alpha_inhibitor
+ASP3082	KRAS_G12D_degrader
 ASP5878	FGFR_inhibitor
 AST-301	vaccine_therapy,pNGVL3-based,ERBB2-targeting
 ASTX295|ASTX 295|ASTX-295	MDM2_inhibitor
@@ -338,6 +340,7 @@ CEND-1|CEND 1|LSTA1|Internalized-arginylglycylaspartic Acid Cyclic Peptide|iRGD	
 CEP-9722	PARP_inhibitor
 CF33-hNIS	oncolytic_virus
 CFI-402257	Mps1/TTK_inhibitor
+CFT1946	BRAF_V600E_degrader
 CGM097	p53-HDM2_interaction_inhibitor; MDM2_inhibitor
 CGT9486|PLX9486	KIT_inhibitor
 CH5126766|VS-6766|RO5126766	RAF/MEK_inhibitor
@@ -712,6 +715,7 @@ INCA033989	anti-CALR_monoclonal_antibody
 INCAGN01876|INCAGN 01876|INCAGN 1876|INCAGN-1876	anti-TIGIT_monoclonal_antibody
 INCB099280	PD-L1_inhibitor,oral
 INCB099318	PD-L1_inhibitor,oral
+INCB123667	CDK2_inhibitor
 INCB161734	KRAS_G12D_inhibitor
 INI-4001	TLR7/TLR8_agonist
 INO-9012	DNA_plasmid_encoding_IL-12
@@ -953,7 +957,7 @@ NTLA-2001	CRISPR-Cas9_gene-editing_therapy,TTR-targeting
 NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NUV-868|NUV868	BET_inhibitor
 NVG-111	bispecific_T-cell_engager,ROR1-targeting
-NVL-520	ROS1_inhibitor
+Zidesamtinib|NVL-520	ROS1_inhibitor
 NVL-655	ALK_inhibitor,fourth_generation
 NVU-868	BET_inhibitor
 NX-2127	BTK_inhibitor

@@ -428,6 +428,7 @@ SHP2_inhibitor
 SIK3_inhibitor	PI3K-delta/gamma/SIK3_inhibitor
 SLC7A11_inhibitor
 SMAC_mimetic
+SMARCA2_degrader	SMARCA2-selective_PROTAC_degrader
 SMO_inhibitor
 SMO_inhibitor	SMO_inhibitor,first_generation
 SMO_inhibitor	SMO_inhibitor,second_generation
@@ -1087,6 +1088,7 @@ cancer_therapy	cancer_therapy,SHP2-targeting
 cancer_therapy	cancer_therapy,SIK3-targeting
 cancer_therapy	cancer_therapy,SIRPa-targeting
 cancer_therapy	cancer_therapy,SLC7A11-targeting
+cancer_therapy	cancer_therapy,SMARCA2-targeting
 cancer_therapy	cancer_therapy,SMO-targeting
 cancer_therapy	cancer_therapy,SOS1-KRAS-targeting
 cancer_therapy	cancer_therapy,SRC-targeting
@@ -1324,6 +1326,7 @@ cancer_therapy,CEACAM5/CEACAM6-targeting	immuno-oncology_therapy,CEACAM5/CEACAM6
 cancer_therapy,CHEK1-targeting	CHEK1_inhibitor
 cancer_therapy,CHK1-targeting	CHK1_inhibitor
 cancer_therapy,CK1_alpha-targeting	CK1_alpha_degrader
+cancer_therapy,CLDN18.2-targeting	autologous_CART-T-cell_therapy,CLDN18.2-targeting
 cancer_therapy,CLDN18.2-targeting	immuno-oncology_therapy,CLDN18.2-targeting
 cancer_therapy,CLDN6-targeting	autologous_CAR-T-cell_therapy,CLDN6-targeting
 cancer_therapy,CLDN6-targeting	bispecific_T-cell_engager,CLDN6-targeting
@@ -1639,6 +1642,7 @@ cancer_therapy,SHP2-targeting	SHP2_inhibitor
 cancer_therapy,SIK3-targeting	SIK3_inhibitor
 cancer_therapy,SIRPa-targeting	immuno-oncology_therapy,SIRPa-targeting
 cancer_therapy,SLC7A11-targeting	SLC7A11_inhibitor
+cancer_therapy,SMARCA2-targeting	SMARCA2_degrader
 cancer_therapy,SMO-targeting	SMO_inhibitor
 cancer_therapy,SMO-targeting	SMO_inhibitor,first_generation
 cancer_therapy,SMO-targeting	SMO_inhibitor,second_generation

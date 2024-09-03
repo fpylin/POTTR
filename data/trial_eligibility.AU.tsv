@@ -63,6 +63,7 @@ NCT03212404	catype:Small-cell lung cancer
 NCT03212404	catype:Urothelial Carcinoma
 NCT03212404	catype:Urothelial carcinoma
 NCT03486873	EXTENSION_STUDY
+NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -94,26 +95,6 @@ NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Solid tumou
 NCT04460456	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT04565275	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration); *NOT prior_therapy:pan-FGFR_inhibitor
-NCT04589845	*NOT_RECRUITING; (sensitive_to:GDC-0077 OR sensitive_to_drug_class:PI3K_inhibitor); *(PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:H1047_missense_variant); *(PIK3CA:E81K OR PIK3CA:E88Q OR PIK3CA:E88P OR PIK3CA:R93Q OR PIK3CA:R93W OR PIK3CA:P104L OR PIK3CA:G106_missense_variant  OR PIK3CA:R108_missense_variant OR PIK3CA:K111_missense_variant  OR PIK3CA:G118_missense_variant OR PIK3CA:N345_missense_variant OR PIK3CA:R357_missense_variant OR PIK3CA:C378_missense_variant OR PIK3CA:C420_missense_variant OR PIK3CA:E453_missense_variant OR PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant OR PIK3CA:Q546_missense_variant OR PIK3CA:M1004_missense_variant OR PIK3CA:M1043_missense_variant OR PIK3CA:H1047_missense_variant OR PIK3CA:H1048_missense_variant OR PIK3CA:G1049_missense_variant)
-NCT04589845	(sensitive_to:Trastuzumab emtansine OR sensitive_to_drug_class:anti-ERBB2_antibody-drug_conjugate); NOT ERBB2:amplification; *NOT prior_therapy:Trastuzumab emtansine; (ERBB2:G222C OR ERBB2:R226S OR ERBB2:E265K OR ERBB2:D277H OR ERBB2:G292R OR ERBB2:G309A OR ERBB2:G309E OR ERBB2:S310F OR ERBB2:S310Y OR ERBB2:C311R OR ERBB2:C311S OR ERBB2:E321G OR ERBB2:C334S); *NOT_RECRUITING
-NCT04589845	(sensitive_to:Trastuzumab emtansine OR sensitive_to_drug_class:anti-ERBB2_antibody-drug_conjugate); NOT ERBB2:amplification; *NOT prior_therapy:Trastuzumab emtansine; (ERBB2:P551L OR ERBB2:R552S OR ERBB2:S418T OR ERBB2:A440T); *NOT_RECRUITING
-NCT04589845	(sensitive_to:Trastuzumab emtansine OR sensitive_to_drug_class:anti-ERBB2_antibody-drug_conjugate); NOT ERBB2:amplification; *NOT prior_therapy:Trastuzumab emtansine; (ERBB2:S653C OR ERBB2:V659E OR ERBB2:G660D OR ERBB2:R678Q); *NOT_RECRUITING
-NCT04589845	(sensitive_to:Trastuzumab emtansine OR sensitive_to_drug_class:anti-ERBB2_antibody-drug_conjugate); NOT ERBB2:amplification; *NOT prior_therapy:Trastuzumab emtansine; (ERBB2:T733I OR ERBB2:L755P OR ERBB2:L755S OR ERBB2:I767M OR ERBB2:L768S OR ERBB2:D769H OR ERBB2:D769N OR ERBB2:D769Y OR ERBB2:A775_Y776insYVMA OR ERBB2:A775_Y776ins OR ERBB2:L775P OR ERBB2:L775S OR ERBB2:L775_T759del OR ERBB2:G776delinsVC OR ERBB2:G776delinsVV OR ERBB2:G776delinsLC OR ERBB2:V777L OR ERBB2:G778_P780dup OR ERBB2:V779A OR ERBB2:V779L OR ERBB2:T798M OR ERBB2:L841V OR ERBB2:V842I OR ERBB2:N875S OR ERBB2:T862A OR ERBB2:L869A OR ERBB2:L869R OR ERBB2:H878Y OR ERBB2:R896C); *NOT_RECRUITING
-NCT04589845	(sensitive_to_drug_class:pan-AKT_inhibitor OR sensitive_to:Ipatasertib); (AKT1:E17K OR AKT1:L52R OR AKT1:Q79K); *NOT prior_therapy:AKT_inhibitor; *NOT_RECRUITING
-NCT04589845	(sensitive_to_drug_class:pan-AKT_inhibitor OR sensitive_to:Ipatasertib); (AKT3:E17K OR AKT3:L51R OR AKT3:Q78K); *NOT prior_therapy:AKT_inhibitor; *NOT_RECRUITING
-NCT04589845	(sensitive_to_drug_class:pan-AKT_inhibitor OR sensitive_to:Ipatasertib); AKT2:E17K; *NOT prior_therapy:AKT_inhibitor; *NOT_RECRUITING
-NCT04589845	COHORT_CLOSED; sensitive_to_drug_class:MDM2_inhibitor; MDM2:amplification; NOT TP53:oncogenic_mutation; catype:Liquid cancer; *NOT_RECRUITING
-NCT04589845	sensitive_to:Alectinib; ALK:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ALK_inhibitor; *NOT ALK:I1171N; *NOT ALK:I1171S; *NOT ALK:G1202R; *NOT_RECRUITING
-NCT04589845	sensitive_to:Entrectinib; (NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); *NOT prior_therapy:NTRK_inhibitor
-NCT04589845	sensitive_to:Entrectinib; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor
-NCT04589845	sensitive_to_drug_class:ALK_inhibitor,second_generation; ALK:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ALK_inhibitor
-NCT04589845	sensitive_to_drug_class:NTRK_inhibitor; (NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); *NOT prior_therapy:NTRK_inhibitor
-NCT04589845	(sensitive_to_drug_class:RAF_dimer_inhibitor OR sensitive_to:Belvarafenib); (BRAF:fusion OR BRAF:class_2_mutation OR BRAF:class_3_mutation); *NOT_RECRUITING
-NCT04589845	sensitive_to_drug_class:ROS1_inhibitor; ROS1:fusion; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:ROS1_inhibitor; *NOT_RECRUITING
-NCT04589845	tumour_mutational_burden:high; *NOT prior_therapy:immune_checkpoint_blockade; *NOT_RECRUITING
-NCT04589845	(ATM:oncogenic_mutation OR ATM:deletion); NOT_RECRUITING
-NCT04589845	(SETD2:oncogenic_mutation OR SETD2:deletion); NOT_RECRUITING
-NCT04589845	KRAS:G12C; NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer; *WARNING_NOT_IN_VIC
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT04665206	(NF2:oncogenic_mutation OR NF2:alteration)
