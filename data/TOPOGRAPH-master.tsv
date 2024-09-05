@@ -98,7 +98,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 1	TSC2	Oncogenic mutations (germline)	Solid tumours; Subependymal giant cell astrocytoma	Everolimus	PBS reimbursed. SEGA or visceral tumours in patients with tuberous sclerosis complex. EXIST-1.	23158522, 23325902
 1B	ABL1	BCR-ABL1 Fusion	Chronic myelogenous leukaemia	Bosutinib	TGA approved. Not PBS reimbursed. Third or later line treatment. BFORE trial.	29091516
 1B	BRAF	V600E	Anaplastic thyroid cancer 	Dabrafenib + Trametinib	TGA approved. Not PBS reimbursed	29072975
-1B	BRAF	V600E	Non-small cell lung cancer	Dabrafenib + Trametinib	TGA approved. Not PBS reimbursed	29072975
+1B	BRAF	V600E	Non-small cell lung cancer	Dabrafenib + Trametinib	TGA approved. Not PBS reimbursed. Phase 2 trial. NCT01336634. N=36. Dabrafenib + trametinib showed an ORR of 64% (23/36) with a median follow-up of 15.9 months in previously untreated BRAFV600E-mutant metastatic NSCLC.	28919011
 1B	BRAF	V600E, V600K	Melanoma	Trametinib	TGA approved. PBS reimbursement must include concomitant dabrafenib. Single agent NOT recommended.	22663011
 1B	BRCA1	Oncogenic mutations (germline)	Breast cancer	Olaparib	TGA approved. Not PBS reimbursed. OlympiAd.	28578601
 1B	BRCA1	Oncogenic mutations (germline)	Breast cancer	Talazoparib	TGA approved. Not PBS reimbursed. EMBRACA trial.	30110579
@@ -2349,3 +2349,4 @@ R2	TSC1	Oncogenic mutations	Urothelial carcinoma	Buparlisib	Phase 2. N=19. Bupar
 R2	Tumour Mutational Burden	High	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	WT1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor		27634897
+4	ESR1	D538G, Y537S, D538G, Y537S	Breast cancer	ERX-315	Preclinical study. ERX-315 induced endoplasmic reticulum stress leading to cancer cell death in mutant estrogen receptor alpha -driven breast cancer cell lines.	10.1158/1538-7445.SABCS23-PO3-26-11

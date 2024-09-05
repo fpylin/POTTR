@@ -21,6 +21,7 @@ drug	drug_class
 A-337|SP51616	bispecific_T-cell_engager,EpCAM-targeting
 A947|A-947	SMARCA2-selective_PROTAC_degrader
 AB-201	allogeneic_CAR-NK-cell_therapy,ERBB2-targeting
+AB598|AB-598	anti-CD39_monoclonal_antibody
 ABBV-151|ABBV 151|ABBV151|ARGX 115|ARGX-115|ARGX115	anti-GARP_monoclonal_antibody
 ABBV-319	anti-CD19_antibody-drug_conjugate,glucocorticoid_receptor_modulator
 ABBV-383	bispecific_T-cell_engager,BCMA-targeting
@@ -237,6 +238,7 @@ BGB-A333|BGB A333|BGBA333	anti-PD-L1_monoclonal_antibody
 BGB-A425|BGB A425|BGBA425	anti-TIM3_monoclonal_antibody
 BGB-A445	anti-OX40_agonistic_antibody
 BGB-B167	bispecific_CEACAM5/4-1BB_antibody
+BGB-C354	anti-B7H3_antibody-drug_conjugate
 BGB659	RAF_inhibitor,type_2
 BI 1701963|BI=1701963	SOS1-KRAS_inhibitor
 BI 754111|BI-754111	anti-LAG3_monoclonal_antibody
@@ -269,6 +271,7 @@ BMS-986340	anti-CCR8_monoclonal_antibody
 BMS-986360|CC-90001|CC90001	JNK_inhibitor
 BMS-986397|CC-91633	CK1_alpha_degrader
 BMS-986466|BMS986466|BBP 398|BBP398|IACS-15509|IACS 15509|IACS15509	SHP2_inhibitor
+BMS-986484|BMS986484	unknown_drug_class
 BNA35|BNA035|BNA-035|HLX35	bispecific_EGFR/4-1BB_antibody
 BNC-105|BNC 105|BNC105	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNC101|BNC-101|ET-101	anti-LGR5_monoclonal_antibody
@@ -424,6 +427,7 @@ D3S-001	KRAS_G12C_inhibitor
 D3S-002	ERK_inhibitor
 DB-1303	anti-ERBB2_antibody-drug_conjugate
 DB-1311	anti-B7H3_antibody-drug_conjugate
+DB-1419	bispecific_B7H3/PD-L1_antibody
 DCC-3116	ULK1/2_inhibitor
 DCSZ11	anti-CD93_monoclonal_antibody
 DF6002|BMS-986415	IL-12_Fc-fusion_protein
@@ -503,6 +507,7 @@ EP0042	FLT3/Aurora_inhibitor
 EPI-7386	antiandrogen,AR_NTD_inhibitor
 EPZ011989	EZH2_inhibitor
 ERAS-601	SHP2_inhibitor
+ERX-315|ERX315	benzamide,ER_alpha-targeting
 ES009	anti-LILRB2_monoclonal_antibody
 ES414	bispecific_T-cell_engager,PSMA-targeting
 ESG206	anti-BAFFR_monoclonal_antibody
@@ -665,6 +670,7 @@ HMPL-453|HMPL 453|HMPL453	FGFR_inhibitor
 HMPL-523	SYK_inhibitor
 HMPL-760	BTK_inhibitor
 HP518	AR_PROTAC_degrader
+HRS-5041|HRS 5041|HRS5041	AR_PROTAC_degrader
 HS-10241	MET_inhibitor
 HS-20093	anti-B7H3_antibody-drug_conjugate
 HSK29116	BTK_PROTAC_degrader
@@ -739,6 +745,7 @@ Idelalisib	PI3K-delta_inhibitor
 Idronoxil|NOX66|NV-06|Phenoxodiol	idronoxil_suppository
 Ieramilimab|IMP-701|LAG 525|LAG525	anti-LAG3_monoclonal_antibody
 Ifabotuzumab|Fibatuzumab|KB 004|KB-004|KB004	anti-EphA3_antibody
+Ifinatamab Deruxtecan|DS-7300	anti-B7H3_antibody-drug_conjugate
 Ifosfamide|Ifosphamide|Cyfos|Ifex|Iphosphamid|Isoendoxan|Isophosphamide|Mitoxana|Naxamide|Holoxan|IFO|IFX|Iso-Endoxan|MJF 9325|MJF-9325|Seromida|Tronoxal|Z 4942|Z-4942	alkylating_agent
 Imatinib|Imatinib Mesylate|Gleevec|Glivec	BCR-ABL1_inhibitor,first_generation; KIT_inhibitor; PDGFRA_inhibitor
 Imetelstat|GRN163L	telomerase_inhibitor
@@ -957,7 +964,7 @@ NTLA-2001	CRISPR-Cas9_gene-editing_therapy,TTR-targeting
 NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NUV-868|NUV868	BET_inhibitor
 NVG-111	bispecific_T-cell_engager,ROR1-targeting
-Zidesamtinib|NVL-520	ROS1_inhibitor
+NVL-520	ROS1_inhibitor
 NVL-655	ALK_inhibitor,fourth_generation
 NVU-868	BET_inhibitor
 NX-2127	BTK_inhibitor
@@ -1482,6 +1489,7 @@ Zalifrelimab|AGEN-1884|AGEN1884	anti-CTLA4_monoclonal_antibody
 Zanidatamab|ZW25	bispecific_ERBB2/ERBB2_antibody
 Zanubrutinib|BGB-3111|BTK-InhB|Brukinsa	BTK_inhibitor
 Zanzalintinib|XL092	MET/VEGFR2/AXL/MER_inhibitor
+Zidesamtinib|NVL-520	ROS1_inhibitor
 Zilovertamab vedotin|MK-2140|MK 2140	anti-ROR1_antibody-drug_conjugate
 Zimberelimab|AB122|AB 122|AB-122|GLS 010|GLS-010|GLS010	anti-PD-1_monoclonal_antibody
 Zolbetuximab|Claudiximab|IMAB 362|IMAB-362|IMAB362	anti-CLDN18.2_monoclonal_antibody
