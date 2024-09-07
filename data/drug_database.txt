@@ -1510,3 +1510,5 @@ Autogene cevumeran|RO7198457|BNT-122|BNT122	mRNA_personalised_cancer_vaccine
 Luveltamab tazevibulin|STRO-002	anti-FR-alpha_antibody-drug_conjugate
 VVD-130850	STAT3_inhibitor
 Belumosudil	ROCK2_inhibitor
+mRNA-4157|mRNA4157|V940	mRNA_personalised_cancer_vaccine
+M9466	PARP1-selective_inhibitor
