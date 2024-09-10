@@ -130,7 +130,7 @@ ATX-101	cell_penetrating_peptide,PCNA-targeting
 AU-007	anti-IL-2_monoclonal_antibody
 AUM001	MNK_inhibitor
 AWT020	anti-PD1-IL2_fusion_protein
-AXA-042	TLR2/TLR6_agonist
+AXA-042|AXA042	TLR2/TLR6_agonist
 AZD-9496|AZD 9496|AZD9496	selective_estrogen_receptor_degrader
 AZD0305	anti-GPRC5D_antibody-drug_conjugate
 AZD0466	dual_Bcl2/BclxL_inhibitor
@@ -1513,3 +1513,4 @@ VVD-130850	STAT3_inhibitor
 Belumosudil	ROCK2_inhibitor
 mRNA-4157|mRNA4157|V940	mRNA_personalised_cancer_vaccine
 M9466	PARP1-selective_inhibitor
+Ponsegromab|PF-06946860|PF 06946860	anti-GDF15_monoclonal_antibody
