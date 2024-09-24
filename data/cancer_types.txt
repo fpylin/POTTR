@@ -255,6 +255,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancre
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic neuroendocrine tumour
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic solid pseudopapillary tumour|Solid pseudopapillary tumour of the pancreas|Pancreatic pseudopapillary tumour
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic undifferentiated carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Hepatic carcinoma of pancreas
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Ampullary cancer|Ampullary carcinoma|cancer of the Ampulla of Vater
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma|Small bowel adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenosquamous carcinoma
