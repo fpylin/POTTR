@@ -145,7 +145,7 @@ NCT04879329	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04789096	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression; *prior_therapy:Trastuzumab; *prior_therapy:Pertuzumab; *prior_therapy:taxane; *prior_therapy:Trastuzumab emtansine; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:Nivolumab; *NOT prior_therapy:Atezolizumab; *NOT prior_therapy:Durvalumab; *NOT prior_therapy:Avelumab; *NOT prior_therapy:Ipilimumab; *NOT prior_therapy:Tremelimumab
 NCT04924075	*NOT KIT:oncogenic_mutation; *NOT PDGFRB:oncogenic_mutation; catype:Gastrointestinal stromal tumour
 NCT04924075	VHL:oncogenic_mutation; (catype:Pheochromocytoma OR catype:Paraganglioma)
-NCT04924075	catype:Solid tumour; (EPAS1:alteration OR FH:alteration OR SDHA:alteration OR SDHB:alteration OR SDHC:alteration OR SDHD:alteration OR SDHAF2:alteration OR EGLN1:alteration OR EGLN:alteration OR MDH2:alteration OR ELOC:alteration OR TCEB1:alteration); *NOT VHL:oncogenic_mutation; *NOT SDHA:alteration; *NOT SDHB:alteration; *NOT SDHC:alteration; *NOT SDHD:alteration
+NCT04924075	catype:Solid tumour; (EPAS1:alteration OR FH:alteration OR SDHA:alteration OR SDHB:alteration OR SDHC:alteration OR SDHD:alteration OR SDHAF2:alteration OR EGLN1:alteration OR EGLN:alteration OR MDH2:alteration OR ELOC:alteration OR TCEB1:alteration); *NOT VHL:oncogenic_mutation
 NCT05261399	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation; *NOT prior_therapy:Osimertinib
 NCT05876754	catype:Cholangiocarcinoma; IDH1:R132_mutation; *NOT prior_therapy:IDH1_R132_inhibitor
 NCT05043090	catype:Papillary renal cell carcinoma; *MET:alteration; *NOT FH:oncogenic_mutation
@@ -270,3 +270,5 @@ NCT03906669	trial_type:curative
 NCT06343402	KRAS:G12C
 NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
 NCT05352672	*NOT prior_therapy:systemic_therapy
+NCT05609968	*NOT prior_therapy:systemic_therapy
+NCT05215340	*NOT prior_therapy:systemic_therapy

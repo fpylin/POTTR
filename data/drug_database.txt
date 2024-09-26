@@ -1185,7 +1185,7 @@ RO7496353	anti-TGF-beta_monoclonal_antibody
 RO7502175	unknown_drug_class
 RO7566802	unknown_drug_class
 RO7617991	unknown_drug_class
-RO7656594	unknown_drug_class
+RO7656594	AR_PROTAC_degrader
 ROS1_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 RP-6306|RP 6306	PKMYT1_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
