@@ -12,7 +12,6 @@ ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12621001436864	BRAF:V600E; NOT KRAS:oncogenic_mutation; STOPPED_EARLY
 ACTRN12621001436864	KRAS:oncogenic_mutation; STOPPED_EARLY
 ACTRN12621001690842	NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer
-NCT02408861	HIV_POSITIVE
 NCT02628067	catype:Anal Cancer
 NCT02628067	catype:Biliary Tract Cancer
 NCT02628067	catype:Cervical Cancer
@@ -60,6 +59,9 @@ NCT03212404	catype:Small-Cell Lung Cancer
 NCT03212404	catype:Small-cell lung cancer
 NCT03212404	catype:Urothelial Carcinoma
 NCT03212404	catype:Urothelial carcinoma
+NCT03424005	NOT ERBB2:amplification; *NOT ESR1:protein_expression; *CD274:protein_expression
+NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_mutation
+NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -85,7 +87,6 @@ NCT04249843	BRAF:alteration; BRAF:V600E; catype:Non-small cell lung carcinoma
 NCT04249843	BRAF:alteration; NOT BRAF:V600E
 NCT04249843	NOT catype:Colorectal cancer; BRAF:V600E; prior_therapy:BRAF_V600_inhibitor
 NCT04249843	catype:Solid tumour; BRAF:class_2_mutation
-NCT04434482	NOT catype:central nervous system cancer; catype:Small-cell lung cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Colorectal cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Solid tumour
@@ -186,7 +187,6 @@ NCT05067283	catype:Colorectal cancer; NOT prior_therapy:systemic_therapy; KRAS:G
 NCT05919537	(ERBB3:V104M OR ERBB3:V104L OR ERBB3:G284R OR ERBB3:D297Y OR ERBB3:D297V OR ERBB3:A232V); NOT KRAS:oncogenic_mutation; NOT PIK3CA:oncogenic_mutation; NOT BRAF:oncogenic_mutation; NOT PTEN:deletion; NOT PTEN:oncogenic_mutation; NOT MET:amplification
 NCT05498428	catype:Non-small cell lung cancer; (EGFR:exon_19_deletion OR EGFR:L858R OR EGFR:exon_20_insertion)
 NCT05388669	catype:Non-small cell lung cancer; (EGFR:exon_19_deletion OR EGFR:L858R)
-NCT04985604	(KRAS:oncogenic_mutation OR NRAS:oncogenic_mutation OR HRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR MAP2K1:oncogenic_mutation OR NF1:oncogenic_mutation OR RAF1:fusion OR RAF1:amplification)
 NCT05580770	catype:Melanoma; NRAS:oncogenic_mutation
 NCT05580770	catype:Non-small cell lung cancer; KRAS:oncogenic_mutation
 NCT05580770	(catype:Non-small cell lung cancer OR catype:Melanoma); (BRAF:class_2_mutation OR BRAF:class_3_mutation)
@@ -200,6 +200,8 @@ NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression 
 NCT05872295	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); prior_therapy:systemic_therapy
 NCT05872295	catype:Solid tumour; NOT Breast cancer; NOT Gastric cancer; NOT Gastroesophageal adenocarcinoma; *(ERBB2:amplification OR ERBB2:protein_expression OR ERBB2:overexpression OR ERBB2:low_protein_expression OR ERBB2:oncogenic_mutation)
 NCT05577416	NOT prior_therapy:systemic_therapy; catype:Low-grade glioma
+NCT04929223	catype:Colorectal adenocarcinoma; *(microsatellite_instability:high OR mismatch_repair:deficient); *NOT_RECRUITING
+NCT04929223	catype:Colorectal adenocarcinoma; KRAS:G12C
 NCT05388669	EGFR:oncogenic_mutation
 NCT04895709	*NOT prior_therapy:Docetaxel
 NCT05348577	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:AKT_inhibitor
@@ -270,5 +272,6 @@ NCT03906669	trial_type:curative
 NCT06343402	KRAS:G12C
 NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
 NCT05352672	*NOT prior_therapy:systemic_therapy
+NCT06127407	catype:Chondrosarcoma
 NCT05609968	*NOT prior_therapy:systemic_therapy
 NCT05215340	*NOT prior_therapy:systemic_therapy

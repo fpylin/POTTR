@@ -445,7 +445,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	ERBB2	A775_G776insYVMA, G778_P780dup, G776delinsVC, Exon 20 insertion, Exon 20 mutation	Non-small cell lung cancer	Poziotinib	N=30. NSCLC subsequent to platinum-based chemotherapy. ORR 27%. Median DOR 5.0 months. Median PFS 5.5 months. Median OS 15 months.	34550757
 3	ERBB2	A775_G776insYVMA, M774dup	Non-small cell lung cancer	Afatinib	Global named used program. Heavily pretreated NSCLC with ERBB2 mutation. N=28. ORR of 19% (3/16) with DCR of 69% (11/16)	30096481
 3	ERBB2	Amplification	Breast cancer	Pyrotinib + Capecitabine	Randomized phase 2. ORR Pyrotinib + capecitabine was 79%. Median PFS 18.1 months.	31430226
-3	ERBB2	Amplification	Colorectal adenocarcinoma	Lapatinib + Trastuzumab		27108243
+3	ERBB2	Amplification	Colorectal adenocarcinoma	Lapatinib + Trastuzumab	Phase 2 HERACLES trial. N=27. Trastuzumab + lapatinib achieved ORR of 30% (8/27) with 1 complete response and 7 partial responses in treatment-refractory, KRAS codon 12/13 wild-type, HER2-positive metastatic colorectal cancer.	27108243
 3	ERBB2	Amplification	Colorectal adenocarcinoma	Trastuzumab + Pertuzumab	Phase 2 Basket trial. MyPathway. Colorectal cohort. ORR: 32% (18/57).	30857956
 3	ERBB2	Amplification	Colorectal adenocarcinoma	Trastuzumab + Pertuzumab	Phase 2. NCT02693535. TAPUR. N=28 in Cohort 1. ORR was 25%. DCR 54%. DOR 4.8 months	36315917
 3	ERBB2	Amplification	Gastric cancer; Gastroesophageal junction adenocarcinoma; Oesophageal adenocarcinoma	Margetuximab + Pembrolizumab	CP-MGAH22–05 	32653053
@@ -512,9 +512,9 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	FGFR2	C382R, I291_Y308del, Extracellular domain deletion, Y375C, W290C	Cholangiocarcinoma	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
 3	FGFR2	C383R, W290C	Cholangiocarcinoma	Futibatinib	NCT02052778. TAS-120-101. Phase 1 dose expansion. Responders seen in cholangiocarcinoma (1 patient each) harbouring C383R and W290C. 	34551969
 3	FGFR2	Fusion	Cholangiocarcinoma	Derazantinib	Phase 2. FIDES-01. NCT03230318. In patients with intrahepatic cholangiocarcinoma harbouring a FGFR2 fusion (N=143), ORR was 21%, DCR was 76%. Median OS was 17.2 months and PFS was 8.0 months.	10.1016/j.annonc.2022.07.087
-3	FGFR2	Fusion	Cholangiocarcinoma	RLY-4008	Phase 1. ReFOCUS. ORR was 63% (24/38); 88% (15/17) at RP2D with DCR 100%.	10.1016/j.annonc.2022.08.006
+3	FGFR2	Fusion	Cholangiocarcinoma	Lirafugratinib	Phase 1. ReFOCUS. ORR was 63% (24/38); 88% (15/17) at RP2D with DCR 100%.	10.1016/j.annonc.2022.08.006
 3	FGFR2	Fusion	Ovarian cancer; Pancreatic adenocarcinoma; Cervical cancer; Non-small cell lung cancer; Prostate cancer	Pemigatinib	Phase 2. NCT03822117. FIGHT-207. In the fusion cohort (Cohort A), ORR was 27%. In the activating mutation cohort (Cohort B), ORR was 9%.	10.1158/1538-7445.AM2023-CT016
-3	FGFR2	Fusion, C382R, R678H, H167_N173del, C383R, W290C	Cholangiocarcinoma	RLY-4008	Phase 1/2.ReFocus. NCT04526106. ORR in FGFR2-Mutated cholangiocarcinoma was 29%. In the cohort with an FGFR2 fusion and a dosage of 70mg or higher, the ORR was 73% (8/11). In FGFRi refractory CCA, the ORR was 21% (3/14).	10.1200/JCO.2023.41.16_suppl.4009
+3	FGFR2	Fusion, C382R, R678H, H167_N173del, C383R, W290C	Cholangiocarcinoma	Lirafugratinib	Phase 1/2.ReFocus. NCT04526106. ORR in FGFR2-Mutated cholangiocarcinoma was 29%. In the cohort with an FGFR2 fusion and a dosage of 70mg or higher, the ORR was 73% (8/11). In FGFRi refractory CCA, the ORR was 21% (3/14).	10.1200/JCO.2023.41.16_suppl.4009
 3	FGFR2	Fusion, FGFR2-BICC1 fusion, FGFR2-CCDC6 fusion, FGFR2-CLIP1 fusion, FGFR2-USP33	Solid tumours	Pemigatinib	Phase 1. FIGHT-101. In FGFR fusion/rearragement cohort (N=20), ORR was 25% (5/20). 	35176457
 3	FGFR2	Fusion, FGFR2-BICC1 fusion, FGFR2-RBM20 fusion, FGFR2-MRVI1 fusion, FGFR2-CROCC fusion, FGFR2-KIAA1598 fusion, FGFR2 1291_Y308del, FGFR2 W290C, FGFR2 Y375C, FGFR2 C382R	Cholangiocarcinoma	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. N=107. Pemigatinib achieved ORRs of 27% (fusions,n=49), 9.4% (actionable SNV, n=32), and 3.8% (kinase domain mutations, n=26); median PFS was 4.5 and 3.7 months, and OS was 17.5 and 11.4 months.	38710951
 3	FGFR2	Fusions	Cholangiocarcinoma	Erdafitinib	LUC2001	10.1200/JCO.2019.37.15_suppl.4117
@@ -614,6 +614,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	NF1	Oncogenic mutations (germline)	Type 1 neurofibromatosis	Mirdametinib	NF106. Phase II trial. N=19. NCT02096471. ORR 42%; CBR 95% with significant durable decreases in pain ratings in patients with NF1-related plexiform neurofibromas.	33507822
 3	NF2	Oncogenic mutation	Meningioma	Abemaciclib	Phase 2 Alliance A071401 trial. N=36. Abemaciclib improved PFS at 6 months of 54% in patients with recurrent or progressive grade 2/3 meningiomas and NF2 mutations or CDK pathway alterations, meeting primary endpoint. No objective responses observed.	10.1200/JCO.2024.42.16_suppl.2001
 3	NF2	Oncogenic mutations	Meningioma	GSK2256098	Alliance A071401, FAK inhibitor	10.1200/JCO.2020.38.15_suppl.2502
+3	NF2	Oncogenic mutations	Meningioma	GSK2256098	Phase 2 Alliance A071401 trial. NCT02523014. N=36. GSK2256098 showed activity in NF2-mutated meningiomas, meeting PFS6 endpoint with rates of 83% (grade 1) and 33% (grade 2/3), and one partial response was observed.	36288512
 3	NOTCH1	R2327fs*	Adenoid cystic carcinoma	Nirogacestat	Case report. Response of tracheal adenoid cystic carcinoma to the gamma secretase inhibitor with TTP of 6.5 months.	34994644
 3	NRAS	Oncogenic mutations	Histiocytosis	Cobimetinib	Phase II Umbrella study	30867592
 3	NRAS	Oncogenic mutations	Melanoma	Binimetinib	Not TGA approved. Positive Phase III NEMO result, but  overall small absolute PFS gain. FDA application withdrawn and NCCN 2B. Revised Tier 3	28284557
@@ -662,7 +663,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	RET	Fusions	Medullary thyroid cancer	BOS172738	ORR 44% (7/16), including 1 CR	10.1200/JCO.2021.39.15_suppl.3008
 3	RET	Fusions	Non-small cell lung cancer	BOS172738	ORR 33% (10/30)	10.1200/JCO.2021.39.15_suppl.3008
 3	RET	Fusions	Non-small cell lung cancer	Cabozantinib	Not TGA approved. Single-arm phase 2. ORR 28%	27825636
-3	RET	Fusions	Non-small cell lung cancer	Lenvatinib	Single-arm phase 2. ORR 16%. PFS 7.3mo	31710864
+3	RET	Fusions	Non-small cell lung cancer	Lenvatinib	Phase 2 trial. NCT01877083. N=25. Lenvatinib demonstrated an ORR of 16% and a median PFS of 7.3 months in patients with RET fusion-positive lung adenocarcinoma.	31710864
 3	RET	Fusions	Non-small cell lung cancer	Vandetanib	Not TGA approved. ORR 18%. OncoKB LOE 2	27803005
 3	RET	Fusions	Non-small cell lung cancer	Vandetanib	Single-arm phase 2. LURET. ORR 47%. PFS 4.7mo	27825636
 3	RET	Fusions	Non-small cell lung cancer	Vandetanib	Single-arm phase 2. ORR 18%. PFS 4.5mo	27803005
@@ -1192,13 +1193,18 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	FGFR2	FGFR2-BICC1 fusion	Non-small cell lung cancer	Erdafitinib	Case report showing partial response to erdafitinib	10.1200/PO.20.00110
 4	FGFR2	FGFR2-BICC1 fusion	Non-small cell lung cancer	Erdafitinib		35050756
 4	FGFR2	FGFR2-NRBF2 fusion, FGFR2-KIAA1217 fusion, FGFR2-CCDC170 fusion, FGFR2-AHCYL1 fusion, FGFR1-WDHD1 fusion, FGFR2-PAWR fusion, FGFR2-ATAD2 fusion, FTFR2-TRIM8 fusion	Cholangiocarcinoma	Pemigatinib	Exploratory analysis in patients with clinical benefits in the FIGHT-202 trial. 	33218975
+4	FGFR2	FGFR2-TTC28 fusion, FGFR2-OPTN fusion, K310R, V564F, V564L, M537I, N549D, N549K, N549H, V564I, E565A, L617V, K641N, K659M	Cholangiocarcinoma	Lirafugratinib		37270847
 4	FGFR2	Fusion	Solid tumours	Gunagratinib	Phase 1. ORR 33% in 12 patients including 1 CR (cholangiocarcinoma) and 3 PR. DCR 92%.	10.1200/JCO.2021.39.15_suppl.4092
-4	FGFR2	Fusion	Solid tumours	RLY-4008		10.1200/JCO.2021.39.15_suppl.TPS4165
+4	FGFR2	Fusion	Solid tumours	Lirafugratinib		10.1200/JCO.2021.39.15_suppl.TPS4165
 4	FGFR2	Fusion and E566G	Cholangiocarcinoma	Infigratinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 4	FGFR2	Fusion and N550D, Fusion and N550K, Fusion and V563L, Fusion and V565I, Fusion and E566A, Fusion and E566G, Fusion and K642I, Fusion and K642R, Fusion and K660M	Cholangiocarcinoma	Futibatinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 4	FGFR2	Fusion and N550D, Fusion and V563L, Fusion and V565I, Fusion and E566A, Fusion and E566G, Fusion and K642R	Cholangiocarcinoma	Erdafitinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 4	FGFR2	Fusion and V563L, Fusion and E566A, Fusion and E566G, Fusion and K642R	Cholangiocarcinoma	Pemigatinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 4	FGFR2	Fusions	Solid tumours	Futibatinib	FOENIX-101. ORR 11% in qd cohort	32622884
+4	FGFR2	K310R, M537I, K641N, K659M	Cholangiocarcinoma	Infigratinib		37270847
+4	FGFR2	K310R, M537I, N549D, N549K, N549H, V564I, E565A, L617V, K641N, K659M	Cholangiocarcinoma	Futibatinib		37270847
+4	FGFR2	K310R, M537I, N549H, V564I, E565A, L617V, K641N, K659M	Cholangiocarcinoma	Erdafitinib		37270847
+4	FGFR2	K310R, M537I, N549H, V564I, K641N, K659M	Cholangiocarcinoma	Pemigatinib		37270847
 4	FGFR2	K660M	Solid tumours	Erdafitinib, Pemigatinib		32973082
 4	FGFR2	L618F	Cholangiocarcinoma	Futibatinib		33926920
 4	FGFR2	N549H, V564I, K659N	Solid tumours	Gunagratinib	Cell line study. Ba/F3 cells harbouring both FGFR2-BICC1 fusion and secondary mutation remains sensitive to Gunagratinib.	10.1200/JCO.2021.39.15_suppl.4092
@@ -1322,7 +1328,8 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	KRAS	G12C	Solid tumours except non-small cell lung cancer	Adagrasib	Phase 1/1B. KRYSTAL-1. In a total of 7 cases (4 colorectal, 2 appendiceal, 1 duodenal adenocarcinomas) at various dosing levels, 1 (of 4) colorectal achieved an objective response.	35167329
 4	KRAS	G12C, G12A, G12S, G12	Solid tumours	SHP099 + Trametinib	Cell line study. TNBC and RAS G12 tumours are known to be sensitive to combined SHP2-MEK inhibition in cell line models.	30605687
 4	KRAS	G12D	Appendiceal cancer	BGB-3245	Phase 1. NCT04249843. Response seen in a patient with appendiceal cancer harbouring KRAS G12D mutation.	10.1158/1538-7445.AM2023-CT031
-4	KRAS	G12D	Pancreatic adenocarcinoma	MRTX1133		36472553
+4	KRAS	G12D	Pancreatic adenocarcinoma; Colorectal adenocarcinoma	MRTX1133		36472553
+4	KRAS	G12D	Pancreatic adenocarcinoma; Non-small cell lung cancer	RMC-9805	Preclinical study. RMC-9805, a mutant-selective covalent oral KRASG12D inhibitor, induced apoptosis and tumor regression in KRASG12D models, with objective responses seen in pancreatic and non-small cell lung cancer PDX and CDX models.	10.1158/1538-7445.AM2023-526
 4	KRAS	G12D	Solid tumour	HRS-4642	Phase 1 trial. NCT05597436. N=18. One NSCLC patient at 200 mg had PR, and 11/18 pts (61.1%) had SD with 33.3% experienced target lesion shrinkage	10.1016/j.annonc.2023.10.025
 4	KRAS	G12D	Solid tumour	INCB161734		NCT06179160
 4	KRAS	G12D	Solid tumours	MRTX1133	Discovery of the KRAS G12D inhibitor MRTX1133 showing reduction in volume in a pancreatic cancer xenograft mouse model.	34889605
@@ -1464,6 +1471,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	NF2	Oncogenic mutations	Mesothelioma; Sarcoma	VT3989	NCT04665206. Phase 1. N=67. Responders (2 refractory mesothelioma and 1 NF2 mutant sarcoma) were seen with response by targeting the Hippo-YAP-TEAD pathway.	10.1158/1538-7445.AM2023-CT006
 4	NF2	Oncogenic mutations	Mesothelioma; Solid tumours	VT3989		NCT04665206
 4	NF2	Oncogenic mutations	Solid tumours	Everolimus		NCT02352844
+4	NF2	Oncogenic mutations	Solid tumours	IAG933	Preclinical study. The direct disruptor of YAP-TEAD interface showed anti-tumor activity in Hippo-driven mesothelioma xenografts and extended to larger tumor indications, including lung, pancreatic, and colorectal cancer, with durable responses.	38565920
 4	NF2	Oncogenic mutations, Truncating mutations	Papillary renal cell carcinoma; Sarcomatoid renal cell carcinoma	Cabozantinib + Nivolumab	Phase 2. NCT03635892. Single arm trial in non-clear cell renal cell carcinomas with ORR of 48%. Responses were seen in 10 of 12 patients with either NF2 or FH mutations. In exploratory biomarker analysis, NF2 mutations were associated with response with Cabozantinib and Nivolumab (5 of 6 cases).	35298296
 4	NOTCH1	Oncogenic mutations, Alterations	Adenoid cystic carcinoma	CB-103	Phase 1. NCT03422679. First-in-class CSL-NICD transcription factor complex inhibitor. SD as best response observed in 10 ACC patients (8 with NOTCH alterations). Two case of adenoid cystic carcinoma had prolonged disease control.	10.1200/JCO.2021.39.15_suppl.3020
 4	NOTCH1	Oncogenic mutations, Overexpression	Solid tumours	MRK003		25104330, 24667249
@@ -1804,6 +1812,7 @@ R2	BRAF	BRAF-CREB3L2 rearrangement, amplification	Low-grade spindle cell neoplas
 R2	BRAF	Class II mutations, K601E, K601N, K601T, L597Q, L597V, G469A, G469V, G469R, G464V, G464E, Fusions	Solid tumours	Vemurafenib; Dabrafenib	Class II mutations	28783719
 R2	BRAF	Class III mutations, D287, D287H, V459, V459L, G466, G466V, G466E, G466A, S467, S467L, N581, N581S, N581I, D594, D594N, D594G, D594A, D594H, F595, F595L, G596, G596D, G596R	Solid tumours	PLX8394	Class III mutation; insensitive to dimer breaker	30559419
 R2	BRAF	Class III mutations, D287H, V459L, G466V, G466E, G466A, S467L, N581S, N581I, D594N, D594G, D594A, D594H, F595L, G596D, G596R	Solid tumours	Vemurafenib; Dabrafenib	Class III mutations	28783719
+R2	BRAF	D594N, Oncogenic mutations	Lung adenocarcinoma; Medullary thyroid cancer	Selpercatinib	Preclinical study. Selpercatinib resistance in RET-driven lung and thyroid cancers is driven by MAPK pathway reactivation via secondary RET solvent front mutations, MET amplifications, or selection of RET-wildtype tumor cell populations with alternative mitogenic drivers.	35304457
 R2	BRAF	Fusions, FKBP15-BRAF fusion, TARDBP-BRAF fusion, AGK-BRAF fusion, SKAP2-BRAF fusion, CUL1-BRAF fusion, KIAA1549-BRAF fusion	Melanoma	Vemurafenib; Dabrafenib; PLX8394		31618628
 R2	BRAF	G464V, Class II mutations	Triple-negative breast cancer	SHP099; RMC-4550	Cell line model for Class II mutation showed relative resistance to SHP2 inhibitors.	31533235
 R2	BRAF	G469A, G469V, L485F, L525R, L597R, T599_V600TinsT, K601E, Class II mutations	Colorectal adenocarcinoma	Cetuximab; Panitumumab	Retrospective study. ORR 0% in class II BRAF mutants in third-and-later lines treatment.	31515458
@@ -2036,6 +2045,7 @@ R2	FGFR1	Alteration	Lung squamous cell carcinoma	AZD4547	Lung-MAP S1400D	3119518
 R2	FGFR1	Amplification	Breast cancer	Fulvestrant + Palbociclib; Fulvestrant + Ribociclib		31371343, 30914635
 R2	FGFR1	Amplification	Breast cancer	Tamoxifen	Amplification was determined by CISH, if &gt;50% of cells harbored either &gt;5 copies.	20179196
 R2	FGFR1	Amplification	Colorectal cancer	PD173074	Retrospective exploratory and cell line studies. In 764 surgically resected colorectal cancers, FGFR1 amplification was found in 3-7 of CRCs. FGFR1 amplification was mutually exclusive with BRAF mutation, microsatellite instability, and MLH1 methylation, and associated with inferior progression-free survival. PD173074 repressed the proliferation of a CRC cell line overexpressing FGFR1 but not cells with FGFR1 amplification.	31096734
+R2	FGFR1	Amplification	Lung adenocarcinoma; Medullary thyroid cancer	Selpercatinib	Preclinical study. Selpercatinib resistance in RET-driven lung and thyroid cancers is driven by MAPK pathway reactivation via secondary RET solvent front mutations, MET amplifications, or selection of RET-wildtype tumor cell populations with alternative mitogenic drivers.	35304457
 R2	FGFR1	Amplification	Lung squamous cell carcinoma	AZD4547	SWOG S1400D; Minimal response (1/27)	31195180
 R2	FGFR1	Amplification	Solid tumour except urothelial carcinoma	Erdafitinib	Phase 2 NCI-MATCH. EAY131-K1 trial. NCT03167159. N=35. Erdafitinib did not meet its primary end point of efficacy as determined by ORR in treatment-refractory solid tumors harboring FGFR1-4 amplifications.	38603651
 R2	FGFR1	Amplification	Solid tumours	AZD4547	No response in these cohorts	32463741
@@ -2065,6 +2075,10 @@ R2	FGFR2	N550H, V565I, V565L, E566G, K660M	Solid tumours	AZD4547; Infigratinib	I
 R2	FGFR2	N550K, V565L, K642I, K660M	Cholangiocarcinoma	Erdafitinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 R2	FGFR2	V564F	Gastric cancer	Pemigatinib	Phase 2. FIGHT-207 basket. NCT03822117. Acquired resistance mutations following Pemigatinib.	38710951
 R2	FGFR2	V564F, N549H, N549K, E565A, L617V, K641R, K659M	Cholangiocarcinoma	Infigratinib		28034880
+R2	FGFR2	V564F, V564L	Cholangiocarcinoma	Futibatinib		37270847
+R2	FGFR2	V564F, V564L, N549D, N549H, N549K, E565A, V564I, L617V	Cholangiocarcinoma	Infigratinib		37270847
+R2	FGFR2	V564F, V564L, N549D, N549K, E565A, L617V	Cholangiocarcinoma	Pemigatinib		37270847
+R2	FGFR2	V564F, V564L, N549K, N549D	Cholangiocarcinoma	Erdafitinib		37270847
 R2	FGFR2	V565I, N550K, V564M, V564F	Solid tumours	Infigratinib; AZD4547; Debio1347; Dovitinib; Ponatinib	Gatekeeper mutation	26224133, 23908597
 R2	FGFR2	V565L	Cholangiocarcinoma	Futibatinib	FOENIX-CCA2. NCT02052778. Cell line sensitivity data from mutational screening with Ba/F3 cells.	36652354
 R2	FGFR3	Alteration	Lung squamous cell carcinoma	AZD4547	Lung-MAP S1400D	31195180, 33125909
@@ -2193,6 +2207,7 @@ R2	MDM2	Amplification	Solid tumours	Cabozantinib	Anti-RET activity	32083997
 R2	MET	Amplification	Colorectal adenocarcinoma	Cetuximab; Panitumumab	Amplification of the MET gene is associated with acquired resistance to EGFR targeted therapy in patients with metastatic colorectal cancer; MET inhibitors could be effective in overcoming this resistance.	23729478
 R2	MET	Amplification	Colorectal adenocarcinoma	Cetuximab; Panitumumab	MET amplification is rare in primary colorectal cancer but occurs in a significant number of patients who are refractory to anti-EGFR therapy identified through circulating-free DNA.	27421137
 R2	MET	Amplification	Colorectal adenocarcinoma	Divarasib; Divarasib + Cetuximab	Phase 1b trial. NCT04449874. GO42144. Potential treatment-emergent resistance mechanisms in ctDNA following divarasib plus cetuximab treatment in KRAS G12C-positive CRC.	38052910
+R2	MET	Amplification	Lung adenocarcinoma; Medullary thyroid cancer	Selpercatinib	Preclinical study. Selpercatinib resistance in RET-driven lung and thyroid cancers is driven by MAPK pathway reactivation via secondary RET solvent front mutations, MET amplifications, or selection of RET-wildtype tumor cell populations with alternative mitogenic drivers.	35304457
 R2	MET	Amplification	Non-small cell lung cancer	Gefitinib; Erlotinib; Afatinib; Dacomitinib; Osimertinib		30676858
 R2	MET	Amplification	Non-small cell lung cancer	Osimertinib	Secondary resistance post Osimertinib. Amplification determined by FISH.	27252416
 R2	MET	Amplification	Non-small cell lung cancer	Selpercatinib; Pralsetinib	Retrospective study. The study identified acquisition of RET kinase solvent front mutations (G810), as well as genomic amplification of MET and KRAS as potential bypass mechanisms.	33007380
@@ -2276,8 +2291,8 @@ R2	PIK3CA	H1047R	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquire
 R2	PIK3CA	N345T, H1047R, H1047L	Gastric cancer	Trastuzumab	Case-control study	29208673
 R2	PIK3CA	Oncogenic mutation	Glioblastoma	Buparlisib	Phase 2 trial. NCT01968451. N=65. Patients with recurrent glioblastoma harboring PI3K pathway activation. Buparlisib had minimal single-agent efficacy in patients with PI3K-activated recurrent glioblastoma. PFS 1.6 months.	30715997
 R2	PIK3CA	Oncogenic mutations	Breast cancer	Pictilisib + Fulvestrant	FERGI. PIK3CA mutation status had no effect on benefit.	27155741
-R2	PIK3CA	Oncogenic mutations	Breast cancer	Pictilisib + Paclitaxel	PEGGY. No PFS improvement over placebo. Similar ORR	27573562
-R2	PIK3CA	Oncogenic mutations	Colorectal adenocarcinoma	MK2206	ORR 0%	10.1200/JCO.2016.34.15_suppl.3563
+R2	PIK3CA	Oncogenic mutations	Breast cancer	Pictilisib + Paclitaxel	Phase 2 PEGGY trial. NCT01740336. N=183. Pictilisib did not improve PFS over placebo (8.2 vs 7.8 months) or response rate in combination with paclitaxel for hormone receptor-positive, HER2-negative breast cancer.	27573562
+R2	PIK3CA	Oncogenic mutations	Colorectal adenocarcinoma	MK2206	Phase 2 trial. NCT01802320. Biomarker-enriched, previously treated metastatic colorectal cancer patients received MK2206, an oral AKT inhibitor, with no radiographic responses, median PFS of 1.8 months, and median OS of 6.8 months. ORR was 0% in patients with PIK3CA mutations (0/2).	10.1200/JCO.2016.34.15_suppl.3563
 R2	PIK3CA	Oncogenic mutations	Endometrial cancer	LY3023414	N=28 with 25 Evaluable patients. ORR 16%. CBR 28%. Median PFS 2.5 months. Median OS 9.2 months	31880826
 R2	PIK3CA	Oncogenic mutations	Lung squamous cell carcinoma	Taselisib	Lung-MAP S1400B, ORR 5%	31158500, 33125909
 R2	PIK3CA	Oncogenic mutations	Non-small cell lung cancer	Aumolertinib	The most common mechanisms of resistance to Aumolertinib were acquired EGFR C797S mutation and aberration in PIK3CA bypass track.	10.1016/j.jtho.2022.07.739
@@ -2293,8 +2308,8 @@ R2	PIK3R2	G373R	Colorectal adenocarcinoma	Divarasib; Divarasib + Cetuximab	Phase
 R2	PPP2R2A	Oncogenic mutations	Prostate cancer	Olaparib	PROFOUND trial; Cohort B. No OS benefit or cell line data to suggest PPP2R2A Is synthetically lethal with Olaparib.	32343890, 32955174
 R2	PTCH1	Oncogenic mutations	Solid tumours	Vismodegib	Phase 2. NCT02465060. NCI-MATCH ECOG-ACRIN Trial (EAY131) Subprotocol T. N=34. In 22 of 31 evaluable and MATCH confirmed patient, ORR was 9.1% with 6 month PFS of 22%. In all 31 evaluable patients, ORR was 7% (2/31).	10.1200/JCO.2022.40.16_suppl.3010
 R2	PTEN	Deletion	Solid tumours	Divarasib	Phase 1/2 single arm trial. GO42144. Divarasib. NCT04449874. Acquired and treatment-emergent mutations	37611121
-R2	PTEN	Deletion, Loss of protein expression	Glioblastoma	Everolimus		18559622
-R2	PTEN	Loss of protein expression	Colorectal adenocarcinoma	MK2206	ORR 0%	10.1200/JCO.2016.34.15_suppl.3563
+R2	PTEN	Deletion, Loss of protein expression	Glioblastoma	Everolimus	Preclinical study. Glioblastoma orthotopic xenograft test panel. PTEN loss did not predict response to everolimus with only 1 of 7 PTEN-disrupted lines showing sensitivity.	18559622
+R2	PTEN	Loss of protein expression	Colorectal adenocarcinoma	MK2206	Phase 2 trial. NCT01802320. Biomarker-enriched, previously treated metastatic colorectal cancer patients received MK2206, an oral AKT inhibitor, with no radiographic responses, median PFS of 1.8 months, and median OS of 6.8 months. ORR was 0% in PTEN loss patients (0/9).	10.1200/JCO.2016.34.15_suppl.3563
 R2	PTEN	Loss of protein expression	Glioblastoma	Lapatinib	Phase 1/2 trial. Lapatinib. Recurrent GBM. ORR 0%. 	19499221
 R2	PTEN	Loss of protein expression, Loss-of-function mutations	Solid tumours	Everolimus	Phase II Basket trial. Everolimus in PIK3CA amplification and oncogenic mutation. ORR 0%. PFS 1.6 months.	28330462
 R2	PTEN	Loss-of-function mutations	Endometrial cancer	LY3023414	N=28 with 25 Evaluable patients. ORR 16%. CBR 28%. Median PFS 2.5 months. Median OS 9.2 months	31880826
@@ -2338,7 +2353,7 @@ R2	RET	KIF5B-RET fusion	Non-small cell lung cancer	Agerafenib		31710864
 R2	RET	M918T	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
 R2	RET	S904F	Solid tumours	Vandetanib		29434222, 32083997
 R2	RET	V804L, V804M	Solid tumours	Vandetanib; Cabozantinib	Gatekeeper mutation	15184865, 27496134, 32083997
-R2	RET	Y806C, G810C, G801S	Lung adenocarcinoma; Medullary thyroid cancer	Selpercatinib		35304457
+R2	RET	Y806C, G810C, G801S	Lung adenocarcinoma; Medullary thyroid cancer	Selpercatinib	Preclinical study. Selpercatinib resistance in RET-driven lung and thyroid cancers is driven by MAPK pathway reactivation via secondary RET solvent front mutations, MET amplifications, or selection of RET-wildtype tumor cell populations with alternative mitogenic drivers.	35304457
 R2	RET	Y806C, Y806N, G810C, G810S, V738A	Medullary thyroid cancer	Selpercatinib; Pralsetinib	Case report. Acquired resistance after treatment with Selpercatinib habouring KIF5B-RET fusion detected by cfDNA. Cell line cross-profiling of additional resistant mutations.	33161056
 R2	RIT1	P128L	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
 R2	ROS1	E1395G, L1947R, G1971E, S1986Y, S1986F, L2026M, G2032R, D2033N, S2060G, V2098U, L2155S	Non-small cell lung cancer	Crizotinib		26372962, 31395437
@@ -2355,7 +2370,7 @@ R2	ROS1	L2026M, G2032R, D2033N	Non-small cell lung cancer	Entrectinib		26372962,
 R2	ROS1+MET	ROS1:fusion AND MET:D1228N	Non-small cell lung cancer	Crizotinib	Case report	33000474
 R2	SETD2	Truncating mutations	Non-clear cell renal cell carcinoma	Cabozantinib + Nivolumab	NCT03635892. Single arm in Non-clear cell renal cell carcinomas. In non-chromophobe group, the overall ORR was 48%. In exploratory biomarker analysis, SETD2 truncating mutation was associated with reduced response with Cabozantinib and Nivolumab (0 of 5 cases).	35298296
 R2	SMARCA4	Oncogenic mutations	Solid tumours	Cisplatin	SMARCA4/2 loss reduces apoptosis induced by chemotherapy through disrupting intracellular organelle calcium ion release via IP3R3-mediated mechanism.	34518526
-R2	SMO	D473, E518	Medulloblastoma	Vismodegib		21123452
+R2	SMO	D473, E518	Medulloblastoma	Vismodegib	Preclinical study. GDC-0449-resistant SMO mutants identified with D473H and E518 mutations	21123452
 R2	SMO	D473G, D473Y, D473H, G497W, V321M, W281L, Q477E, A327P, C390R, D506N, E181K, E481G, G453D, K519R, K564E, L221P, L353F, N476K, P513L, P698T, P739L, P739S, R168H, R199Q, T336I, T349I, T349P, T534I, T548I, T640A, V386A, V404M, V414A, A459V, D384N, E518K, I408V, N219D, S387N, T241M, V281C	Basal cell carcinoma; Solid tumours	Vismodegib; Sonidegib	On-target resistance	21771911, 25759019, 25759020, 31125907
 R2	SMO	D473H	Medulloblastoma	Vismodegib	On-target resistance	19726788, 21771911
 R2	SMO	P641A, W535L, L412F	Solid tumours	Vismodegib	Phase 2. NCT02465060. NCI-MATCH ECOG-ACRIN Trial (EAY131) Subprotocol T. N=34. In 22 of 31 evaluable and MATCH confirmed patient, ORR was 9.1% with 6 month PFS of 22%. In all 31 evaluable patients, ORR was 7% (2/31).	10.1200/JCO.2022.40.16_suppl.3010
@@ -2369,4 +2384,4 @@ R2	TP53	Oncogenic mutations	Solid tumours; Liquid cancers	MDM2 inhibitor; SAR405
 R2	TSC1	Oncogenic mutations	Urothelial carcinoma	Buparlisib	Phase 2. N=19. Buparlisib had modest activity in patients with metastatic UC whose tumors harbored TSC1 loss of function alterations (6 SD and one PR at 8 weeks on therapy).	32767682
 R2	Tumour Mutational Burden	High	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	WT1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
-R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor		27634897
+R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor	Preclinical study. Heterozygous C528S mutation in XPO1 confers similar resistance to selinexor as homozygous substitution, demonstrating a single dominant mutation is sufficient for SINE resistance.	27634897
