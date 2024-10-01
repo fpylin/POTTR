@@ -4,16 +4,18 @@ drug	drug_class
 131I-TLX-101|4-iodophenylalanine	radioligand,LAT1/LAT2-targeting
 161Tb-PSMA-I&T|161[Tb]Tb-PSMA-I&T	radioligand,PSMA-targeting
 177Lu-DOTA-rosopatamab|177Lu-DOTA-TLX591-CHO|TLX591	radioligand,PSMA-targeting
+177Lu-NeoB|[177Lu]Lu-NeoB	radioligand,GRPR-targeting
 177Lu-PNT2002|[Lu-177]-PNT2002	radioligand,PSMA-targeting
 177Lu-RAD204	177Lu-anti-PD-L1_radioconjugate
-177Lu-SN201|177Lu-SN201	nanoparticle_radiopharmaceutics
+177Lu-SN201|[177Lu]Lu-SN201|177Lu-SN201	nanoparticle_radiopharmaceutics
 177Lu-TLX250|177Lu-DOTA-girentuximab|TLX250	177Lu-anti-CA9-radioconjugate
 177Lu-edotreotide|lutetium-177-DOTATATE|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
 177Lu-edotreotide|lutetium-177-DOTATATE|[177Lu]Lu-octretotate|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
 212Pb-ADVC001|[212Pb]Pb-ADVC001	radioligand,PSMA-targeting
 225Ac-FPI-1966|[225Ac]-FPI-1966	radioconjugate,FGFR3-targeting
 225Ac-FPI-2059	radioconjugate,NTSR1-targeting
-225Ac-PSMA-617	radioligand,PSMA-targeting
+225Ac-FL-020|[225Ac]-FL-020	anit-PSMA_radionucleotide-drug_conjugate,PSMA-targeting
+225Ac-PSMA-617|[225Ac]-PSMA-617	radioligand,PSMA-targeting
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
@@ -791,6 +793,7 @@ JQ1|JQ1 compound	BET_inhibitor
 JS-006|JS006	anti-TIGIT_monoclonal_antibody
 JS-009|JS009	anti-CD112R_monoclonal_antibody
 JSKN003|JSKN-003|KN-026	anti-ERBB2_antibody-drug_conjugate
+JSKN033|JSKN-003	JSKN003 + Envafolimab
 JTX-4014|JTX 4014|JTX4014	anti-PD-1_monoclonal_antibody
 KER-050	modified_ActRIIA_ligand_trap_protein
 KF-0210	prostaglandin_EP4_receptor_inhibitor
@@ -1525,3 +1528,5 @@ SGN-PDL1V	anti-PD-L1_antibody-drug_conjugate
 STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
 HBW-012-E	KRAS_G12D_inhibitor
 QTX3034	KRAS_inhibitor; KRAS_G12D_inhibitor
+MK-6837	unknown_drug_class
+LY4170156	anti-FR-alpha_antibody-drug_conjugate
