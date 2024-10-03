@@ -63,6 +63,7 @@ NCT03424005	NOT ERBB2:amplification; *NOT ESR1:protein_expression; *CD274:protei
 NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_mutation
 NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
+NCT03739710	catype:NSCLC
 NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
@@ -109,6 +110,7 @@ NCT05198934	KRAS:G12C; catype:Colorectal cancer
 NCT05288166	catype:Prostate cancer
 NCT03611868	(catype:Melanoma OR catype:Malignant peripheral nerve sheath tumor)
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
+NCT05054725	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma); *Unknown status
 NCT03900442	catype:Gastric cancer; *catype:Diffuse gastric cancer; *Unknown status
 NCT05182931	(BRAF:V600E OR NRAS:oncogenic_mutation); NOT catype:Anaplastic thyroid cancer
@@ -173,7 +175,6 @@ NCT04976634	catype:Biliary tract adenocarcinoma
 NCT04976634	catype:Endometrial cancer
 NCT04976634	catype:Oesophageal squamous cell carcinoma
 ACTRN12623000223639	catype:Pancreatic adenocarcinoma
-NCT03833154	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation
 NCT04612751	NOT prior_therapy:systemic_therapy
 NCT04612751	NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT05555732	NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT BRAF:V600E; NOT BRAF:class_2_mutation; NOT BRAF:class_3_mutation; NOT RET:fusion; NOT MET:exon_14_skipping_mutation; NOT prior_therapy:systemic_therapy; NOT prior_therapy:anti-Trop2_monoclonal_antibody; NOT prior_therapy:anti-PD-1_monoclonal_antibody; NOT prior_therapy:anti-PD-L1_monoclonal_antibody

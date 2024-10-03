@@ -1107,7 +1107,6 @@ cancer_therapy	cancer_therapy,SYK-targeting
 cancer_therapy	cancer_therapy,TBL1-targeting
 cancer_therapy	cancer_therapy,TDO-targeting
 cancer_therapy	cancer_therapy,TEAD-targeting
-cancer_therapy	cancer_therapy,TEAD_palmitoylation-targeting
 cancer_therapy	cancer_therapy,TF-targeting
 cancer_therapy	cancer_therapy,TGF-beta-targeting
 cancer_therapy	cancer_therapy,TGFBR1-targeting
@@ -2337,3 +2336,69 @@ virus-based_therapy	oncolytic_virus	thymidine_kinase-deleted_oncolytic_vaccinia_
 virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
 virus-based_therapy	viral_nanoparticle_drug_conjugates
 cancer_therapy,PI3Kalpha-targeting	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
+CAR-T-cell_therapy	CAR-T-cell_therapy,NY-ESO-1/CD8alpha-targeting
+CAR-T-cell_therapy	CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting
+CAR-T-cell_therapy,NY-ESO-1/CD8alpha-targeting	autologous_CAR-T-cell_therapy,NY-ESO-1/CD8alpha-targeting
+CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting	autologous_CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting
+MNK1_inhibitor	MNK1/2_inhibitor
+MNK2_inhibitor	MNK1/2_inhibitor
+autologous_CAR-T-cell_therapy	autologous_CAR-T-cell_therapy,NY-ESO-1/CD8alpha-targeting
+autologous_CAR-T-cell_therapy	autologous_CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting
+cancer_therapy	cancer_therapy,BRAF_V600E-targeting
+cancer_therapy	cancer_therapy,CD8alpha-targeting
+cancer_therapy	cancer_therapy,CD96-targeting
+cancer_therapy	cancer_therapy,ERBB2_monoclonal_antibody,dimerization-targeting
+cancer_therapy	cancer_therapy,ER_alpha-targeting
+cancer_therapy	cancer_therapy,FACT_complex-targeting
+cancer_therapy	cancer_therapy,GRPR-targeting
+cancer_therapy	cancer_therapy,IL-11-targeting
+cancer_therapy	cancer_therapy,KIR3DL1-targeting
+cancer_therapy	cancer_therapy,MNK-targeting
+cancer_therapy	cancer_therapy,NY-ESO-1-targeting
+cancer_therapy	cancer_therapy,PI3Kalpha-targeting
+cancer_therapy	cancer_therapy,PRC2_complex-targeting
+cancer_therapy	cancer_therapy,PVRIG-targeting
+cancer_therapy	cancer_therapy,RAF_dimer-targeting
+cancer_therapy	cancer_therapy,RNA_polymerase_I_transcription-targeting
+cancer_therapy	cancer_therapy,SEZ6-targeting
+cancer_therapy	cancer_therapy,SMARCA2-selective-targeting
+cancer_therapy	cancer_therapy,adenosine_A2A/A2B_receptor-targeting
+cancer_therapy	cancer_therapy,dnTGFBR2-targeting
+cancer_therapy	cancer_therapy,mRNA_vaccine,CLDN6-targeting
+cancer_therapy	cancer_therapy,multikinase-targeting
+cancer_therapy	cancer_therapy,p53-HDM2_interaction-targeting
+cancer_therapy	cancer_therapy,pNGVL3-based,ERBB2-targeting
+cancer_therapy	cancer_therapy,thymidine_phosphorylase-targeting
+cancer_therapy	cancer_therapy,BRAF-targeting	BRAF_V600E_degrader
+cancer_therapy	cancer_therapy,CD8alpha-targeting	autologous_CAR-T-cell_therapy,NY-ESO-1/CD8alpha-targeting
+cancer_therapy	cancer_therapy,CD96-targeting	immuno-oncology_therapy,CD96-targeting
+cancer_therapy	cancer_therapy,ER_alpha-targeting	benzamide,ER_alpha-targeting
+cancer_therapy	cancer_therapy,FACT_complex-targeting	curaxin,FACT_complex-targeting
+cancer_therapy	cancer_therapy,GRPR-targeting	radioligand,GRPR-targeting
+cancer_therapy	cancer_therapy,IL-11-targeting	immuno-oncology_therapy,IL-11-targeting
+cancer_therapy	cancer_therapy,KIR3DL1-targeting	fusion_protein,LILRB2/LILRB2/KIR3DL1-targeting
+cancer_therapy	cancer_therapy,LILRB2-targeting	fusion_protein,LILRB2/LILRB2/KIR3DL1-targeting
+cancer_therapy	cancer_therapy,MNK-targeting	MNK1_inhibitor
+cancer_therapy	cancer_therapy,MNK-targeting	MNK2_inhibitor
+cancer_therapy	cancer_therapy,NY-ESO-1-targeting	autologous_CAR-T-cell_therapy,NY-ESO-1/CD8alpha-targeting
+cancer_therapy	cancer_therapy,NY-ESO-1-targeting	autologous_CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting
+cancer_therapy	cancer_therapy,PRC2_complex-targeting	PRC2_complex_inhibitor
+cancer_therapy	cancer_therapy,PSMA-targeting	anit-PSMA_radionucleotide-drug_conjugate,PSMA-targeting
+cancer_therapy	cancer_therapy,PVRIG-targeting	immuno-oncology_therapy,PVRIG-targeting
+cancer_therapy	cancer_therapy,SEZ6-targeting	antibody-drug_conjugate,SEZ6-targeting
+cancer_therapy	cancer_therapy,SMARCA2-selective-targeting	SMARCA2-selective_PROTAC_degrader
+cancer_therapy	cancer_therapy,YAP-TEAD-targeting	TEAD_palmitoylation_inhibitor
+cancer_therapy	cancer_therapy,TGFBR2-targeting	autologous_CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting
+cancer_therapy	cancer_therapy,mRNA_vaccine,CLDN6-targeting	CAR-T-cell_therapy,mRNA_vaccine,CLDN6-targeting
+cancer_therapy	cancer_therapy,multikinase-targeting	multikinase_inhibitor,integrated_stress_response-targeting
+cancer_therapy	cancer_therapy,p53-HDM2_interaction-targeting	p53-HDM2_interaction_inhibitor
+immune_checkpoint_blockade,PD-L1-targeting	anti-PD-L1_antibody-drug_conjugate
+immune_checkpoint_blockade,TIGIT-targeting	bispecific_TIGIT/CD96_antibody
+immuno-oncology_therapy,CD96-targeting	bispecific_TIGIT/CD96_antibody
+immuno-oncology_therapy,CLDN6-targeting	CAR-T-cell_therapy,mRNA_vaccine,CLDN6-targeting
+immuno-oncology_therapy,CLDN6-targeting	anti-CLDN6_monoclonal_antibody
+immuno-oncology_therapy,EGFR-targeting	bispecific_EGFR/ERBB3_antibody
+immuno-oncology_therapy,ERBB3-targeting	bispecific_EGFR/ERBB3_antibody
+immuno-oncology_therapy,GPC3-targeting	anti-GPC3_monoclonal_antibody
+immuno-oncology_therapy,IL-11-targeting	anti-IL-11_monoclonal_antibody
+immuno-oncology_therapy,PVRIG-targeting	anti-PVRIG_monoclonal_antibody
