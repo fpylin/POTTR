@@ -241,13 +241,13 @@ NCT06105632	NOT ERBB2:amplification; *prior_therapy:CDK4/6_inhibitor
 NCT06179160	KRAS:G12D
 NCT06194877	(KRAS:oncogenic_mutation OR NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation); (catype:Colorectal adenocarcinoma OR catype:Pancreatic adenocarcinoma)
 NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation
-NCT05094336	*CDKN2A:deletion; MTAP:deletion; *(catype:Non-small cell lung cancer OR catype:Biliary tract cancer OR catype:Gastric cancer OR catype:Gastroesophageal cancer OR catype:Head and neck squamous cell carcinoma OR catype:High-grade glioma)
+NCT05094336	*CDKN2A:deletion; MTAP:deletion; *(catype:Non-small cell lung cancer OR catype:Biliary tract cancer OR catype:Gastric cancer OR catype:Gastroesophageal cancer OR catype:Head and neck squamous cell carcinoma OR catype:High-grade glioma); *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT05094336	*CDKN2A:deletion; MTAP:deletion; catype:Pancreatic adenocarcinoma; *NO_SLOTS_AVAILABLE
 NCT05975073	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06065748	*NOT (ERBB2:amplification OR ERBB2:overexpression); *ESR1:protein_expression; ESR1:oncogenic_mutation; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
 NCT05867121	*(TGFBR1:oncogenic_mutation OR TGFBR2:oncogenic_mutation); *(catype:Non-small cell lung carcinoma OR catype:Gastric cancer OR catype:Pancreatic adenocarcinoma)
 NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
-NCT06188702	*MTAP:deletion; NOT catype:Central nervous system cancer
+NCT06188702	*MTAP:deletion; NOT catype:Central nervous system cancer; *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT05907304	(KRAS:Q61 OR NRAS:Q61 OR HRAS:Q61); *NOT prior_therapy:ERK_inhibitor; *NOT prior_therapy:MEK_inhibitor; *NOT prior_therapy:RAF_inhibitor; *NOT prior_therapy:RAS_inhibitor
 NCT06003621	NOT catype:Non-small cell lung cancer
 NCT06031441	*MOA_UNKNOWN
