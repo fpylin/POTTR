@@ -451,7 +451,7 @@ Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Mal
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Diffuse glioma, WHO Grade 4	Astrocytoma, IDH-mutant, WHO Grade 4|Diffuse astrocytoma, IDH-mutant, WHO Grade 4
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Diffuse glioma, WHO Grade 4|Diffuse astrocytoma, WHO Grade 4
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Diffuse hemispheric glioma
-Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Diffuse hemispheric glioma|Diffuse hemispheric glioma, H3 G34-mutant|Diffuse hemispheric glioma, WHO Grade 4
+Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Diffuse hemispheric glioma|H3G34-mutant glioma|Diffuse hemispheric glioma, H3 G34-mutant|Diffuse hemispheric glioma, WHO Grade 4
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Diffuse midline glioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Glioblastoma	Glioblastoma proneural subtype
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Glioblastoma|Glioblastoma multiforme

@@ -11,10 +11,10 @@ drug	drug_class
 177Lu-TLX250|177Lu-DOTA-girentuximab|TLX250	177Lu-anti-CA9-radioconjugate
 177Lu-edotreotide|lutetium-177-DOTATATE|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
 177Lu-edotreotide|lutetium-177-DOTATATE|[177Lu]Lu-octretotate|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
-212Pb-ADVC001|[212Pb]Pb-ADVC001	radioligand,PSMA-targeting
+212Pb-ADVC001|[212Pb]Pb-ADVC001|Pb-ADVC001	radioligand,PSMA-targeting
 225Ac-FL-020|[225Ac]-FL-020	anit-PSMA_radionucleotide-drug_conjugate,PSMA-targeting
-225Ac-FPI-1966|[225Ac]-FPI-1966	radioconjugate,FGFR3-targeting
-225Ac-FPI-2059	radioconjugate,NTSR1-targeting
+225Ac-FPI-1966|[225Ac]-FPI-1966|FPI-1966	radioconjugate,FGFR3-targeting
+225Ac-FPI-2059|[225Ac]-FPI-2059|FPI-2059	radioconjugate,NTSR1-targeting
 225Ac-PSMA-617|[225Ac]-PSMA-617	radioligand,PSMA-targeting
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
@@ -581,7 +581,7 @@ FLOT	Fluorouracil + Oxaliplatin + Docetaxel
 FLT3_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 FLX475|FLX 475|FLX-475	CCR4_inhibitor
 FN-1501|FN 1501|FN1501	CDK2/4/6/FLT3_inhibitor
-FOLFIRI regimen|FOLFIRI|mFOLFIRI	Fluorouracil + Irinotecan
+FOLFIRI regimen|FOLFIRINOX chemotherapy|FOLFIRI|mFOLFIRI	Fluorouracil + Irinotecan
 FOLFIRINOX regimen|FOLFIRINOX|mFOLFIRINOX	Fluorouracil + Oxaliplatin + Irinotecan
 FOLFOX regimen|FOLFOX|FOLFOX6|mFOLFOX|mFOLFOX6|mFOLFOX7|FOLFOX4|FOLFOX-4 regimen	Fluorouracil + Oxaliplatin
 FOLFOXIRI regimen|FOLFOXIRI|mFOLFOXIRI	Fluorouracil + Oxaliplatin + Irinotecan
@@ -893,7 +893,7 @@ Lomustine|CCNU|Cecenu|CeeNU|Chloroethylcyclohexylnitrosourea|Belustin|Citostal|G
 Loncastuximab Tesirine|loncastuximab tesirine-lpyl|Zynlonta	anti-CD19_antibody-drug_conjugate
 Lorigerlimab	bispecific_PD-1×CTLA-4_dual-affinity_responsive_target_molecule
 Lorlatinib|Lorbrena|PF-06463922	ALK_inhibitor,third_generation; ROS1_inhibitor
-Lu-177 vipivotide tetraxetan|Pluvicto|Lutetium-177-PSMA-617|177Lu-PSMA|Lutetium PSMA|lutetium-177 PSMA-617|Lu-PSMA617|Lutetium-177 PSMA	radioligand,PSMA-targeting
+Lu-177 vipivotide tetraxetan|Pluvicto|Lutetium-177-PSMA-617|Lutetium-177-PSMA|177Lu-PSMA|Lutetium PSMA|lutetium-177 PSMA-617|Lu-PSMA617|Lutetium-177 PSMA	radioligand,PSMA-targeting
 Lucitanib	VEGFR/PDGFR/FGFR1/2/3_inhibitor
 Luminespib|AUY922	HSP90_inhibitor
 Lumretuzumab|RG7116|RO-5479599	anti-ERBB3_monoclonal_antibody

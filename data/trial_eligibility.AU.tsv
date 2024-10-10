@@ -96,12 +96,13 @@ NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:
 NCT04565275	(FGFR1:alteration OR FGFR2:alteration OR FGFR3:alteration); *NOT prior_therapy:pan-FGFR_inhibitor
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
-NCT04665206	(NF2:oncogenic_mutation OR NF2:alteration)
+NCT04665206	catype:Solid tumour; (NF2:oncogenic_mutation OR NF2:alteration)
+NCT04665206	catype:Solid tumour; (WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
 NCT04699188	KRAS:G12C
 NCT04720768	(BRAF:V600E OR BRAF:V600K OR BRAF:V600_missense_mutation)
 NCT04857372	catype:Mesothelioma
-NCT04857372	catype:Solid tumour; YAP1:fusion
-NCT04857372	catype:Solid tumour; NF2:oncogenic_mutation
+NCT04857372	catype:Solid tumour; (WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
+NCT04857372	catype:Solid tumour; (NF2:oncogenic_mutation OR NF2:deletion)
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT05067283	KRAS:G12C
 NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catype:Non-melanoma skin cancer)
@@ -178,7 +179,6 @@ ACTRN12623000223639	catype:Pancreatic adenocarcinoma
 NCT04612751	NOT prior_therapy:systemic_therapy
 NCT04612751	NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT05555732	NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT BRAF:V600E; NOT BRAF:class_2_mutation; NOT BRAF:class_3_mutation; NOT RET:fusion; NOT MET:exon_14_skipping_mutation; NOT prior_therapy:systemic_therapy; NOT prior_therapy:anti-Trop2_monoclonal_antibody; NOT prior_therapy:anti-PD-1_monoclonal_antibody; NOT prior_therapy:anti-PD-L1_monoclonal_antibody
-NCT05855200	catype:Colorectal adenocarcinoma; *catype:Colon adenocarcinoma
 NCT05328908	catype:Colorectal adenocarcinoma
 NCT04985721	*sensitive_to:Pamiparib
 NCT05067283	catype:Solid tumour; NOT catype:Non-small cell lung cancer; KRAS:G12C; prior_therapy:systemic_therapy
@@ -216,7 +216,6 @@ NCT04802759	catype:Breast cancer; *ESR1:protein_expression; sensitive_to:Atezoli
 NCT05417594	(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
 NCT05954871	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT BRAF:V600E; NOT NRAS:oncogenic_mutation; NOT EGFR:oncogenic_mutation; *CRC_COHORT_NO_SLOTS
 NCT05954871	catype:Non-small-cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion); NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:V600E; *prior_therapy:Osimertinib
-NCT05920356	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT06119581	KRAS:G12C; *NOT prior_therapy:systemic_therapy; catype:Non-small cell lung cancer
 NCT05462717	KRAS:G12C
 NCT05328908	catype:Colorectal adenocarcinoma; NOT prior_therapy:Regorafenib; NOT prior_therapy:Trifluridine; NOT prior_therapy:immune_checkpoint_blockade; *prior_therapy:fluoropyrimidine; *prior_therapy:Oxaliplatin; *prior_therapy:Irinotecan; NOT prior_therapy:Lonsurf

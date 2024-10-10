@@ -1080,7 +1080,6 @@ cancer_therapy	cancer_therapy,PTPN2-targeting
 cancer_therapy	cancer_therapy,RAD51-targeting
 cancer_therapy	cancer_therapy,RAF-targeting
 cancer_therapy	cancer_therapy,RANK_L-targeting
-cancer_therapy	cancer_therapy,RET-selective-targeting
 cancer_therapy	cancer_therapy,RET-targeting
 cancer_therapy	cancer_therapy,RNA_polymerase_I_-targeting
 cancer_therapy	cancer_therapy,ROCK-targeting
@@ -1106,7 +1105,6 @@ cancer_therapy	cancer_therapy,SUMOylation-targeting
 cancer_therapy	cancer_therapy,SYK-targeting
 cancer_therapy	cancer_therapy,TBL1-targeting
 cancer_therapy	cancer_therapy,TDO-targeting
-cancer_therapy	cancer_therapy,TEAD-targeting
 cancer_therapy	cancer_therapy,TF-targeting
 cancer_therapy	cancer_therapy,TGF-beta-targeting
 cancer_therapy	cancer_therapy,TGFBR1-targeting
@@ -1657,7 +1655,7 @@ cancer_therapy,RAF-targeting	RAF_inhibitor
 cancer_therapy,RAF-targeting	RAF_inhibitor,type_2
 cancer_therapy,RAF-targeting	pan-RAF_inhibitor
 cancer_therapy,RANK_L-targeting	immuno-oncology_therapy,RANK_L-targeting
-cancer_therapy,RET-selective-targeting	RET-selective_inhibitor
+cancer_therapy,RET-targeting	RET-selective_inhibitor
 cancer_therapy,RET-targeting	RET_inhibitor
 cancer_therapy,RNA_polymerase_I-targeting	RNA_polymerase_I_transcription_inhibitor
 cancer_therapy,ROCK-targeting	ROCK_inhibitor

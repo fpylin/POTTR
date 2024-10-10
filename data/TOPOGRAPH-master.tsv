@@ -608,6 +608,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 3	Mismatch repair	Deficient	Solid tumours except Colorectal adenocarcinoma	Nivolumab	NCI-MATCH (EAY131) Z1D-A subprotocol. Defined as complete loss of MLH1/MSH2 IHC. ORR 36%	31765263
 3	MLH1	Loss of protein expression	Solid tumours except Colorectal adenocarcinoma	Nivolumab	NCI-MATCH (EAY131) Z1D-A subprotocol. Defined as complete loss of MLH1/MSH2 IHC. ORR 36%	31765263
 3	MSH2	Loss of protein expression	Solid tumours except Colorectal adenocarcinoma	Nivolumab	NCI-MATCH (EAY131) Z1D-A subprotocol. Defined as complete loss of MLH1/MSH2 IHC. ORR 36%	31765263
+3	MTAP	Deletion, Loss of protein expression	Solid tumours	AMG 193	Phase 1. NCT05094336. In patients with MTAP-deleted solid tumors, the MTA-cooperative PRMT5 inhibitor AMG 193 showed ORR of 21% across dose ranges of 800 mg o.d., 1200 mg o.d., or 600 mg b.i.d.. Responses were seen in cholangiocarcinoma, oesophageal carcinoma, gallbladder adenocarcinoma, melanoma, non-small cell lung carcinoma, pancreatic adenocarcinoma, renal cell carcinoma, Sertoli-Leydig cell tumor	39293516
 3	MYD88	Gain-of-function mutations	Diffuse large B-cell lymphoma; Waldenstroms macroglobulinaemia	Ibrutinib		26244327
 3	NECTIN4	Protein expression	Solid Tumours; Urothelial carcinoma; Cervical Cancer; Oesophageal cancer; Triple-negative breast cancer	9MW2821	Phase 1/2a, NCT05216965, n=260, 9MW2821, a nectin-4 antibody-drug conjugate, showed ORR of 35% and DCR of 78% at 1.25 mg/kg or above. Median PFS ranging from 3.7 to 8.8 months across different tumor types. Objective response rates were 62, 38, 30, and 44% for urothelial, cervical, oesophageal, and triple negative breast cancers respectively.	10.1200/JCO.2024.42.16_suppl.3013
 3	NF1	Oncogenic mutations (germline)	Type 1 neurofibromatosis	FCN-159	Phase 1/2. NCT04954001. N=65. In pediatric patients with neurofibromatosis type 1-related plexiform neurofibromas. ORR was 42% in 19 patients with evaluable response. Median DOR could not be evaluated.	10.1200/JCO.2023.41.16_suppl.10023
@@ -1089,6 +1090,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ERBB2	Oncogenic mutations, Amplification	Solid tumours	BI-1810631	Beamion Lung 1 . NCT04886804. Preliminary data showed responses seen in oesophageal carcinoma and cholangiocarcinoma.	36528522; JCO.2023.41.16_suppl.8545
 4	ERBB2	Overexpression	Extramammary Paget’s disease	Trastuzumab + Pertuzumab + Paclitaxel	Case report. Single complete responder to pertuzumab, trastuzumab, and weekly paclitaxel.	37595182
 4	ERBB2	Overexpression	Solid tumours	Margetuximab		28119295
+4	ERBB2	Overexpression, amplification	Breast cancer	ZN-1041	Phase 1, ZN-A-1041-101-US (NCT05593094). N=10. 1 pt achieved confirmed PR at 400 mg BID dose for &gt;15 months	10.1200/JCO.2023.41.16_suppl.1041
 4	ERBB2	Overexpression, amplification	Non-small cell lung cancer	Fam-trastuzumab deruxtecan-nxki	DESTINY-Lung01, no data available yet. Hypothesis generating	10.1200/JCO.2020.38.15_suppl.9504
 4	ERBB2	Overexpression, amplification	Solid tumour	GQ1001		10.1158/1538-7445.AM2023-2702
 4	ERBB2	Overexpression, Amplification	Solid tumours	Runimotamab	Phase 1 trial eligibility 	NCT03448042
@@ -1340,6 +1342,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	KRAS	G12R	Histiocytosis	Cobimetinib	Case report	29236635
 4	KRAS	G60_A66dup, E62_A66dup, Switch 2 duplication, Exon 3 insertion	Solid tumours	Mirdametinib	Preclinical study showing KRAS Switch II duplication is oncogenic and sensitive to MEK inhibition.	26854029
 4	KRAS	NOT KRAS:oncogenic mutation	Pancreatic adenocarcinoma	Nimotuzumab + Gemcitabine	NCT00561990. Phase 2. Exploratory analysis of PCS07 trial. In previously untreated, advanced pancreatic cancer, addition of nimotuzumab signficantly prolonged OS at 12 months compared to placebo (54% v 16%) in the KRAS wild type cohort.	28961832
+4	KRAS	Oncogenic mutation	Pancreatic adenocarcinoma	Trametinib + Hydroxychloroquine; Trametinib + Palbociclib	Retrospective multicentric cohort study, AIO AIO-TF/PAK-0123, N=34, trametinib + hydroxychloroquine (THCQ) or trametinib + palbociclib (TP) did not show clinical benefit in advanced metastatic pancreatic cancer with KRAS mutations or MAPK/CDKN2A/B alterations.	39352477
 4	KRAS	Oncogenic mutations	Colorectal adenocarcinoma	Lifirafenib	No response in 20 patients	32182156
 4	KRAS	Oncogenic mutations	Colorectal adenocarcinoma	Onvansertib + FOLFIRI + Bevacizumab; Onvansertib	Phase 1b/2 trial	10.1200/JCO.2020.38.4_suppl.TPS265, NCT03829410
 4	KRAS	Oncogenic mutations	Colorectal adenocarcinoma	Selumetinib + Irinotecan	Phase 2. 3 of 32 patient had partial response. The study was terminated before full accrual.	25322874
@@ -1404,6 +1407,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MET	Overexpression	Non-small cell lung cancer; Gastroesophageal junction adenocarcinoma; Gastric Cancer; Endometrial carcinoma; Acral melanoma	ABBV-400	Phase 2. NCT05029882. Clinical activity was observed with ABBV-400 with an ORR of 24% (11/45). All responses were confirmed partial responses. DCR was 81%. Overexpression was determined IHC. 	10.1200/JCO.2023.41.16_suppl.3015
 4	MET	Overexpression	Solid tumour; Non-small cell lung cancer	MTYX-5000	Preclinical study. MYTX-011 showed activities in higher internalization in cMet+ tumor cells, cytotoxicity across a cMet+ cancer cell lines in vitro, and in NSCLC xenograft models.	10.1158/1538-7445.AM2023-5000
 4	MET	Overexpression	Solid tumours	Telisotuzumab Vedotin		33675179, 10.1200/JCO.2019.37.15_suppl.9023
+4	MET	Protein expression	Non-small cell lung cancer	MYTX-011	Phase 1. MYTX-011 showed improved payload delivery to c-MET-expressing tumor cells, with increased cytotoxicity and efficacy in NSCLC xenograft models.	38684230
 4	MET	PTPRZ-MET fusion, TFG-MET fusion	Glioblastoma	Crizotinib; Foretinib		27748748
 4	MET	Y1003S (Y1021S)	Non-small cell lung cancer	Crizotinib	Case report showing significant response and DOR	30885356
 4	MET	Y1021H (Y1003H)	Non-small cell lung cancer	Crizotinib	Case report, sensitive to Crizotinib	31809977
@@ -1727,7 +1731,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	Tumour Mutational Burden+Mismatch repair	Tumour Mutational Burden:High and Mismatch repair:Proficient	Colorectal adenocarcinoma	Durvalumab + Tremelimumab	Randomized phase 2 study. CCTG CO.26. Durvalumab and tremelimumab combination was associated with an improved OS over best supportive care (6.6 vs 4.1 months). TMB cut off was determined to be 28 mutations per MB (post hoc). POLE status was not determined.	32379280
 4	U2AF1	S34F	Acute myeloid leukaemia	Olaparib	Cell line study. Mutation in spliceosomes causes accumulation of R-loops in cells, triggering a PARP1 response. PARP inhibition with Olaparib has shown to prolong survival in murine model of myeloid leukaemia harbouring SRSF2 P95H mutation.	10.1158/1538-7445.AM2023-6183
 4	VHL	Oncogenic mutations	Renal cell carcinoma	Belzutifan	Phase 1. NCT02974738. The dose expansion cohort of this single-arm study with Belzutifan showed an ORR of 25% (14/55). DCR was 80% (44/55). Note VHL mutational status was not reported in this study, although VHL loss is common in RCC. 	33888901
-4	WWTR1	WWTR1-CAMTA1 fusion, fusion	Epithelioid haemangioendothelioma	IK-930		NCT05228015
+4	WWTR1	WWTR1-CAMTA1 fusion (TAZ-CAMTA1 fusion), fusion	Epithelioid haemangioendothelioma	IK-930		NCT05228015
 4	XRCC2	Loss-of-function mutations	Breast cancer	Olaparib	Cell line (MCF7) synthetic lethal screening using olaparib and specific PARG inhibitor PDD00017273	28254358
 4	YAP1	YAP1-TFE3 fusion, fusion	Epithelioid haemangioendothelioma	IK-930		NCT05228015
 R1	ABL1	T315I	Acute lymphoblastic leukaemia; Chronic myelogenous leukaemia	Bosutinib; Imatinib; Nilotinib	Acquired resistance	22371878, 14676625
@@ -1748,6 +1752,7 @@ R1	NTRK3	G623R	Solid tumours	Entrectinib	Blacklisted by FDA approval	30333516
 R1	NTRK3	G623R, G696A, F617L, F617L, F617C, F617I	Solid tumours	Larotrectinib	Blacklisted by FDA approval	30333516
 R1	PDGFRA	D842V	Gastrointestinal stromal tumour	Imatinib; Sunitinib	OncoKB R1 but not blacklisted by TGA 	14645423, 22665524
 R2	ABL1	A337V, P465S	Chronic myelogenous leukaemia	Asciminib		28329763, 31826340
+R2	ABL1	BCR-ABL1 Fusion	Acute myeloid leukaemia	Gilteritinib	Secondary FLT3-F691L gatekeeper mutations or BCR-ABL1 fusions were identified at progression to Gilteritinib.	31088841
 R2	AKT1	Oncogenic mutations	Endometrial cancer	LY3023414	N=28 with 25 Evaluable patients. ORR 16%. CBR 28%. Median PFS 2.5 months. Median OS 9.2 months	31880826
 R2	ALK	Amplification	Non-small cell lung cancer	Crizotinib		22323827, 22277784
 R2	ALK	EML4-ALK fusion	Colorectal adenocarcinoma	Divarasib	Phase 1/2 single arm trial. GO42144. Divarasib. NCT04449874. Acquired and treatment-emergent mutations	37611121
@@ -2039,6 +2044,7 @@ R2	ERBB3	Oncogenic mutations, R103G, V104L, V104M, G284R, D297Y, T355A, E928G	So
 R2	ERBB3	Overexpression	Prostate cancer	Patritumab	Cell line and DX model studies. Lack of antitumor activity was demonstrated in vitro HER3-positive prostate cancer cell lines and PDX models through inhibition of HER3 alone.	34753775
 R2	ERBB3	Q809R	Solid tumours	Pictilisib		23680147
 R2	ERBB4	Oncogenic mutations	Head and neck squamous cell carcinoma 	Cetuximab	No response in this cohort	27207775
+R2	ESR1	D351Y, E380Q, S463P, M528I, L536H, L536P, Y537C, Y537S, Y537D, D538G	Breast cancer	Ribociclib + Letrozole; Ribociclib + Anastrozole; Ribociclib + Tamoxifen; Letrozole; Ribociclib + Letrozole + Goserelin; Ribociclib + Anastrozole + Goserelin; Ribociclib + Tamoxifen + Goserelin; Letrozole; Fulvestrant	Combined biomarker analysis of MONALEESA-2, -3, and -7 trials. Higher prevalences of ESR1 gene alterations was seen in D538, Y537, E380, L536 (with potential candidates at D351, M528).	39313156
 R2	ESR1	D538G	Breast cancer	H3B-6545	Phase 1/2: ORR 17% (12/72) at RP2D in heavily pretreated patients and visceral metastases, but ORR 0% (0/17) responses seen in D538G.	10.1200/JCO.2021.39.15_suppl.1018
 R2	ESR1	E380Q, V392I, S463P, V534E, P535H, L536R, L536Q, Y537S, Y537N, Y537C, D538G	Breast cancer	GnRH agonist; Aromatase Inhibitor; Letrozole; Anastrozole; Exemestane; Tamoxifen		26122181
 R2	ESR1	ESR1-YAP1 fusion, ESR1-PCDH11X fusion, ESR1-SOX9 fusion, ESR1-ARNT2 fusion	Breast cancer	Fulvestrant		34711608
@@ -2105,6 +2111,7 @@ R2	FGFR3	V555M, V555L	Non-small cell lung cancer	Pemigatinib	Phase 2. FIGHT-207 
 R2	FGFR4	V550E, V550L	Solid tumours; Hepatocellular carcinoma	Fisogatinib	Gatekeeper mutation	31575540
 R2	FLT3	Amplification	Colorectal adenocarcinoma	Sunitinib	NCT02693535. TAPUR. ORR 0%.	33068284
 R2	FLT3	D835	Acute myeloid leukaemia	Sorafenib		22368270
+R2	FLT3	F691L	Acute myeloid leukaemia	Gilteritinib	Secondary FLT3-F691L gatekeeper mutations or BCR-ABL1 fusions were identified at progression to Gilteritinib.	31088841
 R2	FLT3	Internal tandem duplication	Acute myeloid leukaemia	Ivosidenib	RTK pathway mutations are associated with primary resistance to ivosidenib	32380538
 R2	FLT3	Oncogenic mutations	Acute myeloid leukaemia	Ivosidenib	RTK pathway mutations are associated with primary resistance to ivosidenib	32380538
 R2	GLI1	Overexpression	Basal cell carcinoma	Vismodegib		25759019
@@ -2351,6 +2358,7 @@ R2	RASA1	Loss-of-function mutations	Langerhans cell sarcoma	Vemurafenib + Cobime
 R2	RB1	Deletion	Solid tumours	Divarasib	Phase 1/2 single arm trial. GO42144. Divarasib. NCT04449874. Acquired and treatment-emergent mutations	37611121
 R2	RB1	Heterozygous deletion, Copy number loss, Loss-of-function mutation	Breast cancer	Ribociclib; Palbociclib; Abemaciclib	Heterozygous loss of RB1 is associated with decreased PFS on CDK4/6 inhibitor and endocrine therapy.	10.1200/JCO.2022.40.16_suppl.1010
 R2	RB1	Loss-of-function mutations	Breast cancer; Solid Tumours	Palbociclib; Ribociclib; Abemaciclib		30206110
+R2	RB1	Oncogenic mutation	Breast cancer	Ribociclib	Pooled analysis of the MONALEESA study. Significantly more alterations in the RB1 and SPEN genes at the point of progression compared to baseline in patients from the ribociclib arm.	39313156
 R2	RB1	Oncogenic mutations	Non-small cell lung cancer	Trastuzumab deruxtecan	Case series. The emergence of acquired resistance to trastuzumab deruxtecan in TP53-/HER2-mutated non-small-cell lung cancer may be correlated with the loss of Rb1.	36809053
 R2	RB1	Oncogenic mutations	Prostate cancer	Androgen receptor antagonist; GnRH agonist; CYP17A1 inhibitor; Enzalutamide; Apalutamide		26563462
 R2	RBM10	Loss-of-function mutations	Non-small cell lung cancer	Osimertinib	Preclinical and retrospective observational study. RBM10 loss is associated with reduced response to Osimretinib in EGFR-mutant non-small cell lung cancer models and cohort.	35579943
@@ -2386,6 +2394,7 @@ R2	SMO	D473, E518	Medulloblastoma	Vismodegib	Preclinical study. GDC-0449-resista
 R2	SMO	D473G, D473Y, D473H, G497W, V321M, W281L, Q477E, A327P, C390R, D506N, E181K, E481G, G453D, K519R, K564E, L221P, L353F, N476K, P513L, P698T, P739L, P739S, R168H, R199Q, T336I, T349I, T349P, T534I, T548I, T640A, V386A, V404M, V414A, A459V, D384N, E518K, I408V, N219D, S387N, T241M, V281C	Basal cell carcinoma; Solid tumours	Vismodegib; Sonidegib	On-target resistance	21771911, 25759019, 25759020, 31125907
 R2	SMO	D473H	Medulloblastoma	Vismodegib	On-target resistance	19726788, 21771911
 R2	SMO	P641A, W535L, L412F	Solid tumours	Vismodegib	Phase 2. NCT02465060. NCI-MATCH ECOG-ACRIN Trial (EAY131) Subprotocol T. N=34. In 22 of 31 evaluable and MATCH confirmed patient, ORR was 9.1% with 6 month PFS of 22%. In all 31 evaluable patients, ORR was 7% (2/31).	10.1200/JCO.2022.40.16_suppl.3010
+R2	SPEN	Oncogenic mutation	Breast cancer	Ribociclib	Pooled analysis of the MONALEESA study. Significantly more alterations in the RB1 and SPEN genes at the point of progression compared to baseline in patients from the ribociclib arm.	39313156
 R2	STK11	Oncogenic mutations	Solid tumours	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Off-target mechanism	29773717
 R2	STK11+KRAS	STK11:Oncogenic mutations AND KRAS:Oncogenic mutations	Non-small cell lung cancer	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Pre-clinical study	29773717
 R2	SUFU	Loss-of-function mutations	Basal cell carcinoma	Vismodegib	Xenografts models of Sufu tumors showed resistance to SMO inhibition.	25759019
@@ -2397,5 +2406,3 @@ R2	TSC1	Oncogenic mutations	Urothelial carcinoma	Buparlisib	Phase 2. N=19. Bupar
 R2	Tumour Mutational Burden	High	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	WT1	Loss-of-function mutations	Chronic myelogenous leukaemia	Imatinib; Nilotinib; Dasatinib; Bosutinib; Ponatinib	Haploid genetic screens of gene knockouts that promoting BCR-ABL inhibitor resistance	30442766
 R2	XPO1	C528S	Chronic myelogenous leukaemia; Acute lymphoblastic leukaemia; Acute promyelocytic leukaemia	Selinexor	Preclinical study. Heterozygous C528S mutation in XPO1 confers similar resistance to selinexor as homozygous substitution, demonstrating a single dominant mutation is sufficient for SINE resistance.	27634897
-4	ERBB2	Overexpression, amplification	Breast cancer	ZN-1041	Phase 1, ZN-A-1041-101-US (NCT05593094). N=10. 1 pt achieved confirmed PR at 400 mg BID dose for &gt;15 months	10.1200/JCO.2023.41.16_suppl.1041
-4	MET	Protein expression	Non-small cell lung cancer	MYTX-011	Phase 1. MYTX-011 showed improved payload delivery to c-MET-expressing tumor cells, with increased cytotoxicity and efficacy in NSCLC xenograft models.	38684230
