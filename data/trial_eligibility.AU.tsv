@@ -139,7 +139,7 @@ NCT05338970	EGFR:oncogenic_mutation
 NCT04771130	*NOT prior_therapy:BCL2_inhibitor; *NOT prior_therapy:Azacitidine
 NCT05910827	*NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:deletion; *NOT PTEN:oncogenic_mutation; *NOT MET:amplification; catype:Lung squamous cell carcinoma; *prior_therapy:cancer_therapy,PD-1/PD-L1-targeting; NOT prior_therapy:docetaxel; NOT prior_therapy:cetuximab; *NOT prior_therapy:cancer_therapy,ERBB3-targeting; *prior_therapy:systemic_therapy; DISABLED
 NCT05910827	*NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:deletion; *NOT PTEN:oncogenic_mutation; *NOT MET:amplification
-NCT05286801	(SMARCB1:loss OR SMARCB1:oncogenic_mutation OR SMARCB1:loss of protein expression OR SMARCA4:loss OR SMARCA4:oncogenic_mutation OR SMARCA4:loss of protein expression); *PAEDIATRIC_TRIAL
+NCT05286801	(SMARCB1:loss OR SMARCB1:oncogenic_mutation OR SMARCB1:loss_of_protein_expression OR SMARCA4:loss OR SMARCA4:oncogenic_mutation OR SMARCA4:loss_of_protein_expression); *PAEDIATRIC_TRIAL
 NCT05646862	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; catype:Breast cancer; NOT catype:HER2-positive breast cancer
 NCT04879329	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04789096	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression; *prior_therapy:Trastuzumab; *prior_therapy:Pertuzumab; *prior_therapy:taxane; *prior_therapy:Trastuzumab emtansine; *NOT prior_therapy:Pembrolizumab; *NOT prior_therapy:Nivolumab; *NOT prior_therapy:Atezolizumab; *NOT prior_therapy:Durvalumab; *NOT prior_therapy:Avelumab; *NOT prior_therapy:Ipilimumab; *NOT prior_therapy:Tremelimumab
