@@ -1337,10 +1337,12 @@ HTMLTAIL
 	print $Pottr->{'ruleset'}->{'debug_output'} ;
 	print "</div>\n";
 
-	print "<div class=debug>\n";
-	print "<h2>POTTR Debug output:</h2>\n";
-	print mk_trial_href( $Pottr->{'debug_output'} );
-	print "</div>\n";
+	if (0) {
+		print "<div class=debug>\n";
+		print "<h2>POTTR Debug output:</h2>\n";
+		print mk_trial_href( $Pottr->{'debug_output'} );
+		print "</div>\n";
+	}
 } elsif ($f_tsv) {
 	print gen_biomarker_report() if $f_interp_variants ; 
 	print gen_drug_sens_report() if $f_list_therapies;

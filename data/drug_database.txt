@@ -521,6 +521,7 @@ ENB003|ENB 003|ENB-003	ETBR_inhibitor
 ENMD-2076	AURKA_inhibitor; angiogenesis_inhibitor
 EO1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; EGFR_inhibitor,second_generation
 EOX	Epirubicin + Oxaliplatin + Capecitabine
+EOS-448	anti-TIGIT_monoclonal_antibody
 EP0042	FLT3/Aurora_inhibitor
 EPI-7386	antiandrogen,AR_NTD_inhibitor
 EPZ011989	EZH2_inhibitor
@@ -1103,6 +1104,7 @@ POMB-ACE	Cisplatin + Vincristine + Methotrexate + Bleomycin + Actinomycin D + Cy
 PRN1371|PRN 1371	pan-FGFR_inhibitor; pan-FGFR_inhibitor,irreversible
 PRS-344|PRS344|S095012	bispecific_PD-L1/4-1BB_antibody
 PRT3789	SMARCA2_degrader
+PRT7732	SMARCA2_degrader
 PRT811	PRMT5_inhibitor
 PSB202	bifunctional-CD20/CD37_antibody_pair
 PSB205	bifunctional-PD-1/CTLA4_antibody_pair

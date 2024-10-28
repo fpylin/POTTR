@@ -185,6 +185,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Append
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma|Appendix adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal pseudomyxoma peritonei
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Peritoneal mucinous carcinomatosis
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Goblet cell carcinoma|Goblet cell adenocarcinoma|Goblet cell carcinoid
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer|Appendiceal carcinoma|Appendix cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma
