@@ -234,6 +234,7 @@ BEP regimen|BEP	Bleomycin + Etoposide + Cisplatin
 BFCR4350A	bispecific_T-cell_engager,FcRH5-targeting
 BG-68501	CDK2_inhibitor
 BG-C9074	anti-B7H4_antibody-drug_conjugate
+BG-C477	anti-CEACAM5_antibody-drug_conjugate
 BGB-10188	PI3K-delta_inhibitor
 BGB-11417	BCL2_inhibitor
 BGB-15025	HPK1_inhibitor
@@ -700,6 +701,7 @@ HS-20093	anti-B7H3_antibody-drug_conjugate
 HSK29116	BTK_PROTAC_degrader
 HTI-1090|HTI 1090|SHR9146	IDO/TDO_inhibitor
 HX009|HX 009|HX-009	bispecific_PD-1/CD47_antibody
+HX044|HX 044|HX-044	unknown_drug_class
 Halofuginone	glutamyl-prolyl_tRNA_synthetase_inhibitor
 Hyaluronidase-fihj	hyaluronidase
 Hydroxychloroquine	anti-malarial_agent
@@ -1109,6 +1111,7 @@ PRT811	PRMT5_inhibitor
 PSB202	bifunctional-CD20/CD37_antibody_pair
 PSB205	bifunctional-PD-1/CTLA4_antibody_pair
 PTX-100|GGTI-2418	geranylgeranyl_transferase_inhibitor
+PTT-4256|PTT4256	GPR65_inhibitor
 PV-10|Injectable Rose Bengal 10%|Provecta|Rose Bengal Disodium 10%	rose_bengal_disodium
 PXS-5505	pan-LOX_inhibitor
 PY314	anti-TREM2_monoclonal_antibody
@@ -1452,6 +1455,7 @@ TransCon TLR7/8 agonist	TLR7/TLR8_agonist
 Trastuzumab Deruxtecan|Fam-trastuzumab deruxtecan-nxki|T-Dxd|DS-8201|Enhertu|WHO 10516	anti-ERBB2_antibody-drug_conjugate
 Trastuzumab Emtansine|Ado-Trastuzumab Emtansine|Kadcyla|PRO132365|RO5304020|T-DM1|Trastuzumab-DM1|Trastuzumab-MCC-DM1	anti-ERBB2_antibody-drug_conjugate
 Trastuzumab|Herceptin|ABP 980|ALT02|Anti-p185-HER2|Herzuma|Ogivri|Ontruzant|PF-05280014|RO0452317|SB3|Trazimera|rhuMAb HER2	anti-ERBB2_monoclonal_antibody
+Trastuzumab duocarmazine|T-Duo|SYD985	anti-ERBB2_antibody-drug_conjugate
 Tremelimumab|CP-675|Ticilimumab	anti-CTLA4_monoclonal_antibody
 Treosulfan	alkylating_agent
 Trichostatin A	HDAC_inhibitor
@@ -1562,3 +1566,5 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+BG-T187|BGT187	trispecific_EGFR/cMET/cMET_antibody
+BAY3498264	SOS1-KRAS_inhibitor

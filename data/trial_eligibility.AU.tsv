@@ -93,13 +93,12 @@ NCT04460456	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expres
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
-NCT04665206	catype:Solid tumour; (NF2:oncogenic_mutation OR NF2:alteration)
-NCT04665206	catype:Solid tumour; (WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
-NCT04699188	KRAS:G12C
+NCT04665206	catype:Solid tumour; *(NF2:oncogenic_mutation OR NF2:alteration)
+NCT04665206	catype:Solid tumour; *(WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
 NCT04720768	(BRAF:V600E OR BRAF:V600K OR BRAF:V600_missense_mutation)
 NCT04857372	catype:Mesothelioma
-NCT04857372	catype:Solid tumour; (WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
-NCT04857372	catype:Solid tumour; (NF2:oncogenic_mutation OR NF2:deletion)
+NCT04857372	catype:Solid tumour; *(WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
+NCT04857372	catype:Solid tumour; *(NF2:oncogenic_mutation OR NF2:deletion)
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT05067283	KRAS:G12C
 NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catype:Non-melanoma skin cancer)
@@ -197,8 +196,6 @@ NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression 
 NCT05872295	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); prior_therapy:systemic_therapy
 NCT05872295	catype:Solid tumour; NOT Breast cancer; NOT Gastric cancer; NOT Gastroesophageal adenocarcinoma; *(ERBB2:amplification OR ERBB2:protein_expression OR ERBB2:overexpression OR ERBB2:low_protein_expression OR ERBB2:oncogenic_mutation)
 NCT05577416	NOT prior_therapy:systemic_therapy; catype:Low-grade glioma
-NCT04929223	catype:Colorectal adenocarcinoma; *(microsatellite_instability:high OR mismatch_repair:deficient); *NOT_RECRUITING
-NCT04929223	catype:Colorectal adenocarcinoma; KRAS:G12C
 NCT05388669	EGFR:oncogenic_mutation
 NCT04895709	*NOT prior_therapy:Docetaxel
 NCT05348577	*NOT prior_therapy:Docetaxel; *NOT prior_therapy:AKT_inhibitor
@@ -271,3 +268,4 @@ NCT05352672	*NOT prior_therapy:systemic_therapy
 NCT06127407	catype:Chondrosarcoma
 NCT05609968	*NOT prior_therapy:systemic_therapy
 NCT05215340	*NOT prior_therapy:systemic_therapy
+NCT05216432	PIK3CA:oncogenic_mutation

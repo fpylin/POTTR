@@ -142,3 +142,6 @@ BRAF:V276L => NOT BRAF:V276L
 
 catype:Haematological malignancy; FLT3:juxtamembrane_domain_insertion => FLT3:internal_tandem_duplication
 catype:Haematological malignancy; FLT3:tyrosine_kinase_domain_1_insertion => FLT3:internal_tandem_duplication
+
+ATRX:truncating_mutations => ATRX:loss-of-function_mutations
+ATRX:frameshift_variant => ATRX:loss-of-function_mutations

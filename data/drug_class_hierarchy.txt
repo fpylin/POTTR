@@ -2400,3 +2400,4 @@ immuno-oncology_therapy,ERBB3-targeting	bispecific_EGFR/ERBB3_antibody
 immuno-oncology_therapy,GPC3-targeting	anti-GPC3_monoclonal_antibody
 immuno-oncology_therapy,IL-11-targeting	anti-IL-11_monoclonal_antibody
 immuno-oncology_therapy,PVRIG-targeting	anti-PVRIG_monoclonal_antibody
+immuno-oncology_therapy,GPR65-targeting	GPR65_inhibitor

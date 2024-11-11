@@ -187,7 +187,7 @@ sub interp_variants {
 			for ( $biomarker_spec ) {
 				s/(?:,[_ ]?|\()?germline(?:\))?//i and do { $f_germline = 1; };
 				
-				( ($aa_org, $aa_pos, $aa_mut, $fs_ter) = /(?:p\.)\(??($aa_regex)(\d+)($aa_regex)?fs(\*\d+)?\)?/ ) and do {
+				( ($aa_org, $aa_pos, $aa_mut, $fs_ter) = /(?:p\.)?\(??($aa_regex)(\d+)($aa_regex)?fs(\*\d+)?\)?/ ) and do {
 					$aa_org = $aa_code{$aa_org};
 					$aa_mut = $aa_code{$aa_mut};
 					push @conseq_t, 'mutation';
