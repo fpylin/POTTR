@@ -10,7 +10,7 @@ ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catyp
 ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12621001436864	BRAF:V600E; NOT KRAS:oncogenic_mutation; STOPPED_EARLY
 ACTRN12621001436864	KRAS:oncogenic_mutation; STOPPED_EARLY
-ACTRN12621001690842	NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer
+ACTRN12621001690842	NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer; KRAS:G12C
 NCT02628067	catype:Anal Cancer
 NCT02628067	catype:Biliary Tract Cancer
 NCT02628067	catype:Cervical Cancer
@@ -153,7 +153,7 @@ NCT05487235	catype:Non-small cell lung cancer; *sensitive_to:GDC-1971; *NOT prio
 NCT05487235	catype:Head and neck squamous cell carcinoma; *sensitive_to:GDC-1971; *NOT prior_therapy:systemic_therapy
 NCT05487235	catype:Melanoma; NOT BRAF:oncogenic_mutation; *sensitive_to:GDC-1971; *prior_therapy:anti-PD-1_monoclonal_antibody; NOT catype:Mucosal melanoma; NOT catype:Uveal melanoma
 NCT05919537	NRG1:fusion
-NCT05919537	NRG1:fusion; ERBB3:extracellular_domain_mutation
+NCT05919537	NOT NRG1:fusion; ERBB3:extracellular_domain_mutation
 NCT05743036	BRAF:V600E; catype:Colorectal cancer
 NCT05611931	NOT TP53:oncogenic_mutation
 NCT05647122	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation
@@ -262,12 +262,19 @@ NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_thera
 NCT06162572	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *CD274:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:alteration; NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
 NCT06208657	trial_type:paediatric
 NCT03906669	trial_type:curative
-NCT06343402	KRAS:G12C
+NCT06343402	KRAS:G12C; (catype:Non-small cell lung cancer OR catype:Colorectal adenocarcinoma)
 NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
 NCT05352672	*NOT prior_therapy:systemic_therapy
 NCT06127407	catype:Chondrosarcoma
 NCT05609968	*NOT prior_therapy:systemic_therapy
 NCT05215340	*NOT prior_therapy:systemic_therapy
 NCT05216432	PIK3CA:oncogenic_mutation
-NCT06252649	KRAS:G12C
+NCT06252649	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT06599502	KRAS:G12D
+NCT06659341	KRAS:G12C
+NCT06497556	KRAS:G12C; catype:Non-small cell lung cancer
+NCT06345729	KRAS:G12C; catype:Non-small cell lung cancer
+NCT06119581	KRAS:G12C; catype:Non-small cell lung cancer
+NCT05789082	KRAS:G12C; catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy
+NCT05410145	KRAS:G12C; catype:Non-small cell lung cancer
+NCT05907304	(KRAS:Q61 OR HRAS:Q61 OR NRAS:Q61)
