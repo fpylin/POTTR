@@ -904,7 +904,7 @@ Lurbinectedin|PM01183|ZEPZELCA	DNA_minor_groove-binding_agent
 Luspatercept|ACE-536|Reblozyl	recombinant_human_ActRIIb_fusion_protein
 Luveltamab tazevibulin|STRO-002	anti-FR-alpha_antibody-drug_conjugate
 M9241	IL-12-based_tumor-targeting_immunocytokine
-M9466	PARP1-selective_inhibitor
+HRS-1167|M9466	PARP1-selective_inhibitor
 MAK683	EED_inhibitor
 MAX-10181	PD-L1_inhibitor,oral
 MAX-40279	FLT3_inhibitor; FGFR3_inhibitor
