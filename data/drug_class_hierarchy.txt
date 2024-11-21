@@ -73,6 +73,7 @@ CAR-T-cell_therapy,BCMA-targeting	autologous_CAR-T-cell_therapy,BCMA-targeting
 CAR-T-cell_therapy,CD19-targeting	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CAR-T-cell_therapy,CD19-targeting	autologous_CAR-T-cell_therapy,CD19-targeting
 CAR-T-cell_therapy,CD20-targeting	autologous_CAR-T-cell_therapy,CD20-targeting
+CAR-T-cell_therapy,CD20-targeting	allogeneic_CAR-T/NK-cell_therapy,CD20-targeting
 CAR-T-cell_therapy,CD7-targeting	allogeneic_CAR-T-cell_therapy,CD7-targeting
 CAR-T-cell_therapy,CD70-targeting	allogeneic_CAR-T-cell_therapy,CD70-targeting
 CAR-T-cell_therapy,CLDN6-targeting	autologous_CAR-T-cell_therapy,CLDN6-targeting
@@ -389,6 +390,7 @@ PPAR-alpha_inhibitor
 PRIMA-1_analog
 PRMT_inhibitor	type_1_PRMT_inhibitor
 PRMT_inhibitor	type_2_PRMT_inhibitor	PRMT5_inhibitor
+PRMT_inhibitor	type_2_PRMT_inhibitor	PRMT5_inhibitor	PRMT5_inhibitor,MTA-co-operative
 PRMT_inhibitor	type_3_PRMT_inhibitor	PRMT7_inhibitor
 PROTAC_antineoplastic_drug
 PTPN1_inhibitor	PTPN2/PTPN1_inhibitor
@@ -773,7 +775,6 @@ cancer_therapy	RNA-based_therapy
 cancer_therapy	cancer_therapy,4-1BB-targeting
 cancer_therapy	cancer_therapy,ACE-targeting
 cancer_therapy	cancer_therapy,AHR-targeting
-cancer_therapy	cancer_therapy,AKT-targeting
 cancer_therapy	cancer_therapy,AKT-targeting
 cancer_therapy	cancer_therapy,AKT2-targeting
 cancer_therapy	cancer_therapy,ALK-targeting
@@ -1181,10 +1182,8 @@ cancer_therapy	cancer_therapy,nfP2X7-targeting
 cancer_therapy	cancer_therapy,notch_receptor-targeting
 cancer_therapy	cancer_therapy,orotate_phosphoribosyltransferase-targeting
 cancer_therapy	cancer_therapy,p97-targeting
-cancer_therapy	cancer_therapy,pan-AKT-targeting
 cancer_therapy	cancer_therapy,pan-ERBB-targeting
 cancer_therapy	cancer_therapy,pan-FGFR-targeting
-cancer_therapy	cancer_therapy,pan-FLT3-targeting
 cancer_therapy	cancer_therapy,pan-HDAC-targeting
 cancer_therapy	cancer_therapy,pan-LOX-targeting
 cancer_therapy	cancer_therapy,pan-PI3K-targeting
@@ -1770,9 +1769,9 @@ cancer_therapy,nfP2X7-targeting	peptide_conjugate_vaccine,nfP2X7-targeting
 cancer_therapy,notch_receptor-targeting	immuno-oncology_therapy,notch_receptor-targeting
 cancer_therapy,orotate_phosphoribosyltransferase-targeting	orotate_phosphoribosyltransferase_inhibitor
 cancer_therapy,p97-targeting	p97_inhibitor
-cancer_therapy,pan-AKT-targeting	pan-AKT_inhibitor
+cancer_therapy,AKT-targeting	pan-AKT_inhibitor
 cancer_therapy,pan-ERBB-targeting	pan-ERBB_inhibitor
-cancer_therapy,pan-FLT3-targeting	pan-FLT3_inhibitor
+cancer_therapy,FLT3-targeting	pan-FLT3_inhibitor
 cancer_therapy,pan-HDAC-targeting	pan-HDAC_inhibitor
 cancer_therapy,pan-LOX-targeting	pan-LOX_inhibitor
 cancer_therapy,pan-PI3K-targeting	pan-PI3K_inhibitor
