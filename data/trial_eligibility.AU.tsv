@@ -281,3 +281,4 @@ NCT05727176	FGFR2:fusion; catype:Cholangiocarcinoma
 NCT05987332	*NOT HLA-A2:A*02:01
 NCT05536141	catype:Clear cell renal cell carcinoma
 NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer)
+NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
