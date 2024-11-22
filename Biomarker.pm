@@ -274,11 +274,12 @@ sub interp_variants {
 				}
 			}
 			
+			push @conseq_t, 'truncating_mutation' if grep { /frameshift_variant|stop_gained/ } @conseq_t;
+			
 			for my $conseq_t (@conseq_t) {
 				push @alterations, $conseq_t ; 
-				push @alterations, 'truncating_mutation' if $conseq_t =~ /frameshift_variant|stop_gained/ ;
 			}
-
+			
 			if ( defined $aa_pos ) {
 				$aa_pos2 = $aa_pos if ! defined $aa_pos2;
 				my @positional_features ;
@@ -297,6 +298,7 @@ sub interp_variants {
 						}
 					};
 				}
+# 				print STDERR map { "\e[1;41;37m$aa_pos $_\e[0m\n" } @positional_features;
 				
 				for my $s (@positional_features) {
 					$s =~ s/_variant/_mutation/;
