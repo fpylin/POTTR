@@ -297,6 +297,7 @@ BNC105P	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNT111	mRNA_personalised_cancer_vaccine
 BNT113	vaccine_therapy,HPV-E6/HPV-E7-targeting
 BNT211	CAR-T-cell_therapy,mRNA_vaccine,CLDN6-targeting
+BNT327|PM8002	bispecific_PD-L1/VEGFA_antibody
 BOS-342|BOS342|PRS342|PRS-342	bispecific_GPC3/4-1BB_antibody
 BOS172738	RET-selective_inhibitor
 BT8009	bicycle_toxin_conjugate,NECTIN4-targeting
@@ -1234,7 +1235,7 @@ RO7496353	anti-TGF-beta_monoclonal_antibody
 RO7502175	unknown_drug_class
 RO7566802	unknown_drug_class
 RO7617991	unknown_drug_class
-RO7656594	AR_PROTAC_degrader
+RO7656594|GDC2992|GDC-2992|RG6537	AR_PROTAC_degrader
 ROS1_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 RP-6306|RP 6306	PKMYT1_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
@@ -1573,3 +1574,4 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+
