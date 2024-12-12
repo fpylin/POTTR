@@ -60,10 +60,6 @@ NCT03424005	NOT ERBB2:amplification; *NOT ESR1:protein_expression; *CD274:protei
 NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_mutation
 NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
-NCT03739710	catype:NSCLC
-NCT03742895	NOT catype:Ovarian cancer; NOT catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
-NCT03742895	catype:Breast cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
-NCT03742895	catype:Ovarian cancer; NOT BRCA1:oncogenic_mutation; NOT BRCA2:oncogenic_mutation
 NCT03821935	catype:Head and neck squamous cell carcinoma
 NCT03821935	catype:Hepatocellular carcinoma
 NCT03821935	catype:Pancreatic adenocarcinoma
@@ -283,3 +279,4 @@ NCT05536141	catype:Clear cell renal cell carcinoma
 NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer)
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
 NCT06509906	catype:Colorectal adenocarcinoma
+NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion)
