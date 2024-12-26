@@ -1044,7 +1044,7 @@ OBI-3424	AKR1C3-activated_prodrug
 OBI-999	anti-globoH_antibody-drug_conjugate
 OBT076	anti-CD205_antibody-drug_conjugate
 OMO-1|JNJ-38877618|OMO1	MET_inhibitor
-ONC201|ONC-201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
+Dordaviprone|ONC201|ONC-201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
 ONC392|ONC-392	anti-CTLA4_monoclonal_antibody
 ORIC-114	ERBB2_inhibitor,exon_20_selective; EGFR_inhibitor,exon_20_selective
 ORIC-944	PRC2_complex_inhibitor
