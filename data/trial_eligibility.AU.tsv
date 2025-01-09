@@ -1,15 +1,11 @@
 trial_id	eligibility_criteria
-ACTRN12617000741381	TRANSPLANT_RELATED_CANCERS
 ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12619001117101	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; NOT ERBB2:overexpression; *NOT prior_therapy:Fulvestrant
 ACTRN12619001185156	*(CCNE1:amplification OR CCNE1:overexpression); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum; catype:Ovarian cancer
-ACTRN12619001527156	(catype:Head and Neck Squamous Cell Carcinoma OR catype:Triple-Negative Breast Cancer OR catype:Adenoid Cystic Carcinoma)
 ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12621000507886	catype:lymphoma; catype:B-cell lymphoma
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
 ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
-ACTRN12621001436864	BRAF:V600E; NOT KRAS:oncogenic_mutation; STOPPED_EARLY
-ACTRN12621001436864	KRAS:oncogenic_mutation; STOPPED_EARLY
 ACTRN12621001690842	NOT catype:Non-small cell lung cancer; NOT catype:Colorectal cancer; KRAS:G12C
 NCT02628067	catype:Anal Cancer
 NCT02628067	catype:Biliary Tract Cancer
@@ -282,3 +278,4 @@ NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate ca
 NCT06509906	catype:Colorectal adenocarcinoma
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion)
 NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression)
+NCT06585488	KRAS:alteration

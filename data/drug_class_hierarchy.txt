@@ -609,7 +609,7 @@ anti-ERBB3_monoclonal_antibody	anti-ERBB3_monoclonal_antibody,third_generation
 anti-EphA2_monoclonal_antibody
 anti-EphA3_antibody
 anti-FAP/IL-2_fusion_protein
-anti-FGFR2_monoclonal_antibody
+anti-FGFR2b_monoclonal_antibody
 anti-FR-alpha_antibody-drug_conjugate
 anti-GARP_monoclonal_antibody
 anti-GD2_monoclonal_antibody
@@ -2102,7 +2102,7 @@ immuno-oncology_therapy,EpCAM-targeting	bispecific_T-cell_engager,EpCAM-targetin
 immuno-oncology_therapy,EphA2-targeting	anti-EphA2_monoclonal_antibody
 immuno-oncology_therapy,FAP-targeting	anti-FAP/IL-2_fusion_protein
 immuno-oncology_therapy,FAP-targeting	anti-FAP/interleukin-2_fusion_protein
-immuno-oncology_therapy,FGFR2-targeting	anti-FGFR2_monoclonal_antibody
+immuno-oncology_therapy,FGFR2-targeting	anti-FGFR2b_monoclonal_antibody
 immuno-oncology_therapy,FLT3-targeting	bispecific_T-cell_engager,FLT3-targeting
 immuno-oncology_therapy,FR-alpha-targeting	anti-FR-alpha_antibody-drug_conjugate
 immuno-oncology_therapy,FR-alpha-targeting	bispecific_FR-alpha/TRPV6_antibody
@@ -2341,7 +2341,7 @@ MNK1_inhibitor	MNK1/2_inhibitor
 MNK2_inhibitor	MNK1/2_inhibitor
 autologous_CAR-T-cell_therapy	autologous_CAR-T-cell_therapy,NY-ESO-1/CD8alpha-targeting
 autologous_CAR-T-cell_therapy	autologous_CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting
-cancer_therapy	cancer_therapy,BRAF_V600E-targeting
+cancer_therapy	cancer_therapy,BRAF-targeting	cancer_therapy,BRAF_V600E-targeting
 cancer_therapy	cancer_therapy,CD8alpha-targeting
 cancer_therapy	cancer_therapy,CD96-targeting
 cancer_therapy	cancer_therapy,ERBB2_monoclonal_antibody,dimerization-targeting
@@ -2400,3 +2400,24 @@ immuno-oncology_therapy,GPC3-targeting	anti-GPC3_monoclonal_antibody
 immuno-oncology_therapy,IL-11-targeting	anti-IL-11_monoclonal_antibody
 immuno-oncology_therapy,PVRIG-targeting	anti-PVRIG_monoclonal_antibody
 immuno-oncology_therapy,GPR65-targeting	GPR65_inhibitor
+cancer_therapy	cancer_therapy,FGFR2-targeting	cancer_therapy,FGFR2b-targeting
+cancer_therapy	cancer_therapy,GPR65-targeting
+cancer_therapy	cancer_therapy,VEGFA-targeting
+cancer_therapy	cancer_therapy,pan-AKT-targeting
+cancer_therapy	cancer_therapy,pan-FLT3-targeting
+cancer_therapy,BRAF_V600E-targeting	BRAF_V600E_degrader
+cancer_therapy,CD20-targeting	allogeneic_CAR-T/NK-cell_therapy,CD20-targeting
+cancer_therapy,FGFR2b-targeting	immuno-oncology_therapy,FGFR2b-targeting
+cancer_therapy,GPR65-targeting	immuno-oncology_therapy,GPR65-targeting
+cancer_therapy,PRMT5-targeting	PRMT5_inhibitor
+cancer_therapy,VEGFA-targeting	immuno-oncology_therapy,VEGFA-targeting
+cancer_therapy,adenosine_A2A/A2B_receptor-targeting	adenosine_A2A/A2B_receptor_antagonist
+cancer_therapy,dnTGFBR2-targeting	autologous_CAR-T-cell_therapy,NY-ESO-1/dnTGFBR2-targeting
+cancer_therapy,pNGVL3-based,ERBB2-targeting	vaccine_therapy,pNGVL3-based,ERBB2-targeting
+cancer_therapy,pan-AKT-targeting	pan-AKT_inhibitor
+cancer_therapy,pan-FLT3-targeting	pan-FLT3_inhibitor
+immune_checkpoint_blockade,PD-L1-targeting	bispecific_PD-L1/VEGFA_antibody
+immuno-oncology_therapy,FGFR2-targeting	anti-FGFR2_monoclonal_antibody
+immuno-oncology_therapy,FGFR2b-targeting	anti-FGFR2b_antibody-drug_conjugate
+immuno-oncology_therapy,FGFR2b-targeting	anti-FGFR2b_monoclonal_antibody
+immuno-oncology_therapy,VEGFA-targeting	bispecific_PD-L1/VEGFA_antibody

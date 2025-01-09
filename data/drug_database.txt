@@ -1,4 +1,5 @@
 drug	drug_class
+
 111In-FPI-1967|[111In]-FPI-1967	radioconjugate,FGFR3-targeting
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
 131I-TLX-101|4-iodophenylalanine	radioligand,LAT1/LAT2-targeting
@@ -72,6 +73,7 @@ AK127	anti-TIGIT_monoclonal_antibody
 AL-2846|AL 2846|AL2846	MET_inhibitor
 AL101	gamma_secretase_inhibitor
 AL102|AL-102|BMS-986115	gamma_secretase_inhibitor
+ALK-201|ALK201	anti-FGFR2b_antibody-drug_conjugate
 ALLO-501A	allogeneic_CAR-T-cell_therapy,CD19-targeting
 ALLO-647	anti-CD52_monoclonal_antibody
 ALMB-0168	anti-Cx43_agonistic_antibody
@@ -316,6 +318,7 @@ Belvarafenib|GDC-5573	pan-RAF_inhibitor
 Belzupacap Sarotalocan|AU-011	viral_nanoparticle_drug_conjugates
 Belzutifan|MK-6482	HIF2a_inhibitor
 Bemarituzumab|FPA144	anti-FGFR2_monoclonal_antibody
+Bemarituzumab|FPA144	anti-FGFR2b_monoclonal_antibody
 Bemcentinib|BGB324	AXL_inhibitor
 Bempegaldesleukin|NKTR-214	IL-2_variant
 Bendamustine|SDX-105	alkylating_agent
@@ -503,6 +506,7 @@ Disitamab vedotin|RC48|RC48-ADC	anti-ERBB2_antibody-drug_conjugate
 Divarasib|GDC-6036|GDC 6036	KRAS_G12C_inhibitor
 Docetaxel|Taxotere|Docecad|RP56976	taxane
 Domvanalimab|AB154|AB 154|AB-154	anti-TIGIT_monoclonal_antibody
+Dordaviprone|ONC201|ONC-201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
 Dostarlimab|dostarlimab-gxly|ANB011|TSR 042|TSR-042|TSR042	anti-PD-1_monoclonal_antibody
 Dovitinib	PDGFRB_inhibitor; VEGFR_inhibitor; FGFR1/2/3_inhibitor
 Doxorubicin|Adriamycin|Adriablastin|Hydroxydaunomycin|Hydroxyl Daunorubicin|Hydroxyldaunorubicin	anthracycline
@@ -1044,7 +1048,7 @@ OBI-3424	AKR1C3-activated_prodrug
 OBI-999	anti-globoH_antibody-drug_conjugate
 OBT076	anti-CD205_antibody-drug_conjugate
 OMO-1|JNJ-38877618|OMO1	MET_inhibitor
-Dordaviprone|ONC201|ONC-201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
+ONC201|ONC-201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
 ONC392|ONC-392	anti-CTLA4_monoclonal_antibody
 ORIC-114	ERBB2_inhibitor,exon_20_selective; EGFR_inhibitor,exon_20_selective
 ORIC-944	PRC2_complex_inhibitor
@@ -1067,7 +1071,6 @@ Omaveloxolone|RTA 408|RTA-408	synthetic_oleanane_triterpenoid
 Omipalisib|GSK2126458|GSK458	PI3K/mTOR_inhibitor
 Onapristone	progesterone_antagonist
 Onatasertib	mTOR_inhibitor
-Prometrium	progesterone
 OncoSil	brachytherapy
 Onvansertib	PLK1_inhibitor
 Opaganib|ABC 294640|ABC294640|Yeliva	sphingosine_kinase-2_inhibitor
@@ -1185,6 +1188,7 @@ Prexasertib|LY2606368	CHEK1_inhibitor
 Prizloncabtagene autoleucel|JNJ-90014496	autologous_CAR-T_cell_therapy,bispecific_CD19/CD20-targeting
 Procarbazine|Benzethyzin|Ibenzmethyzin|N-Methylhydrazine|Procarbazin	alkylating_agent
 Prochlorperazine|RP 6140|SKF-4657	antihistamine
+Prometrium	progesterone
 Propranolol	beta-adrenergic_blocker
 Proxalutamide|GT-0918	antiandrogen,nonsteroidal,second_generation
 Puxitatug samrotecan|AZD8205|AZD-8205	anti-B7H4_antibody-drug_conjugate
@@ -1574,4 +1578,3 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
-
