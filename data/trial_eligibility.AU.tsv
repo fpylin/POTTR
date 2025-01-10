@@ -279,3 +279,5 @@ NCT06509906	catype:Colorectal adenocarcinoma
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion)
 NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06585488	KRAS:alteration
+NCT05867251	*catype:Breast cancer
+NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
