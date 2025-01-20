@@ -267,7 +267,7 @@ sub load_module_variant_feature_mapping {
 			($entity, $etype, $espec) = ($1, $2, '');
 		} else {
 			for ($f) {
-				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|preferential_|info|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
+				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|preferential_|info|mutsig|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
 				/^([^:]+):(.*(?:splice|skipping).*)$/i   and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:.*(v[IV]+)(?:\b|$).*)$/i      and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };

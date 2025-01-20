@@ -691,7 +691,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 
 					for my $extra_catype_strs ('', @extra_catype_strs) {
 						next if $extra_catype_strs eq ($catypecodes_str // '');
-						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
+						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, ($catypecodes_str // ''), $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
 # 						my $trial_match_criteria_str_spec = $trial_match_criteria_str;
 # 						$trial_match_criteria_str_spec = join("; ", $trial_match_criteria_str_spec, "trial_match_criteria:cancer_type") if length $extra_catype_strs;
 						my @trial_match_criteria_str_spec = ($trial_match_criteria_str);
@@ -744,7 +744,7 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 
 					for my $extra_catype_strs ('', @extra_catype_strs) {
 						next if $extra_catype_strs eq ($catypecodes_str // '');
-						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, $catypecodes_str, $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
+						my $f_preferential_trial_catype_complete_match = ( join('; ', $extra_catype_strs, ($catypecodes_str // ''), $eligibility_criteria_str // '') !~ /\*catype:/ ? 'preferential_trial_complete_match:catype' : undef);
 						my @trial_match_criteria_str_spec = ($trial_match_criteria_str);
 						push @trial_match_criteria_str_spec, "trial_match_criteria:cancer_type" if ( length $extra_catype_strs || $f_eligibility_criteria_str_has_catype ); 
 						

@@ -177,7 +177,11 @@ EnGeneIC_Dream_Vector-nanocells-delivered,EGFR-targeting
 FAK_inhibitor
 FAK_inhibitor	FAK/ALK/ROS1_inhibitor
 FER_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
-FGFR1/2/3_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
+FGFR1/2/3_inhibitor,reversible	FGFR/KIT/PDGFR/VEGFR_inhibitor
+FGFR1/2/3_inhibitor,reversible	PDGFRA/VEGFR/FGFR_inhibitor
+FGFR1/2/3_inhibitor,reversible	FGFR1/2/3/PDGFRB/VEGFR_inhibitor
+FGFR1/2/3_inhibitor,reversible	VEGFR/PDGFR/FGFR1/2/3_inhibitor
+FGFR1/2/3_inhibitor	FGFR1/2/3_inhibitor,reversible
 FGFR1_inhibitor	FGFR1/2/3_inhibitor
 FGFR1_inhibitor	VEGFR/PDGFR/FGFR1/2/3_inhibitor
 FGFR2_inhibitor	FGFR1/2/3_inhibitor
@@ -188,15 +192,16 @@ FGFR_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
 FGFR_inhibitor	FGFR/KIT/PDGFR/VEGFR_inhibitor
 FGFR_inhibitor	FGFR1/2/3_inhibitor
 FGFR_inhibitor	FGFR1/2/3_inhibitor	pan-FGFR_inhibitor
+FGFR_inhibitor	FGFR1/2/3_inhibitor	pan-FGFR_inhibitor	pan-FGFR_inhibitor,reversible
+FGFR_inhibitor	FGFR1/2/3_inhibitor	pan-FGFR_inhibitor	pan-FGFR_inhibitor,reversible	KIT/PDGFR/RET/VEGFR/FGFR_inhibitor
 FGFR_inhibitor	FGFR1/2/3_inhibitor	pan-FGFR_inhibitor	pan-FGFR_inhibitor,irreversible
 FGFR_inhibitor	FGFR1_inhibitor
 FGFR_inhibitor	FGFR2_inhibitor
 FGFR_inhibitor	FGFR3_inhibitor
-FGFR_inhibitor	FGFR4_inhibitor
+FGFR_inhibitor	FGFR4_inhibitor	FGFR4_inhibitor,irreversible
 FGFR_inhibitor	FGFR4_inhibitor	pan-FGFR_inhibitor
 FGFR_inhibitor	FGFR4_inhibitor	pan-FGFR_inhibitor	pan-FGFR_inhibitor,irreversible
 FGFR_inhibitor	FGFR_inhibitor,type_2
-FGFR_inhibitor	PDGFRA/VEGFR/FGFR_inhibitor
 FLT3/Aurora_inhibitor
 FLT3/CDK4/6_inhibitor
 FLT3/KIT/PDGFR_inhibitor

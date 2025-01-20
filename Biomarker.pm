@@ -259,7 +259,7 @@ sub interp_variants {
 				push @alterations, $biomarker_spec, 'alteration' ;
 				push @alterations, 'oncogenic_mutation' ;
 			}
-			push @alterations, $aa_org.$aa_pos.$aa_mut  if defined $aa_org and defined $aa_pos and defined $aa_mut ;
+			push @alterations, $aa_org.$aa_pos.$aa_mut  if defined $aa_org and defined $aa_pos and defined $aa_mut and ( ! grep { /stop_gained|truncating_mutation|frameshift_variant/} @conseq_t );
 			if ( defined $aa_org and defined $aa_pos ) {
 				$aa_org = $aa_code{$aa_org};
 				for my $conseq_t (@conseq_t) {

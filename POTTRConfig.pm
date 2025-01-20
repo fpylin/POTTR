@@ -78,7 +78,14 @@ sub load {
 		}
 		
 		if ( my ($lhs, $rhs) = split /\s*=\s*/, $_ ) {
-			push @{ $data{$lhs} }, $rhs if ( defined($rhs) and ! ( grep { $rhs eq $_ } @{ $data{$lhs} } ) );
+			if ( defined($rhs) ) {
+				$rhs =~ s/^\s*|\s*$//g;
+				$rhs =~ s|\$([A-Za-z0-9_]+)|$data{$1}[0]//"\$$1"|ge;
+				if ( ! ( grep { $rhs eq $_ } @{ $data{$lhs} } ) ) {
+					push @{ $data{$lhs} }, $rhs ;
+				}
+			} else {
+			}
 		}
 	}
 	$f_initiailised = 1;
@@ -133,7 +140,7 @@ sub get_paths {
 	$dir = "$base_rel_path/$dir" if ( $dir !~ /^\// ) and ( defined $base_rel_path ) and ( -d "$base_rel_path/$dir" ) ;
 	
 	return () if ! exists $data{$x} ;
-	return ( map { "$dir/$_" } @{ $data{$x} } );
+	return ( map { /^\// ? $_ : "$dir/$_" } @{ $data{$x} } );
 }
 
 sub get_first_path {

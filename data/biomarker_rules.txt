@@ -6,7 +6,7 @@ MET:c.3028+3A => MET:exon_14_skipping_mutation
 
 # Managing HER2 status
 HER2:negative => ERBB2:negative
-ERBB2:negative =>> HER2:negative
+ERBB2:negative => HER2:negative
 HER2:positive => ERBB2:positive
 ERBB2:positive => HER2:positive
 ERBB2:overexpression => HER2:positive [CERTAIN:biomarker]
@@ -145,3 +145,38 @@ catype:Haematological malignancy; FLT3:tyrosine_kinase_domain_1_insertion => FLT
 
 ATRX:truncating_mutation => ATRX:loss-of-function_mutation
 ATRX:frameshift_variant => ATRX:loss-of-function_mutation
+
+mutsig:SBS7a => mutsig:SBS_group_UV_7
+mutsig:SBS7b => mutsig:SBS_group_UV_7
+mutsig:SBS7c => mutsig:SBS_group_UV_7
+mutsig:SBS7d => mutsig:SBS_group_UV_7
+mutsig:SBS4 => mutsig:SBS_group_Tobacco_4/29/92
+mutsig:SBS29 => mutsig:SBS_group_Tobacco_4/29/92
+mutsig:SBS92 => mutsig:SBS_group_Tobacco_4/29/92
+mutsig:SBS2 => mutsig:SBS_group_APOBEC_2/13
+mutsig:SBS13 => mutsig:SBS_group_APOBEC_2/13
+mutsig:SBS10a => mutsig:SBS10
+mutsig:SBS10b => mutsig:SBS10
+mutsig:SBS10c => mutsig:SBS10
+mutsig:SBS10d => mutsig:SBS10
+mutsig:SBS9 => mutsig:SBS_group_DNA_Pol_9/10/20
+mutsig:SBS10 => mutsig:SBS_group_DNA_Pol_9/10/20
+mutsig:SBS20 => mutsig:SBS_group_DNA_Pol_9/10/20
+mutsig:SBS_group_DNA_Pol_9/10/20 => mutsig:SBS_group_DNA_Pol_broad_9/10/14/20
+mutsig:SBS14 => mutsig:SBS_group_DNA_Pol_broad_9/10/14/20
+mutsig:SBS6 => mutsig:SBS_group_dMMR_6/15/21/26/44
+mutsig:SBS15 => mutsig:SBS_group_dMMR_6/15/21/26/44
+mutsig:SBS21 => mutsig:SBS_group_dMMR_6/15/21/26/44
+mutsig:SBS26 => mutsig:SBS_group_dMMR_6/15/21/26/44
+mutsig:SBS44 => mutsig:SBS_group_dMMR_6/15/21/26/44
+mutsig:SBS_group_dMMR_6/15/21/26/44 => mutsig:SBS_group_dMMR_broad_6/14/15/20/21/26/44
+mutsig:SBS14 => mutsig:SBS_group_dMMR_broad_6/14/15/20/21/26/44
+mutsig:SBS20 => mutsig:SBS_group_dMMR_broad_6/14/15/20/21/26/44
+mutsig:SBS1 => mutsig:SBS_group_clock-like_1/5
+mutsig:SBS5 => mutsig:SBS_group_clock-like_1/5
+mutsig:SBS14 => mutsig:SBS_group_POLE_14/10a/10b
+mutsig:SBS10a => mutsig:SBS_group_POLE_14/10a/10b
+mutsig:SBS10b => mutsig:SBS_group_POLE_14/10a/10b
+mutsig:SBS20 => mutsig:SBS_group_POLD_20/10c/10d
+mutsig:SBS10c => mutsig:SBS_group_POLD_20/10c/10d
+mutsig:SBS10d => mutsig:SBS_group_POLD_20/10c/10d
