@@ -86,7 +86,6 @@ NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small 
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT04665206	catype:Solid tumour; *(NF2:oncogenic_mutation OR NF2:alteration)
 NCT04665206	catype:Solid tumour; *(WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
-NCT04720768	(BRAF:V600E OR BRAF:V600K OR BRAF:V600_missense_mutation)
 NCT04857372	catype:Mesothelioma
 NCT04857372	catype:Solid tumour; *(WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
 NCT04857372	catype:Solid tumour; *(NF2:oncogenic_mutation OR NF2:deletion)
@@ -96,7 +95,6 @@ NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catyp
 NCT05086692	*(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT05198934	KRAS:G12C; catype:Colorectal cancer
 NCT05288166	catype:Prostate cancer
-NCT03611868	(catype:Melanoma OR catype:Malignant peripheral nerve sheath tumor)
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
 NCT05054725	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma); *Unknown status
@@ -280,3 +278,4 @@ NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06585488	KRAS:alteration
 NCT05867251	*catype:Breast cancer
 NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
+NCT06581432	ERBB2:alteration
