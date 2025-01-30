@@ -1,6 +1,5 @@
 trial_id	eligibility_criteria
 ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
-ACTRN12619001117101	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; NOT ERBB2:overexpression; *NOT prior_therapy:Fulvestrant
 ACTRN12619001185156	*(CCNE1:amplification OR CCNE1:overexpression); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum; catype:Ovarian cancer
 ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12621000507886	catype:lymphoma; catype:B-cell lymphoma
