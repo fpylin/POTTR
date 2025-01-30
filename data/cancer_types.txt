@@ -658,6 +658,7 @@ Cancer	Solid tumour	Thymic epithelial cancer	Thymic carcinoma	Thymic lymphoepith
 Cancer	Solid tumour	Thymic epithelial cancer	Thymic clear cell adenocarcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymic neuroendocrine carcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymic squamous cell carcinoma|Thymus squamous cell carcinoma
+Cancer	Solid tumour	Thymic epithelial cancer	Thymic squamous cell carcinoma	Thymic basaloid carcinoma|Thymic basaloid squamous cell carcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymoma
 Cancer	Solid tumour	Thymic epithelial cancer|Thymic cancer
 Cancer	Solid tumour	Undifferentiated malignancy
