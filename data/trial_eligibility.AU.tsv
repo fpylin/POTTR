@@ -51,8 +51,8 @@ NCT03212404	catype:Small-Cell Lung Cancer
 NCT03212404	catype:Small-cell lung cancer
 NCT03212404	catype:Urothelial Carcinoma
 NCT03212404	catype:Urothelial carcinoma
-NCT03424005	NOT ERBB2:amplification; *NOT ESR1:protein_expression; *CD274:protein_expression
-NCT03424005	NOT ERBB2:amplification; *ESR1:protein_expression; PIK3CA:oncogenic_mutation
+NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; *ER:negative; *CD274:protein_expression
+NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; *ER:positive; PIK3CA:oncogenic_mutation
 NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
 NCT03486873	EXTENSION_STUDY
 NCT03821935	catype:Head and neck squamous cell carcinoma
@@ -269,7 +269,7 @@ NCT05907304	(KRAS:Q61 OR HRAS:Q61 OR NRAS:Q61)
 NCT05727176	FGFR2:fusion; catype:Cholangiocarcinoma
 NCT05987332	*NOT HLA-A2:A*02:01
 NCT05536141	catype:Clear cell renal cell carcinoma
-NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer); *NSCLC_AND_HNSCC_COHORT_FILLED
+NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer); *HNSCC_COHORT_FILLED
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
 NCT06509906	catype:Colorectal adenocarcinoma
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion)
@@ -278,3 +278,4 @@ NCT06585488	KRAS:alteration
 NCT05867251	*catype:Breast cancer
 NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
 NCT06581432	ERBB2:alteration
+NCT06710847	*(microsatellite_instability:high OR mismatch_repair:deficient)

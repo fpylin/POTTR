@@ -35,7 +35,7 @@ Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Acute promyelocytic
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic eosinophilic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic myelogenous leukaemia|Chronic myeloid leukaemia|CML
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic neutrophilic leukaemia
-Cancer	Haematological malignancy	Leukaemia	Waldenström Macroglobulinemia|Waldenstroms macroglobulinaemia|Waldenstroem's Macroglobulinemia
+Cancer	Haematological malignancy	Leukaemia	Waldenström Macroglobulinaemia|Waldenström Macroglobulinemia|Waldenstroms macroglobulinaemia|Waldenstrom macroglobulinaemia|Waldenstroem's Macroglobulinaemia
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma	Classical Hodgkin Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma|Hodgkins Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Follicular lymphoma|Follicular B-cell lymphoma
@@ -61,16 +61,19 @@ Cancer	Haematological malignancy	Mast cell disorder	Mast cell leukaemia
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell sarcoma
 Cancer	Haematological malignancy	Mast cell disorder	Systemic mastocytosis	Systemic mastocytosis with an associated hematological neoplasm
 Cancer	Haematological malignancy	Mast cell disorder	Systemic mastocytosis|Mastocytosis
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chronic Myelomonocytic Leukemia|CMML
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Chuvash polycythemia
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic syndrome|MDS
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic/Myeloproliferative disease	Chronic myelomonocytic leukaemia
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelodysplastic/Myeloproliferative disease|Myelodysplastic/myeloproliferative neoplasm
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Myelofibrosis|Primary myelofibrosis|Myeloproliferative neoplasm-associated myelofibrosis
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm	Polycythemia vera|Polycythemia ruba vera
-Cancer	Haematological malignancy	Myeloproliferative Neoplasm|Myeloproliferative disorder|Myeloproliferative disease
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Chronic Myelomonocytic Leukemia|CMML
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Chuvash polycythemia
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Essential thrombocythaemia
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Myelodysplastic syndrome|MDS
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Myelodysplastic/Myeloproliferative disease	Chronic myelomonocytic leukaemia
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Myelodysplastic/Myeloproliferative disease|Myelodysplastic/myeloproliferative neoplasm
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Myelofibrosis|Primary myelofibrosis|Myeloproliferative neoplasm-associated myelofibrosis
+Cancer	Haematological malignancy	Myeloproliferative neoplasm	Polycythemia vera|Polycythemia ruba vera
+Cancer	Haematological malignancy	Myeloproliferative neoplasm|Myeloproliferative disorder|Myeloproliferative disease
 Cancer	Haematological malignancy	Plasma cell disorder	Multiple myeloma|Myeloma
+Cancer	Haematological malignancy	Plasma cell disorder	AL amyloidosis|Amyloidosis
 Cancer	Haematological malignancy	Plasma cell disorder	Plasma cell leukaemia|Plasma cell leukemia
+Cancer	Haematological malignancy	Plasma cell disorder|Plasma cell dyscrasia
 Cancer	Haematological malignancy	Refractory anaemia
 Cancer	Haematological malignancy|Haematologic malignancy|Haematologic cancer|Liquid cancer|Blood cancer
 Cancer	Solid tumour	Biomarker-defined solid tumour	KRAS G12C mutant solid tumour

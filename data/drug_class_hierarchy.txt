@@ -1389,6 +1389,7 @@ cancer_therapy,EBV-targeting	allogeneic_T-cell_immunotherapy,EBV-targeting
 cancer_therapy,EED-targeting	EED_inhibitor
 cancer_therapy,EGFR-targeting	EGFR_inhibitor
 cancer_therapy,EGFR-targeting	EGFR_inhibitor,exon_20_selective
+cancer_therapy,EGFR-targeting	EGFR_CDAC_degrader
 cancer_therapy,EGFR-targeting	EGFR_inhibitor,first_generation
 cancer_therapy,EGFR-targeting	EGFR_inhibitor,fourth_generation
 cancer_therapy,EGFR-targeting	EGFR_inhibitor,second_generation
@@ -1412,6 +1413,7 @@ cancer_therapy,ERBB2-targeting	ERBB2_inhibitor,second_generation
 cancer_therapy,ERBB2-targeting	ERBB2_inhibitor,third_generation
 cancer_therapy,ERBB2-targeting	allogeneic_CAR-NK-cell_therapy,ERBB2-targeting
 cancer_therapy,ERBB2-targeting	bispecific_T-cell_engager,ERBB2-targeting
+cancer_therapy,ERBB2-targeting	bispecific_p95ERBB2/CD137_antibody
 cancer_therapy,ERBB2-targeting	immuno-oncology_therapy,ERBB2-targeting
 cancer_therapy,ERBB2-targeting	vaccine_therapy,ERBB2-targeting	vaccine_therapy,pNGVL3-based,ERBB2-targeting
 cancer_therapy,ERBB3-targeting	ERBB3_inhibitor
@@ -1630,6 +1632,7 @@ cancer_therapy,PI3K-delta-targeting	PI3K-delta_inhibitor
 cancer_therapy,PI3K-gamma-targeting	PI3K-gamma_inhibitor
 cancer_therapy,PI3K-targeting	PI3K_inhibitor
 cancer_therapy,PI3K_alpha-targeting	PI3K_alpha_inhibitor
+cancer_therapy,PI3K_alpha-targeting	PI3K_alpha-RAS_breaker
 cancer_therapy,PI3K_beta-targeting	PI3K_beta_inhibitor
 cancer_therapy,PI3K_delta-targeting	PI3K_delta_inhibitor
 cancer_therapy,PI3Kalpha_H1047R-targeting	PI3Kalpha_H1047R_inhibitor
@@ -1866,8 +1869,10 @@ endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,ne
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation	CYP17A1_inhibitor
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation	antiandrogen,nonsteroidal,second_generation
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR_PROTAC_degrader
+endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR_PROTAC_degrader	dual_AR_degrader_antagonist
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	GnRH_agonist
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	GnRH_antagonist
+endocrine_therapy	endocrine_therapy,androgen_axis-targeting	antiandrogen	antiandrogen,nonsteroidal	dual_AR_degrader_antagonist
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	antiandrogen	antiandrogen,nonsteroidal	antiandrogen,AR_NTD_inhibitor
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	antiandrogen	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,first_generation
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	antiandrogen	antiandrogen,nonsteroidal	antiandrogen,nonsteroidal,second_generation
