@@ -290,7 +290,7 @@ Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcino
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Endometrial adenosquamous carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Endometrial clear cell carcinoma|Uterine clear cell carcinoma|Endometrial clear cell adenocarcinoma|Uterine clear cell adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Endometrial neuroendocrine carcinoma
-Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Undifferentiated endometrial carcinoma|Undifferentiated uterine carcinoma
+Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Undifferentiated endometrial carcinoma|Undifferentiated uterine carcinoma|Malignant fibrous histiocytoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Uterine serous adenocarcinofibroma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Uterine serous carcinoma|Endometrial serous adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine carcinosarcoma|Uterine malignant Mullerian mixed tumour|Uterine Mullerian mixed tumour|Uterine MMMT|MMMT
@@ -390,6 +390,7 @@ Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	HER2-mutant non-small
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	KRAS-mutant non-small cell lung cancer|KRAS-mutant NSCLC
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	KRAS-mutant non-small cell lung cancer	KRAS G12C-mutant non-small cell lung cancer|KRAS G12C-mutant NSCLC
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Lung adenoid cystic carcinoma
+Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Lung pleomorphic carcinoma|Pleomorphic lung carcinoma
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Non-small cell lung cancer harbouring MET exon 14 skipping mutation
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Non-squamous non-small-cell lung cancer	Large cell neuroendocrine carcinoma of lung|Large cell neuroendocrine carcinoma|LCNEC|Large cell carcinoma lung
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Non-squamous non-small-cell lung cancer	Large cell undifferentiated carcinoma
