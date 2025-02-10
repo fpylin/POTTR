@@ -34,7 +34,7 @@ NCT03821935	catype:Urothelial cancer
 NCT03906331	RET:fusion; *Expanded access program
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification; *Expanded access program
 NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
-NCT04008030	(MSI:H OR MMR:deficient)
+NCT04008030	(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT04064060	NOT catype:solid tumours
 NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
