@@ -34,18 +34,11 @@ NCT03821935	catype:Urothelial cancer
 NCT03906331	RET:fusion; *Expanded access program
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification; *Expanded access program
 NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
-NCT04008030	(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT04064060	NOT catype:solid tumours
 NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
 NCT04185883	KRAS:G12C
 NCT04221035	catype:Neuroblastoma
-NCT04249843	(BRAF:alteration OR KRAS:alteration OR NRAS:alteration); NOT catype:Colorectal cancer; NOT catype:Pancreatic cancer; COHORT1_HAS_CLOSED
-NCT04249843	BRAF:alteration; BRAF:V600E; catype:Melanoma
-NCT04249843	BRAF:alteration; BRAF:V600E; catype:Non-small cell lung carcinoma
-NCT04249843	BRAF:alteration; NOT BRAF:V600E
-NCT04249843	NOT catype:Colorectal cancer; BRAF:V600E; prior_therapy:BRAF_V600_inhibitor
-NCT04249843	catype:Solid tumour; BRAF:class_2_mutation
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Colorectal cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Solid tumour
@@ -122,12 +115,6 @@ NCT05383352	catype:Pancreatic adenocarcinoma
 NCT05759728	catype:Colorectal adenocarcinoma
 NCT05513703	catype:Non-small cell lung cancer; NOT catype:Lung squamous cell carcinoma; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:systemic_therapy; *MET:amplification
 NCT05338970	catype:Non-squamous non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
-NCT04976634	catype:Hepatocellular carcinoma
-NCT04976634	catype:Colorectal adenocarcinoma; NOT microsatellite:instable; NOT mismatch_repair:deficient
-NCT04976634	catype:Pancreatic adenocarcinoma
-NCT04976634	catype:Biliary tract cancer
-NCT04976634	catype:Endometrial cancer
-NCT04976634	catype:Oesophageal squamous cell carcinoma
 ACTRN12623000223639	catype:Pancreatic adenocarcinoma
 NCT04612751	NOT prior_therapy:systemic_therapy
 NCT04612751	NOT prior_therapy:anti-PD-1_monoclonal_antibody
