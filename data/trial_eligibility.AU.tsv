@@ -108,6 +108,7 @@ NCT05487235	catype:Solid tumour; sensitive_to:GDC-1971
 NCT05487235	catype:Non-small cell lung cancer; *sensitive_to:GDC-1971; *NOT prior_therapy:systemic_therapy
 NCT05487235	catype:Head and neck squamous cell carcinoma; *sensitive_to:GDC-1971; *NOT prior_therapy:systemic_therapy
 NCT05487235	catype:Melanoma; NOT BRAF:oncogenic_mutation; *sensitive_to:GDC-1971; *prior_therapy:anti-PD-1_monoclonal_antibody; NOT catype:Mucosal melanoma; NOT catype:Uveal melanoma
+NCT05919537	catype:Lung squamous cell carcinoma
 NCT05919537	NRG1:fusion
 NCT05919537	NOT NRG1:fusion; ERBB3:extracellular_domain_mutation
 NCT05743036	BRAF:V600E; catype:Colorectal cancer
