@@ -309,7 +309,7 @@ sub get_drug_synonyms {
 
 # print "<[$arg]\t".join("|", (keys %{ $drug_synonyms{ $drug_preferred_name{ mk_signature( get_preferred_drug_name($arg) ) } } } ) )."\n";
 # 
-our $sep_regex = "[[:space:]\\-]?";
+our $sep_regex = "[[:space:]\\-\\[\\]]?";
 # our $sep_regex_qe = "\\\\Q$sep_regex\\\E";
 # 
 # sub mk_regex_search_tree(\@;$\%) {
@@ -361,7 +361,7 @@ sub get_drug_regex {
 	my @elems ;
 	
 	for my $arg (@_) {
-		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/i; $_ } grep { ! /\d+,\d+-|'|[\[\]]|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
+		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/ir =~ s/([\[\]])/\\$1/ir } grep { ! /\d+,\d+-|'|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
 	}
 	my %by_signature;
 	for my $e (@elems) {
@@ -399,7 +399,7 @@ sub get_drug_regex_M {
 	&ON_DEMAND_INIT;
 	my @elems ;
 	for my $arg (@_) {
-		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/i; $_ } grep { ! /\d+,\d+-|'|[\[\]]|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
+		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/ir =~ s/([\[\]])/\\$1/ir } grep { ! /\d+,\d+-|'|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
 	}
 	my %by_signature;
 	for my $e (@elems) {

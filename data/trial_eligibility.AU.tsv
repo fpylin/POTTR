@@ -87,7 +87,7 @@ NCT05501886	NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_th
 NCT05118789	ROS1:fusion
 NCT05338970	EGFR:oncogenic_mutation
 NCT04771130	*NOT prior_therapy:BCL2_inhibitor; *NOT prior_therapy:Azacitidine
-NCT05910827	*NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:deletion; *NOT PTEN:oncogenic_mutation; *NOT MET:amplification; catype:Lung squamous cell carcinoma; *prior_therapy:cancer_therapy,PD-1/PD-L1-targeting; NOT prior_therapy:docetaxel; NOT prior_therapy:cetuximab; *NOT prior_therapy:cancer_therapy,ERBB3-targeting; *prior_therapy:systemic_therapy; DISABLED
+NCT05910827	*NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:deletion; *NOT PTEN:oncogenic_mutation; *NOT MET:amplification; catype:Lung squamous cell carcinoma; *prior_therapy:cancer_therapy,PD-1/PD-L1-targeting; NOT prior_therapy:docetaxel; NOT prior_therapy:cetuximab; *NOT prior_therapy:cancer_therapy,ERBB3-targeting; *prior_therapy:systemic_therapy
 NCT05286801	(SMARCB1:loss OR SMARCB1:oncogenic_mutation OR SMARCB1:loss_of_protein_expression OR SMARCA4:loss OR SMARCA4:oncogenic_mutation OR SMARCA4:loss_of_protein_expression); *PAEDIATRIC_TRIAL
 NCT05646862	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; catype:Breast cancer; NOT catype:HER2-positive breast cancer
 NCT04879329	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
@@ -101,7 +101,6 @@ NCT05487235	catype:Solid tumour; sensitive_to:GDC-1971
 NCT05487235	catype:Non-small cell lung cancer; *sensitive_to:GDC-1971; *NOT prior_therapy:systemic_therapy
 NCT05487235	catype:Head and neck squamous cell carcinoma; *sensitive_to:GDC-1971; *NOT prior_therapy:systemic_therapy
 NCT05487235	catype:Melanoma; NOT BRAF:oncogenic_mutation; *sensitive_to:GDC-1971; *prior_therapy:anti-PD-1_monoclonal_antibody; NOT catype:Mucosal melanoma; NOT catype:Uveal melanoma
-NCT05919537	catype:Lung squamous cell carcinoma
 NCT05919537	NRG1:fusion
 NCT05919537	NOT NRG1:fusion; ERBB3:extracellular_domain_mutation
 NCT05743036	BRAF:V600E; catype:Colorectal cancer
@@ -160,7 +159,6 @@ NCT06119581	KRAS:G12C; *NOT prior_therapy:systemic_therapy; catype:Non-small cel
 NCT05462717	KRAS:G12C
 NCT05328908	catype:Colorectal adenocarcinoma; NOT prior_therapy:Regorafenib; NOT prior_therapy:Trifluridine; NOT prior_therapy:immune_checkpoint_blockade; *prior_therapy:fluoropyrimidine; *prior_therapy:Oxaliplatin; *prior_therapy:Irinotecan; NOT prior_therapy:Lonsurf
 NCT05775289	*NOT prior_therapy:systemic_therapy; NOT_RECRUITING
-NCT03768063	prior_therapy:Atezolizumab
 NCT05450692	NOT EGFR:exon_19_deletion; NOT EGFR:L858R; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody); *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin)
 NCT05867121	catype:Non-small cell lung cancer
 NCT05867121	catype:Gastric cancer
@@ -236,3 +234,8 @@ NCT06585488	KRAS:alteration
 NCT05867251	*catype:Breast cancer
 NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
 NCT06581432	ERBB2:alteration
+NCT06625775	catype:Breast cancer; (ERBB2:overexpression OR ERBB2:amplification)
+NCT06625775	catype:Breast cancer; ER:positive
+NCT06625775	catype:Colorectal cancer; KRAS:oncogenic_mutation
+NCT06625775	catype:Non-small cell lung cancer; KRAS:oncogenic_mutation
+NCT06533059	AKT1:E17K; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT HRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:PI3K_inhibitor; *NOT prior_therapy:mTOR_inhibitor
