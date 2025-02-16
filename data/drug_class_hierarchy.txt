@@ -2036,6 +2036,7 @@ immune_checkpoint_blockade,CD47-targeting	bispecific_CD47/CD19_antibody
 immune_checkpoint_blockade,CD47-targeting	bispecific_ERBB2/CD47_antibody
 immune_checkpoint_blockade,CD47-targeting	bispecific_PD-1/CD47_antibody
 immune_checkpoint_blockade,CD47-targeting	bispecific_PD-L1/CD47_antibody
+immune_checkpoint_blockade,CD47-targeting	CD47-blocking_fusion_protein
 immune_checkpoint_blockade,CD73-targeting	anti-CD73_monoclonal_antibody
 immune_checkpoint_blockade,CTLA-4-targeting	anti-CTLA-4_monoclonal_antibody
 immune_checkpoint_blockade,CTLA-4-targeting	bispecific_PD-1/CTLA-4_antibody

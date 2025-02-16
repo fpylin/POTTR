@@ -595,6 +595,7 @@ Etigilimab|OMP 313M32|OMP-313M32|WHO 10742	anti-TIGIT_monoclonal_antibody
 Etirinotecan Pegol|NKTR 102|NKTR-102|Onzeald|PEG-Irinotecan	topoisomerase_inhibitor
 Etoposide|Etoposide phosphate|Vepesid|VP-16|Demethyl Epipodophyllotoxin Ethylidine Glucoside|EPEG|Lastet|Toposar|VP 16|VP16	topoisomerase_inhibitor
 Etrumadenant|AB928|AB 928|AB-928	adenosine_A2aR_and_A2bR_antagonist
+Evorpacept|ALX148	CD47-blocking_fusion_protein
 Everolimus|Afinitor|RAD001|Certican|RAD 001|Votubia|Zortress	mTORC1_inhibitor
 Evolocumab	anti-PCSK9_monoclonal_antibody
 Exarafenib|KIN-2787	pan-RAF_inhibitor
