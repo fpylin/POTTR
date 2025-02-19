@@ -229,7 +229,7 @@ NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous 
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
 NCT06509906	catype:Colorectal adenocarcinoma
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion)
-NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression)
+NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT06585488	KRAS:alteration
 NCT05867251	*catype:Breast cancer
 NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
@@ -239,3 +239,4 @@ NCT06625775	catype:Breast cancer; ER:positive
 NCT06625775	catype:Colorectal cancer; KRAS:oncogenic_mutation
 NCT06625775	catype:Non-small cell lung cancer; KRAS:oncogenic_mutation
 NCT06533059	AKT1:E17K; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT HRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:PI3K_inhibitor; *NOT prior_therapy:mTOR_inhibitor
+NCT06380751	catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation); ER:positive: HER2:negative
