@@ -47,8 +47,8 @@ NCT04460456	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expres
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
-NCT04665206	catype:Solid tumour; NOT WWTR1:fusion; NOT WWTR1:WWTR1-CAMTA1_fusion; *(NF2:oncogenic_mutation OR NF2:alteration)
-NCT04665206	catype:Solid tumour; NOT NF2:oncogenic_mutation; NOT NF2:alteration; *(WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
+NCT04665206	catype:Solid tumour; NOT WWTR1:fusion; NOT WWTR1:WWTR1-CAMTA1_fusion; (NF2:oncogenic_mutation OR NF2:alteration)
+NCT04665206	catype:Solid tumour; NOT NF2:oncogenic_mutation; NOT NF2:alteration; (WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
 NCT04857372	catype:Mesothelioma
 NCT04857372	catype:Solid tumour; NOT NF2:oncogenic_mutation; NOT NF2:alteration; *(WWTR1:fusion OR WWTR1:WWTR1-CAMTA1_fusion)
 NCT04857372	catype:Solid tumour; NOT WWTR1:fusion; NOT WWTR1:WWTR1-CAMTA1_fusion; *(NF2:oncogenic_mutation OR NF2:deletion)
@@ -206,7 +206,6 @@ NCT05203172	BRAF:V600E
 NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *ERBB2:overexpression; *NOT ERBB2:oncogenic_mutation
 NCT06162572	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *CD274:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:alteration; NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
 NCT06208657	trial_type:paediatric
-NCT03906669	trial_type:curative
 NCT06343402	KRAS:G12C; (catype:Non-small cell lung cancer OR catype:Colorectal adenocarcinoma)
 NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
 NCT05352672	*NOT prior_therapy:systemic_therapy
@@ -231,6 +230,7 @@ NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate ca
 NCT06509906	catype:Colorectal adenocarcinoma
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion)
 NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); *(info:panel:AVENIO OR info:panel:FM1 CDx)
+NCT06360354	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06585488	KRAS:alteration
 NCT05867251	*catype:Breast cancer
 NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
@@ -241,3 +241,4 @@ NCT06625775	catype:Colorectal cancer; KRAS:oncogenic_mutation
 NCT06625775	catype:Non-small cell lung cancer; KRAS:oncogenic_mutation
 NCT06533059	AKT1:E17K; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT HRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:PI3K_inhibitor; *NOT prior_therapy:mTOR_inhibitor
 NCT06380751	catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation); ER:positive: HER2:negative
+NCT06750094	catype:Colorectal adenocarcinoma; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation
