@@ -42,7 +42,7 @@ BCR-ABL1_inhibitor	BCR-ABL1/VEGFR/FGFR/TIE2/FLT3_inhibitor
 BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,first_generation
 BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,second_generation
 BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,third_generation
-BCR-ABL_inhibitor
+BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,allosteric
 BET_inhibitor
 BET_inhibitor	PI3K/BET_inhibitor
 BMI-1_inhibitor
@@ -378,6 +378,7 @@ PI3K-gamma_inhibitor	PI3K-delta/gamma/SIK3_inhibitor
 PI3K/BET_inhibitor
 PI3K/mTOR_inhibitor
 PI3K_alpha_inhibitor
+PI3K_alpha_inhibitor	PI3K_alpha_inhibitor,allosteric,mutant-selective
 PI3K_alpha_inhibitor	PI3K_alpha/PI3K_delta_inhibitor
 PI3K_alpha_inhibitor	dual_PI3K/mTOR_inhibitor
 PI3K_beta_inhibitor
@@ -1278,6 +1279,7 @@ cancer_therapy	cancer_therapy,type_1_PRMT-targeting
 cancer_therapy	cell_penetrating_peptide
 cancer_therapy	cell_therapy	CAR-NK-cell_therapy
 cancer_therapy	cell_therapy	CAR-T-cell_therapy
+cancer_therapy	cell_therapy	autologous_tumor-infiltrating_lymphocytes_therapy
 cancer_therapy	cytotoxic_chemotherapy	
 cancer_therapy	endocrine_therapy	
 cancer_therapy	radiopharmaceutics	nanoparticle_radiopharmaceutics
@@ -1325,9 +1327,9 @@ cancer_therapy,BCMA-targeting	bispecific_T-cell_engager,BCMA-targeting
 cancer_therapy,BCMA-targeting	immuno-oncology_therapy,BCMA-targeting
 cancer_therapy,BCMA-targeting	trispecific_T-cell_engager,BCMA/CD38-targeting
 cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor
-cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor,first_generation
-cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor,second_generation
-cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor,third_generation
+cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,first_generation
+cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,second_generation
+cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor	BCR-ABL1_inhibitor,third_generation
 cancer_therapy,BET-targeting	BET_inhibitor
 cancer_therapy,BMI-1-targeting	BMI-1_inhibitor
 cancer_therapy,BRAF-targeting	BRAF_inhibitor
@@ -2448,3 +2450,9 @@ virus-based_therapy	oncolytic_virus	replication-competent_oncolytic_adenovirus
 virus-based_therapy	oncolytic_virus	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
 virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
 virus-based_therapy	viral_nanoparticle_drug_conjugates
+agnostic_antibody,CD28-targeting	bispecific_CD38/CD28_antibody
+cancer_therapy	cancer_therapy,MUC16-targeting
+cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor,allosteric
+cancer_therapy,MUC16-targeting	immuno-oncology_therapy,MUC16-targeting
+immuno-oncology_therapy,CD38-targeting	bispecific_CD38/CD28_antibody
+immuno-oncology_therapy,MUC16-targeting	bispecific_T-cell_engager,MUC16-targeting

@@ -191,6 +191,16 @@ sub is_a { # catype is-a catype
 }
 
 
+sub get_parents { 
+	&ON_DEMAND_INIT;
+	
+	my $x = mk_signature( get_preferred_catype_term($_[0]) );
+	
+	return sort map { $catype_preferred_term{$_} } ( exists $catype_is_a{$x} ? ( keys %{ $catype_is_a{$x} } ) : () );
+}
+
+
+
 sub get_ancestors { 
 	&ON_DEMAND_INIT;
 	

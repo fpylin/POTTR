@@ -221,20 +221,22 @@ sub load_module_cancer_type_mapping {
 			my $match = CancerTypes::match_catype_whole_word($1);
 			my @retval = ( "(catype-processed)" );
 			if ( defined $match ) {
-				my @ancerstors = CancerTypes::get_ancestors( $match );
-				push @retval, "catype:$_" for (@ancerstors);
+				push @retval, "catype:$match"; 
 				return @retval ;
 			}
-
 		return @retval ;
 		}
 	);
+
+	my @catype_rules ;
+	my @catypes = CancerTypes::get_all_catypes();
+	for my $c (@catypes) {
+		for my $p ( CancerTypes::get_parents($c) ) {
+			push @catype_rules, mkrule( [ "catype:$c" ], [ "catype:$p" ] ),
+		}
+	}
 	
-# 	$rs = $self->{'modules'}->add_module('01C - Define solid tumours');
-	$rs->load(
-		mkrule( ["(catype-processed)", "NOT catype:Haematological malignancy", "NOT catype:Myeloproliferative Neoplasm", "NOT catype:Leukaemia", "NOT catype:Lymphoma", "NOT catype:"], ["catype:Solid tumour"] ),
-		mkrule( ["(catype-processed)", "catype:Leukaemia"], ["catype:Haematologic cancer"] )
-	);
+	$rs->load( @catype_rules );
 }
 
 

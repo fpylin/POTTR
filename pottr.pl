@@ -10,6 +10,7 @@
 #
 # Copyright 2019-2022, Frank Lin & Kinghorn Centre for Clinical Genomics, 
 #                      Garvan Institute of Medical Research, Sydney
+#           2023-2025, Frank Lin & Garvan Institute of Medical Research, Sydney
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,10 +37,11 @@
 #   Version 0.93 - 14 Sep 2020
 #   Version 0.95 - 24 Dec 2021
 #   Version 0.96 - 09 Apr 2023
+#   Version 0.97 - 19 Feb 2025
 #
 ##############################################################################
 
-our $POTTR_version = '0.96';
+our $POTTR_version = '0.97';
 our $POTTR_title = qq|Precision Oncology Treatment and Trial Recommender (Version $POTTR_version)|;
 
 our $POTTR_subtitle = qq|
@@ -84,6 +86,7 @@ use Data::Dumper;
 sub uniq { my %a; $a{$_} = 1 for(grep { defined } @_) ; return keys %a; }
 sub trim { return $_[0] =~ s/^\s+|\s+$//gr }
 sub max { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ > $v) ; } return $v; }
+sub json_array { return "[". join(",", (map { "\"".trim(s/(["\\])/$1/gr)."\"" } @_) ). "]"; }
 sub column {
 	my @lines = @_;
 	my @levels;
@@ -203,6 +206,7 @@ my $f_quiet = 1;
 my $f_verbose = undef;
 my $f_print_rules = undef;
 my $f_tsv = undef;
+my $f_json = undef;
 
 my $f_config = "pottr_config";
 
@@ -234,6 +238,7 @@ GetOptions (
 	"print-rules|r"           => \$f_print_rules,
 	"clinical-report|p"       => \$f_clinical_report,
 	"export-tsv|t"            => \$f_tsv,
+	"export-json|j"           => \$f_json,
 	"interpret-catypes|C"     => \$f_interp_catype,
 	"interpret-variants|V"    => \$f_interp_variants,
 	"list-evidence|E"         => \$f_list_evidence,
@@ -557,8 +562,8 @@ sub extract_preferential_trials {
 		my %referring_drugs        = map { /recommendation_tier:(.+):\S+/; $1 => 1 }            grep { /recommendation_tier:.+:\S+/ }            @tags ;
 		my %referring_drug_classes = map { /recommendation_tier_drug_class:(.+):\S+/; $1 => 1 } grep { /recommendation_tier_drug_class:.+:\S+/ } @tags ;
 		
-		my $evidence = join(',', sort (  uniq( ( map { /^evidence:(.+)/; split /, /, $1 } grep { /evidence:.+/ } @tags ) ) ) );
-		my $kblines = join(',', sort {$a <=> $b} (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
+		my $evidence = join(',', sort ( uniq( grep { defined } ( map { /^evidence:(.+)/; split /, /, $1 } grep { /evidence:.+/ } @tags ) ) ) );
+		my $kblines = join(',', sort {$a <=> $b} ( uniq( grep { defined } (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
 		
 		my %referring_alterations; 
 		
@@ -647,6 +652,29 @@ sub gen_catypes_terminal {
 	return $output;
 }
 
+#######################################################################################################################################
+sub gen_catypes_report {
+	my $output .= "Cancer types matched"."\n";
+	for my $row ( extract_results_catypes(@treatment_match_result) ) {
+		$row =~ s/catype.*?://;
+		$output .= "$row\n";
+	}
+	return $output;
+}
+#######################################################################################################################################
+sub gen_catypes_json {
+	my $output .= "["; # "\"catypes_matched\":[";
+	my $cnt = 0;
+	for my $row ( extract_results_catypes(@treatment_match_result) ) {
+		$row =~ s/catype.*?://;
+		$output .= ',' if $cnt ++;
+		$output .= "\"$row\"";
+	}
+	$output .= "]";
+	return $output;
+}
+
+#######################################################################################################################################
 sub gen_catypes_HTML {
 	my $output = "<h2>CANCER TYPES MATCHED</h2>\n";
 	for my $row ( extract_results_catypes(@treatment_match_result) ) {
@@ -666,6 +694,30 @@ sub gen_prior_therapies_terminal {
 	return $output;
 }
 
+#######################################################################################################################################
+sub gen_prior_therapies_report {
+	my $output = "PRIOR THERAPIES MATCHED"."\n";
+	for my $row ( extract_results_prior_therapies(@treatment_match_result) ) {
+		$row =~ s/prior_therap.+?://;
+		$output .= "$row\n";
+	}
+	return $output;
+}
+
+#######################################################################################################################################
+sub gen_prior_therapies_json {
+	my $output .= "["; # "\"prior_therapies\":[";
+	my $cnt = 0;
+	for my $row ( extract_results_prior_therapies(@treatment_match_result) ) {
+		$row =~ s/prior_therap.+?://;
+		$output .= ',' if $cnt ++;
+		$output .= "\"$row\"";
+	}
+	$output .= "]";
+	return $output;
+}
+
+#######################################################################################################################################
 sub gen_prior_therapies_HTML {
 	my $output = "<h2>PRIOR THERAPIES MATCHED</h2>\n";
 	for my $row ( extract_results_prior_therapies(@treatment_match_result) ) {
@@ -678,7 +730,7 @@ sub gen_prior_therapies_HTML {
 
 #######################################################################################################################################
 
-sub gen_biomarker_terminal_append_AMP_LOE {
+sub gen_biomarkers_terminal_append_AMP_LOE {
 	my $x = shift;
 	my $bm_hashref = shift;
 	return undef if ! defined $x;
@@ -689,7 +741,7 @@ sub gen_biomarker_terminal_append_AMP_LOE {
 	return $retval;
 }
 
-sub gen_biomarker_terminal {
+sub gen_biomarkers_terminal {
 	my $output = hl(37, "BIOMARKER ALTERATIONS")."\n";
 	
 	my @lines ;
@@ -698,10 +750,10 @@ sub gen_biomarker_terminal {
 		for my $i (0 .. 20) {
 			my $line  = '';
 			$line .= ( ($i == 0) ? $$row{'biomarker'} : '' )."\t";
-			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'aberration'} }[$i]    , $row)  // '' )."\t";
-			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'specifics'} }[$i]     , $row)  // '' )."\t";
-			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'consequence'} }[$i]   , $row)  // '' )."\t";
-			$line .= ( gen_biomarker_terminal_append_AMP_LOE( @{ $$row{'oncogenicity'} }[$i]  , $row)  // '' );
+			$line .= ( gen_biomarkers_terminal_append_AMP_LOE( @{ $$row{'aberration'} }[$i]    , $row)  // '' )."\t";
+			$line .= ( gen_biomarkers_terminal_append_AMP_LOE( @{ $$row{'specifics'} }[$i]     , $row)  // '' )."\t";
+			$line .= ( gen_biomarkers_terminal_append_AMP_LOE( @{ $$row{'consequence'} }[$i]   , $row)  // '' )."\t";
+			$line .= ( gen_biomarkers_terminal_append_AMP_LOE( @{ $$row{'oncogenicity'} }[$i]  , $row)  // '' );
 			$line .= "\n";
 			last if $line =~ /^\s*$/;
 			push @lines, $line ;
@@ -711,20 +763,31 @@ sub gen_biomarker_terminal {
 	return $output ;
 }
 
-sub gen_biomarker_report {
+sub gen_biomarkers_report {
 	my $output ; # = "List of alterated genes, biomarkers, or tumoural molecular features\n";
 	
-	$output .= join("\t", "Gene", "Aberration", "Specification", "Consequence", "Oncogenicity")."\n";
-	for my $row ( extract_results_biomarkers(@treatment_match_result) ) {
-		$output .= join("\t", $$row{'biomarker'} , 
-			join(";", @{ $$row{'aberration'} } ) ,
-			join(";", @{ $$row{'specifics'} } ) ,
-			join(";", @{ $$row{'consequence'} } ) ,
-			join(";", @{ $$row{'oncogenicity'} } ) ,
-			)."\n";
+# 	$output .= join("\t", "Biomarker", "Aberration", "Specification", "Consequence", "Oncogenicity", "AMP.LOE", "is_original_fact")."\n";
+	$output .= join("\t", "Biomarker", "Alteration", "Alteration.Type", "AMP.LOE", "Is.Original")."\n";
+	my @report = extract_results_biomarkers(@treatment_match_result) ;
+	my @unsorted ;
+	for my $row ( @report ) {
+		for my $at ( 'aberration', 'specifics', 'consequence' ) {
+			next if ! exists $$row{$at};
+			for my $a ( @{ $$row{$at} }  ) {
+				push @unsorted, { biomarker => $$row{'biomarker'}, alteration => $a, alteration_type => $at, AMP_LOE => $$row{'AMP.LOE'}{$a} // 'NA',  is_original_fact => $$row{'is_original_fact'}{$a} // 'NA' };
+			}
+		}
 	}
+	my @sorted = sort { 
+		( $$a{AMP_LOE} cmp $$b{AMP_LOE} ) ||
+		( $$b{is_original_fact} <=> $$a{is_original_fact} ) ||
+		( $$a{biomarker} cmp $$b{biomarker} ) ||
+		( $$a{alteration} cmp $$b{alteration} )
+	} @unsorted;
+	$output .= join("\t", $$_{biomarker}, $$_{alteration}, $$_{alteration_type}, $$_{AMP_LOE},  $$_{is_original_fact} )."\n" for @sorted ;
 	return $output ;
 }
+
 
 sub clean_HTML {
 	my $x = shift;
@@ -817,6 +880,24 @@ sub gen_drug_sens_report {
 	$output .= gen_drug_sens_table("Resistant", "Therapy",        @results_resi_to_drugs );
 	$output .= gen_drug_sens_table("Resistant", "Therapy class",  @results_resi_drug_class);
 
+	return $output;
+}
+
+sub gen_drug_sens_json {
+
+	sub gen_drug_sens_json_table {
+		my @results_to_filter = @_;
+		my $output = '';
+		
+		$output = join("\t", 'Therapy or class', 'Tier', 'Biomarker(s)', 'LOM', 'Alteration(s)', 'Cancer types', 'Evidence', 'KBLines')."\n";
+		for my $row ( extract_drug_sensitivity(@results_to_filter) ) {
+			$output .= join("\t", trim($$row{'therapy'}), $$row{'tier'}, $$row{'biomarker'}, $$row{'lom'}, $$row{'alterations'}, $$row{'referring_catypes'}, $$row{'evidence'}, $$row{'kblines'})."\n";
+		}
+		return TSV->new_from_string( $output )->to_json();
+	}
+	
+	my $output = '{"therapy": {"sensitive": '.gen_drug_sens_json_table(@results_sens_to_drugs).',"resistant": '.gen_drug_sens_json_table(@results_resi_to_drugs).'},"therapy_class": {"sensitive": '.gen_drug_sens_json_table(@results_sens_drug_class).',"resistant": '.gen_drug_sens_json_table(@results_resi_drug_class).'}}';
+	
 	return $output;
 }
 
@@ -919,7 +1000,7 @@ sub gen_HTML_biomarker_evidence_report {
 	return $output;
 }
 
-sub gen_biomarker_evidence_report {
+sub gen_biomarkers_evidence_report {
 	my $output ; # = "Evidence of matched target therapies:\n";
 	$output .= join("\t", "Biomarker", "Drug", "Level of Evidence", "Reference", "KBLines")."\n"; # "Status", "Relevance", "Hospital", 
 
@@ -945,7 +1026,7 @@ sub gen_biomarker_evidence_report {
 	return $output;
 }
 
-sub gen_biomarker_evidence_terminal {
+sub gen_biomarkers_evidence_terminal {
 	my $output = "\e[1;37mEVIDENCE OF BIOMARKER-MATCHED THERAPIES\e[0m\n";
 	my @lines ;
 	push @lines, join("\t", "Biomarker", "Drug", "KB Name", "Level of Evidence", "Reference")."\n"; # "Status", "Relevance", "Hospital", 
@@ -1078,17 +1159,17 @@ sub gen_HTML_therapy_summary_report {
 
 #############################################################################################################################################################
 
-sub gen_preferential_trial_report {
+sub gen_preferential_trials_report {
 	@results_preferential_trials = sort { cmp_preferential_trials($a, $b) } @results_preferential_trials ;
 
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score", 
-		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Biomarker tier score", "Trial phase tier score", "Trial match criteria", 
-		"Level of matching",
+		"Trial match criteria", "Level of matching",
+		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Biomarker tier score", "Trial phase tier score", 
 		"Referring cancer types",  "Referring biomarker",  "Referring alterations",  "Referring drugs", "Referring drug classes",     
 		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", 
-		"Evidence", "KB Lines",
-		"External weblink", "Assumptions"
+		"External weblink", "Evidence", "KB Lines",
+		"Assumptions"
 		)."\n";
 
 	my $cnt = 1;
@@ -1105,11 +1186,12 @@ sub gen_preferential_trial_report {
 		my $healthcondition       = join("; ", @{ $$row{'healthcondition'} } ); 
 		my $postcodes             = join("; ", @{ $$row{'postcodes'} });
 		my $trial_match_criteria  = join("; ", @{ $$row{'trial_match_criteria'} });
-
 		$output .= join("\t", (
 				$cnt, 
 				$$row{'trial_id'}, 
 				$$row{'pref_trial_score'},
+				$trial_match_criteria,
+				$$row{'LOM'},
 				$$row{'matched_trial_class_tier'},
 				$$row{'matched_trial_tier'},
 				$$row{'matched_trial_drug_maturity'},
@@ -1118,13 +1200,11 @@ sub gen_preferential_trial_report {
 				$$row{'matched_trial_combo_class_maturity'},
 				$$row{'matched_trial_phase_tier_score'},
 				$$row{'matched_trial_biomarker_tier'},
-				$trial_match_criteria,
-				$$row{'LOM'},
-				join("; ", sort( uniq( keys %{ $$row{'referring_catypes'} } ) ) ) ,
-				join("; ", sort( uniq( keys %{ $$row{'referring_genes'} } ) ) ) ,
-				join("; ", sort( uniq( keys %{ $$row{'referring_alterations'} } ) ) ) ,
-				join("; ", sort( uniq( keys %{ $$row{'referring_drugs'} } ) ) ) ,
-				join("; ", sort( uniq( keys %{ $$row{'referring_drug_classes'} } ) ) ) ,
+				join("; ", sort( uniq( grep { defined } keys %{ $$row{'referring_catypes'} } ) ) ) ,
+				join("; ", sort( uniq( grep { defined } keys %{ $$row{'referring_genes'} } ) ) ) ,
+				join("; ", sort( uniq( grep { defined } keys %{ $$row{'referring_alterations'} } ) ) ) ,
+				join("; ", sort( uniq( grep { defined } keys %{ $$row{'referring_drugs'} } ) ) ) ,
+				join("; ", sort( uniq( grep { defined } keys %{ $$row{'referring_drug_classes'} } ) ) ) ,
 				$matched_drug_names,
 				$matched_drug_classes,
 				$healthcondition,
@@ -1144,7 +1224,7 @@ sub gen_preferential_trial_report {
 }
 
 
-sub gen_preferential_trial_terminal {
+sub gen_preferential_trials_terminal {
 	@results_preferential_trials = sort { cmp_preferential_trials($a, $b) } @results_preferential_trials ;
 
 	my $output = "\n\n\e[1;37mBIOMARKER-MATCHED, RATIONALLY PRIORITISED CLINICAL TRIALS\e[0m\n";
@@ -1227,6 +1307,12 @@ sub gen_interpretations_terminal {
 	
 }
 
+sub gen_interpretations_json {
+	@results_interpretations = map { s/^interpretation://; s/(.*)(\[.*)/$1\n\t$2/; $_ } @results_interpretations;
+
+	return json_array( @results_interpretations ) ;
+}
+
 sub mk_trial_href {
 	my $x = shift;
 	
@@ -1288,7 +1374,24 @@ sub gen_HTML_preferential_trial_report {
 }
 
 
+###########
+# JSON output 
+sub gen_biomarkers_json {
+	return TSV->new_from_string( gen_biomarkers_report() )->to_json();
+}
+sub gen_biomarkers_evidence_json {
+	return TSV->new_from_string( gen_biomarkers_evidence_report() )->to_json();
+}
+sub gen_therapy_summary_json {
+	return TSV->new_from_string( gen_therapy_summary_report() )->to_json();
+}
+sub gen_preferential_trials_json {
+	return TSV->new_from_string( gen_preferential_trials_report() )->to_json();
+}
 
+
+
+###########
 
 if ($f_webpage) {
 	$f_title //= '';
@@ -1344,11 +1447,25 @@ HTMLTAIL
 		print "</div>\n";
 	}
 } elsif ($f_tsv) {
-	print gen_biomarker_report() if $f_interp_variants ; 
+	print gen_biomarkers_report() if $f_interp_variants ; 
 	print gen_drug_sens_report() if $f_list_therapies;
-	print gen_biomarker_evidence_report() if $f_list_evidence ; 
+	print gen_biomarkers_evidence_report() if $f_list_evidence ; 
 	print gen_therapy_summary_report() if $f_list_therapy_summaries ; 
-	print gen_preferential_trial_report() if $f_list_trials; 
+	print gen_preferential_trials_report() if $f_list_trials; 
+} elsif ($f_json) {
+	my %json_parts ;
+	$json_parts{'input'}               = json_array( @input ) ;
+	$json_parts{'catype_matched'}      = gen_catypes_json() if $f_interp_catype ;
+	$json_parts{'prior_therapies'}     = gen_prior_therapies_json() if $f_interp_catype ;
+	$json_parts{'biomarkers'}          = gen_biomarkers_json() if $f_interp_variants ; 
+	$json_parts{'drug_sens'}           = gen_drug_sens_json() if $f_list_therapies;
+	$json_parts{'evidence'}            = gen_biomarkers_evidence_json() if $f_list_evidence ; 
+	$json_parts{'therapy_summary'}     = gen_therapy_summary_json() if $f_list_therapy_summaries ; 
+	$json_parts{'preferential_trials'} = gen_preferential_trials_json() if $f_list_trials; 
+# 	$json_parts{'interpretations'}     = gen_interpretations_json() if $f_interpretation; 
+# 	$json_parts{'facts'}               = json_array( @treatment_match_result ) ;
+	my @wanted = ( 'input', 'catype_matched', 'prior_therapies', 'biomarkers', 'drug_sens', 'evidence', 'therapy_summary', 'preferential_trials', 'interpretations', 'facts' );
+	print "{".join(",", map { "\"$_\": $json_parts{$_}" } grep {exists $json_parts{$_} } @wanted)."}";
 } elsif (! $f_verbose) {
 
 # 	print hl
@@ -1365,11 +1482,11 @@ HTMLTAIL
 	
 	print gen_catypes_terminal()."\n" if $f_interp_catype ;
 	print gen_prior_therapies_terminal()."\n" if $f_interp_catype ;
-	print gen_biomarker_terminal()."\n" if $f_interp_variants ; 
+	print gen_biomarkers_terminal()."\n" if $f_interp_variants ; 
 	print gen_drug_sens_terminal()."\n" if $f_list_therapies;
-	print gen_biomarker_evidence_terminal()."\n" if $f_list_evidence ; 
+	print gen_biomarkers_evidence_terminal()."\n" if $f_list_evidence ; 
 	print gen_therapy_summary_terminal()."\n" if $f_list_therapy_summaries;
-	print gen_preferential_trial_terminal()."\n" if $f_list_trials; 
+	print gen_preferential_trials_terminal()."\n" if $f_list_trials; 
 	print gen_interpretations_terminal()."\n" if $f_interpretation; 
 }
 
@@ -1440,6 +1557,7 @@ Options for formatting output :
    -p    --clinical-report        Produce a clinical report based on biomarker/molecular profile
          --title                  Title of the report (e.g., patient name)
    -t    --export-tsv             Export recommendations as in Tab-Separated Value (TSV) format 
+   -j    --export-json            Export recommendations as in JavaScript Object Notation (JSON) format 
                                
 Options for displaying individual sections:                               
 

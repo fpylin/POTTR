@@ -91,6 +91,19 @@ sub new_from_data {
     return $self;
 }
 
+###############################################################################
+sub new_from_string {
+    my ($class, $string) = @_;
+    
+    my $self = { 'filename' => '' };
+    
+    bless($self, $class);
+    
+    $self->import_data( (map { "$_\n" } split /\n/, $string ) );
+    
+    return $self;
+}
+
 
 ###############################################################################
 sub load {
@@ -272,6 +285,30 @@ sub to_string {
     return @output;
 }
 
+###############################################################################
+
+sub json_escape { my $str = shift; return ($str =~ s/(["\\\/])/\\$1/gr =~ s/\n/\\n/gr =~ s/\r/\\r/gr =~ s/\t/\\t/gr =~ s/\f/\\f/gr ); }
+
+sub to_json {
+    my $self = shift;
+    
+    my @fields = @{ $self->{'fields'} };
+    my %is_numeric = map { $_ => $self->is_numeric($_) } @fields ;
+
+    my @row_strs ;
+    for my $row ( @{ $self->{'data'} } ) {
+        my %a = %{ $row };
+		push @row_strs, "{". join(",", ( map { "\"$_\":" . ( defined($a{$_}) ? ( $is_numeric{$_} ? $a{$_} : "\"".json_escape($a{$_})."\"" ) : 'null' ) } @fields ) ) ."}" ;
+    }
+    
+    my $output = "{".
+		"\"fields\": [". join(", ", map { "\"$_\"" } @fields) ."],".
+		"\"data\": [" . join(",", @row_strs) . "]".
+    	"}";
+    
+    return $output ;
+}
+
 
 ###############################################################################
 sub ith_field {
@@ -311,7 +348,7 @@ sub n_rows {
 sub levels {
     my $self = shift;
     my $field = shift;
-    my @x = map { ${$_}{$field} } @{ $self->{'data'} };
+    my @x = grep { defined } map { ${$_}{$field} } @{ $self->{'data'} };
     my @u = uniq(@x);
     return @u;
 }

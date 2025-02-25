@@ -14,13 +14,15 @@ Cancer	Haematological malignancy	Histiocytic and dendritic cell neoplasm|Histioc
 Cancer	Haematological malignancy	Leukaemia	Blastic plasmacytoid dendritic cell neoplasm|NK cell leukaemia
 Cancer	Haematological malignancy	Leukaemia	Chronic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Chronic leukaemia	Chronic eosinophilic leukaemia
-Cancer	Haematological malignancy	Leukaemia	Chronic leukaemia	Chronic myelogenous leukaemia
+Cancer	Haematological malignancy	Leukaemia	Chronic leukaemia	Chronic myelogenous leukaemia|Chronic myeloid leukaemia|CML
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Adult B-cell acute lymphocytic leukemia|B-cell adult acute lymphocytic leukemia|Adult B-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	B-cell acute lymphoblastic leukaemia/lymphoma, BCR-ABL1–like|B-lymphoblastic leukaemia/lymphoma, BCR-ABL1–like
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Childhood B-cell acute lymphoblastic leukemia|Childhood B-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma|B-cell lymphoblastic leukaemia/lymphoma|B-lymphoblastic leukaemia/lymphoma||B-cell acute lymphoblastic leukaemia|B-cell lymphoblastic leukaemia|B-cell lymphoblastic lymphoma|B-cell ALL
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-ALL
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-negative B-cell acute lymphoblastic leukaemia|Ph-negative B-cell acute lymphoblastic leukaemia|Ph-negative B-ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia	Childhood B-cell acute lymphoblastic leukemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia|Childhood ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma	     T-cell prolymphocytic leukaemia|Prolymphocytic leukemia, T-cell type

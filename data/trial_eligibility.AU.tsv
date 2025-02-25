@@ -209,7 +209,7 @@ NCT06208657	trial_type:paediatric
 NCT06343402	KRAS:G12C; (catype:Non-small cell lung cancer OR catype:Colorectal adenocarcinoma)
 NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
 NCT05352672	*NOT prior_therapy:systemic_therapy
-NCT06127407	catype:Chondrosarcoma
+NCT06127407	catype:Chondrosarcoma; NOT catype:Dedifferentiated chondrosarcoma; NOT catype:Mesenchymal chondrosarcoma; NOT catype:Myxoid chondrosarcoma
 NCT05609968	*NOT prior_therapy:systemic_therapy
 NCT05215340	*NOT prior_therapy:systemic_therapy
 NCT05216432	PIK3CA:oncogenic_mutation
@@ -223,7 +223,7 @@ NCT05789082	KRAS:G12C; catype:Non-small cell lung cancer; *NOT prior_therapy:sys
 NCT05410145	KRAS:G12C; catype:Non-small cell lung cancer
 NCT05907304	(KRAS:Q61 OR HRAS:Q61 OR NRAS:Q61)
 NCT05727176	FGFR2:fusion; catype:Cholangiocarcinoma
-NCT05987332	*NOT HLA-A2:A*02:01
+NCT05987332	*NOT HLA-A2:A*02:01:positive
 NCT05536141	catype:Clear cell renal cell carcinoma
 NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer); *HNSCC_COHORT_FILLED
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
@@ -242,3 +242,15 @@ NCT06625775	catype:Non-small cell lung cancer; KRAS:oncogenic_mutation
 NCT06533059	AKT1:E17K; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT HRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:PI3K_inhibitor; *NOT prior_therapy:mTOR_inhibitor
 NCT06380751	catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation); ER:positive: HER2:negative
 NCT06750094	catype:Colorectal adenocarcinoma; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation
+NCT06756932	prior_therapy:endocrine_therapy; prior_therapy:CDK4/6_inhibitor
+NCT05735080	NOT prior_therapy:CDK2/4/6_inhibitor; NOT prior_therapy:CDK2_inhibitor
+NCT05696626	ESR1:oncogenic_mutation; *prior_therapy:aromatase_inhibitor; *prior_therapy:CDK4/6_inhibitor; *NOT RB1:oncogenic_mutation; *NOT RB1:deletion
+NCT06501625	IDH1:R132; catype:Cholangiocarcinoma
+NCT05201547	(mismatch_repair:deficient OR microsatellite_instability:high); *NOT prior_therapy:systemic_therapy
+NCT06433219	catype:Ovarian cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR loss_of_heterozygozity_score:high OR homologous_recombination_score:high); prior_therapy:PARP_inhibitor
+NCT03787602	NOT TP53:oncogenic_mutation
+NCT06112314	*HLA-A*02:01:Positive
+NCT06509906	catype:Colorectal adenocarcinoma; NOT mismatch_repair:deficient; NOT microsatellite_instability:high; NOT BRAF:V600E; prior_therapy:Oxaliplatin; (prior_therapy:Cetuximab OR prior_therapy:Panitumumab OR prior_therapy:Bevacizumab)
+NCT06509906	catype:Colorectal adenocarcinoma; (mismatch_repair:deficient OR microsatellite_instability:high); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
+NCT06509906	catype:Colorectal adenocarcinoma; BRAF:V600E; prior_therapy:Encorafenib; prior_therapy:Cetuximab
+NCT06509906	catype:Solid tumour; NOT catype:Colorectal adenocarcinoma;
