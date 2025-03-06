@@ -40,6 +40,7 @@ NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
 NCT04185883	KRAS:G12C
 NCT04221035	catype:Neuroblastoma
+NCT04447118	ERBB2:exon_20_mutation
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Colorectal cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Solid tumour
@@ -254,3 +255,13 @@ NCT06509906	catype:Colorectal adenocarcinoma; NOT mismatch_repair:deficient; NOT
 NCT06509906	catype:Colorectal adenocarcinoma; (mismatch_repair:deficient OR microsatellite_instability:high); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
 NCT06509906	catype:Colorectal adenocarcinoma; BRAF:V600E; prior_therapy:Encorafenib; prior_therapy:Cetuximab
 NCT06509906	catype:Solid tumour; NOT catype:Colorectal adenocarcinoma;
+NCT06172478	(catype:Gastric cancer OR catype:Gastroesophageal cancer); NOT ERBB2:overexpression; NOT ERBB2:amplification
+NCT06172478	catype:Head and neck squamous cell carcinoma; prior_therapy:anti-PD-1_monoclonal_antibod
+NCT06172478	catype:Melanoma; prior_therapy:anti-PD-1_monoclonal_antibody
+NCT06172478	catype:High-grade serous ovarian cancer
+NCT06172478	catype:Cervical cancer
+NCT06172478	catype:Endometrial cancer
+NCT06172478	catype:Bladder cancer
+NCT06172478	catype:Oesophageal carcinoma
+NCT06172478	catype:Pancreatic adenocarcinoma
+NCT06172478	catype:Prostate adenocarcinoma

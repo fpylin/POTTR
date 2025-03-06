@@ -73,7 +73,8 @@ Cancer	Haematological malignancy	Myeloproliferative neoplasm	Myelofibrosis|Prima
 Cancer	Haematological malignancy	Myeloproliferative neoplasm	Polycythemia vera|Polycythemia ruba vera
 Cancer	Haematological malignancy	Myeloproliferative neoplasm|Myeloproliferative disorder|Myeloproliferative disease
 Cancer	Haematological malignancy	Plasma cell disorder	Multiple myeloma|Myeloma
-Cancer	Haematological malignancy	Plasma cell disorder	AL amyloidosis|Amyloidosis
+Cancer	Haematological malignancy	Plasma cell disorder	Amyloidosis	AL amyloidosis
+Cancer	Haematological malignancy	Plasma cell disorder	Amyloidosis	Transthyretin Amyloidosis
 Cancer	Haematological malignancy	Plasma cell disorder	Plasma cell leukaemia|Plasma cell leukemia
 Cancer	Haematological malignancy	Plasma cell disorder|Plasma cell dyscrasia
 Cancer	Haematological malignancy	Refractory anaemia
@@ -481,6 +482,7 @@ Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Mal
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Glioblastoma	Glioblastoma proneural subtype
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Glioblastoma|Glioblastoma multiforme
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Gliosarcoma
+Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	High-grade astrocytoma with piloid features
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma	Brain stem glioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma	Diffuse intrinsic pontine glioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma|Diffuse midline glioma, H3 K27M mutant|Diffuse midline glioma, H3K27-altered, WHO Grade 4
