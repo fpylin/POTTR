@@ -614,7 +614,8 @@ FF-10832	gemcitabine
 FF-10850|FF 10850|FF10850	topoisomerase_inhibitor
 FG-M108	anti-CLDN18.2_monoclonal_antibody
 FIT039	CDK9_inhibitor
-FLOT	Fluorouracil + Oxaliplatin + Docetaxel
+FLOT|FLOX regimen	Fluorouracil + Oxaliplatin + Docetaxel
+FLOX|FLOX regimen	Fluorouracil + Oxaliplatin
 FLT3_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 FLX475|FLX 475|FLX-475	CCR4_inhibitor
 FN-1501|FN 1501|FN1501	CDK2/4/6/FLT3_inhibitor

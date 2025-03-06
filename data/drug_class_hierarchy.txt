@@ -1029,9 +1029,6 @@ cancer_therapy	cancer_therapy,KIF18A-targeting
 cancer_therapy	cancer_therapy,KIR3DL1-targeting
 cancer_therapy	cancer_therapy,KIR3DL1-targeting	fusion_protein,LILRB2/LILRB2/KIR3DL1-targeting
 cancer_therapy	cancer_therapy,KIT-targeting
-cancer_therapy	cancer_therapy,KIT-targeting
-cancer_therapy	cancer_therapy,KIT_D816V-targeting
-cancer_therapy	cancer_therapy,KIT_inhibitor,switch_control_kinase-targeting
 cancer_therapy	cancer_therapy,KLK2-targeting
 cancer_therapy	cancer_therapy,KMT2A-targeting
 cancer_therapy	cancer_therapy,KRAS-targeting
@@ -1237,7 +1234,6 @@ cancer_therapy	cancer_therapy,mRNA_vaccine,CLDN6-targeting	CAR-T-cell_therapy,mR
 cancer_therapy	cancer_therapy,mTOR-targeting
 cancer_therapy	cancer_therapy,mTORC1-targeting
 cancer_therapy	cancer_therapy,mTORC2-targeting
-cancer_therapy	cancer_therapy,menin-MLL1-targeting
 cancer_therapy	cancer_therapy,menin-targeting
 cancer_therapy	cancer_therapy,mesothelin-targeting
 cancer_therapy	cancer_therapy,miR-155_oligonucleotide-targeting
@@ -1251,13 +1247,10 @@ cancer_therapy	cancer_therapy,p53-HDM2_interaction-targeting
 cancer_therapy	cancer_therapy,p53-HDM2_interaction-targeting	p53-HDM2_interaction_inhibitor
 cancer_therapy	cancer_therapy,p97-targeting
 cancer_therapy	cancer_therapy,pNGVL3-based,ERBB2-targeting
-cancer_therapy	cancer_therapy,pan-AKT-targeting
 cancer_therapy	cancer_therapy,pan-ERBB-targeting
 cancer_therapy	cancer_therapy,pan-FGFR-targeting
-cancer_therapy	cancer_therapy,pan-FLT3-targeting
 cancer_therapy	cancer_therapy,pan-HDAC-targeting
 cancer_therapy	cancer_therapy,pan-LOX-targeting
-cancer_therapy	cancer_therapy,pan-PI3K-targeting
 cancer_therapy	cancer_therapy,pan-RAF-targeting
 cancer_therapy	cancer_therapy,pan-proteasome-targeting
 cancer_therapy	cancer_therapy,pan_ERBB-targeting
@@ -1630,7 +1623,6 @@ cancer_therapy,KIT-targeting	KIT_inhibitor,switch_control_kinase_inhibitor
 cancer_therapy,KIT-targeting	KIT_inhibitor,type_1
 cancer_therapy,KIT-targeting	immuno-oncology_therapy,KIT-targeting
 cancer_therapy,KIT-targeting	immuno-oncology_therapy,cKIT-targeting
-cancer_therapy,KIT_D816V-targeting	KIT_D816V_inhibitor
 cancer_therapy,KIT_inhibitor,switch_control_kinase-targeting	KIT_inhibitor,switch_control_kinase_inhibitor
 cancer_therapy,KLK2-targeting	bispecific_T-cell_engager,KLK2-targeting
 cancer_therapy,KLK2-targeting	immuno-oncology_therapy,KLK2-targeting
@@ -1853,7 +1845,7 @@ cancer_therapy,irreversible_monoamine_oxidase-targeting	irreversible_monoamine_o
 cancer_therapy,mTOR-targeting	mTOR_inhibitor
 cancer_therapy,mTORC1-targeting	mTORC1_inhibitor
 cancer_therapy,mTORC2-targeting	mTORC2_inhibitor
-cancer_therapy,menin-MLL1-targeting	menin-MLL1_inhibitor
+cancer_therapy,KMT2A-targeting	menin-MLL1_inhibitor
 cancer_therapy,menin-targeting	menin_inhibitor
 cancer_therapy,menin-targeting	menin_inhibitor,irreversible
 cancer_therapy,mesothelin-targeting	immuno-oncology_therapy,mesothelin-targeting
@@ -1864,13 +1856,11 @@ cancer_therapy,notch_receptor-targeting	immuno-oncology_therapy,notch_receptor-t
 cancer_therapy,orotate_phosphoribosyltransferase-targeting	orotate_phosphoribosyltransferase_inhibitor
 cancer_therapy,p97-targeting	p97_inhibitor
 cancer_therapy,pNGVL3-based,ERBB2-targeting	vaccine_therapy,pNGVL3-based,ERBB2-targeting
-cancer_therapy,pan-AKT-targeting	pan-AKT_inhibitor
 cancer_therapy,pan-ERBB-targeting	pan-ERBB_inhibitor
-cancer_therapy,pan-FLT3-targeting	pan-FLT3_inhibitor
 cancer_therapy,pan-HDAC-targeting	pan-HDAC_inhibitor
 cancer_therapy,pan-LOX-targeting	pan-LOX_inhibitor
-cancer_therapy,pan-PI3K-targeting	pan-PI3K_inhibitor
-cancer_therapy,pan-PI3K-targeting	pan-PI3K_inhibitor,class_1
+cancer_therapy,PI3K-targeting	pan-PI3K_inhibitor
+cancer_therapy,PI3K-targeting	pan-PI3K_inhibitor,class_1
 cancer_therapy,pan-RAF-targeting	pan-RAF_inhibitor
 cancer_therapy,pan-proteasome-targeting	pan-proteasome_inhibitor
 cancer_therapy,pan_ERBB-targeting	pan_ERBB_inhibitor,hypoxia_activating

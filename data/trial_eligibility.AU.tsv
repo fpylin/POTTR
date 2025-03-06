@@ -240,7 +240,7 @@ NCT06625775	catype:Breast cancer; (ERBB2:overexpression OR ERBB2:amplification)
 NCT06625775	catype:Breast cancer; ER:positive
 NCT06625775	catype:Colorectal cancer; KRAS:oncogenic_mutation
 NCT06625775	catype:Non-small cell lung cancer; KRAS:oncogenic_mutation
-NCT06533059	AKT1:E17K; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT HRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:PI3K_inhibitor; *NOT prior_therapy:mTOR_inhibitor
+NCT06533059	(catype:Breast cancer OR catype:Endometrial cancer OR catype:Solid tumour); AKT1:E17K; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT HRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation; *NOT prior_therapy:PI3K_inhibitor; *NOT prior_therapy:mTOR_inhibitor
 NCT06380751	catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation); ER:positive: HER2:negative
 NCT06750094	catype:Colorectal adenocarcinoma; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation
 NCT06756932	prior_therapy:endocrine_therapy; prior_therapy:CDK4/6_inhibitor

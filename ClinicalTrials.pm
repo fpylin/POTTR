@@ -589,8 +589,11 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 			my @matched_catypes = map { 
 				my $mm ;
 				my $retval =
-					/^(\S+) +(?:Gene )?Mutations?$/i  ?  "$1:oncogenic_mutation" :
-					/^(\S+) +(?:Gene )?Alterations?$/i ?  "$1:alteration" :
+					/^(\S+)[ \-]+(?:Gene )?(Mutations|mutant)?$/i  ?  "$1:oncogenic_mutation" :
+					/^(\S+)[ \-]+(?:Gene )?Alterations?$/i ?  "$1:alteration" :
+					/^(\S+)[ \-]+(?:Gene )?Fusions?$/i ?  "$1:fusion" :
+					/^(\S+)[ \-]+(?:Wild.?type)/i ?  "NOT $1:oncogenic_mutation" :
+					/^(\S+)[ \-]+(?:Gene )?(?:deletion|deleted)?$/i ?  "$1:deletion" :
 					($mm = CancerTypes::match_catype_whole_word( clean_catype($_), 'STRICT' )) ;
 					
 				my @xx;

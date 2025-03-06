@@ -719,6 +719,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ABL1	BCR-ABL1 Fusion	Glioblastoma	Imatinib	Case report. Treatment with imatinib in a Glioblastoma harbouring BCR-ABL1 fusion resulted decrease in KI-67 and clinical stable disease. 	34485806
 4	AKT1	E17K	Breast cancer	Capivasertib + Fulvestrant	Phase 1 study. ORR 36%. 	32312891
 4	AKT1	E17K	Breast cancer	Capivasertib; Capivasertib + Fulvestrant		32312891
+4	AKT1	E17K	Breast cancer; Endometrial cancer	ALTA-2618	Preclinical study. The mutant-selective inhibitor of AKT1 E17K induced tumor regressions in multiple PDX models of breast and endometrial cancer models.	10.1158/1538-7445.AM2024-LB173
 4	AKT1	E17K	Solid tumours	Capivasertib	Phase 1 Expansion cohort data	28489509
 4	AKT1	LAMTOR1-AKT1 fusion	Solid tumour	Ipatasertib	Case report. A paediatric patient with histopathologically indeterminate epithelioid neoplasm harbouring a novel fusion LAMTOR1-AKT1 treated with ipatasertib resulted in dramatic tumour regression. Confirmation in the in vitro models confirmed the fusion led to activation of AKT1.	30877085
 4	AKT1	Oncogenic mutations	Breast cancer	Ipatasertib + Paclitaxel	HR-positive disease. IPATunity130 Cohort B. ORR 47% in both ipatasertib and placebo arms but there was no significant difference in median PFS (ipatasertib vs placebo: 9.2 vs 8.5 mo). Ongoing follow-up.	10.1016/j.annonc.2020.08.385
@@ -802,6 +803,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	ATRX	Loss-of-function mutations	Solid tumours	Adavosertib		31551363
 4	ATRX	Oncogenic mutation	Solid tumours	Tuvusertib	Preclinical study. NCT04170153. N=55. Molecular responses were associated with mutations in TP53. Complete molecular responses were observed in ARID1A, ATRX, DAXX, and BRCA1/2.	38407317
 4	B2M	Loss-of-function mutations, loss of protein expression	Colorectal adenocarcinoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	Retrospective series. In metastatic CRCs, B2M mutations (and loss of B2M expression) are associated with microsatellite high disease and derive clinical benefit from immune checkpoint inhibitors.	31008436
+4	BAP1	Loss of protein expression, Oncogenic mutations	Mesothelioma	AZD1390 + GSK126	Preclinical study. Combination of EZH2 and ATM inhibition showed synergistic potential against BAP1-deficient mesothelioma in drug screen and xenograft experiments, indicating a potential novel treatment modality using BAP1 as a biomarker.	38519707
 4	BAP1	Oncogenic mutations	Mesothelioma	EPZ011989	Cell line study only	26437366
 4	BAP1	Oncogenic mutations	Mesothelioma	Tazemetostat	ORR 3%. DCR 51%	NCT02860286, 10.1200/JCO.2018.36.15_suppl.8515
 4	BAP1	Oncogenic mutations	Solid tumours	PARP inhibitor; Niraparib	One phase 2 trial and other mechanistic studies only.	24347639, 24894717, NCT03207347
@@ -1765,6 +1767,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	SMO	Oncogenic mutations	Solid tumours	Taladegib		10.1158/1078-0432.CCR-17-0723
 4	SRSF2	P95H	Acute myeloid leukaemia	Olaparib	Cell line study. Mutation in spliceosomes causes accumulation of R-loops in cells, triggering a PARP1 response. PARP inhibition with Olaparib has shown to prolong survival in murine model of myeloid leukaemia harbouring SRSF2 P95H mutation.	10.1158/1538-7445.AM2023-6183
 4	SRSF2	P95H	Chronic myelomonocytic leukaemia	H3B-8800		29457796
+4	SRSF2	P95H, Oncogenic mutations	Myelodysplastic syndrome	Talazoparib	Preclinical study. Pathogenic SRSF2 activating mutations elevate protein poly-ADP-ribosylation levels, making mutant cells more vulnerable to PARP inhibitors in Srsf2 P95H knock-in murine hematopoietic cell and MLL-AF9 leukemia models.	38806724
 4	STAG2	Oncogenic mutations	Myelodysplastic syndrome; Acute myeloid leukaemia	Talazoparib	Cell line study. STAG2-mutant cells have increased DNA damage and are sensitive to PARP inhibition, suggesting that targeting DNA damage repair pathways may be a potential therapeutic strategy for cohesin-mutant malignancies including MDS/AML.	33351783
 4	STK11	Oncogenic mutations	Non-small cell lung cancer	Alrizomadlin + Pembrolizumab	Phase 2 trial (ongoing). NCT03611868. STK11-mutated lung adenocarcinoma N=5. ORR 0% and DCR 25%.	10.1200/JCO.2021.39.15_suppl.2506
 4	STK11	Oncogenic mutations	Non-small cell lung cancer	Everolimus		34422335
@@ -1867,6 +1870,7 @@ R2	ARAF	G377R, G387D, G387R, G387S, P462L, Overexpression	Solid tumours	Belvaraf
 R2	ARID1A	Loss-of-function mutations, Truncating mutations	Pancreatic adenocarcinoma	Olaparib	Phase 2 single arm study. NCT02677038 and NCT02511223. 0/ 3 responder in the DDR-GA cohort	33662100
 R2	ARID1A	Oncogenic mutation	Ovarian Cancer	PLX2853; PLX2853 + carboplatin	Phase Ib/IIa trial. NCT02794586. N=37. PLX2853 monotherapy and combination therapy with carboplatin demonstrated a best ORR of 1 PR (7%). The trial did not meet the prespecified response criteria.	37797273
 R2	ARID1A	Oncogenic mutations	Breast cancer	Fulvestrant		31932695
+R2	ARID1A	Oncogenic mutations	Colorectal adenocarcinoma	Cetuximab	Retrospective and correlative studies. ARID1A mutations confer intrinsic and acquired resistance to cetuximab treatment in colorectal cancer. Worse treatment outcome observed in patients with ARID1A mutations treated with cetuximab-containing therapies.	36117191
 R2	ARID1A	Oncogenic mutations	Pancreatic adenocarcinoma	Olaparib	Two Phase II studies of Olaparib in previously treatment pancreatic cancer. ORR 4% did not meet predefined threshold. ARID1A (N=3)	33662100
 R2	ARID1A	Oncogenic mutations AND NOT Loss of protein expression	Solid tumours	Ceralasertib + Olaparib	Phase 2. Interim result from NCT03682289. N=10 in the ARID1A-intact cohort (defined as positive IHC staining for BAF250a). ORR 0% (0/10) with best response of SD in 4/10 patients.	10.1016/j.annonc.2021.08.1034
 R2	ATM	Loss-of-function mutations, Truncating mutations, Loss-of-protein expression	Pancreatic adenocarcinoma	Olaparib	Phase 2 single arm study. NCT02677038 and NCT02511223. No responders in 5 patients in the loss-of-protein expression group.	33662100
@@ -2002,6 +2006,7 @@ R2	CRKL	Amplification	Non-small cell lung cancer	Gefitinib	Preclinical study. CR
 R2	CRKL	Amplification, Overexpression	Hepatocellular carcinoma	Atezolizumab	Preclinical study. CRKL overexpression attenuates anti-PD-1 efficacy by mobilizing tumor-associated neutrophils in HCC. Blocking CRKL/β-catenin/VEGF alpha and CXCL1 axis using bevacizumab or lenvatinib overcomes anti-PD-1 resistance.	38403027
 R2	CTNNB1+KIT	CTNNB1:S33C and KIT:L576P	Melanoma	Imatinib	Preclinical study. In a single patient case report, CTNNB1 mutation was identified in paired biopsy samples from a patient who had an initial response and later developed resistance to imatinib. Ba/F3 cell line model showed that the combination of KIT L576P mutation with CTNNB1 S33C mutation conferred acquired resistance to imatinib.	28421416
 R2	CXCR4	S338X	Waldenstroms macroglobulinaemia	Ibrutinib	Reduced response rate compared with CXCR4 WT patients	32931398, 31570491
+R2	DHFR	Amplification	Acute lymphoblastic leukaemia	Methotrexate	N=67, ALL patients, DHFR gene amplification (31%) correlated with p53 mutations (P &lt; .001) is a mechanism of acquired resistance to methotrexate.	7605998
 R2	EGFR	A289V	Solid tumours	Adagrasib	Phase 1/2 KRYSTAL-1: off-target acquired resistance mechanism identified by treatment-emergent mutations after 12 weeks of exposure to Agagrasib, identified on tissue or ctDNA from blood sample. 	34161704
 R2	EGFR	Amplification	Colorectal adenocarcinoma	Divarasib; Divarasib + Cetuximab	Phase 1b trial. NCT04449874. GO42144. Potential treatment-emergent resistance mechanisms in ctDNA following divarasib plus cetuximab treatment in KRAS G12C-positive CRC.	38052910
 R2	EGFR	Amplification	Gastric cancer	Trastuzumab	Case-control study	29208673
@@ -2349,6 +2354,7 @@ R2	MET	Y1230S (Y1248S), D1228N (D1246N), D1228H (D1246H), F1200I (F1218I), L1195
 R2	MET+TP53	MET:Exon 14 skipping mutation and TP53:Oncogenic mutations	Non-small cell lung cancer	Crizotinib	Case series. TP53 mutation shown in post-exposure to crizotinib 7 of 12 cases.	31548343
 R2	Microsatellite Instability	Stable	Colorectal adenocarcinoma	Atezolizumab; Atezolizumab + Cobimetinib	Phase 3. IMBlaze370. ORR 4/273 (1%) in the Atezolizumab groups.	31003911
 R2	Microsatellite Instability	Stable	Endometrial cancer	Durvalumab	PHAEDRA. Phase 2. ORR in the pMMR cohort was 3% (1 of 35) with median PFS of 1.8 months.	34103352
+R2	Microsatellite instability+Mismatch repair	NOT Microsatellite instability:high AND NOT Mismatch repair:deficient	Colorectal adenocarcinoma	Nivolumab + FLOX	Randomized Phase 2. METIMMOX trial. NCT03388190. N=80. In microsatellite stable disease, no PFS advantage was observed with alternating FLOX + nivolumab over FLOX alone (both 9.2 months).	38664577
 R2	Mismatch repair	Deficient	High-grade gliomas	Pembrolizumab	N=13. Single-agent PD-1 inhibitor showed no response in a prospective case series (ORR 0%) with 4 SD.	32823925
 R2	Mismatch repair	Deficient	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Anti-PD-1 monoclonal antibody; Anti-PD-L1 monoclonal antibody	A case-control series showed no response to PD-L1 blockade in 11 HGG patients with hypermutant and mismatch repair-deficient HGG. High TMB is associated with few clonal neoantigens and no immunogenic responses in glioma populations.	32322066
 R2	Mismatch repair	Deficient	High-grade gliomas; Anaplastic astrocytoma; Glioblastoma	Pembrolizumab	N=13. ORR 0%. All patients were microsatellite stable.	32823925
