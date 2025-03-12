@@ -317,6 +317,7 @@ Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Canc
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian serous carcinoma|Ovarian serous adenocarcinoma|Ovarian serous cystadenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian carcinosarcoma|Ovarian malignant Mullerian mixed tumor|Ovarian Mullerian mixed tumor|Ovarian MMMT
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian small cell carcinoma
+Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian small cell carcinoma	Small cell carcinoma of the ovary, Hypercalcemic Type|SCCOHT
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian squamous cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian transitional cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian mesonephric-like adenocarcinoma

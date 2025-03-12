@@ -75,6 +75,7 @@ CAR-T-cell_therapy,BCMA-targeting	allogeneic_CAR-T-cell_therapy,BCMA-targeting
 CAR-T-cell_therapy,BCMA-targeting	autologous_CAR-T-cell_therapy,BCMA-targeting
 CAR-T-cell_therapy,CD19-targeting	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CAR-T-cell_therapy,CD19-targeting	autologous_CAR-T-cell_therapy,CD19-targeting
+CAR-T-cell_therapy,CD19-targeting	autologous_CAR-T-cell_therapy,CD19-targeting	gene_therapy,CAR-T-cell_generating,CD19-targeting
 CAR-T-cell_therapy,CD20-targeting	allogeneic_CAR-T/NK-cell_therapy,CD20-targeting
 CAR-T-cell_therapy,CD20-targeting	autologous_CAR-T-cell_therapy,CD20-targeting
 CAR-T-cell_therapy,CD7-targeting	allogeneic_CAR-T-cell_therapy,CD7-targeting
@@ -1778,6 +1779,7 @@ cancer_therapy,TLR2/TLR6-targeting	immuno-oncology_therapy,TLR2/TLR6-targeting
 cancer_therapy,TLR7/TLR8-targeting	TLR7/TLR8_agonist
 cancer_therapy,TLR9-targeting	TLR9_agonist
 cancer_therapy,TLR9-targeting	immuno-oncology_therapy,TLR9-targeting
+cancer_therapy,TMPRSS6-targeting	siRNA_therapy,TMPRSS6-targeting
 cancer_therapy,TNF-targeting	TNF_inhibitor
 cancer_therapy,TNF-targeting	immuno-oncology_therapy,TNF-targeting
 cancer_therapy,TNFR2-targeting	immuno-oncology_therapy,TNFR2-targeting
@@ -1816,6 +1818,7 @@ cancer_therapy,adenosine_A2aR_and_A2bR-targeting	adenosine_A2aR_and_A2bR_antagon
 cancer_therapy,agonist-targeting	immuno-oncology_therapy,agonist-targeting
 cancer_therapy,alpha-V-beta-3-targeting	small-molecule-drug-conjugate,alpha-V-beta-3-targeting
 cancer_therapy,alpha_V_beta_8-targeting	alpha_V_beta_8_antagonist
+cancer_therapy,amyloid-targeting	anti-amyloid_monoclonal_antibody	pan-amyloid-binding_peptide_fusion_immunoglobulin
 cancer_therapy,amyloid-targeting	anti-amyloid_monoclonal_antibody
 cancer_therapy,amyloid-targeting	immuno-oncology_therapy,amyloid-targeting
 cancer_therapy,androgen_receptor-targeting	androgen_receptor_antagonist
@@ -2442,7 +2445,16 @@ virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
 virus-based_therapy	viral_nanoparticle_drug_conjugates
 agnostic_antibody,CD28-targeting	bispecific_CD38/CD28_antibody
 cancer_therapy	cancer_therapy,MUC16-targeting
+cancer_therapy	cancer_therapy,TMPRSS6-targeting
 cancer_therapy,BCR-ABL1-targeting	BCR-ABL1_inhibitor,allosteric
 cancer_therapy,MUC16-targeting	immuno-oncology_therapy,MUC16-targeting
 immuno-oncology_therapy,CD38-targeting	bispecific_CD38/CD28_antibody
 immuno-oncology_therapy,MUC16-targeting	bispecific_T-cell_engager,MUC16-targeting
+cancer_therapy	cancer_therapy,SOST-targeting
+cancer_therapy,SOST-targeting	immuno-oncology_therapy,SOST-targeting
+immuno-oncology_therapy,SOST-targeting	anti-SOST_monoclonal_antibody
+gene_therapy	gene_therapy,CAR-T-cell_generating,CD19-targeting
+cancer_therapy	cancer_therapy,PIWIL1-targeting
+cancer_therapy,PIWIL1-targeting	bispecific_T-cell_engager,PIWIL1-targeting
+cancer_therapy,PIWIL1-targeting	immuno-oncology_therapy,PIWIL1-targeting
+immuno-oncology_therapy,PIWIL1-targeting	bispecific_T-cell_engager,PIWIL1-targeting

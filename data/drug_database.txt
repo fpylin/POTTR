@@ -134,6 +134,8 @@ ASP5878	pan-FGFR_inhibitor,reversible
 AST-301	vaccine_therapy,pNGVL3-based,ERBB2-targeting
 ASTX295|ASTX 295|ASTX-295	MDM2_inhibitor
 AT-0174|AT0174	dual_IDO/TDO_inhibitor
+AT-02	pan-amyloid-binding_peptide_fusion_immunoglobulin
+ATA3219|ATA-3219	allogeneic_CAR-T-cell_therapy,CD19-targeting
 ATG 022|ATG-022	anti-CLDN18.2_antibody-drug_conjugate
 ATG 037|ATG-037	CD73_inhibitor
 ATG-017|ATG017	ERK_inhibitor
@@ -281,6 +283,7 @@ BI836880|BI 836880	VEGF/Ang2-blocking_nanobody
 BIL06v	peptide_conjugate_vaccine,nfP2X7-targeting
 BL0020	unknown_drug_class
 BL0175	unknown_drug_class
+BLU-263	KIT_D816V_inhibitor
 BLU-945	EGFR_inhibitor,fourth_generation
 BLYG8824A	bispecific_T-cell_engager,LY6G6D-targeting
 BLZ-100|Tozuleristide	peptide-fluorophore_conjugate
@@ -304,6 +307,7 @@ BMS-986315	anti-NKG2A_monoclonal_antibody
 BMS-986340	anti-CCR8_monoclonal_antibody
 BMS-986360|CC-90001|CC90001	JNK_inhibitor
 BMS-986365	dual_AR_degrader_antagonist
+BMS-986393	autologous_CAR-T_cell_therapy,GPRC5D-targeting
 BMS-986397|CC-91633	CK1_alpha_degrader
 BMS-986442|BMS986442|AGEN1777	bispecific_TIGIT/CD96_antibody
 BMS-986466|BMS986466|BBP 398|BBP398|IACS-15509|IACS 15509|IACS15509	SHP2_inhibitor
@@ -782,6 +786,7 @@ IMG-7289	LSD1_inhibitor
 IMM-101	heat-killed_Mycobacterium_preparation
 IMP1734	PARP1-selective_inhibitor
 IMP9064	ATR_inhibitor
+IMC-R117C	bispecific_T-cell_engager,PIWIL1-targeting
 IMU-131|HER-Vaxx	ERBB2_B-cell_antigen
 IMU-201	B_cell_immunotherapy
 IMX-110|IMX 110|IMX110	doxorubicin; nanoparticle_Stat3/NF-kB/poly-TKI
@@ -1245,6 +1250,7 @@ QL1706	bifunctional-PD-1/CTLA4_antibody_pair
 QTX3034	KRAS_inhibitor; KRAS_G12D_inhibitor
 Quarfloxin|CX-3543	RNA_polymerase_I_transcription_inhibitor
 Quavonlimab|MK-1308|MK 1308|MK-1308A|MK1308	anti-CTLA4_monoclonal_antibody
+Quemliclustat|AB680|AB-680	CD73_inhibitor
 Quizartinib|AC-220|AC010220|AC220	FLT3_inhibitor; KIT_inhibitor
 R-CHOP|RCHOP	Rituximab + Cyclophosphamide + Doxorubicin + Vincristine + Prednisolone
 R-CVP|RCVP	Cyclophosphamide + Prednisolone + Rituximab + Vincristine
@@ -1320,6 +1326,7 @@ Rogaratinib|BAY-1163877|BAY1163877	FGFR1/2/3_inhibitor,reversible
 Rogaratinib|BAY-1163877|BAY1163877	pan-FGFR_inhibitor
 Rolinsatamab Talirine|ABBV 176|ABBV-176|ABBV176	anti-PRLR_antibody-drug_conjugate
 Romidepsin|FR901228|Antibiotic FR 901228|Depsipeptide|FK228|Istodax	HDAC_inhibitor
+Romosozumab|AMG 785	anti-SOST_monoclonal_antibody
 Rovalpituzumab Tesirine|Rova-T|SC0002|SC16LD6.5	anti-DLL3_antibody-drug_conjugate
 Rucaparib|Rucaparib Phosphate|Rucaparib Camsylate|AG014699|C0-338|PF-01367338|Rubraca	PARP_inhibitor
 Runimotamab|BTRC4017A|Anti-HER2/Anti-CD3 Bispecific Monoclonal Antibody 4017A|BTRC 4017A|BTRC-4017A|RG 6194|RG-6194|RG6194	bispecific_T-cell_engager,ERBB2-targeting
@@ -1337,6 +1344,7 @@ SAR439459|SAR 439459|SAR-439459	anti-TGF-beta_monoclonal_antibody
 SAR443579	NKp46-based_NK-cell_engager
 SAR444881	anti-ILT2_monoclonal_antibody
 SAR445514	BCMA-targeting_antibody-based_NK_cell_engager
+SAR446523	anti-GPRC5D_monoclonal_antibody
 SBT6050	anti-ERBB2_antibody-drug_conjugate
 SCB-313|SCB 313|SCB313	recombinant_human_TRAIL_trimer_fusion_protein
 SCH 900242|MK-8242	HDM2_inhibitor
@@ -1355,6 +1363,7 @@ SHR-A1904|SHRA1904	anti-CLDN18.2_antibody-drug_conjugate
 SHR-A1921	antibody-drug_conjugate,unknown_target
 SHR2554	EZH2_inhibitor
 SLC3010|SLC-3010	anti-IL-2_antibody_conjugate
+SLN124	siRNA_therapy,TMPRSS6-targeting
 SM08502	CLK_inhibitor
 SN38-SPL9111|DEP-SN38	topoisomerase_inhibitor
 SNB-101	irinotecan_metabolite
@@ -1637,3 +1646,5 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+SRA515|SRA-515|SRA 515|AZD5153|AZD 5153	BRD4_inhibitor
+UB-VV111	gene_therapy,CAR-T-cell_generating,CD19-targeting
