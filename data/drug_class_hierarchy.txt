@@ -2458,3 +2458,10 @@ cancer_therapy	cancer_therapy,PIWIL1-targeting
 cancer_therapy,PIWIL1-targeting	bispecific_T-cell_engager,PIWIL1-targeting
 cancer_therapy,PIWIL1-targeting	immuno-oncology_therapy,PIWIL1-targeting
 immuno-oncology_therapy,PIWIL1-targeting	bispecific_T-cell_engager,PIWIL1-targeting
+prostaglandin_EP2_receptor_inhibitor	prostaglandin_EP2/EP4/DP1_receptor_inhibitor
+prostaglandin_EP4_receptor_inhibitor	prostaglandin_EP2/EP4/DP1_receptor_inhibitor
+prostaglandin_DP1_receptor_inhibitor	prostaglandin_EP2/EP4/DP1_receptor_inhibitor
+cancer_therapy	cancer_therapy,prostaglandin_EP2_receptor-targeting	prostaglandin_EP2_receptor_inhibitor
+cancer_therapy	cancer_therapy,prostaglandin_DP1_receptor-targeting	prostaglandin_DP1_receptor_inhibitor
+immune_checkpoint_blockade,CTLA-4-targeting     trispecific_PD-1/VEGFA/CTLA-4_antibody
+immune_checkpoint_blockade,PD-1-targeting       trispecific_PD-1/VEGFA/CTLA-4_antibody

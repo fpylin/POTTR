@@ -5,6 +5,7 @@ ACTRN12621000507886	catype:lymphoma; catype:B-cell lymphoma
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
 ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12623000096651	(catype:Low-grade glioma OR catype:Anaplastic astrocytoma)
+ACTRN12623000874617	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 NCT02628067	catype:Anal Cancer
 NCT02628067	catype:Biliary Tract Cancer
 NCT02628067	catype:Cervical Cancer
@@ -226,7 +227,8 @@ NCT05907304	(KRAS:Q61 OR HRAS:Q61 OR NRAS:Q61)
 NCT05727176	FGFR2:fusion; catype:Cholangiocarcinoma
 NCT05987332	*NOT HLA-A2:A*02:01:positive
 NCT05536141	catype:Clear cell renal cell carcinoma
-NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer); *HNSCC_COHORT_FILLED
+NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer); HNSCC_COHORT_FILLED; GASTRIC_COHORT_FILLED
+NCT05581004	catype:Non-small cell lung cancer
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
 NCT06509906	catype:Colorectal adenocarcinoma
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion); NOT catype:Ovarian small cell carcinoma
@@ -265,3 +267,4 @@ NCT06172478	catype:Bladder cancer
 NCT06172478	catype:Oesophageal carcinoma
 NCT06172478	catype:Pancreatic adenocarcinoma
 NCT06172478	catype:Prostate adenocarcinoma
+NCT06614192	catype:Colorectal cancer; *MET:overexpression
