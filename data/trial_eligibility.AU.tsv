@@ -58,6 +58,7 @@ NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT05067283	KRAS:G12C
 NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catype:Non-melanoma skin cancer)
 NCT05086692	*(microsatellite_instability:high OR mismatch_repair:deficient)
+NCT05086692	*tumour_mutational_burden:high
 NCT05198934	KRAS:G12C; catype:Colorectal cancer
 NCT05288166	catype:Prostate cancer
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
@@ -234,7 +235,7 @@ NCT06509906	catype:Colorectal adenocarcinoma
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion); NOT catype:Ovarian small cell carcinoma
 NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT06360354	(MTAP:deletion OR MTAP:loss_of_protein_expression)
-NCT06585488	KRAS:alteration
+NCT06585488	KRAS:alteration; NOT KRAS:G12R
 NCT05867251	*catype:Breast cancer
 NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
 NCT06581432	ERBB2:alteration
