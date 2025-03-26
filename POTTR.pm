@@ -854,10 +854,10 @@ sub load_module_preferential_trial_prioritisation {
 		
 		
 		my $score = # Score the trial
-			( pow(20,9) * ( 8 - $trial_match_criteria_score ) ) + 
-			( pow(20,8) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,7) * ( 8 - $trial_drug_sensitivity_score ) ) + 
-			( pow(20,6) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,9) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,8) * ( 8 - $trial_drug_sensitivity_score ) ) + 
+			( pow(20,7) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
+			( pow(20,6) * ( 8 - $trial_match_criteria_score ) ) + 
 			( pow(20,5) * ( (19 - $num_referring_drug_classes_score) ) ) +
 			( pow(20,4) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) + 
 			( pow(20,3) * ( score_tier( $a{'trial_phase_tier'}, $tier_order_ref ) ) ) + 
