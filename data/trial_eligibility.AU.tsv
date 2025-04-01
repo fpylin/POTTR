@@ -272,4 +272,4 @@ NCT06172478	catype:Prostate adenocarcinoma
 NCT06614192	catype:Colorectal cancer; *MET:overexpression
 NCT06003621	*NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
 NCT06736704	(PIK3CA:codon_1047_missense_mutation OR PIK3CA:codon_542_missense_mutation OR PIK3CA:codon_545_missense_mutation); *NOT AKT1:E17K; *NOT KRAS:oncogenic_mutation; *NOT NRAS:oncogenic_mutation; *NOT FGFR3:alteration; *NOT ERBB2:oncogenic_mutation; *NOT ERBB2:amplification; *NOT BRAF:V600E; *(catype:Breast cancer OR catype:Endometrial cancer)
-NCT06220864	*NOT prior_therapy:PARP_inhibitor; catype:Prostate cancer; *(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR )
+NCT06220864	*NOT prior_therapy:PARP_inhibitor; catype:Prostate cancer; *(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
