@@ -23,6 +23,7 @@ NCT02628067	microsatellite_instability:high
 NCT02960022	*prior_therapy:Enzalutamide
 NCT03093116	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion OR ROS1:fusion)
 NCT03093116	ALK:fusion
+NCT03170960	catype:Differentiated Thyroid Carcinoma
 NCT03175224	(MET:oncogenic_mutation OR MET:alteration)
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:positive; *ER:negative; *CD274:protein_expression
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:negative; *ER:positive; PIK3CA:oncogenic_mutation
@@ -36,6 +37,7 @@ NCT03821935	catype:Urothelial cancer
 NCT03906331	RET:fusion; *Expanded access program
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification; *Expanded access program
 NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
+NCT03994393	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
 NCT04064060	NOT catype:solid tumours
 NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
@@ -66,7 +68,6 @@ NCT05054725	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma); *Unknown status
 NCT03900442	catype:Gastric cancer; *catype:Diffuse gastric cancer; *Unknown status
 NCT05182931	(BRAF:V600E OR NRAS:oncogenic_mutation); NOT catype:Anaplastic thyroid cancer
-NCT05152147	(ERBB2:amplification OR ERBB2:overexpression)
 NCT05364073	catype:Non-small cell lung cancer
 NCT05311176	(catype:Gastroesophageal junction adenocarcinoma OR Gastroesophageal adenocarcinoma OR catype:Gastric Cancer); *(ERBB2:overexpression OR ERBB2:amplification); *prior_therapy:Trastuzumab
 NCT05440786	catype:Ewings sarcoma
