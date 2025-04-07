@@ -273,6 +273,7 @@ BGB-A3055	anti-CCR8_monoclonal_antibody
 BGB-A333|BGB A333|BGBA333	anti-PD-L1_monoclonal_antibody
 BGB-A425|BGB A425|BGBA425	anti-TIM3_monoclonal_antibody
 BGB-A445	anti-OX40_agonistic_antibody
+BGB-A455	bispecific_T-cell_engager,CLDN6-targeting
 BGB-B167	bispecific_CEACAM5/4-1BB_antibody
 BGB-B2033	anti-GPC3_monoclonal_antibody
 BGB-C354	anti-B7H3_antibody-drug_conjugate
