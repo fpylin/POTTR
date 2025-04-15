@@ -17,6 +17,7 @@ drug	drug_class
 225Ac-FL-020|[225Ac]-FL-020|Ac-FL-020	anit-PSMA_radionucleotide-drug_conjugate,PSMA-targeting
 225Ac-FPI-1966|[225Ac]-FPI-1966|FPI-1966	radioconjugate,FGFR3-targeting
 225Ac-FPI-2059|[225Ac]-FPI-2059|FPI-2059	radioconjugate,NTSR1-targeting
+225Ac-PSMA-I&T|[225Ac]-FPI-2265|FPI-2265	radioligand,PSMA-targeting
 225Ac-PSMA-617|[225Ac]-PSMA-617|Ac-PSMA-617	radioligand,PSMA-targeting
 225Ac-PSMA-R2|[225Ac]-PSMA-R2|Ac-PSMA-R2	radioligand,PSMA-targeting
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
@@ -300,6 +301,7 @@ BMS 936559|MDX-1105	anti-PD-L1_monoclonal_antibody
 BMS-754807	IGF1R_inhibitor
 BMS-813160	CCR2/CCR5_antagonist
 BMS-986012	anti-fucosyl-GM1_monoclonal_antibody
+BMS-986504	PRMT5_inhibitor,MTA-co-operative
 BMS-986148	anti-mesothelin_antibody-drug_conjugate
 BMS-986158	BET_inhibitor
 BMS-986179|BMS 986179	anti-CD73_monoclonal_antibody
@@ -870,6 +872,7 @@ JNJ-75348780	bispecific_T-cell_engager,CD22-targeting
 JNJ-78278343	bispecific_T-cell_engager,KLK2-targeting
 JNJ-80948543	trispecific_CD79b/CD20/CD3_antibody
 JNJ-90009530	autologous_CAR-T-cell_therapy,CD20-targeting
+JNJ-90189892	unknown_drug_class
 JQ1|JQ1 compound	BET_inhibitor
 JS-006|JS006	anti-TIGIT_monoclonal_antibody
 JS-009|JS009	anti-CD112R_monoclonal_antibody
@@ -1663,3 +1666,4 @@ rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Re
 SRA515|SRA-515|SRA 515|AZD5153|AZD 5153	BRD4_inhibitor
 UB-VV111	gene_therapy,CAR-T-cell_generating,CD19-targeting
 VSV-GP|BI-1831169|BI 1831169|BI1831169	oncolytic_virus
+IDOV-Immune	oncolytic_virus,undisclosed_mechanism
