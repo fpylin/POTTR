@@ -59,8 +59,7 @@ NCT04857372	catype:Solid tumour; NOT WWTR1:fusion; NOT WWTR1:WWTR1-CAMTA1_fusion
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT05067283	KRAS:G12C
 NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catype:Non-melanoma skin cancer)
-NCT05086692	*(microsatellite_instability:high OR mismatch_repair:deficient)
-NCT05086692	*tumour_mutational_burden:high
+NCT05086692	*(microsatellite_instability:high OR mismatch_repair:deficient OR tumour_mutational_burden:high)
 NCT05198934	KRAS:G12C; catype:Colorectal cancer
 NCT05288166	catype:Prostate cancer
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
