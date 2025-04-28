@@ -215,7 +215,7 @@ NCT05352672	*NOT prior_therapy:systemic_therapy
 NCT06127407	catype:Chondrosarcoma; NOT catype:Dedifferentiated chondrosarcoma; NOT catype:Mesenchymal chondrosarcoma; NOT catype:Myxoid chondrosarcoma
 NCT05609968	*NOT prior_therapy:systemic_therapy
 NCT05215340	*NOT prior_therapy:systemic_therapy
-NCT05216432	PIK3CA:oncogenic_mutation
+NCT05216432	PIK3CA:oncogenic_mutation; catype:Breast cancer
 NCT06252649	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT06599502	KRAS:G12D
 NCT06659341	KRAS:G12C

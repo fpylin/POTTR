@@ -14,6 +14,7 @@ drug	drug_class
 177Lu-edotreotide|lutetium-177-DOTATATE|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
 177Lu-edotreotide|lutetium-177-DOTATATE|[177Lu]Lu-octretotate|Lutetium177-DOTA-octreotate	177Lu-DOTA-radioconjugate
 212Pb-ADVC001|[212Pb]Pb-ADVC001|Pb-ADVC001	radioligand,PSMA-targeting
+225Ac-AZD2284|[225Ac]-AZD2284|AZD2284	radioligand,PSMA-targeting
 225Ac-FL-020|[225Ac]-FL-020|Ac-FL-020	anit-PSMA_radionucleotide-drug_conjugate,PSMA-targeting
 225Ac-FPI-1966|[225Ac]-FPI-1966|FPI-1966	radioconjugate,FGFR3-targeting
 225Ac-FPI-2059|[225Ac]-FPI-2059|FPI-2059	radioconjugate,NTSR1-targeting
@@ -150,6 +151,7 @@ ATG-101|ATG101	bispecific_PD-L1/4-1BB_antibody
 ATOR1017	anti-4-1BB_agonistic_antibody
 ATX-101|ATX101	cell_penetrating_peptide,PCNA-targeting
 AU-007	anti-IL-2_monoclonal_antibody
+AU-24118	SMARCA2/SMARCA4/PBRM1_degrader
 AVZO-021	CDK2_inhibitor
 AWT020	anti-PD1-IL2_fusion_protein
 AXA-042|AXA042	TLR2/TLR6_agonist
@@ -178,7 +180,7 @@ AZD8055	mTORC1/mTORC2_inhibitor
 AZD8186|AZD-8186	PI3K_beta_inhibitor
 AZD8421|AZD-8421	CDK2_inhibitor
 AZD8701	FOXP3_antisense_oligonucleotide
-AZD9574	PARP1-selective_inhibitor
+Palacaparib|AZD9574|AZD-9574	PARP1-selective_inhibitor
 AZD9592	anti_EGFR/cMET_antibody-drug_conjugate
 AZD9829	anti-CD123_antibody-drug_conjugate
 Abemaciclib|LY-2835219|LY2835219|Verzenio	CDK4/6_inhibitor
@@ -248,6 +250,7 @@ BAY2862789|BAY 2862789|BAY-2862789	DGK-alpha_inhibitor
 BAY2927088|BAY 2927088|BAY-2927088	ERBB2_inhibitor,exon_20_selective; EGFR_inhibitor,exon_20_selective
 BAY3498264	SOS1-KRAS_inhibitor
 BAY3498264|BAY 3498264	SOS1-KRAS_inhibitor
+BAY3713372|BAY 3713372|BAY-3713372	PRMT5_inhibitor
 BBO-10203	PI3K_alpha-RAS_breaker
 BBO-8520	KRAS_G12C_inhibitor
 BBP-398|IACS-15509	SHP2_inhibitor
@@ -289,6 +292,7 @@ BI 894999|BI-894999	BET_inhibitor
 BI-2852	KRAS_G12D_inhibitor; KRAS_switch1/2_pocket_inhibitor
 BI-3812	BCL6_inhibitor
 BI-764532|BI 764532	bispecific_T-cell_engager,DLL3-targeting
+BI-7273	BRD9_inhibitor
 BI836880|BI 836880	VEGF/Ang2-blocking_nanobody
 BIL06v	peptide_conjugate_vaccine,nfP2X7-targeting
 BL0020	unknown_drug_class
@@ -632,6 +636,8 @@ FEC-D regimen|FEC-D	Fluorouracil + Epirubicin + Cyclophosphamide + Docetaxel
 FER_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 FF-10832	gemcitabine
 FF-10850|FF 10850|FF10850	topoisomerase_inhibitor
+FHD-286	SMARCA4/SMARCA2_inhibitor
+FHD-609|FHD609	BRD9_PROTAC_degrader
 FG-M108	anti-CLDN18.2_monoclonal_antibody
 FIT039	CDK9_inhibitor
 FLOT|FLOX regimen	Fluorouracil + Oxaliplatin + Docetaxel
@@ -1079,7 +1085,7 @@ NTLA-2001	CRISPR-Cas9_gene-editing_therapy,TTR-targeting
 NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NUV-868|NUV868	BET_inhibitor
 NVG-111	bispecific_T-cell_engager,ROR1-targeting
-NVL-520	ROS1_inhibitor
+Zidesamtinib|NVL-520	ROS1_inhibitor
 NVL-655	ALK_inhibitor,fourth_generation
 NVU-868	BET_inhibitor
 NX-2127	BTK_inhibitor

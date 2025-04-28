@@ -2466,3 +2466,17 @@ virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
 WEE1_inhibitor
 YAP-TEAD_inhibitor	TEAD_palmitoylation_inhibitor
 YES1_inhibitor
+cancer_therapy  cancer_therapy,BRD9-targeting
+cancer_therapy,BRD9-targeting   BRD9_PROTAC_degrader
+cancer_therapy,BRD9-targeting   BRD9_inhibitor
+SMARCA2_inhibitor	SMARCA4/SMARCA2_inhibitor
+SMARCA4_inhibitor	SMARCA4/SMARCA2_inhibitor
+cancer_therapy	cancer_therapy,SMARCA4-targeting
+cancer_therapy,SMARCA2-targeting	SMARCA2_inhibitor
+cancer_therapy,SMARCA4-targeting	SMARCA4_inhibitor
+cancer_therapy	cancer_therapy,SMARCA2-targeting
+cancer_therapy	cancer_therapy,SMARCA4-targeting
+cancer_therapy	cancer_therapy,PBRM1-targeting
+cancer_therapy,SMARCA2-targeting	SMARCA2/SMARCA4/PBRM1_degrader
+cancer_therapy,SMARCA4-targeting	SMARCA2/SMARCA4/PBRM1_degrader
+cancer_therapy,PBRM1-targeting	SMARCA2/SMARCA4/PBRM1_degrader
