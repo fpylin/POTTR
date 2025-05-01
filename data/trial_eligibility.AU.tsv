@@ -63,7 +63,6 @@ NCT05086692	*(microsatellite_instability:high OR mismatch_repair:deficient OR tu
 NCT05198934	KRAS:G12C; catype:Colorectal cancer
 NCT05288166	catype:Prostate cancer
 NCT05217446	BRAF:V600E; (microsatellite_instability:high OR mismatch_repair:deficient)
-NCT05054725	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma); *Unknown status
 NCT03900442	catype:Gastric cancer; *catype:Diffuse gastric cancer; *Unknown status
 NCT05182931	(BRAF:V600E OR NRAS:oncogenic_mutation); NOT catype:Anaplastic thyroid cancer
