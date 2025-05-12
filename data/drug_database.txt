@@ -1177,6 +1177,7 @@ PF-07062119	bispecific_T-cell_engager,GUCY2C-targeting
 PF-07220060	CDK4_selective_inhibitor
 PF-07248144	KAT6_inhibitor
 PF-07265807	AXL/MER_inhibitor
+PF-07799933|ARRY-440	BRAF_inhibitor,pan-mutant-selective
 PF-477736	CHEK1_inhibitor
 PF-9363|CTx-648	KAT6_inhibitor
 PGG Beta-Glucan|Imprime PGG	dectin_receptor_agonist

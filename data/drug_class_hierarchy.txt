@@ -823,8 +823,9 @@ cancer_therapy,BMI-1-targeting	BMI-1_inhibitor
 cancer_therapy,BRAF_V600-targeting	BRAF_V600_inhibitor
 cancer_therapy,BRAF_V600-targeting	BRAF_V600_inhibitor
 cancer_therapy,BRAF_V600-targeting	BRAF_V600E_degrader
-cancer_therapy,BRAF_V600E-targeting	BRAF_V600E_degrader
+cancer_therapy,BRAF_V600-targeting	BRAF_V600E_degrader
 cancer_therapy,BRAF-targeting	BRAF_inhibitor
+cancer_therapy,BRAF-targeting	BRAF_inhibitor	BRAF_inhibitor,pan-mutant-selective
 cancer_therapy,BTK-targeting	BTK_inhibitor
 cancer_therapy,BTK-targeting	BTK_PROTAC_degrader
 cancer_therapy,BTLA-targeting	immuno-oncology_therapy,BTLA-targeting
