@@ -336,6 +336,7 @@ BNC105P	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNT111	mRNA_personalised_cancer_vaccine
 BNT113	vaccine_therapy,HPV-E6/HPV-E7-targeting
 BNT211	CAR-T-cell_therapy,mRNA_vaccine,CLDN6-targeting
+BNT325|DB-1305	anti-Trop2_antibody-drug_conjugate
 BNT327|PM8002	bispecific_PD-L1/VEGFA_antibody
 BOS-342|BOS342|PRS342|PRS-342	bispecific_GPC3/4-1BB_antibody
 BOS172738	RET-selective_inhibitor
@@ -577,6 +578,7 @@ EMB-09	bispecific_PD-L1/OX40_antibody
 EMD 1204831	MET_inhibitor
 ENB003|ENB 003|ENB-003	ETBR_inhibitor
 ENMD-2076	AURKA_inhibitor; angiogenesis_inhibitor
+ENV-501	anti-ERBB3_monoclonal_antibody
 EO1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; EGFR_inhibitor,second_generation
 EOS-448	anti-TIGIT_monoclonal_antibody
 EOX	Epirubicin + Oxaliplatin + Capecitabine
