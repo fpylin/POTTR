@@ -93,7 +93,8 @@ NCT04789096	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression; *p
 NCT04924075	*NOT KIT:oncogenic_mutation; *NOT PDGFRB:oncogenic_mutation; catype:Gastrointestinal stromal tumour
 NCT04924075	VHL:oncogenic_mutation; (catype:Pheochromocytoma OR catype:Paraganglioma)
 NCT04924075	catype:Solid tumour; (EPAS1:alteration OR FH:alteration OR SDHA:alteration OR SDHB:alteration OR SDHC:alteration OR SDHD:alteration OR SDHAF2:alteration OR EGLN1:alteration OR EGLN:alteration OR MDH2:alteration OR ELOC:alteration OR TCEB1:alteration); *NOT VHL:oncogenic_mutation
-NCT05261399	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation; *NOT prior_therapy:Osimertinib
+NCT05261399	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation; *prior_therapy:Osimertinib
+NCT05261399	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation; prior_therapy:systemic_therapy; NOT prior_therapy:Osimertinib; NOT prior_therapy:EGFR_inhibitor,third_generation
 NCT05876754	catype:Cholangiocarcinoma; IDH1:R132_mutation; *NOT prior_therapy:IDH1_R132_inhibitor
 NCT05487235	catype:Solid tumour; sensitive_to:GDC-1971
 NCT05487235	catype:Non-small cell lung cancer; *sensitive_to:GDC-1971; *NOT prior_therapy:systemic_therapy

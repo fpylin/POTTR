@@ -567,6 +567,7 @@ E7777	cytotoxic_fusion_protein,diphtheria-IL-2
 EBC-46	protein_kinase_C_regulator
 ECX	Epirubicin + Cisplatin + Capecitabine
 EGFR_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
+EIK1005	WRN_inhibitor
 ELU001	CDot_drug_conjugate,FR-alpha-targeting
 ELVN-001	BCR-ABL1_inhibitor
 ELVN-002	ERBB2_inhibitor,exon_20_selective
@@ -578,7 +579,7 @@ EMB-09	bispecific_PD-L1/OX40_antibody
 EMD 1204831	MET_inhibitor
 ENB003|ENB 003|ENB-003	ETBR_inhibitor
 ENMD-2076	AURKA_inhibitor; angiogenesis_inhibitor
-ENV-501	anti-ERBB3_monoclonal_antibody
+ENV-501	anti-ERBB3_antibody-drug_conjugate
 EO1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; EGFR_inhibitor,second_generation
 EOS-448	anti-TIGIT_monoclonal_antibody
 EOX	Epirubicin + Oxaliplatin + Capecitabine
@@ -893,6 +894,7 @@ JSKN003|JSKN-003|KN-026	anti-ERBB2_antibody-drug_conjugate
 JSKN033|JSKN-003	JSKN003 + Envafolimab
 JSKN033|JSKN-003	biparatopic_anti-ERBB2_antibody-drug_conjugate-anti-PD-L1_antibody; JSKN003 + Envafolimab
 JTX-4014|JTX 4014|JTX4014	anti-PD-1_monoclonal_antibody
+Kesonotide	hGIIA-vimentin_inhibitor
 KER-050	modified_ActRIIA_ligand_trap_protein
 KF-0210	prostaglandin_EP4_receptor_inhibitor
 KGX101	IL-12_Fc-fusion_protein
@@ -914,6 +916,7 @@ LM-061	MET/VEGFR2/FLT3_inhibitor
 LM-108|LM108	anti-CCR8_monoclonal_antibody
 LM-168|LM168	unknown_drug_class
 LM-302|LM302	anti-CDLN18.2_antibody-drug_conjugate
+LM-299	bispecific_PD-1/VEGF_antibody
 LNS8801	GPER_agonist
 LOP628	anti-cKIT_antibody-drug_conjugate
 LOXO-260	RET-selective_inhibitor
@@ -1022,6 +1025,7 @@ MK-8353|SCH 900353	ERK_inhibitor
 MK2206	AKT_inhibitor
 MLN0128	mTORC1/mTORC2_inhibitor
 MNPR-101-PCTA-177Lu	177Lu-anti-uPAR_radioconjugate
+MOMA-341|MOMA341	WRN_inhibitor
 MRK003	gamma_secretase_inhibitor
 MRTX1133|MRTX-1133	KRAS_G12D_inhibitor
 MRTX1719	PRMT5_inhibitor
@@ -1088,6 +1092,7 @@ NTX-301|NTX301|NTX 301	DNMT1_inhibitor
 NUV-868|NUV868	BET_inhibitor
 NVG-111	bispecific_T-cell_engager,ROR1-targeting
 Zidesamtinib|NVL-520	ROS1_inhibitor
+NVL-330	ERBB2_inhibitor,exon_20_selective
 NVL-655	ALK_inhibitor,fourth_generation
 NVU-868	BET_inhibitor
 NX-2127	BTK_inhibitor
@@ -1324,6 +1329,7 @@ RO7502175	unknown_drug_class
 RO7566802	unknown_drug_class
 RO7617991	unknown_drug_class
 RO7656594|GDC2992|GDC-2992|RG6537	AR_PROTAC_degrader
+RO7673396	pan-KRAS_inhibitor
 ROS1_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 RP-6306|RP 6306	PKMYT1_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
@@ -1658,7 +1664,7 @@ ZN-d5	BCL2_inhibitor
 ZW191	anti-FR-alpha_antibody-drug_conjugate
 ZW49	anti-ERBB2_antibody-drug_conjugate
 Zalifrelimab|AGEN-1884|AGEN1884	anti-CTLA4_monoclonal_antibody
-Zalontamab Brengitecan|BMS-986507|BL-B01D1	bispecific_EGFR/ERBB3_antibody
+Izalontamab Brengitecan|BMS-986507|BL-B01D1	bispecific_EGFR/ERBB3_antibody
 Zanidatamab|ZW25	bispecific_ERBB2/ERBB2_antibody
 Zanubrutinib|BGB-3111|BTK-InhB|Brukinsa	BTK_inhibitor
 Zanzalintinib|XL092	MET/VEGFR2/AXL/MER_inhibitor
