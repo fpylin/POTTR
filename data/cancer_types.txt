@@ -537,6 +537,7 @@ Cancer	Solid tumour	PD-L1 amplified tumour
 Cancer	Solid tumour	Parathyroid carcinoma
 Cancer	Solid tumour	Peritoneal cancer
 Cancer	Solid tumour	Peritoneal cancer	Primary peritoneal serous carcinoma|Peritoneal serous carcinoma|Primary peritoneal cancer|Epithelial cancers of primary peritoneum
+Cancer	Solid tumour	Peritoneal cancer	Primary retroperitoneal mucinous tumour|Retroperitoneal mucinous cystadenoma
 Cancer	Solid tumour	Porocarcinoma
 Cancer	Solid tumour	Rare solid tumour|Rare cancer|Rare tumour
 Cancer	Solid tumour	Respiratory tract cancer	Lung cancer
