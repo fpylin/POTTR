@@ -1334,7 +1334,7 @@ RO7673396	pan-KRAS_inhibitor
 ROS1_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 RP-6306|RP 6306	PKMYT1_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
-RXC004|RXC-004	PORCN_inhibitor
+Zamaporvint|RXC004|RXC-004	PORCN_inhibitor
 Radiotherapy|Radiation Therapy|Radiation Ionizing Radiotherapy	radiotherapy
 Radium-223|GRA-223	radium_223_radionuclide
 Radvax	autologous_anticancer_vaccine
@@ -1493,7 +1493,7 @@ TL-895	BTK_inhibitor
 TNO155	SHP2_inhibitor
 TPF regimen	Cisplatin + Docetaxel + 5-Fluorouracil
 TPST-1120	PPAR-alpha_inhibitor
-TPX0022|TPX-0022	MET/SRC/CSF1R_inhibitor
+Elzovantinib|TPX0022|TPX-0022	MET/SRC/CSF1R_inhibitor
 TPX0046|TPX-0046	RET/SRC_inhibitor; RET_inhibitor
 TST001	anti-CLDN18.2_monoclonal_antibody
 TTI-621	anti-SIRPa_monoclonal_antibody
@@ -1691,4 +1691,4 @@ rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Re
 RK-582	TNKS1/2_inhibitor
 G007-LK	TNKS1/2_inhibitor
 GV1001|GV-1001	vaccine_therapy,telomerase-derived_peptide
-
+EPZ015666|GSK3235025	PRMT5_inhibitor
