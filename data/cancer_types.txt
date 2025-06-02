@@ -135,6 +135,7 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Large cell neuroendocrine
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Large cell neuroendocrine carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of head and neck
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of unknown primary
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Extra-pulmonary neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Anal small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Bladder small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Cervical small-cell carcinoma

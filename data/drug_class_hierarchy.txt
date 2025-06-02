@@ -1702,7 +1702,7 @@ immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA-4-targeting	bispecifi
 immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA-4-targeting	bispecific_PD-L1/CTLA-4_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA-4-targeting	CTLA-4-directed_probody
 immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA-4-targeting	dual_PD-L1/CTLA-4_inhibitor
-immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	anti-PD-1_IL-2-immunocytokine_conjugate
+immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	anti-PD-1/IL-2-immunocytokine_conjugate
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	anti-PD-1_monoclonal_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	anti-PD1-IL2_fusion_protein
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	bispecific_PD-1/CD47_antibody
@@ -1944,6 +1944,7 @@ immuno-oncology_therapy,ICOS-targeting	anti-ICOS_agonistic_antibody
 immuno-oncology_therapy,IGF_ligand-targeting	anti-IGF_ligand_monoclonal_antibody
 immuno-oncology_therapy,IL-1beta-targeting	anti-IL-1beta_monoclonal_antibody
 immuno-oncology_therapy,IL-2-targeting	anti-IL-2_monoclonal_antibody
+immuno-oncology_therapy,IL-2-targeting	anti-PD-1/IL-2-immunocytokine_conjugate
 immuno-oncology_therapy,IL-2-targeting	IL-2_variant
 immuno-oncology_therapy,IL-6-targeting	anti-IL-6_monoclonal_antibody
 immuno-oncology_therapy,IL-11-targeting	anti-IL-11_monoclonal_antibody
