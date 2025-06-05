@@ -247,7 +247,7 @@ BAT8009	anti-B7H3_antibody-drug_conjugate
 BAY-1895344|BAY 1895344	ATR_inhibitor
 BAY1436032|BAY 1436032|BAY-1436032	IDH1_R132_inhibitor
 BAY2862789|BAY 2862789|BAY-2862789	DGK-alpha_inhibitor
-BAY2927088|BAY 2927088|BAY-2927088	ERBB2_inhibitor,exon_20_selective; EGFR_inhibitor,exon_20_selective
+Sevabertinib|BAY2927088|BAY 2927088|BAY-2927088	ERBB2_inhibitor,exon_20_selective; EGFR_inhibitor,exon_20_selective
 BAY3498264	SOS1-KRAS_inhibitor
 BAY3498264|BAY 3498264	SOS1-KRAS_inhibitor
 BAY3713372|BAY 3713372|BAY-3713372	PRMT5_inhibitor
@@ -915,7 +915,7 @@ LBL-024|LBL024	bispecific_PD-L1/41BB_antibody
 LBS-007	CDC7_inhibitor
 LHRH Agonist	LHRH_agonist
 LM-061	MET/VEGFR2/FLT3_inhibitor
-LM-108|LM108	anti-CCR8_monoclonal_antibody
+Cafelkibart|LM-108|LM108	anti-CCR8_monoclonal_antibody
 LM-168|LM168	unknown_drug_class
 LM-302|LM302	anti-CDLN18.2_antibody-drug_conjugate
 LM-299	bispecific_PD-1/VEGF_antibody
@@ -1696,3 +1696,4 @@ EPZ015666|GSK3235025	PRMT5_inhibitor
 TQB2102	bispecific_ERBB2/ERBB2_antibody-drug_conjugate
 Obrixtamig	bispecific_T-cell_engager,DLL3-targeting
 DB-1310|DB1310	anti-ERBB3_antibody-drug_conjugate
+Elraglusib|9-ING-41	GSK3beta_inhibitor

@@ -1073,6 +1073,9 @@ MAP2K1	exon_8	300	320
 MAP2K1	exon_9	321	341
 MAP2K1	exon_10	342	356
 MAP2K1	exon_11	357	393
+MAP2K1	erk-binding_domain	1	30
+MAP2K1	negative_regulatory_domainERK-binding_domain	42	60
+MAP2K1	catalytic_code	68	361
 MAP2K2	exon_1	1	31
 MAP2K2	exon_2	32	101
 MAP2K2	exon_3	102	150
