@@ -2482,3 +2482,6 @@ cancer_therapy	cancer_therapy,PBRM1-targeting
 cancer_therapy,SMARCA2-targeting	SMARCA2/SMARCA4/PBRM1_degrader
 cancer_therapy,SMARCA4-targeting	SMARCA2/SMARCA4/PBRM1_degrader
 cancer_therapy,PBRM1-targeting	SMARCA2/SMARCA4/PBRM1_degrader
+ERBB2_inhibitor	EGFR/ERBB2_inhibitor,mutant-selective,non-covalent
+ERBB2_inhibitor,exon_20_selective	EGFR/ERBB2_inhibitor,mutant-selective,non-covalent
+EGFR_inhibitor,fourth_generation	EGFR/ERBB2_inhibitor,mutant-selective,non-covalent

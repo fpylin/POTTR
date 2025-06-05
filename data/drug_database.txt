@@ -247,7 +247,7 @@ BAT8009	anti-B7H3_antibody-drug_conjugate
 BAY-1895344|BAY 1895344	ATR_inhibitor
 BAY1436032|BAY 1436032|BAY-1436032	IDH1_R132_inhibitor
 BAY2862789|BAY 2862789|BAY-2862789	DGK-alpha_inhibitor
-Sevabertinib|BAY2927088|BAY 2927088|BAY-2927088	ERBB2_inhibitor,exon_20_selective; EGFR_inhibitor,exon_20_selective
+Sevabertinib|BAY2927088|BAY 2927088|BAY-2927088	EGFR/ERBB2_inhibitor,mutant-selective,non-covalent
 BAY3498264	SOS1-KRAS_inhibitor
 BAY3498264|BAY 3498264	SOS1-KRAS_inhibitor
 BAY3713372|BAY 3713372|BAY-3713372	PRMT5_inhibitor
@@ -414,7 +414,7 @@ CFT1946	BRAF_V600E_degrader
 CGM097	p53-HDM2_interaction_inhibitor; MDM2_inhibitor
 CH5126766|VS-6766|RO5126766	RAF/MEK_inhibitor
 CI-8993	anti-VISTA_monoclonal_antibody
-CK-101|CK 101|CK101|OLAFERTINIB|RX-518	EGFR_inhibitor,third_generation
+Olafertinib|CK-101|CK 101|CK101|RX-518	EGFR_inhibitor,third_generation
 CLDN6 CAR-T	autologous_CAR-T-cell_therapy,CLDN6-targeting
 CLDN6 RNA-LPX	mRNA_vaccine,CLDN6-targeting
 CLN-418|HBM7008	bispecific_B7H4/4-1BB_antibody
@@ -566,7 +566,6 @@ E7016	PARP_inhibitor
 E7777	cytotoxic_fusion_protein,diphtheria-IL-2
 EBC-46	protein_kinase_C_regulator
 ECX	Epirubicin + Cisplatin + Capecitabine
-EGFR_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 EIK1003	PARP1-selective_inhibitor
 EIK1005	WRN_inhibitor
 ELU001	CDot_drug_conjugate,FR-alpha-targeting
@@ -1697,3 +1696,5 @@ TQB2102	bispecific_ERBB2/ERBB2_antibody-drug_conjugate
 Obrixtamig	bispecific_T-cell_engager,DLL3-targeting
 DB-1310|DB1310	anti-ERBB3_antibody-drug_conjugate
 Elraglusib|9-ING-41	GSK3beta_inhibitor
+SHR-1826	anti-cMET_antibody-drug_conjugate
+SHR-A2102	anti-NECTIN4_antibody-drug_conjugate
