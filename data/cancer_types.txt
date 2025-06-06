@@ -455,7 +455,7 @@ Cancer	Solid tumour	Neuroendocrine tumour	Somatostatinoma
 Cancer	Solid tumour	Neuroendocrine tumour	Thymic carcinoid tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Well-differentiated neuroendocrine tumour, WHO Grade 1
 Cancer	Solid tumour	Neuroendocrine tumour	Well-differentiated neuroendocrine tumour, WHO Grade 2
-Cancer	Solid tumour	Neuroendocrine tumour	Well-differentiated neuroendocrine tumour, WHO Grade 3
+Cancer	Solid tumour	Neuroendocrine tumour	Well-differentiated neuroendocrine tumour, WHO Grade 3|High-grade well-differentiated neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour|Carcinoid tumour|Atypical carcinoid tumour
 Cancer	Solid tumour	Neuroepithelial tumour
 Cancer	Solid tumour	Neurofibromatosis|Plexiform Neurofibroma	Type 1 neurofibromatosis
