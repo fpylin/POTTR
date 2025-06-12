@@ -48,7 +48,7 @@ BET_inhibitor
 BET_inhibitor	PI3K/BET_inhibitor
 BMI-1_inhibitor
 BTK_inhibitor
-BTK_inhibitor	BTK_PROTAC_degrader
+BTK_degrader	BTK_PROTAC_degrader
 B_cell_immunotherapy
 Bcl2_inhibitor	dual_Bcl2/BclxL_inhibitor
 BclxL_inhibitor	dual_Bcl2/BclxL_inhibitor
@@ -303,7 +303,7 @@ KRAS_inhibitor	KRAS_G12C_inhibitor	KRAS_G12C/NRAS_G12C/HRAS_G12C_inhibitor
 KRAS_inhibitor	KRAS_G12D_inhibitor
 KRAS_inhibitor	KRAS_switch1/2_pocket_inhibitor
 KRAS_inhibitor	pan-KRAS_inhibitor	SOS1-KRAS_inhibitor
-KRAS_inhibitor	KRAS_PROTAC_degrader
+KRAS_degrader	KRAS_PROTAC_degrader
 LOXL2_inhibitor
 LSD1_inhibitor
 LSD1_inhibitor	LSD1/HDAC6_inhibitor
@@ -1276,12 +1276,14 @@ cancer_therapy,ALK-targeting	ALK_inhibitor,first_generation
 cancer_therapy,ALK-targeting	ALK_inhibitor,fourth_generation
 cancer_therapy,ALK-targeting	ALK_inhibitor,second_generation
 cancer_therapy,ALK-targeting	ALK_inhibitor,third_generation
-cancer_therapy,AR-targeting	AR_PROTAC_degrader
+cancer_therapy,AR-targeting	AR_degrader	AR_PROTAC_degrader
+cancer_therapy,AR-targeting	AR_degrader	AR_AUTOTAC_degrader
+cancer_therapy,AR-targeting	AR_degrader	dual_AR_degrader_antagonist
+cancer_therapy,AR-targeting	antiandrogen,nonsteroidal,second_generation	dual_AR_degrader_antagonist
 cancer_therapy,AR-targeting	antiandrogen,AR_NTD_inhibitor
 cancer_therapy,AR-targeting	antiandrogen,nonsteroidal,first_generation
 cancer_therapy,AR-targeting	antiandrogen,nonsteroidal,second_generation
 cancer_therapy,AR-targeting	antiandrogen,steroidal
-cancer_therapy,AR_degrader-targeting	dual_AR_degrader_antagonist
 cancer_therapy,ASCT2-targeting	immuno-oncology_therapy,ASCT2-targeting
 cancer_therapy,ATM-targeting	ATM_inhibitor
 cancer_therapy,ATR-targeting	ATR_inhibitor
@@ -1310,16 +1312,12 @@ cancer_therapy,BMI-1-targeting	BMI-1_inhibitor
 cancer_therapy,BRAF-targeting	BRAF_inhibitor
 cancer_therapy,BRAF-targeting	BRAF_inhibitor	BRAF_inhibitor,pan-mutant-selective
 cancer_therapy,BRAF_V600-targeting	BRAF_V600E_degrader
-cancer_therapy,BRAF_V600-targeting	BRAF_V600E_degrader
 cancer_therapy,BRAF_V600-targeting	BRAF_V600_inhibitor
 cancer_therapy,BRAF_V600-targeting	BRAF_V600_inhibitor
-cancer_therapy,BRAF_V600E-targeting	BRAF_V600E_degrader
 cancer_therapy,BRD4-targeting	BRD4_inhibitor
-cancer_therapy,BRD9-targeting	BRD9_PROTAC_degrader
-cancer_therapy,BRD9-targeting	BRD9_inhibitor
-cancer_therapy,BRD9-targeting   BRD9_PROTAC_degrader
+cancer_therapy,BRD9-targeting	BRD9_degrader	BRD9_PROTAC_degrader
 cancer_therapy,BRD9-targeting   BRD9_inhibitor
-cancer_therapy,BTK-targeting	BTK_PROTAC_degrader
+cancer_therapy,BTK-targeting	BTK_degrader	BTK_PROTAC_degrader
 cancer_therapy,BTK-targeting	BTK_inhibitor
 cancer_therapy,BTLA-targeting	immuno-oncology_therapy,BTLA-targeting
 cancer_therapy,Bcl2-targeting	Bcl2_inhibitor
@@ -1385,7 +1383,7 @@ cancer_therapy,CDK2-targeting	CDK2_inhibitor
 cancer_therapy,CDK4-targeting	CDK4_inhibitor
 cancer_therapy,CDK4_selective-targeting	CDK4_selective_inhibitor
 cancer_therapy,CDK5-targeting	CDK5_inhibitor
-cancer_therapy,CDK6-targeting	CDK6_PROTAC_degrader
+cancer_therapy,CDK6-targeting	CDK6_degrader	CDK6_PROTAC_degrader
 cancer_therapy,CDK6-targeting	CDK6_inhibitor
 cancer_therapy,CDK7-targeting	CDK7_inhibitor
 cancer_therapy,CDK9-targeting	CDK9_inhibitor
@@ -1440,7 +1438,7 @@ cancer_therapy,DRD2-targeting	DRD2_antagonist
 cancer_therapy,E-sel-targeting	E-sel_antagonist
 cancer_therapy,EBV-targeting	allogeneic_T-cell_immunotherapy,EBV-targeting
 cancer_therapy,EED-targeting	EED_inhibitor
-cancer_therapy,EGFR-targeting	EGFR_CDAC_degrader
+cancer_therapy,EGFR-targeting	EGFR_degrader	EGFR_CDAC_degrader
 cancer_therapy,EGFR-targeting	EGFR_inhibitor
 cancer_therapy,EGFR-targeting	EGFR_inhibitor,exon_20_selective
 cancer_therapy,EGFR-targeting	EGFR_inhibitor,first_generation
@@ -1454,11 +1452,9 @@ cancer_therapy,EGFR-targeting	immuno-oncology_therapy,EGFR-targeting
 cancer_therapy,EGFR/B7H3-targeting	immuno-oncology_therapy,EGFR/B7H3-targeting
 cancer_therapy,EGFR/ERBB3-targeting	immuno-oncology_therapy,EGFR/ERBB3-targeting
 cancer_therapy,EGFR/PBD-targeting	immuno-oncology_therapy,EGFR/PBD-targeting
-cancer_therapy,EGFR_CDAC-targeting	EGFR_CDAC_degrader
 cancer_therapy,EGFRvIII-targeting	bispecific_T-cell_engager,EGFRvIII-targeting
 cancer_therapy,EGFRvIII-targeting	immuno-oncology_therapy,EGFRvIII-targeting
 cancer_therapy,ENPP1-targeting	ENPP1_inhibitor
-cancer_therapy,ER-targeting	ER_PROTAC_degrader
 cancer_therapy,ERAP1-targeting	ERAP1_inhibitor
 cancer_therapy,ERBB2-targeting	ERBB2_inhibitor
 cancer_therapy,ERBB2-targeting	ERBB2_inhibitor,exon_20_selective
@@ -1476,9 +1472,10 @@ cancer_therapy,ERBB3-targeting	ERBB3_inhibitor
 cancer_therapy,ERBB3-targeting	immuno-oncology_therapy,ERBB3-targeting
 cancer_therapy,ERBB4-targeting	ERBB4_inhibitor
 cancer_therapy,ERK-targeting	ERK_inhibitor
-cancer_therapy,ESR1-targeting	complete_estrogen_receptor_antagonist
-cancer_therapy,ESR1-targeting	selective_estrogen_receptor_degrader
-cancer_therapy,ESR1-targeting	selective_estrogen_receptor_modulator
+cancer_therapy,ESR1-targeting	ER_degrader	ER_PROTAC_degrader
+cancer_therapy,ESR1-targeting	ER_degrader	complete_estrogen_receptor_antagonist
+cancer_therapy,ESR1-targeting	ER_degrader	selective_estrogen_receptor_degrader
+cancer_therapy,ESR1-targeting	ER_degrader	selective_estrogen_receptor_modulator
 cancer_therapy,ETBR-targeting	ETBR_inhibitor
 cancer_therapy,EWS-FLI1-targeting	EWS-FLI1_inhibitor
 cancer_therapy,EZH1-targeting	EZH1_inhibitor
@@ -1955,9 +1952,8 @@ endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,ne
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation	CYP11A1_inhibitor
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation	CYP17A1_inhibitor
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR-targeted_agent,second_generation	antiandrogen,nonsteroidal,second_generation
-endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR_PROTAC_degrader
-endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR_PROTAC_degrader	dual_AR_degrader_antagonist
-endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR_degrader
+endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR_degrader	AR_PROTAC_degrader
+endocrine_therapy	endocrine_therapy,androgen_axis-targeting	AR-targeted_agent,next_generation	AR_degrader	AR_PROTAC_degrader	dual_AR_degrader_antagonist
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	GnRH_agonist
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	GnRH_antagonist
 endocrine_therapy	endocrine_therapy,androgen_axis-targeting	antiandrogen	antiandrogen,nonsteroidal	antiandrogen,AR_NTD_inhibitor
@@ -1971,12 +1967,12 @@ endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	GnRH_agonist
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	GnRH_agonist	GnRH_analogue
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	GnRH_agonist	GnRH_analogue	synthetic_gonadotropin-releasing_hormone
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	LHRH_agonist
-endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	ER_PROTAC_degrader
+endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	ER_degrader	ER_PROTAC_degrader
+endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	ER_degrader	selective_estrogen_receptor_degrader
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	aromatase_inhibitor
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	benzamide,ER_alpha-targeting
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	complete_estrogen_receptor_antagonist
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	selective_estrogen_receptor_covalent_antagonist
-endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	selective_estrogen_receptor_degrader
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	selective_estrogen_receptor_modulator
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	oestrogen receptor-targeting therapy	selective_estrogen_receptor_modulator	selective_estrogen_receptor_modulator,third_generation
 endocrine_therapy	endocrine_therapy,oestrogen_axis-targeting	synthetic_progestin
@@ -2323,9 +2319,9 @@ immuno-oncology_therapy,TGF-beta-targeting	anti-TGF-beta_monoclonal_antibody
 immuno-oncology_therapy,TIGIT-targeting	immune_checkpoint_blockade,TIGIT-targeting
 immuno-oncology_therapy,TIM3-targeting	immune_checkpoint_blockade,TIM3-targeting
 immuno-oncology_therapy,TLR2-targeting	TLR2/TLR6_agonist
-immuno-oncology_therapy,TLR2/TLR6-targeting	TLR2/TLR6_agonist
 immuno-oncology_therapy,TLR6-targeting	TLR2/TLR6_agonist
-immuno-oncology_therapy,TLR6-targeting	anti-CEACAM5/CEACAM6_monoclonal_antibody
+immuno-oncology_therapy,CEACAM5-targeting	anti-CEACAM5/CEACAM6_monoclonal_antibody
+immuno-oncology_therapy,CEACAM6-targeting	anti-CEACAM5/CEACAM6_monoclonal_antibody
 immuno-oncology_therapy,TLR7/8-targeting	anti-CLDN18.2_immune-stimulating_antibody_conjugate,TLR7/8_agonist
 immuno-oncology_therapy,TLR9-targeting	TLR9_agonist
 immuno-oncology_therapy,TLR9-targeting	TLR9_agonistic_antibody_conjugate
@@ -2342,9 +2338,10 @@ immuno-oncology_therapy,VEGFA-targeting	bispecific_PD-L1/VEGFA_antibody
 immuno-oncology_therapy,VEGFA-targeting	trispecific_PD-1/VEGFA/CTLA4_antibody
 immuno-oncology_therapy,VEGFR2-targeting	anti-VEGFR2_monoclonal_antibody
 immuno-oncology_therapy,VISTA-targeting	anti-VISTA_monoclonal_antibody
-immuno-oncology_therapy,agonist-targeting	STING_agonist
-immuno-oncology_therapy,agonist-targeting	TLR2/TLR6_agonist
-immuno-oncology_therapy,agonist-targeting	TLR9_agonist
+immuno-oncology_therapy,STING-targeting	STING_agonist
+immuno-oncology_therapy,TLR2-targeting	TLR2/TLR6_agonist
+immuno-oncology_therapy,TLR6-targeting	TLR2/TLR6_agonist
+immuno-oncology_therapy,TLR9-targeting	TLR9_agonist
 immuno-oncology_therapy,amyloid-targeting	anti-amyloid_monoclonal_antibody
 immuno-oncology_therapy,cKIT-targeting	anti-cKIT_antibody-drug_conjugate
 immuno-oncology_therapy,cMET-targeting	anti-cMET_antibody-drug_conjugate
@@ -2531,4 +2528,7 @@ virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
 virus-based_therapy	viral_nanoparticle_drug_conjugates
 anti-ERBB2_antibody-drug_conjugate	biparatopic_ERBB2_antibody-drug_conjugate
 bispecific_ERBB2/ERBB2_antibody-drug_conjugate	biparatopic_ERBB2_antibody-drug_conjugate
-RAS-PI3Kalpha_inhibitor
+cancer_therapy,KRAS-targeting	RAS-PI3Kalpha_inhibitor
+cancer_therapy,NRAS-targeting	RAS-PI3Kalpha_inhibitor
+cancer_therapy,HRAS-targeting	RAS-PI3Kalpha_inhibitor
+cancer_therapy,ERBB2-targeting	RAS-PI3Kalpha_inhibitor

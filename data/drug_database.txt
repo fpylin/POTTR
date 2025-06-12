@@ -790,7 +790,7 @@ IBI129	anti-B7H3_antibody-drug_conjugate
 IBI130	anti-Trop2_antibody-drug_conjugate
 IBI130	anti-Trop2_monoclonal_antibody
 IBI133	anti-ERBB3_monoclonal_antibody
-IBI3001	anti-EGFR/B7H3_antibody-drug_conjugate
+IBI3001	bispecific_EGFR/B7H3_antibody-drug_conjugate
 IBI3003	bispecific_T-cell_engager,GPRC5D-targeting
 IBI3004	unknown_drug_class
 IBI3005	unknown_drug_class,bispecific_antibody
@@ -1712,3 +1712,4 @@ ADRX-0706	anti-NECTIN4_antibody-drug_conjugate
 BC3195	anti-CDH3_antibody-drug_conjugate
 BRY812	anti-LIV1_antibody-drug_conjugate
 VVD-159642|BAY-3605349	RAS-PI3Kalpha_inhibitor
+VVD-442	RAS-PI3Kalpha_inhibitor
