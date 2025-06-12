@@ -303,6 +303,7 @@ KRAS_inhibitor	KRAS_G12C_inhibitor	KRAS_G12C/NRAS_G12C/HRAS_G12C_inhibitor
 KRAS_inhibitor	KRAS_G12D_inhibitor
 KRAS_inhibitor	KRAS_switch1/2_pocket_inhibitor
 KRAS_inhibitor	pan-KRAS_inhibitor	SOS1-KRAS_inhibitor
+KRAS_inhibitor	KRAS_PROTAC_degrader
 LOXL2_inhibitor
 LSD1_inhibitor
 LSD1_inhibitor	LSD1/HDAC6_inhibitor
@@ -2530,3 +2531,4 @@ virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
 virus-based_therapy	viral_nanoparticle_drug_conjugates
 anti-ERBB2_antibody-drug_conjugate	biparatopic_ERBB2_antibody-drug_conjugate
 bispecific_ERBB2/ERBB2_antibody-drug_conjugate	biparatopic_ERBB2_antibody-drug_conjugate
+RAS-PI3Kalpha_inhibitor

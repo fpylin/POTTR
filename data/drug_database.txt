@@ -53,6 +53,7 @@ ABSK-043|ABSK043	PD-L1_inhibitor,oral
 ABT-122|ABT122	bispecific_TNF/IL-17A_antibody
 ABT-737	dual_Bcl2/BclxL_inhibitor
 ABT-767	PARP_inhibitor
+ACBI3	KRAS_PROTAC_degrader
 ACT001|ACT-001	NFKB_inhibitor
 ACTM-838|ACTM-838	IL-15/STING_variant,S.Typhimurium-attenuated_bacterial_cancer_therapy
 ADCE-T02	anti-TF_antibody-drug_conjugate
@@ -1710,3 +1711,4 @@ GFH375	KRAS_G12D_inhibitor
 ADRX-0706	anti-NECTIN4_antibody-drug_conjugate
 BC3195	anti-CDH3_antibody-drug_conjugate
 BRY812	anti-LIV1_antibody-drug_conjugate
+VVD-159642|BAY-3605349	RAS-PI3Kalpha_inhibitor
