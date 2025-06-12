@@ -150,6 +150,7 @@ ATG-018|ATG018	ATR_inhibitor
 ATG-101|ATG101	bispecific_PD-L1/4-1BB_antibody
 ATOR1017	anti-4-1BB_agonistic_antibody
 ATX-101|ATX101	cell_penetrating_peptide,PCNA-targeting
+ATX-968|ATX968	DHX9_inhibitor
 AU-007	anti-IL-2_monoclonal_antibody
 AU-24118	SMARCA2/SMARCA4/PBRM1_degrader
 AVZO-021	CDK2_inhibitor
@@ -243,7 +244,8 @@ BAT-1306|BAT 1306|BAT1306	anti-PD-1_monoclonal_antibody
 BAT6021	anti-TIGIT_monoclonal_antibody
 BAT6026	anti-OX40_agonistic_antibody
 BAT7104|BAT-7104	bispecific_PD-L1/CD47_antibody
-BAT8009	anti-B7H3_antibody-drug_conjugate
+BAT8008|BAT-8008	anti-Trop2_antibody-drug_conjugate
+BAT8009|BAT-8009	anti-B7H3_antibody-drug_conjugate
 BAY-1895344|BAY 1895344	ATR_inhibitor
 BAY1436032|BAY 1436032|BAY-1436032	IDH1_R132_inhibitor
 BAY2862789|BAY 2862789|BAY-2862789	DGK-alpha_inhibitor
@@ -745,6 +747,7 @@ Goserelin|ICI-118630|Zoladex	GnRH_analogue
 Gunagratinib|ICP-192	pan-FGFR_inhibitor
 Gunagratinib|ICP-192	pan-FGFR_inhibitor,irreversible
 Gusacitinib|ASN002|ASN-002	SYK/JAK_inhibitor
+H231	anti-EREG_antibody-drug_conjugate
 H3B-6545	selective_estrogen_receptor_covalent_antagonist
 H3B-8800|H3B 8800	SF3B1_inhibitor
 H3Mab-17	anti-ERBB3_monoclonal_antibody
@@ -892,7 +895,7 @@ JNJ-90189892	unknown_drug_class
 JQ1|JQ1 compound	BET_inhibitor
 JS-006|JS006	anti-TIGIT_monoclonal_antibody
 JS-009|JS009	anti-CD112R_monoclonal_antibody
-JSKN003|JSKN-003|KN-026	anti-ERBB2_antibody-drug_conjugate
+JSKN003|JSKN-003|KN-026	biparatopic_ERBB2_antibody-drug_conjugate
 JSKN033|JSKN-003	JSKN003 + Envafolimab
 JSKN033|JSKN-003	biparatopic_anti-ERBB2_antibody-drug_conjugate-anti-PD-L1_antibody; JSKN003 + Envafolimab
 JTX-4014|JTX 4014|JTX4014	anti-PD-1_monoclonal_antibody
@@ -1702,3 +1705,8 @@ SHR-1826	anti-cMET_antibody-drug_conjugate
 SHR-A2102	anti-NECTIN4_antibody-drug_conjugate
 VIR-5525|VIR5525	bispecific_T-cell_engager,EGFR-targeting
 DT-7012|DT7012	anti-CCR8_monoclonal_antibody
+VLS-1488	KIF18A_inhibitor
+GFH375	KRAS_G12D_inhibitor
+ADRX-0706	anti-NECTIN4_antibody-drug_conjugate
+BC3195	anti-CDH3_antibody-drug_conjugate
+BRY812	anti-LIV1_antibody-drug_conjugate
