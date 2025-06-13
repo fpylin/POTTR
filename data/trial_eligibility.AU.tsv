@@ -226,7 +226,7 @@ NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous 
 NCT05581004	catype:Non-small cell lung cancer
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
 NCT06509906	catype:Colorectal adenocarcinoma
-NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion); NOT catype:Ovarian small cell carcinoma
+NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion); NOT catype:Ovarian small cell carcinoma; *NOT catype:Cholangiocarcinoma; *NOT catype:Pancreatic adenocarcinoma
 NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT06360354	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06585488	(KRAS:oncogenic_mutation OR KRAS:amplification); NOT KRAS:G12R
@@ -242,7 +242,9 @@ NCT06533059	(catype:Breast cancer OR catype:Endometrial cancer OR catype:Solid t
 NCT06380751	catype:Breast cancer; (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation); ER:positive: HER2:negative
 NCT06750094	catype:Colorectal adenocarcinoma; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:oncogenic_mutation
 NCT06756932	prior_therapy:endocrine_therapy; prior_therapy:CDK4/6_inhibitor
-NCT05735080	NOT prior_therapy:CDK2/4/6_inhibitor; NOT prior_therapy:CDK2_inhibitor
+NCT05735080	catype:Breast cancer; prior_therapy:CDK4/6_inhibitor; NOT prior_therapy:CDK2/4/6_inhibitor; NOT prior_therapy:CDK2_inhibitor
+NCT05735080	catype:Ovarian cancer; prior_therapy:Carboplatin; NOT prior_therapy:CDK2/4/6_inhibitor; NOT prior_therapy:CDK2_inhibitor
+NCT05735080	CCNE1:amplification; NOT prior_therapy:CDK2/4/6_inhibitor; NOT prior_therapy:CDK2_inhibitor
 NCT05696626	ESR1:oncogenic_mutation; *prior_therapy:aromatase_inhibitor; *prior_therapy:CDK4/6_inhibitor; *NOT RB1:oncogenic_mutation; *NOT RB1:deletion
 NCT06501625	IDH1:R132; catype:Cholangiocarcinoma
 NCT05201547	(mismatch_repair:deficient OR microsatellite_instability:high); *NOT prior_therapy:systemic_therapy
@@ -276,3 +278,4 @@ NCT06760819	(ERBB2:S310F OR ERBB2:S310Y OR ERBB2:R678Q OR ERBB2:T733I OR ERBB2:L
 NCT06004245	catype:Colorectal adenocarcinoma; (mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06764771	KRAS:G12C
 NCT06804824	(KRAS:alteration OR NRAS:alteration OR HRAS:alteration OR EGFR:alteration OR ERBB2:overexpression OR HER2:amplification); NOT catype:Central nervous system cancer
+NCT05128825	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
