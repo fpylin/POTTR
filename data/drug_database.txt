@@ -80,7 +80,7 @@ AK127	anti-TIGIT_monoclonal_antibody
 AK138D1	anti-ERBB3_antibody-drug_conjugate
 AL-2846|AL 2846|AL2846	MET_inhibitor
 AL101	gamma_secretase_inhibitor
-AL102|AL-102|BMS-986115	gamma_secretase_inhibitor
+Varegacestat|AL102|AL-102|BMS-986115	gamma_secretase_inhibitor
 ALK-201|ALK201	anti-FGFR2b_antibody-drug_conjugate
 ALK-202|ALK202	anti-EGFR/cMET_antibody-drug_conjugate
 ALLO-501A	allogeneic_CAR-T-cell_therapy,CD19-targeting

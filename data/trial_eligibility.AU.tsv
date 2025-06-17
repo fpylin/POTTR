@@ -43,7 +43,7 @@ NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Colorectal 
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT04449874	KRAS:G12C; NOT prior_therapy:KRAS_G12C_inhibitor; catype:Solid tumour
 NCT04460456	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression)
-NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
+NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
 NCT04613596	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT04665206	catype:Solid tumour; NOT WWTR1:fusion; NOT WWTR1:WWTR1-CAMTA1_fusion; (NF2:oncogenic_mutation OR NF2:alteration)
@@ -206,7 +206,7 @@ NCT06208657	trial_type:paediatric
 NCT06343402	KRAS:G12C; (catype:Non-small cell lung cancer OR catype:Colorectal adenocarcinoma)
 NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
 NCT05352672	*NOT prior_therapy:systemic_therapy
-NCT06127407	catype:Chondrosarcoma; NOT catype:Dedifferentiated chondrosarcoma; NOT catype:Mesenchymal chondrosarcoma; NOT catype:Myxoid chondrosarcoma
+NCT06127407	catype:Chondrosarcoma; NOT catype:Dedifferentiated chondrosarcoma; NOT catype:Mesenchymal chondrosarcoma; NOT catype:Myxoid chondrosarcoma; IDH1:oncogenic_mutation
 NCT05609968	*NOT prior_therapy:systemic_therapy
 NCT05215340	*NOT prior_therapy:systemic_therapy
 NCT05216432	PIK3CA:oncogenic_mutation; catype:Breast cancer; *ESR1:protein_expression
@@ -278,4 +278,4 @@ NCT06760819	(ERBB2:S310F OR ERBB2:S310Y OR ERBB2:R678Q OR ERBB2:T733I OR ERBB2:L
 NCT06004245	catype:Colorectal adenocarcinoma; (mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06764771	KRAS:G12C
 NCT06804824	(KRAS:alteration OR NRAS:alteration OR HRAS:alteration OR EGFR:alteration OR ERBB2:overexpression OR HER2:amplification); NOT catype:Central nervous system cancer
-NCT05128825	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
+NCT05128825	(CCNE1:amplification OR CCNE1:overexpression); *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
