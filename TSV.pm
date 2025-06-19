@@ -287,7 +287,36 @@ sub to_string {
 
 ###############################################################################
 
-sub json_escape { my $str = shift; return ($str =~ s/(["\\\/])/\\$1/gr =~ s/\n/\\n/gr =~ s/\r/\\r/gr =~ s/\t/\\t/gr =~ s/\f/\\f/gr ); }
+
+# sub json_escape { my $str = shift; return ($str =~ s/([\+"\\\/])/"\\".$1/ger =~ s/\n/\\n/gr =~ s/\r/\\r/gr =~ s/\t/\\t/gr =~ s/\f/\\f/gr ); }
+
+sub json_escape {
+    my ($str) = @_;
+    
+    # Return empty string if undefined
+    return "" unless defined $str;
+    
+    # Escape backslashes first (must be done before other escapes)
+    $str =~ s/\\/\\\\/g;
+    
+    # Escape double quotes
+    $str =~ s/"/\\"/g;
+    
+    # Escape control characters
+#     $str =~ s/\+/\\+/g;    # newline
+    $str =~ s/\n/\\n/g;    # newline
+    $str =~ s/\r//g;    # carriage return
+    $str =~ s/\t/\\t/g;    # tab
+    $str =~ s/\f/\\f/g;    # form feed
+    
+    # Escape forward slash (optional but often done for safety)
+    $str =~ s/\//\\\//g;
+    
+    # Escape other control characters (0x00-0x1F except those handled above)
+    $str =~ s/([\x00-\x08\x0B\x0C\x0E-\x1F])/sprintf("\\u%04X", ord($1))/ge;
+    
+    return $str;
+}
 
 sub to_json {
     my $self = shift;
@@ -298,7 +327,7 @@ sub to_json {
     my @row_strs ;
     for my $row ( @{ $self->{'data'} } ) {
         my %a = %{ $row };
-		push @row_strs, "{". join(",", ( map { "\"$_\":" . ( defined($a{$_}) ? ( $is_numeric{$_} ? $a{$_} : "\"".json_escape($a{$_})."\"" ) : 'null' ) } @fields ) ) ."}" ;
+		push @row_strs, "{". join(",", ( map { "\"$_\":" . ( defined($a{$_}) ? ( $is_numeric{$_} ? ( length($a{$_}) ? $a{$_} : 'null' ) : "\"".json_escape($a{$_})."\"" ) : 'null' ) } @fields ) ) ."}" ;
     }
     
     my $output = "{".

@@ -33,6 +33,8 @@ use warnings;
 package POTTR;
 
 use POSIX;
+# use Storable;
+
 
 ##################################################################################
 BEGIN {
@@ -431,11 +433,13 @@ sub load_module_variant_evidence_grading {
 		}
 		
 # 		++ $cntf; print STDERR "! $cntf ! $f\n";		
+		my %tier_list ;
 		for my $fact (@matched_facts) {
 			if ( $fact =~ /^(.+?):$type:\Q$therapy\E\s*\(\w+ LOE: ((?:$tier_list_regex))(?:\)|,)/ ) { # R?[1234S][ABUR]?
 				my $biomarker = $1; # Get any biomarkers matched to the therapy / therapy class
 				my $tier = $2;
 				my $is_resistance_tier = $facts->func('is_resistance_tier', $tier);
+				$tier_list{$tier} = 1;
 				$has_R_tier = 1 if $is_resistance_tier ; 
 				@max_tier_tags = (@max_tier_tags, ( $facts->get_tags($fact) ));
 				
@@ -487,7 +491,13 @@ sub load_module_variant_evidence_grading {
 		
 		my ($max_tier, $ref_biomarker) = ( $tier_retval{max_tier}, $tier_retval{ref_biomarker} );
 		
-		$max_tier .= "R" if $has_R_tier and $max_tier !~ /R/; # minor resistance class
+		$max_tier .= "R" if ( $has_R_tier and $max_tier !~ /R/ and 
+			(
+				($max_tier =~ /1|[234]$/ and ( exists $tier_list{'R2'} ) and ( ! exists $tier_list{'R2B'} ) )
+					or 
+				($max_tier =~ /[34]B/)
+			)
+		); # minor resistance class
 		
 		if ( defined $max_tier ) {
 			my $stem = "recommendation_tier";
@@ -789,6 +799,11 @@ sub load_module_preferential_trial_prioritisation {
 # 		print "!!! $trial_id\t$_\n" for @inf_drug_classes;
 # 		print "!!? $trial_id\t$_\n" for grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
 # 		push @new_tags, ( grep { /(?:CERTAIN|INFERRED):treatment_drug/ } @tags );
+		my @contingency_conditions = grep { /^\s*\*/ } @tags ;
+		my $contingency_conditions_score = 
+			( ( grep { /recruitment_status/ } @contingency_conditions ) ? 2 : 0 ) +
+			( ( grep { /sensitive_to/ } @contingency_conditions ) ? 1 : 0 ) +
+			0;
 		
 		my $tier_order_ref = $facts->getvar('tier_order');
 
@@ -839,6 +854,7 @@ sub load_module_preferential_trial_prioritisation {
 		my $num_referring_drug_classes_score = scalar(@inf_drug_classes) ;
 # 		
 		push @new_tags, # Annotate the trial
+			"contingency_conditions_score:".   ( $a{'contingency_conditions_score'} = $contingency_conditions_score ) ,
 			"transitive_class_efficacy_tier:". ( $a{'transitive_class_efficacy'}  = $transitive_class_efficacy_tier ) ,
 			"transitive_efficacy_tier:".       ( $a{'transitive_efficacy'}        = $transitive_efficacy_tier ) ,
 			"drug_maturity_tier:".             ( $a{'drug_maturity'}              = ClinicalTrials::get_drug_maturity_tier_by_trial_id( $trial_id, @inf_drugs ) ) , 
@@ -852,20 +868,21 @@ sub load_module_preferential_trial_prioritisation {
 # 			"transitive_class_efficacy_tiers_str:".join("-", @transitive_class_efficacy_tiers)
 		;
 		
+		# Score the trial
+		my $dim = 10;
+		my $score = 0;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) ;
+		$score += ( pow(20,$dim--) * ( $contingency_conditions_score ) ) ;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) ;
+		$score += ( pow(20,$dim--) * ( 8 - $trial_drug_sensitivity_score ) ) ;
+		$score += ( pow(20,$dim--) * ( 8 - $trial_match_criteria_score ) ) ;
+		$score += ( pow(20,$dim--) * ( (19 - $num_referring_drug_classes_score) ) ) ;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) ;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'trial_phase_tier'}, $tier_order_ref ) ) ) ;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'drug_class_maturity'}, $tier_order_ref ) ) ) ;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'combo_maturity'}, $tier_order_ref ) ) ) ;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'combo_class_maturity'}, $tier_order_ref ) ) ) ;
 		
-		my $score = # Score the trial
-			( pow(20,9) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,8) * ( 8 - $trial_drug_sensitivity_score ) ) + 
-			( pow(20,7) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) + 
-			( pow(20,6) * ( 8 - $trial_match_criteria_score ) ) + 
-			( pow(20,5) * ( (19 - $num_referring_drug_classes_score) ) ) +
-			( pow(20,4) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) + 
-			( pow(20,3) * ( score_tier( $a{'trial_phase_tier'}, $tier_order_ref ) ) ) + 
-			( pow(20,2) * ( score_tier( $a{'drug_class_maturity'}, $tier_order_ref ) ) ) + 
-			( pow(20,1) * ( score_tier( $a{'combo_maturity'}, $tier_order_ref ) ) ) + 
-			( pow(20,0) * ( score_tier( $a{'combo_class_maturity'}, $tier_order_ref ) ) ) +
-			0;
-			
 		push @new_tags, "pref_trial_score:$score";
 		
 		return ( Facts::mk_fact_str("preferential_trial_id:$trial_id", @new_tags) ) ;
@@ -906,7 +923,37 @@ sub load_module_deinit {
 		return ();
 	} ) ;
 
-	$rs = $self->{'modules'}->add_module('07C - Calculate LOM');
+	if (0) {
+	    $rs = $self->{'modules'}->add_module('07C - Clean up evidence based on best tiering');
+	$rs->define_dyn_rule( 'clean_evidence_entries',  sub { my $f=shift; my $facts = $_[0];
+		my @tags = $facts->get_tags($f);
+		my %tags_to_remove ;
+		my $tier_order_ref = $facts->getvar('tier_order');
+		
+		for my $item ( 'recommendation_tier', 'recommendation_tier_drug_class' ) {
+			for ($f, @tags) { 
+				/$item:(.+):([1234].+?)$/ and do { my ($drug, $t1) = ($1, $2);
+					my $t1_score = score_tier($t1, $tier_order_ref) ;
+					for my $tag ( grep { /{tier:[1234].*?}/ } @tags ) {
+						my ($t2) = ( $tag =~ /{tier:([1234].*?)}/ );
+						my $t2_score = score_tier($t2, $tier_order_ref);
+						if ( $t2_score > $t1_score ) {
+							$tags_to_remove{$tag} = 1; 
+# 							print ">> $item -- $f -- $t1 -- $t2 -- REMOVED -- $tag \n";
+						} else {
+# 							print ">> $item -- $f -- $t1 -- $t2 -- RETAINED -- $tag \n";
+						}
+					}
+				}
+			}
+		}
+		
+		$facts->untag($f, keys %tags_to_remove );
+		return ();
+	} ) ;
+	}
+	
+	$rs = $self->{'modules'}->add_module('07D - Calculate LOM');
 	$rs->define_dyn_rule( 'calculate_LOM',  sub { my $f=shift; my $facts = $_[0];
 		my @tags = $facts->get_tags($f);
 		my %certain;
@@ -952,7 +999,14 @@ sub init {
 	$params->{'modules'} = join(',', qw(CTM CLI VFM VEG DSO TRG PTM PTP INT)) if ! defined $params->{'modules'} ;
 
 	my %modules = map { $_ => 1 } split( /\s*[;, ]\s*/, $params->{'modules'} );
-    
+
+# 	my $bin_cache_fn = join("/", POTTRConfig::get_dir('cache'), 'POTTR_preloaded.bin');
+# 	
+# 	if ( $params->{'preload'} && -f $bin_cache_fn ) {
+# 		$self->{'modules'} = retrieve $bin_cache_fn;
+# 		return;
+# 	}
+
 # 	print STDERR ">>2 ".$POTTRConfig::f_initialised."\n";
 # 	print STDERR ">>2 $_.\n" for @POTTRConfig::predefined_rules;
 	POTTRConfig::ON_DEMAND_INIT();
@@ -968,6 +1022,12 @@ sub init {
 	exists $modules{'PTP'}  and $self->load_module_preferential_trial_prioritisation();
 	$self->load_module_deinit();
 	exists $modules{'INT'}  and $self->load_module_interpretation();
+	
+# 	if ( $params->{'preload'} && ! ( -f $bin_cache_fn ) ) { 
+# 		store $self->{'modules'}, $bin_cache_fn ;
+# 		return;
+# 	}
+
 }
 
 #######################################################################

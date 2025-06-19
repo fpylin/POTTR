@@ -221,6 +221,7 @@ my $f_interpretation = undef;
 my $f_help = undef;
 my $f_man = undef;
 my $f_version = undef;
+my $f_preload = undef;
 
 my $f_list_trials_terse = undef; # print less information about trials ;
 
@@ -246,6 +247,7 @@ GetOptions (
 	"list-therapy-summary|S"  => \$f_list_therapy_summaries,
 	"list-trials|T"           => \$f_list_trials,
 	"interpret|I"             => \$f_interpretation,
+	"preload|L"               => \$f_preload,
 	"trials-terse"            => \$f_list_trials_terse,
 );
 
@@ -280,6 +282,7 @@ if (! defined $pottr_modules) {
 	push @pottr_modules, "CTM CLI VFM VEG DSO TRG PTM PTP INT" if defined $f_list_trials ;
 }
 
+$Pottrparams->{'preload'} = $f_preload;
 $Pottrparams->{'modules'} = ( (defined $pottr_modules) ? $pottr_modules : join(" ", @pottr_modules) );
 
 my $Pottr = POTTR->new( $Pottrparams );
@@ -508,7 +511,7 @@ sub extract_drug_sensitivity {
 		$biomarkers =~ s/_/ /g;
 		
 		my $evidence = join(',', sort (  uniq( ( map { /^evidence:(.+)/; ( $1 ? (split /, /, $1) : () ) } grep { /evidence:.+/ } @tags ) ) ) );
-		my $kblines = join(',', sort { $a <=> $b || $a cmp $b } (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
+		my $kblines = join(',', sort { $a cmp $b } (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
 		my $ref_cancer_types = join(',', sort (  uniq( (map { /^catype:(.+)/i; $1 } grep { /catype:.+/i } @tags ) ) ) );
 	
 		my ($therapy, $tier) = ($ent =~ /(.*):(\S+)/);
@@ -563,7 +566,7 @@ sub extract_preferential_trials {
 		my %referring_drug_classes = map { /recommendation_tier_drug_class:(.+):\S+/; $1 => 1 } grep { /recommendation_tier_drug_class:.+:\S+/ } @tags ;
 		
 		my $evidence = join(',', sort ( uniq( grep { defined } ( map { /^evidence:(.+)/; split /, /, $1 } grep { /evidence:.+/ } @tags ) ) ) );
-		my $kblines = join(',', sort {$a <=> $b} ( uniq( grep { defined } (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
+		my $kblines = join(',', sort {$a cmp $b} ( uniq( grep { defined } (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
 		
 		my %referring_alterations; 
 		
@@ -1018,7 +1021,7 @@ sub gen_biomarkers_evidence_report {
 		$treatment = trim($treatment);
 # 		next if $kb_loe =~ /, in/;
 		$kb_loe .= " [repurposed]" if $kb_loe =~ /, in/;
-		my $kblines = join(',', sort { $a <=> $b || $a cmp $b } (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
+		my $kblines = join(',', sort { $a cmp $b } (  uniq( (map { /^KBline:(.+)/i; $1 } grep { /KBline:.+/i } @tags ) ) ) );
 		
 		$output .= join("\t", $gene_trigger,  $treatment,  $kb_loe, join(', ', @evidence), $kblines )."\n";
 	}

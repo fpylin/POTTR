@@ -235,7 +235,7 @@ Autogene cevumeran|RO7198457|BNT-122|BNT122	mRNA_personalised_cancer_vaccine
 Autologous GD2 chimeric antigen receptor-expressing peripheral blood T cells	autologous_CAR-T-cell_therapy,GD2-targeting
 Avapritinib|AYVAKIT|BLU-285	KIT_D816V_inhibitor; KIT_inhibitor,ATP-competitive; PDGFRA_inhibitor
 Avelumab|Bavencio|MSB-0010718C|MSB0010718C	anti-PD-L1_monoclonal_antibody
-Avutometinib|VS-6766	RAF/MEK_clamp
+Avutometinib|CH5126766|VS-6766	RAF/MEK_clamp
 Axicabtagene Ciloleucel|Yescarta	autologous_CAR-T-cell_therapy,CD19-targeting
 Axitinib|AG-013736|AG013736|Inlyta	VEGFR/PDGFR_inhibitor; KIT_inhibitor,ATP-competitive
 Azacitidine|5-AC|Mylosar|CC-486|Vidaza|5 AZC|5-AZC|5-Aza-cytidine|Azacytidine|Ladakamycin|U-18496	DNA_methyltransferase_inhibitor; antimetabolite
@@ -344,7 +344,7 @@ BNT317|BNT-317	cancer_therapy,undisclosed_mechanism
 BNT325|DB-1305	anti-Trop2_antibody-drug_conjugate
 BNT327|PM8002	bispecific_PD-L1/VEGFA_antibody
 BOS-342|BOS342|PRS342|PRS-342	bispecific_GPC3/4-1BB_antibody
-BOS172738	RET-selective_inhibitor
+Zeteletinib|BOS172738|DS-5010	RET-selective_inhibitor
 BSJ-03-123	CDK6_PROTAC_degrader
 BT8009	bicycle_toxin_conjugate,NECTIN4-targeting
 BTX-1188	dual_GSPT1/IKZF1_degrader
@@ -1042,7 +1042,7 @@ MT-302	Trop2-targeting_lipid-nanoparticles
 MT-303	GPC3-targeting_lipid-nanoparticle_CAR_mRNA
 MT-303	GPC3-targeting_lipid-nanoparticles
 MT-5111	anti-ERBB2_engineered_toxin_body
-MVAC	Methotrexate + Vinblastine + Doxorubicin + Cisplatin
+MVAC|ddMVAC	Methotrexate + Vinblastine + Doxorubicin + Cisplatin
 MVC-101|TAK-186	bispecific_T-cell_engager,EGFR-targeting
 MVR-T3011|T3011	oncolytic_HSV_virus
 MYTX-011	anti-cMET_antibody-drug_conjugate
@@ -1298,6 +1298,7 @@ R-CHOP|RCHOP	Rituximab + Cyclophosphamide + Doxorubicin + Vincristine + Predniso
 R-CVP|RCVP	Cyclophosphamide + Prednisolone + Rituximab + Vincristine
 R-DHAP|RDHAP	Rituximab + Dexamethasone + Cytarabine + Cisplatin
 R-GemOx	Rituximab + Gemcitabine + Oxaliplatin
+Cisplatin/Gemcitabine|Gem/Cis	Cisplatin + Gemcitabine
 R-Propranolol	beta-adrenergic_blocker
 RAF709	RAF_dimer_inhibitor
 RAG-01	saRNA_therapy,CDKN1A-targeting
@@ -1315,7 +1316,7 @@ RGSH4K	autologous_anticancer_vaccine
 RLY-1971|GDC-1971|GDC1971|RLY 1971|GDC 1971	SHP2_inhibitor
 RLY-2608	PI3K_alpha_inhibitor,allosteric,mutant-selective
 RMC-4550	SHP2_inhibitor
-RMC-4630|SAR442720	SHP2_inhibitor
+Vociprotafib|RMC-4630|SAR442720	SHP2_inhibitor
 RMC-5552	mTORC1_inhibitor
 RMC-6272	mTORC1_inhibitor
 RMC-6291	KRAS_G12C_inhibitor
@@ -1468,7 +1469,7 @@ Sodium Valproate|Valproate|valproic acid|Epilim	HDAC_inhibitor
 Sonidegib|Erismodegib|LDE-225|LDE225|Odomzo	SMO_inhibitor,first_generation
 Sonrotoclax|BGB-11417	BCL2_inhibitor
 Sorafenib|BAY 43-9006|Nexavar|BA4 43 9006|BAY 54-9085|Bay-439006	CRAF/FLT3/KIT/PDGFR/VEGFR_inhibitor; CRAF_inhibitor; FLT3_inhibitor; KIT_inhibitor; PDGFR_inhibitor; VEGFR_inhibitor
-Sotorasib|AMG-510|AMG 510|AMG510	KRAS_G12C/NRAS_G12C/HRAS_G12C_inhibitor
+Sotorasib|AMG-510|AMG 510|AMG510	KRAS_G12C_inhibitor; KRAS_G12C/NRAS_G12C/HRAS_G12C_inhibitor
 Sotrastaurin|Sotrastaurin acetate|AEB071	PKC_inhibitor
 Sovilnesib|AMG 650|AMG-650|AMG650	KIF18A_inhibitor
 Spartalizumab|PDR-001|PDR001	anti-PD-1_monoclonal_antibody
