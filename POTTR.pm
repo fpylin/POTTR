@@ -923,8 +923,8 @@ sub load_module_deinit {
 		return ();
 	} ) ;
 
-	if (0) {
-	    $rs = $self->{'modules'}->add_module('07C - Clean up evidence based on best tiering');
+
+	$rs = $self->{'modules'}->add_module('07C - Clean up evidence based on best tiering');
 	$rs->define_dyn_rule( 'clean_evidence_entries',  sub { my $f=shift; my $facts = $_[0];
 		my @tags = $facts->get_tags($f);
 		my %tags_to_remove ;
@@ -951,7 +951,7 @@ sub load_module_deinit {
 		$facts->untag($f, keys %tags_to_remove );
 		return ();
 	} ) ;
-	}
+
 	
 	$rs = $self->{'modules'}->add_module('07D - Calculate LOM');
 	$rs->define_dyn_rule( 'calculate_LOM',  sub { my $f=shift; my $facts = $_[0];
