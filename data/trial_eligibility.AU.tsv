@@ -6,23 +6,7 @@ ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12623000096651	(catype:Low-grade glioma OR catype:Anaplastic astrocytoma)
 ACTRN12623000874617	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12621000273886	catype:Endometrial cancer
-NCT02628067	catype:Anal Cancer
-NCT02628067	catype:Biliary Tract Cancer
-NCT02628067	catype:Cervical Cancer
-NCT02628067	catype:Colorectal cancer; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
-NCT02628067	catype:Endometrial Carcinoma
-NCT02628067	catype:Lung Neuroendocrine Tumor
-NCT02628067	catype:Mesothelioma
-NCT02628067	catype:Pancreatic Neuroendocrine Tumor
-NCT02628067	catype:Salivary Gland Carcinoma
-NCT02628067	catype:Small bowel Neuroendocrine Tumor
-NCT02628067	catype:Small-Cell Lung Carcinoma
-NCT02628067	catype:Thyroid Carcinoma
-NCT02628067	catype:Vulvar Cancer
-NCT02628067	microsatellite_instability:high
 NCT02960022	*prior_therapy:Enzalutamide
-NCT03093116	ROS1:fusion; catype:Non-small cell lung cancer
-NCT03093116	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); catype:Solid tumour
 NCT03170960	catype:Differentiated Thyroid Carcinoma
 NCT03175224	(MET:oncogenic_mutation OR MET:alteration)
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:positive; *ER:negative; *CD274:protein_expression
@@ -50,8 +34,6 @@ NCT04857372	catype:Solid tumour; NOT NF2:oncogenic_mutation; NOT NF2:alteration;
 NCT04857372	catype:Solid tumour; NOT WWTR1:fusion; NOT WWTR1:WWTR1-CAMTA1_fusion; (NF2:oncogenic_mutation OR NF2:deletion)
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT05067283	KRAS:G12C
-NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catype:Non-melanoma skin cancer)
-NCT05086692	*(microsatellite_instability:high OR mismatch_repair:deficient OR tumour_mutational_burden:high)
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma); *Unknown status
 NCT03900442	catype:Gastric cancer; *catype:Diffuse gastric cancer; *Unknown status
 NCT05182931	(BRAF:V600E OR NRAS:oncogenic_mutation); NOT catype:Anaplastic thyroid cancer
@@ -98,7 +80,6 @@ NCT05894239	PIK3CA:oncogenic_mutation; *(ERBB2:amplification OR ERBB2:overexpres
 NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression ERBB2:protein_expression OR OR ERBB2:low_protein_expression)
 NCT05872295	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); prior_therapy:systemic_therapy
 NCT05872295	catype:Solid tumour; NOT Breast cancer; NOT Gastric cancer; NOT Gastroesophageal adenocarcinoma; *(ERBB2:amplification OR ERBB2:protein_expression OR ERBB2:overexpression OR ERBB2:low_protein_expression OR ERBB2:oncogenic_mutation)
-NCT05577416	NOT prior_therapy:systemic_therapy; catype:Low-grade glioma
 NCT04929223	catype:Colorectal adenocarcinoma; *(microsatellite_instability:high OR mismatch_repair:deficient); NOT_RECRUITING
 NCT04929223	catype:Colorectal adenocarcinoma; KRAS:G12C
 NCT04895709	*NOT prior_therapy:Docetaxel
@@ -120,7 +101,6 @@ NCT06179160	KRAS:G12D
 NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation; *(catype:Ovarian cancer OR catype:Lung cancer OR catype:Breast cancer OR catype:Endometrial cancer)
 NCT05094336	*CDKN2A:deletion; MTAP:deletion; *(catype:Lung squamous cell carcinoma OR catype:Gastric cancer OR catype:Gastroesophageal cancer); *(info:panel:AVENIO OR info:panel:FM1 CDx); 
 NCT05094336	*CDKN2A:deletion; MTAP:deletion; catype:Pancreatic adenocarcinoma; *NO_SLOTS_AVAILABLE
-NCT05975073	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06065748	*NOT (ERBB2:amplification OR ERBB2:overexpression); *ESR1:protein_expression; ESR1:oncogenic_mutation; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
 NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
 NCT06188702	*MTAP:deletion; NOT catype:Central nervous system cancer; *(info:panel:AVENIO OR info:panel:FM1 CDx)
