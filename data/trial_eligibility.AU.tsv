@@ -1,6 +1,5 @@
 trial_id	eligibility_criteria
 ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
-ACTRN12619001185156	*(CCNE1:amplification OR CCNE1:overexpression); *catype:High-grade serous ovarian carcinoma; catype:Ovarian cancer
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
 ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12623000096651	(catype:Low-grade glioma OR catype:Anaplastic astrocytoma)
