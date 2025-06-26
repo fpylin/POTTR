@@ -33,6 +33,8 @@ NCT04857372	catype:Solid tumour; NOT NF2:oncogenic_mutation; NOT NF2:alteration;
 NCT04857372	catype:Solid tumour; NOT WWTR1:fusion; NOT WWTR1:WWTR1-CAMTA1_fusion; (NF2:oncogenic_mutation OR NF2:deletion)
 NCT04956640	KRAS:G12C; *NOT prior_therapy:KRAS_G12C_inhibitor; catype:Non-small cell lung cancer
 NCT05067283	KRAS:G12C
+NCT05086692	*prior_therapy:immune_checkpoint_blockade; (catype:Melanoma OR catype:Non-melanoma skin cancer)
+NCT05086692	*(microsatellite_instability:high OR mismatch_repair:deficient OR tumour_mutational_burden:high)
 NCT03900442	(catype:Multiple myeloma OR catype:Peripheral T-cell lymphoma OR catype:Colorectal cancer OR catype:Pancreatic adenocarcinoma); *Unknown status
 NCT03900442	catype:Gastric cancer; *catype:Diffuse gastric cancer; *Unknown status
 NCT05182931	(BRAF:V600E OR NRAS:oncogenic_mutation); NOT catype:Anaplastic thyroid cancer
@@ -196,3 +198,5 @@ NCT06459180	catype:Cervical cancer
 NCT05128825	catype:Ovarian cancer; *catype:High-grade serous ovarian cancer
 NCT06790693	PIK3CA:oncogenic_mutation
 NCT05128825	(CCNE1:amplification OR CCNE1:overexpression); *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
+NCT06989112	catype:Endometrial cancer; NOT (mismatch_repair:deficient OR microsatellite_instability:high); *(ERBB2:protein_expression OR ERBB2:overexpression)
+NCT06926868	*catype:Triple-negative breast cancer
