@@ -31,15 +31,9 @@ cache_dir =  cache
 [Ontologies]
 
 ##############################################################################
-# DISEASE ONTOLOGY [REQUIRED] - 
-# Disease ontology file in OBO format. 
-# - The latest version can be obtained from https://disease-ontology.org/. 
-# - Please follow the licesing requirements for details.
-# - Note future versions will use a dedicated precision oncology disesase 
-#   ontology to more closely align with clinical practice.
+# CANCER TYPES ONTOLOGY [REQUIRED] - 
+# ontology to more closely align with clinical practice.
 ##############################################################################
-
-# disease-ontology-file = doid.obo - TO DELETE 
 
 cancer-types-ontology-file = cancer_types.txt
 
@@ -87,13 +81,12 @@ variant-feature-file = feature_lookup.txt
 # This step is not essential for decision making if pathogenicity of a variant 
 # has been determined.
 # 
-# The following is an example pathogenicity database. See 
-# attached file for format. For example:
+# For example:
 # EGFR:L858R => EGFR:oncogenic_mutation [CERTAIN:oncogenicity]
 # EGFR:L858R => EGFR:gain-of-function_mutation [CERTAIN:mutation_effect]
 ###############################################################################
 
-# oncogenicity-rules-file = example_variant_annotation_rules.txt 
+# oncogenicity-rules-file = variant-annotations.txt 
 
 
 ###############################################################################
@@ -103,8 +96,6 @@ variant-feature-file = feature_lookup.txt
 # This step is not essential for decision making if pathogenicity of a variant 
 # has been determined.
 # 
-# The following is an example pathogenicity database. See 
-# attached file for format. For example:
 # EGFR:L858R => EGFR:oncogenic_mutation [CERTAIN:oncogenicity]
 # EGFR:L858R => EGFR:gain-of-function_mutation [CERTAIN:mutation_effect]
 ###############################################################################
@@ -114,10 +105,8 @@ biomarker-rules-file = biomarker_rules.txt
 ###############################################################################
 # CLINICAL INFERENCE/ASSERTION FILE [OPTIONAL]
 # 
-# This optional file contains additional rules for clinical  interpretation.
+# This optional file contains additional rules for clinical interpretations.
 #
-# The following is an example pathogenicity database. See 
-# attached file for format. For example:
 # ERBB2:amplified; catype:Breast cancer => catype:HER2-positive breast cancer
 # 
 ###############################################################################
@@ -178,9 +167,10 @@ therapy-evidence-database-file = TOPOGRAPH-master.tsv
 
 ################################################################################
 # EVIDENCE GRADING SECTION: 
-# Defining tiers for ranking treatment and clinical trial 
+# Defining tiers for ranking treatment and clinical trials
 # The following section defines an example of configuration using OncoKB-like 
-# tiering system (i.e., 1 2 3 4 R1 R2).
+# tiering system (i.e., 1 2 3 4 R1 R2). Please note the differences in tier
+# definitions
 ################################################################################
 
 [Evidence:tiering]
@@ -205,7 +195,7 @@ set tier-ranking-mode:unrestricted    => tier-rank-order:R1 1 1R 1B 1BR 2 2R 3 3
 # Drug repurposing - reassignment ot tiers (from tier:to tier):
 
 # Describes how a therapy should be retiered when using a drug for different cancer types
-# The following 3B tier designation in line with OncoKB definition
+# The following 3B tier designation in line with OncoKB definition for therapy repurposing
 repurposing-retier:cancer-type = 1:3B, 1B:3B, 1R:3B, 1BR:3BR, 2:3B, 2R:3BR, 3:3B, 3R:3BR, 4:4B, 4R:4BR, R1:R2B, R2:R2B
 
 # Describes how a therapy should be retiered when drug sensitivity is inferred based on related mutation
