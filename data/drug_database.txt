@@ -1718,3 +1718,4 @@ VVD-159642|BAY-3605349	RAS-PI3Kalpha_inhibitor
 VVD-442	RAS-PI3Kalpha_inhibitor
 SSGJ-709	unknown_drug_class
 Mivebresib|ABBV075	BET_inhibitor
+Troriluzole|BHV-4157	glutamate_modulator

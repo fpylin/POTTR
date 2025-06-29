@@ -1045,7 +1045,6 @@ cancer_therapy	cancer_therapy,OX40-targeting
 cancer_therapy	cancer_therapy,P-cadherin-targeting
 cancer_therapy	cancer_therapy,PARG-targeting
 cancer_therapy	cancer_therapy,PARP-targeting
-cancer_therapy	cancer_therapy,PARP1-selective-targeting
 cancer_therapy	cancer_therapy,PARP7-targeting
 cancer_therapy	cancer_therapy,PBRM1-targeting
 cancer_therapy	cancer_therapy,PCNA-targeting
