@@ -180,3 +180,6 @@ mutsig:SBS10b => mutsig:SBS_group_POLE_14/10a/10b
 mutsig:SBS20 => mutsig:SBS_group_POLD_20/10c/10d
 mutsig:SBS10c => mutsig:SBS_group_POLD_20/10c/10d
 mutsig:SBS10d => mutsig:SBS_group_POLD_20/10c/10d
+
+PD-L1:positive => CD274:protein_expression
+

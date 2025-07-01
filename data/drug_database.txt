@@ -1,5 +1,4 @@
 drug	drug_class
-
 111In-FPI-1967|[111In]-FPI-1967	radioconjugate,FGFR3-targeting
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
 131I-TLX-101|4-iodophenylalanine	radioligand,LAT1/LAT2-targeting
@@ -260,6 +259,7 @@ BC3195	anti-CDH3_antibody-drug_conjugate
 BCA101	bifunctional_EGFR/TGF-beta_fusion_protein
 BCD-100|BCD 100|BCD100	anti-PD-1_monoclonal_antibody
 BDC-4182	anti-CLDN18.2_immune-stimulating_antibody_conjugate,TLR7/8_agonist
+BDC-4182|BDC4182	anti-CLDN18.2_immune-stimulating_antibody_conjugate,TLR7/8_agonist
 BEP regimen|BEP	Bleomycin + Etoposide + Cisplatin
 BFCR4350A	bispecific_T-cell_engager,FcRH5-targeting
 BG-60366	EGFR_CDAC_degrader
