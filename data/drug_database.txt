@@ -443,6 +443,7 @@ CTX110|CTX 110|CTX-110|CTX101	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX112|CTX 112|CTX-112	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX120	allogeneic_CAR-T-cell_therapy,BCMA-targeting
 CTX130	allogeneic_CAR-T-cell_therapy,CD70-targeting
+CTX131	allogeneic_CAR-T-cell_therapy,CD70-targeting
 CUE-101	HPV16_E7-pHLA-IL2-Fc_fusion_protein
 CYH33	PI3K_alpha_inhibitor
 CYT-0851	RAD51_inhibitor
@@ -1311,6 +1312,7 @@ R-CHOP|RCHOP	Rituximab + Cyclophosphamide + Doxorubicin + Vincristine + Predniso
 R-CVP|RCVP	Cyclophosphamide + Prednisolone + Rituximab + Vincristine
 R-DHAP|RDHAP	Rituximab + Dexamethasone + Cytarabine + Cisplatin
 R-EPOCH|REPOCH	Rituximab + Etoposide + Prednisolone + Vincristine + Cyclophosphamide + Doxorubicin
+R-GDP|RGDP	Rituximab + Gemcitabine + Dexamethasone + Cisplatin
 R-GemOx	Rituximab + Gemcitabine + Oxaliplatin
 R-Propranolol	beta-adrenergic_blocker
 RAF709	RAF_dimer_inhibitor
@@ -1669,7 +1671,7 @@ WU-CART-007	allogeneic_CAR-T-cell_therapy,CD7-targeting
 WU-NK-101	memory_NK_cell_therapy
 WVT078	bispecific_T-cell_engager,BCMA-targeting
 WYE354	mTOR_inhibitor
-WZTL002	autologous_CAR-T-cell_therapy,CD19-targeting
+WZTL002|WZTL-002	autologous_CAR-T-cell_therapy,CD19-targeting
 Wnt-C59	PORCN_inhibitor
 XAV939	YAP-TEAD_inhibitor; TNKS1/2_inhibitor
 XB002|XB-002	anti-TF_antibody-drug_conjugate
@@ -1722,3 +1724,9 @@ mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 IMM47	anti-CD24_monoclonal_antibody
+DPX-Survivac	cell_therapy,T-cell_immunotherapy
+KITE-363	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
+KITE-753	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
+Azercabtagene zapreleucel|Azer-cel|PBCAR0191	allogeneic_CAR-T-cell_therapy,CD19-targeting
+ONM-501	STING_agonist
+FS222	bispecific_PD-L1/CD137_antibody

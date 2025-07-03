@@ -569,8 +569,11 @@ sub gen_rules_drug_db_prior_therapy {
 	
 	for ( Therapy::get_all_drug_class_pairs() ) {
 		my ($d, $dc) = split /\t/, $_;
-		my @all_parents = Therapy::get_all_parents($d);
+		my @all_parents = Therapy::get_all_parents($d);		
 		push @all_parents, "systemic_therapy";
+		if ( $dc =~ / +\+ +/ ) {
+		    push @all_parents, $_ for ( split / +\+ +/, $dc );
+		}
 		push @drug_db, mkrule( ["prior_therapy:$d"],  [ ( map { Facts::mk_fact_str("prior_therapy:$_") } @all_parents ) ] );
 	}
 

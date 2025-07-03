@@ -110,7 +110,6 @@ NCT06119581	KRAS:G12C; *NOT prior_therapy:systemic_therapy; catype:Non-small cel
 NCT05696626	ESR1:oncogenic_mutation
 ACTRN12619000566134	catype:Colorectal cancer
 NCT04524871	catype:Hepatocellular carcinoma
-NCT05650879	ERBB2:exon_20_insertion
 NCT06016738	*prior_therapy:CDK4/6_inhibitor; NOT prior_therapy:Eribulin; NOT prior_therapy:Elacestrant
 NCT06179160	KRAS:G12D
 NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation; *(catype:Ovarian cancer OR catype:Lung cancer OR catype:Breast cancer OR catype:Endometrial cancer)
@@ -224,5 +223,5 @@ NCT04728893	catype:Follicular lymphoma; *prior_therapy:Rituximab
 NCT04728893	catype:Waldenstrom macroglobulinemia; *prior_therapy:BTK_inhibitor
 NCT05947851	(catype:Chronic lymphocytic leukaemia OR catype:Small lymphocytic lymphoma); *prior_therapy:systemic_therapy; *NOT prior_therapy:BTK_inhibitor; *NOT prior_therapy:Bcl2_inhibitor
 NCT06634589	catype:B-cell lymphoma; *prior_therapy:systemic_therapy
-NCT03229200	*prior_therapy:Ibrutinib
-NCT04170283	*prior_therapy:Zanubrutinib
+NCT03229200	prior_therapy:Ibrutinib
+NCT04170283	prior_therapy:Zanubrutinib
