@@ -85,13 +85,10 @@ ACTRN12623000223639	catype:Pancreatic adenocarcinoma
 NCT04612751	NOT prior_therapy:systemic_therapy
 NCT04612751	NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT05555732	NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT BRAF:V600E; NOT BRAF:class_2_mutation; NOT BRAF:class_3_mutation; NOT RET:fusion; NOT MET:exon_14_skipping_mutation; NOT prior_therapy:systemic_therapy; NOT prior_therapy:anti-Trop2_monoclonal_antibody; NOT prior_therapy:anti-PD-1_monoclonal_antibody; NOT prior_therapy:anti-PD-L1_monoclonal_antibody
-NCT04985721	*sensitive_to:Pamiparib
 NCT05067283	catype:Solid tumour; NOT catype:Non-small cell lung cancer; KRAS:G12C; prior_therapy:systemic_therapy
 NCT05067283	catype:Non-small cell lung cancer; NOT prior_therapy:systemic_therapy; KRAS:G12C
 NCT05067283	catype:Colorectal cancer; NOT prior_therapy:systemic_therapy; KRAS:G12C
 NCT05498428	catype:Non-small cell lung cancer; (EGFR:exon_19_deletion OR EGFR:L858R OR EGFR:exon_20_insertion)
-NCT04985721	(ATM:oncogenic_mutation OR CDK12:oncogenic_mutation OR PALB2:oncogenic_mutation OR ARID1A:oncogenic_mutation OR ATRX:oncogenic_mutation OR BLM:oncogenic_mutation OR BARD1:oncogenic_mutation OR BRIP1:oncogenic_mutation OR CHEK1:oncogenic_mutation OR CHEK2:oncogenic_mutation OR FANCA:oncogenic_mutation OR FANCF:oncogenic_mutation OR FANCG:oncogenic_mutation OR FANCI:oncogenic_mutation OR FANCL:oncogenic_mutation OR FANCM:oncogenic_mutation OR MSH2:oncogenic_mutation OR NBN:oncogenic_mutation OR RAD50:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation OR WRN:oncogenic_mutation OR mutational_signature:SBS3 OR loss_of_heterozygozity_score:high OR homologous_recombination_score:high)
-NCT04985721	(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT05694936	*NOT prior_therapy:systemic_therapy
 NCT05894239	PIK3CA:oncogenic_mutation; *(ERBB2:amplification OR ERBB2:overexpression); *(PIK3CA:H1047L OR PIK3CA:H1047R OR PIK3CA:H1047Y OR PIK3CA:E545A OR PIK3CA:E545D OR PIK3CA:E545G OR PIK3CA:E545K OR PIK3CA:Q546E OR PIK3CA:Q546E OR PIK3CA:Q546R OR PIK3CA:E542K OR PIK3CA:C420R OR PIK3CA:Q88Q OR PIK3CA:N345K OR PIK3CA:M1043I OR PIK3CA:G1049R)
 NCT05872295	catype:Breast cancer; *(ERBB2:amplification OR ERBB2:overexpression ERBB2:protein_expression OR OR ERBB2:low_protein_expression)
@@ -127,6 +124,7 @@ NCT06003621	NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_the
 NCT06031441	*MOA_UNKNOWN
 NCT05805501	catype:Clear cell renal cell carcinoma
 NCT04644068	sensitive_to_drug_class:PARP_inhibitor
+NCT06151574	ERBB2:kinase_domain_mutation; catype:Non-small cell lung cancer
 NCT06326411	catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation)
 NCT06326411	catype:Solid tumour; NOT catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR KRAS:oncogenic_mutation)
 NCT06326411	catype:Glioma; BRAF:oncogenic_mutation
@@ -218,3 +216,13 @@ NCT06790693	PIK3CA:oncogenic_mutation
 NCT05128825	(CCNE1:amplification OR CCNE1:overexpression); *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
 NCT06989112	catype:Endometrial cancer; NOT (mismatch_repair:deficient OR microsatellite_instability:high); *(ERBB2:protein_expression OR ERBB2:overexpression)
 NCT06926868	*catype:Triple-negative breast cancer
+NCT04728893	(catype:Chronic lymphocytic leukaemia OR catype:Small lymphocytic lymphoma)
+NCT04728893	catype:Diffuse large B-cell lymphoma; *catype:Diffuse large B-cell lymphoma,Ritcher's transformation; *prior_therapy:systemic_therapy
+NCT04728893	catype:Mantle cell lymphoma; *prior_therapy:BTK_inhibitor
+NCT04728893	catype:Marginal zone lymphoma; *prior_therapy:BTK_inhibitor
+NCT04728893	catype:Follicular lymphoma; *prior_therapy:Rituximab
+NCT04728893	catype:Waldenstrom macroglobulinemia; *prior_therapy:BTK_inhibitor
+NCT05947851	(catype:Chronic lymphocytic leukaemia OR catype:Small lymphocytic lymphoma); *prior_therapy:systemic_therapy; *NOT prior_therapy:BTK_inhibitor; *NOT prior_therapy:Bcl2_inhibitor
+NCT06634589	catype:B-cell lymphoma; *prior_therapy:systemic_therapy
+NCT03229200	*prior_therapy:Ibrutinib
+NCT04170283	*prior_therapy:Zanubrutinib

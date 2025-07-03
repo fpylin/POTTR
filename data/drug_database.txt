@@ -1310,6 +1310,7 @@ Quizartinib|AC-220|AC010220|AC220	FLT3_inhibitor; KIT_inhibitor
 R-CHOP|RCHOP	Rituximab + Cyclophosphamide + Doxorubicin + Vincristine + Prednisolone
 R-CVP|RCVP	Cyclophosphamide + Prednisolone + Rituximab + Vincristine
 R-DHAP|RDHAP	Rituximab + Dexamethasone + Cytarabine + Cisplatin
+R-EPOCH|REPOCH	Rituximab + Etoposide + Prednisolone + Vincristine + Cyclophosphamide + Doxorubicin
 R-GemOx	Rituximab + Gemcitabine + Oxaliplatin
 R-Propranolol	beta-adrenergic_blocker
 RAF709	RAF_dimer_inhibitor
@@ -1720,3 +1721,4 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+IMM47	anti-CD24_monoclonal_antibody

@@ -23,11 +23,12 @@ Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblasti
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma|B-cell lymphoblastic leukaemia/lymphoma|B-lymphoblastic leukaemia/lymphoma||B-cell acute lymphoblastic leukaemia|B-cell lymphoblastic leukaemia|B-cell lymphoblastic lymphoma|B-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-negative B-cell acute lymphoblastic leukaemia|Ph-negative B-cell acute lymphoblastic leukaemia|Ph-negative B-ALL
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma|B-cell lymphoblastic leukaemia|B-cell lymphoblastic lymphoma|B lymphoblastic leukaemia|B lymphoblastic lymphoma|B-ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia	Childhood B-cell acute lymphoblastic leukemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia|Childhood ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma	     T-cell prolymphocytic leukaemia|Prolymphocytic leukemia, T-cell type
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma|T-cell lymphoblastic leukaemia/lymphoma|T-lymphoblastic leukaemia/lymphoma|T-cell acute lymphoblastic leukaemia|T-cell lymphoblastic leukaemia|T-cell lymphoblastic lymphoma|T-cell ALL
-Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma|T-lymphoblastic leukaemia|T-cell lymphoblastic leukaemia
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma|T-lymphoblastic leukaemia|T-cell lymphoblastic lymphoma
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Chronic lymphocytic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Hairy Cell Leukaemia
 Cancer	Haematological malignancy	Leukaemia	Mixed phenotype acute leukaemia
@@ -44,11 +45,15 @@ Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Double-hit B-cell lymphoma|Double-hit diffuse B-cell lymphoma|Double-hit lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Testicular diffuse large B-cell lymphoma|Testicular DLBCL|Testicular lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Triple-hit B-cell lymphoma|Triple-hit diffuse B-cell lymphoma|Triple-hit lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Diffuse large B-cell lymphoma,Richter's transformation|DLBCL-RT|Richter's transformation|Richter transformation|Richter's syndrome|Richter syndrome
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Diffuse large B-cell lymphoma,Primary CNS
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Burkitt lymphoma|Burkitt's lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma|DLBCL|Large B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma|High-grade B cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Mantle cell lymphoma|Mantle cell B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Marginal zone lymphoma|Marginal zone B-cell lymphoma
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Small Lymphocytic Lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Small lymphocytic lymphoma|Small lymphocytic leukaemia
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma|B-cell NHL|B-NHL|B-cell Non-Hodgkin's lymphoma||B-cell Non-Hodgkins lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Anaplastic large cell lymphoma|Lymphoma, Large-Cell, Anaplastic
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Gamma-delta T-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Hepatosplenic gamma-delta T-cell lymphoma|Hepatosplenic gamma-delta cell lymphoma
@@ -57,7 +62,8 @@ Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma	Mycosis fungoides
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma	Sézary syndrome|Sezary syndrome|Sezary's Disease
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma|Cutaneous lymphoma
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma|Non-hodgkin Lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma|T-cell NHL|T-NHL|T-cell Non-Hodgkin's lymphoma||T-cell Non-Hodgkins lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma|Non-hodgkin Lymphoma|NHL
 Cancer	Haematological malignancy	Lymphoma|Lymphoid malignancy
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell leukaemia
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell sarcoma
