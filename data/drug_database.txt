@@ -849,7 +849,7 @@ INT2104	allogeneic_CAR-T/NK-cell_therapy,CD20-targeting
 INX-315	CDK2_inhibitor
 IO102-IO103|IO102/IO103	immune-modulatory_vaccine,IDO/PD-L1-targeting
 IOA-244	PI3K-delta_inhibitor
-IOS1002|IOS 1002	fusion_protein,LILRB2/LILRB2/KIR3DL1-targeting
+IOS1002|IOS-1002|IOS 1002	fusion_protein,LILRB2/LILRB2/KIR3DL1-targeting
 IPI-549|IPI 549	PI3K-gamma_inhibitor
 ISB-1442|ISB 1442|ISB1442	bispecific_CD38/CD47_antibody
 ISB-2001|ISB 2001|ISB2001	trispecific_T-cell_engager,BCMA/CD38-targeting
