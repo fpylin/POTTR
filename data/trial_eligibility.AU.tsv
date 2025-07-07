@@ -146,7 +146,6 @@ NCT05216432	PIK3CA:oncogenic_mutation; catype:Breast cancer; *ESR1:protein_expre
 NCT06252649	KRAS:G12C; *NOT prior_therapy:systemic_therapy
 NCT06599502	KRAS:G12D
 NCT06659341	KRAS:G12C
-NCT06497556	KRAS:G12C; catype:Non-small cell lung cancer
 NCT06345729	KRAS:G12C; catype:Non-small cell lung cancer
 NCT06119581	KRAS:G12C; catype:Non-small cell lung cancer
 NCT05789082	KRAS:G12C; catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy
