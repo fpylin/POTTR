@@ -119,7 +119,10 @@ NCT05975073	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06065748	*NOT (ERBB2:amplification OR ERBB2:overexpression); *ESR1:protein_expression; ESR1:oncogenic_mutation; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
 NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
 NCT06188702	*MTAP:deletion; NOT catype:Central nervous system cancer; *(info:panel:AVENIO OR info:panel:FM1 CDx)
-NCT06003621	NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
+NCT06003621	CD274:protein_expression; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
+NCT06003621	CD274:amplification; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
+NCT06003621	PDCD1LG2:amplification; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
+NCT06003621	tumour_mutational_burden:high; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
 NCT06031441	*MOA_UNKNOWN
 NCT05805501	catype:Clear cell renal cell carcinoma
 NCT04644068	sensitive_to_drug_class:PARP_inhibitor
