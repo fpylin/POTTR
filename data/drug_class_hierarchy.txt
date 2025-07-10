@@ -2008,6 +2008,7 @@ immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA4-targeting	anti-CTLA4
 immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA4-targeting	bispecific_PD-1/CTLA4_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA4-targeting	bispecific_PD-L1/CTLA4_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA4-targeting	dual_PD-L1/CTLA4_inhibitor
+immune_checkpoint_blockade	immune_checkpoint_blockade,CTLA4-targeting	CTLA4_inhibitor
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	anti-PD-1/IL-2-immunocytokine_conjugate
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	anti-PD-1_monoclonal_antibody
 immune_checkpoint_blockade	immune_checkpoint_blockade,PD-1-targeting	anti-PD1-IL2_fusion_protein
@@ -2531,3 +2532,48 @@ cancer_therapy,KRAS-targeting	RAS-PI3Kalpha_inhibitor
 cancer_therapy,NRAS-targeting	RAS-PI3Kalpha_inhibitor
 cancer_therapy,HRAS-targeting	RAS-PI3Kalpha_inhibitor
 cancer_therapy,ERBB2-targeting	RAS-PI3Kalpha_inhibitor
+Aurora_inhibitor	FLT3/Aurora_inhibitor
+CAR-T-cell_therapy,CD19-targeting	CAR-T-cell_therapy,CD19/CD20-targeting
+CAR-T-cell_therapy,CD20-targeting	CAR-T-cell_therapy,CD19/CD20-targeting
+CAR-T-cell_therapy,CD19/CD20-targeting	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
+autologous_CAR-T-cell_therapy	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
+EGFR_inhibitor	EGFR/ERBB2_inhibitor,mutant-selective,non-covalent
+PDGFRA_inhibitor	PDGFRA/VEGFR/FGFR1/2/3_inhibitor
+PDGFRB_inhibitor	FGFR1/2/3/PDGFRB/VEGFR_inhibitor
+VEGFR_inhibitor	FGFR1/2/3/PDGFRB/VEGFR_inhibitor
+VEGFR_inhibitor	PDGFRA/VEGFR/FGFR1/2/3_inhibitor
+cancer_therapy	cancer_therapy,AR_degrader-targeting
+cancer_therapy	cancer_therapy,Aurora-targeting
+cancer_therapy	cancer_therapy,CD24-targeting
+cancer_therapy	cancer_therapy,CDH3-targeting
+cancer_therapy	cancer_therapy,DHX9-targeting
+cancer_therapy	cancer_therapy,EREG-targeting
+cancer_therapy	cancer_therapy,MUC1-targeting
+cancer_therapy	cancer_therapy,PARP1-selective-targeting
+cancer_therapy	cancer_therapy,RAS-PI3Kalpha-targeting
+cancer_therapy,BRAF_V600E-targeting	BRAF_V600E_degrader
+cancer_therapy,BRD9-targeting	BRD9_inhibitor
+cancer_therapy,CAR-T-cell_generating,CD19-targeting	gene_therapy,CAR-T-cell_generating,CD19-targeting
+cancer_therapy,CD19-targeting	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
+cancer_therapy,CD20-targeting	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
+cancer_therapy,CD24-targeting	immuno-oncology_therapy,CD24-targeting
+cancer_therapy,CDH3-targeting	immuno-oncology_therapy,CDH3-targeting
+cancer_therapy,CLDN18.2-targeting	anti-CLDN18.2_immune-stimulating_antibody_conjugate,TLR7/8_agonist
+cancer_therapy,DHX9-targeting	DHX9_inhibitor
+cancer_therapy,EREG-targeting	immuno-oncology_therapy,EREG-targeting
+cancer_therapy,FAP-targeting	radioligand,FAP-targeting
+cancer_therapy,KRAS-targeting	KRAS_PROTAC_degrader
+cancer_therapy,MUC1-targeting	immuno-oncology_therapy,MUC1-targeting
+cancer_therapy,PI3K_alpha-targeting	PI3K_alpha_inhibitor,allosteric,mutant-selective
+cancer_therapy,PI3K_alpha-targeting	RAS-PI3Kalpha_inhibitor
+cancer_therapy,SMARCA2-targeting	SMARCA2/SMARCA4/PBRM1_degrader
+cancer_therapy,SMARCA4-targeting	SMARCA2/SMARCA4/PBRM1_degrader
+cancer_therapy,PBRM1-targeting	SMARCA2/SMARCA4/PBRM1_degrader
+cancer_therapy,KRAS-targeting	SOS1-KRAS_inhibitor
+immuno-oncology_therapy,B7H3-targeting	bispecific_EGFR/B7H3_antibody-drug_conjugate
+immuno-oncology_therapy,CD24-targeting	anti-CD24_monoclonal_antibody
+immuno-oncology_therapy,CDH3-targeting	anti-CDH3_antibody-drug_conjugate
+immuno-oncology_therapy,EGFR-targeting	bispecific_EGFR/B7H3_antibody-drug_conjugate
+immuno-oncology_therapy,EREG-targeting	anti-EREG_antibody-drug_conjugate
+immuno-oncology_therapy,MUC1-targeting	anti-MUC1_antibody-drug_conjugate
+

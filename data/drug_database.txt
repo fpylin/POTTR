@@ -410,7 +410,7 @@ CC-95251|CC 95251|CC95251	anti-SIRPa_monoclonal_antibody
 CCT128930	AKT2_inhibitor
 CCX559	PD-L1_inhibitor,oral
 CDX-301|FLT3 Ligand|Flt3-Ligand|Flt3L|Mobist	recombinant_flt3_ligand
-CEND-1|CEND1|CEND 1|LSTA1|Internalized-arginylglycylaspartic Acid Cyclic Peptide|iRGD	tumor-homing_peptide_iRGD
+Certepetide|CEND-1|CEND1|CEND 1|LSTA1|Internalized-arginylglycylaspartic Acid Cyclic Peptide|iRGD	tumor-homing_peptide_iRGD
 CEP-9722	PARP_inhibitor
 CF33-hNIS	oncolytic_virus
 CFI-402257	Mps1/TTK_inhibitor
@@ -1730,3 +1730,5 @@ KITE-753	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
 Azercabtagene zapreleucel|Azer-cel|PBCAR0191	allogeneic_CAR-T-cell_therapy,CD19-targeting
 ONM-501	STING_agonist
 FS222	bispecific_PD-L1/CD137_antibody
+SBO-154|SBO154	anti-MUC1_antibody-drug_conjugate
+AZD6422	autologous_CAR-T-cell_therapy,CLDN18.2-targeting
