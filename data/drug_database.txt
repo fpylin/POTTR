@@ -590,7 +590,7 @@ EMD 1204831	MET_inhibitor
 ENB003|ENB 003|ENB-003	ETBR_inhibitor
 ENMD-2076	AURKA_inhibitor; angiogenesis_inhibitor
 ENV-501	anti-ERBB3_antibody-drug_conjugate
-EO1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; EGFR_inhibitor,second_generation
+EO1001|EO-1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; EGFR_inhibitor,second_generation
 EOS-448	anti-TIGIT_monoclonal_antibody
 EOX	Epirubicin + Oxaliplatin + Capecitabine
 EP0042	FLT3/Aurora_inhibitor
@@ -1732,3 +1732,4 @@ ONM-501	STING_agonist
 FS222	bispecific_PD-L1/CD137_antibody
 SBO-154|SBO154	anti-MUC1_antibody-drug_conjugate
 AZD6422	autologous_CAR-T-cell_therapy,CLDN18.2-targeting
+WJ47156|JS125|JS-125	HDAC_inhibitor
