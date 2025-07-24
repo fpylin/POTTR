@@ -5,20 +5,6 @@ ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12623000096651	(catype:Low-grade glioma OR catype:Anaplastic astrocytoma)
 ACTRN12623000874617	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12621000273886	catype:Endometrial cancer
-NCT02628067	catype:Anal Cancer
-NCT02628067	catype:Biliary Tract Cancer
-NCT02628067	catype:Cervical Cancer
-NCT02628067	catype:Colorectal cancer; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
-NCT02628067	catype:Endometrial Carcinoma
-NCT02628067	catype:Lung Neuroendocrine Tumor
-NCT02628067	catype:Mesothelioma
-NCT02628067	catype:Pancreatic Neuroendocrine Tumor
-NCT02628067	catype:Salivary Gland Carcinoma
-NCT02628067	catype:Small bowel Neuroendocrine Tumor
-NCT02628067	catype:Small-Cell Lung Carcinoma
-NCT02628067	catype:Thyroid Carcinoma
-NCT02628067	catype:Vulvar Cancer
-NCT02628067	microsatellite_instability:high
 NCT02960022	*prior_therapy:Enzalutamide
 NCT03093116	ROS1:fusion; catype:Non-small cell lung cancer
 NCT03093116	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); catype:Solid tumour
