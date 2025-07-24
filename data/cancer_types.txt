@@ -85,7 +85,7 @@ Cancer	Haematological malignancy	Plasma cell disorder	Amyloidosis	Transthyretin 
 Cancer	Haematological malignancy	Plasma cell disorder	Plasma cell leukaemia|Plasma cell leukemia
 Cancer	Haematological malignancy	Plasma cell disorder|Plasma cell dyscrasia
 Cancer	Haematological malignancy	Refractory anaemia
-Cancer	Haematological malignancy|Haematologic malignancy|Haematologic cancer|Liquid cancer|Blood cancer
+Cancer	Haematological malignancy|Haematologic malignancy|Haematologic neoplasm|Haematologic cancer|Liquid cancer|Blood cancer
 Cancer	Solid tumour	Biomarker-defined solid tumour	KRAS G12C mutant solid tumour
 Cancer	Solid tumour	Biomarker-defined solid tumour	MSI-H/dMMR solid tumour
 Cancer	Solid tumour	Biomarker-defined solid tumour	MSI-H/dMMR solid tumour	Microsatellite instability high solid tumour|MSI-High solid tumour
