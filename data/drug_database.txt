@@ -1,5 +1,4 @@
 drug	drug_class
-
 111In-FPI-1967|[111In]-FPI-1967	radioconjugate,FGFR3-targeting
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
 131I-TLX-101|4-iodophenylalanine	radioligand,LAT1/LAT2-targeting
@@ -23,6 +22,7 @@ drug	drug_class
 225Ac-PSMA-617|[225Ac]-PSMA-617|Ac-PSMA-617	radioligand,PSMA-targeting
 225Ac-PSMA-I&T|[225Ac]-FPI-2265|FPI-2265	radioligand,PSMA-targeting
 225Ac-PSMA-R2|[225Ac]-PSMA-R2|Ac-PSMA-R2	radioligand,PSMA-targeting
+225Ac-A9-3408|[225Ac]Ac-A9-3408|A9-3408	radioligand,unknown-target
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
 67Cu-SARTATE|67Cu-labeled MeCOSar-Tyr3-octreotate|Copper 67 SARTATE|Copper Cu 67 TATE|Copper Cu 67 Tyr3-octreotate|Copper Cu 67-SARTATE|Cu-67 SARTATE	MeCOSar-Tyr3-octreotate_peptide_receptor_radionuclide_therapy
@@ -582,7 +582,9 @@ E7016	PARP_inhibitor
 E7777	cytotoxic_fusion_protein,diphtheria-IL-2
 EBC-46	protein_kinase_C_regulator
 ECX	Epirubicin + Cisplatin + Capecitabine
+ECI830	CDK2_inhibitor
 EIK1003	PARP1-selective_inhibitor
+EIK1004|IMP1707	PARP1-selective_inhibitor
 EIK1005	WRN_inhibitor
 ELU001	CDot_drug_conjugate,FR-alpha-targeting
 ELVN-001	BCR-ABL1_inhibitor
@@ -846,6 +848,7 @@ IMX-110|IMX 110|IMX110	doxorubicin; nanoparticle_Stat3/NF-kB/poly-TKI
 INB03	TNF_inhibitor
 INBRX-109	anti-DR5_agonistic_antibody
 INCA033989	anti-CALR_monoclonal_antibody
+INCA035784	bispecific_T-cell_engager,CALR-targeting
 INCAGN01876|INCAGN 01876|INCAGN 1876|INCAGN-1876	anti-TIGIT_monoclonal_antibody
 INCB099280	PD-L1_inhibitor,oral
 INCB099318	PD-L1_inhibitor,oral
@@ -931,6 +934,7 @@ KITE-363	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
 KITE-753	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
 KL-A167|A 167|A-167|A167	anti-PD-L1_monoclonal_antibody
 KL590586	RET_inhibitor
+KLN-1010|KLN1010	autologous_CAR-T-cell_therapy,BCMA-targeting
 KN046|KN 046|KN-046	bispecific_PD-L1/CTLA4_antibody
 KSQ-4279|RO7623066	USP1_inhibitor
 KTE-X19	autologous_CAR-T-cell_therapy,CD19-targeting

@@ -212,3 +212,4 @@ NCT04170283	prior_therapy:Zanubrutinib
 NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT06130553	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
+NCT06421935	*CHECK_RECRUITMENT_STATUS
