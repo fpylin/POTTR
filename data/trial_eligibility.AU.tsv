@@ -180,7 +180,7 @@ NCT06172478	catype:Oesophageal carcinoma
 NCT06172478	catype:Pancreatic adenocarcinoma
 NCT06172478	catype:Prostate adenocarcinoma
 NCT06614192	catype:Colorectal cancer; *MET:overexpression
-NCT06736704	(PIK3CA:H1047_missense_variant OR PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant); *NOT AKT1:E17K; *NOT KRAS:oncogenic_mutation; *NOT NRAS:oncogenic_mutation; *NOT FGFR3:alteration; *NOT ERBB2:oncogenic_mutation; *NOT ERBB2:amplification; *NOT BRAF:V600E; *(catype:Breast cancer OR catype:HPV-related cancer); *NOT NF1:oncogenic_mutation; *NOT NF1:deletion
+NCT06736704	(PIK3CA:H1047_missense_variant OR PIK3CA:E542_missense_variant OR PIK3CA:E545_missense_variant); *NOT AKT1:E17K; *NOT KRAS:oncogenic_mutation; *NOT NRAS:oncogenic_mutation; *NOT FGFR3:oncogenic_mutation; *NOT ERBB2:oncogenic_mutation; *NOT ERBB2:amplification; *NOT BRAF:V600E; *(catype:Breast cancer OR catype:HPV-related cancer); *NOT NF1:oncogenic_mutation; *NOT NF1:deletion
 NCT06220864	*NOT prior_therapy:PARP_inhibitor; catype:Prostate cancer; *(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation)
 NCT05503797	catype:Central nervous system cancer; BRAF:V600E; *NOT prior_therapy:RAF_inhibitor; *NOT prior_therapy:ERK_inhibitor; *NOT prior_therapy:MEK_inhibitor
 NCT05503797	BRAF:V600E; NOT NF1:alteration; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT catype:Colorectal adenocarcinoma; NOT catype:Colorectal cancer; NOT catype:Pancreatic adenocarcinoma; NOT catype:Melanoma; NOT catype:Thyroid cancer; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:RAF_inhibitor; *NOT prior_therapy:ERK_inhibitor; *NOT prior_therapy:MEK_inhibitor
