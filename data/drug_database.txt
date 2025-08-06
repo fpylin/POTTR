@@ -583,6 +583,7 @@ E7777	cytotoxic_fusion_protein,diphtheria-IL-2
 EBC-46	protein_kinase_C_regulator
 ECX	Epirubicin + Cisplatin + Capecitabine
 ECI830	CDK2_inhibitor
+EIK1001|EIK-1001	TLR7/TLR8_agonist
 EIK1003	PARP1-selective_inhibitor
 EIK1004|IMP1707	PARP1-selective_inhibitor
 EIK1005	WRN_inhibitor

@@ -12,7 +12,8 @@ NCT03170960	catype:Differentiated Thyroid Carcinoma
 NCT03175224	(MET:oncogenic_mutation OR MET:alteration)
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:positive; *ER:negative; *CD274:protein_expression
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:negative; *ER:positive; PIK3CA:oncogenic_mutation
-NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation
+NCT03424005	NOT prior_therapy:cancer_therapy,PD-1-targeting; NOT prior_therapy:cancer_therapy,PD-1-targeting; NOT_RECRUITING; COHORT_2
+NCT03424005	(ERBB2:amplification OR ERBB2:overexpression OR ERBB2:protein_expression OR ERBB2:low_protein_expression); PIK3CA:oncogenic_mutation; NOT_RECRUITING; COHORT_4
 NCT03486873	EXTENSION_STUDY
 NCT03906331	RET:fusion; *Expanded access program
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification; *Expanded access program
@@ -209,7 +210,7 @@ NCT05947851	(catype:Chronic lymphocytic leukaemia OR catype:Small lymphocytic ly
 NCT06634589	catype:B-cell lymphoma; *prior_therapy:systemic_therapy
 NCT03229200	prior_therapy:Ibrutinib
 NCT04170283	prior_therapy:Zanubrutinib
-NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVENIO OR info:panel:FM1 CDx)
+NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVENIO OR info:panel:FM1 CDx); NOT catype:Glioblastoma; NOT catype:High-grade glioma
 NCT06130553	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06421935	*CHECK_RECRUITMENT_STATUS
