@@ -1,15 +1,14 @@
 trial_id	eligibility_criteria
 ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
-ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12623000096651	(catype:Low-grade glioma OR catype:Anaplastic astrocytoma)
 ACTRN12623000874617	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12621000273886	catype:Endometrial cancer
 NCT02960022	*prior_therapy:Enzalutamide
 NCT03093116	ROS1:fusion; catype:Non-small cell lung cancer
 NCT03093116	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); catype:Solid tumour
-NCT03170960	catype:Differentiated Thyroid Carcinoma
 NCT03175224	(MET:oncogenic_mutation OR MET:alteration)
+NCT03363867	NOT catype:Ovarian Clear cell Carcinoma; NOT catype:Ovarian Mucinous Carcinoma; NOT catype:Ovarian Carcinosarcoma
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:positive; *ER:negative; *CD274:protein_expression
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:negative; *ER:positive; PIK3CA:oncogenic_mutation
 NCT03424005	NOT prior_therapy:cancer_therapy,PD-1-targeting; NOT prior_therapy:cancer_therapy,PD-1-targeting; NOT_RECRUITING; COHORT_2
@@ -54,7 +53,6 @@ NCT05501886	NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_th
 NCT05118789	ROS1:fusion
 NCT04771130	*NOT prior_therapy:BCL2_inhibitor; *NOT prior_therapy:Azacitidine
 NCT05910827	*NOT KRAS:oncogenic_mutation; *NOT PIK3CA:oncogenic_mutation; *NOT BRAF:oncogenic_mutation; *NOT PTEN:deletion; *NOT PTEN:oncogenic_mutation; *NOT MET:amplification; catype:Lung squamous cell carcinoma; *prior_therapy:cancer_therapy,PD-1/PD-L1-targeting; NOT prior_therapy:docetaxel; NOT prior_therapy:cetuximab; *NOT prior_therapy:cancer_therapy,ERBB3-targeting; *prior_therapy:systemic_therapy
-NCT05286801	(SMARCB1:loss OR SMARCB1:oncogenic_mutation OR SMARCB1:loss_of_protein_expression OR SMARCA4:loss OR SMARCA4:oncogenic_mutation OR SMARCA4:loss_of_protein_expression); *PAEDIATRIC_TRIAL
 NCT04879329	*HER2:positive; *ERBB2:protein_expression; *ERBB2:overexpression
 NCT04924075	*NOT KIT:oncogenic_mutation; *NOT PDGFRB:oncogenic_mutation; catype:Gastrointestinal stromal tumour
 NCT04924075	VHL:oncogenic_mutation; (catype:Pheochromocytoma OR catype:Paraganglioma)
@@ -106,10 +104,6 @@ NCT05975073	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06065748	*NOT (ERBB2:amplification OR ERBB2:overexpression); *ESR1:protein_expression; ESR1:oncogenic_mutation; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
 NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
 NCT06188702	*MTAP:deletion; NOT catype:Central nervous system cancer; *(info:panel:AVENIO OR info:panel:FM1 CDx)
-NCT06003621	CD274:protein_expression; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
-NCT06003621	CD274:amplification; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
-NCT06003621	PDCD1LG2:amplification; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
-NCT06003621	tumour_mutational_burden:high; NOT catype:Non-small cell lung cancer; *NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
 NCT06031441	*MOA_UNKNOWN
 NCT05805501	catype:Clear cell renal cell carcinoma
 NCT04644068	sensitive_to_drug_class:PARP_inhibitor
@@ -154,6 +148,7 @@ NCT05867251	*catype:Breast cancer
 NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
 NCT06581432	ERBB2:alteration; *(ERBB2:amplification OR ERBB2:overexpression); (catype:Cervical cancer OR catype:Non-small cell lung cancer); NOT catype:Lung squamous cell carcinoma
 NCT06581432	ERBB2:alteration; *(ERBB2:S310F OR ERBB2:S310Y OR ERBB2:G660D OR ERBB2:R678Q OR ERBB2:S653C OR ERBB2:V659E OR ERBB2:T733I OR ERBB2:L755A OR ERBB2:L755S OR ERBB2:L755M OR ERBB2:L755P OR ERBB2:L755W OR ERBB2:D769N OR ERBB2:I767M OR ERBB2:D769Y OR ERBB2:D769H OR ERBB2:G776V OR ERBB2:V777L OR ERBB2:V777M OR ERBB2:V842I OR ERBB2:L869R OR ERBB2:T862A OR ERBB2:A775_G776insYVMA OR ERBB2:P780_Y781insGSP OR ERBB2:G778_P780dup OR ERBB2:Y772_A775dup OR ERBB2:G776delinsVC OR ERBB2:G776_V777delinsCVCG OR ERBB2:G776delinsLC OR ERBB2:V777_S779dup OR ERBB2:G776_V777insL OR ERBB2:V777_G778insG OR ERBB2:G778_S779insLPS OR ERBB2:V777_G778insCG OR ERBB2:A775_G776insV OR ERBB2:A775_G776insTVMA OR ERBB2:G776_V777insVGC OR ERBB2:G778dup OR ERBB2:G778_S779insCPG OR ERBB2:exon_20_insertion); (catype:Urothelial carcinoma OR catype:Gastroesophageal adenocarcinoma)
+NCT06710847	*(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT06625775	catype:Breast cancer; (ERBB2:overexpression OR ERBB2:amplification)
 NCT06625775	catype:Breast cancer; ER:positive
 NCT06625775	catype:Colorectal cancer; KRAS:oncogenic_mutation
