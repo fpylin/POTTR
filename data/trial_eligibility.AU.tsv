@@ -209,3 +209,4 @@ NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVE
 NCT06130553	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06421935	*CHECK_RECRUITMENT_STATUS
+NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
