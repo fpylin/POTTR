@@ -98,6 +98,7 @@ AMG 212|BAY2010112	bispecific_T-cell_engager,PSMA-targeting
 AMG 305|AMG-305|AMG305	bispecific_T-cell_engager,MSLN-targeting
 AMG 337|AMG337	MET_inhibitor
 AMG 404|AMG-404|AMG404	anti-PD-1_monoclonal_antibody
+AMG 410|AMG-410|AMG410	pan-KRAS_inhibitor
 AMG 596|AMG-596|AMG596	bispecific_T-cell_engager,EGFRvIII-targeting
 AMG 650|AMG-650|AMG650	KIF18A_inhibitor
 AMG 820	anti-CSF1_monoclonal_antibody
@@ -573,7 +574,6 @@ Domvanalimab|AB154|AB 154|AB-154	anti-TIGIT_monoclonal_antibody
 Dordaviprone|ONC201|ONC-201|TIC10	DRD2_antagonist; AKT_inhibitor; ERK_inhibitor
 Dostarlimab|dostarlimab-gxly|ANB011|TSR 042|TSR-042|TSR042	anti-PD-1_monoclonal_antibody
 Dovitinib	FGFR1/2/3/PDGFRB/VEGFR_inhibitor
-Dovitinib	PDGFRB_inhibitor; VEGFR_inhibitor; FGFR1/2/3_inhibitor
 Doxorubicin|Adriamycin|Adriablastin|Hydroxydaunomycin|Hydroxyl Daunorubicin|Hydroxyldaunorubicin	anthracycline
 Duligotuzumab|MEHD7945A	anti-EGFR/ERBB3_monoclonal_antibody
 Durvalumab|Imfinzi|MEDI-4736|MEDI4736	anti-PD-L1_monoclonal_antibody
@@ -592,7 +592,6 @@ ELVN-001	BCR-ABL1_inhibitor
 ELVN-002	ERBB2_inhibitor,exon_20_selective
 EMB-02	bispecific_PD-1/LAG3_antibody
 EMB-06	bispecific_T-cell_engager,BCMA-targeting
-EMB-07	bispecific_PD-L1/OX40_antibody
 EMB-07	bispecific_T-cell_engager,ROR1-targeting
 EMB-09	bispecific_PD-L1/OX40_antibody
 EMD 1204831	MET_inhibitor
@@ -600,7 +599,6 @@ ENB003|ENB 003|ENB-003	ETBR_inhibitor
 ENMD-2076	AURKA_inhibitor; angiogenesis_inhibitor
 ENV-501	anti-ERBB3_antibody-drug_conjugate
 EO1001|EO-1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; EGFR_inhibitor,second_generation
-EO1001|NT113|NT-113|APL-122	ERBB2_inhibitor,second_generation; EGFR_inhibitor,second_generation
 EOS-448	anti-TIGIT_monoclonal_antibody
 EOX	Epirubicin + Oxaliplatin + Capecitabine
 EP0042	FLT3/Aurora_inhibitor
@@ -659,7 +657,6 @@ FAZ-053|FAZ 053|FAZ053	anti-PD-L1_monoclonal_antibody
 FCN-159	MEK_inhibitor
 FEC regimen	Fluorouracil + Epirubicin + Cyclophosphamide
 FEC-D regimen|FEC-D	Fluorouracil + Epirubicin + Cyclophosphamide + Docetaxel
-FER_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 FF-10832	gemcitabine
 FF-10850|FF 10850|FF10850	topoisomerase_inhibitor
 FG-M108	anti-CLDN18.2_monoclonal_antibody
@@ -668,7 +665,6 @@ FHD-609|FHD609	BRD9_PROTAC_degrader
 FIT039	CDK9_inhibitor
 FLOT|FLOX regimen	Fluorouracil + Oxaliplatin + Docetaxel
 FLOX|FLOX regimen	Fluorouracil + Oxaliplatin
-FLT3_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 FLX475|FLX 475|FLX-475	CCR4_inhibitor
 FN-1501|FN 1501|FN1501	CDK2/4/6/FLT3_inhibitor
 FOLFIRI regimen|FOLFIRINOX chemotherapy|FOLFIRI|mFOLFIRI	Fluorouracil + Irinotecan
@@ -1459,7 +1455,7 @@ SQ3370|Doxorubicin Prodrug SQP33/Prodrug-activating Biomaterial SQL7|SQ 3370|SQ-
 SR-4835	CDK12/CDK13‎_inhibitor
 SR-8541A	ENPP1_inhibitor
 SRA515|SRA-515|SRA 515|AZD5153|AZD 5153	BRD4_inhibitor
-SRF388	anti-IL27_monoclonal_antibody
+Casdozokitug|SRF388	anti-IL27_monoclonal_antibody
 SSGJ-709	unknown_drug_class
 ST-617	unknown_drug_class
 STI-A1014|STI A1014|STIA1014|ZKAB 001|ZKAB-001|ZKAB001	anti-PD-L1_monoclonal_antibody
