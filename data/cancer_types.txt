@@ -578,7 +578,7 @@ Cancer	Solid tumour	Sarcoma	Extra-salivary myoepithelial carcinoma
 Cancer	Solid tumour	Sarcoma	Fibromyxoid tumour
 Cancer	Solid tumour	Sarcoma	Fibromyxosarcoma
 Cancer	Solid tumour	Sarcoma	Fibrosarcoma
-Cancer	Solid tumour	Sarcoma	Fibrosarcoma	Congenital fibrosarcoma
+Cancer	Solid tumour	Sarcoma	Fibrosarcoma	Congenital fibrosarcoma|Infantile fibrosarcoma
 Cancer	Solid tumour	Sarcoma	Follicular dendritic cell sarcoma
 Cancer	Solid tumour	Sarcoma	Giant cell sarcoma
 Cancer	Solid tumour	Sarcoma	Hemangiopericytoma
@@ -699,7 +699,8 @@ Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder urothelial carcinom
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Extragonadal seminoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Mediastinal embryonal carcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian dysgerminoma
-Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian mature teratoma
+Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian mature teratoma|Mature cystic teratoma of the ovary|Ovarian dermoid cyst|Cystic teratoma|Ovarian cystic teratoma
+Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian mature teratoma	Squamous cell carcinoma transformation of mature cystic teratoma|Ovarian squamous cell carcinoma associated with teratoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian yolk sac tumour
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Choriocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Mixed germ cell tumour

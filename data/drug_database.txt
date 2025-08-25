@@ -80,6 +80,7 @@ AK117|AK 117|AK-117	anti-CD47_monoclonal_antibody
 AK119	anti-CD73_monoclonal_antibody
 AK127	anti-TIGIT_monoclonal_antibody
 AK138D1	anti-ERBB3_antibody-drug_conjugate
+AK146D1	bispecific_Trop2/Nectin4_antibody-drug_conjugate
 AL-2846|AL 2846|AL2846	MET_inhibitor
 AL101	gamma_secretase_inhibitor
 ALK-201|ALK201	anti-FGFR2b_antibody-drug_conjugate
@@ -937,7 +938,8 @@ KSQ-4279|RO7623066	USP1_inhibitor
 KTE-X19	autologous_CAR-T-cell_therapy,CD19-targeting
 KU-55933	ATM_inhibitor
 Kesonotide	hGIIA-vimentin_inhibitor
-LAVA-051	bispecific_gamma-delta_T-cell_engager
+LAVA-051	bispecific_T-cell_engager,CD1d-targeting
+LAVA-1266	bispecific_T-cell_engager,CD123-targeting
 LBL-007|LBL007	anti-LAG3_monoclonal_antibody
 LBL-024|LBL024	bispecific_PD-L1/41BB_antibody
 LBL-101|LBL101	bispecific_PD-L1/CD47_antibody
@@ -947,6 +949,7 @@ LM-061	MET/VEGFR2/FLT3_inhibitor
 LM-168|LM168	unknown_drug_class
 LM-299	bispecific_PD-1/VEGF_antibody
 LM-302|LM302	anti-CDLN18.2_antibody-drug_conjugate
+LM-350|LM350	anti-CDH17_antibody-drug_conjugate
 LNS8801	GPER_agonist
 LOP628	anti-cKIT_antibody-drug_conjugate
 LOXO-260	RET-selective_inhibitor
@@ -1456,7 +1459,7 @@ SR-4835	CDK12/CDK13‎_inhibitor
 SR-8541A	ENPP1_inhibitor
 SRA515|SRA-515|SRA 515|AZD5153|AZD 5153	BRD4_inhibitor
 Casdozokitug|SRF388	anti-IL27_monoclonal_antibody
-SSGJ-709	unknown_drug_class
+SSGJ-709	bispecific_PD-1/LAG3_antibody
 ST-617	unknown_drug_class
 STI-A1014|STI A1014|STIA1014|ZKAB 001|ZKAB-001|ZKAB001	anti-PD-L1_monoclonal_antibody
 STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
