@@ -8,7 +8,6 @@ NCT02960022	*prior_therapy:Enzalutamide
 NCT03093116	ROS1:fusion; catype:Non-small cell lung cancer
 NCT03093116	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); catype:Solid tumour
 NCT03175224	(MET:oncogenic_mutation OR MET:alteration)
-NCT03363867	NOT catype:Ovarian Clear cell Carcinoma; NOT catype:Ovarian Mucinous Carcinoma; NOT catype:Ovarian Carcinosarcoma
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:positive; *ER:negative; *CD274:protein_expression
 NCT03424005	NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT ER:negative; *ER:positive; PIK3CA:oncogenic_mutation
 NCT03424005	NOT prior_therapy:cancer_therapy,PD-1-targeting; NOT prior_therapy:cancer_therapy,PD-1-targeting; NOT_RECRUITING; COHORT_2
