@@ -106,7 +106,6 @@ NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carbop
 NCT06188702	*MTAP:deletion; NOT catype:Central nervous system cancer; *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT06031441	*MOA_UNKNOWN
 NCT05805501	catype:Clear cell renal cell carcinoma
-NCT04644068	sensitive_to_drug_class:PARP_inhibitor
 NCT06151574	ERBB2:kinase_domain_mutation; catype:Non-small cell lung cancer
 NCT06326411	catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation)
 NCT06326411	catype:Solid tumour; NOT catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR KRAS:oncogenic_mutation)
