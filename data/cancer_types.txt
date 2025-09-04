@@ -726,7 +726,7 @@ Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell ca
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	Xp11 translocation renal carcinoma|Xp11.2 Translocation-Related Renal Cell Carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Renal collecting duct carcinoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Renal collecting duct carcinoma|Collecting duct carcinoma
-Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Renal medullary marcinoma 
+Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Renal medullary carcinoma 
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Renal ontocytoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer|Renal cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Penile cancer

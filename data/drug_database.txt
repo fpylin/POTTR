@@ -794,7 +794,7 @@ HP518	AR_PROTAC_degrader
 HRS-1167|M9466	PARP1-selective_inhibitor
 HRS-5041|HRS 5041|HRS5041	AR_PROTAC_degrader
 HS-10241	MET_inhibitor
-HS-20093	anti-B7H3_antibody-drug_conjugate
+GSK5764227|HS-20093	anti-B7H3_antibody-drug_conjugate
 HSK29116	BTK_PROTAC_degrader
 HTI-1090|HTI 1090|SHR9146	IDO/TDO_inhibitor
 HX009|HX 009|HX-009	bispecific_PD-1/CD47_antibody
@@ -1745,3 +1745,7 @@ modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 CARv3-TEAM-E T cells	autologous_CAR-T-cell_therapy,EGFRvIII-targeting
 Ziftomenib|KO-539	menin-MLL1_inhibitor
+NDI-219216	WRN_inhibitor
+DB-1317	unknown_drug_class
+GSK5764227	anti-B7H3_antibody-drug_conjugate
+HRS-3802	unknown_drug_class
