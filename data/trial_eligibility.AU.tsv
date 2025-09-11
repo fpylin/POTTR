@@ -209,3 +209,4 @@ NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06421935	*CHECK_RECRUITMENT_STATUS
 NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06256588	catype:Head and neck squamous cell carcinoma
+NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer)

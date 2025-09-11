@@ -439,6 +439,7 @@ CRLX301	docetaxel-loaded_nanopharmaceutical
 CS1002	anti-CTLA4_monoclonal_antibody
 CS1003|CS 1003|CS-1003	anti-PD-1_monoclonal_antibody
 CS2009|CS 2009|CS-2009	trispecific_PD-1/VEGFA/CTLA4_antibody
+Chiauranib|CS2164	AURKB/CSF1R/VEGFR/PDGFR/KIT_inhibitor
 CS3002	CDK4/6_inhibitor
 CS3005	adenosine_A2A_receptor_antagonist
 CS3006|CS 3006|CS-3006	MEK_inhibitor
