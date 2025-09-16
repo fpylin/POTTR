@@ -642,7 +642,7 @@ Cancer	Solid tumour	Sclerosing sweat duct carcinoma
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Ovarian Sertoli-Leydig cell tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Ovarian granulosa cell tumour|Granulosa cell tumour
-Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Testicular Leydig cell tumour
+Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Testicular Leydig cell tumour|Leydig cell tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Testicular Sertoli cell tumour
 Cancer	Solid tumour	Skin cancer
 Cancer	Solid tumour	Skin cancer	Cutaneous melanoma|Skin melanoma|Melanomatous skin cancer

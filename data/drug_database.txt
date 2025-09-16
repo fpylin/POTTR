@@ -173,6 +173,7 @@ AZD2962	IRAK4_inhibitor
 AZD3463	ALK_inhibitor; IGF1R_inhibitor; ROS1_inhibitor
 AZD3470	PRMT5_inhibitor
 AZD4205|AZD 4205|AZD-4205	JAK1-selective_inhibitor
+AZD4512|AZD 4512|AZD-4512	anti-CD22_antibody-drug_conjugate
 AZD4547	FGFR1/2/3_inhibitor
 AZD4547	FGFR1/2/3_inhibitor,reversible
 AZD4573	CDK9_inhibitor
