@@ -1751,3 +1751,5 @@ NDI-219216	WRN_inhibitor
 DB-1317	unknown_drug_class
 GSK5764227	anti-B7H3_antibody-drug_conjugate
 HRS-3802	unknown_drug_class
+FMC-376	KRAS_G12C_inhibitor
+DZD6008	EGFR_inhibitor,fourth_generation
