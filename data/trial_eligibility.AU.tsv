@@ -1,9 +1,25 @@
 trial_id	eligibility_criteria
 ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
+ACTRN12621000312842	(ALK:fusion OR ALK:oncogenic_mutation)
 ACTRN12621000639820	(catype:Endometrial cancer OR catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma OR catype:Endometrial stromal sarcoma OR catype:Uterine leiomyosarcoma OR catype:Granulosa cell tumour)
+ACTRN12622000973718	catype:Non-small cell lung cancer; KRAS:G12C
 ACTRN12623000096651	(catype:Low-grade glioma OR catype:Anaplastic astrocytoma)
 ACTRN12623000874617	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12621000273886	catype:Endometrial cancer
+NCT02628067	catype:Anal Cancer
+NCT02628067	catype:Biliary Tract Cancer
+NCT02628067	catype:Cervical Cancer
+NCT02628067	catype:Colorectal cancer; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
+NCT02628067	catype:Endometrial Carcinoma
+NCT02628067	catype:Lung Neuroendocrine Tumor
+NCT02628067	catype:Mesothelioma
+NCT02628067	catype:Pancreatic Neuroendocrine Tumor
+NCT02628067	catype:Salivary Gland Carcinoma
+NCT02628067	catype:Small bowel Neuroendocrine Tumor
+NCT02628067	catype:Small-Cell Lung Carcinoma
+NCT02628067	catype:Thyroid Carcinoma
+NCT02628067	catype:Vulvar Cancer
+NCT02628067	microsatellite_instability:high
 NCT02960022	*prior_therapy:Enzalutamide
 NCT03093116	ROS1:fusion; catype:Non-small cell lung cancer
 NCT03093116	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); catype:Solid tumour
@@ -61,6 +77,8 @@ NCT04928846	NOT EGFR:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT05245968	catype:Gastrointestinal stromal tumour
 NCT05759728	catype:Colorectal adenocarcinoma
 ACTRN12623000223639	catype:Pancreatic adenocarcinoma
+NCT04612751	NOT prior_therapy:systemic_therapy
+NCT04612751	NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT05555732	NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:fusion; NOT NTRK1:fusion; NOT NTRK2:fusion; NOT NTRK3:fusion; NOT BRAF:V600E; NOT BRAF:class_2_mutation; NOT BRAF:class_3_mutation; NOT RET:fusion; NOT MET:exon_14_skipping_mutation; NOT prior_therapy:systemic_therapy; NOT prior_therapy:anti-Trop2_monoclonal_antibody; NOT prior_therapy:anti-PD-1_monoclonal_antibody; NOT prior_therapy:anti-PD-L1_monoclonal_antibody
 NCT05067283	catype:Solid tumour; NOT catype:Non-small cell lung cancer; KRAS:G12C; prior_therapy:systemic_therapy
 NCT05067283	catype:Non-small cell lung cancer; NOT prior_therapy:systemic_therapy; KRAS:G12C
@@ -200,8 +218,13 @@ NCT04170283	prior_therapy:Zanubrutinib
 NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVENIO OR info:panel:FM1 CDx); NOT catype:Glioblastoma; NOT catype:High-grade glioma
 NCT06130553	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
-NCT06421935	(catype:Prostate cancer OR catype:Ovarian cancer); prior_therapy:PARP_inhibitor; NOT prior_therapy:ATR_inhibitor; NOT prior_therapy:CHK1_inhibitor
+NCT06421935	(catype:Prostate cancer OR catype:Ovarian cancer); prior_therapy:PARP_inhibitor; NOT prior_therapy:ATR_inhibitor; NOT prior_therapy:CHK1_inhibitor; INACTIVE
 NCT06421935	(catype:Prostate cancer OR catype:Ovarian cancer); (BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51B:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation OR MLH1:oncogenic_mutation OR MRE11A:oncogenic_mutation OR NBN:oncogenic_mutation OR FANCA:oncogenic_mutation OR FANCL:oncogenic_mutation PR BARD1:oncogenic_mutation OR BRIP1:oncogenic_mutation OR CDK12:oncogenic_mutation OR loss_of_heterozygozity_score:high OR homologous_recombination_score:high); NOT prior_therapy:ATR_inhibitor; NOT prior_therapy:CHK1_inhibitor
+NCT05396833	catype:Solid tumour; COHORT_CLOSED
+NCT05396833	(catype:Triple-negative breast cancer OR catype:Epithelial ovarian cancer OR catype:Castrate-resistant prostate cancer OR catype:Urothelial carcinoma OR catype:Endometrial carcinoma OR catype:Colorectal cancer); COHORT_CLOSED
+NCT05396833	ATM:oncogenic_mutation; catype:Prostate cancer
+NCT05396833	catype:Endometrial cancer; ARID1A:oncogenic_mutation; COHORT_CLOSED
+NCT05396833	catype:Endometrial cancer; mismatch_repair:deficient; prior_therapy:anti-PD-1_monoclonal_antibody; COHORT_CLOSED
 NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06256588	catype:Head and neck squamous cell carcinoma
 NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer)

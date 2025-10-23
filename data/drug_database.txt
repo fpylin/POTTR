@@ -37,7 +37,7 @@ AB-801|AB801	AXL_inhibitor
 AB598|AB-598	anti-CD39_monoclonal_antibody
 ABBV-319	anti-CD19_antibody-drug_conjugate,glucocorticoid_receptor_modulator
 ABBV-383	bispecific_T-cell_engager,BCMA-targeting
-ABBV-400	anti-cMET_antibody-drug_conjugate
+Telisotuzumab adizutecan|Temab-A|ABBV-400	anti-cMET_antibody-drug_conjugate
 ABBV-428|ABBV 428	anti-CD40_agonistic_antibody
 ABBV-453	BCL2_inhibitor
 ABBV-467	MCL1_inhibitor
@@ -1768,3 +1768,4 @@ modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 RO7759065	unknown_drug_class
 BG-89894	MAT2A_inhibitor
+HRO761	WRN_inhibitor
