@@ -124,8 +124,8 @@ NCT06326411	catype:Glioma; BRAF:oncogenic_mutation
 NCT06018337	(ERBB2:protein_expression OR ERBB2:low_protein_expression); NOT ERBB2:amplification; NOT ERBB2:overexpression
 NCT06326411	(BRAF:K601E OR BRAF:K601N OR BRAF:K601T OR BRAF:K601Q OR BRAF:N486_A489delinsK OR BRAF:N486_P490del OR BRAF:G469A OR BRAF:G469V OR BRAF:G469R OR BRAF:G649S OR BRAF:fusion OR BRAF:L597Q OR BRAF:L597R OR BRAF:L597S OR BRAF:L597V)
 NCT06326411	(BRAF:D287H OR BRAF:G466A OR BRAF:G466 OR BRAF:G466 OR BRAF:G466E OR BRAF:G466V OR BRAF:G466R OR BRAF:G469E OR BRAF:N581I OR BRAF:N581S OR BRAF:N581T OR BRAF:N581Y OR BRAF:N581K OR BRAF:D594A OR BRAF:D594G OR BRAF:D594H OR BRAF:D594N OR BRAF:D594E OR BRAF:D594Y OR BRAF:D594V OR BRAF:D596D OR BRAF:D596R OR BRAF:D596C OR BRAF:D596V)
-NCT06326411	(NRAS:Q61 OR NRAS:G12 OR NRAS:G13)
-NCT06326411	(KRAS:Q61 OR KRAS:G12 OR KRAS:G13)
+NCT06326411	(NRAS:Q61_missense_variant OR NRAS:G12 OR NRAS:G13_missense_variant)
+NCT06326411	(KRAS:Q61_missense_variant OR KRAS:G12_missense_variant OR KRAS:G13_missense_variant)
 NCT05203172	BRAF:V600E
 NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *ERBB2:overexpression; *NOT ERBB2:oncogenic_mutation
 NCT06162572	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *CD274:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:alteration; NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
@@ -151,7 +151,7 @@ NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous 
 NCT05581004	catype:Non-small cell lung cancer
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
 NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion); NOT catype:Ovarian small cell carcinoma; *NOT catype:Cholangiocarcinoma; *NOT catype:Pancreatic adenocarcinoma
-NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); *(info:panel:AVENIO OR info:panel:FM1 CDx)
+NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); (catype:Non-small cell lung cancer OR catype:Pancreatic adenocarcinoma)
 NCT06360354	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06585488	(KRAS:oncogenic_mutation OR KRAS:amplification); NOT KRAS:G12R
 NCT05867251	*catype:Breast cancer
@@ -228,5 +228,4 @@ NCT05396833	catype:Endometrial cancer; mismatch_repair:deficient; prior_therapy:
 NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06256588	catype:Head and neck squamous cell carcinoma
 NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer)
-NCT06589596	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT04794699	(MTAP:loss_of_protein_expression OR MTAP:deletion)
