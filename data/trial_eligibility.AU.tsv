@@ -150,7 +150,6 @@ NCT05536141	catype:Clear cell renal cell carcinoma
 NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer); HNSCC_COHORT_FILLED; GASTRIC_COHORT_FILLED
 NCT05581004	catype:Non-small cell lung cancer
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
-NCT06560645	(SMARCA4:oncogenic_mutation OR SMARCA4:deletion); NOT catype:Ovarian small cell carcinoma; *NOT catype:Cholangiocarcinoma; *NOT catype:Pancreatic adenocarcinoma
 NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); (catype:Non-small cell lung cancer OR catype:Pancreatic adenocarcinoma)
 NCT06360354	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06585488	(KRAS:oncogenic_mutation OR KRAS:amplification); NOT KRAS:G12R
