@@ -1770,3 +1770,7 @@ rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Re
 RO7759065	unknown_drug_class
 BG-89894	MAT2A_inhibitor
 HRO761	WRN_inhibitor
+TLN-372|TLN372	pan-KRAS_inhibitor
+AMG 410|AMG-410|AMG410	pan-KRAS_inhibitor
+GDC-4198|GDC4198|RGT 419B|RGT-419B	CDK2/4/6_inhibitor
+BAY 3713372|BAY-3713372|BAY3713372	PRMT5_inhibitor
