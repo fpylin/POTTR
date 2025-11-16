@@ -1485,7 +1485,7 @@ SRA515|SRA-515|SRA 515|AZD5153|AZD 5153	BRD4_inhibitor
 SSGJ-709	bispecific_PD-1/LAG3_antibody
 ST-617	unknown_drug_class
 STI-A1014|STI A1014|STIA1014|ZKAB 001|ZKAB-001|ZKAB001	anti-PD-L1_monoclonal_antibody
-STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
+LY4064809|STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
 SUN-101	glycopyrrolate
 SUPLEXA	autologous_adoptive_cell-based_immunotherapy
 SW1115C3	mRNA_personalised_cancer_vaccine
@@ -1772,5 +1772,5 @@ BG-89894	MAT2A_inhibitor
 HRO761	WRN_inhibitor
 TLN-372|TLN372	pan-KRAS_inhibitor
 AMG 410|AMG-410|AMG410	pan-KRAS_inhibitor
-GDC-4198|GDC4198|RGT 419B|RGT-419B	CDK2/4/6_inhibitor
+GDC-4198|GDC 4198|GDC4198|RGT 419B|RGT-419B	CDK2/4/6_inhibitor
 BAY 3713372|BAY-3713372|BAY3713372	PRMT5_inhibitor
