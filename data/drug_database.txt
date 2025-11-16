@@ -861,6 +861,7 @@ IMU-131|HER-Vaxx	ERBB2_B-cell_antigen
 IMU-201	B_cell_immunotherapy
 IMX-110|IMX 110|IMX110	doxorubicin; nanoparticle_Stat3/NF-kB/poly-TKI
 INB03	TNF_inhibitor
+INBRX-106	anti-OX40_agonistic_antibody
 INBRX-109	anti-DR5_agonistic_antibody
 INCA033989	anti-CALR_monoclonal_antibody
 INCA035784	bispecific_T-cell_engager,CALR-targeting
@@ -1774,3 +1775,9 @@ TLN-372|TLN372	pan-KRAS_inhibitor
 AMG 410|AMG-410|AMG410	pan-KRAS_inhibitor
 GDC-4198|GDC 4198|GDC4198|RGT 419B|RGT-419B	CDK2/4/6_inhibitor
 BAY 3713372|BAY-3713372|BAY3713372	PRMT5_inhibitor
+TLN-372	pan-KRAS_inhibitor
+AZD6750	CD8-guided_IL-2_candidate
+Roginolisib|IOA-244	PI3K-delta_inhibitor
+YL242	antibody-drug_conjugate,VEGF-targeting
+Luxdegalutamide|JSB462|ARV-766	AR_PROTAC_degrader
+Sapu003	mTORC1/mTORC2_inhibitor
