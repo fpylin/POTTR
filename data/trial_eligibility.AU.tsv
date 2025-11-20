@@ -40,7 +40,6 @@ NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
 NCT04064060	NOT catype:solid tumours
 NCT04164199	access:by_invitation_only
 NCT04170283	NOT catype:solid tumours
-NCT04185883	KRAS:G12C
 NCT04221035	catype:Neuroblastoma
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
