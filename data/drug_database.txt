@@ -96,7 +96,7 @@ ALTA2618	AKT1_E17K_inhibitor
 AMB-05X	anti-CSF1R_monoclonal_antibody
 AMG 160|AMG-160|AMG160	bispecific_T-cell_engager,PSMA-targeting
 AMG 176|AMG-176|AMG176	MCL1_inhibitor
-AMG 193|AMG-193|AMG193	PRMT5_inhibitor
+AMG 193|AMG-193|AMG193	PRMT5_inhibitor,MTA-co-operative
 AMG 212|BAY2010112	bispecific_T-cell_engager,PSMA-targeting
 AMG 305|AMG-305|AMG305	bispecific_T-cell_engager,MSLN-targeting
 AMG 337|AMG337	MET_inhibitor
@@ -1083,7 +1083,7 @@ MNPR-101-PCTA-177Lu	177Lu-anti-uPAR_radioconjugate
 MOMA-341|MOMA341	WRN_inhibitor
 MRK003	gamma_secretase_inhibitor
 MRTX1133|MRTX-1133	KRAS_G12D_inhibitor
-MRTX1719	PRMT5_inhibitor
+Navlimetostat|MRTX1719|MRTX-1719	PRMT5_inhibitor,MTA-co-operative
 MSB0254	anti-VEGFR2_monoclonal_antibody
 MSC2156119J	MET_inhibitor
 MT-302	Trop2-targeting_lipid-nanoparticles
@@ -1235,7 +1235,7 @@ PDD00017273	PARG_inhibitor
 PDS0101	vaccine_therapy,HPV-E6/HPV-E7-targeting
 PE0116	anti-4-1BB_agonistic_antibody
 PEP07|PEP-07|CASC-578	CHK1_inhibitor	
-PEP08	PRMT5_inhibitor
+PEP08	PRMT5_inhibitor,MTA-co-operative
 PF-03732010	P-cadherin_inhibitor
 PF-04518600|PF04518600	anti-OX40_agonistic_antibody
 PF-06293622	anti-NOTCH1_monoclonal_antibody
@@ -1781,3 +1781,6 @@ Roginolisib|IOA-244	PI3K-delta_inhibitor
 YL242	antibody-drug_conjugate,VEGF-targeting
 Luxdegalutamide|JSB462|ARV-766	AR_PROTAC_degrader
 Sapu003	mTORC1/mTORC2_inhibitor
+TNG908	PRMT5_inhibitor,MTA-co-operative
+TNG462	PRMT5_inhibitor,MTA-co-operative
+
