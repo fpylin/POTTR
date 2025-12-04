@@ -217,7 +217,7 @@ NCT05947851	(catype:Chronic lymphocytic leukaemia OR catype:Small lymphocytic ly
 NCT06634589	catype:B-cell lymphoma; *prior_therapy:systemic_therapy
 NCT03229200	prior_therapy:Ibrutinib
 NCT04170283	prior_therapy:Zanubrutinib
-NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVENIO OR info:panel:FM1 CDx); NOT catype:Glioblastoma; NOT catype:High-grade glioma
+NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVENIO OR info:panel:FM1 CDx); NOT catype:Glioblastoma; NOT catype:High-grade glioma; (catype:Non-small-cell lung cancer OR catype:Pancreatic adenocarcinoma)
 NCT06130553	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06421935	(catype:Prostate cancer OR catype:Ovarian cancer); prior_therapy:PARP_inhibitor; NOT prior_therapy:ATR_inhibitor; NOT prior_therapy:CHK1_inhibitor; INACTIVE
