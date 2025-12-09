@@ -56,6 +56,7 @@ ABCP regimen	Atezolizumab + Bevacizumab + Carboplatin + Paclitaxel
 ABN401|ABN 401|ABN-401	MET_inhibitor,type_1
 ABSK-043|ABSK043	PD-L1_inhibitor,oral
 ABT-122|ABT122	bispecific_TNF/IL-17A_antibody
+ABT-301|ABT301	HDAC_inhibitor
 ABT-737	dual_Bcl2/BclxL_inhibitor
 ABT-767	PARP_inhibitor
 ACBI3	KRAS_PROTAC_degrader
@@ -354,7 +355,7 @@ BNT142|BNT-142	bispecific_T-cell_engager,CLDN6-targeting
 BNT211	CAR-T-cell_therapy,mRNA_vaccine,CLDN6-targeting
 BNT317|BNT-317	cancer_therapy,undisclosed_mechanism
 BNT325|DB-1305	anti-Trop2_antibody-drug_conjugate
-BNT327|PM8002	bispecific_PD-L1/VEGFA_antibody
+Pumitamig|BNT327|BNT-327|PM8002	bispecific_PD-L1/VEGFA_antibody
 BOS-342|BOS342|PRS342|PRS-342	bispecific_GPC3/4-1BB_antibody
 BRY812	anti-LIV1_antibody-drug_conjugate
 BSJ-03-123	CDK6_PROTAC_degrader
@@ -1783,4 +1784,5 @@ Luxdegalutamide|JSB462|ARV-766	AR_PROTAC_degrader
 Sapu003	mTORC1/mTORC2_inhibitor
 TNG908	PRMT5_inhibitor,MTA-co-operative
 TNG462	PRMT5_inhibitor,MTA-co-operative
-
+Vepugratinib|LY3866288	FGFR3_inhibitor
+IVX037	oncolytic_virus
