@@ -24,6 +24,7 @@ drug	drug_class
 225Ac-PSMA-617|[225Ac]-PSMA-617|Ac-PSMA-617	radioligand,PSMA-targeting
 225Ac-PSMA-I&T|[225Ac]-FPI-2265|FPI-2265	radioligand,PSMA-targeting
 225Ac-PSMA-R2|[225Ac]-PSMA-R2|Ac-PSMA-R2	radioligand,PSMA-targeting
+225Ac-SSO11	radioligand,SSTR2-targeting
 225Ac-TLX592|TLX592	radioligand,PSMA-targeting
 2X-121|E-7449|E7449	PARP/TNKS_inhibitor
 64Cu-TLX592	PSMA-targeting_antibody_radioimmunoconjugate
