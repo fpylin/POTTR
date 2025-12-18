@@ -849,7 +849,7 @@ IK-175	AHR_inhibitor
 IK-930	YAP-TEAD_inhibitor
 IKS014	anti-ERBB2_antibody-drug_conjugate
 IKS03	anti-CD19_antibody-drug_conjugate
-IMC-F106C	bispecific_T-cell_engager,PRAME-targeting
+Brenetafusp|IMC-F106C	bispecific_T-cell_engager,PRAME-targeting
 IMC-P115C	bispecific_T-cell_engager,PRAME-targeting
 IMC-R117C	bispecific_T-cell_engager,PIWIL1-targeting
 IMD-101	IL2_conjugate
@@ -938,6 +938,8 @@ JNJ-90189892	unknown_drug_class
 JQ1|JQ1 compound	BET_inhibitor
 JS-006|JS006	anti-TIGIT_monoclonal_antibody
 JS-009|JS009	anti-CD112R_monoclonal_antibody
+JS-207|JS207	bispecific_PD-1/VEGF_antibody
+SCTB14	bispecific_PD-1/VEGF_antibody
 JSKN003|JSKN-003|KN-026	biparatopic_ERBB2_antibody-drug_conjugate
 JSKN033|JSKN-003	JSKN003 + Envafolimab
 JSKN033|JSKN-003	biparatopic_anti-ERBB2_antibody-drug_conjugate-anti-PD-L1_antibody; JSKN003 + Envafolimab
@@ -1787,3 +1789,4 @@ TNG908	PRMT5_inhibitor,MTA-co-operative
 TNG462	PRMT5_inhibitor,MTA-co-operative
 Vepugratinib|LY3866288	FGFR3_inhibitor
 IVX037	oncolytic_virus
+Sasanlimab|PF-06801591	anti-PD-1_monoclonal_antibody
