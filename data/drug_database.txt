@@ -45,8 +45,6 @@ ABBV-969	anti-PSMA/STEAP1_antibody-drug_conjugate
 ABBV-992	BTK_inhibitor
 ABCP regimen	Atezolizumab + Bevacizumab + Carboplatin + Paclitaxel
 ABSK-043|ABSK043	PD-L1_inhibitor,oral
-ABT-122|ABT122	bispecific_TNF/IL-17A_antibody
-ABT-301|ABT301	HDAC_inhibitor
 ABT-737	dual_Bcl2/BclxL_inhibitor
 ABT-767	PARP_inhibitor
 ACBI3	KRAS_PROTAC_degrader
@@ -81,7 +79,6 @@ AMG-319|AMG319	PI3K-delta_inhibitor
 AMG-355|AMG 355	anti-CCR8_monoclonal_antibody
 AMG-424|AMG 424	bispecific_T-cell_engager,CD38-targeting
 AMG-794|AMG 794	bispecific_T-cell_engager,CLDN6-targeting
-AMP-945|AMP 945|AMP945|AMP-945	FAK_inhibitor
 AMT-116|AMT116	anti-CD44v9_antibody-drug_conjugate
 AMT-151|AMT151	anti-FR-alpha_antibody-drug_conjugate
 AMT-253|AMT253	anti-MUC18_antibody-drug_conjugate
@@ -295,7 +292,6 @@ BNT113	vaccine_therapy,HPV-E6/HPV-E7-targeting
 BNT142|BNT-142	bispecific_T-cell_engager,CLDN6-targeting
 BNT211	CAR-T-cell_therapy,mRNA_vaccine,CLDN6-targeting
 BNT317|BNT-317	cancer_therapy,undisclosed_mechanism
-BNT325|DB-1305	anti-Trop2_antibody-drug_conjugate
 BOS-342|BOS342|PRS342|PRS-342	bispecific_GPC3/4-1BB_antibody
 BSJ-03-123	CDK6_PROTAC_degrader
 BTX-1188	dual_GSPT1/IKZF1_degrader
@@ -350,7 +346,6 @@ Buparlisib|BKM120	pan-PI3K_inhibitor; PI3K_alpha_inhibitor
 Busulfan|Misulban|Myeloleukon|Myelosan|Mylecytan|Myleran|1,4-Bitanediol Dimethanesulfonate Esters|1,4-Butanediol Dimethylsulfonate|BUS|CB 2041|CB-2041|GT 41|GT-41|Glyzophrol|Joacamine|Methanesulfonic Acid Tetramethylene Ester|Methanesulfonic acid, tetramethylene ester|Mielucin|Misulfan|Mitosan|Myeleukon|Sulfabutin|WR-19508	alkylating_agent
 Bzacitidine	DNA_methyltransferase_inhibitor; antimetabolite
 C019199	CSF1R/DDR/VEGFR2_inhibitor
-CA-4948	IRAK4_inhibitor
 CAEL-101	anti-amyloid_monoclonal_antibody
 CAPIRI|XELIRI	capecitabine + irinotecan
 CAPOX|XELOX	capecitabine + oxaliplatin
@@ -568,6 +563,7 @@ Elranatamab|PF-06863135	bispecific_T-cell_engager,BCMA-targeting
 Eltivutabart|TTX-030	anti-CD39_monoclonal_antibody
 Elzovantinib|TPX0022|TPX-0022	MET/SRC/CSF1R_inhibitor
 Emactuzumab|RG7155|RG-7155|RO-5509554|RO5509554	anti-CSF1R_monoclonal_antibody
+Emavusertib|CA-4948	IRAK4_inhibitor
 Emerfetamab|AMG-673|AMG 673	bispecific_T-cell_engager,CD33-targeting
 Emirodatamab|AMG-427|AMG 427	bispecific_T-cell_engager,FLT3-targeting
 Emunkitug|HFB200301	TNFR2_agonistic_antibody
@@ -835,6 +831,7 @@ Imiquimod|Aldara|R 837|S 26308|Zyclara	topical_immune_response_modifier
 Imlunestrant|LY3484356	selective_estrogen_receptor_degrader
 Immune Therapeutic Agent	immune_checkpoint_blockade
 Imneskibart|AU-007	anti-IL-2_monoclonal_antibody
+Imofinostat|ABT-301|ABT301	HDAC_inhibitor
 Imvotamab|IGM-2323	bispecific_T-cell_engager,CD20-targeting
 Imzokitug|BMS-986340	anti-CCR8_monoclonal_antibody
 Inavolisib|GDC-0077|GDC 0077|GDC0077|RG 6114|RG-6114|RG6114|RO 7113755	PI3K_alpha_inhibitor
@@ -1084,7 +1081,7 @@ Nanrilkefusp Alfa|SOT101	IL-15_superagonist
 Napabucasin|BB608|BBI-608|BBI608	cancer_stemness_inhibitor
 Naporafenib|LXH254|LXH 254|LXH-254	RAF_dimer_inhibitor
 Naquotinib|ASP8273	EGFR_inhibitor,third_generation
-Narmafotinib|AMP945|AMP-945	FAK_inhibitor
+Narmafotinib|AMP-945|AMP 945|AMP945|AMP-945	FAK_inhibitor
 Navarixin|MK-7123|MK7123|PS291822|SCH 527123	CXCR2_antagonist
 Navitoclax|ABT-263|A-855071.0	BCL2_inhibitor
 Navlimetostat|MRTX1719|MRTX-1719	PRMT5_inhibitor,MTA-co-operative
@@ -1338,6 +1335,7 @@ Refametinib|BAY86-9766	MEK_inhibitor
 Regorafenib|BAY 73-4506|Stivarga	KIT/PDGFR/RET/VEGFR/FGFR_inhibitor
 Relatlimab|BMS-986016|BMS986016	anti-LAG3_monoclonal_antibody
 Relugolix|TAK 385|TAK-385|ORGOVYX	GnRH_antagonist
+Remtolumab|ABT-122|ABT122	bispecific_TNF/IL-17A_antibody
 Remzistotug|GSK4381562	anti-PVRIG_monoclonal_antibody
 Renvistobart|BMS-986207	anti-TIGIT_monoclonal_antibody
 Reozalimab|LY3434172|LY 3434172|LY-3434172	bispecific_PD-1/PD-L1_antibody
@@ -1424,6 +1422,7 @@ SX-682	CXCR1/2_inhibitor
 SY-5609	CDK7_inhibitor
 Sabatolimab|MBG453	anti-TIM3_monoclonal_antibody
 Sabizabulin	tubulin_inhibitor
+Sacituzumab Drozuntecan|BNT325|DB-1305	anti-Trop2_antibody-drug_conjugate
 Sacituzumab Govitecan|IMMU-132|RS7-SN38|Trodelvy	anti-Trop2_antibody-drug_conjugate
 Sacituzumab tirumotecan|MK-2870|SKB264	anti-Trop2_antibody-drug_conjugate
 Safimaltib|JNJ-67856633	MALT1_inhibitor
