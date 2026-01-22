@@ -72,7 +72,6 @@ NCT05647122	catype:Non-small cell lung cancer; EGFR:oncogenic_mutation
 NCT05647122	catype:Non-small cell lung cancer; NOT EGFR:oncogenic_mutation
 NCT05647122	catype:Head and neck squamous cell carcinoma
 NCT04928846	NOT EGFR:oncogenic_mutation; catype:Non-small cell lung cancer
-NCT05245968	catype:Gastrointestinal stromal tumour
 NCT05759728	catype:Colorectal adenocarcinoma
 ACTRN12623000223639	catype:Pancreatic adenocarcinoma
 NCT04612751	NOT prior_therapy:systemic_therapy
