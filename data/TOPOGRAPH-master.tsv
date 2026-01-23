@@ -1625,7 +1625,7 @@ Tier	Biomarker	Alteration	Tumour Type	Drugs	Comments	Evidence
 4	MET	Amplification, Exon 14 Deletion, Exon 14 splicing mutation, Exon 14 skipping mutation	Non-small cell lung cancer	GB263T	Cell line study.	10.1158/1538-7445.AM2022-LB538
 4	MET	Amplification, Overexpression, Exon 14 skipping mutation	Solid tumours	ABN401		32549194
 4	MET	CAV1-MET fusion	Non-small cell lung cancer; Small-cell lung cancer	Crizotinib	Case report. Objective response was seen in SCLC transformation with Inframe fusion of exons 1-2 of CAV1 to exons 2-21 of MET on the background of EGFR L858R.	31122565
-4	MET	CD74-MET fusion	Non-small cell lung cancer	Capmatinib	Case report: Complete response in patient with metastatic NSCLC harboring CD47-MET fusion treated with capmatinib, achieving 18-month ongoing complete metabolic response after 3 prior lines of therapy.	38832711
+4	MET	CD47-MET fusion	Non-small cell lung cancer	Capmatinib	Case report: Complete response in patient with metastatic NSCLC harboring CD47-MET fusion treated with capmatinib, achieving 18-month ongoing complete metabolic response after 3 prior lines of therapy.	38832711
 4	MET	D1028H (D1010H)	Non-small cell lung cancer	Crizotinib	Case report. c.3082G&gt;C could result in skipping of exon 14. Radiographic response to crizotinib was observed.	25898962
 4	MET	D1028H (D1010H)	Non-small cell lung cancer	Crizotinib	Case report. MET Y1230C mutation (0.3% pre-treatment frequency) emerged as a resistance mechanism to crizotinib in NSCLC with MET exon 14 skipping, co-occurring with METex14 alteration D1010H, and was detected in ctDNA at progression after 13 months of treatment.	27666659
 4	MET	D1028N (D1010N)	Non-small cell lung cancer	Crizotinib	Case report. 	26892698
