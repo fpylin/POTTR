@@ -224,6 +224,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colore
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma	Microsatellite stable colon cancer|Colon cancer microsatellite stable|MSS Colon Cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma|Colon cancer|Bowel cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal mucinous adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal Mixed neuroendocrine non-neuroendocrine neoplasm|Colorectal MiNEN
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Mismatch repair deficient colorectal cancer|dMMR colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Mismatch repair proficient colorectal cancer|pMMR colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite instability-high colorectal cancer|MSI-H colorectal cancer
@@ -268,7 +269,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepato
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer	Ampullary adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer|Ampullary carcinoma|Cancer of the Ampulla of Vater
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Combined hepatocellular cholangiocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Combined hepatocellular cholangiocarcinoma|Combined hepatocellular carcinoma and cholangiocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Extrahepatic cholangiocarcinoma	Distal cholangiocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Extrahepatic cholangiocarcinoma	Perihilar cholangiocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Intrahepatic cholangiocarcinoma
@@ -349,7 +350,7 @@ Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Canc
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Mesonephric-like carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Ovarian Sertoli-Leydig cell tumour|Ovarian Sertoli cell tumour
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Ovarian yolk sac tumour
-Cancer	Solid tumour	Gynaecological cancer	Uterine leiomyoma
+Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine leiomyoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer	Vaginal adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer	Vaginal adenosquamous carcinoma
@@ -677,6 +678,7 @@ Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Ovarian Sertoli-Leydig cell 
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Ovarian granulosa cell tumour|Granulosa cell tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Testicular Leydig cell tumour|Leydig cell tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Testicular Sertoli cell tumour
+Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Steroid cell tumour|Malignant steroid cell tumour
 Cancer	Solid tumour	Skin cancer
 Cancer	Solid tumour	Skin cancer	Cutaneous melanoma|Skin melanoma|Melanomatous skin cancer
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Basaloid squamous cell carcinoma

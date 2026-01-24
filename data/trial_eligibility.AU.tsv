@@ -9,20 +9,6 @@ ACTRN12624000110583	catype:Glioblastoma
 ACTRN12624000110583	catype:Prostate cancer
 ACTRN12624000110583	catype:Ovarian cancer
 ACTRN12624000110583	catype:Cervical cancer
-NCT02628067	catype:Anal Cancer
-NCT02628067	catype:Biliary Tract Cancer
-NCT02628067	catype:Cervical Cancer
-NCT02628067	catype:Colorectal cancer; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
-NCT02628067	catype:Endometrial Carcinoma
-NCT02628067	catype:Lung Neuroendocrine Tumor
-NCT02628067	catype:Mesothelioma
-NCT02628067	catype:Pancreatic Neuroendocrine Tumor
-NCT02628067	catype:Salivary Gland Carcinoma
-NCT02628067	catype:Small bowel Neuroendocrine Tumor
-NCT02628067	catype:Small-Cell Lung Carcinoma
-NCT02628067	catype:Thyroid Carcinoma
-NCT02628067	catype:Vulvar Cancer
-NCT02628067	microsatellite_instability:high
 NCT02960022	*prior_therapy:Enzalutamide
 NCT03093116	ROS1:fusion; catype:Non-small cell lung cancer
 NCT03093116	(NTRK1:fusion OR NTRK2:fusion OR NTRK3:fusion); catype:Solid tumour
@@ -74,8 +60,6 @@ NCT05647122	catype:Head and neck squamous cell carcinoma
 NCT04928846	NOT EGFR:oncogenic_mutation; catype:Non-small cell lung cancer
 NCT05759728	catype:Colorectal adenocarcinoma
 ACTRN12623000223639	catype:Pancreatic adenocarcinoma
-NCT04612751	NOT prior_therapy:systemic_therapy
-NCT04612751	NOT prior_therapy:anti-PD-1_monoclonal_antibody
 NCT05067283	catype:Solid tumour; NOT catype:Non-small cell lung cancer; KRAS:G12C; prior_therapy:systemic_therapy
 NCT05067283	catype:Non-small cell lung cancer; NOT prior_therapy:systemic_therapy; KRAS:G12C
 NCT05067283	catype:Colorectal cancer; NOT prior_therapy:systemic_therapy; KRAS:G12C
@@ -207,6 +191,7 @@ NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06256588	catype:Head and neck squamous cell carcinoma
 NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer)
+NCT06568614	(MTAP:loss_of_protein_expression OR MTAP:deletion); (catype:Pancreatic adenocarcinoma OR catype:Non-small cell lung cancer)
 NCT04794699	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT07204340	KRAS:oncogenic_mutation
 NCT07094113	KRAS:oncogenic_mutation
