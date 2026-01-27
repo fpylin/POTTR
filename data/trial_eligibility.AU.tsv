@@ -196,3 +196,6 @@ NCT04794699	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT07204340	KRAS:oncogenic_mutation
 NCT07094113	KRAS:oncogenic_mutation
 NCT06820463	NOT prior_therapy:Irinotecan
+NCT06982521	PIK3CA:oncogenic_mutation
+NCT07174336	PIK3CA:oncogenic_mutation
+NCT06973863	(MTAP:loss_of_protein_expression OR MTAP:deletion)

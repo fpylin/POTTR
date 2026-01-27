@@ -1177,7 +1177,8 @@ PDD00017273	PARG_inhibitor
 PDS0101	vaccine_therapy,HPV-E6/HPV-E7-targeting
 PE0116	anti-4-1BB_agonistic_antibody
 PEP07|PEP-07|CASC-578	CHK1_inhibitor
-PEP08|PF-03732010|PF-06293622|PF-06804103	anti-ERBB2_antibody-drug_conjugate
+PEP08	PRMT5_inhibitor,MTA-cooperative
+PF-03732010|PF-06293622|PF-06804103	anti-ERBB2_antibody-drug_conjugate
 PF-06940434|PF06940434	alpha_V_beta_8_antagonist
 PF-07062119	bispecific_T-cell_engager,GUCY2C-targeting
 PF-07265807	AXL/MER_inhibitor
