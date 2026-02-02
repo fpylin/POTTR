@@ -292,7 +292,8 @@ JAK2_inhibitor	JAK1/JAK2_inhibitor
 JAK2_inhibitor	JAK2-selective_inhibitor
 JAK_inhibitor	SYK/JAK_inhibitor
 JNK_inhibitor
-KAT6_inhibitor
+KAT6A_inhibitor
+KAT6A_inhibitor	KAT6A/B_inhibitor
 KIF18A_inhibitor
 KIT/SCFR_inhibitor
 KIT/VEGFR/PDGFR/FLT3_inhibitor
@@ -1017,7 +1018,7 @@ cancer_therapy	cancer_therapy,JAK1-targeting
 cancer_therapy	cancer_therapy,JAK2-selective-targeting
 cancer_therapy	cancer_therapy,JAK2-targeting
 cancer_therapy	cancer_therapy,JNK-targeting
-cancer_therapy	cancer_therapy,KAT6-targeting
+cancer_therapy	cancer_therapy,KAT6A-targeting
 cancer_therapy	cancer_therapy,KIF18A-targeting
 cancer_therapy	cancer_therapy,KIR3DL1-targeting
 cancer_therapy	cancer_therapy,KIR3DL1-targeting	fusion_protein,LILRB2/LILRB2/KIR3DL1-targeting
@@ -1653,7 +1654,7 @@ cancer_therapy,JAK1-targeting	JAK1_inhibitor
 cancer_therapy,JAK2-selective-targeting	JAK2-selective_inhibitor
 cancer_therapy,JAK2-targeting	JAK2_inhibitor
 cancer_therapy,JNK-targeting	JNK_inhibitor
-cancer_therapy,KAT6-targeting	KAT6_inhibitor
+cancer_therapy,KAT6A-targeting	KAT6A_inhibitor
 cancer_therapy,KIF18A-targeting	KIF18A_inhibitor
 cancer_therapy,KIT-targeting	KIT_D816V_inhibitor
 cancer_therapy,KIT-targeting	KIT_D816V_inhibitor
