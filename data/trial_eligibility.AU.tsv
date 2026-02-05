@@ -129,7 +129,6 @@ NCT05867251	CCNE1:amplification; *(catype:Ovarian cancer OR catype:Fallopian tub
 NCT06581432	ERBB2:alteration; *(ERBB2:amplification OR ERBB2:overexpression); (catype:Cervical cancer OR catype:Non-small cell lung cancer); NOT catype:Lung squamous cell carcinoma
 NCT06581432	ERBB2:alteration; *(ERBB2:amplification OR ERBB2:overexpression); catype:Solid tumour; NOT catype:Breast cancer; NOT catype:Gastroesophageal cancer
 NCT06581432	ERBB2:alteration; *(ERBB2:S310F OR ERBB2:S310Y OR ERBB2:G660D OR ERBB2:R678Q OR ERBB2:S653C OR ERBB2:V659E OR ERBB2:T733I OR ERBB2:L755A OR ERBB2:L755S OR ERBB2:L755M OR ERBB2:L755P OR ERBB2:L755W OR ERBB2:D769N OR ERBB2:I767M OR ERBB2:D769Y OR ERBB2:D769H OR ERBB2:G776V OR ERBB2:V777L OR ERBB2:V777M OR ERBB2:V842I OR ERBB2:L869R OR ERBB2:T862A OR ERBB2:A775_G776insYVMA OR ERBB2:P780_Y781insGSP OR ERBB2:G778_P780dup OR ERBB2:Y772_A775dup OR ERBB2:G776delinsVC OR ERBB2:G776_V777delinsCVCG OR ERBB2:G776delinsLC OR ERBB2:V777_S779dup OR ERBB2:G776_V777insL OR ERBB2:V777_G778insG OR ERBB2:G778_S779insLPS OR ERBB2:V777_G778insCG OR ERBB2:A775_G776insV OR ERBB2:A775_G776insTVMA OR ERBB2:G776_V777insVGC OR ERBB2:G778dup OR ERBB2:G778_S779insCPG OR ERBB2:exon_20_insertion); (catype:Urothelial carcinoma OR catype:Gastroesophageal adenocarcinoma)
-NCT06710847	*(microsatellite_instability:high OR mismatch_repair:deficient)
 NCT06625775	catype:Breast cancer; (ERBB2:overexpression OR ERBB2:amplification)
 NCT06625775	catype:Breast cancer; ER:positive
 NCT06625775	catype:Colorectal cancer; KRAS:oncogenic_mutation
