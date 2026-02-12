@@ -191,3 +191,6 @@ NCT06820463	NOT prior_therapy:Irinotecan
 NCT06982521	PIK3CA:oncogenic_mutation
 NCT07174336	PIK3CA:oncogenic_mutation
 NCT06973863	(MTAP:loss_of_protein_expression OR MTAP:deletion)
+NCT06330064	(catype:Endometrial Cancer OR catype:Head and neck squamous cell carcinoma OR catype:Pancreatic adenocarcinoma OR catype:Colorectal adenocarcinoma OR catype:Hepatocellular carcinoma OR catype:Gastrooesophageal adenicarcoma OR catype:Urothelial carcinoma OR catype:Ovarian cancer OR catype:Cervical cancer OR catype:Cutaneous melanoma)
+NCT06330064	catype:Breast Cancer; (ERBB2:low protein expression OR ERBB2:loss of protein expression)
+NCT07028853	catype:Prostate cancer
