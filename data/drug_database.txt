@@ -61,7 +61,7 @@ ADU-S100|MIW815	STING_agonist
 AEE788	EGFR/ERBB2/VEGF2_inhibitor
 AG-946|AG946	pyruvate_kinase_activator
 AI-025	anti-PD-1_monoclonal_antibody
-AI-061	AI-025 + ONC-392
+AI-061	anti-PD-1_monoclonal_antibody + anti-CTLA4_monoclonal_antibody
 AIC100	autologous_CAR-T-cell_therapy,ICAM1-targeting
 AK114|AK 114|AK-114	anti-IL-1beta_monoclonal_antibody
 AK138D1	anti-ERBB3_antibody-drug_conjugate
@@ -1301,6 +1301,8 @@ Quavonlimab|MK-1308|MK 1308|MK-1308A|MK1308	anti-CTLA4_monoclonal_antibody
 Quemliclustat|AB680|AB-680	CD73_inhibitor
 Quizartinib|AC-220|AC010220|AC220	FLT3_inhibitor; KIT_inhibitor
 R-CHOP|RCHOP	Rituximab + Cyclophosphamide + Doxorubicin + Vincristine + Prednisolone
+R-DICE|RDICE	Cisplatin + Dexamethasone + Etoposide + Ifosfamide + Rituximab 
+R-ICE|RICE	Cisplatin + Etoposide + Ifosfamide + Rituximab 
 R-CVP|RCVP	Cyclophosphamide + Prednisolone + Rituximab + Vincristine
 R-DHAP|RDHAP	Rituximab + Dexamethasone + Cytarabine + Cisplatin
 R-EPOCH|REPOCH	Rituximab + Etoposide + Prednisolone + Vincristine + Cyclophosphamide + Doxorubicin
@@ -1418,7 +1420,7 @@ SL-28	allogeneic_cell_therapy,unspecified_mechanism
 SLC3010|SLC-3010	anti-IL-2_antibody_conjugate
 SLN124	siRNA_therapy,TMPRSS6-targeting
 SM08502	CLK_inhibitor
-SN38-SPL9111|DEP-SN38	topoisomerase_inhibitor
+SN38-SPL9111|SN 38|SN-38|DEP-SN38	topoisomerase_inhibitor
 SNB-101	irinotecan_metabolite
 SNS-032	CDK2_inhibitor
 SNV1521|SNV-1521	PARP1-selective_inhibitor
