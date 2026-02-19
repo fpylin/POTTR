@@ -102,7 +102,6 @@ NCT06326411	(NRAS:Q61_missense_variant OR NRAS:G12 OR NRAS:G13_missense_variant)
 NCT06326411	(KRAS:Q61_missense_variant OR KRAS:G12_missense_variant OR KRAS:G13_missense_variant)
 NCT05203172	BRAF:V600E
 NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *ERBB2:overexpression; *NOT ERBB2:oncogenic_mutation
-NCT06162572	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *CD274:protein_expression; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ROS1:alteration; NOT prior_therapy:cancer_therapy,PD-1/PD-L1-targeting
 NCT06208657	trial_type:paediatric
 NCT06343402	KRAS:G12C; (catype:Non-small cell lung cancer OR catype:Colorectal adenocarcinoma)
 NCT06346067	catype:Melanoma; NRAS:oncogenic_mutation
@@ -116,7 +115,6 @@ NCT06119581	KRAS:G12C; catype:Non-small cell lung cancer
 NCT05789082	KRAS:G12C; catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy
 NCT05410145	KRAS:G12C; catype:Non-small cell lung cancer
 NCT05727176	FGFR2:fusion; catype:Cholangiocarcinoma
-NCT05987332	*NOT HLA-A2:A*02:01:positive
 NCT05536141	catype:Clear cell renal cell carcinoma
 NCT05581004	(catype:Non-small cell lung cancer OR catype:Head and neck squamous cell carcinoma OR catype:Melanoma OR catype:Gastric cancer); HNSCC_COHORT_FILLED; GASTRIC_COHORT_FILLED
 NCT05581004	catype:Non-small cell lung cancer
@@ -195,3 +193,19 @@ NCT06330064	(catype:Endometrial Cancer OR catype:Head and neck squamous cell car
 NCT06330064	catype:Breast Cancer; (ERBB2:low protein expression OR ERBB2:loss of protein expression)
 NCT07028853	catype:Prostate cancer
 NCT05549297	NOT catype:Mucosal melanoma
+NCT07070232	catype:Melanoma; *prior_therapy:anti-PD-1_monoclonal_antibody
+NCT07070232	catype:Melanoma; BRAF:V600; prior_therapy:BRAF_V600_inhibitor
+NCT07070232	catype:Non-small cell lung cancer; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ERBB2:ongenic_mutation
+NCT07070232	catype:Non-small cell lung cancer; (EGFR:exon_19_deletion OR EGFR:L858R); *prior_therapy:Osimertinib
+NCT07070232	catype:Mucosal melanoma; *prior_therapy:anti-PD-1_monoclonal_antibody
+NCT07070232	catype:Uveal melanoma; *prior_therapy:systemic_therapy
+NCT07070232	catype:Solid tumour; *prior_therapy:anti-PD-1_monoclonal_antibody
+NCT07070232	catype:Cervical cancer; *prior_therapy:systemic_therapy
+NCT07070232	catype:Breast cancer; NOT ERBB2:amplification; NOT ERBB2:overexpression
+NCT07070232	catype:Gastroesophageal adenocarcinoma
+NCT07070232	catype:Colorectal adenocarcinoma
+NCT04221542	NOT catype:Prostate small cell carcinoma
+NCT06120491	NOT catype:Prostate small cell carcinoma
+NCT06136624	NOT catype:Prostate small cell carcinoma
+NCT06343402	catype:Non-small cell lung cancer
+NCT07174336	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; NOT ERBB2:overexpression

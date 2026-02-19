@@ -1301,13 +1301,13 @@ Quavonlimab|MK-1308|MK 1308|MK-1308A|MK1308	anti-CTLA4_monoclonal_antibody
 Quemliclustat|AB680|AB-680	CD73_inhibitor
 Quizartinib|AC-220|AC010220|AC220	FLT3_inhibitor; KIT_inhibitor
 R-CHOP|RCHOP	Rituximab + Cyclophosphamide + Doxorubicin + Vincristine + Prednisolone
-R-DICE|RDICE	Cisplatin + Dexamethasone + Etoposide + Ifosfamide + Rituximab 
-R-ICE|RICE	Cisplatin + Etoposide + Ifosfamide + Rituximab 
 R-CVP|RCVP	Cyclophosphamide + Prednisolone + Rituximab + Vincristine
 R-DHAP|RDHAP	Rituximab + Dexamethasone + Cytarabine + Cisplatin
+R-DICE|RDICE	Cisplatin + Dexamethasone + Etoposide + Ifosfamide + Rituximab 
 R-EPOCH|REPOCH	Rituximab + Etoposide + Prednisolone + Vincristine + Cyclophosphamide + Doxorubicin
 R-GDP|RGDP	Rituximab + Gemcitabine + Dexamethasone + Cisplatin
 R-GemOx	Rituximab + Gemcitabine + Oxaliplatin
+R-ICE|RICE	Cisplatin + Etoposide + Ifosfamide + Rituximab 
 R-Propranolol	beta-adrenergic_blocker
 RAF709	RAF_dimer_inhibitor
 RAG-01	saRNA_therapy,CDKN1A-targeting
