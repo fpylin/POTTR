@@ -299,6 +299,7 @@ BNC-105|BNC 105|BNC105	tubulin_polymerization_inhibitor_and_vascular_disruption_
 BNC101|BNC-101|ET-101	anti-LGR5_monoclonal_antibody
 BNC105P	tubulin_polymerization_inhibitor_and_vascular_disruption_agents
 BNT113	vaccine_therapy,HPV-E6/HPV-E7-targeting
+BNT116	vaccine_therapy,MAGE-A3/CLDN6/KK-LC-1/PRAME/MAGE-A4/MAGE-C1-targeting
 BNT142|BNT-142	bispecific_T-cell_engager,CLDN6-targeting
 BNT211	CAR-T-cell_therapy,mRNA_vaccine,CLDN6-targeting
 BNT317|BNT-317	cancer_therapy,undisclosed_mechanism
