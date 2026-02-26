@@ -64,6 +64,7 @@ Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma|Cutaneous lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma|T-cell NHL|T-NHL|T-cell Non-Hodgkin's lymphoma||T-cell Non-Hodgkins lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma|Non-hodgkin Lymphoma|NHL
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	Primary mediastinal B-cell lymphoma|Mediastinal B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma|Lymphoid malignancy
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell leukaemia
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell sarcoma
