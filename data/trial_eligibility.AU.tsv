@@ -209,3 +209,4 @@ NCT06120491	NOT catype:Prostate small cell carcinoma
 NCT06136624	NOT catype:Prostate small cell carcinoma
 NCT06343402	catype:Non-small cell lung cancer
 NCT07174336	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; NOT ERBB2:overexpression
+NCT06973863	NOT catype:Sarcoma
