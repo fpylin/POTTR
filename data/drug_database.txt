@@ -636,7 +636,7 @@ FOLFIRI regimen|FOLFIRINOX chemotherapy|FOLFIRI|mFOLFIRI	Fluorouracil + Irinotec
 FOLFIRINOX regimen|FOLFIRINOX|mFOLFIRINOX	Fluorouracil + Oxaliplatin + Irinotecan
 FOLFOX regimen|FOLFOX|FOLFOX6|mFOLFOX|mFOLFOX6|mFOLFOX7|FOLFOX4|FOLFOX-4 regimen	Fluorouracil + Oxaliplatin
 FOLFOXIRI regimen|FOLFOXIRI|mFOLFOXIRI	Fluorouracil + Oxaliplatin + Irinotecan
-FOR46	anti-CD46_antibody-drug_conjugate
+FOR46|FG-3246	anti-CD46_antibody-drug_conjugate
 FPI-1175	IGF1R-radionucleotide_conjugate
 FPI-1547	IGF1R-radionucleotide_conjugate
 FPT155|FPT 155|FPT-155	soluble_CD80_fusion_protein
