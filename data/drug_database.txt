@@ -1657,7 +1657,7 @@ VVD-159642|BAY-3605349	RAS-PI3Kalpha_inhibitor
 VVD-442	RAS-PI3Kalpha_inhibitor
 VX-11E|VTX-11e|VX11E|VRT11E	ERK_inhibitor
 Vabametkib|ABN401|ABN 401|ABN-401	MET_inhibitor,type_1
-Valemetostat Tosylate|DS-3201b	EZH1/2_inhibitor
+Valemetostat|Valemetostat Tosylate|DS-3201b	EZH1/2_inhibitor
 Vandetanib|ZD6474|Zactima|Caprelsa|ZD-6474	EGFR_inhibitor,second_generation; RET_inhibitor; VEGFR2_inhibitor
 Varegacestat|AL102|AL-102|WHG626|BMS-986115	gamma_secretase_inhibitor
 Varlitinib|ASLAN001|ARRY-334543	EGFR/ERBB2_inhibitor
@@ -1753,3 +1753,5 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+AMO959	DNA-dependent_protein_kinase_inhibitor
+Tulmimetostat|DZR123|CPI-0209	EZH1/2_inhibitor
