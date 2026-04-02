@@ -21,7 +21,6 @@ NCT03906331	RET:fusion; *Expanded access program
 NCT03906331	RET:oncogenic_mutation; NOT RET:amplification; *Expanded access program
 NCT03947385	(GNAQ:oncogenic_mutation OR GNA11:oncogenic_mutation OR PRKC:fusion)
 NCT04064060	NOT catype:solid tumours
-NCT04164199	access:by_invitation_only
 NCT04221035	catype:Neuroblastoma
 NCT04516447	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT04606446	(catype:Breast cancer OR catype:Prostate cancer OR catype:Non-small cell lung cancer)
@@ -179,7 +178,6 @@ NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06256588	catype:Head and neck squamous cell carcinoma
 NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer)
-NCT06568614	(MTAP:loss_of_protein_expression OR MTAP:deletion); (catype:Pancreatic adenocarcinoma OR catype:Non-small cell lung cancer)
 NCT04794699	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT07204340	KRAS:oncogenic_mutation
 NCT07094113	KRAS:oncogenic_mutation
