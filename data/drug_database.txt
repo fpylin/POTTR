@@ -988,6 +988,8 @@ Luveltamab tazevibulin|STRO-002	anti-FR-alpha_antibody-drug_conjugate
 Luvixasertib|CFI-402257	Mps1/TTK_inhibitor
 Luvometinib|FCN-159	MEK_inhibitor
 Luxdegalutamide|JSB462|ARV-766	AR_PROTAC_degrader
+M0324	MUC1-conditional_CD40_agonist
+M3554	anti-GD2_antibody-drug_conjugate
 M9241	IL-12-based_tumor-targeting_immunocytokine
 M9466	PARP1-selective_inhibitor
 MAK683	EED_inhibitor
@@ -1071,6 +1073,7 @@ Molibresib|GSK-525762A|GSK525762|I-BET 762	BET_inhibitor
 Momelotinib	JAK2_inhibitor; JAK1/JAK2_inhibitor
 Monalizumab|IPH-2201|IPH2201|NN-8765|NN8765	anti-NKG2A_monoclonal_antibody
 Monepantel	anthelmintics
+Mosperafenib|RG6344|RO7276389	BRAF_inhibitor,paradox_breaker
 Mosunetuzumab|BTCT4465A	bispecific_T-cell_engager,CD20-targeting
 Motacabtagene Lurevgedleucel|CTX120	allogeneic_CAR-T-cell_therapy,BCMA-targeting
 Motixafortide|BL-8040|BL8040	CXCR4_antagonist
@@ -1755,6 +1758,3 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
-M3554	anti-GD2_antibody-drug_conjugate
-M0324	MUC1-conditional_CD40_agonist
-Mosperafenib|RG6344|RO7276389	BRAF_inhibitor,paradox_breaker
