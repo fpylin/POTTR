@@ -1,7 +1,7 @@
 drug	drug_class
 111In-FPI-1967|[111In]-FPI-1967	radioconjugate,FGFR3-targeting
 131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA	radioiodine_conjugate
-131I-TLX-101|4-iodophenylalanine	radioligand,LAT1/LAT2-targeting
+131I-TLX-101|TLX101-Tx|4-iodophenylalanine	radioligand,LAT1/LAT2-targeting
 161Tb-PSMA-I&T|161[Tb]Tb-PSMA-I&T	radioligand,PSMA-targeting
 177Lu-DOTA-rosopatamab|177Lu-DOTA-TLX591-CHO|TLX591	radioligand,PSMA-targeting
 177Lu-DPI-4452|[177Lu]Lu-DPI-4452|Lu-DPI-4452	radionuclide,CAIX-targeting
