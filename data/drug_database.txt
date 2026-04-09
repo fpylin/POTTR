@@ -684,7 +684,7 @@ GDC-0879	BRAF_V600_inhibitor
 GDC-4198|GDC 4198|GDC4198|RGT 419B|RGT-419B	CDK2/4/6_inhibitor
 GDC-7035	KRAS_G12D_inhibitor
 GFH018	TGFBR1_inhibitor
-GFH375	KRAS_G12D_inhibitor
+VS-7375|VS7375|GFH375	KRAS_G12D_inhibitor
 GGTase-I Inhibitor|PTX-100|GGTI-2418	geranylgeranyl_transferase_inhibitor
 GNE-617	NAMPT_inhibitor
 GNOS-PV02	personalized_neoantigen_vaccine
