@@ -105,7 +105,7 @@ AS602868	IKK2_inhibitor
 ASKG315	IL-15_prodrug
 ASN003	PI3K_alpha_inhibitor
 ASP2802|ASP 2802	autologous_CAR-T-cell_therapy,CD20-targeting
-ASP3082	KRAS_G12D_degrader
+Setidegrasib|ASP3082	KRAS_G12D_degrader
 ASP5878	pan-FGFR_inhibitor,reversible
 AST-301	vaccine_therapy,pNGVL3-based,ERBB2-targeting
 ASTX295|ASTX 295|ASTX-295	MDM2_inhibitor
@@ -1758,3 +1758,12 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
+NTH-2403	radioligand,LRRC15-targeting
+161Tb-RAD402	radioconjugate,KLK3-targeting
+JSKN016HC	bispecific_ERBB3/TROP2_antibody
+BNT3214|PMB8102	unknown_drug_class
+ADCE-B05	unknown_drug_class
+BH-30643	EGFR_macrocyclic_kinase_inhibitor
+Benmelstobart|APL502|CBT-502|TQB2450	anti-PD-L1_monoclonal_antibody
+MK-4716|MK4716	pan-KRAS_inhibitor
+ABL103	bispecific_B7H4/4-1BB_antibody
