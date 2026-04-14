@@ -169,7 +169,7 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Thyroid cancer  Thyroid n
 Cancer	Solid tumour	Carcinoma	Poorly differentiated carcinoma
 Cancer	Solid tumour	Carcinoma	Signet ring cell carcinoma
 Cancer	Solid tumour	Carcinoma	Squamous cell carcinoma
-Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Adrenal cortical carcinoma
+Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Adrenocortical carcinoma|Adrenal cortical carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Phaeochromocytoma
 Cancer	Solid tumour	Endocrine gland cancer	Parathyroid gland carcinoma|Parathyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Papillary craniopharyngioma|Craniopharyngioma

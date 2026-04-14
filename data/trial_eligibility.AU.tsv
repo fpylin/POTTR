@@ -217,3 +217,9 @@ NCT07172919	KRAS:G12C
 NCT07020221	KRAS:G12D
 NCT07247110	KRAS:oncogenic_mutation
 NCT07262619	(mismatch_repair:deficient OR microsatellite_instability:high)
+NCT06627647	NOT prior_therapy:systemic_therapy; catype:Non-small cell lung cancer; NOT EGFR:exon_19_deletion; NOT EGFR:L858R; NOT EGFR:L861Q; NOT EGFR:codon_719_mutation; NOT EGFR:S768I; NOT ALK:fusion; NOT ROS1:fusion
+NCT06417814	(EGFR:exon_19_deletion OR EGFR:L858R OR EGFR:L861Q OR EGFR:codon_719_mutation OR EGFR:S768I); catype:Non-small cell lung cancer; *(prior_therapy:Osimertinib OR NOT prior_therapy:systemic_therapy)
+NCT06561386	NOT prior_therapy:systemic_therapy
+NCT06875310	KRAS:G12C; catype:Non-small cell lung cancer; NOT prior_therapy:systemic_therapy
+NCT06452277	NOT prior_therapy:systemic_therapy; ERBB2:tyrosine_kinase_domain_mutation
+NCT07190248	NOT prior_therapy:systemic_therapy
