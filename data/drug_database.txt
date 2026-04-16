@@ -898,6 +898,7 @@ KGX101	IL-12_Fc-fusion_protein
 KITE-197	autologous_CAR-T-cell_therapy,CD19-targeting
 KITE-363	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
 KITE-753	autologous_CAR-T-cell_therapy,CD19/CD20-targeting
+KIVU-107	anti-PTK7_antibody-drug_conjugate
 KL590586	RET_inhibitor
 KLN-1010|KLN1010	autologous_CAR-T-cell_therapy,BCMA-targeting
 KSQ-4279|RO7623066	USP1_inhibitor

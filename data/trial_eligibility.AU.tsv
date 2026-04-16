@@ -87,7 +87,6 @@ NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carbop
 NCT06188702	*MTAP:deletion; NOT catype:Central nervous system cancer; *(info:panel:AVENIO OR info:panel:FM1 CDx)
 NCT06031441	*MOA_UNKNOWN
 NCT05805501	catype:Clear cell renal cell carcinoma
-NCT06151574	ERBB2:kinase_domain_mutation; catype:Non-small cell lung cancer
 NCT06326411	catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation)
 NCT06326411	catype:Solid tumour; NOT catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR KRAS:oncogenic_mutation)
 NCT06326411	catype:Glioma; BRAF:oncogenic_mutation
@@ -176,7 +175,6 @@ NCT06333951	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06256588	catype:Head and neck squamous cell carcinoma
 NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer)
-NCT04794699	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT07204340	KRAS:oncogenic_mutation
 NCT07094113	KRAS:oncogenic_mutation
 NCT06820463	NOT prior_therapy:Irinotecan
