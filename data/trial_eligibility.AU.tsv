@@ -220,3 +220,4 @@ NCT06561386	NOT prior_therapy:systemic_therapy
 NCT06875310	KRAS:G12C; catype:Non-small cell lung cancer; NOT prior_therapy:systemic_therapy
 NCT06452277	NOT prior_therapy:systemic_therapy; ERBB2:tyrosine_kinase_domain_mutation
 NCT07190248	NOT prior_therapy:systemic_therapy
+NCT05549297	NOT catype:Uveal melanoma
