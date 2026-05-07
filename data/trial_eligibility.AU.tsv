@@ -222,3 +222,11 @@ NCT05549297	NOT catype:Uveal melanoma
 NCT06907043	(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncogenic_mutation OR RAD51C:oncogenic_mutation OR RAD51D:oncogenic_mutation)
 NCT07522073	catype:Pancreatic adenocarcinoma; KRAS:G12D; *NOT prior_therapy:systemic_therapy
 NCT05538130	BRAF:V600E
+NCT06765109	ALK:fusion
+NCT06881784	(KRAS:oncogenic_mutation OR NRAS:oncogenic_mutation OR HRAS:oncogenic_mutation); catype:Non-small cell lung cancer
+NCT07190248	KRAS:G12C
+NCT07431281	*CLDN18:protein_expression; NOT ERBB2:amplification; NOT ERBB2:overexpression
+NCT05967689	EGFR:oncogenic_mutation
+NCT06593522	(MTAP:loss_of_protein_expression OR MTAP:deletion)
+NCT06343402	KRAS:G12C
+NCT07291037	*TROP2:protein_expression
