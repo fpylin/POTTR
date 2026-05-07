@@ -716,6 +716,7 @@ Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Dermatofibrosarcoma pro
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Merkel cell carcinoma
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Primary cutaneous adenoid cystic carcinoma
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Sebaceous cell carcinoma
+Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Sweat gland carcinoma
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer|Nonmelanoma skin cancer|Non-melanomatous skin cancer
 Cancer	Solid tumour	Solid tumour with ongenic fusion	ALK fusion-solid tumour	ALK-positive inflammatory myofibroblastic tumour
 Cancer	Solid tumour	Solid tumour with ongenic fusion	ALK fusion-solid tumour	ALK-positive non-small-cell lung cancer

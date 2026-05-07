@@ -134,6 +134,7 @@ AZD2461	PARP_inhibitor
 AZD2962	IRAK4_inhibitor
 AZD3463	ALK_inhibitor; IGF1R_inhibitor; ROS1_inhibitor
 AZD3470	PRMT5_inhibitor
+AZD3470	PRMT5_inhibitor,MTA-co-operative
 AZD4512|AZD 4512|AZD-4512	anti-CD22_antibody-drug_conjugate
 AZD5438	CDK1/2/9_inhibitor
 AZD5492	bispecific_T-cell_engager,CD20-targeting
@@ -472,6 +473,7 @@ DB-1310|DB1310	anti-ERBB3_antibody-drug_conjugate
 DB-1311|BNT324	anti-B7H3_antibody-drug_conjugate
 DB-1311|DB1311|BNT324	anti-B7H3_antibody-drug_conjugate
 DB-1317	unknown_drug_class
+DB-1324|DB1324	anti-CDH17_antibody-drug_conjugate
 DB-1419	bispecific_B7H3/PD-L1_antibody
 DCSZ11	anti-CD93_monoclonal_antibody
 DF6002|BMS-986415	IL-12_Fc-fusion_protein
@@ -1148,6 +1150,7 @@ ONM-501	STING_agonist
 OP-3136|OP3136	KAT6A/B_inhibitor
 OP-3136|OP3136	KAT6_inhibitor
 ORIC-944	PRC2_complex_inhibitor
+OTP-01	bispecific_PD-1/VEGFR2_antibody
 Oberotatug Ravtansine|OBT076	anti-CD205_antibody-drug_conjugate
 Obinutuzumab|Afutuzumab|GA-101|GA101|Gazyva|R7159|RO 5072759|RO-5072759|RO5072759	anti-CD20_monoclonal_antibody
 Obrindatamab|MGD009|B7-H3 x CD3 DART Protein|MGD 009|MGD-009	humanized_B7H3xCD3_dual-affinity_re-targeting_protein
@@ -1208,6 +1211,7 @@ PF-03732010|PF-06293622|PF-06804103	anti-ERBB2_antibody-drug_conjugate
 PF-06940434|PF06940434	alpha_V_beta_8_antagonist
 PF-07062119	bispecific_T-cell_engager,GUCY2C-targeting
 PF-07265807	AXL/MER_inhibitor
+PF-08634404|SSGJ-707|SSGJ 707	bispecific_PD-1/VEGF_antibody
 PF-477736	CHEK1_inhibitor
 PF-9363|CTx-648	KAT6A/B_inhibitor
 PF-9363|CTx-648	KAT6_inhibitor
@@ -1453,7 +1457,6 @@ SQ3370|Doxorubicin Prodrug SQP33/Prodrug-activating Biomaterial SQL7|SQ 3370|SQ-
 SR-4835	CDK12/CDK13_inhibitor
 SRA515|SRA-515|SRA 515|AZD5153|AZD 5153	BRD4_inhibitor
 SSGJ-709	bispecific_PD-1/LAG3_antibody
-PF-08634404|SSGJ-707|SSGJ 707	bispecific_PD-1/VEGF_antibody
 ST-617	unknown_drug_class
 SUN-101	glycopyrrolate
 SUPLEXA	autologous_adoptive_cell-based_immunotherapy
@@ -1657,6 +1660,7 @@ VCT-001	oncolytic_virus
 VDC-IE|VDC-IE regimen|VAC-IE|VAC-IE regimen	Cyclophosphamide + Doxorubicin + Etoposide + Ifosfamide + Vincristine
 VE-821	ATR_inhibitor
 VG-161|VG161	oncolytic_virus
+VIB305	bispecific_EGFR_T-cell_engager
 VIDE regimen|VIDE	Vincristine + Ifosfamide + Doxorubicin + Etoposide
 VIP236	small-molecule-drug-conjugate,alpha-V-beta-3-targeting
 VIR-5525|VIR5525	bispecific_T-cell_engager,EGFR-targeting
@@ -1769,6 +1773,3 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
-OTP-01	bispecific_PD-1/VEGFR2_antibody
-DB-1324|DB1324	anti-CDH17_antibody-drug_conjugate
-VIB305	bispecific_EGFR_T-cell_engager
