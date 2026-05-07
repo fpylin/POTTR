@@ -792,6 +792,7 @@ Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Penile cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Penile cancer	Penile squamous cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma
+Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenosquamous carcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-resistant prostate cancer	Taxane-naive castration resistant prostate cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-resistant prostate cancer|Castration-resistant prostate cancer|mCRPC|CRPC|Prostate cancer, castration-resistant
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-sensitive prostate cancer|Hormone Naive Prostate Cancer|Hormone-Sensitive Prostate Cancer
