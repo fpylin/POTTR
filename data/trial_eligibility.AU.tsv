@@ -242,3 +242,6 @@ NCT04938817	catype:Small-cell lung cancer
 NCT06764875	(ERBB2:amplification OR ERBB2:overexpression); (catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma)
 NCT05671510	(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
 NCT07277270	(catype:Colorectal adenocarcinoma OR catype:Prostate cancer)
+NCT06712316	NOT prior_therapy:systemic_therapy
+NCT07361510	NOT prior_therapy:systemic_therapy
+NCT06868277	NOT prior_therapy:systemic_therapy
