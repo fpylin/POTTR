@@ -791,6 +791,8 @@ sub load_module_preferential_trial_prioritisation {
 # 		my @inf_drug_classes = map { my $a = $_; $a =~ s/(?:CERTAIN|INFERRED):treatment_drug_class://; $a } grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
 		my @inf_drugs        = map { /recommendation_tier:(.+):\S+/; $1 }            grep { /recommendation_tier:.+:\S+/ }       @tags ;
 		my @inf_drug_classes = map { /recommendation_tier_drug_class:(.+):\S+/; $1 } grep { /recommendation_tier_drug_class:.+:\S+/ } @tags ;
+		my @focused_drugs        = map { /focused_drug_list:(.+)/; (split /\s*;\s*/, Facts::unescape($1) ) }    grep { /focused_drug_list:/ }       @tags ;
+		my @focused_drug_classes = map { /focused_drug_classes:(.+)/; (split /\s*;\s*/, Facts::unescape($1) ) } grep { /focused_drug_classes:/ } @tags ;
 		
 		my @trial_match_criteria = map { s/trial_match_criteria://; $_ } grep { /^trial_match_criteria:/} @tags;
 		my ($trial_phase)    = map { s/^phase://; $_ } grep { /^phase:/} @tags;
@@ -802,12 +804,7 @@ sub load_module_preferential_trial_prioritisation {
 # 		print "!!! $trial_id\t$_\n" for @inf_drug_classes;
 # 		print "!!? $trial_id\t$_\n" for grep { /(?:CERTAIN|INFERRED):treatment_drug_class:/ } @tags ;
 # 		push @new_tags, ( grep { /(?:CERTAIN|INFERRED):treatment_drug/ } @tags );
-		my @contingency_conditions = grep { /^\s*\*/ } @tags ;
-		my $contingency_conditions_score = 
-			( ( grep { /recruitment_status/ } @contingency_conditions ) ? 2 : 0 ) +
-			( ( grep { /sensitive_to/ } @contingency_conditions ) ? 1 : 0 ) +
-			0;
-		
+
 		my $tier_order_ref = $facts->getvar('tier_order');
 
 		my %a;
@@ -815,20 +812,31 @@ sub load_module_preferential_trial_prioritisation {
 		
 		
 		my @transitive_efficacy_tiers = ('U');       # = maximum tier of the referring recommendation tier.
+		my %transitive_efficacy_tiers_drugs;
 		
 		FACT1: for my $f ( grep { /^recommendation_tier:/} @facts_list) {
 			for my $d (@inf_drugs) {
-				$f =~ /^recommendation_tier:\Q$d\E:(\S+)/ and do { push @transitive_efficacy_tiers, $1; }  ; # next FACT1 
+				$f =~ /^recommendation_tier:\Q$d\E:(\S+)/ and do { 
+					push @transitive_efficacy_tiers, $1; 
+					$transitive_efficacy_tiers_drugs{$d} = 1; 
+				}  ; # next FACT1 
 			}
 		}
 		
 		my @transitive_class_efficacy_tiers = ('U'); # = maximum tier of the referring recommendation tier.
+		my %transitive_efficacy_tiers_class;
+		
 		FACT2: for my $f ( grep { /^recommendation_tier_drug_class:/} @facts_list) {
 			for my $dc (@inf_drug_classes) {
-				$f =~ /^recommendation_tier_drug_class:\Q$dc\E:(\S+)/ and do { push @transitive_class_efficacy_tiers, $1; }  ; # next FACT2 
+				$f =~ /^recommendation_tier_drug_class:\Q$dc\E:(\S+)/ and do { 
+					push @transitive_class_efficacy_tiers, $1; 
+					$transitive_efficacy_tiers_class{$dc} = 1; 
+				}  ; # next FACT2 
 			}
 		}
 
+
+		
 		my @biomarker_tiers = ('U');
 		FACT3: for my $t ( grep { /^AMP.LOE:/} @tags) {
 			$t =~ /^AMP.LOE:(\S+)/ and do { push @biomarker_tiers, $1; next FACT3 }  ;
@@ -842,6 +850,11 @@ sub load_module_preferential_trial_prioritisation {
 		my $transitive_class_efficacy_tier = $transitive_class_efficacy_tiers[0];
 		my $biomarker_tier = $biomarker_tiers[0];
 		
+		my $matched_focused_score = 
+			scalar( grep { exists $transitive_efficacy_tiers_drugs{$_} } @focused_drugs ) + 
+			scalar( grep { exists $transitive_efficacy_tiers_class{$_} } @focused_drug_classes )
+		;
+		
 # 		my $trial_match_criteria_score = (
 # 			( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
 # # 			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
@@ -849,13 +862,22 @@ sub load_module_preferential_trial_prioritisation {
 # 			);
 		my $trial_match_criteria_score = (
 			( ( ( grep { $_ eq 'drug_class_sensitivity' } @trial_match_criteria ) || ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ) ? 2 : 0 ) +
+			$matched_focused_score +
 # 			( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) +
 			( ( grep { $_ eq 'cancer_type' } @trial_match_criteria ) ? 2 : 0 ) 
 			);
 		my $trial_drug_sensitivity_score = ( ( grep { $_ eq 'drug_sensitivity' } @trial_match_criteria ) ? 2 : 0 ) ;
 		
 		my $num_referring_drug_classes_score = scalar(@inf_drug_classes) ;
-# 		
+
+		my @contingency_conditions = grep { /^\s*\*/ } @tags ;
+		my $contingency_conditions_score = 
+			( ( grep { /recruitment_status/ } @contingency_conditions ) ? 4 : 0 ) +
+			( ( grep { /prior_therapy/ } @contingency_conditions ) ? 2 : 0 ) +
+			( ( grep { /sensitive_to/ } @contingency_conditions ) ? 1 : 0 ) +
+			0;
+		
+		
 		push @new_tags, # Annotate the trial
 			"contingency_conditions_score:".   ( $a{'contingency_conditions_score'} = $contingency_conditions_score ) ,
 			"transitive_class_efficacy_tier:". ( $a{'transitive_class_efficacy'}  = $transitive_class_efficacy_tier ) ,
@@ -872,13 +894,13 @@ sub load_module_preferential_trial_prioritisation {
 		;
 		
 		# Score the trial
-		my $dim = 10;
+		my $dim = 12;
 		my $score = 0;
-		$score += ( pow(20,$dim--) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) ;
 		$score += ( pow(20,$dim--) * ( $contingency_conditions_score ) ) ;
+		$score += ( pow(20,$dim--) * ( score_tier( $a{'transitive_class_efficacy'}, $tier_order_ref) ) ) ;
+		$score += ( pow(20,$dim--) * ( 8 - $trial_match_criteria_score ) ) ;
 		$score += ( pow(20,$dim--) * ( score_tier( $a{'transitive_efficacy'}, $tier_order_ref) ) ) ;
 		$score += ( pow(20,$dim--) * ( 8 - $trial_drug_sensitivity_score ) ) ;
-		$score += ( pow(20,$dim--) * ( 8 - $trial_match_criteria_score ) ) ;
 		$score += ( pow(20,$dim--) * ( (19 - $num_referring_drug_classes_score) ) ) ;
 		$score += ( pow(20,$dim--) * ( score_tier( $a{'drug_maturity'}, $tier_order_ref ) ) ) ;
 		$score += ( pow(20,$dim--) * ( score_tier( $a{'trial_phase_tier'}, $tier_order_ref ) ) ) ;

@@ -213,7 +213,7 @@ NCT07247110	KRAS:oncogenic_mutation
 NCT07262619	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06627647	NOT prior_therapy:systemic_therapy; catype:Non-small cell lung cancer; NOT EGFR:exon_19_deletion; NOT EGFR:L858R; NOT EGFR:L861Q; NOT EGFR:codon_719_mutation; NOT EGFR:S768I; NOT ALK:fusion; NOT ROS1:fusion
 NCT06417814	(EGFR:exon_19_deletion OR EGFR:L858R OR EGFR:L861Q OR EGFR:codon_719_mutation OR EGFR:S768I); catype:Non-small cell lung cancer; *(prior_therapy:Osimertinib OR NOT prior_therapy:systemic_therapy)
-NCT06561386	NOT prior_therapy:systemic_therapy
+NCT06561386	NOT prior_therapy:systemic_therapy; NOT catype:Lung squamous cell carcinoma
 NCT06875310	KRAS:G12C; catype:Non-small cell lung cancer; NOT prior_therapy:systemic_therapy
 NCT06452277	NOT prior_therapy:systemic_therapy; ERBB2:tyrosine_kinase_domain_mutation
 NCT07190248	NOT prior_therapy:systemic_therapy
@@ -225,13 +225,11 @@ NCT06765109	ALK:fusion
 NCT06881784	(KRAS:oncogenic_mutation OR NRAS:oncogenic_mutation OR HRAS:oncogenic_mutation); catype:Non-small cell lung cancer
 NCT07190248	KRAS:G12C
 NCT07431281	*CLDN18:protein_expression; NOT ERBB2:amplification; NOT ERBB2:overexpression
-NCT05967689	EGFR:oncogenic_mutation
 NCT06593522	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06343402	KRAS:G12C
-NCT07291037	*TROP2:protein_expression
-NCT06350097	(EGFR:exon_19_deletion OR EGFR:L858R)
+NCT07291037	*TACSTD2:protein_expression
+NCT06350097	(EGFR:exon_19_deletion OR EGFR:L858R); *NOT prior_therapy:systemic_therapy
 NCT07185997	(EGFR:p-loop_mutation OR EGFR:alpha-c-helix_mutation)
-NCT04686305	*EGFR:overexpression
 NCT06706076	(EGFR:oncogenic_mutation OR ERBB2:oncogenic_mutation)
 NCT07226999	catype:Small-cell lung cancer
 NCT07472517	catype:Small-cell lung cancer
@@ -245,3 +243,34 @@ NCT07277270	(catype:Colorectal adenocarcinoma OR catype:Prostate cancer)
 NCT06712316	NOT prior_therapy:systemic_therapy
 NCT07361510	NOT prior_therapy:systemic_therapy
 NCT06868277	NOT prior_therapy:systemic_therapy
+NCT06097728	catype:Mesothelioma
+NCT06712355	catype:Small-cell lung cancer
+NCT06801834	catype:Small-cell lung cancer
+NCT06157892	(catype:Breast cancer OR catype:Gastroesophageal cancer OR catype:Gastric cancer)
+NCT07221474	catype:Lung squamous cell carcinoma
+NCT06257264	catype:Small-cell lung cancer
+NCT06598306	catype:Small-cell lung cancer
+NCT06613009	catype:Small-cell lung cancer
+NCT06780137	catype:Small-cell lung cancer
+NCT07174583	catype:Small-cell lung cancer
+NCT06784193	(catype:Breast cancer OR catype:Non-small cell lung cancer OR catype:Prostate cancer)
+NCT06427941	(catype:Lung squamous cell carcinoma OR catype:Yolk Sac Tumors OR catype:Hepatocellular carcinoma)
+NCT05123482	catype:Lung squamous cell carcinoma
+NCT06244771	KRAS:G12C
+NCT06706076	(EGFR:oncogenic_mutation OR ERBB2:oncogenic_mutation)
+NCT06712316	*prior_therapy:systemic_therapy; catype:Non-small cell lung cancer
+NCT06921837	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma)
+NCT07005102	NOT catype:Lung squamous cell carcinoma
+NCT07221149	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma)
+NCT05967689	EGFR:oncogenic_mutation; NOT EGFR:L858R; NOT EGFR:exon_19_deletion
+NCT06855771	MTAP:deletion
+NCT06357533	NOT EGFR:oncogenic_mutation; NOT BRAF:V600E; NOT ALK:fusion; NOT ROS1:fusion; NOT ERBB2:oncogenic_mutation; catype:Non-small cell lung cancer; NOT catype:Lung squamous cell carcinoma
+NCT07291037	NOT EGFR:oncogenic_mutation; NOT BRAF:V600E; NOT ALK:fusion; NOT ROS1:fusion; NOT ERBB2:oncogenic_mutation; catype:Non-small cell lung cancer; NOT catype:Lung squamous cell carcinoma
+NCT06816992	catype:Non-small cell lung cancer; EGFR:exon_20_insertion
+NCT07486817	ERBB2:oncogenic_mutation; catype:Non-small cell lung cancer
+NCT06765109	*NOT prior_therapy:systemic_therapy
+NCT04928846	*MET:overexpression
+NCT06170788	*NOT prior_therapy:systemic_therapy
+NCT06561386	*NOT prior_therapy:systemic_therapy
+NCT06692738	*NOT prior_therapy:systemic_therapy
+NCT07155187	EGFR:oncogenic_mutation

@@ -565,6 +565,8 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		my $matched_drug_classes  = $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
 		my $matched_combos        = $trial_db_by_trial_id{$trial_id}{'combo_list'}  || $trial_db_by_trial_id{$trial_id}{'drug_list'}  ;
 		my $matched_combo_classes = $trial_db_by_trial_id{$trial_id}{'combo_classes'} || $trial_db_by_trial_id{$trial_id}{'drug_classes'} ;
+		my $focused_drug_names    = $trial_db_by_trial_id{$trial_id}{'focused_drug_list'}  ;
+		my $focused_drug_classes  = $trial_db_by_trial_id{$trial_id}{'focused_drug_classes'} ;
 		
 		my @matched_drug_names = map { Therapy::get_normalised_treatment_name($_) } ( grep { length } split /\s*;\s*/, $matched_drug_names ) ;
 		my @matched_drug_classes = split /\s*;\s*/, $matched_drug_classes ;
@@ -623,11 +625,13 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 		push @eligibility_criteria_strs, '' if ! scalar @eligibility_criteria_strs;  # add an undefined value if empty eligibility string
 		
 		my @trial_info ;
-		push @trial_info, "acronym:".            $trial_acronym ;
-		push @trial_info, "drug_list:".          $matched_drug_names ;
-		push @trial_info, "drug_classes:".       $matched_drug_classes ;
-		push @trial_info, "combo_list:".         $matched_combos ;
-		push @trial_info, "combo_classes:".      $matched_combo_classes ;
+		push @trial_info, "acronym:".              $trial_acronym ;
+		push @trial_info, "drug_list:".            $matched_drug_names ;
+		push @trial_info, "drug_classes:".         $matched_drug_classes ;
+		push @trial_info, "combo_list:".           $matched_combos ;
+		push @trial_info, "combo_classes:".        $matched_combo_classes ;
+		push @trial_info, "focused_drug_list:".    ( $focused_drug_names // ''  ) ;
+		push @trial_info, "focused_drug_classes:". ( $focused_drug_classes // ''  );
 		push @trial_info, "phase:".              ( $trial_db_by_trial_id{$trial_id}{'phase'}               // '' )  ;
 		push @trial_info, "recruitmentstatus:".  ( $trial_db_by_trial_id{$trial_id}{'recruitmentstatus'}   // '' )  ;
 		push @trial_info, "approvaldate:".       ( $trial_db_by_trial_id{$trial_id}{'approvaldate'}        // '' )  ;
