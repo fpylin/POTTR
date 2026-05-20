@@ -402,6 +402,7 @@ CTX112|CTX 112|CTX-112	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX130	allogeneic_CAR-T-cell_therapy,CD70-targeting
 CTX131	allogeneic_CAR-T-cell_therapy,CD70-targeting
 CUE-101	HPV16_E7-pHLA-IL2-Fc_fusion_protein
+CUSP06	anti-CDH6_antibody-drug_conjugate
 Cabazitaxel|Jevtana|RPR-116258A|Taxoid XRP6258|XRP-6258	taxane
 Cabotamig|ARB-202|ARB202	bispecific_T-cell_engager,CDH17-targeting
 Cabozantinib|Cabometyx	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor; AXL_inhibitor; MET_inhibitor,type_2; RET_inhibitor; VEGFR2_inhibitor; ROS1_inhibitor; KIT_inhibitor
@@ -816,6 +817,7 @@ INB03	TNF_inhibitor
 INCA033989	anti-CALR_monoclonal_antibody
 INCA035784	bispecific_T-cell_engager,CALR-targeting
 INCA036873	bispecific_T-cell_engager,CD70-targeting
+INCA33890	bispecific_TGFBR2/PD-1_antibody
 INCB099280	PD-L1_inhibitor,oral
 INCB099318	PD-L1_inhibitor,oral
 INCB106385	adenosine_A2A/A2B_receptor_antagonist
@@ -1762,6 +1764,7 @@ Zipalertinib|TAS6417|CLN 081|CLN-081|CLN081|TAS 6417|TAS-6417	EGFR_inhibitor,exo
 Zolbetuximab|Claudiximab|IMAB 362|IMAB-362|IMAB362	anti-CLDN18.2_monoclonal_antibody
 Zoledronic Acid|Zometa|CGP 42446|CGP42446A|NDC-Zoledronate|Reclast|ZOL 446	bisphosphonate
 Zoligratinib|Debio1347|CH5183284|Debiopharm 1347|FF284|debio 1347	FGFR1/2/3_inhibitor,reversible
+Zolucatetide|FOG-001	CTNNB1/TCF4_inhibitor
 Zongertinib|BI 1810631|BI-1810631	ERBB2_inhibitor,second_generation
 Zorifertinib|AZD3759	EGFR_inhibitor,third_generation
 Zotatifin	eIF4A_inhibitor
@@ -1774,6 +1777,3 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
-CUSP06	anti-CDH6_antibody-drug_conjugate
-INCA33890	bispecific_TGFBR2/PD-1_antibody
-Zolucatetide|FOG-001	CTNNB1/TCF4_inhibitor
