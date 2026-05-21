@@ -144,6 +144,7 @@ AZD7762	CHEK1_inhibitor
 AZD7789	bispecific_PD-1/TIM3_antibody
 AZD8055	mTORC1/mTORC2_inhibitor
 AZD8186|AZD-8186	PI3K_beta_inhibitor
+AZD8359	bispecific_T-cell_engager,STEAP2-targeting
 AZD8421|AZD-8421	CDK2_inhibitor
 AZD8701	FOXP3_antisense_oligonucleotide
 AZD9750	AR_PROTAC_degrader
@@ -503,6 +504,7 @@ Dactinomycin|Actinomycin IV|Actinomycin X 1|Cosmegen|Meractinomycin|ACTINOMYCIN 
 Dactolisib|BEZ235	PI3K/mTOR_inhibitor
 Dalpiciclib	CDK4/6_inhibitor
 Daratumumab|Darzalex|HuMax-CD38|JNJ-54767414	anti-CD38_monoclonal_antibody
+Daraxonrasib|RMC-6236	pan-KRAS_inhibitor
 Darolutamide|BAY1841788	antiandrogen,nonsteroidal,second_generation
 Darovasertib|IDE196|IDE 196|IDE-196|LXS196	PKC_inhibitor
 Dasatinib|BMS-354825|Sprycel	BCR-ABL1_inhibitor,second_generation; KIT_inhibitor; PDGFRA_inhibitor; SRC_inhibitor; YES1_inhibitor
@@ -1099,6 +1101,7 @@ NL-201	IL-2/IL-15_receptor_agonist
 NM21-1480|ND021	trispecific_PD-L1/4-1BB/HSA_antibody
 NOV1401	PARP_inhibitor
 NRR2Mab	anti-NOTCH2_monoclonal_antibody
+NRT6008	unknown_drug_class
 NST-628	pan-RAF/MEK_glue
 NT219	IRS1/2/STAT3_inhibitor
 NTH-2403	radioligand,LRRC15-targeting
@@ -1431,6 +1434,7 @@ SAR443579	NKp46-based_NK-cell_engager
 SAR444881	anti-ILT2_monoclonal_antibody
 SAR445514	BCMA-targeting_antibody-based_NK_cell_engager
 SAR446523	anti-GPRC5D_monoclonal_antibody
+SBE303|E303	anti-NECTIN4_antibody-drug_conjugate
 SBO-154|SBO154	anti-MUC1_antibody-drug_conjugate
 SBT6050	anti-ERBB2_antibody-drug_conjugate
 SCH 900242|MK-8242	HDM2_inhibitor

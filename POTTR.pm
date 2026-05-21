@@ -874,7 +874,7 @@ sub load_module_preferential_trial_prioritisation {
 		my $contingency_conditions_score = 
 			( ( grep { /recruitment_status/ } @contingency_conditions ) ? 4 : 0 ) +
 			( ( grep { /prior_therapy/ } @contingency_conditions ) ? 2 : 0 ) +
-			( ( grep { /sensitive_to/ } @contingency_conditions ) ? 1 : 0 ) +
+			# ( ( grep { /sensitive_to/ } @contingency_conditions ) ? 1 : 0 ) +
 			0;
 		
 		
