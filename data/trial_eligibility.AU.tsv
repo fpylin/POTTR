@@ -112,7 +112,7 @@ NCT05581004	catype:Non-small cell lung cancer
 NCT05800665	*prior_therapy:AR-targeted_agent,next_generation; catype:Prostate cancer
 NCT06589596	(MTAP:deletion OR MTAP:loss_of_protein_expression); (catype:Non-small cell lung cancer OR catype:Pancreatic adenocarcinoma)
 NCT06360354	(MTAP:deletion OR MTAP:loss_of_protein_expression)
-NCT06585488	(KRAS:oncogenic_mutation OR KRAS:amplification); NOT KRAS:G12R
+NCT06585488	(KRAS:oncogenic_mutation OR KRAS:amplification); NOT KRAS:G12R; NOT prior_therapy:KRAS_inhibitor
 NCT05867251	catype:Breast cancer
 NCT05867251	CCNE1:amplification; (catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma)
 NCT06581432	ERBB2:alteration; *(ERBB2:amplification OR ERBB2:overexpression); (catype:Cervical cancer OR catype:Non-small cell lung cancer); NOT catype:Lung squamous cell carcinoma
@@ -288,5 +288,9 @@ NCT06219941	(catype:Biliary tract cancer OR catype:Gastric cancer)
 NCT05093231	catype:Pancreatic cancer
 ACTRN12621001444875	catype:Hepatocellular carcinoma
 NCT07369505	(catype:Breast cancer OR catype:Clear cell renal cell carcinoma OR catype:Neuroendocrine tumour OR catype:Hepatocellular carcinoma)
-NCT07353957	NOT prior_therapy:systemic_therapy
+NCT07353957	*NOT prior_therapy:systemic_therapy
 NCT06478693	catype:Colorectal cancer
+NCT06023862	(catype:Endometrial clear cell carcinoma OR catype:Ovarian clear cell carcinoma OR catype:Vulval clear cell adenocarcinoma OR catype:Cervical clear cell carcinoma)
+NCT06952504	*NOT prior_therapy:systemic_therapy; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
+NCT05215340	*NOT prior_therapy:systemic_therapy
+NCT06914128	*NOT catype:Pancreatic adenocarcinoma

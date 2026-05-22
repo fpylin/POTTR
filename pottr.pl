@@ -48,7 +48,7 @@ our $POTTR_title = qq|Precision Oncology Treatment and Trial Recommender (Versio
 our $POTTR_subtitle = qq|
 A clinical decision support system for guiding targeted therapies in cancer
 
-POTTR on github: http://github.org/fpylin/POTTR
+POTTR on github: https://github.org/fpylin/POTTR
 |;
 
 our $POTTR_disclaimer = qq|
@@ -60,8 +60,8 @@ Results produced by POTTR is  STRICTLY FOR RESEARCH USE ONLY  and  CANNNOT SUBSI
 professional oncology advice. Using POTTR is WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND. 
 Inappropriate use of this software may lead to harm.
 
-This is a beta software.  For bug fixes, please contact: Dr. Frank Lin, MBChB, PhD, FRACP
-(f dot lin at garvan dot org dot au).
+This is a beta software.  For bug fixes, please contact: 
+Dr. Frank Lin, MBChB, PhD, FRACP, FAIDH (f dot lin at garvan dot org dot au).
 |;
 
 use strict;

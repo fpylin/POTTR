@@ -173,6 +173,7 @@ Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Adrenocortical carcino
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Phaeochromocytoma
 Cancer	Solid tumour	Endocrine gland cancer	Parathyroid gland carcinoma|Parathyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Papillary craniopharyngioma|Craniopharyngioma
+Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Adamantinomatous craniopharyngioma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pituitary adenoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pituitary carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer|Pituitary gland tumour|Pituitary tumour
@@ -389,6 +390,7 @@ Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	M
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma|HNSCC|SCCHN|Squamous cell carcinoma of the head and neck|Head and neck cancer squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Intestinal-type adenocarcinoma of the nasal cavity
 Cancer	Solid tumour	Head and neck cancer	Adenoid cystic carcinoma of the sinonasal tract
+Cancer	Solid tumour	Head and neck cancer	Ameloblastoma
 Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer
 Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer	Adenoid cystic carcinoma of lacrimal gland|Lacrimal gland adenoid cystic carcinoma
 Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer	Lacrimal gland transitional cell carcinoma
