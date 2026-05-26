@@ -756,9 +756,9 @@ sub gen_rule_knowledge_base {
 				
 	# 			my $has_RT = ( has_S_tier(@tier_list, @tier_list_ha) ? 'S' : '' ).( has_R_tier(@tier_list, @tier_list_ha) ? 'R' : '' );
 				# my $has_RT = ( has_R_tier(@tier_list, @tier_list_ha) ? 'R' : '' );
-				if ( grep { /R1/ } (@tier_list, @tier_list_ha) ) {
-					$max .= '-R';
-				}
+				# if ( grep { /R1/ } (@tier_list, @tier_list_ha) ) {
+					# $max .= '-R';
+				# }
 				
 				my $max_rep = tmin( tmax($max_ha, '2C'), $max_rep_st );
 				

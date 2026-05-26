@@ -294,3 +294,4 @@ NCT06023862	(catype:Endometrial clear cell carcinoma OR catype:Ovarian clear cel
 NCT06952504	*NOT prior_therapy:systemic_therapy; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
 NCT05215340	*NOT prior_therapy:systemic_therapy
 NCT06914128	*NOT catype:Pancreatic adenocarcinoma
+NCT07300943	*(ERBB2:protein_expression OR ERBB2:low_protein_expression OR ERBB2:overexpression OR ERBB2:amplification); NOT prior_therapy:ATR_inhibitor

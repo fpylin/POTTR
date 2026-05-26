@@ -56,12 +56,17 @@ DISCLAIMER
 
 Specialist knowledge in oncology is constantly evolving. Making treatment recommendations  
 for cancer patients requires  careful evaluation  of clinical situations in its entirety.  
-Results produced by POTTR is  STRICTLY FOR RESEARCH USE ONLY  and  CANNNOT SUBSITUTE  for 
-professional oncology advice. Using POTTR is WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND. 
-Inappropriate use of this software may lead to harm.
+Results  produced  by POTTR is CANNNOT SUBSITUTE for  professional oncology advice. Using 
+POTTR is WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND. Inappropriate use of this software 
+may lead to harm.
 
 This is a beta software.  For bug fixes, please contact: 
-Dr. Frank Lin, MBChB, PhD, FRACP, FAIDH (f dot lin at garvan dot org dot au).
+
+  Frank Lin, MBChB PhD FRACP FAIDH (f dot lin at garvan dot org dot au).
+  - Garvan Institute of Medical Research, Sydney, Australia
+  - NHMRC Clinical Trials Centre, University of Sydney, Australia
+  - Faculty of Medicine and Health Sciences, University of Auckland, New Zealand
+ 
 |;
 
 use strict;
