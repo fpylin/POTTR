@@ -304,7 +304,7 @@ sub get_drug_maturity_tier_by_trial_id {
 		push @tiers, get_drug_maturity_tier( $trial_id, $$m{agents} );
 	}
 	@tiers = sort @tiers;
-	return $tiers[0] // '4U';
+	return $tiers[0] // 'U';
 }
 
 
@@ -331,7 +331,7 @@ sub get_drug_class_maturity_tier_by_trial_id {
 		push @tiers, get_drug_class_maturity_tier( $trial_id, $$m{agents} );
 	}
 	@tiers = sort @tiers;
-	return $tiers[0] // '4U';
+	return $tiers[0] // 'U';
 }
 
 ####################################################################################################
@@ -358,7 +358,7 @@ sub get_drug_combination_maturity_tier_by_trial_id {
 		push @tiers, get_drug_combination_maturity_tier( $trial_id, $$m{agents} );
 	}
 	@tiers = sort @tiers;
-	return $tiers[0] // '4U';
+	return $tiers[0] // 'U';
 }
 
 ####################################################################################################
@@ -381,7 +381,7 @@ sub get_drug_class_combination_maturity_tier_by_trial_id {
 		push @tiers, get_drug_class_combination_maturity_tier( $trial_id, $$m{agents} );
 	}
 	@tiers = sort @tiers;
-	return $tiers[0] // '4U';
+	return $tiers[0] // 'U';
 }
 
 ######################################################################################################

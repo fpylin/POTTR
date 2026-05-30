@@ -293,3 +293,4 @@ NCT05215340	*NOT prior_therapy:systemic_therapy
 NCT07300943	*(ERBB2:protein_expression OR ERBB2:low_protein_expression OR ERBB2:overexpression OR ERBB2:amplification); NOT prior_therapy:ATR_inhibitor
 NCT07214779	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07023627	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
+NCT07546812	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma) 
