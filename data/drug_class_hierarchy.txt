@@ -378,9 +378,10 @@ NTRK_inhibitor	AXL/FLT3/NTRK_inhibitor
 P-cadherin_inhibitor
 PARG_inhibitor
 PARP7_inhibitor
-PARP_inhibitor
+PARP_inhibitor	PARP1/2_inhibitor
+PARP_inhibitor	PARP1/2_inhibitor	PARP_inhibitor,PARP-trapping
 PARP_inhibitor	PARP/TNKS_inhibitor
-PARP_inhibitor	PARP1-selective_inhibitor
+PARP_inhibitor	PARP1-selective_inhibitor	PARP1-selective_inhibitor,PARP1-trapping
 PD-L1_inhibitor	dual_PD-L1/CTLA4_inhibitor
 PDE4_inhibitor
 PDGFRA/VEGFR/FGFR_inhibitor
