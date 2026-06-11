@@ -230,7 +230,6 @@ NCT05671510	(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-P
 NCT07277270	(catype:Colorectal adenocarcinoma OR catype:Prostate cancer)
 NCT07361510	NOT prior_therapy:systemic_therapy
 NCT06868277	NOT prior_therapy:systemic_therapy
-NCT06097728	catype:Mesothelioma
 NCT06712355	catype:Small-cell lung cancer
 NCT06801834	catype:Small-cell lung cancer
 NCT06157892	(catype:Breast cancer OR catype:Gastroesophageal cancer OR catype:Gastric cancer)
