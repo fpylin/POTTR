@@ -853,6 +853,7 @@ Idronoxil|NOX66|NV-06|Phenoxodiol	idronoxil_suppository
 Ieramilimab|IMP-701|LAG 525|LAG525	anti-LAG3_monoclonal_antibody
 Ifabotuzumab|Fibatuzumab|KB 004|KB-004|KB004	anti-EphA3_antibody
 Ifinatamab Deruxtecan|DS-7300	anti-B7H3_antibody-drug_conjugate
+Ifinatamab Deruxtecan|I-DXd|DS-7300	anti-B7H3_antibody-drug_conjugate
 Ifosfamide|Ifosphamide|Cyfos|Ifex|Iphosphamid|Isoendoxan|Isophosphamide|Mitoxana|Naxamide|Holoxan|IFO|IFX|Iso-Endoxan|MJF 9325|MJF-9325|Seromida|Tronoxal|Z 4942|Z-4942	alkylating_agent
 Imatinib|Imatinib Mesylate|Gleevec|Glivec	BCR-ABL1_inhibitor,first_generation; KIT_inhibitor; PDGFRA_inhibitor
 Imdatifan|NKT2152	HIF2a_inhibitor

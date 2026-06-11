@@ -139,12 +139,6 @@ sub new {
     return $self;
 }
 
-#######################################################################
-# sub get_tier_list {
-# 	my $self = shift;
-# 	return keys %{ $self->{'tier_list'} }
-# }
-# 
 
 
 #######################################################################
@@ -549,7 +543,6 @@ sub load_module_variant_evidence_grading {
 sub load_module_drug_sensitivity_prediction {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('03 - Drug sensitivity prediction from recommendation tiers');
-
 	$rs->define_dyn_rule( 'drug_sensitivity_prediction',  sub { my $f=shift; my $facts = $_[0];
 		my $tier_list_regex = $self->{'tier_list_regex'} // '[[:alnum:]]+';
 		return () if $f !~ /recommendation_tier(_drug_class)?:(.+?):($tier_list_regex)/;
@@ -558,7 +551,10 @@ sub load_module_drug_sensitivity_prediction {
 		my @tags = $facts->get_tags($f);
 		return ( Facts::mk_fact_str("resistant_to$type:$therapy", @tags) ) if $facts->func('is_resistance_tier', $tier) or ( $facts->has_fact("resistant_to$type:$therapy") );
 		return ( Facts::mk_fact_str("sensitive_to$type:$therapy", @tags) );
-	} );
+		}
+	);
+	
+
 }
 
 
@@ -685,6 +681,17 @@ sub load_module_therapy_recomendation_and_grading {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('04A - Existing therapy class grading');
 
+	$rs->define_dyn_rule( 'drug_sensitivity_prediction_prior_therapy',  sub { my $f=shift; my $facts = $_[0];
+		return () if $f !~ /prior_therapy:(.+)/;
+		my $therapy_or_class =  $1 ;
+		my $type = Therapy::is_a_drug_class($1) ? '_drug_class' : '';
+
+		
+		my @tags = $facts->get_tags($f);
+		return ( Facts::mk_fact_str("resistant_to$type:$therapy_or_class", @tags) ) ;
+		}
+	);
+	
 	$rs->define_dyn_rule( 'existing_therapy_grading',  sub { my $f=shift; my $facts = $_[0];
 		return () if $f !~ /(resistant|sensitive)_to_drug_class:(.+)/;
 		my ($sensitivity, $drug_class) = ($1, $2); 

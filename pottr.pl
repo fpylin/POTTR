@@ -549,7 +549,7 @@ sub extract_drug_sensitivity {
 #######################################################################################################################################
 
 sub get_prefential_trial_id { my ($id) = ( $_[0] =~ /preferential_trial_id:(\S+)/ ); return $id; }
-sub get_prefential_trial_score { my ($score) = ( $_[0] =~ /pref_trial_score:(-?[\d\.]+)(?:\b|$)/ ); return $score; }
+sub get_prefential_trial_score { my ($score) = ( $_[0] =~ /pref_trial_score:(-?[\d\.]+(?:e[+-]?\d+)?)(?:\b|$)/ ); return $score; }
 sub cmp_preferential_trials($$) {
 	my ($a, $b) = @_ ;
 	return 
