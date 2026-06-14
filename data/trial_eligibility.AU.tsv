@@ -166,7 +166,7 @@ NCT06914128	(MTAP:loss_of_protein_expression OR MTAP:deletion); *(info:panel:AVE
 NCT06130553	(MTAP:loss_of_protein_expression OR MTAP:deletion)
 NCT06974110	(mismatch_repair:deficient OR microsatellite_instability:high)
 NCT06256588	catype:Head and neck squamous cell carcinoma
-NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer)
+NCT06731478	(catype:Gastric cancer OR catype:Gastroesophageal cancer); NOT prior_therapy:systemic_therapy
 NCT07204340	KRAS:oncogenic_mutation
 NCT07094113	(KRAS:oncogenic_mutation OR KRAS:amplification)
 NCT06820463	NOT prior_therapy:Irinotecan
@@ -215,7 +215,7 @@ NCT06907043	(BRCA1:oncogenic_mutation OR BRCA2:oncogenic_mutation OR PALB2:oncog
 NCT07522073	catype:Pancreatic adenocarcinoma; KRAS:G12D; NOT prior_therapy:systemic_therapy
 NCT05538130	BRAF:V600E
 NCT06881784	(KRAS:oncogenic_mutation OR NRAS:oncogenic_mutation OR HRAS:oncogenic_mutation); catype:Non-small cell lung cancer
-NCT07431281	*CLDN18:protein_expression; NOT ERBB2:amplification; NOT ERBB2:overexpression
+NCT07431281	*CLDN18:protein_expression; NOT ERBB2:amplification; NOT ERBB2:overexpression; NOT prior_therapy:systemic_therapy
 NCT07291037	*TACSTD2:protein_expression
 NCT06350097	(EGFR:exon_19_deletion OR EGFR:L858R); NOT prior_therapy:systemic_therapy
 NCT07185997	(EGFR:p-loop_mutation OR EGFR:alpha-c-helix_mutation)
@@ -261,7 +261,7 @@ NCT07155187	EGFR:oncogenic_mutation
 NCT06400472	*FOLR:protein_expression
 ACTRN12625000203459	EGFR:protein_expression
 NCT06797362	ROS1:fusion
-NCT07005102	EGFR:oncogenic_mutation; catype:Non-small cell lung cancer
+NCT07005102	EGFR:oncogenic_mutation; catype:Non-small cell lung cancer; NOT prior_therapy:sytsemic_therapy
 ACTRN12623000874617	*EREG:overexpression
 NCT07535112	KRAS:G12D
 NCT05254171	catype:Pancreatic cancer
@@ -286,5 +286,8 @@ NCT05215340	*NOT prior_therapy:systemic_therapy
 NCT07300943	*(ERBB2:protein_expression OR ERBB2:low_protein_expression OR ERBB2:overexpression OR ERBB2:amplification); NOT prior_therapy:ATR_inhibitor
 NCT07214779	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07023627	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
-NCT07546812	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma)
+NCT07546812	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(prior_therapy:Zolbetuximab OR prior_therapy:cancer_therapy,CLDN18-targeting OR prior_therapy:cancer_therapy,PD-1/PD-L1-targeting OR catype:cytotoxic_chemotherapy)
 NCT07415031	KRAS:G12C
+NCT07562152	catype:Pancreatic adenocarcinoma
+NCT07549412	catype:Colorectal cancer
+NCT07222800	catype:Colorectal cancer

@@ -298,7 +298,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancre
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic adenocarcinoma|Pancreatic ductal adenocarcinoma|PDAC
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic adenosquamous carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic colloid carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic medullary carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic medullary carcinoma|Medullary pancreatic carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic sarcomatoid carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic mixed neuroendocrine-non-neuroendocrine neoplasm|Pancreatic MiNEN
