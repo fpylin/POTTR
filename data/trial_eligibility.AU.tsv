@@ -1,5 +1,5 @@
 trial_id	eligibility_criteria
-ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
+ACTRN12617001190392	NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation; NOT BRAF:V600E; catype:Colorectal cancer; *NOT prior_therapy:anti-EGFR_monoclonal_antibody; *NOT prior_therapy:Irinotecan
 ACTRN12623000096651	(catype:Low-grade glioma OR catype:Anaplastic astrocytoma)
 ACTRN12623000874617	catype:Colorectal cancer; NOT KRAS:oncogenic_mutation; NOT NRAS:oncogenic_mutation
 ACTRN12621000273886	catype:Endometrial cancer
@@ -291,3 +291,36 @@ NCT07415031	KRAS:G12C
 NCT07562152	catype:Pancreatic adenocarcinoma
 NCT07549412	catype:Colorectal cancer
 NCT07222800	catype:Colorectal cancer
+NCT07334301	catype:Neuroblastoma
+NCT07062965	catype:Breast cancer; *NOT prior_therapy:cytotoxic_chemotherapy; *NOT prior_therapy:Trastuzumab Deruxtecan
+NCT07085767	catype:Breast cancer; *NOT prior_therapy:systemic_therapy
+NCT06467357	*NOT prior_therapy:systemic_therapy
+ACTRN12619001298101	catype:Basal cell carcinoma
+ACTRN12620000583943	*(EGFR:protein_expression OR ERBB2:protein_expression OR ERBB4:protein_expression); *prior_therapy:systemic_therapy
+ACTRN12621000156886	catype:Melanoma; *NOT prior_therapy:systemic_therapy
+NCT07475559	catype:Solid tumour; *NOT prior_therapy:DS-8201; *NOT prior_therapy:HER3-DXd; *NOT prior_therapy:DS-1062
+ACTRN12623000216617	catype:Prostate cancer; *prior_therapy:radioligand_therapy,PSMA-targeting; *NOT prior_therapy:PARP_inhibitor; *NOT prior_therapy:platinum-based_antineoplastic_agent
+NCT07465172	catype:Breast cancer
+NCT07203391	catype:Uveal melanoma; *HLA-A:02:01_positive; *prior_therapy:Tebentafusp; *NOT prior_therapy:PI3K_delta_inhibitor
+ACTRN12623001126606	catype:Glioblastoma
+NCT07059845	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *FOLR1:overexpression; *NOT prior_therapy:Mirvetuximab soravtansine; *NOT prior_therapy:anti-FRalpha_antibody-drug_conjugate
+NCT07044336	catype:Endometrial cancer; NOT catype:Uterine sarcoma; NOT catype:Neuroendocrine carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody); NOT prior_therapy:topoisomerase_I_inhibitor; NOT prior_therapy:AZD8205; NOT prior_therapy:anti-B7-H4_antibody
+NCT07100730	catype:Glioblastoma; NOT IDH:oncogenic_mutation; *NOT prior_therapy:Nitrosourea
+NCT07047118	catype:Prostate cancer; NOT catype:Prostate small cell carcinoma; prior_therapy:androgen_receptor_pathway_inhibitor; NOT prior_therapy:radionuclide_therapy; NOT prior_therapy:AR_protein_degrader
+NCT04996875	catype:Systemic mastocytosis; KIT:D816V
+NCT07099898	catype:Small-cell lung cancer
+NCT04739670	catype:Breast cancer; NOT ERBB2:amplification; NOT ERBB2:overexpression; *NOT ESR1:protein_expression; *(CD274:protein_expression OR TILs_percentage:>=5%); *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:CD137_agonist
+ACTRN12621000802808	(catype:Pheochromocytoma OR catype:Paraganglioma); *(SDHA:oncogenic_mutation OR SDHB:oncogenic_mutation OR SDHC:oncogenic_mutation OR SSTR2:protein_expression)
+NCT07258407	catype:Prostate cancer; *NOT prior_therapy:systemic_therapy
+NCT07288177	catype:Non-small cell lung cancer
+NCT06349408	*NOT prior_therapy:exatecan_derivative_ADC
+NCT06618287	catype:Non-small cell lung cancer
+NCT06618287	catype:Breast cancer; *NOT ESR1:protein expression; *NOT (ERBB2:amplification OR ERBB2:overexpression)
+NCT07060807	catype:Breast cancer; NOT ERBB2:amplification; NOT ERBB2:overexpression; *prior_therapy:CDK4/6_inhibitor; *prior_therapy:endocrine_therapy; NOT prior_therapy:chemotherapy; NOT prior_therapy:cancer_therapy,ERBB3-targeting; NOT prior_therapy:topoisomerase_I_inhibitor; NOT BRCA:oncogenic_mutation,germline
+ACTRN12624001123538	catype:Prostate cancer; *PSMA:positive; *prior_therapy:androgen_deprivation_therapy
+NCT06450106	catype:Prostate cancer
+NCT07529717	catype:Prostate cancer; prior_therapy:androgen_receptor_pathway_inhibitor; prior_therapy:taxane; NOT prior_therapy:STEAP2_targeted_agent; NOT prior_therapy:T_cell_engager
+NCT05957081	catype:Solid tumour; *prior_therapy:anti-PD-1_monoclonal_antibody; *prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:cancer_therapy,VISTA-targeting
+NCT03970447	catype:Glioblastoma; NOT IDH:oncogenic_mutation; *NOT prior_therapy:systemic_therapy
+NCT03970447	catype:Glioblastoma; NOT IDH:oncogenic_mutation; *NOT prior_therapy:Lomustine; *NOT prior_therapy:Bevacizumab
+NCT06596473	catype:Solid tumour; *NOT prior_therapy:antibody-drug_conjugate,CEACAM5-targeting

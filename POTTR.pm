@@ -681,7 +681,7 @@ sub load_module_therapy_recomendation_and_grading {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('04A - Existing therapy class grading');
 
-	$rs->define_dyn_rule( 'drug_sensitivity_prediction_prior_therapy',  sub { my $f=shift; my $facts = $_[0];
+	0 and $rs->define_dyn_rule( 'drug_sensitivity_prediction_prior_therapy',  sub { my $f=shift; my $facts = $_[0];
 		return () if $f !~ /prior_therapy:(.+)/;
 		my $therapy_or_class =  $1 ;
 		my $type = Therapy::is_a_drug_class($1) ? '_drug_class' : '';
