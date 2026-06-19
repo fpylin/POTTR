@@ -108,7 +108,7 @@ sub get_tier_by_phases_of_trials {
 		next if $ph =~ /Not Applicable/i;
 		next if $ph !~ /Phase/i;
 		$ph =~ s/(?:Phase|Early)\s*//g;
-		$ph =~ s/.*\///g;
+		$ph =~ s/.*\/\s*//g;
 		$max_phase = ( $ph gt $max_phase ) ? $ph : $max_phase ;
 	}
 	

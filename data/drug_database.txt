@@ -208,6 +208,7 @@ Aprutumab|AGC-2500|BAY-1179470|BAY1179470	anti-FGFR2b_monoclonal_antibody
 Arfolitixorin|6R-5,10-methyleneTHF|6R-5-10-Methylenetetrahydrofolate|6R-MTHF|6R-methylene THF|Modufolin|Rescufolin	reduced_folate-based_biomodulator; folinic_acid
 Arlocabtagene Autoleucel|BMS-986393	autologous_CAR-T_cell_therapy,GPRC5D-targeting
 Arsenic Trioxide|Trisenox|Arsenic Sesquioxide|Arsenous Acid|Arsenous Oxide|White Arsenic	arsenic; GLI2_inhibitor
+Asandeutertinib|TY-9591	EGFR_inhibitor,third_generation
 Asaretoclax|ZN-d5	BCL2_inhibitor
 Asciminib|ABL001	BCR-ABL1_inhibitor
 Asparaginase|Asparaginase Erwinia chrysanthemi|Elspar|Colaspase|Kidrolase|L-Asnase|Leucogen|Leunase|ASP-1|L-ASP|Laspar|Lcf-ASP|MK-965|Paronal|Re-82-TAD-15|Serasa|Spectrila	asparaginase
@@ -1021,6 +1022,7 @@ Luvometinib|FCN-159	MEK_inhibitor
 Luxdegalutamide|JSB462|ARV-766	AR_PROTAC_degrader
 M0324	MUC1-conditional_CD40_agonist
 M3554	anti-GD2_antibody-drug_conjugate
+M4205|IDRX-42	KIT/SCFR_inhibitor
 M9241	IL-12-based_tumor-targeting_immunocytokine
 M9466	PARP1-selective_inhibitor
 MAK683	EED_inhibitor
@@ -1374,6 +1376,7 @@ RK-582	TNKS1/2_inhibitor
 RMC-4550	SHP2_inhibitor
 RMC-5552	mTORC1_inhibitor
 RMC-6272	mTORC1_inhibitor
+RMC-9805	KRAS_G12D_inhibitor
 RO-5045337|R7112|RO5045337	MDM2_inhibitor
 RO-7656594|GDC-2992	unknown_drug_class
 RO6839921	MDM2_inhibitor

@@ -265,6 +265,18 @@ sub get_tags {
 	}
 }
 
+sub get_matched_tags {
+	my $self = shift;
+	my $f = shift;
+	my $field = shift;
+	if ( exists $self->{'facts'}{$f} ) {
+		return grep { defined } map { s/^$field:// ? $_ : undef  } keys %{ $self->{'facts'}{$f} } ;
+	} else {
+		my @null;
+		return @null ;
+	}
+}
+
 sub untag {
 	my $self = shift;
 	my $f = shift;

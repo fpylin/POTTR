@@ -88,7 +88,7 @@ NCT06326411	(BRAF:K601E OR BRAF:K601N OR BRAF:K601T OR BRAF:K601Q OR BRAF:N486_A
 NCT06326411	(BRAF:D287H OR BRAF:G466A OR BRAF:G466 OR BRAF:G466 OR BRAF:G466E OR BRAF:G466V OR BRAF:G466R OR BRAF:G469E OR BRAF:N581I OR BRAF:N581S OR BRAF:N581T OR BRAF:N581Y OR BRAF:N581K OR BRAF:D594A OR BRAF:D594G OR BRAF:D594H OR BRAF:D594N OR BRAF:D594E OR BRAF:D594Y OR BRAF:D594V OR BRAF:D596D OR BRAF:D596R OR BRAF:D596C OR BRAF:D596V)
 NCT06326411	(NRAS:Q61_missense_variant OR NRAS:G12 OR NRAS:G13_missense_variant)
 NCT06326411	(KRAS:Q61_missense_variant OR KRAS:G12_missense_variant OR KRAS:G13_missense_variant)
-NCT05203172	BRAF:V600E
+NCT05203172	BRAF:V600E; prior_therapy:Encorafenib; prior_therapy:Binimetinib
 NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *ERBB2:overexpression; *NOT ERBB2:oncogenic_mutation
 NCT06208657	trial_type:paediatric
 NCT06343402	KRAS:G12C; (catype:Non-small cell lung cancer OR catype:Colorectal adenocarcinoma)
@@ -258,7 +258,7 @@ NCT07155187	EGFR:oncogenic_mutation
 NCT06400472	*FOLR:protein_expression
 ACTRN12625000203459	EGFR:protein_expression
 NCT06797362	ROS1:fusion
-NCT07005102	EGFR:oncogenic_mutation; catype:Non-small cell lung cancer; NOT prior_therapy:sytsemic_therapy
+NCT07005102	EGFR:oncogenic_mutation; catype:Non-small cell lung cancer; NOT prior_therapy:systemic_therapy
 ACTRN12623000874617	*EREG:overexpression
 NCT07535112	KRAS:G12D
 NCT05254171	catype:Pancreatic cancer
@@ -320,3 +320,16 @@ NCT05957081	catype:Solid tumour; *prior_therapy:anti-PD-1_monoclonal_antibody; *
 NCT03970447	catype:Glioblastoma; NOT IDH:oncogenic_mutation; *NOT prior_therapy:systemic_therapy
 NCT03970447	catype:Glioblastoma; NOT IDH:oncogenic_mutation; *NOT prior_therapy:Lomustine; *NOT prior_therapy:Bevacizumab
 NCT06596473	catype:Solid tumour; *NOT prior_therapy:antibody-drug_conjugate,CEACAM5-targeting
+NCT07546500	catype:Ovarian cancer; *CCNE1:overexpression
+NCT06819735	*NOT prior_therapy:anti-CCR8_monoclonal_antibody
+NCT06340568	catype:Endometrial cancer; *ERBB2:protein_expression; *prior_therapy:platinum_anti-neoplastic_agent; *NOT prior_therapy:topoisomerase_I_inhibitor
+NCT07263594	catype:Gastrointestinal cancer; *prior_therapy:systemic_therapy; *NOT prior_therapy:CDH17_targeted_therapy; *NOT prior_therapy:topoisomerase_I_inhibitor_ADC
+ACTRN12624000268549	catype:Mesothelioma
+NCT07414836	catype:Solid tumour
+NCT06304818	catype:Solid tumour
+NCT04085653	(catype:PIK3CA-Related Overgrowth Spectrum OR catype:Breast cancer)
+NCT06242470	(catype:Head and neck squamous cell carcinoma OR catype:Oesophageal carcinoma OR catype:Non-small cell lung cancer OR catype:Small-cell lung cancer OR catype:Bladder cancer OR catype:Sarcoma OR catype:Endometrial cancer OR catype:Melanoma OR catype:Prostate adenocarcinoma OR catype:Breast cancer OR catype:Ovarian cancer OR catype:Cervical cancer OR catype:Colorectal cancer OR catype:Gastric cancer OR catype:Gastroesophageal cancer OR catype:Pancreatic adenocarcinoma OR catype:Renal cell carcinoma OR catype:Hepatocellular carcinoma); *NOT prior_therapy:B7-H3_targeted_agent; *NOT prior_therapy:topoisomerase_inhibitor_ADC
+NCT03816254	(catype:Colorectal cancer OR catype:Squamous cell carcinoma of the head and neck OR catype:Diffuse large B-cell lymphoma OR catype:Follicular lymphoma)
+NCT06940739	catype:Melanoma; NOT catype:Uveal melanoma; (*prior_therapy:anti-PD-1_monoclonal_antibody OR *prior_therapy:anti-PD-L1_monoclonal_antibody)
+ACTRN12622001003763	catype:Prostate cancer; (prior_therapy:Docetaxel OR prior_therapy:Cabazitaxel OR prior_therapy:Abiraterone OR prior_therapy:Enzalutamide OR prior_therapy:Olaparib OR prior_therapy:Lutetium-177)
+NCT06233942	catype:Solid tumour; *NOT prior_therapy:antibody-drug_conjugate,B7H4-targeting

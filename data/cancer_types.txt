@@ -110,15 +110,15 @@ Cancer	Solid tumour	Breast cancer	Breast secretory carcinoma|Secretory breast ca
 Cancer	Solid tumour	Breast cancer	Malignant phyllodes tumour
 Cancer	Solid tumour	Breast cancer	Medullary breast carcinoma
 Cancer	Solid tumour	Breast cancer	Metaplastic breast carcinoma|Breast metaplastic carcinoma
-Cancer	Solid tumour	Cancer of unknown primary	Adenocarcinoma of unknown primary
+Cancer	Solid tumour	Cancer of unknown primary	Adenocarcinoma of unknown primary|Unknown primary adenocarcinoma
 Cancer	Solid tumour	Cancer of unknown primary	Adenoid cystic carcinoma of unknown primary
-Cancer	Solid tumour	Cancer of unknown primary	Adenosquamous carcinoma of unknown primary
+Cancer	Solid tumour	Cancer of unknown primary	Adenosquamous carcinoma of unknown primary|Unknown primary adenosquamous carcinoma
 Cancer	Solid tumour	Cancer of unknown primary	High-grade undifferentiated malignancy
 Cancer	Solid tumour	Cancer of unknown primary	Large cell neuroendocrine carcinoma of unknown primary|Large cell carcinoma
 Cancer	Solid tumour	Cancer of unknown primary	Malignant melanoma of unknown primary|Melanoma of unknown primary
-Cancer	Solid tumour	Cancer of unknown primary	Mixed neuroendocrine non-neuroendocrine neoplasm of unknown primary|MiNEN of unknown primary
-Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine carcinoma of unknown primary
-Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary
+Cancer	Solid tumour	Cancer of unknown primary	Mixed neuroendocrine non-neuroendocrine neoplasm of unknown primary|MiNEN of unknown primary|Unknown primary MiNEN
+Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine carcinoma of unknown primary|Unknown primary neuroendocrine carcinoma
+Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary|Unknown primary neuroendocrine tumour
 Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary	Neuroendocrine tumour of unknown primary, grade 1
 Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary	Neuroendocrine tumour of unknown primary, grade 2
 Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary	Neuroendocrine tumour of unknown primary, grade 3
@@ -266,7 +266,7 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastro
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal adenocarcinoma|Esophageal adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal neuroendocrine carcinoma|Esophageal neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal sarcomatoid carcinoma|Esophageal sarcomatoid carcinoma|Oesophageal pseudosarcomatous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal squamous cell carcinoma|Esophageal squamous cell carcinoma|Oesophageal SCC|Squamous cell carcinoma of the oesophagus
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer	Oesophageal squamous cell carcinoma|Oesophagus squamous cell carcinoma|Esophageal squamous cell carcinoma|Oesophageal SCC|Squamous cell carcinoma of the oesophagus
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Oesophageal cancer|Oesophagus cancer|Esophageal cancer|Esophagus cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer|Gastro-oesophageal cancer|Oesophagogastric cancer|Esophagogastric cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei
