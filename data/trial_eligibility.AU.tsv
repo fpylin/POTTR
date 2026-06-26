@@ -302,6 +302,7 @@ ACTRN12623001126606	catype:Glioblastoma
 NCT07059845	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritoneal serous carcinoma); *FOLR1:overexpression; *NOT prior_therapy:Mirvetuximab soravtansine; *NOT prior_therapy:anti-FRalpha_antibody-drug_conjugate
 NCT07044336	catype:Endometrial cancer; NOT catype:Uterine sarcoma; NOT catype:Neuroendocrine carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody); NOT prior_therapy:topoisomerase_I_inhibitor; NOT prior_therapy:AZD8205; NOT prior_therapy:anti-B7-H4_antibody
 NCT07100730	catype:Glioblastoma; NOT IDH:oncogenic_mutation; *NOT prior_therapy:Nitrosourea
+NCT07047118	catype:Prostate cancer; NOT catype:Prostate small cell carcinoma; prior_therapy:androgen_receptor_pathway_inhibitor; NOT prior_therapy:radionuclide_therapy; NOT prior_therapy:AR_protein_degrader
 NCT04996875	catype:Systemic mastocytosis; KIT:D816V
 NCT07099898	catype:Small-cell lung cancer
 NCT04739670	catype:Breast cancer; NOT ERBB2:amplification; NOT ERBB2:overexpression; *NOT ESR1:protein_expression; *(CD274:protein_expression OR TILs_percentage:>=5%); *NOT prior_therapy:anti-PD-1_monoclonal_antibody; *NOT prior_therapy:anti-PD-L1_monoclonal_antibody; *NOT prior_therapy:CD137_agonist
