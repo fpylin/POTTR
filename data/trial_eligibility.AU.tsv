@@ -333,3 +333,4 @@ NCT03816254	(catype:Colorectal cancer OR catype:Squamous cell carcinoma of the h
 NCT06940739	catype:Melanoma; NOT catype:Uveal melanoma; (*prior_therapy:anti-PD-1_monoclonal_antibody OR *prior_therapy:anti-PD-L1_monoclonal_antibody)
 ACTRN12622001003763	catype:Prostate cancer; (prior_therapy:Docetaxel OR prior_therapy:Cabazitaxel OR prior_therapy:Abiraterone OR prior_therapy:Enzalutamide OR prior_therapy:Olaparib OR prior_therapy:Lutetium-177)
 NCT06233942	catype:Solid tumour; *NOT prior_therapy:antibody-drug_conjugate,B7H4-targeting
+NCT06345079	catype:Neuroendocrine tumour; Ki67_index:<=20%; SSTR:positive; hormone_secretion:non_functioning; *prior_therapy:somatostatin_analogue; *NOT prior_therapy:PRRT; *NOT prior_therapy:everolimus; *NOT prior_therapy:chemotherapy
