@@ -81,12 +81,12 @@ NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carbop
 NCT06031441	*MOA_UNKNOWN
 NCT05805501	catype:Clear cell renal cell carcinoma
 NCT06326411	catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation)
-NCT06326411	catype:Solid tumour; NOT catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR KRAS:oncogenic_mutation); COHORT_STOPPED
-NCT06326411	catype:Glioma; BRAF:oncogenic_mutation; COHORT_STOPPED
-NCT06326411	(BRAF:K601E OR BRAF:K601N OR BRAF:K601T OR BRAF:K601Q OR BRAF:N486_A489delinsK OR BRAF:N486_P490del OR BRAF:G469A OR BRAF:G469V OR BRAF:G469R OR BRAF:G649S OR BRAF:fusion OR BRAF:L597Q OR BRAF:L597R OR BRAF:L597S OR BRAF:L597V); COHORT_STOPPED
-NCT06326411	(BRAF:D287H OR BRAF:G466A OR BRAF:G466 OR BRAF:G466 OR BRAF:G466E OR BRAF:G466V OR BRAF:G466R OR BRAF:G469E OR BRAF:N581I OR BRAF:N581S OR BRAF:N581T OR BRAF:N581Y OR BRAF:N581K OR BRAF:D594A OR BRAF:D594G OR BRAF:D594H OR BRAF:D594N OR BRAF:D594E OR BRAF:D594Y OR BRAF:D594V OR BRAF:D596D OR BRAF:D596R OR BRAF:D596C OR BRAF:D596V); COHORT_STOPPED
-NCT06326411	(NRAS:Q61_missense_variant OR NRAS:G12 OR NRAS:G13_missense_variant); COHORT_STOPPED
-NCT06326411	(KRAS:Q61_missense_variant OR KRAS:G12_missense_variant OR KRAS:G13_missense_variant); COHORT_STOPPED
+NCT06326411	catype:Solid tumour; NOT catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR KRAS:oncogenic_mutation)
+NCT06326411	catype:Glioma; BRAF:oncogenic_mutation
+NCT06326411	(BRAF:K601E OR BRAF:K601N OR BRAF:K601T OR BRAF:K601Q OR BRAF:N486_A489delinsK OR BRAF:N486_P490del OR BRAF:G469A OR BRAF:G469V OR BRAF:G469R OR BRAF:G649S OR BRAF:fusion OR BRAF:L597Q OR BRAF:L597R OR BRAF:L597S OR BRAF:L597V)
+NCT06326411	(BRAF:D287H OR BRAF:G466A OR BRAF:G466 OR BRAF:G466 OR BRAF:G466E OR BRAF:G466V OR BRAF:G466R OR BRAF:G469E OR BRAF:N581I OR BRAF:N581S OR BRAF:N581T OR BRAF:N581Y OR BRAF:N581K OR BRAF:D594A OR BRAF:D594G OR BRAF:D594H OR BRAF:D594N OR BRAF:D594E OR BRAF:D594Y OR BRAF:D594V OR BRAF:D596D OR BRAF:D596R OR BRAF:D596C OR BRAF:D596V)
+NCT06326411	(NRAS:Q61_missense_variant OR NRAS:G12 OR NRAS:G13_missense_variant)
+NCT06326411	(KRAS:Q61_missense_variant OR KRAS:G12_missense_variant OR KRAS:G13_missense_variant)
 NCT05203172	BRAF:V600E; prior_therapy:Encorafenib; prior_therapy:Binimetinib
 NCT04686305	catype:Non-small cell lung cancer; *NOT prior_therapy:systemic_therapy; *ERBB2:overexpression; *NOT ERBB2:oncogenic_mutation
 NCT06208657	trial_type:paediatric
@@ -171,7 +171,7 @@ NCT06973863	(MTAP:loss_of_protein_expression OR MTAP:deletion); NOT catype:Sarco
 NCT06330064	(catype:Endometrial Cancer OR catype:Head and neck squamous cell carcinoma OR catype:Pancreatic adenocarcinoma OR catype:Colorectal adenocarcinoma OR catype:Hepatocellular carcinoma OR catype:Gastrooesophageal adenicarcoma OR catype:Urothelial carcinoma OR catype:Ovarian cancer OR catype:Cervical cancer OR catype:Cutaneous melanoma); NOT catype:Sarcoma
 NCT06330064	catype:Breast Cancer; (ERBB2:low protein expression OR ERBB2:loss of protein expression)
 NCT07028853	catype:Prostate cancer
-NCT05549297	catype:Melanoma; NOT catype:Uveal melanoma
+NCT05549297	NOT catype:Mucosal melanoma
 NCT07070232	catype:Melanoma; *prior_therapy:anti-PD-1_monoclonal_antibody
 NCT07070232	catype:Melanoma; BRAF:V600; prior_therapy:BRAF_V600_inhibitor
 NCT07070232	catype:Non-small cell lung cancer; NOT EGFR:oncogenic_mutation; NOT ALK:fusion; NOT ERBB2:ongenic_mutation
@@ -195,7 +195,6 @@ NCT06253130	(BRCA1:oncogenic_mutations OR BRCA2:oncogenic_mutations OR PALB2:onc
 NCT07218380	(FGFR3:oncogenic_mutation OR FGFR3:fusion); catype:Urothelial carcinoma
 NCT06162221	KRAS:G12C
 NCT06532006	(ERBB2:amplification OR ERBB2:overexpression); (catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma)
-NCT07172919	KRAS:G12C
 NCT07020221	KRAS:G12D
 NCT07247110	KRAS:oncogenic_mutation
 NCT07262619	(mismatch_repair:deficient OR microsatellite_instability:high)
@@ -281,7 +280,6 @@ NCT07300943	*(ERBB2:protein_expression OR ERBB2:low_protein_expression OR ERBB2:
 NCT07214779	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07023627	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07546812	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(prior_therapy:Zolbetuximab OR prior_therapy:cancer_therapy,CLDN18-targeting OR prior_therapy:cancer_therapy,PD-1/PD-L1-targeting OR catype:cytotoxic_chemotherapy)
-NCT07415031	KRAS:G12C
 NCT07562152	catype:Pancreatic adenocarcinoma
 NCT07549412	catype:Colorectal cancer
 NCT07222800	catype:Colorectal cancer
@@ -329,5 +327,31 @@ NCT06242470	(catype:Head and neck squamous cell carcinoma OR catype:Oesophageal 
 NCT03816254	(catype:Colorectal cancer OR catype:Squamous cell carcinoma of the head and neck OR catype:Diffuse large B-cell lymphoma OR catype:Follicular lymphoma)
 NCT06940739	catype:Melanoma; NOT catype:Uveal melanoma; (*prior_therapy:anti-PD-1_monoclonal_antibody OR *prior_therapy:anti-PD-L1_monoclonal_antibody)
 ACTRN12622001003763	catype:Prostate cancer; (prior_therapy:Docetaxel OR prior_therapy:Cabazitaxel OR prior_therapy:Abiraterone OR prior_therapy:Enzalutamide OR prior_therapy:Olaparib OR prior_therapy:Lutetium-177)
-NCT06233942	catype:Solid tumour; *NOT prior_therapy:antibody-drug_conjugate,B7H4-targeting
-NCT06345079	catype:Neuroendocrine tumour; Ki67_index:<=20%; SSTR:positive; hormone_secretion:non_functioning; *prior_therapy:somatostatin_analogue; *NOT prior_therapy:PRRT; *NOT prior_therapy:everolimus; *NOT prior_therapy:chemotherapy
+NCT06535607	(catype:Oesophageal squamous cell carcinoma OR catype:Head and neck squamous cell carcinoma OR catype:Cervical cancer OR catype:Mesothelioma)
+NCT05797168	(catype:Non-small cell lung cancer OR catype:Lung adenocarcinoma OR catype:Squamous non-small-cell lung cancer OR catype:Ovarian cancer OR catype:Endometrial Cancer)
+NCT07172919	KRAS:G12C; prior_therapy:Sotorasib
+NCT07415031	KRAS:G12C; prior_therapy:Adagrasib
+ACTRN12623000874617	catype:Colorectal adenocarcinoma
+NCT07490301	catype:Pancreatic adenocarcinoma
+NCT07222566	catype:Non-small cell lung cancer
+NCT07221357	catype:Colorectal cancer
+NCT07144280	catype:Non-small cell lung cancer
+NCT07063745	catype:Non-small cell lung cancer; MTAP:deletion
+NCT06989437	catype:Pancreatic adenocarcinoma
+NCT06943755	catype:Neuroendocrine tumour
+NCT06758401	catype:Non-small cell lung cancer
+NCT06236438	catype:Non-small cell lung cancer
+NCT07291076	catype:Hepatocellular carcinoma; NOT prior_therapy:systemic_therapy
+NCT07244705	catype:Colorectal cancer
+NCT07111520	catype:Non-small cell lung cancer
+NCT07098338	catype:Non-small cell lung cancer
+NCT06892548	catype:Non-small cell lung cancer
+NCT06841055	catype:Non-small cell lung cancer
+NCT06792695	catype:Colorectal cancer
+NCT05462236	catype:Colorectal cancer
+NCT05141149	catype:Pancreatic cancer
+NCT04614103	catype:Non-small cell lung cancer
+NCT06905197	catype:Non-small cell lung cancer
+NCT07628751	catype:Hepatocellular carcinoma
+NCT06834074	catype:Non-small cell lung cancer
+NCT06917079	(KRAS:G12A OR KRAS:G12C OR KRAS:G12D OR KRAS:G12S OR KRAS:G12V)

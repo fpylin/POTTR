@@ -57,7 +57,7 @@
 #
 # VERSION HISTORY 
 # 
-# The inference engine is derived from ESCORT.pl - an expert system prototype 
+# The inference engine is derived from XSTOO.pl - an expert system prototype 
 # (Expert System for evaluating Clinical Outcomes and Response to Treatment) 
 # that  uses  the  Cancer Care: Treatment Outcome (CCTO) ontology for inferring 
 # high-level concepts about treatment outcomes of cancer cases from a list  
