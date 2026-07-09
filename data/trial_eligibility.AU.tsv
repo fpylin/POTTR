@@ -226,7 +226,6 @@ NCT07361510	NOT prior_therapy:systemic_therapy
 NCT06868277	NOT prior_therapy:systemic_therapy
 NCT06712355	catype:Small-cell lung cancer
 NCT06801834	catype:Small-cell lung cancer
-NCT06157892	(catype:Breast cancer OR catype:Gastroesophageal cancer OR catype:Gastric cancer)
 NCT07221474	catype:Lung squamous cell carcinoma
 NCT06598306	catype:Small-cell lung cancer
 NCT06613009	catype:Small-cell lung cancer
