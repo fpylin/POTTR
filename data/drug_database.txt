@@ -284,7 +284,7 @@ BGB659	RAF_inhibitor,type_2
 BH-30643	EGFR_macrocyclic_kinase_inhibitor
 BI 1701963|BI=1701963	SOS1-KRAS_inhibitor
 BI 770371|BI-770371	anti-SIRPa_monoclonal_antibody
-BI-2852	KRAS_G12D_inhibitor; KRAS_switch1/2_pocket_inhibitor
+BI-2852	KRAS_G12D_inhibitor; KRAS_inhibitor,switch1/2_pocket_inhibitor
 BI-3812	BCL6_inhibitor
 BI-7273	BRD9_inhibitor
 BI836880|BI 836880	VEGF/Ang2-blocking_nanobody

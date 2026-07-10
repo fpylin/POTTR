@@ -93,7 +93,9 @@ our %drug_class_is_a = () ;      # ''drug_signature''  is-a  ''drug_signature''
 our %drug_class_has_parent = (); # ''drug_signature''  is-a  ''drug_signature''
 our %drug_name = ();             # drug_name -> primary/preferred_drug_name
 our %drug_preferred_name = () ;  # drug_signature -> drug_name
+our %drug_class_preferred_name = () ;  # drug_class_signature -> drug_class_name
 our %drug_synonyms = () ;        # drug_signature -> drug_name
+our %drug_class_synonyms = () ;  
 our %drug_combo_regimens = () ;
 
 our $drug_regex = undef;
@@ -585,6 +587,9 @@ sub load_drug_class_hirerchy {
 		chomp;
 		my @parts = map { trim($_) } split /\t/, $_;
 		for my $p (@parts) {
+			# my @p_drug_class_synonyms = split /\|/ $p;
+			# $drug_class_synonyms{ mk_signature($primary_drug_class_name) }{ $drug_class } ++;
+
 			next if exists $drug_class{ mk_signature($p) }; # this is a drug, not a drug class
 			$drug_class_name{ mk_signature($p) } = $p;
 		}

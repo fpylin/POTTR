@@ -329,10 +329,11 @@ KIT_inhibitor	KIT_inhibitor,type_1
 KIT_inhibitor,first_generation	KIT/PDGFR/RET/VEGFR/FGFR_inhibitor
 KMT2A_inhibitor
 KRAS_degrader	KRAS_PROTAC_degrader
-KRAS_inhibitor	KRAS_G12C_inhibitor
-KRAS_inhibitor	KRAS_G12C_inhibitor	KRAS_G12C/NRAS_G12C/HRAS_G12C_inhibitor
-KRAS_inhibitor	KRAS_G12D_inhibitor
-KRAS_inhibitor	KRAS_switch1/2_pocket_inhibitor
+KRAS_inhibitor	KRAS_inhibitor,mutant_selective	KRAS_G12C_inhibitor
+KRAS_inhibitor	KRAS_inhibitor,mutant_selective	KRAS_G12C_inhibitor	KRAS_G12C/NRAS_G12C/HRAS_G12C_inhibitor
+KRAS_inhibitor	KRAS_inhibitor,mutant_selective	KRAS_G12D_inhibitor
+KRAS_inhibitor	KRAS_inhibitor,switch1/2_pocket_inhibitor
+KRAS_inhibitor	KRAS_inhibitor,tricomplex_inhibitor
 KRAS_inhibitor	pan-KRAS_inhibitor	SOS1-KRAS_inhibitor
 LOXL2_inhibitor
 LSD1_inhibitor
@@ -1288,16 +1289,16 @@ cancer_therapy	cancer_therapy,p53-HDM2_interaction-targeting	p53-HDM2_interactio
 cancer_therapy	cancer_therapy,p95ERBB2-targeting
 cancer_therapy	cancer_therapy,p97-targeting
 cancer_therapy	cancer_therapy,pNGVL3-based,ERBB2-targeting
-cancer_therapy	cancer_therapy,pan-AKT-targeting
-cancer_therapy	cancer_therapy,pan-ERBB-targeting
-cancer_therapy	cancer_therapy,pan-FGFR-targeting
-cancer_therapy	cancer_therapy,pan-FLT3-targeting
-cancer_therapy	cancer_therapy,pan-HDAC-targeting
-cancer_therapy	cancer_therapy,pan-KRAS-targeting
-cancer_therapy	cancer_therapy,pan-LOX-targeting
-cancer_therapy	cancer_therapy,pan-PI3K-targeting
-cancer_therapy	cancer_therapy,pan-RAF-targeting
-cancer_therapy	cancer_therapy,pan-proteasome-targeting
+cancer_therapy	cancer_therapy,AKT-targeting
+cancer_therapy	cancer_therapy,ERBB-targeting
+cancer_therapy	cancer_therapy,FGFR-targeting
+cancer_therapy	cancer_therapy,FLT3-targeting
+cancer_therapy	cancer_therapy,HDAC-targeting
+cancer_therapy	cancer_therapy,KRAS-targeting
+cancer_therapy	cancer_therapy,LOX-targeting
+cancer_therapy	cancer_therapy,PI3K-targeting
+cancer_therapy	cancer_therapy,RAF-targeting
+cancer_therapy	cancer_therapy,proteasome-targeting
 cancer_therapy	cancer_therapy,pan_ERBB-targeting
 cancer_therapy	cancer_therapy,phosphatidylserine-targeting
 cancer_therapy	cancer_therapy,polyamine_transport-targeting
@@ -2001,11 +2002,11 @@ cancer_therapy,orotate_phosphoribosyltransferase-targeting	orotate_phosphoribosy
 cancer_therapy,p95ERBB2-targeting	immuno-oncology_therapy,p95ERBB2-targeting
 cancer_therapy,p97-targeting	p97_inhibitor
 cancer_therapy,pNGVL3-based,ERBB2-targeting	vaccine_therapy,pNGVL3-based,ERBB2-targeting
-cancer_therapy,pan-ERBB-targeting	pan-ERBB_inhibitor
-cancer_therapy,pan-HDAC-targeting	pan-HDAC_inhibitor
-cancer_therapy,pan-LOX-targeting	pan-LOX_inhibitor
-cancer_therapy,pan-RAF-targeting	pan-RAF_inhibitor
-cancer_therapy,pan-proteasome-targeting	pan-proteasome_inhibitor
+cancer_therapy,ERBB-targeting	pan-ERBB_inhibitor
+cancer_therapy,HDAC-targeting	pan-HDAC_inhibitor
+cancer_therapy,LOX-targeting	pan-LOX_inhibitor
+cancer_therapy,RAF-targeting	pan-RAF_inhibitor
+cancer_therapy,proteasome-targeting	pan-proteasome_inhibitor
 cancer_therapy,pan_ERBB-targeting	pan_ERBB_inhibitor,hypoxia_activating
 cancer_therapy,phosphatidylserine-targeting	immuno-oncology_therapy,phosphatidylserine-targeting
 cancer_therapy,polyamine_transport-targeting	polyamine_transport_inhibitor
