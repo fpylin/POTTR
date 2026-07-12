@@ -75,6 +75,7 @@ NCT04524871	catype:Hepatocellular carcinoma
 NCT06016738	*prior_therapy:CDK4/6_inhibitor; NOT prior_therapy:Eribulin; NOT prior_therapy:Elacestrant
 NCT06179160	KRAS:G12D
 NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation; *(catype:Ovarian cancer OR catype:Breast cancer OR catype:Endometrial cancer); NOT catype:Breast cancer
+NCT04585750	TP53:Y220C; *catype:Ovarian cancer
 NCT05975073	(MTAP:deletion OR MTAP:loss_of_protein_expression)
 NCT06065748	*NOT (ERBB2:amplification OR ERBB2:overexpression); *ESR1:protein_expression; ESR1:oncogenic_mutation; NOT prior_therapy:selective_estrogen_receptor_degrader; NOT prior_therapy:SERCA; NOT prior_therapy:CERAN
 NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
