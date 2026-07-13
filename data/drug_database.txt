@@ -272,7 +272,7 @@ BGB-24714	IAP_inhibitor; SMAC_mimetic
 BGB-26808	HPK1_inhibitor
 BGB-30813	DGK-zeta_inhibitor
 BGB-43395	CDK4_selective_inhibitor
-BGB-53038	pan-KRAS_inhibitor
+BGB-53038	pan-KRAS_inhibitor,ON/OFF-state_inhibitor
 BGB-58067	PRMT5_inhibitor,MTA-co-operative
 BGB-A3055	anti-CCR8_monoclonal_antibody
 BGB-A455	bispecific_T-cell_engager,CLDN6-targeting
@@ -1048,7 +1048,7 @@ MIL93	anti-CLDN18.2_monoclonal_antibody
 MK-1200|SKB315	anti-CLDN18.2_antibody-drug_conjugate
 MK-1697|MK1697	bispecific_PD-1/LAG3_antibody
 MK-4166	anti-GITR_monoclonal_antibody
-MK-4716|MK4716	pan-KRAS_inhibitor
+MK-4716|MK4716	pan-KRAS_inhibitor,undisclosed_mechanism
 MK-4830|MK4830	anti-ILT4_monoclonal_antibody
 MK-6070|HPN328	trispecific_T-cell_engager,DLL3-targeting
 MK-6837	unknown_drug_class
@@ -1394,7 +1394,7 @@ RO7502175	unknown_drug_class
 RO7566802	unknown_drug_class
 RO7617991	unknown_drug_class
 RO7656594|GDC2992|GDC-2992|RG6537	AR_PROTAC_degrader
-RO7673396	pan-KRAS_inhibitor
+RO7673396	pan-KRAS_inhibitor,undisclosed_mechanism
 RO7759065	unknown_drug_class
 ROS1_inhibitor	EGFR/FLT3/FER/ROS1/IGF1R_inhibitor
 RX108|RX 108|RX-108|Sodium-Potassium Pump Inhibitor RX10	sodium-potassium_ATPase_inhibitor
@@ -1581,7 +1581,7 @@ TAK-733|TAK733	MEK_inhibitor
 TERN-701|HS-10382	BCR-ABL1_inhibitor,allosteric
 TK216|TK-216	EWS-FLI1_inhibitor
 TL-895	BTK_inhibitor
-TLN-372|TLN372	pan-KRAS_inhibitor
+TLN-372|TLN372	pan-KRAS_inhibitor,undisclosed_mechanism
 TPF regimen	Cisplatin + Docetaxel + 5-Fluorouracil
 TQB2102	bispecific_ERBB2/ERBB2_antibody-drug_conjugate
 Tabelecleucel	allogeneic_T-cell_immunotherapy,EBV-targeting

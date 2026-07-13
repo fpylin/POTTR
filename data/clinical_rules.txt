@@ -5,4 +5,4 @@ catype:Breast cancer; prior_therapy:Trastuzumab => HER2:positive; catype:HER2-po
 catype:
 catype:Myelodysplastic syndrome => catype:Acute myeloid leukaemia [INFERRED:catype; localrule]
 catype:Prostate cancer; prior_therapy:Cabazitaxel => catype:Castrate-resistant prostate cancer
-catype:Castrate-resistant prostate cancer => catype:Prostate cancer [INFERRED:catype; localrule]
+catype:Prostate cancer => catype:Castrate-resistant prostate cancer [INFERRED:catype; localrule]
