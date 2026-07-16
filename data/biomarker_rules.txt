@@ -101,6 +101,7 @@ BRAF:K601T => BRAF:class_2_mutation
 BRAF:K601Q => BRAF:class_2_mutation
 BRAF:K601_S602delinsNT => BRAF:class_2_mutation
 BRAF:kinase_domain_duplication => BRAF:class_2_mutation
+BRAF:exon_13_insertion => BRAF:class_2_mutation
 BRAF:fusion => BRAF:class_2_mutation
 
 BRAF:F247L => BRAF:class_3_mutation
