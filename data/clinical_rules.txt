@@ -2,7 +2,7 @@ catype:Breast cancer; prior_therapy:selective_estrogen_receptor_degrader => ESR1
 catype:Breast cancer; prior_therapy:aromatase_inhibitor => ESR1:protein_expression; catype:ER-positive breast cancer [INFERRED:catype]
 catype:Breast cancer; prior_therapy:CDK4/6_inhibitor => ESR1:protein_expression; catype:ER-positive breast cancer [INFERRED:catype]
 catype:Breast cancer; prior_therapy:Trastuzumab => HER2:positive; catype:HER2-positive breast cancer [INFERRED:catype]
-catype:
+
 catype:Myelodysplastic syndrome => catype:Acute myeloid leukaemia [INFERRED:catype; localrule]
 catype:Prostate cancer; prior_therapy:Cabazitaxel => catype:Castrate-resistant prostate cancer
 catype:Prostate cancer => catype:Castrate-resistant prostate cancer [INFERRED:catype; localrule]
@@ -10,4 +10,4 @@ EGFR:exon_19_deletion; catype:Non-small cell lung cancer => catype:EGFR-mutant n
 EGFR:L858R; catype:Non-small cell lung cancer => catype:EGFR-mutant non-small cell lung cancer [INFERRED:catype]
 ALK:positive; catype:Non-small cell lung cancer; prior_therapy:ALK_inhibitor => ALK:fusion [INFERRED:biomarker]
 ROS1:positive; catype:Non-small cell lung cancer; prior_therapy:ROS1_inhibitor => ROS1:fusion [INFERRED:biomarker]
-ROS:positive; catype:Non-small cell lung cancer; prior_therapy:ROS1_inhibitor => ROS1:fusion [INFERRED:biomarker]
+HER2:positive; catype:Non-small cell lung cancer => info:warning:Please specify whether the tumour is HER2 mutation or HER2 amplification
