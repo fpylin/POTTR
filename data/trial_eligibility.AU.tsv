@@ -331,7 +331,7 @@ NCT06233942	catype:Solid tumour; *NOT prior_therapy:antibody-drug_conjugate,B7H4
 NCT06345079	catype:Neuroendocrine tumour; Ki67_index:<=20%; SSTR:positive; hormone_secretion:non_functioning; *prior_therapy:somatostatin_analogue; *NOT prior_therapy:PRRT; *NOT prior_therapy:everolimus; *NOT prior_therapy:chemotherapy
 NCT06917079	(KRAS:G12A OR KRAS:G12C OR KRAS:G12D OR KRAS:G12S OR KRAS:G12V)
 NCT07699328	EGFR:oncogenic_mutation; catype;Non-small cell lung cancer
-NCT06520345	(prior_therapy:Abiraterone OR prior_therapy:apalutamide OR prior_therapy:Darolutamide OR prior_therapy:Enzalutamide); NOT prior_therapy:cancer_therapy,PSMA-targeting; NOT prior_therapy:Cabazitaxel; catype:Prostate cancer
+NCT06520345	*(prior_therapy:Abiraterone OR prior_therapy:Apalutamide OR prior_therapy:Darolutamide OR prior_therapy:Enzalutamide); NOT prior_therapy:cancer_therapy,PSMA-targeting; *NOT prior_therapy:Cabazitaxel; catype:Prostate cancer
 NCT05176483	catype:Renal cell carcinoma
 ACTRN12607000160437	catype:Bladder cancer
 NCT07227402	catype:Renal cell carcinoma
