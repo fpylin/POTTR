@@ -20,7 +20,7 @@ ALK_inhibitor,second_generation	ALK/ROS1/IGF1R_inhibitor
 ASCT2_antibody-drug_conjugate
 ATM_inhibitor
 ATR_inhibitor	ATR/CHEK1_inhibitor
-ATR_inhibitor	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor_payload
+ATR_inhibitor	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor-payload
 AURKA_inhibitor
 AURKA_inhibitor	FLT3/Aurora_inhibitor
 AURKB_inhibitor
@@ -369,6 +369,7 @@ MDM2_inhibitor
 MDM2_inhibitor	HDM2_inhibitor
 MDM2_inhibitor	p53-HDM2_interaction_inhibitor
 MEK_inhibitor
+MEK_inhibitor	MEK_inhibitor,deep-cyclic
 MEK_inhibitor	RAF/MEK_inhibitor
 MEK_inhibitor	RAF/MEK_inhibitor	RAF/MEK_clamp
 MEK_inhibitor	RAF/MEK_inhibitor	pan-RAF/MEK_glue
@@ -634,6 +635,9 @@ anti-4-1BB_monoclonal_antibody
 anti-ASCT2_antibody-drug_conjugate
 anti-AXL_fusion_protein
 anti-B7H3_antibody-drug_conjugate
+anti-B7H3_antibody-drug_conjugate	anti-B7H3_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload
+anti-B7H3_antibody-drug_conjugate	anti-B7H3_antibody-drug_conjugate,BCL-XL_inhibitor-payload
+anti-B7H3_antibody-drug_conjugate	anti-B7H3_antibody-drug_conjugate,duocarmycin-payload
 anti-B7H4_antibody-drug_conjugate
 anti-BAFFR_monoclonal_antibody
 anti-BCMA-immunoconjugate
@@ -682,18 +686,22 @@ anti-DLL4_monoclonal_antibody
 anti-DR5_agonistic_antibody
 anti-EGFR/ERBB3_monoclonal_antibody
 anti-EGFR/PBD_antibody-drug_conjugate
-anti-EGFR_antibody-drug_conjugate	anti-EGFR_antibody-drug_conjugate,Bcl-xL_payload
+anti-EGFR_antibody-drug_conjugate	anti-EGFR_antibody-drug_conjugate,Bcl-xL-payload
 anti-EGFR_monoclonal_antibody
+antibody-drug_conjugate,alkylating_agent-payload	antibody-drug_conjugate,duocarmycin-payload	anti-ERBB2_antibody-drug_conjugate,duocarmycin-payload
 antibody-drug_conjugate,microtubule_inhibitor-payload	antibody-drug_conjugate,DM1-payload	anti-ERBB2_antibody-drug_conjugate,DM1-payload
-antibody-drug_conjugate,microtubule_inhibitor-payload	antibody-drug_conjugate,MMAF-payload	anti-ERBB2_antibody-drug_conjugate,MMAF-payload
-antibody-drug_conjugate,microtubule_inhibitor-payload	antibody-drug_conjugate,MMAE-payload	anti-ERBB2_antibody-drug_conjugate,MMAE-payload
-antibody-drug_conjugate,topoisomerase_inhibitor-payload	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor_payload
-antibody-drug_conjugate,ATR_inhibitor-payload	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor_payload
+antibody-drug_conjugate,microtubule_inhibitor-payload	antibody-drug_conjugate,auristatin-payload	antibody-drug_conjugate,MMAF-payload	anti-ERBB2_antibody-drug_conjugate,MMAF-payload
+antibody-drug_conjugate,microtubule_inhibitor-payload	antibody-drug_conjugate,auristatin-payload	antibody-drug_conjugate,MMAE-payload	anti-ERBB2_antibody-drug_conjugate,MMAE-payload
+antibody-drug_conjugate,topoisomerase_inhibitor_1-payload	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor-payload
+antibody-drug_conjugate,ATR_inhibitor-payload	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor-payload
 anti-ERBB2_antibody-drug_conjugate
 anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,DM1-payload
-anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,MMAF-payload
-anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,MMAE-payload
-anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor_payload
+anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,auristatin-payload	anti-ERBB2_antibody-drug_conjugate,MMAF-payload
+anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,auristatin-payload	anti-ERBB2_antibody-drug_conjugate,MMAE-payload
+anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor-payload
+anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload
+anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,duocarmycin-payload
+anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-drug_conjugate,TLR8_agonist-payload
 anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_antibody-immune-agonist-conjugate
 anti-ERBB2_antibody-drug_conjugate	anti-ERBB2_engineered_toxin_body
 anti-ERBB2_antibody-drug_conjugate	biparatopic_ERBB2_antibody-drug_conjugate
@@ -2365,7 +2373,7 @@ immuno-oncology_therapy,EGFR-targeting	anti-EGFR/B7H3_antibody-drug_conjugate
 immuno-oncology_therapy,EGFR-targeting	anti-EGFR/ERBB3_monoclonal_antibody
 immuno-oncology_therapy,EGFR-targeting	anti-EGFR/PBD_antibody-drug_conjugate
 immuno-oncology_therapy,EGFR-targeting	anti-EGFR/cMET_antibody-drug_conjugate
-immuno-oncology_therapy,EGFR-targeting	anti-EGFR_antibody-drug_conjugate,Bcl-xL_payload
+immuno-oncology_therapy,EGFR-targeting	anti-EGFR_antibody-drug_conjugate,Bcl-xL-payload
 immuno-oncology_therapy,EGFR-targeting	anti-EGFR_monoclonal_antibody
 immuno-oncology_therapy,EGFR-targeting	bispecific_EGFR/4-1BB_antibody
 immuno-oncology_therapy,EGFR-targeting	bispecific_EGFR/B7H3_antibody
@@ -2382,7 +2390,7 @@ immuno-oncology_therapy,EGFR/ERBB3-targeting	anti-EGFR/ERBB3_monoclonal_antibody
 immuno-oncology_therapy,EGFR/PBD-targeting	anti-EGFR/PBD_antibody-drug_conjugate
 immuno-oncology_therapy,EGFRvIII-targeting	bispecific_T-cell_engager,EGFRvIII-targeting
 immuno-oncology_therapy,ERBB2-targeting	anti-ERBB2_antibody-drug_conjugate
-immuno-oncology_therapy,ERBB2-targeting	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor_payload
+immuno-oncology_therapy,ERBB2-targeting	anti-ERBB2_antibody-drug_conjugate,topoisomerase/ATR_inhibitor-payload
 immuno-oncology_therapy,ERBB2-targeting	anti-ERBB2_monoclonal_antibody
 immuno-oncology_therapy,ERBB2-targeting	anti-ERBB2_monoclonal_antibody,dimerization_inhibitor
 immuno-oncology_therapy,ERBB2-targeting	bispecific_ERBB2/4-1BB_antibody

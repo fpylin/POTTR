@@ -184,3 +184,5 @@ mutsig:SBS10d => mutsig:SBS_group_POLD_20/10c/10d
 
 PD-L1:positive => CD274:protein_expression
 
+EGFR:T790M => EGFR:T790M-like_mutation
+EGFR:L747_K745_delinsATSPE => EGFR:T790M-like_mutation

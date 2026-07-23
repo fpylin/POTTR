@@ -6,3 +6,8 @@ catype:
 catype:Myelodysplastic syndrome => catype:Acute myeloid leukaemia [INFERRED:catype; localrule]
 catype:Prostate cancer; prior_therapy:Cabazitaxel => catype:Castrate-resistant prostate cancer
 catype:Prostate cancer => catype:Castrate-resistant prostate cancer [INFERRED:catype; localrule]
+EGFR:exon_19_deletion; catype:Non-small cell lung cancer => catype:EGFR-mutant non-small cell lung cancer [INFERRED:catype]
+EGFR:L858R; catype:Non-small cell lung cancer => catype:EGFR-mutant non-small cell lung cancer [INFERRED:catype]
+ALK:positive; catype:Non-small cell lung cancer; prior_therapy:ALK_inhibitor => ALK:fusion [INFERRED:biomarker]
+ROS1:positive; catype:Non-small cell lung cancer; prior_therapy:ROS1_inhibitor => ROS1:fusion [INFERRED:biomarker]
+ROS:positive; catype:Non-small cell lung cancer; prior_therapy:ROS1_inhibitor => ROS1:fusion [INFERRED:biomarker]

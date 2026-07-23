@@ -585,6 +585,8 @@ sub extract_preferential_trials {
 		my $trialphase         = Facts::unescape( $tags{'phase'}      // '' );
 		my $recruitmentstatus  = Facts::unescape( $tags{'recruitmentstatus'} // '' );
 		my $matched_drug_names = Facts::unescape( $tags{'drug_list'}         // '' );
+		my $matched_trial_tier_focused         =  $tags{'focused_transitive_efficacy_tier'};
+		my $matched_trial_class_tier_focused   =  $tags{'focused_transitive_class_efficacy_tier'};
 		my $matched_trial_tier                 =  $tags{'transitive_efficacy_tier'};
 		my $matched_trial_class_tier           =  $tags{'transitive_class_efficacy_tier'};
 		my $matched_trial_drug_maturity        =  $tags{'drug_maturity_tier'};            
@@ -612,7 +614,7 @@ sub extract_preferential_trials {
 		
 		my %trial_match_criteria = map { $_ => 1 } ( $tags =~ /trial_match_criteria:(.+?)[;\]]/g );
 		my @trial_match_criteria = sort map { s/_/ /g; $_ } keys %trial_match_criteria ;
-		
+
 		my %row = (
 			'trial_id' => $trial_id,
 			'full_title' => $full_title,
@@ -626,6 +628,8 @@ sub extract_preferential_trials {
 			'referring_drug_classes' => \%referring_drug_classes,
 			'matched_drug_names' => \@matched_drug_names,
 			'matched_drug_classes' => \@matched_drug_classes,
+			'matched_trial_tier_focused' => $matched_trial_tier_focused,
+			'matched_trial_class_tier_focused' => $matched_trial_class_tier_focused,
 			'matched_trial_tier' => $matched_trial_tier,
 			'matched_trial_class_tier' => $matched_trial_class_tier,
 			'matched_trial_biomarker_tier' => $matched_trial_biomarker_tier,
@@ -1174,7 +1178,8 @@ sub gen_preferential_trials_report {
 	my $output ; # = "List of biomarker matched clinial trials:\n";
 	$output .= join("\t", "Rank", "Trial ID", "Preferential Trial Score", 
 		"Trial match criteria", "Level of matching",
-		"Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Biomarker tier score", "Trial phase tier score", 
+		"Focused Transitive Class Efficacy", "Focused Transitive Efficacy", "Transitive Class Efficacy", "Transitive Efficacy", 
+		"Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Biomarker tier score", "Trial phase tier score", 
 		"Referring cancer types",  "Referring biomarker",  "Referring alterations",  "Referring drugs", "Referring drug classes",     
 		"Drugs", "Drug classes", "Cancer types", "Phase", "Full title", "Postcode", 
 		"External weblink", "Evidence", "KB Lines",
@@ -1201,6 +1206,8 @@ sub gen_preferential_trials_report {
 				$$row{'pref_trial_score'},
 				$trial_match_criteria,
 				$$row{'LOM'},
+				$$row{'matched_trial_class_tier_focused'},
+				$$row{'matched_trial_tier_focused'},
 				$$row{'matched_trial_class_tier'},
 				$$row{'matched_trial_tier'},
 				$$row{'matched_trial_drug_maturity'},
@@ -1262,6 +1269,8 @@ sub gen_preferential_trials_terminal {
 			push @lines, join("\t", "Trial phase", $$row{'trialphase'} )."\n";
 			push @lines, join("\t", "Drugs",                      $matched_drug_names )."\n";
 			push @lines, join("\t", "Drug classes",               $matched_drug_classes )."\n";
+			push @lines, join("\t", "Focused transitive class efficacy tier",  thl( $$row{'matched_trial_class_tier_focused'} ) )."\n";
+			push @lines, join("\t", "Focused transitive efficacy tier",   thl( $$row{'matched_trial_tier_focused'} ) )."\n";
 			push @lines, join("\t", "Transitive class efficacy tier",  thl( $$row{'matched_trial_class_tier'} ) )."\n";
 			push @lines, join("\t", "Transitive efficacy tier",   thl( $$row{'matched_trial_tier'} ) )."\n";
 			push @lines, join("\t", "Trial phase tier",           thl( $$row{'matched_trial_phase_tier_score'} ) )."\n";
@@ -1336,7 +1345,7 @@ sub gen_HTML_preferential_trial_report {
 
 	my $output = "<h2>List of biomarker matched clinial trials:</h2>\n";
 	$output .= "<table id=trial_list>\n";
-	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Trial ID",  "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria",
+	$output .= "<tr>".join("", ( map { "<th>$_</th>" } ("Trial ID",  "Focused Transitive Class Efficacy", "Focused Transitive Efficacy", "Transitive Class Efficacy", "Transitive Efficacy", "Drug maturity", "Drug class maturity", "Combo maturity", "Combo class maturity", "Trial match criteria",
 		"Drugs", "Drug classes", "Cancer types", "Full title",  "Postcode", "Notes") ) )."</tr>\n"; # "Status", "Relevance", "Hospital", 
 
 	my $cnt = 0;
@@ -1359,6 +1368,8 @@ sub gen_HTML_preferential_trial_report {
 		$output .= "<tr class=$oe>".join("", ( map {"<td>$_</td>"} (
 				mk_trial_href($$row{'trial_id'}), 
 	# 			$$row{'$recruitmentstatus'},
+				$$row{'matched_trial_class_tier_focused'},
+				$$row{'matched_trial_tier_focused'},
 				$$row{'matched_trial_class_tier'},
 				$$row{'matched_trial_tier'},
 				$$row{'matched_trial_drug_maturity'},
