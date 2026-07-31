@@ -420,6 +420,7 @@ CS3005	adenosine_A2A_receptor_antagonist
 CS3006|CS 3006|CS-3006	MEK_inhibitor
 CS5001|CS 5001|CS-5001	anti-ROR1_antibody-drug_conjugate
 CS5007	bispecific_EGFR/ERBB3_antibody-drug_conjugate
+CT-202	anti-NECTIN4_antibody-drug_conjugate
 CTX110|CTX 110|CTX-110|CTX101	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX112|CTX 112|CTX-112	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX130	allogeneic_CAR-T-cell_therapy,CD70-targeting
@@ -720,6 +721,7 @@ GB263T	trispecific_EGFR/cMET/cMET_antibody
 GD2-iCAR-PBT	autologous_CAR-T-cell_therapy,GD2-targeting
 GDC-0623	MEK_inhibitor
 GDC-0879	BRAF_V600_inhibitor
+GDC-1261	unknown_drug_class
 GDC-4198|GDC 4198|GDC4198|RGT 419B|RGT-419B	CDK2/4/6_inhibitor
 GDC-7035	KRAS_G12D_inhibitor
 GFH018	TGFBR1_inhibitor
@@ -802,6 +804,7 @@ HRS-1167|M9466	PARP1-selective_inhibitor
 HRS-3802	unknown_drug_class
 HRS-4642	KRAS_G12D_inhibitor,ON/OFF-state_inhibitor
 HRS-5041|HRS 5041|HRS5041	AR_PROTAC_degrader
+HRS-7525	unknown_drug_class
 HS-10241	MET_inhibitor
 HSK29116	BTK_PROTAC_degrader
 HTI-1090|HTI 1090|SHR9146	IDO/TDO_inhibitor
