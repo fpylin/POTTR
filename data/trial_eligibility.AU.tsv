@@ -126,7 +126,6 @@ NCT05735080	catype:Ovarian cancer; prior_therapy:Carboplatin; NOT prior_therapy:
 NCT05735080	CCNE1:amplification; NOT prior_therapy:CDK2/4/6_inhibitor; NOT prior_therapy:CDK2_inhibitor
 NCT05696626	ESR1:oncogenic_mutation; *prior_therapy:aromatase_inhibitor; *prior_therapy:CDK4/6_inhibitor; *NOT RB1:oncogenic_mutation; *NOT RB1:deletion
 NCT06501625	IDH1:R132; catype:Cholangiocarcinoma
-NCT03787602	NOT TP53:oncogenic_mutation
 NCT06112314	*HLA-A*02:01:Positive
 NCT06172478	(catype:Gastric cancer OR catype:Gastroesophageal cancer); NOT ERBB2:overexpression; NOT ERBB2:amplification
 NCT06172478	catype:Head and neck squamous cell carcinoma; prior_therapy:anti-PD-1_monoclonal_antibod
