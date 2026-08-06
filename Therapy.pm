@@ -363,7 +363,7 @@ sub get_drug_regex {
 	my @elems ;
 	
 	for my $arg (@_) {
-		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/ir =~ s/([\[\]])/\\$1/ir } grep { ! /\d+,\d+-|'|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
+		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/ir =~ s/([\[\]\(\)])/\\$1/igr } grep { ! /\d+,\d+-|'|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
 	}
 	my %by_signature;
 	for my $e (@elems) {
@@ -536,7 +536,7 @@ sub load_drug_database {
 	
 	for my $line ( @lines ) {
 		chomp $line;
-		$line =~ s/#.*// ; # remove comments;
+		$line =~ s/\s+#.*// ; # remove comments;
 		next if $line =~ /(?:^|\b)drug_class(?:\b|$)|^\s*$/ ;  # get rid of header
 		
 		my ($drug_str, $drug_classes) = split /\t/, $line;

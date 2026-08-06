@@ -306,7 +306,7 @@ JAK_inhibitor	SYK/JAK_inhibitor
 JNK_inhibitor
 KAT6A_inhibitor
 KAT6A_inhibitor	KAT6A/B_inhibitor
-KAT6A_inhibitor	KAT6A/B_inhibitor
+KAT6B_inhibitor	KAT6A/B_inhibitor
 KIF18A_inhibitor
 KIT/SCFR_inhibitor
 KIT/VEGFR/PDGFR/FLT3_inhibitor
@@ -2734,3 +2734,10 @@ virus-based_therapy	oncolytic_virus	replication-competent_oncolytic_adenovirus
 virus-based_therapy	oncolytic_virus	thymidine_kinase-deleted_oncolytic_vaccinia_virus_expressing_human_GM-CSF
 virus-based_therapy	viral-based_gene_therapy,Fas-TNFR1_chimeric_protein
 virus-based_therapy	viral_nanoparticle_drug_conjugates
+CAR-T-cell_therapy	CAR-T-cell_therapy,BCMA/CD19-targeting	autologous_CAR-T-cell_therapy,BCMA/CD19-targeting
+CAR-T-cell_therapy	CAR-T-cell_therapy,EPHB4-targeting	autologous_CAR-T-cell_therapy,EPHB4-targeting
+PARP1_inhibitor	PARP1/2_inhibitor
+PARP1_inhibitor	PARP1/2_inhibitor,PARP-trapping
+PARP2_inhibitor	PARP1/2_inhibitor
+PARP2_inhibitor	PARP1/2_inhibitor,PARP-trapping
+TCF4_inhibitor	CTNNB1/TCF4_inhibitor
