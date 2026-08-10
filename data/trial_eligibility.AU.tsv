@@ -167,7 +167,6 @@ NCT07204340	KRAS:oncogenic_mutation
 NCT07094113	(KRAS:oncogenic_mutation OR KRAS:amplification)
 NCT06820463	NOT prior_therapy:Irinotecan
 NCT06982521	PIK3CA:oncogenic_mutation
-NCT07174336	PIK3CA:oncogenic_mutation
 NCT06973863	(MTAP:loss_of_protein_expression OR MTAP:deletion); NOT catype:Sarcoma
 NCT06330064	(catype:Endometrial Cancer OR catype:Head and neck squamous cell carcinoma OR catype:Pancreatic adenocarcinoma OR catype:Colorectal adenocarcinoma OR catype:Hepatocellular carcinoma OR catype:Gastrooesophageal adenicarcoma OR catype:Urothelial carcinoma OR catype:Ovarian cancer OR catype:Cervical cancer OR catype:Cutaneous melanoma); NOT catype:Sarcoma
 NCT06330064	catype:Breast Cancer; (ERBB2:low protein expression OR ERBB2:loss of protein expression)
@@ -186,7 +185,7 @@ NCT07070232	catype:Gastroesophageal adenocarcinoma
 NCT07070232	catype:Colorectal adenocarcinoma
 NCT04221542	NOT catype:Prostate small cell carcinoma
 NCT06136624	NOT catype:Prostate small cell carcinoma
-NCT07174336	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; NOT ERBB2:overexpression
+NCT07174336	PIK3CA:oncogenic_mutation; NOT ERBB2:amplification; NOT ERBB2:overexpression; catype:Breast cancer
 NCT06953089	(catype:Hepatocellular carcinoma OR catype:Cervical cancer OR catype:Melanoma OR catype:Head and neck squamous cell carcinoma OR catype:Ovarian cancer OR catype:Non-small cell lung cancer)
 NCT07213804	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma OR catype:Peritneal serous carcinoma)
 NCT06901531	catype:Gastroesophageal adenocarcinoma
