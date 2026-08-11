@@ -428,7 +428,7 @@ CTX112|CTX 112|CTX-112	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX130	allogeneic_CAR-T-cell_therapy,CD70-targeting
 CTX131	allogeneic_CAR-T-cell_therapy,CD70-targeting
 CUE-101	HPV16_E7-pHLA-IL2-Fc_fusion_protein
-CUSP06	anti-CDH6_antibody-drug_conjugate
+AMT-707|CUSP06	anti-CDH6_antibody-drug_conjugate
 Cabazitaxel|Jevtana|RPR-116258A|Taxoid XRP6258|XRP-6258	taxane
 Cabotamig|ARB-202|ARB202	bispecific_T-cell_engager,CDH17-targeting
 Cabozantinib|Cabometyx	AXL/MET/RET/VEGFR/ROS1/KIT_inhibitor; AXL_inhibitor; MET_inhibitor,type_2; RET_inhibitor; VEGFR2_inhibitor; ROS1_inhibitor; KIT_inhibitor

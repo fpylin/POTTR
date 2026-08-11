@@ -285,7 +285,7 @@ clinical-trial-database-file      = trial_registry.AP.tsv  # Expanded access pro
 ################################################################################
 
 clinical-trial-eligibility-file   = trial_eligibility.AU.tsv                    # Trial-specific criteria, manually entered
-clinical-trial-eligibility-file   = trial_eligibility_annotations.AU.txt        # Trial-specific criteria
+# clinical-trial-eligibility-file   = trial_eligibility_annotations.AU.txt        # Trial-specific criteria
 
 ################################################################################
 # THERAPY MATURITY FILE - (OPTIONAL) Databases used to assess the maturity of 
