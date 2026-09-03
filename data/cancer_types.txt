@@ -38,6 +38,7 @@ Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Acute promyelocytic
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic eosinophilic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic myelogenous leukaemia|Chronic myeloid leukaemia|CML
 Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia	Chronic neutrophilic leukaemia
+Cancer	Haematological malignancy	Leukaemia	Myeloid leukaemia|Myeloid malignancy
 Cancer	Haematological malignancy	Leukaemia	Waldenström Macroglobulinaemia|Waldenström Macroglobulinemia|Waldenstroms macroglobulinaemia|Waldenstrom macroglobulinaemia|Waldenstroem's Macroglobulinaemia
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma	Classical Hodgkin Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma|Hodgkins Lymphoma

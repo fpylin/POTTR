@@ -1,7 +1,7 @@
 drug	drug_class
 	111In-FPI-1967|[111In]-FPI-1967
-	131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA131I-TLX-101|Iodofalan 131I-TLX-101|TLX101-Tx|4-iodophenylalanine	radioligand,LAT1/LAT2-targeting
-161Tb-PSMA-I&T|[161Tb]Tb-PSMA-I&T|161[Tb]Tb-PSMA-I&T	radioligand,PSMA-targeting
+	131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA131I-TLX-101|Iodofalan 131I-TLX-101|TLX101-Tx|4-iodophenylalanine
+	161Tb-PSMA-I&T|[161Tb]Tb-PSMA-I&T|161[Tb]Tb-PSMA-I&T	radioligand,PSMA-targeting
 161Tb-RAD402	radioconjugate,KLK3-targeting
 177Lu-A9-0631|[177Lu]Lu-A9-0631|Lu-A9-0631	radioligand,GRPR-targeting
 177Lu-DOTA-STR-17126|[177Lu]Lu-DOTA-STR-17126	radioligand,GRPR-targeting
@@ -443,6 +443,7 @@ CS5001|CS 5001|CS-5001	anti-ROR1_antibody-drug_conjugate
 CS5007	bispecific_EGFR/ERBB3_antibody-drug_conjugate
 CT-179	OLIG2_inhibitor
 CT-202	anti-NECTIN4_antibody-drug_conjugate
+CTD402	allogeneic_CAR-T-cell_therapy,CD7-targeting
 CTX110|CTX 110|CTX-110|CTX101	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX112|CTX 112|CTX-112	allogeneic_CAR-T-cell_therapy,CD19-targeting
 CTX130	allogeneic_CAR-T-cell_therapy,CD70-targeting
@@ -705,6 +706,7 @@ FF-10850|FF 10850|FF10850	topoisomerase_inhibitor
 FG-M108	anti-CLDN18.2_monoclonal_antibody
 FHD-609|FHD609	BRD9_PROTAC_degrader
 FIT039	CDK9_inhibitor
+FL115|FL115 Injection	IL-15/IL-15R_Fc-fusion_protein
 FLOT|FLOX regimen	Fluorouracil + Oxaliplatin + Docetaxel
 FLOX|FLOX regimen	Fluorouracil + Oxaliplatin
 FMC-376	KRAS_G12C_inhibitor,ON/OFF-state_inhibitor
@@ -828,6 +830,7 @@ HB-202	vaccine_therapy,HPV-E6/HPV-E7-targeting
 HBM7008|HBM-7008	bispecific_B7H4/4-1BB_antibody
 HBW-012-E	KRAS_G12D_inhibitor
 HDM2017	anti-CDH17_antibody-drug_conjugate
+HH160	trispecific_PD-1/VEGFA/CTLA4_antibody
 HH30134	AXL/FLT3/NTRK_inhibitor
 HH3806	BET_inhibitor
 HKT288|HKT 288|Maytansine-based ADC HKT-288	anti-CDH6_antibody-drug_conjugate
@@ -871,6 +874,7 @@ IBI354|IBI-354	anti-ERBB2_antibody-drug_conjugate,topoisomerase_inhibitor_1-payl
 IBI363|IBI-363	anti-PD-1/IL-2-immunocytokine_conjugate
 ICE regimen	Ifosfamide + Carboplatin + Etoposide
 ICP-248	BCL2_inhibitor
+IDB-1829	unknown_drug_class
 IDE397|IDE-397	MAT2A_inhibitor
 IDH305	IDH1_R132_inhibitor
 IDOV-Immune	oncolytic_virus,undisclosed_mechanism
@@ -1606,6 +1610,7 @@ Samatatug Zovodotin|XB002|XB-002	anti-TF_antibody-drug_conjugate
 Samotolisib|LY3023414	PI3K/mTOR_inhibitor
 Samuraciclib|ICEC0942|CT7001	CDK7_inhibitor
 Sanritatug|SG301	anti-CD38_monoclonal_antibody
+Sapablursen	antisense_oligonucleotide_therapy,TMPRSS6-targeting
 Sapanisertib|MLN0128|TAK-228	mTORC1/mTORC2_inhibitor
 Sapu003	mTORC1/mTORC2_inhibitor
 Sargramostim|23-L-Leucinecolony-Stimulating Factor 2|DRG-0012|Leukine|Prokine|Sagramostim|Sargramostatin|rhu GM-CFS	Granulocyte-Macrophage_Colony_Stimulating_Factor
@@ -1657,7 +1662,9 @@ Sovleplenib|HMPL-523	SYK_inhibitor
 Spartalizumab|PDR-001|PDR001	anti-PD-1_monoclonal_antibody
 Streptozotocin	alkylating_agent
 Stupp regimen|Stupp protocol	Temozolomide + Radiotherapy
+Sturlimogene Erparepvec|RP2	oncolytic_herpes_simplex_virus
 Sturlimogene Erparepvec|RP2	unknown_drug_class
+Sturlimogene Erparepvec|VBC117	bispecific-EGFR/CDH17_antibody-drug_conjugate
 Subasumstat|TAK-981	SUMOylation_inhibitor
 Sugemalimab|CS1001|CS 1001|CS-1001|WBP 315|WBP-315|WBP315	anti-PD-L1_monoclonal_antibody
 Sulanemadlin|ALRN-6924	MDM2_inhibitor
@@ -1834,6 +1841,7 @@ Velzatinib|M4205|IDRX-42|GSK6042981	KIT/SCFR_inhibitor; KIT_inhibitor,type_2
 Vemurafenib|RG7204|PLX-4032|PLX4032|RG 7204|RO 5185426|Zelboraf	BRAF_V600_inhibitor
 Venetoclax|ABT-0199|ABT-199|ABT199|GDC-0199|RG7601|Venclexta|Venclyxto	BCL2_inhibitor
 Vepafestinib|TAS0953/HM06	RET-selective_inhibitor
+Vepafestinib|TAS0953|HM06	RET-selective_inhibitor
 Vepdegestrant|ARV-471|PF-07850327	ER_PROTAC_degrader
 Vepugratinib|LY3866288	FGFR3_inhibitor
 Vevorisertib|ARQ 751|ARQ751	pan-AKT_inhibitor
@@ -1931,5 +1939,6 @@ mRNA-4359	mRNA_personalised_cancer_vaccine,IDO/PD-L1-targeting
 mRNA-5671|mRNA-5671/V941|V941	mRNA_personalised_cancer_vaccine,KRAS-targeting
 milk-derived extracellular vesicles|mEVs|exosomes	extracellular_vesicle
 modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
+phosphorus-32|OncoSil	brachytherapy
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 radioactive iodine	radioactive_iodine_therapy
