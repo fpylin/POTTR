@@ -1,8 +1,7 @@
 drug	drug_class
 	111In-FPI-1967|[111In]-FPI-1967
 	131I-IPA|I-131 IPA|Iodine I 131 IPA|Iodine-131 IPA131I-TLX-101|Iodofalan 131I-TLX-101|TLX101-Tx|4-iodophenylalanine
-	161Tb-PSMA-I&T|[161Tb]Tb-PSMA-I&T|161[Tb]Tb-PSMA-I&T	radioligand,PSMA-targeting
-161Tb-RAD402	radioconjugate,KLK3-targeting
+	161Tb-PSMA-I&T|[161Tb]Tb-PSMA-I&T|161[Tb]Tb-PSMA-I&T161Tb-RAD402	radioconjugate,KLK3-targeting
 177Lu-A9-0631|[177Lu]Lu-A9-0631|Lu-A9-0631	radioligand,GRPR-targeting
 177Lu-DOTA-STR-17126|[177Lu]Lu-DOTA-STR-17126	radioligand,GRPR-targeting
 177Lu-DOTA-rosopatamab|177Lu-DOTA-TLX591-CHO|TLX591	radioligand,PSMA-targeting
