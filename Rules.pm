@@ -377,6 +377,7 @@ sub func($@) {
 package Rules;
 
 use Storable;
+use Digest::MD5 qw(md5_hex);
 
 our @EXPORT;
 our @EXPORT_OK;
@@ -849,8 +850,27 @@ sub load { # Load if-then rules from strings
 	$self->debug_print(37, "Added $n_rules rules.");
 	push @{ $self->{'rules'} }, @rules_spec;
 	$self->{'f_needs_reindex'} = 1;
+	return \@rules_spec;
 }
 
+sub load_with_runtime_cache {
+	my ($self, @rules_strs) = @_;
+	my $runtime_cache_dir = $self->{'runtime_cache_dir'};
+	return $self->load(@rules_strs) if ! defined $runtime_cache_dir;
+	my @rules_strs_subset = sort @rules_strs;
+	my $digest = md5_hex( join("\n", scalar(@rules_strs), @rules_strs_subset ) );
+	my $path = join("/", $runtime_cache_dir, "rules-$digest" );
+	my $rules_spec_ref ;
+	if ( -f $path )  {
+		$rules_spec_ref = Storable::retrieve( $path ) ;
+		push @{ $self->{'rules'} }, @$rules_spec_ref;
+		$self->{'f_needs_reindex'} = 1;
+	} else {
+		$rules_spec_ref = $self->load(@rules_strs) ;
+		Storable::store( $rules_spec_ref, $path ) ;
+	}
+	return $rules_spec_ref;
+}
 
 sub define_dyn_rule {
 	my ($self, $rule_name, $code_ref) = @_;
@@ -941,6 +961,7 @@ sub new {
 sub add_module {
 	my ($self, $ruleset_name) = @_;
 # 	my $cnt = $self->{'modules'}
+	# print STDERR "add_module $ruleset_name\n";
 	$self->{'modules'}{$ruleset_name} = Rules->new( \%{ $self->{'_params'} } )
 		if ! exists $self->{'modules'}{$ruleset_name};
 	$self->{'_latest_module'} = $ruleset_name;

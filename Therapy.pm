@@ -82,6 +82,7 @@ sub levenshtein {
 
 ######################################################################
 our $f_initiailised = undef;
+our @source_files ;
 
 our %known_drug_combinations;    # a register of known drug combination
 
@@ -522,12 +523,12 @@ sub get_all_drug_class_pairs {
 			push @pairs, join("\t", get_preferred_drug_name($d_sig), get_normalised_treatment_class_name($dc_sig) );
 		}
 	}
-	return @pairs;
+	return sort @pairs;
 }
 
 sub get_all_drug_class_hierarchy {
 	&ON_DEMAND_INIT;
-	return @hierarchy_pairs;
+	return sort @hierarchy_pairs;
 }
 
 sub load_drug_database {
@@ -796,6 +797,10 @@ sub get_all_matched_offspring_treatment_classes($) {
 	
 }
 
+sub get_source_files {
+	return @source_files;
+}
+
 
 sub ON_DEMAND_INIT {
 # 	print "!";
@@ -803,10 +808,12 @@ sub ON_DEMAND_INIT {
 	$f_initiailised = 1;
 	
 	for my $srcfile ( POTTRConfig::get_paths('data', 'therapy-database-file') ) {
+		push @source_files, $srcfile ;
 		load_drug_databases $srcfile ;
 	}
 
 	for my $srcfile ( POTTRConfig::get_paths('data', 'drug-class-hierarchy-file') ) {
+		push @source_files, $srcfile ;
 		load_drug_class_hirerchy $srcfile ;
 	}
 }

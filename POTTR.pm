@@ -33,7 +33,7 @@ use warnings;
 package POTTR;
 
 use POSIX;
-# use Storable;
+use Time::HiRes qw(gettimeofday tv_interval);
 
 
 ##################################################################################
@@ -66,8 +66,10 @@ our $default_tier_order_ref;
 
 sub min { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ < $v) ; } return $v; }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
+sub mtime { my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($_[0]); return $mtime; }
+sub newer { my ($f0, @fc) = $_; for my $f (@fc) { return 0 if ( mtime($f0) <= mtime($_) ); } return 1; }
 sub trim { my $s = shift; $s =~ s/^\s*|\s*$//g if (defined $s) ; return $s; }
-sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
+sub uniq { my %seen; return grep { !$seen{$_}++ } @_ }
 sub v_safe { my $x = shift; return '' if ! defined $x; return $x; }
 
 ##################################################################################
@@ -192,7 +194,7 @@ sub load_module_init {
 
 	if ( scalar @POTTRConfig::predefined_rules ) {
 # 		print STDERR ( map { "Predefined: $_\n" } @POTTRConfig::predefined_rules ) ;
-		$rs->load( @POTTRConfig::predefined_rules ) ;
+		$rs->load_with_runtime_cache( @POTTRConfig::predefined_rules ) ;
 	}
 }
 
@@ -206,6 +208,26 @@ sub gen_rule_ret_msg { # ($\@)
 	return @{ $retval_ref } ;
 }
 
+sub gen_pottr_rules_cached { # ($$$\@);
+	my $rules_cache_file = shift; # string
+	my $source_files = shift; # array_ref
+	my $code_ref = shift; # code to generte files. returns the rule set
+	my @args = @_;
+	my $rules_cache_file_full_path = POTTRConfig::mk_type_path( 'cache',  $rules_cache_file.".rulescache.txt" );
+
+	my @rules ;
+	
+	if ( ( ! -f $rules_cache_file_full_path ) || ( ! newer( $rules_cache_file_full_path,  @{ $source_files } ) ) ) {
+		@rules = $code_ref->(@args);
+		open FCACHE, ">$rules_cache_file_full_path" or die "$rules_cache_file_full_path not writable." ;
+		print FCACHE map { "$_\n" } @rules;
+		close FCACHE;
+		chmod 0666, $rules_cache_file_full_path;
+	} else {
+		@rules = file($rules_cache_file_full_path);
+	}
+	return @rules;
+}
 
 #######################################################################
 sub load_module_cancer_type_mapping {
@@ -223,16 +245,24 @@ sub load_module_cancer_type_mapping {
 		return @retval ;
 		}
 	);
-
-	my @catype_rules ;
-	my @catypes = CancerTypes::get_all_catypes();
-	for my $c (@catypes) {
-		for my $p ( CancerTypes::get_parents($c) ) {
-			push @catype_rules, mkrule( [ "catype:$c" ], [ "catype:$p" ] ),
-		}
-	}
 	
-	$rs->load( @catype_rules );
+	my @catype_rules = gen_pottr_rules_cached( "pottr_catypes", [ CancerTypes::get_source_files() ], 
+		sub {
+			my @catype_rules;
+			my @catypes = CancerTypes::get_all_catypes();
+			for my $c (@catypes) {
+				for my $p ( CancerTypes::get_parents($c) ) {
+					push @catype_rules, mkrule( [ "catype:$c" ], [ "catype:$p" ] ),
+				}
+			}
+			@catype_rules = uniq(@catype_rules);
+			return @catype_rules;
+		}
+	);
+
+	$rs->load_with_runtime_cache( 
+		$self->gen_rule_ret_msg( join(", ", CancerTypes::get_source_files()), \@catype_rules ) 
+	);
 }
 
 
@@ -242,7 +272,7 @@ sub load_module_variant_feature_mapping {
 
 	my $rs = $self->{'modules'}->add_module('01B - Predefined biomarker rules');
 	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-rules-file') ) {
-		$rs->load( file( $srcfile ) );
+		$rs->load_with_runtime_cache( file( $srcfile ) );
 	}
 	
 	$rs = $self->{'modules'}->add_module('01C - Variant Feature Mapping');
@@ -288,11 +318,11 @@ sub load_module_variant_feature_mapping {
 	);
 	
 	for my $srcfile ( POTTRConfig::get_paths('data', 'oncogenicity-rules-file') ) {
-		$rs->load( file( $srcfile ) );
+		$rs->load_with_runtime_cache( file( $srcfile ) );
 	}
 	
 	for my $srcfile ( POTTRConfig::get_paths('data', 'biomarker-rules-file') ) { # biomarker rule file is processed again.
-		$rs->load( file( $srcfile ) );
+		$rs->load_with_runtime_cache( file( $srcfile ) );
 	}
 	
 	$rs->define_dyn_rule( 'infer_mutation_calls',  sub { my $f = shift; my $facts = $_[0];
@@ -315,11 +345,17 @@ sub load_module_clinical_data_module {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('01D - Clinical data module');
 	
-	$rs->load( $self->gen_rules_drug_db_prior_therapy() );
+	my @prior_therapy_rules = gen_pottr_rules_cached( 'pottr_prior_therapy', [ Therapy::get_source_files() ], 
+		sub {
+			return $self->gen_rules_drug_db_prior_therapy();
+		}
+	);
+	
+	$rs->load_with_runtime_cache( @prior_therapy_rules );
 
 	$rs = $self->{'modules'}->add_module('01E - Extra clinical rules');
 	for my $srcfile ( POTTRConfig::get_paths('data', 'clinical-rules-file') ) {
-		$rs->load( file( $srcfile ) );
+		$rs->load_with_runtime_cache( file( $srcfile ) );
 	}	
 }
 
@@ -334,8 +370,12 @@ sub load_module_variant_evidence_grading {
 		$evidence_base_label //= "KB$cnt";
 		$evidence_base_label =~ s|.*/||;
 		$evidence_base_label =~ s|\W.*||;
-		my $rules_cache_file = POTTRConfig::mk_type_path("cache",  ($evidence_base_file =~ s/^.*\///r).".rulescache.txt" );
-		$rs->load( Evidence::gen_rule_knowledge_base( $evidence_base_label, $evidence_base_file, $rules_cache_file ) );
+		my @kbrules = gen_pottr_rules_cached( ($evidence_base_file =~ s/^.*\///r), [ $evidence_base_file ], 
+			sub {
+				return Evidence::gen_rule_knowledge_base( $evidence_base_label, $evidence_base_file );
+			}
+		);
+		$rs->load_with_runtime_cache( @kbrules );
 		++ $cnt ;
 	}
 
@@ -553,8 +593,6 @@ sub load_module_drug_sensitivity_prediction {
 		return ( Facts::mk_fact_str("sensitive_to$type:$therapy", @tags) );
 		}
 	);
-	
-
 }
 
 
@@ -628,7 +666,7 @@ sub gen_rules_drug_db {
 		my $combo_dc_orig = Therapy::get_treatment_class( $combo );
 		
 # 		print "C\t$combo, $combo_dc_orig\n";
-		for my $combo_dc ( Therapy::get_all_matched_offspring_treatment_classes( $combo_dc_orig ) ) {
+		for my $combo_dc ( sort Therapy::get_all_matched_offspring_treatment_classes( $combo_dc_orig ) ) {
 			next if $combo_dc eq $combo_dc_orig;
 			my $processed_lock = "therapy_sens_predicted:$combo_dc";
 # 			print "C1\t$combo, $combo_dc\n";
@@ -647,7 +685,7 @@ sub gen_rules_drug_db {
 		}
 	}
 	
-	for my $combo ( Therapy::get_all_known_combinations() ) {
+	for my $combo ( sort Therapy::get_all_known_combinations() ) {
 	
 		my $combo_dc = Therapy::get_treatment_class( $combo );
 		
@@ -671,6 +709,7 @@ sub gen_rules_drug_db {
 		);
 	}
 	
+	@drug_db = uniq(@drug_db);
 	
 	return $self->gen_rule_ret_msg( "Therapy:", \@drug_db );
 }
@@ -715,8 +754,12 @@ sub load_module_therapy_recomendation_and_grading {
 
 	$rs = $self->{'modules'}->add_module('04B - New therapy recommendation and grading (sensitive)');
 # 	
-	$rs->load( $self->gen_rules_drug_db() );
-# 	
+	my @rules_drug_db = gen_pottr_rules_cached( 'pottr_drug_db', [ Therapy::get_source_files() ], sub {
+			return $self->gen_rules_drug_db() ;
+		}
+	);
+	
+	$rs->load_with_runtime_cache( @rules_drug_db );
 }
 
 #######################################################################
@@ -773,16 +816,21 @@ sub load_module_preferential_trial_matching {
 	my @trial_eligibility_file = POTTRConfig::get_paths('data', 'clinical-trial-eligibility-file'); 
 
 	for my $trial_database_file (@trial_database_files) {
-		my $trial_database_cache_file = POTTRConfig::mk_type_path( 'cache',  ($trial_database_file =~ s/^.*\///r).".rulescache.txt" );
-		$rs->load( $self->gen_rule_ret_msg(
-				$trial_database_file, [
-				 ClinicalTrials::gen_rules_clinical_trials(
-					$trial_database_file,
-					@trial_eligibility_file, 
-					$trial_database_cache_file
-				) ]
-			)
+	
+		my @trials_rules = gen_pottr_rules_cached( ($trial_database_file =~ s/^.*\///r), [ $trial_database_file, @trial_eligibility_file ], 
+			sub {
+				my @trials_rules = $self->gen_rule_ret_msg(
+					$trial_database_file, [
+					ClinicalTrials::gen_rules_clinical_trials(
+						$trial_database_file,
+						@trial_eligibility_file, 
+					) ]
+				);
+				return @trials_rules;
+			}
 		);
+	
+		$rs->load_with_runtime_cache( @trials_rules );
 	}
 }
 
@@ -1032,47 +1080,59 @@ sub load_module_interpretation {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('08 - Clinical interpretation');
 	for my $srcfile ( POTTRConfig::get_paths('data', 'clinical-interpretation-rules-file') ) {
-		$rs->load( file( $srcfile ) );
+		$rs->load_with_runtime_cache( file( $srcfile ) );
 	}
 }
 
 #######################################################################
+my $POTTR_start_timestamp = [gettimeofday];
+my $POTTR_last_timestamp = [gettimeofday];
+
+sub pottr_tv_interval {
+	my $ref = shift;
+	my $elapsed = tv_interval( $ref // $POTTR_last_timestamp);
+	$POTTR_last_timestamp = [gettimeofday];
+	return $elapsed ;
+}
+
+sub load_module ($) {
+	my $self = shift;
+	my $module = shift;
+	my $code_ref = shift;
+	my $params = $self->{'params'};
+	my %modules = map { $_ => 1 } split( /\s*[;, ]\s*/, $$params{'modules'} );
+	return undef if ! exists($modules{$module}) ;
+	# printf STDERR ( "[%s]\tstarted\n", $module );
+	my $retval = $self->$code_ref();
+	# printf STDERR ( "[%s]\t%.6f sec\n", $module, pottr_tv_interval() );
+	return $retval ;
+}
+
 sub init {
 	my $self = shift;
 	
     my $params = $self->{'params'} ;
     
-	$params->{'modules'} = join(',', qw(CTM CLI VFM VEG DSO TRG PTM PTP INT)) if ! defined $params->{'modules'} ;
+    $$params{'runtime_cache_dir'} = POTTRConfig::get_dir('runtime_cache');
+    
+	$$params{'params'}{'modules'} = join(',', qw(CTM CLI VFM VEG DSO TRG PTM PTP INT)) if ! defined $params->{'modules'} ;
 
-	my %modules = map { $_ => 1 } split( /\s*[;, ]\s*/, $params->{'modules'} );
 
-# 	my $bin_cache_fn = join("/", POTTRConfig::get_dir('cache'), 'POTTR_preloaded.bin');
-# 	
-# 	if ( $params->{'preload'} && -f $bin_cache_fn ) {
-# 		$self->{'modules'} = retrieve $bin_cache_fn;
-# 		return;
-# 	}
-
-# 	print STDERR ">>2 ".$POTTRConfig::f_initialised."\n";
-# 	print STDERR ">>2 $_.\n" for @POTTRConfig::predefined_rules;
 	POTTRConfig::ON_DEMAND_INIT();
     $self->load_module_init();
-	exists $modules{'CTM'}  and $self->load_module_cancer_type_mapping();
-	exists $modules{'CLI'}  and $self->load_module_clinical_data_module();
-	exists $modules{'VFM'}  and $self->load_module_variant_feature_mapping();
-	exists $modules{'VEG'}  and $self->load_module_variant_evidence_grading();
-	exists $modules{'DSO'}  and $self->load_module_drug_sensitivity_prediction();
-	exists $modules{'TRG'}  and $self->load_module_therapy_recomendation_and_grading();
-	exists $modules{'TRG'}  and $self->load_module_therapy_prioritisation();
-	exists $modules{'PTM'}  and $self->load_module_preferential_trial_matching();
-	exists $modules{'PTP'}  and $self->load_module_preferential_trial_prioritisation();
+	$self->load_module('CTM', \&load_module_cancer_type_mapping);
+	$self->load_module('CLI', \&load_module_clinical_data_module);
+	$self->load_module('VFM', \&load_module_variant_feature_mapping);
+	$self->load_module('VEG', \&load_module_variant_evidence_grading);
+	$self->load_module('DSO', \&load_module_drug_sensitivity_prediction);
+	$self->load_module('TRG', \&load_module_therapy_recomendation_and_grading);
+	$self->load_module('TRG', \&load_module_therapy_prioritisation);
+	$self->load_module('PTM', \&load_module_preferential_trial_matching);
+	$self->load_module('PTP', \&load_module_preferential_trial_prioritisation);
 	$self->load_module_deinit();
-	exists $modules{'INT'}  and $self->load_module_interpretation();
+	$self->load_module('INT', \&load_module_interpretation);
 	
-# 	if ( $params->{'preload'} && ! ( -f $bin_cache_fn ) ) { 
-# 		store $self->{'modules'}, $bin_cache_fn ;
-# 		return;
-# 	}
+	# printf STDERR ( "Init\t%.6f sec\n", pottr_tv_interval($POTTR_start_timestamp) );
 
 }
 

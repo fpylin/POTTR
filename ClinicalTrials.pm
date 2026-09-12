@@ -54,8 +54,7 @@ BEGIN {
     @EXPORT_OK   = qw();
 }
 
-sub mtime { my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($_[0]); return $mtime; }
-sub uniq { my %order; my %a; my $cnt = 0; for(@_) { $a{$_} = 1; $order{$_} = $cnt if ! exists $order{$_} ; ++$cnt }; return sort {$order{$a} <=> $order{$b}} keys %a; }
+sub uniq { my %seen; return grep { !$seen{$_}++ } @_ }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 
 
@@ -82,21 +81,6 @@ sub get_trial_href($) {
 }
 
 
-####################################################################################################
-sub write_array_uniq($\@) {
-	my $outfile = $_[0];
-	my @data = @{ $_[1] };
-	my %visited;
-	open OUTF, ">$outfile" or die "FATAL: Unable to write $outfile: $!";
-	for (@data) {
-		next if exists $visited{$_} ;
-		$visited{$_} = 1;
-		print OUTF "$_\n";
-	}
-	close OUTF;
-	chmod 0666, $outfile;
-# 	print $!;
-}
 
 ####################################################################################################
 sub get_tier_by_phases_of_trials {
@@ -493,25 +477,13 @@ sub gen_rules_catype_match($\@\@) {
 	return %retval;
 }
 
-sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
+sub gen_rules_clinical_trials($\@) { # Generating clinical trial rules
 	&ON_DEMAND_INIT ;
 	my $srcf = $_[0];
 	my @srcf_eligibility = @{ $_[1] } ; # eligibility files
-	my $outf = $_[2];                   # pre-computed cache file for the rules
+	
 	my $trial_db = TSV->new( $srcf );
 	my %trial_db_by_trial_id = $trial_db->index_by('trial_id');
-	
-	if ( defined($outf) and ( -f $outf ) and ( mtime($srcf) < mtime($outf) ) ) { 
-		my $cache_is_recent = 1;
-		for my $srcf_eligibility ( @srcf_eligibility ) {
-			next if ! defined($srcf_eligibility) ;
-			next if ! -f $srcf_eligibility;
-			next if mtime($srcf_eligibility) < mtime($outf) ;
-			$cache_is_recent = 0;
-			last;
-		}
-		return file($outf) if $cache_is_recent ;
-	}
 	
 	my %Eligibility_by_trial_id ;
 	
@@ -804,8 +776,6 @@ sub gen_rules_clinical_trials($\@$) { # Generating clinical trial rules
 	
 	@trials_rules = sort( uniq(@trials_rules) );
 	
-	write_array_uniq($outf, @trials_rules) if defined $outf;
-
 	return @trials_rules;
 }
 

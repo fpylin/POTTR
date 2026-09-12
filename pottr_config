@@ -28,6 +28,8 @@
 data_dir  =  data
 cache_dir =  cache
 
+runtime_cache_dir = /tmp
+
 [Ontologies]
 
 ##############################################################################

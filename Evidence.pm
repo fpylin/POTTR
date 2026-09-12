@@ -55,7 +55,7 @@ BEGIN {
     @EXPORT_OK   = qw();
 }
 
-sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
+sub uniq { my %seen; return grep { !$seen{$_}++ } @_ }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 
 our $f_initiailised = undef;
@@ -300,22 +300,6 @@ sub process_tumour_type {
 	return $x;
 }
 
-
-sub write_array_uniq($\@) {
-	my $outfile = $_[0];
-	my @data = @{ $_[1] };
-	my %visited;
-	open OUTF, ">$outfile" or die "FATAL: Unable to write $outfile: $!";
-	for (@data) {
-		next if exists $visited{$_} ;
-		$visited{$_} = 1;
-		print OUTF "$_\n";
-	}
-	close OUTF;
-	chmod 0666, $outfile;
-# 	print $!;
-}
-
 sub check_biomarker {
 	my $biomarker = shift;
 	for ( split /\s*\+\s*/, $biomarker ) {
@@ -358,10 +342,17 @@ sub gen_rule_knowledge_base {
 	&ON_DEMAND_INIT;
 	my $srckb = shift; # input file name
 	my $srcf = shift;  # source file
-	my $outf = shift;  # cache file
+	# my $outf = shift;  # cache file
 	
 	my @all_rules_treatments;
 	
+# 	# Check if there are rules already cached and uptodate. If so, use it.
+# 	# print STDERR join("\t", "Evidence.pm:", $srcf, "->", "cache ".$outf, mtime($srcf), mtime(__FILE__), mtime($outf) )."\n";
+# 	if ( defined($outf) and ( -f $outf ) and ( mtime($srcf) < mtime($outf) ) and ( mtime(__FILE__) < mtime($outf) ) ) { 
+# 		# print STDERR "Evidence.pm: Cached $outf\n";
+# 		return file($outf);
+# 	}
+# 	
 	my $TSV_master = TSV->new($srcf);
 	
 	%data_d = ();
@@ -385,6 +376,23 @@ sub gen_rule_knowledge_base {
 	die "FATAL: $0: Evidence.pm: $srckb knowledge base ($srcf) does not contain Biomarker field. " if ! defined $fname_biomarker;
 	warn "WARNING: $0: Evidence.pm: $srckb knowledge base ($srcf) does not contain Evidence field." if ! defined $fname_evidence;
 	
+	# Load repurposing rules:
+	my %repurposing_retier_cancer_type ;
+	my %repurposing_retier_related_mutation ;
+	
+	my ($repurposing_retier_cancer_type_str) = POTTRConfig::get('repurposing-retier:cancer-type');
+	if ( defined $repurposing_retier_cancer_type_str ) {
+		push @debug_msg, "repurposing-retier:cancer-type = $repurposing_retier_cancer_type_str\n";
+		%repurposing_retier_cancer_type = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*,\s*/, $repurposing_retier_cancer_type_str;
+# 		print STDERR join("; ", ( map { "$_ => $repurposing_retier_cancer_type{$_}" } keys %repurposing_retier_cancer_type ) )."\n";
+	}
+
+	my ($repurposing_retier_related_mutation_str) = POTTRConfig::get('repurposing-retier:related-mutation');
+	if ( defined $repurposing_retier_related_mutation_str ) {
+		push @debug_msg, "repurposing-retier:related-mutation = $repurposing_retier_related_mutation_str\n";
+		%repurposing_retier_related_mutation = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*,\s*/, $repurposing_retier_related_mutation_str;
+	}	
+
 	# First, register all known drug combinations from the database
 	for my $row ( @{ $TSV_master->{'data'} } ) {
 		warn "Line: $$row{$fname_biomarker} has invalid drug names" if ! defined $$row{$fname_drugs} ;
@@ -407,30 +415,7 @@ sub gen_rule_knowledge_base {
 			$reference_catypes{$nct} = 1;
 		}
 	}
-	
-	
-	# Load repurposing rules:
-	my %repurposing_retier_cancer_type ;
-	my %repurposing_retier_related_mutation ;
-	
-	my ($repurposing_retier_cancer_type_str) = POTTRConfig::get('repurposing-retier:cancer-type');
-	if ( defined $repurposing_retier_cancer_type_str ) {
-		push @debug_msg, "repurposing-retier:cancer-type = $repurposing_retier_cancer_type_str\n";
-		%repurposing_retier_cancer_type = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*,\s*/, $repurposing_retier_cancer_type_str;
-# 		print STDERR join("; ", ( map { "$_ => $repurposing_retier_cancer_type{$_}" } keys %repurposing_retier_cancer_type ) )."\n";
-	}
-
-	my ($repurposing_retier_related_mutation_str) = POTTRConfig::get('repurposing-retier:related-mutation');
-	if ( defined $repurposing_retier_related_mutation_str ) {
-		push @debug_msg, "repurposing-retier:related-mutation = $repurposing_retier_related_mutation_str\n";
-		%repurposing_retier_related_mutation = map { my ($a, $b) = split /\s*:\s*/, $_; $a => $b } split /\s*,\s*/, $repurposing_retier_related_mutation_str;
-	}
-
-	# Then, check if there are rules already cached and uptodate. If so, use it.
-	if ( defined($outf) and ( -f $outf ) and ( mtime($srcf) < mtime($outf) ) and ( mtime(__FILE__) < mtime($outf) ) ) { 
-		return file($outf);
-	}
-	
+		
 	# Otherwise generate new rules.
 	
 	
@@ -782,8 +767,8 @@ sub gen_rule_knowledge_base {
 			}
 		}
 	}	
-	
-	write_array_uniq($outf, @all_rules_treatments) if defined $outf;
+
+	@all_rules_treatments = uniq(@all_rules_treatments);
 	
 	return @all_rules_treatments;
 }

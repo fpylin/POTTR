@@ -55,10 +55,12 @@ BEGIN {
 
 
 sub trim { my $s = shift; $s =~ s/^\s*|\s*$//g if (defined $s) ; return $s; }
-sub uniq { my %a; $a{$_} = 1 for(@_) ; return keys %a; }
+sub uniq { my %seen; return grep { !$seen{$_}++ } @_ }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 
 our $f_initiailised = undef;
+
+our @source_files ;
 
 our $catype_regex_M ;
 our %catype_preferred_term;
@@ -438,6 +440,10 @@ sub match_catype {
 }
 
 
+sub get_source_files {
+	return @source_files;
+}
+
 sub ON_DEMAND_INIT {
 	return if $f_initiailised ;
 	$f_initiailised = 1;
@@ -450,6 +456,7 @@ sub ON_DEMAND_INIT {
 			warn "\e[1;31mCancerTypes.pm: ONTOLOGY WARNING: $db not found.\e[0m\n" ;
 			next;
 		}
+		push @source_files, $db;
 		load_catype_database $db;
 	}
 }
