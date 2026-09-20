@@ -1391,6 +1391,7 @@ cancer_therapy,ALK-targeting	ALK_inhibitor,first_generation
 cancer_therapy,ALK-targeting	ALK_inhibitor,fourth_generation
 cancer_therapy,ALK-targeting	ALK_inhibitor,second_generation
 cancer_therapy,ALK-targeting	ALK_inhibitor,third_generation
+cancer_therapy,ALK-targeting	ALK_molecular_glue_degrader
 cancer_therapy,AR-targeting	AR_degrader	AR_AUTOTAC_degrader
 cancer_therapy,AR-targeting	AR_degrader	AR_PROTAC_degrader
 cancer_therapy,AR-targeting	AR_degrader	dual_AR_degrader_antagonist
