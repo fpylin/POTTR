@@ -67,7 +67,7 @@ our $default_tier_order_ref;
 sub min { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ < $v) ; } return $v; }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 sub mtime { my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($_[0]); return $mtime; }
-sub newer { my ($f0, @fc) = $_; for my $f (@fc) { return 0 if ( mtime($f0) <= mtime($_) ); } return 1; }
+sub newer { my ($f0, @fc) = $_; for my $f (@fc) { return 1 if ( mtime($f0) > mtime($_) ); } return 0; }
 sub trim { my $s = shift; $s =~ s/^\s*|\s*$//g if (defined $s) ; return $s; }
 sub uniq { my %seen; return grep { !$seen{$_}++ } @_ }
 sub v_safe { my $x = shift; return '' if ! defined $x; return $x; }
