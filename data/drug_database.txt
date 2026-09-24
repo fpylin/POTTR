@@ -121,7 +121,6 @@ APL-501	anti-PD-1_monoclonal_antibody
 ARC-02	anti-CD79b_antibody-drug_conjugate
 ARC101|ARC-101|ARC 101	bispecific_T-cell_engager,CLDN6-targeting
 ARS-853	KRAS_G12C_inhibitor,OFF-state_inhibitor
-ARV-393	BCL6_PROTAC_degrader
 AS602868	IKK2_inhibitor
 ASKG315	IL-15_prodrug
 ASN003	PI3K_alpha_inhibitor
@@ -1904,6 +1903,7 @@ ZL-1310	anti-DLL3_antibody-drug_conjugate
 ZN-C5	selective_estrogen_receptor_degrader
 ZW191	anti-FR-alpha_antibody-drug_conjugate
 Zalifrelimab|AGEN-1884|AGEN1884	anti-CTLA4_monoclonal_antibody
+Zaloblideg|ARV-393	BCL6_PROTAC_degrader
 Zamaporvint|RXC004|RXC-004	PORCN_inhibitor
 Zanidatamab Zovodotin|ZW49	anti-ERBB2_antibody-drug_conjugate,auristatin-payload
 Zanidatamab|ZW25	bispecific_ERBB2/ERBB2_antibody
