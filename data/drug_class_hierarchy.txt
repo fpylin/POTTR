@@ -2507,7 +2507,7 @@ immuno-oncology_therapy,PRAME-targeting	bispecific_T-cell_engager,PRAME-targetin
 immuno-oncology_therapy,PRLR-targeting	anti-PRLR_antibody-drug_conjugate
 immuno-oncology_therapy,PSGL1-targeting	anti-PSGL1_monoclonal_antibody
 immuno-oncology_therapy,PSMA-targeting	bispecific_T-cell_engager,PSMA-targeting
-immuno-oncology_therapy,PSMA∕STEAP1-targeting	anti-PSMA∕STEAP1_antibody-drug_conjugate
+immuno-oncology_therapy,PSMA/STEAP1-targeting	anti-PSMA/STEAP1_antibody-drug_conjugate
 immuno-oncology_therapy,PTK7-targeting	anti-PTK7_antibody-drug_conjugate
 immuno-oncology_therapy,PVRIG-targeting	anti-PVRIG_monoclonal_antibody
 immuno-oncology_therapy,RANK_L-targeting	anti-RANK_L_monoclonal_antibody

@@ -219,6 +219,9 @@ sub gen_pottr_rules_cached { # ($$$\@);
 	
 	if ( ( ! -f $rules_cache_file_full_path ) || ( ! newer( $rules_cache_file_full_path,  @{ $source_files } ) ) ) {
 		@rules = $code_ref->(@args);
+		# for my $r (@rules) {
+			# print STDERR "$r\n";
+		# }
 		open FCACHE, ">$rules_cache_file_full_path" or die "$rules_cache_file_full_path not writable." ;
 		print FCACHE map { "$_\n" } @rules;
 		close FCACHE;

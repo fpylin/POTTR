@@ -411,6 +411,7 @@ sub gen_rule_knowledge_base {
 		$catypes =~ s/ except.*//;
 		my @catypes = split /\s*(?:[;]|,)\s+/, $catypes;
 		for my $ct (@catypes) {
+			next if ! defined $ct ;
 			my $nct = CancerTypes::match_catype_whole_word( $ct );
 			$reference_catypes{$nct} = 1;
 		}

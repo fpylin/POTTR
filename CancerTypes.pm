@@ -388,7 +388,8 @@ sub match_catype_whole_word {
 	$catype_regex_M = get_catype_regex_M( get_all_catypes() )  if ! defined $catype_regex_M ;
 
 	if ( -f $match_catype_whole_word_cache_fn ) {
-		%match_catype_whole_word_cache = map { chomp; my ($a, $b) = split /\t/, $_; $a => $b } file($match_catype_whole_word_cache_fn); 
+		my @flines = file($match_catype_whole_word_cache_fn); 
+		%match_catype_whole_word_cache = map { my $orig = $_; chomp; my ($a, $b) = split /\t/, $_; $a => $b } @flines; # die "A:$orig" if ! defined $a; die "B:$orig" if ! defined $b; 
 	}
 
 	our $MMM = '';

@@ -858,7 +858,8 @@ sub load_with_runtime_cache {
 	my $runtime_cache_dir = $self->{'runtime_cache_dir'};
 	return $self->load(@rules_strs) if ! defined $runtime_cache_dir;
 	my @rules_strs_subset = sort @rules_strs;
-	my $digest = md5_hex( join("\n", scalar(@rules_strs), @rules_strs_subset ) );
+	my $digest_text = ( join("\n", scalar(@rules_strs), @rules_strs_subset ) =~ s/[^\x00-\x7F]//gr );
+	my $digest = md5_hex( $digest_text );
 	my $path = join("/", $runtime_cache_dir, "rules-$digest" );
 	my $rules_spec_ref ;
 	if ( -f $path )  {

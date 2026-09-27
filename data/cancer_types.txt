@@ -18,7 +18,7 @@ Cancer	Haematological malignancy	Leukaemia	Chronic leukaemia	Chronic myelogenous
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Adult B-cell acute lymphocytic leukemia|B-cell adult acute lymphocytic leukemia|Adult B-cell ALL
-Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	B-cell acute lymphoblastic leukaemia/lymphoma, BCR-ABL1–like|B-lymphoblastic leukaemia/lymphoma, BCR-ABL1–like
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	B-cell acute lymphoblastic leukaemia/lymphoma, BCR-ABL1-like|B-lymphoblastic leukaemia/lymphoma, BCR-ABL1-like
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Childhood B-cell acute lymphoblastic leukemia|Childhood B-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma|B-cell lymphoblastic leukaemia/lymphoma|B-lymphoblastic leukaemia/lymphoma||B-cell acute lymphoblastic leukaemia|B-cell lymphoblastic leukaemia|B-cell lymphoblastic lymphoma|B-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-ALL
@@ -338,7 +338,7 @@ Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine carcinosarc
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine leiomyosarcoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer|Uterine cancer|Uterine Corpus Endometrial Cancer|Uterine Endometrial Cancer
 Cancer	Solid tumour	Gynaecological cancer	Endometrial stromal sarcoma
-Cancer	Solid tumour	Gynaecological cancer	Endometrial stromal sarcoma	Low‑grade endometrial stromal sarcoma
+Cancer	Solid tumour	Gynaecological cancer	Endometrial stromal sarcoma	Low-grade endometrial stromal sarcoma
 Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum	High-grade serous ovarian cancer
 Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum	Primary fallopian tube serous carcinoma
 Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum	Primary peritoneal serous carcinoma
