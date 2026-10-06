@@ -149,6 +149,7 @@ sub load_catype_database($) {
 		my @parts = split /\t/, $line ;
 		my $prev_catype = undef;
 		for my $p (@parts) {
+			next if ! length $p;
 			my ($term, @synonym) = map { trim($_) } split /\|/, $p;
 			next if $term =~ /^\s*$/;
 			for my $t ($term, @synonym) {
@@ -442,6 +443,7 @@ sub match_catype {
 
 
 sub get_source_files {
+	&ON_DEMAND_INIT;
 	return @source_files;
 }
 

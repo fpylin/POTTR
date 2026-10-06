@@ -20,13 +20,13 @@ Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblasti
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Adult B-cell acute lymphocytic leukemia|B-cell adult acute lymphocytic leukemia|Adult B-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	B-cell acute lymphoblastic leukaemia/lymphoma, BCR-ABL1-like|B-lymphoblastic leukaemia/lymphoma, BCR-ABL1-like
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Childhood B-cell acute lymphoblastic leukemia|Childhood B-cell ALL
-Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma|B-cell lymphoblastic leukaemia/lymphoma|B-lymphoblastic leukaemia/lymphoma||B-cell acute lymphoblastic leukaemia|B-cell lymphoblastic leukaemia|B-cell lymphoblastic lymphoma|B-cell ALL
-Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-negative B-cell acute lymphoblastic leukaemia|Ph-negative B-cell acute lymphoblastic leukaemia|Ph-negative B-ALL
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma	Philadelphia-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-cell acute lymphoblastic leukaemia|Ph-positive B-ALL
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma|B-cell lymphoblastic leukaemia/lymphoma|B-lymphoblastic leukaemia/lymphoma||B-cell acute lymphoblastic leukaemia|B-cell lymphoblastic leukaemia|B-cell lymphoblastic lymphoma|B-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	B-cell acute lymphoblastic leukaemia/lymphoma|B-cell lymphoblastic leukaemia|B-cell lymphoblastic lymphoma|B lymphoblastic leukaemia|B lymphoblastic lymphoma|B-ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia	Childhood B-cell acute lymphoblastic leukemia
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	Childhood acute lymphocytic leukaemia|Childhood ALL
-Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma	     T-cell prolymphocytic leukaemia|Prolymphocytic leukemia, T-cell type
+Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma		 T-cell prolymphocytic leukaemia|Prolymphocytic leukemia, T-cell type
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma|T-cell lymphoblastic leukaemia/lymphoma|T-lymphoblastic leukaemia/lymphoma|T-cell acute lymphoblastic leukaemia|T-cell lymphoblastic leukaemia|T-cell lymphoblastic lymphoma|T-cell ALL
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Acute lymphoblastic leukaemia	T-cell acute lymphoblastic leukaemia/lymphoma|T-lymphoblastic leukaemia|T-cell lymphoblastic lymphoma
 Cancer	Haematological malignancy	Leukaemia	Lymphoid leukaemia	Chronic lymphocytic leukaemia
@@ -43,18 +43,19 @@ Cancer	Haematological malignancy	Leukaemia	Waldenström Macroglobulinaemia|Walde
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma	Classical Hodgkin Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Hodgkin's lymphoma|Hodgkins Lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Follicular lymphoma|Follicular B-cell lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Burkitt lymphoma|Burkitt's lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Diffuse large B-cell lymphoma,Primary CNS
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Diffuse large B-cell lymphoma,Richter's transformation|DLBCL-RT|Richter's transformation|Richter transformation|Richter's syndrome|Richter syndrome
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Double-hit B-cell lymphoma|Double-hit diffuse B-cell lymphoma|Double-hit lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Testicular diffuse large B-cell lymphoma|Testicular DLBCL|Testicular lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Triple-hit B-cell lymphoma|Triple-hit diffuse B-cell lymphoma|Triple-hit lymphoma
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Diffuse large B-cell lymphoma,Richter's transformation|DLBCL-RT|Richter's transformation|Richter transformation|Richter's syndrome|Richter syndrome
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma	Diffuse large B-cell lymphoma,Primary CNS
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Burkitt lymphoma|Burkitt's lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma	Diffuse large B-cell lymphoma|DLBCL|Large B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	High-grade B-cell lymphoma|High-grade B cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Mantle cell lymphoma|Mantle cell B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Marginal zone lymphoma|Marginal zone B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma	Small lymphocytic lymphoma|Small lymphocytic leukaemia
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	B-cell lymphoma|B-cell NHL|B-NHL|B-cell Non-Hodgkin's lymphoma||B-cell Non-Hodgkins lymphoma
+Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	Primary mediastinal B-cell lymphoma|Mediastinal B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Anaplastic large cell lymphoma|Lymphoma, Large-Cell, Anaplastic
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Gamma-delta T-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Hepatosplenic gamma-delta T-cell lymphoma|Hepatosplenic gamma-delta cell lymphoma|Hepatosplenic T-cell lymphoma
@@ -65,7 +66,6 @@ Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma	Peripheral T-cell lymphoma	Cutaneous T-cell lymphoma|Cutaneous lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	T-cell lymphoma|T-cell NHL|T-NHL|T-cell Non-Hodgkin's lymphoma||T-cell Non-Hodgkins lymphoma
 Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma|Non-hodgkin Lymphoma|NHL
-Cancer	Haematological malignancy	Lymphoma	Non-Hodgkin's lymphoma	Primary mediastinal B-cell lymphoma|Mediastinal B-cell lymphoma
 Cancer	Haematological malignancy	Lymphoma|Lymphoid malignancy
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell leukaemia
 Cancer	Haematological malignancy	Mast cell disorder	Mast cell sarcoma
@@ -81,9 +81,9 @@ Cancer	Haematological malignancy	Myeloproliferative neoplasm	Myelodysplastic/Mye
 Cancer	Haematological malignancy	Myeloproliferative neoplasm	Myelofibrosis|Primary myelofibrosis|Myeloproliferative neoplasm-associated myelofibrosis
 Cancer	Haematological malignancy	Myeloproliferative neoplasm	Polycythaemia vera|Polycythemia vera|Polycythemia ruba vera
 Cancer	Haematological malignancy	Myeloproliferative neoplasm|Myeloproliferative disorder|Myeloproliferative disease
-Cancer	Haematological malignancy	Plasma cell disorder	Multiple myeloma|Myeloma
 Cancer	Haematological malignancy	Plasma cell disorder	Amyloidosis	AL amyloidosis
 Cancer	Haematological malignancy	Plasma cell disorder	Amyloidosis	Transthyretin Amyloidosis
+Cancer	Haematological malignancy	Plasma cell disorder	Multiple myeloma|Myeloma
 Cancer	Haematological malignancy	Plasma cell disorder	Plasma cell leukaemia|Plasma cell leukemia
 Cancer	Haematological malignancy	Plasma cell disorder|Plasma cell dyscrasia
 Cancer	Haematological malignancy	Refractory anaemia
@@ -119,10 +119,10 @@ Cancer	Solid tumour	Cancer of unknown primary	Large cell neuroendocrine carcinom
 Cancer	Solid tumour	Cancer of unknown primary	Malignant melanoma of unknown primary|Melanoma of unknown primary
 Cancer	Solid tumour	Cancer of unknown primary	Mixed neuroendocrine non-neuroendocrine neoplasm of unknown primary|MiNEN of unknown primary|Unknown primary MiNEN
 Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine carcinoma of unknown primary|Unknown primary neuroendocrine carcinoma
-Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary|Unknown primary neuroendocrine tumour
 Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary	Neuroendocrine tumour of unknown primary, grade 1
 Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary	Neuroendocrine tumour of unknown primary, grade 2
 Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary	Neuroendocrine tumour of unknown primary, grade 3
+Cancer	Solid tumour	Cancer of unknown primary	Neuroendocrine tumour of unknown primary|Unknown primary neuroendocrine tumour
 Cancer	Solid tumour	Cancer of unknown primary	Pleomorphic undifferentiated carcinoma
 Cancer	Solid tumour	Cancer of unknown primary	Sarcomatoid carcinoma
 Cancer	Solid tumour	Cancer of unknown primary	Small-cell carcinoma of unknown primary
@@ -130,9 +130,18 @@ Cancer	Solid tumour	Cancer of unknown primary	Squamous cell carcinoma of unknown
 Cancer	Solid tumour	Cancer of unknown primary	Squamous cell carcinoma of unknown primary	Spindle cell carcinoma of unknown primary
 Cancer	Solid tumour	Cancer of unknown primary|Cancer of Unknown Primary Site
 Cancer	Solid tumour	Carcinoma	Adenocarcinoma
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of lacrimal gland
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of salivary gland
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of unknown primary
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Breast adenoid cystic carcinoma
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Lung adenoid cystic carcinoma
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Primary cutaneous adenoid cystic carcinoma
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Tracheal adenoid cystic carcinoma
+Cancer	Solid tumour	Carcinoma	Adenoid cystic carcinoma	Vulval adenoid cystic carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Bladder neuroendocrine carcinoma|Large Cell Neuroendocrine Carcinoma of the Bladder
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Breast neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Cervical neuroendocrine carcinoma	Cervical small-cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Extra-pulmonary neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Anal small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Appendiceal neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma
@@ -149,32 +158,30 @@ Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Large cell neuroendocrine
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Large cell neuroendocrine carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of head and neck
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of head and neck	Small cell carcinoma of head and neck
-Cancer	Solid tumour	Head and neck cancer	Small cell carcinoma of head and neck
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Neuroendocrine carcinoma of unknown primary
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Extra-pulmonary neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Anal small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Bladder small cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Breast neuroendocrine carcinoma|Breast small-cell carcinoma|Breast small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Cervical small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Colorectal small-cell neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Gallbladder small-cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Oesophageal small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Prostate neuroendocrine carcinoma|Prostate small-cell carcinoma|Prostate small cell carcinoma
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Breast neuroendocrine carcinoma|Breast small-cell carcinoma|Breast small cell carcinoma
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Small-cell carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Renal pelvis small cell carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma	Small-cell carcinoma of unknown primary
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Extra-pulmonary small-cell carcinoma|Extra-pulmonary small cell carcinoma
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma	Small-cell lung cancer
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Small-cell neuroendocrine carcinoma|Small cell carcinoma|Carcinoma, Small Cell
 Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Thymic neuroendocrine carcinoma|Thymic atypical carcinoid
-Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Thyroid cancer  Thyroid neuroendocrine carcinoma
+Cancer	Solid tumour	Carcinoma	Neuroendocrine carcinoma	Thyroid cancer	Thyroid neuroendocrine carcinoma
 Cancer	Solid tumour	Carcinoma	Poorly differentiated carcinoma
 Cancer	Solid tumour	Carcinoma	Signet ring cell carcinoma
 Cancer	Solid tumour	Carcinoma	Squamous cell carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Adrenocortical carcinoma|Adrenal cortical carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Adrenal cancer	Phaeochromocytoma
 Cancer	Solid tumour	Endocrine gland cancer	Parathyroid gland carcinoma|Parathyroid carcinoma
-Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Papillary craniopharyngioma|Craniopharyngioma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Adamantinomatous craniopharyngioma
+Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Papillary craniopharyngioma|Craniopharyngioma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pituitary adenoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer	Pituitary tumour	Pituitary carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Pituitary gland cancer|Pituitary gland tumour|Pituitary tumour
@@ -186,8 +193,8 @@ Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Medullary thyroid cancer|Medullary thyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma	Papillary thyroid cancer|Papillary thyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Differentiated thyroid carcinoma|Differentiated thyroid cancer|Well-differentiated thyroid carcinoma
-Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Poorly differentiated thyroid carcinoma	Poorly differentiated follicular thyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Poorly differentiated thyroid carcinoma	Insular thyroid carcinoma|Insular carcinoma of thyrpid
+Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Poorly differentiated thyroid carcinoma	Poorly differentiated follicular thyroid carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer	Thyroid neuroendocrine carcinoma
 Cancer	Solid tumour	Endocrine gland cancer	Thyroid cancer|Thyroid carcinoma
 Cancer	Solid tumour	Ependymoma
@@ -216,34 +223,34 @@ Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal c
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal cancer	Anal squamous cell carcinoma|Squamous cell carcinoma of the anal canal|Squamous cell carcinoma of the anus 
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Anal cancer|Anal carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal adenocarcinoma ex Goblet cell carcinoid
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal mixed neuroendocrine non-neuroendocrine neoplasm|Appendiceal MiNEN
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal mucinous adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal signet ring cell adenocarcinoma|Appendiceal signet ring cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma	Appendiceal mixed neuroendocrine non-neuroendocrine neoplasm|Appendiceal MiNEN
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal adenocarcinoma|Appendix adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Appendiceal pseudomyxoma peritonei
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Peritoneal mucinous carcinomatosis
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Goblet cell carcinoma|Goblet cell adenocarcinoma|Goblet cell carcinoid
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer	Peritoneal mucinous carcinomatosis
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Appendiceal cancer|Appendiceal carcinoma|Appendix cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	HER2-positive colorectal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	RAS-mutant colorectal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	RAS-wildtype colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600-mutant colorectal cancer	BRAF V600E colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	BRAF V600-mutant colorectal cancer|BRAF V600 colorectal adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma	Microsatellite stable colon cancer|Colon cancer microsatellite stable|MSS Colon Cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colon adenocarcinoma|Colon cancer|Bowel cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal mucinous adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal Mixed neuroendocrine non-neuroendocrine neoplasm|Colorectal MiNEN
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Mismatch repair deficient colorectal cancer|dMMR colorectal cancer
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Mismatch repair proficient colorectal cancer|pMMR colorectal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Colorectal mucinous adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	HER2-positive colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite instability-high colorectal cancer|MSI-H colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Microsatellite-stable colorectal cancer|MSS colorectal cancer|Colorectal Cancer Microsatellite Stable
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Mismatch repair deficient colorectal cancer|dMMR colorectal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Mismatch repair proficient colorectal cancer|pMMR colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Non-microsatellite instability-high colorectal cancer|Non-MSI-H colorectal cancer	Microsatellite stable colorectal cancer|MSS colorectal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	RAS-mutant colorectal cancer
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	RAS-wildtype colorectal cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal adenocarcinoma	Rectal adenocarcinoma|Rectal cancer|Rectum cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Colorectal signet ring carcinoma|Colorectal signet ring adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Primary colorectal squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Medullary colorectal carcinoma|Medullary carcinoma of the colon
+Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer	Primary colorectal squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal cancer|Carcinoma, colorectal|CRC
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer	Colorectal neuroendocrine carcinoma|Colorectal large cell neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Lower gastrointestinal cancer|Lower GI cancer
@@ -251,15 +258,15 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastro
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	EBV-related gastric carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma	HER2-positive gastric cancer|HER2-positive gastric adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma	HER2-negative gastric cancer|HER2-negative gastric adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric adenocarcinoma	HER2-positive gastric cancer|HER2-positive gastric adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric neuroendocrine carcinoma	Gastric small cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric poorly differentiated carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric signet ring cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastric undifferentiated carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-positive gastroesophageal cancer|HER2-positive gastroesophageal adenocarcinoma|HER2-positive GEJ adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-negative gastroesophageal cancer|HER2-negative gastroesophageal adenocarcinoma|HER2-negative GEJ adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma	HER2-positive gastroesophageal cancer|HER2-positive gastroesophageal adenocarcinoma|HER2-positive GEJ adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Gastroesophageal junction adenocarcinoma|Gastroesophageal adenocarcinoma|GEJ adenocarcinoma|GEJ cancer|Gastroesophageal junction cancer|GOJ adenocarcinoma|gastroesophageal junction (GEJ) adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric carcinoma	Primary gastric squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastroesophageal cancer	Gastric cancer	Gastric undifferentiated malignancy
@@ -274,10 +281,9 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastro
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastrointestinal mucinous adenocarcinoma	Pseudomyxoma peritonei	Appendiceal pseudomyxoma peritonei
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Gastrointestinal stromal tumour|Gastrointestinal stromal tumour|GIST
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer	Adenosquamous carcinoma of Ampulla of Vater|Ampullary adenosquamous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer	Sarcomatoid carcinoma of Ampulla of Vater|Ampullary
-sarcomatoid carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer	Ampullary mixed neuroendocrine non-neuroendocrine neoplasm|Ampullary MiNEN
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer	Ampullary adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer	Ampullary mixed neuroendocrine non-neuroendocrine neoplasm|Ampullary MiNEN
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer	Sarcomatoid carcinoma of Ampulla of Vater|Ampullary sarcomatoid carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Ampullary cancer|Ampullary carcinoma|Cancer of the Ampulla of Vater
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Cholangiocarcinoma	Combined hepatocellular cholangiocarcinoma|Combined hepatocellular carcinoma and cholangiocarcinoma
@@ -287,9 +293,9 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepato
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder adenosquamous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder squamous cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder small-cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder signet ring cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder small-cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer	Gallbladder cancer	Gallbladder squamous cell carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Biliary tract cancer|Biliary cancer|Bile duct cancer|Biliary adenocarcinoma|Bile duct adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Hepatocellular carcinoma	Fibrolamellar hepatocellular carcinoma|Fibrolamellar carcinoma|Hepatocellular carcinoma, fibrolamellar
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Hepatobiliary cancer	Hepatocellular carcinoma|Liver cancer|HCC|Carcinoma, Hepatocellular
@@ -300,22 +306,22 @@ Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancre
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic adenosquamous carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic colloid carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic medullary carcinoma|Medullary pancreatic carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic squamous cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic sarcomatoid carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic mixed neuroendocrine-non-neuroendocrine neoplasm|Pancreatic MiNEN
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic sarcomatoid carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Exocrine pancreatic cancer	Pancreatic squamous cell carcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Hepatic carcinoma of pancreas
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic intraductal oncocytic papillary carcinoma|Intraductal oncocytic papillary carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic neuroendocrine tumour
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic solid pseudopapillary tumour|Solid pseudopapillary tumour of the pancreas|Pancreatic pseudopapillary tumour
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Pancreatic undifferentiated carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Pancreatobiliary cancer	Pancreatic cancer	Hepatic carcinoma of pancreas
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Ampullary cancer|Ampullary carcinoma|cancer of the Ampulla of Vater
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Duodenal cancer|Duodenal carcinoma|Duodenal adenocarcinoma
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma with neuroendocrine differentiation
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma|Small bowel adenocarcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenosquamous carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine neuroendocrine carcinoma|Small bowel neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine neuroendocrine carcinoma	Small intestine small cell carcinoma
-Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine adenocarcinoma with neuroendocrine differentiation
+Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer	Small intestine neuroendocrine carcinoma|Small bowel neuroendocrine carcinoma
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer	Small intestine cancer|Small bowel cancer
 Cancer	Solid tumour	Gastrointestinal cancer	Upper gastrointestinal cancer|Upper GI cancer
 Cancer	Solid tumour	Gynaecological cancer	Cervical cancer
@@ -335,6 +341,7 @@ Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcino
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Uterine serous adenocarcinofibroma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Endometrial carcinoma	Uterine serous carcinoma|Endometrial serous adenocarcinoma|High-grade serous carcinoma of endometrium
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine carcinosarcoma|Uterine malignant Mullerian mixed tumour|Uterine Mullerian mixed tumour|Uterine MMMT|MMMT
+Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine leiomyoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine leiomyosarcoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer|Uterine cancer|Uterine Corpus Endometrial Cancer|Uterine Endometrial Cancer
 Cancer	Solid tumour	Gynaecological cancer	Endometrial stromal sarcoma
@@ -348,6 +355,7 @@ Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Canc
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian carcinosarcoma|Ovarian Mullerian mixed tumour|Ovarian MMMT
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian clear cell carcinoma|Ovarian clear cell adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian endometrioid adenocarcinoma|Ovarian endometrioid carcinoma|Endometrioid carcinoma of the ovary|Endometrioid Ovary Carcinoma
+Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian mesonephric-like adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian mucinous carcinoma|Mucinous ovarian cancer|Mucinous ovarian carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian serous carcinoma	Borderline serous ovarian cancer|Borderline serous ovarian carcinoma|Borderline serous adenocarcinoma|Borderline epithelial cancers of ovary
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian serous carcinoma	High-grade serous ovarian cancer|High-grade serous ovarian carcinoma|High-grade epithelial cancers of ovary
@@ -359,27 +367,28 @@ Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Canc
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian squamous cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian squamous cell carcinoma	Primary ovarian squamous cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian transitional cell carcinoma
-Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer	Ovarian adenocarcinoma	Ovarian mesonephric-like adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Epithelial Ovarian Cancer|Ovarian surface epithelial tumour|Carcinoma, Ovarian Epithelial
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Mesonephric-like carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Ovarian Sertoli-Leydig cell tumour|Ovarian Sertoli cell tumour
 Cancer	Solid tumour	Gynaecological cancer	Ovarian cancer	Ovarian yolk sac tumour
-Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine leiomyoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer	Vaginal adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer	Vaginal adenosquamous carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer	Vaginal sarcoma|Vagina sarcoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vaginal cancer	Vaginal squamous cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vulval cancer	Vulval adenoid cystic carcinoma
+Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vulval cancer	Vulval clear cell adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vulval cancer	Vulval small cell carcinoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vulval cancer	Vulval squamous cell carcinoma
-Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vulval cancer	Vulval clear cell adenocarcinoma
 Cancer	Solid tumour	Gynaecological cancer	Vaginal and vulvar cancer	Vulval cancer|Vulvar cancer
 Cancer	Solid tumour	Gynaecological cancer|Female reproductive system cancer
 Cancer	Solid tumour	HER2-positive solid tumour
 Cancer	Solid tumour	HER2-positive solid tumour	HER2-expressing solid tumour|HER2-expressing cancer
 Cancer	Solid tumour	Head and neck cancer
+Cancer	Solid tumour	Head and neck cancer	Adenoid cystic carcinoma of the sinonasal tract
+Cancer	Solid tumour	Head and neck cancer	Ameloblastoma
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Laryngeal squamous cell carcinoma
+Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Micropapillary carcinoma of the head and neck
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Nasopharyngeal carcinoma	Basaloid nasopharyngeal carcinoma|Basaloid nasopharyngeal squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Nasopharyngeal carcinoma	EBV-associated nasopharyngeal carcinoma
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Nasopharyngeal carcinoma|Nasopharyngeal neoplasm
@@ -387,15 +396,13 @@ Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	O
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Oropharyngeal squamous cell carcinoma	Squamous cell carcinoma of the base of tongue
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Oropharyngeal squamous cell carcinoma	Squamous cell carcinoma of the oral tongue|Tongue cancer
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Papillary squamous cell carcinoma of the head and neck
-Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma	Micropapillary carcinoma of the head and neck
 Cancer	Solid tumour	Head and neck cancer	Head and neck squamous cell carcinoma|HNSCC|SCCHN|Squamous cell carcinoma of the head and neck|Head and neck cancer squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Intestinal-type adenocarcinoma of the nasal cavity
-Cancer	Solid tumour	Head and neck cancer	Adenoid cystic carcinoma of the sinonasal tract
-Cancer	Solid tumour	Head and neck cancer	Ameloblastoma
 Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer
 Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer	Adenoid cystic carcinoma of lacrimal gland|Lacrimal gland adenoid cystic carcinoma
-Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer	Lacrimal gland transitional cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer	Lacrimal gland adenocarcinoma|adenocarcinoma of the lacrimal gland
+Cancer	Solid tumour	Head and neck cancer	Lacrimal gland cancer	Lacrimal gland transitional cell carcinoma
+Cancer	Solid tumour	Head and neck cancer	Microcystic adnexal carcinoma
 Cancer	Solid tumour	Head and neck cancer	NUT carcinoma|NUT midline carcinoma
 Cancer	Solid tumour	Head and neck cancer	Neuroendocrine carcinoma of head and neck
 Cancer	Solid tumour	Head and neck cancer	Neuroendocrine carcinoma of head and neck	Primary small cell neuroendocrine carcinoma of the tonsil
@@ -429,16 +436,16 @@ Cancer	Solid tumour	Head and neck cancer	Sinonasal squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Sinonasal squamous cell carcinoma	Ethmoid sinus squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Sinonasal squamous cell carcinoma	Maxillary sinus squamous cell carcinoma
 Cancer	Solid tumour	Head and neck cancer	Sinonasal undifferentiated carcinoma
-Cancer	Solid tumour	Head and neck cancer	Microcystic adnexal carcinoma
+Cancer	Solid tumour	Head and neck cancer	Small cell carcinoma of head and neck
 Cancer	Solid tumour	Head and neck cancer	Tracheal adenoid cystic carcinoma|Adenoid cystic carcinoma of the trachea
 Cancer	Solid tumour	KRAS G12C-mutant solid tumour|KRAS p.G12C-mutant solid tumour
 Cancer	Solid tumour	Lung cancer	Lung neuroendocrine tumour|Lung carcinoid tumour|Lung carcinoid
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	ALK-rearranged non-small cell lung cancer|ALK-positive non-small cell lung cancer|ALK-positive NSCLC
-Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	EGFR-mutant non-small cell lung cancer|EGFR-positive non-small cell lung cancer|Non-small cell lung cancer with mutation in epidermal growth factor receptor
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	BRAF V600E-mutant non-small cell lung cancer|BRAF V600E-mutant NSCLC
+Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	EGFR-mutant non-small cell lung cancer|EGFR-positive non-small cell lung cancer|Non-small cell lung cancer with mutation in epidermal growth factor receptor
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	HER2-mutant non-small cell lung cancer|HER2-mutant NSCLC
-Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	KRAS-mutant non-small cell lung cancer|KRAS-mutant NSCLC
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	KRAS-mutant non-small cell lung cancer	KRAS G12C-mutant non-small cell lung cancer|KRAS G12C-mutant NSCLC
+Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	KRAS-mutant non-small cell lung cancer|KRAS-mutant NSCLC
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Lung adenoid cystic carcinoma
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Lung mucoepidermoid carcinoma
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Lung pleomorphic carcinoma|Pleomorphic lung carcinoma
@@ -456,8 +463,8 @@ Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	PD-L1-positive non-sm
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Pulmonary lymphoepithelioma-like carcinoma|Lung lymphoepithelial carcinoma
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Pulmonary sarcomatoid carcinoma|Pseudosarcomatous carcinoma of the lung|Sarcomatoid carcinoma of the lung
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	RET-fusion non-small cell lung cancer|RET fusion-positive non-small cell lung cancer|RET-positive non-small cell lung cancer
-Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Squamous non-small-cell lung cancer|Lung squamous cell carcinoma|Squamous NSCLC|Squamous cell lung cancer|Non Small Cell Lung Cancer Squamous|Non-small Cell Lung Cancer, Squamous|Non small cell lung cancer squamous|Squamous Non-Small Cell Lung Cancer
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Squamous non-small-cell lung cancer	Lung basaloid squamous cell carcinoma|Basaloid squamous cell carcinoma of the lung
+Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer	Squamous non-small-cell lung cancer|Lung squamous cell carcinoma|Squamous NSCLC|Squamous cell lung cancer|Non Small Cell Lung Cancer Squamous|Non-small Cell Lung Cancer, Squamous|Non small cell lung cancer squamous|Squamous Non-Small Cell Lung Cancer
 Cancer	Solid tumour	Lung cancer	Non-small cell lung cancer|NSCLC|Lung Cancer, Non-Small Cell|Non small cell lung cancer|Carcinoma, Non-small-cell Lung
 Cancer	Solid tumour	Lung cancer	Small-cell lung cancer|Small-cell lung carcinoma|Lung small cell carcinoma|SCLC
 Cancer	Solid tumour	Lung cancer|Cancer, lung|Cancer of lung|Broncogenic carcinoma|Carcinoma, bronchogenic
@@ -488,13 +495,13 @@ Cancer	Solid tumour	Neuroendocrine carcinoma	Gastro-entero-pancreatic neuroendoc
 Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma
 Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Colorectal neuroendocrine carcinoma
 Cancer	Solid tumour	Neuroendocrine carcinoma	Gastrointestinal neuroendocrine carcinoma	Gastric neuroendocrine carcinoma
+Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Appendiceal carcinoid
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Colorectal neuroendocrine tumour	Colorectal neuroendocrine tumour, grade 1
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Colorectal neuroendocrine tumour	Colorectal neuroendocrine tumour, grade 2
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Colorectal neuroendocrine tumour	Colorectal neuroendocrine tumour, grade 3
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Gastric neuroendocrine tumour	Gastric neuroendocrine tumour, grade 1
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Gastric neuroendocrine tumour	Gastric neuroendocrine tumour, grade 2
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Gastric neuroendocrine tumour	Gastric neuroendocrine tumour, grade 3
-Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Appendiceal carcinoid
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Midgut neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour	Pancreatic neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Gastro-entero-pancreatic neuroendocrine tumour|Gastrointestinal neuroendocrine tumour
@@ -504,10 +511,10 @@ Cancer	Solid tumour	Neuroendocrine tumour	Lung neuroendocrine tumour	Lung neuroe
 Cancer	Solid tumour	Neuroendocrine tumour	Lung neuroendocrine tumour	Lung neuroendocrine tumour, grade 3
 Cancer	Solid tumour	Neuroendocrine tumour	Ovarian neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour	Paraganglioma|Malignant paraganglioma
-Cancer	Solid tumour	Neuroendocrine tumour	Renal neuroendocrine tumour|Neuroendocrine tumour of the kidney
 Cancer	Solid tumour	Neuroendocrine tumour	Renal neuroendocrine tumour	Renal neuroendocrine tumour, grade 1
 Cancer	Solid tumour	Neuroendocrine tumour	Renal neuroendocrine tumour	Renal neuroendocrine tumour, grade 2
 Cancer	Solid tumour	Neuroendocrine tumour	Renal neuroendocrine tumour	Renal neuroendocrine tumour, grade 3
+Cancer	Solid tumour	Neuroendocrine tumour	Renal neuroendocrine tumour|Neuroendocrine tumour of the kidney
 Cancer	Solid tumour	Neuroendocrine tumour	Somatostatinoma
 Cancer	Solid tumour	Neuroendocrine tumour	Thymic neuroendocrine tumour	Thymic neuroendocrine tumour, grade 1
 Cancer	Solid tumour	Neuroendocrine tumour	Thymic neuroendocrine tumour	Thymic neuroendocrine tumour, grade 2
@@ -518,10 +525,10 @@ Cancer	Solid tumour	Neuroendocrine tumour	Well-differentiated neuroendocrine tum
 Cancer	Solid tumour	Neuroendocrine tumour	Well-differentiated neuroendocrine tumour, WHO Grade 3|High-grade well-differentiated neuroendocrine tumour
 Cancer	Solid tumour	Neuroendocrine tumour|Carcinoid tumour|Atypical carcinoid tumour
 Cancer	Solid tumour	Neuroepithelial tumour
-Cancer	Solid tumour	Neurofibromatosis|Plexiform Neurofibroma	Type 1 neurofibromatosis
-Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis|Type 2 neurofibromatosis
-Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis	NF2-deficient meningioma
 Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis	NF2-deficient Schwannoma
+Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis	NF2-deficient meningioma
+Cancer	Solid tumour	Neurofibromatosis	NF2-Related Schwannomatosis|Type 2 neurofibromatosis
+Cancer	Solid tumour	Neurofibromatosis|Plexiform Neurofibroma	Type 1 neurofibromatosis
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Central nervous system primitive neuroectodermal tumour	Atypical teratoid rhabdoid tumour
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Central nervous system primitive neuroectodermal tumour	Medulloblastoma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Central nervous system primitive neuroectodermal tumour|CNS PNET|CNS-PNET
@@ -547,13 +554,13 @@ Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Mal
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Glioblastoma	Glioblastoma, IDH-wildtype, grade 4
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Glioblastoma|Glioblastoma multiforme
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	Gliosarcoma
-Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	High-grade astrocytoma with piloid features
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma	Brain stem glioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma	Diffuse intrinsic pontine glioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	H3K27M-mutant glioma|Diffuse midline glioma, H3 K27M mutant|Diffuse midline glioma, H3K27-altered, WHO Grade 4
+Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma	High-grade astrocytoma with piloid features
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	High-grade glioma|Glioma, high-grade
-Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse glioma, WHO Grade 2|Diffuse astrocytoma, WHO Grade 2|Astrocytoma, WHO Grade 2
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse glioma, WHO Grade 2	Astrocytoma, IDH-mutant, WHO Grade 2
+Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse glioma, WHO Grade 2|Diffuse astrocytoma, WHO Grade 2|Astrocytoma, WHO Grade 2
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Diffuse leptomeningeal neuroglial tumour
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Oligodendroglioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioma	Malignant glioma	Low-grade glioma	Paediatric low grade gliomas|Childhood low-grade glioma
@@ -580,9 +587,9 @@ Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Glioneuron
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Hemangioblastoma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	Atypical meningioma
+Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	NF2-deficient meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	Papillary meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	Transitional meningioma
-Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Meningioma	NF2-deficient meningioma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Pineal gland tumour	Pineal parenchymal tumours of intermediate differentiation|PPTID
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer	Pineal gland tumour	Pineoblastoma
 Cancer	Solid tumour	Neurological cancer	Central nervous system cancer|CNS cancer|Brain cancer|Primary Brain tumour|Primary CNS tumour|Primary CNS cancer
@@ -592,9 +599,9 @@ Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neurobl
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neuroblastic tumour	Ganglioneuroma
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neuroblastic tumour	Neuroblastoma	Olfactory neuroblastoma|Esthesioneuroblastoma
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Neuroblastic tumour	Neuroblastoma|Peripheral neuroblastic tumour
-Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma|Acoustic neuroma|Vestibular schwannoma
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma	NF2-deficient Schwannoma
 Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma	Non-vestibular schwannoma
+Cancer	Solid tumour	Neurological cancer	Peripheral nervous system tumour	Schwannoma|Acoustic neuroma|Vestibular schwannoma
 Cancer	Solid tumour	Neurological cancer|Neurologic cancer|Nervous system cancer
 Cancer	Solid tumour	Oncocytic carcinoma
 Cancer	Solid tumour	PD-L1 amplified tumour
@@ -646,10 +653,10 @@ Cancer	Solid tumour	Sarcoma	Kaposi sarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	EBV-related leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	Epithelioid leiomyosarcoma
+Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	Myxoid leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	Ovarian leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	Renal leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	Uterine leiomyosarcoma
-Cancer	Solid tumour	Sarcoma	Leiomyosarcoma	Myxoid leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Low-grade spindle cell neoplasm
 Cancer	Solid tumour	Sarcoma	Malignant fibroxanthoma
 Cancer	Solid tumour	Sarcoma	Malignant perineurioma
@@ -667,8 +674,8 @@ Cancer	Solid tumour	Sarcoma	Sarcoma, synovial-like	Synovial sarcoma
 Cancer	Solid tumour	Sarcoma	Small cell sarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Angiosarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Breast angiosarcoma
-Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Epithelioid haemangioendothelioma|hemangioendothelioma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	EBV-related smooth muscle tumour
+Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Epithelioid haemangioendothelioma|hemangioendothelioma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Intimal sarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Leiomyosarcoma	Cervical leiomyosarcoma
 Cancer	Solid tumour	Sarcoma	Soft tissue sarcoma	Leiomyosarcoma	Uterine leiomyosarcoma
@@ -699,9 +706,9 @@ Cancer	Solid tumour	Sclerosing sweat duct carcinoma
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Ovarian Sertoli-Leydig cell tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Ovarian granulosa cell tumour|Granulosa cell tumour
+Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Steroid cell tumour|Malignant steroid cell tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Testicular Leydig cell tumour|Leydig cell tumour
 Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Testicular Sertoli cell tumour
-Cancer	Solid tumour	Sex cord-gonadal stromal tumour	Steroid cell tumour|Malignant steroid cell tumour
 Cancer	Solid tumour	Skin cancer
 Cancer	Solid tumour	Skin cancer	Cutaneous melanoma|Skin melanoma|Melanomatous skin cancer
 Cancer	Solid tumour	Skin cancer	Non-melanoma skin cancer	Basaloid squamous cell carcinoma
@@ -736,8 +743,8 @@ Cancer	Solid tumour	Thymic epithelial cancer	Thymic carcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymic carcinoma	Thymic lymphoepithelial carcinoma|Thymic lymphoepithelial-like carcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymic clear cell adenocarcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymic neuroendocrine carcinoma
-Cancer	Solid tumour	Thymic epithelial cancer	Thymic squamous cell carcinoma|Thymus squamous cell carcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymic squamous cell carcinoma	Thymic basaloid carcinoma|Thymic basaloid squamous cell carcinoma
+Cancer	Solid tumour	Thymic epithelial cancer	Thymic squamous cell carcinoma|Thymus squamous cell carcinoma
 Cancer	Solid tumour	Thymic epithelial cancer	Thymoma
 Cancer	Solid tumour	Thymic epithelial cancer|Thymic cancer
 Cancer	Solid tumour	Undifferentiated malignancy
@@ -758,11 +765,11 @@ Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder squamous cell carci
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder urothelial carcinoma	Platinum-resistant urothelial carcinoma
 Cancer	Solid tumour	Urogenital cancer	Bladder cancer	Bladder urothelial carcinoma|Urothelial cancer|Transitional cell carcinoma of the bladder|Invasive bladder urothelial carcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Extragonadal seminoma
-Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Mediastinal embryonal carcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Intracranial embryonal carcinoma	Pituitary embryonal carcinoma
+Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Mediastinal embryonal carcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian dysgerminoma
-Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian mature teratoma|Mature cystic teratoma of the ovary|Ovarian dermoid cyst|Cystic teratoma|Ovarian cystic teratoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian mature teratoma	Squamous cell carcinoma transformation of mature cystic teratoma|Ovarian squamous cell carcinoma associated with teratoma
+Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian mature teratoma|Mature cystic teratoma of the ovary|Ovarian dermoid cyst|Cystic teratoma|Ovarian cystic teratoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Ovarian yolk sac tumour
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Choriocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Mixed germ cell tumour
@@ -771,7 +778,6 @@ Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-sem
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma	Yolk sac tumour|Yolk sac tumour
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Non-seminoma|Non-seminomatous Germ Cell tumour|NSGCT|Germ cell tumor, nonseminomatous
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour	Testicular cancer	Seminoma
-Cancer	Solid tumour	Urogenital cancer	Testicular adenocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Germ cell tumour|Malignant germ cell tumour
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Clear cell renal cell carcinoma|Clear cell renal carcinoma|Renal cell carcinoma|Renal Cell Cancer|Carcinoma, Renal Cell|Renal Cell Carcinoma, Clear Cell
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Non-clear cell renal cell carcinoma	Chromophobe renal cell carcinoma|Renal cell carcinoma, chromophobe type
@@ -795,12 +801,12 @@ Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Penile cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Penile cancer	Penile squamous cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma
-Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenosquamous carcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-resistant prostate cancer	Taxane-naive castration resistant prostate cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-resistant prostate cancer|Castration-resistant prostate cancer|mCRPC|CRPC|Prostate cancer, castration-resistant
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-sensitive prostate cancer|Hormone Naive Prostate Cancer|Hormone-Sensitive Prostate Cancer
-Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate neuroendocrine carcinoma|Neuroendocrine prostate cancer
+Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenosquamous carcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate mixed neuroendocrine non-neuroendocrine neoplasm|Prosate MiNEN
+Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate neuroendocrine carcinoma|Neuroendocrine prostate cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate sarcomatoid carcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate small cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Scrotal squamous cell carcinoma
@@ -811,9 +817,10 @@ Cancer	Solid tumour	Urogenital cancer	Penile and urethral cancer	Urethral cancer
 Cancer	Solid tumour	Urogenital cancer	Penile and urethral cancer	Urethral cancer	Urethral clear cell adenocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Penile and urethral cancer	Urethral cancer	Urethral mucinous adenocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Renal pelvis cancer
+Cancer	Solid tumour	Urogenital cancer	Renal pelvis cancer	Renal pelvis small cell carcinoma|Small cell carcinoma of the renal pelvis
 Cancer	Solid tumour	Urogenital cancer	Renal pelvis cancer	Renal transitional cell carcinoma|Renal urothelial carcinoma|Transitional cell carcinoma of the renal pelvis
 Cancer	Solid tumour	Urogenital cancer	Renal pelvis cancer	Squamous cell carcinoma of renal pelvis|Renal squamous cell carcinoma
-Cancer	Solid tumour	Urogenital cancer	Renal pelvis cancer	Renal pelvis small cell carcinoma|Small cell carcinoma of the renal pelvis
+Cancer	Solid tumour	Urogenital cancer	Testicular adenocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Ureteric cancer
 Cancer	Solid tumour	Urogenital cancer	Ureteric cancer	Ureter small cell carcinoma
 Cancer	Solid tumour	Urogenital cancer	Ureteric cancer	Ureteral urothelial carcinoma|Ureteric urothelial carcinoma|Ureteral transitional cell carcinoma|Transitional cell carcinoma of the ureter
@@ -830,22 +837,14 @@ Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma	EBV-associated gastric carcinoma|EBV-related gastric carcinoma
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma	EBV-associated nasopharyngeal carcinoma
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma	EBV-associated smooth muscle tumour
-Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma	Thymic lymphoepithelial carcinoma
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma	Pulmonary lymphoepithelioma-like carcinoma
+Cancer	Viral-related cancer	EBV-related cancer	EBV-related carcinoma	Thymic lymphoepithelial carcinoma
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related sarcoma
-Cancer	Viral-related cancer	EBV-related cancer	EBV-related sarcoma	EBV-associated smooth muscle tumour|Epstein-Barr virus associated smooth muscle tumour
 Cancer	Viral-related cancer	EBV-related cancer	EBV-related sarcoma	EBV-associated leiomyosarcoma|EBV-related leiomyosarcoma
+Cancer	Viral-related cancer	EBV-related cancer	EBV-related sarcoma	EBV-associated smooth muscle tumour|Epstein-Barr virus associated smooth muscle tumour
 Cancer	Viral-related cancer	HPV-related cancer	HPV16-positive cancer	Anal squamous cell carcinoma
 Cancer	Viral-related cancer	HPV-related cancer	HPV16-positive cancer	Cervical cancer
 Cancer	Viral-related cancer	HPV-related cancer	HPV16-positive cancer	Oropharyngeal squamous cell carcinoma
 Cancer	Viral-related cancer	HPV-related cancer	HPV16-positive cancer	Penile cancer
 Cancer	Viral-related cancer|Virus-induced cancer
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of lacrimal gland
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of salivary gland
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Adenoid cystic carcinoma of unknown primary
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Breast adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Lung adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Primary cutaneous adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Tracheal adenoid cystic carcinoma
-Cancer  Solid tumour    Carcinoma	Adenoid cystic carcinoma	Vulval adenoid cystic carcinoma
 Cancer|Neoplasm|Malignant neoplasm

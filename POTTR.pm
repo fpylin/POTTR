@@ -67,7 +67,14 @@ our $default_tier_order_ref;
 sub min { return undef if (! scalar(@_) ); my $v = shift; for (@_) { $v = $_ if ($_ < $v) ; } return $v; }
 sub file { open F, "<$_[0]" or die "Unable to open file $_[0].\n"; my @lines = <F>; close F; return @lines; }
 sub mtime { my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($_[0]); return $mtime; }
-sub newer { my ($f0, @fc) = $_; for my $f (@fc) { return 1 if ( mtime($f0) > mtime($_) ); } return 0; }
+sub newer { my ($f0, @fc) = @_; 
+	for my $f (@fc) { 
+		# print STDERR join (" ", $f0, "|", @fc )."\n"; 
+		# print STDERR join ("\t", $f0, mtime($f0), ( mtime($f0) > mtime($f) ? ">" : "<=" ) , $f, mtime($f) )."\n"; 
+		return 0 if ( mtime($f0) <= mtime($f) );  
+	} 
+	return 1; 
+}
 sub trim { my $s = shift; $s =~ s/^\s*|\s*$//g if (defined $s) ; return $s; }
 sub uniq { my %seen; return grep { !$seen{$_}++ } @_ }
 sub v_safe { my $x = shift; return '' if ! defined $x; return $x; }
@@ -1133,7 +1140,7 @@ sub init {
 	$self->load_module('PTM', \&load_module_preferential_trial_matching);
 	$self->load_module('PTP', \&load_module_preferential_trial_prioritisation);
 	$self->load_module_deinit();
-	$self->load_module('INT', \&load_module_interpretation);
+	# $self->load_module('INT', \&load_module_interpretation);
 	
 	# printf STDERR ( "Init\t%.6f sec\n", pottr_tv_interval($POTTR_start_timestamp) );
 

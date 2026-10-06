@@ -798,6 +798,8 @@ sub get_all_matched_offspring_treatment_classes($) {
 }
 
 sub get_source_files {
+	&ON_DEMAND_INIT;
+
 	return @source_files;
 }
 
