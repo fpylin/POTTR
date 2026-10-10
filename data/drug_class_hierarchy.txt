@@ -359,6 +359,7 @@ KRAS_inhibitor	pan-KRAS_inhibitor	pan-KRAS_inhibitor,tricomplex_inhibitor
 KRAS_inhibitor	pan-KRAS_inhibitor	pan-KRAS_inhibitor,undisclosed_mechanism
 KRAS_inhibitor	pan-KRAS_inhibitor	pan-RAS_inhibitor
 KRAS_inhibitor	pan-KRAS_inhibitor	pan-RAS_inhibitor	pan-RAS_inhibitor,tricomplex_inhibitor
+KRAS_inhibitor	pan-KRAS_inhibitor	pan-RAS_inhibitor	pan-RAS_inhibitor,undisclosed_mechanism
 LOXL2_inhibitor
 LSD1_inhibitor
 LSD1_inhibitor	LSD1/HDAC6_inhibitor

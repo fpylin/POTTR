@@ -138,7 +138,7 @@ sub get_drug_maturity_tier {
 	if ($tier =~ /[4]/) {
 		my $pubmed_count = 0;
 		$pubmed_count += ( $drug_pubmed_count{ Therapy::get_preferred_drug_name( $_ ) } // 0 ) for (@inf_drugs) ;
-		$tier .= 'B' if ! $pubmed_count == 0 and $tier !~ /U/;
+		$tier .= 'B' if ( ! ( $pubmed_count == 0 ) ) and $tier !~ /U/;
 	}
 	return $tier ; 
 }
@@ -184,7 +184,7 @@ sub get_drug_class_maturity_tier {
 	if ($tier =~ /[4]/) {
 		my $pubmed_count = 0;
 		$pubmed_count += ( $drug_pubmed_count{ Therapy::get_normalised_treatment_class_name( $_ ) } // 0 )  for (@inf_drug_classes) ;
-		$tier .= 'B' if ! $pubmed_count == 0;
+		$tier .= 'B' if ! ( $pubmed_count == 0 );
 	}
 	return $tier ; 
 }
