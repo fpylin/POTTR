@@ -109,7 +109,8 @@ sub tidy_tier { my $tier = shift; return '4' if $tier =~ /^[S]$/; return 'U' if 
 ######################################################################
 sub mk_signature {
 	my $x = shift;
-	return $drug_signature_cache{$x} if exists $drug_signature_cache{$x} ;
+	return '' if ! defined $x;
+	return $drug_signature_cache{$x} if ( exists($drug_signature_cache{$x}) and defined ($drug_signature_cache{$x}) );
 	$x =~ s/[^A-Za-z0-9]//g;
 	my $lc_x = lc($x);
 	$drug_signature_cache{$x} = $lc_x;
@@ -396,12 +397,11 @@ sub get_drug_regex {
 	return $regex ;
 }
 
-
-
 sub get_drug_regex_M {
 	&ON_DEMAND_INIT;
+
 	my @elems ;
-	for my $arg (@_) {
+	for my $arg ( grep { length $_ } @_) {
 		push @elems, map { s/\.(alpha|beta|gamma|delta)\./$1/ir =~ s/([\[\]])/\\$1/ir } grep { ! /\d+,\d+-|'|^\.|, / } keys %{ $drug_synonyms{ mk_signature( get_preferred_drug_name($arg) ) } };
 	}
 	my %by_signature;
@@ -431,7 +431,7 @@ sub get_drug_regex_M {
 
 # 	my $regex = mk_regex_search_tree(@elems, sub { my $x = $_[0]; my $y = $_[1]; return "$x(?{push \@M,'".$pref_name{$y}."'})" } );
 
-	my $regex = join("|", map { "$_(?{push \@M,'".$pref_name{$_}."'})" } sort { length $b <=> length $a } @elems);
+	my $regex  = join("|", map { "$_(?{push \@M,'".$pref_name{$_}."'})" } sort { length $b <=> length $a } @elems);
 	
 	return $regex ;
 }

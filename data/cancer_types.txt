@@ -347,7 +347,7 @@ Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer	Uterine leiomyosarc
 Cancer	Solid tumour	Gynaecological cancer	Endometrial cancer|Uterine cancer|Uterine Corpus Endometrial Cancer|Uterine Endometrial Cancer
 Cancer	Solid tumour	Gynaecological cancer	Endometrial stromal sarcoma
 Cancer	Solid tumour	Gynaecological cancer	Endometrial stromal sarcoma	Low-grade endometrial stromal sarcoma
-Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum	High-grade serous ovarian cancer
+Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum	High-grade serous ovarian cancer|Ovarian high grade serous carcinoma
 Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum	Primary fallopian tube serous carcinoma
 Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum	Primary peritoneal serous carcinoma
 Cancer	Solid tumour	Gynaecological cancer	High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum|Cancer of the ovary, fallopian tube, and peritoneum

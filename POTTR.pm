@@ -33,6 +33,7 @@ use warnings;
 package POTTR;
 
 use POSIX;
+use re 'eval';
 use Time::HiRes qw(gettimeofday tv_interval);
 
 
@@ -351,9 +352,41 @@ sub load_module_variant_feature_mapping {
 
 
 #######################################################################
+our @M = ();
+our $__CDM_drug_regex_M1;
+
 sub load_module_clinical_data_module {
 	my $self = shift;
 	my $rs = $self->{'modules'}->add_module('01D - Clinical data module');
+
+	if ( ! defined $__CDM_drug_regex_M1 ) {
+		my $drug_regex_M = Therapy::get_drug_regex_M( Therapy::get_all_drugs() ) ;
+		
+		$__CDM_drug_regex_M1 = qr/$drug_regex_M/i;
+	}
+	
+	# Get normalised ingredients list from the prior therapies or combination regimens
+	$rs->define_dyn_rule( 'normalise_therapies',  sub { my $f = shift; my $facts = $_[0];
+			
+			return () if $f !~ /^prior_therapy:(.+)/;
+			my $pt = $1;
+			my @d_parts = grep { ! /^\s*$/ } ( split /\s*\+\s*| w(?:ith) | and /, $pt );
+
+			my $cnt = 0;
+			@M = ();
+			for my $l ( @d_parts ) { 
+				$l = Therapy::get_normalised_treatment_name( $l );
+				while ( $l =~ /(?:^|\b)($__CDM_drug_regex_M1)(?:$|\b)/ig ) {
+					++$cnt;
+				}
+			}
+
+			my @annot = @M ; # grep { $_ ne $pt } 
+			my $comb_therapy_str = scalar(@annot) > 1 ? ' [combination_regimen]' : '';
+
+			return ( map { "prior_therapy:$_$comb_therapy_str" } @annot );
+		}
+	);
 	
 	my @prior_therapy_rules = gen_pottr_rules_cached( 'pottr_prior_therapy', [ Therapy::get_source_files() ], 
 		sub {
@@ -362,7 +395,7 @@ sub load_module_clinical_data_module {
 	);
 	
 	$rs->load_with_runtime_cache( @prior_therapy_rules );
-
+	
 	$rs = $self->{'modules'}->add_module('01E - Extra clinical rules');
 	for my $srcfile ( POTTRConfig::get_paths('data', 'clinical-rules-file') ) {
 		$rs->load_with_runtime_cache( file( $srcfile ) );

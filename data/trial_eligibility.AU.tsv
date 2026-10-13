@@ -379,3 +379,9 @@ NCT05562830	catype:Urothelial carcinoma; (prior_therapy:anti-PD-1_monoclonal_ant
 NCT05562830	catype:Urothelial carcinoma; (prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)	# Arm B: PD-1/L1 refractory UC; LLM generated. Must review.
 NCT07531095	catype:Small-cell lung cancer
 NCT07623369	catype:Small-cell lung cancer
+NCT07491445	catype:Pancreatic adenocarcinoma; *NOT prior_therapy:systemic_therapy
+NCT06989437	catype:Pancreatic adenocarcinoma; *NOT prior_therapy:systemic_therapy
+NCT07490301	catype:Pancreatic adenocarcinoma; *NOT prior_therapy:systemic_therapy
+NCT07746141	catype:Solid tumour; (KRAS:G12_mutation OR NRAS:G12_mutation OR HRAS:G12_mutation OR KRAS:G13_mutation OR NRAS:G13_mutation OR HRAS:G13_mutation OR KRAS:Q61_mutation OR NRAS:Q61_mutation OR HRAS:Q61_mutation); NOT prior_therapy:pan-RAS_inhibitor; NOT prior_therapy:pan-KRAS_inhibitor; NOT prior_therapy:KRAS_G12C_inhibitor; NOT prior_therapy:KRAS_G12D_inhibitor
+NCT07429110	catype:Rectal cancer
+NCT07644559	KRAS:G12D; catype:Pancreatic adenocarcinoma

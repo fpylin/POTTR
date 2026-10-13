@@ -313,7 +313,6 @@ BI-7273	BRD9_inhibitor
 BI836880|BI 836880	VEGF/Ang2-blocking_nanobody
 BIL06v	peptide_conjugate_vaccine,nfP2X7-targeting
 BL0020	unknown_drug_class
-BL0175	unknown_drug_class
 BLYG8824A	bispecific_T-cell_engager,LY6G6D-targeting
 BLZ-100|Tozuleristide	peptide-fluorophore_conjugate
 BM230	unknown_drug_class
@@ -1945,3 +1944,19 @@ phosphorus-32|OncoSil	brachytherapy
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 radioactive iodine	radioactive_iodine_therapy
 BG-85738	pan-RAS_inhibitor,undisclosed_mechanism
+PRT12396	JAK2_inhibitor,JH2_domain_selective
+IDE161	PARG_inhibitor
+S241656|BDTX-4933	RAF_dimer_inhibitor
+BI 4060107	anti-CD47_monoclonal_antibody
+Risvutatug Rezetecan	anti-B7H3_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload
+STX-003	anti-CD70_agonistic_antibody
+SHR-4685	unknown_drug_class
+D3L-002	bispecific_TIGIT/PVRIG_antibody
+BL-M14D1	anti-DLL3_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload
+DJI136	autologous_CAR-T-cell_therapy,DLL3-targeting
+Rinatabart sesutecan|Rina S	anti-FR-alpha_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload
+BPI-572270	pan-RAS_inhibitor,tricomplex_inhibitor
+BI-4060107|BI 4060107|ODS025	unknown_drug_class
+ML-016	doxorubicin_conjugate
+BL0175	selective_estrogen_receptor_degrader
+BREAKWATER regimen|BREAKWATER	Fluorouracil + Oxaliplatin + Encorafenib + Cetuximab
