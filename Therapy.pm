@@ -104,7 +104,8 @@ our %drug_signature_cache = ();
 
 our @hierarchy_pairs;
 
-sub tidy_tier { my $tier = shift; return '4' if $tier =~ /^[S]$/; return 'U' if $tier =~ /^[S]$/; return $tier ; }
+# sub tidy_tier { my $tier = shift; return '4' if $tier =~ /^[S]$/; return 'U' if $tier =~ /^[S]$/; return $tier ; }
+sub tidy_tier { my $tier = shift; return $tier ; }
 
 ######################################################################
 sub mk_signature {

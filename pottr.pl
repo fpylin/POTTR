@@ -522,6 +522,7 @@ sub extract_drug_sensitivity {
 	
 		my ($therapy, $tier) = ($ent =~ /(.*):(\S+)/);
 		
+		die $result_line if ! defined $tier;
 	
 		my $alterations = join ", ", @alterations ;
 		$row{'alterations'} = $alterations ;
@@ -971,7 +972,7 @@ sub mkhref_evidence {
 	for ($x) {
 		/^(\d+)$/    and do { return "<a href='https://pubmed.ncbi.nlm.nih.gov/$1' target=_blank>$1</a>"; last; };
 		/^(10\..+)$/ and do { return "<a href='https://doi.org/$1' target=_blank>$1</a>"; last; };
-		/^(NCT\d+)$/ and do { return "<a href='https://clinicaltrials.gov/ct2/show/NCT03798626' target=_blank>"; last; };
+		/^(NCT\d+)$/ and do { return "<a href='https://clinicaltrials.gov/ct2/show/$1' target=_blank>"; last; };
 	}
 	return $x;
 }

@@ -306,7 +306,7 @@ sub load_module_variant_feature_mapping {
 			($entity, $etype, $espec) = ($1, $2, '');
 		} else {
 			for ($f) {
-				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|preferential_|info|mutsig|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
+				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|recommendation_tier|preferential_|info|mutsig|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
 				/^([^:]+):(.*(?:splice|skipping).*)$/i   and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:.*(v[IV]+)(?:\b|$).*)$/i      and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };
@@ -786,7 +786,7 @@ sub load_module_therapy_recomendation_and_grading {
 		my @rec_tiers = map { my $a = $_; $a =~ s/.*:\s*//; $a } grep { /^recommendation_tier/ } @tags ; # search both recommendation_tier and recommendation_tier_drug_class
 		@rec_tiers = sort { score_tier($a, $tier_order_ref) <=> score_tier($b, $tier_order_ref) } @rec_tiers ;
 		
-		my $group_tier = scalar(@rec_tiers) ? $rec_tiers[0] : ( $sensitivity =~ /resistant/i ? 'R' : 'S' );
+		my $group_tier = ( scalar(@rec_tiers) > 0 ) ? $rec_tiers[0] : ( $sensitivity =~ /resistant/i ? 'R' : 'S' );
 		for my $t ( grep { /^recommendation_tier:/ } @tags ) { # importing all tags from matched therapies
 			next if ! $facts->has_fact($t);
 			push @tags, ( $facts->get_tags($t) );
@@ -814,7 +814,7 @@ sub load_module_therapy_prioritisation { # including all therapies
 		my $tier_order_ref = $facts->getvar('tier_order');
 		
 		return () if $f !~ /(sensitive)_to:(.+)/; # (_drug_class)?
-		my ($sens_resi, $therapy) = ($1, $2, $3); # $is_drug_class, 
+		my ($sens_resi, $therapy) = ($1, $2); # $is_drug_class, 
 		my @tags = $facts->get_tags($f);
 		my @tiers;
 		my @tiers_dc;
@@ -832,7 +832,7 @@ sub load_module_therapy_prioritisation { # including all therapies
 		my $max_tier_dc = max_tier(@tiers_dc, 'U');
 		my $max_tier    = max_tier(@tiers,    'U');
 		
-# 		print "\e[1;43m!!!$therapy\t".join("/", $max_tier, $max_tier_dc)."\e[0m\n";
+		# print "\e[1;43m!!!$therapy\t".join("/", $max_tier, $max_tier_dc)."\e[0m\n";
 		push @tags, "therapy_recommendation_tier_therapy:$max_tier";
 		push @tags, "therapy_recommendation_tier_drug_class:$max_tier_dc";
 

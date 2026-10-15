@@ -154,8 +154,8 @@ sub interp_variants {
 		/D/ and do { push @alterations, ('deletion', 'homozygous_deletion', 'loss-of-function_mutation', 'alteration'); last; }; # 'truncating_mutation'
 		/F/ and do { 
 			push @alterations, ('fusion'); 
-			if ( ($biomarker_spec =~ /[LR]:([A-Z0-9]+?)--?([A-Z0-9]+)/ ) or #
-				 ($biomarker_spec =~ /([A-Z0-9]+?)--?([A-Z0-9]+)[_\s]*(?i:fusions?)/ ) ) {
+			if ( ($biomarker_spec =~ /[LR]:([A-Z0-9]+?)(?:::|--?-?)([A-Z0-9]+)/ ) or #
+				 ($biomarker_spec =~ /([A-Z0-9]+?)(?:::|--?-?)([A-Z0-9]+)[_\s]*(?i:fusions?)/ ) ) {
 # 				push @alterations, "$1-$2 fusion" ;
 				push @alterations, "$1-$2"."_fusion" ;  # alternative normalised representation with an underscore
 			};
