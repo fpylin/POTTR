@@ -409,7 +409,7 @@ Brivanib|Brivanib Alaninate|BMS-582664	VEGFR1/2/3_inhibitor; FGFR1_inhibitor
 Budigalimab|ABBV 181|ABBV-181|ABBV181	anti-PD-1_monoclonal_antibody
 Bulumtatug Fuvedotin|9MW2821	anti-NECTIN4_antibody-drug_conjugate
 Buparlisib|BKM120	pan-PI3K_inhibitor; PI3K_alpha_inhibitor
-Busulfan|Misulban|Myeloleukon|Myelosan|Mylecytan|Myleran|1,4-Bitanediol Dimethanesulfonate Esters|1,4-Butanediol Dimethylsulfonate|BUS|CB 2041|CB-2041|GT 41|GT-41|Glyzophrol|Joacamine|Methanesulfonic Acid Tetramethylene Ester|Methanesulfonic acid, tetramethylene ester|Mielucin|Misulfan|Mitosan|Myeleukon|Sulfabutin|WR-19508	alkylating_agent
+Busulfan|Misulban|Myeloleukon|Myelosan|Mylecytan|Myleran|1,4-Bitanediol Dimethanesulfonate Esters|1,4-Butanediol Dimethylsulfonate|BUS|CB 2041|CB-2041|GT 41|GT-41|Glyzophrol|Joacamine|Methanesulfonic Acid Tetramethylene Ester|Busilvex|Methanesulfonic acid, tetramethylene ester|Mielucin|Misulfan|Mitosan|Myeleukon|Sulfabutin|WR-19508	alkylating_agent
 Bzacitidine	DNA_methyltransferase_inhibitor; antimetabolite
 C019199	CSF1R/DDR/VEGFR2_inhibitor
 CA-4948	IRAK4_inhibitor
@@ -536,7 +536,7 @@ DCSZ11	anti-CD93_monoclonal_antibody
 DF6002|BMS-986415	IL-12_Fc-fusion_protein
 DF6215	IL-2_variant
 DFF332	HIF2a_inhibitor
-DISC-0974	anti-hemojuvelin_monoclonal_antibody
+DISC-0974	anti-HJV_monoclonal_antibody
 DJI136	autologous_CAR-T-cell_therapy,DLL3-targeting
 DM001|DM-001	bispecific-EGFR/Trop2_antibody-drug_conjugate
 DM002|DM-002	bispecific-ERBB3/MUC1_antibody-drug_conjugate
@@ -1960,3 +1960,7 @@ modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 phosphorus-32|OncoSil	brachytherapy
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 radioactive iodine	radioactive_iodine_therapy
+KMV002	PAP-targeting_vaccine
+Lutetium-177|177Lu-ACT319	radioligand,FAP-targeting
+Doxorubicin|E-EDV-Dox	anthracycline
+a-Galactosyl Ceramide|EDV-GC	glycosphingolipid
