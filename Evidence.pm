@@ -216,7 +216,7 @@ sub encode_alteration_proper {
 
 	$x =~ s/mut$//;
 	$x =~ s/^\s+|\s+$//g;
-	if ( $x =~ /^(amplification|overexpression|loss of (?:protein )?expression|(?:homozygous )?deletion|wild.?type|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient|.*terminal tail.*)s?$/i ) { 
+	if ( $x =~ /^(amplification|overexpression|(?:loss of |no |low )(?:protein )?expression|(?:homozygous )?deletion|wild.?type|(?:oncogenic|truncating) mutation|fusion|internal tandem duplication|kinase domain duplication|(?:loss|gain)-of-function[ _]mutation|.*variant|alteration|high|deficient|.*terminal tail.*)s?$/i ) { 
 		$x = lc($1) ;
 	} elsif ( $x =~ /^((?:high)?) *(mRNA) (expression)s?$/i ) { 
 		$x = join( " ", ( grep { length } ( lc($1 // ''), $2, lc($3) ) ) );

@@ -214,6 +214,7 @@ Anakinumab	anti-IL-1beta_monoclonal_antibody
 Anamorelin|RC-1291	GHSR_agonist
 Anastrozole|Anastrazole|Arimidex|ICI D1033|ICI-D1033|ZD-1033	aromatase_inhibitor
 Anbenitamab Repodatecan|JSKN003|JSKN-003|KN-026	biparatopic_ERBB2_antibody-drug_conjugate
+Anbenitamab Repodatecan|JSKN003|JSKN-003|KN026|KN-026	biparatopic_ERBB2_antibody-drug_conjugate
 Andecaliximab|GS-5745|GS5745	anti-MMP9_monoclonal_antibody
 Anetumab Ravtansine|BAY 94-9343	anti-mesothelin_antibody-drug_conjugate
 Anpocogin|AB-201	allogeneic_CAR-NK-cell_therapy,ERBB2-targeting
@@ -240,6 +241,7 @@ Atigotatug|BMS-986012	anti-fucosyl-GM1_monoclonal_antibody
 Atirmociclib|PF-07220060	CDK4_selective_inhibitor
 Atorvastatin	HMG-CoA_reductase_inhibitor
 Auceliciclib	CDK4/6_inhibitor
+Aumolertinib|Almonertinib|EQ143|HS-10296	EGFR_inhibitor,third_generation
 Autogene Cevumeran|RO7198457	personalized_cancer_vaccine
 Autogene cevumeran|RO7198457|BNT-122|BNT122	mRNA_personalised_cancer_vaccine
 Autologous CD19 Specific Chimeric Antigen Receptor T-cells	autologous_CAR-T-cell_therapy,CD19-targeting
@@ -410,6 +412,7 @@ Budigalimab|ABBV 181|ABBV-181|ABBV181	anti-PD-1_monoclonal_antibody
 Bulumtatug Fuvedotin|9MW2821	anti-NECTIN4_antibody-drug_conjugate
 Buparlisib|BKM120	pan-PI3K_inhibitor; PI3K_alpha_inhibitor
 Busulfan|Misulban|Myeloleukon|Myelosan|Mylecytan|Myleran|1,4-Bitanediol Dimethanesulfonate Esters|1,4-Butanediol Dimethylsulfonate|BUS|CB 2041|CB-2041|GT 41|GT-41|Glyzophrol|Joacamine|Methanesulfonic Acid Tetramethylene Ester|Busilvex|Methanesulfonic acid, tetramethylene ester|Mielucin|Misulfan|Mitosan|Myeleukon|Sulfabutin|WR-19508	alkylating_agent
+Busulfan|Misulban|Myeloleukon|Myelosan|Mylecytan|Myleran|1,4-Bitanediol Dimethanesulfonate Esters|1,4-Butanediol Dimethylsulfonate|BUS|CB 2041|CB-2041|GT 41|GT-41|Glyzophrol|Joacamine|Methanesulfonic Acid Tetramethylene Ester|Methanesulfonic acid, tetramethylene ester|Mielucin|Misulfan|Mitosan|Myeleukon|Busilvex|Sulfabutin|WR-19508	alkylating_agent
 Bzacitidine	DNA_methyltransferase_inhibitor; antimetabolite
 C019199	CSF1R/DDR/VEGFR2_inhibitor
 CA-4948	IRAK4_inhibitor
@@ -560,6 +563,7 @@ Dacarbazine|DTIC|Deticene|Asercit|Biocarbazine|Dacarbazina|Dacatic|Dakarbazin|De
 Dacomitinib|PF-00299804|PF-299804|Vizimpro	EGFR_inhibitor,second_generation
 Dactinomycin|Actinomycin IV|Actinomycin X 1|Cosmegen|Meractinomycin|ACTINOMYCIN D|Actinomycin|Actinomycin A IV|Actinomycin C1|ACTD|Actinomycin I1|DACT	antineoplastic_antibiotic
 Dactolisib|BEZ235	PI3K/mTOR_inhibitor
+Dalmelitinib|HS-10241	MET_inhibitor
 Dalpiciclib	CDK4/6_inhibitor
 Daratumumab|Darzalex|DARZALEX FASPRO|HLX15-SC|HuMax-CD38|JNJ-54767414	anti-CD38_monoclonal_antibody
 Daraxonrasib|RMC-6236	pan-RAS_inhibitor,tricomplex_inhibitor
@@ -835,6 +839,7 @@ H3B-8800|H3B 8800	SF3B1_inhibitor
 H3Mab-17	anti-ERBB3_monoclonal_antibody
 HB-201	vaccine_therapy,HPV-E6/HPV-E7-targeting
 HB-202	vaccine_therapy,HPV-E6/HPV-E7-targeting
+HB1801	taxane
 HBM7008|HBM-7008	bispecific_B7H4/4-1BB_antibody
 HBW-012-E	KRAS_G12D_inhibitor
 HDM2017	anti-CDH17_antibody-drug_conjugate
