@@ -1970,3 +1970,5 @@ phosphorus-32|OncoSil	brachytherapy
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 radioactive iodine	radioactive_iodine_therapy
 Tegtociclib|PF-07104091	CDK2_inhibitor
+DN022150	KRAS_G12D_inhibitor,ON/OFF-state_inhibitor
+RNK08954	KRAS_G12D_inhibitor,ON/OFF-state_inhibitor
