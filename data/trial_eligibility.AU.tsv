@@ -255,7 +255,7 @@ NCT07369505	(catype:Breast cancer OR catype:Clear cell renal cell carcinoma OR c
 NCT07353957	*NOT prior_therapy:systemic_therapy
 NCT06478693	catype:Colorectal cancer
 NCT06952504	*NOT prior_therapy:systemic_therapy; NOT microsatellite_instability:high; NOT mismatch_repair:deficient
-NCT07300943	*(ERBB2:protein_expression OR ERBB2:low_protein_expression OR ERBB2:overexpression OR ERBB2:amplification); NOT prior_therapy:ATR_inhibitor
+NCT07300943	(ERBB2:protein_expression OR ERBB2:low_protein_expression OR ERBB2:overexpression OR ERBB2:amplification); NOT prior_therapy:ATR_inhibitor
 NCT07214779	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07023627	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07546812	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(prior_therapy:Zolbetuximab OR prior_therapy:cancer_therapy,CLDN18-targeting OR prior_therapy:cancer_therapy,PD-1/PD-L1-targeting OR catype:cytotoxic_chemotherapy)
@@ -385,3 +385,7 @@ NCT07218809	*catype:High-grade serous carcinoma of the ovary, fallopian tube, an
 NCT07213804	*catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT06682988	*catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
 NCT07318558	*catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
+NCT07836530	catype:Hepatocellular carcinoma
+NCT07702032	catype:Colorectal adenocarcinoma
+NCT07585266	catype:Gastrointestinal stromal tumour
+NCT07545122	catype:Colorectal adenocarcinoma
