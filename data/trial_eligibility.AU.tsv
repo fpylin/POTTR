@@ -155,7 +155,7 @@ NCT07204340	KRAS:oncogenic_mutation
 NCT07094113	(KRAS:oncogenic_mutation OR KRAS:amplification)
 NCT06820463	NOT prior_therapy:Irinotecan
 NCT06982521	PIK3CA:oncogenic_mutation; catype:Breast cancer
-NCT06973863	(MTAP:loss_of_protein_expression OR MTAP:deletion); NOT catype:Sarcoma
+NCT06973863	(MTAP:loss_of_protein_expression OR MTAP:deletion); NOT catype:Sarcoma; *NOT MTAP:exon_8_deletion
 NCT06330064	(catype:Endometrial Cancer OR catype:Head and neck squamous cell carcinoma OR catype:Pancreatic adenocarcinoma OR catype:Colorectal adenocarcinoma OR catype:Hepatocellular carcinoma OR catype:Gastrooesophageal adenicarcoma OR catype:Urothelial carcinoma OR catype:Ovarian cancer OR catype:Cervical cancer OR catype:Cutaneous melanoma); NOT catype:Sarcoma
 NCT06330064	catype:Breast Cancer; (ERBB2:low protein expression OR ERBB2:loss of protein expression)
 NCT07028853	catype:Prostate cancer
@@ -259,7 +259,7 @@ NCT07300943	*(ERBB2:protein_expression OR ERBB2:low_protein_expression OR ERBB2:
 NCT07214779	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07023627	*(CCNE1:overexpression OR CCNE1:amplification); catype:Ovarian cancer
 NCT07546812	(catype:Gastric cancer OR catype:Gastroesophageal adenocarcinoma); *(prior_therapy:Zolbetuximab OR prior_therapy:cancer_therapy,CLDN18-targeting OR prior_therapy:cancer_therapy,PD-1/PD-L1-targeting OR catype:cytotoxic_chemotherapy)
-NCT07415031	KRAS:G12C
+NCT07415031	KRAS:G12C; WITHDRAWN
 NCT07562152	catype:Pancreatic adenocarcinoma
 NCT07549412	catype:Colorectal cancer
 NCT07222800	catype:Colorectal cancer
@@ -361,7 +361,8 @@ NCT04614103	catype:Non-small cell lung cancer; NOT EGFR:oncogenic_mutation; NOT 
 NCT07711184	(catype:Prostate cancer OR catype:Prostate adenocarcinoma); *catype:Metastatic prostate cancer; NOT catype:Prostate small cell carcinoma; NOT catype:Prostate neuroendocrine carcinoma	# LLM generated. Must review.
 NCT07619287	NOT catype:Solid tumour
 NCT07286331	catype:Endometrial carcinoma
-NCT06824467	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneumNCT06184035	catype:Solid tumour; *prior_therapy:systemic_therapy	# LLM generated. Must review.
+NCT06824467	(catype:Ovarian cancer OR catype:Fallopian tube carcinoma); *catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
+NCT06184035	catype:Solid tumour; *prior_therapy:systemic_therapy	# LLM generated. Must review.
 NCT07531095	catype:Small-cell lung cancer
 NCT07623369	catype:Small-cell lung cancer
 NCT07491445	catype:Pancreatic adenocarcinoma; *NOT prior_therapy:systemic_therapy
@@ -370,3 +371,17 @@ NCT07490301	catype:Pancreatic adenocarcinoma; *NOT prior_therapy:systemic_therap
 NCT07746141	catype:Solid tumour; (KRAS:G12_mutation OR NRAS:G12_mutation OR HRAS:G12_mutation OR KRAS:G13_mutation OR NRAS:G13_mutation OR HRAS:G13_mutation OR KRAS:Q61_mutation OR NRAS:Q61_mutation OR HRAS:Q61_mutation); NOT prior_therapy:pan-RAS_inhibitor; NOT prior_therapy:pan-KRAS_inhibitor; NOT prior_therapy:KRAS_G12C_inhibitor; NOT prior_therapy:KRAS_G12D_inhibitor
 NCT07644559	KRAS:G12D; catype:Pancreatic adenocarcinoma
 NCT07100106	catype:Breast cancer; *prior_therapy:CDK4/6_inhibitor; *prior_therapy:selective_estrogen_receptor_degrader; *NOT prior_therapy:cytotoxic_chemotherapy; *ESR1:protein_expression
+NCT07625644	catype:Small-cell lung cancer
+NCT06692738	catype:Lung squamous cell carcinoma
+NCT05205109	catype:Cutaneous melanoma
+NCT06521554	catype:Non-small cell lung cancer
+NCT07680790	catype:Non-small cell lung cancer; (EGFR:L858R OR EGFR:exon_19_deletion)
+NCT06982521	NOT AKT:oncogenic_mutation; NOT PIK3CA:oncogenic_mutation; NOT PTEN:alteration
+NCT07278336	NOT catype:Low-grade serous ovarian carcinoma
+NCT07851025	NOT catype:Low-grade serous ovarian carcinoma
+NCT07802704	catype:Prostate cancer
+NCT07678593	KRAS:oncogenic_mutation
+NCT07218809	*catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
+NCT07213804	*catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
+NCT06682988	*catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum
+NCT07318558	*catype:High-grade serous carcinoma of the ovary, fallopian tube, and peritoneum

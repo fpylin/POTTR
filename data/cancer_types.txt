@@ -800,7 +800,7 @@ Cancer	Solid tumour	Urogenital cancer	Kidney cancer	Renal ontocytoma
 Cancer	Solid tumour	Urogenital cancer	Kidney cancer|Renal cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Penile cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Penile cancer	Penile squamous cell carcinoma
-Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer
+Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer|Neoplasms, Prostate
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-resistant prostate cancer	Taxane-naive castration resistant prostate cancer
 Cancer	Solid tumour	Urogenital cancer	Male genital cancers	Prostate cancer	Prostate adenocarcinoma	Castrate-resistant prostate cancer|Castration-resistant prostate cancer|mCRPC|CRPC|Prostate cancer, castration-resistant
