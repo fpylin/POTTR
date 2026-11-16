@@ -1687,8 +1687,6 @@ Spartalizumab|PDR-001|PDR001	anti-PD-1_monoclonal_antibody
 Streptozotocin	alkylating_agent
 Stupp regimen|Stupp protocol	Temozolomide + Radiotherapy
 Sturlimogene Erparepvec|RP2	oncolytic_herpes_simplex_virus
-Sturlimogene Erparepvec|RP2	unknown_drug_class
-Sturlimogene Erparepvec|VBC117	bispecific-EGFR/CDH17_antibody-drug_conjugate
 Subasumstat|TAK-981	SUMOylation_inhibitor
 Sugemalimab|CS1001|CS 1001|CS-1001|WBP 315|WBP-315|WBP315	anti-PD-L1_monoclonal_antibody
 Sulanemadlin|ALRN-6924	MDM2_inhibitor
@@ -1972,3 +1970,13 @@ radioactive iodine	radioactive_iodine_therapy
 Tegtociclib|PF-07104091	CDK2_inhibitor
 DN022150	KRAS_G12D_inhibitor,ON/OFF-state_inhibitor
 RNK08954	KRAS_G12D_inhibitor,ON/OFF-state_inhibitor
+Epetraborole	leucyl_tRNA_synthetase_inhibitor
+Venetoclax|VEN	Bcl2_inhibitor
+BI 4015092	KRAS_G12D_inhibitor
+DS010	anti-GDF15_monoclonal_antibody
+[225Ac]Ac-FL-261	targeted_alpha_radioconjugate,c-MET-targeting
+JNJ-101556143	androgen_receptor-targeted_regulated_induced_proximity_targeting_chimera
+DEM301	anti-DEM-TXX_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload
+ATX-898	cancer_therapy,undisclosed_mechanism
+JNJ-101684362	estrogen_receptor-targeted_regulated_induced_proximity_targeting_chimera
+Valemetostat|DS-3201	EZH1/2_inhibitor
