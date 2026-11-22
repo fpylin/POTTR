@@ -1042,7 +1042,7 @@ LY3405105	CDK7_inhibitor
 LY3475070|LY 3475070|LY-3475070	CD73_inhibitor
 LY3499446|LY 3499446|LY-3499446	KRAS_G12C_inhibitor,OFF-state_inhibitor
 LY4052031|LY 4052031|LY-4052031	anti-NECTIN4_antibody-drug_conjugate
-LY4064809|STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
+Tersolisib|LY4064809|STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
 LY4066434	pan-KRAS_inhibitor,OFF-state_inhibitor
 LY4152199	bispecific_T-cell_engager,BAFF-R-targeting
 Labetuzumab	anti-CEACAM5_monoclonal_antibody
