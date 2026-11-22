@@ -651,7 +651,7 @@ sub gen_rules_clinical_trials($\@) { # Generating clinical trial rules
 				my $trial_match_criteria_str = "trial_match_criteria:drug_sensitivity";
 				for my $c ( @matched_combos )  {
 # 					print STDERR "|| $d\t$c\n";
-					my $drug_sensitivity_str = "sensitive_to:$d; NOT therapy_recommendation:$d:U";
+					my $drug_sensitivity_str = "sensitive_to:$d; NOT exclude_from_trial_matching:$d; NOT therapy_recommendation:$d:U";
 					my $drug_sensitivity_tag = "INFERRED:treatment_drug:$d";
 					my $f_preferential_trial_combo_complete_match = undef;
 					if ( $c eq $d ) {
@@ -703,7 +703,7 @@ sub gen_rules_clinical_trials($\@) { # Generating clinical trial rules
 # 					print STDERR "| DC: CC: $cc\n";
 					my $trial_match_criteria_str = "trial_match_criteria:drug_class_sensitivity";
 						
-					my $drug_class_sensitivity_str = "sensitive_to_drug_class:$dc";
+					my $drug_class_sensitivity_str = "sensitive_to_drug_class:$dc; NOT exclude_from_trial_matching:$dc";
 					my $drug_class_sensitivity_tag = "INFERRED:treatment_drug_class:$dc";
 
 					my $f_preferential_trial_combo_class_complete_match = undef;

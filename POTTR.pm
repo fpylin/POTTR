@@ -306,7 +306,7 @@ sub load_module_variant_feature_mapping {
 			($entity, $etype, $espec) = ($1, $2, '');
 		} else {
 			for ($f) {
-				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|recommendation_tier|preferential_|info|mutsig|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
+				return @retval if /^(?:catype|tier-rank|has_biomarker|sensitive|resistant|prior_|recommendation_tier|preferential_|info|exclude_from_trial_matching|mutsig|\(initial-fact\))/; # FIXME - need a positive list of biomarkers
 				/^([^:]+):(.*(?:splice|skipping).*)$/i   and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:.*(v[IV]+)(?:\b|$).*)$/i      and do { ($entity, $etype, $espec) = ($1, 'S', $2); last; };
 				/^([^:]+):(?:amplification|amplified)$/i       and do { ($entity, $etype, $espec) = ($1, 'A', ''); last; };
@@ -368,8 +368,8 @@ sub load_module_clinical_data_module {
 	# Get normalised ingredients list from the prior therapies or combination regimens
 	$rs->define_dyn_rule( 'normalise_therapies',  sub { my $f = shift; my $facts = $_[0];
 			
-			return () if $f !~ /^prior_therapy:(.+)/;
-			my $pt = $1;
+			return () if $f !~ /^(prior_therapy|exclude_from_trial_matching):(.+)/;
+			my ($ntag, $pt) = ($1, $2);
 			my @d_parts = grep { ! /^\s*$/ } ( split /\s*\+\s*| w(?:ith) | and /, $pt );
 
 			my $cnt = 0;
@@ -384,7 +384,7 @@ sub load_module_clinical_data_module {
 			my @annot = @M ; # grep { $_ ne $pt } 
 			my $comb_therapy_str = scalar(@annot) > 1 ? ' [combination_regimen]' : '';
 
-			return ( map { "prior_therapy:$_$comb_therapy_str" } @annot );
+			return ( map { "$ntag:$_$comb_therapy_str" } @annot );
 		}
 	);
 	
