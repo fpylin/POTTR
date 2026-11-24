@@ -746,6 +746,37 @@ sub treatment_contains_drug {
 	return 0;
 }
 
+sub get_drug_class_children($) {
+	my $dc = shift;
+	
+	my $dcsig = mk_signature($dc) ;
+	
+	my @retval;
+	
+	if ( exists $drug_class_is_a{$dcsig} ) {
+		push @retval, sort map { $drug_class_name{$_} } keys %{ $drug_class_is_a{ $dcsig } };
+	}
+	
+	return @retval;
+}
+
+sub get_children($) {
+	my $dc = shift;
+	
+	my $dcsig = mk_signature($dc) ;
+	
+	my @retval;
+	
+	if ( exists $drug_class_is_a{$dcsig} ) {
+		push @retval, sort grep { defined } map { $drug_class_name{ mk_signature($_) } // warn "``$_'' not found\n"  } keys %{ $drug_class_is_a{ $dcsig } };
+	} 
+	
+	push @retval, sort uniq( map { get_preferred_drug_name($_) } ( grep { exists $drug_class{$_}{ $dcsig } } keys %drug_class ) ) ;
+	
+	return @retval;
+}
+
+
 sub get_all_drug_class_offspring($;$) {
 	my $dc = shift;
 	my $visited = shift;

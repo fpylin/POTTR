@@ -68,7 +68,7 @@ NCT05696626	ESR1:oncogenic_mutation
 NCT05208047	catype:Gastrointestinal stromal tumour
 NCT06179160	KRAS:G12D
 NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation; *(catype:Breast cancer OR catype:Endometrial cancer); NOT catype:Breast cancer
-NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation; *catype:Ovarian cancer
+NCT04585750	TP53:Y220C; *NOT KRAS:oncogenic_mutation; *catype:Ovarian cancer; NOT Ovarian cancer
 NCT06064877	catype:Head and neck squamous cell carcinoma; *(prior_therapy:Carboplatin OR prior_therapy:Cisplatin); *(prior_therapy:anti-PD-1_monoclonal_antibody OR prior_therapy:anti-PD-L1_monoclonal_antibody)
 NCT06326411	catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation)
 NCT06326411	catype:Solid tumour; NOT catype:Melanoma; (NRAS:oncogenic_mutation OR BRAF:oncogenic_mutation OR KRAS:oncogenic_mutation); COHORT_STOPPED

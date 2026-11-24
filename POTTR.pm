@@ -396,6 +396,14 @@ sub load_module_clinical_data_module {
 	
 	$rs->load_with_runtime_cache( @prior_therapy_rules );
 	
+	my @exclude_from_trial_matching_rules = gen_pottr_rules_cached ( 'drug_class_trial_exclusion', [ Therapy::get_source_files() ], 
+		sub {
+			return $self->gen_rules_drug_db_offsprings("Drug classes excluded from trial matching", "exclude_from_trial_matching");
+		}
+	);
+	
+	$rs->load_with_runtime_cache( @exclude_from_trial_matching_rules );
+	
 	$rs = $self->{'modules'}->add_module('01E - Extra clinical rules');
 	for my $srcfile ( POTTRConfig::get_paths('data', 'clinical-rules-file') ) {
 		$rs->load_with_runtime_cache( file( $srcfile ) );
@@ -661,6 +669,27 @@ sub gen_rules_drug_db_prior_therapy {
 
 	return $self->gen_rule_ret_msg( "Prior Therapy:", \@drug_db );
 }
+
+########################################################################
+sub gen_rules_drug_db_offsprings {
+	my $self = shift;
+	my $category_name = shift;
+	my $category_symbol = shift;
+	my @drug_db;
+	
+	my %visited;
+	for ( Therapy::get_all_drug_class_pairs() ) {
+		next if exists $visited{$_};
+		$visited{$_} = 1;
+		my ($d, $dc, @rest) = split /\t/, $_;
+		# warn "$d\t||||\t$dc\n";
+		push @drug_db, mkrule( ["$category_symbol:$dc"],  [ ( map { Facts::mk_fact_str("$category_symbol:$_") } Therapy::get_children( $dc ) ) ] );
+	}
+
+	return $self->gen_rule_ret_msg( "$category_name:", \@drug_db );
+}
+
+
 
 #######################################################################
 sub gen_rules_drug_db {
