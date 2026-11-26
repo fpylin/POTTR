@@ -209,7 +209,6 @@ Amuvatinib|HPK56|MP470	KIT/SCFR_inhibitor
 Anakinumab	anti-IL-1beta_monoclonal_antibody
 Anamorelin|RC-1291	GHSR_agonist
 Anastrozole|Anastrazole|Arimidex|ICI D1033|ICI-D1033|ZD-1033	aromatase_inhibitor
-Anbenitamab Repodatecan|JSKN003|JSKN-003|KN-026	biparatopic_ERBB2_antibody-drug_conjugate
 Anbenitamab Repodatecan|JSKN003|JSKN-003|KN026|KN-026	biparatopic_ERBB2_antibody-drug_conjugate
 Andecaliximab|GS-5745|GS5745	anti-MMP9_monoclonal_antibody
 Anetumab Ravtansine|BAY 94-9343	anti-mesothelin_antibody-drug_conjugate
@@ -1042,7 +1041,6 @@ LY3405105	CDK7_inhibitor
 LY3475070|LY 3475070|LY-3475070	CD73_inhibitor
 LY3499446|LY 3499446|LY-3499446	KRAS_G12C_inhibitor,OFF-state_inhibitor
 LY4052031|LY 4052031|LY-4052031	anti-NECTIN4_antibody-drug_conjugate
-Tersolisib|LY4064809|STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
 LY4066434	pan-KRAS_inhibitor,OFF-state_inhibitor
 LY4152199	bispecific_T-cell_engager,BAFF-R-targeting
 Labetuzumab	anti-CEACAM5_monoclonal_antibody
@@ -1686,7 +1684,7 @@ Sovleplenib|HMPL-523	SYK_inhibitor
 Spartalizumab|PDR-001|PDR001	anti-PD-1_monoclonal_antibody
 Streptozotocin	alkylating_agent
 Stupp regimen|Stupp protocol	Temozolomide + Radiotherapy
-Sturlimogene Erparepvec|RP2	oncolytic_herpes_simplex_virus
+Sturlimogene Erparepvec	oncolytic_herpes_simplex_virus
 Subasumstat|TAK-981	SUMOylation_inhibitor
 Sugemalimab|CS1001|CS 1001|CS-1001|WBP 315|WBP-315|WBP315	anti-PD-L1_monoclonal_antibody
 Sulanemadlin|ALRN-6924	MDM2_inhibitor
@@ -1756,6 +1754,7 @@ Temsirolimus|CCI-779|Torisel|Cell Cycle Inhibitor 779|Rapamycin Analog	mTORC1_in
 Temuterkib|LY3214996|LY 3214996	ERK_inhibitor
 Tenalisib|RP6530|CN401	PI3K-delta_inhibitor; PI3K-delta/gamma/SIK3_inhibitor; PI3K-delta/gamma_inhibitor
 Tepotinib|EMD 1214063|EMD-1214063|EMD1214063|MSC2156119J|Tepmetko	MET_inhibitor,type_1
+Tersolisib|LY4064809|STX-478|STX478	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
 Tertomotide|GV1001|GV-1001	vaccine_therapy,telomerase-derived_peptide
 Tesetaxel|DJ-927	taxane
 Testosterone Enanthate|Androtardyl|Everone|Testate|Testinon|Andro LA|Delatestryl|Primosteston|Transdermal testosterone|Testo-Enant	testosterone
@@ -1980,3 +1979,11 @@ modakafusp alfa|TAK-573	IFN_alpha2b-CD38_fusion_protein
 phosphorus-32|OncoSil	brachytherapy
 rHuPH20|Chemophase|Hyaluronidase Recombinant Human|Hyaluronidase-oysk|Hylenex|Recombinant Human Hyaluronidase	recombinant_human_hyaluronidase
 radioactive iodine	radioactive_iodine_therapy
+UB-VV500	autologous_CAR-T-cell_therapy,BCMA/GPRC5D-targeting
+HLX49	biparatopic_ERBB2_antibody-drug_conjugate
+CS5006	anti-ITGB4_antibody-drug_conjugate,topoisomerase_inhibitor_1-payload
+K-1728	PI3Kalpha_inhibitor,mutant_selective,kinase/helical_domain
+SHR-8203	cancer_therapy,undisclosed_mechanism
+Sturlimogene Erparepvec|STX-721/PFL-721	EGFR_inhibitor,exon_20_selective; ERBB2_inhibitor,exon_20_selective
+Sutetinib Maleate	EGFR_inhibitor,mutant-selective,irreversible
+Sapu006	docetaxel-loaded_nanopharmaceutical
